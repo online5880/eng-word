@@ -1,5 +1,5 @@
 """
-WSGI config for eng_word_project project.
+WSGI config for spell_stars project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'eng_word_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'spell_stars.settings')
 
 application = get_wsgi_application()

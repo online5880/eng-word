@@ -1,5 +1,5 @@
 """
-ASGI config for eng_word_project project.
+ASGI config for spell_stars project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'eng_word_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'spell_stars.settings')
 
 application = get_asgi_application()
