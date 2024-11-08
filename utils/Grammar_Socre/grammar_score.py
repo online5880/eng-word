@@ -4,6 +4,7 @@ from typing import Dict, Tuple
 import re
 from collections import Counter
 
+
 class AdvancedGrammarScorer:
     def __init__(self):
         # 기본 NLP 파이프라인 로드
