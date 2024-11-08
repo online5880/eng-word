@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "almost",
+        "단어 뜻": "거의",
+        "품사": "부사",
+        "예문": "She’s almost always late.",
+        "예문 뜻": "그녀는 거의 늘 늦어."
+    },
+    {
+        "단어": "alone",
+        "단어 뜻": "혼자",
+        "품사": "형용사",
+        "예문": "He was alone on the island.",
+        "예문 뜻": "그는 섬에 혼자 있었어."
+    },
+    {
+        "단어": "already",
+        "단어 뜻": "이미",
+        "품사": "부사",
+        "예문": "I already have a pen.",
+        "예문 뜻": "나는 이미 펜을 가지고 있어."
+    },
+    {
+        "단어": "also",
+        "단어 뜻": "또한",
+        "품사": "부사",
+        "예문": "I bought a jacket, and I also bought a hat.",
+        "예문 뜻": "나는 재킷을 샀고, 모자도 샀어."
+    },
+    {
+        "단어": "congratulation",
+        "단어 뜻": "축하합니다",
+        "품사": "감탄사",
+        "예문": "You got an A? Congratulations!",
+        "예문 뜻": "너 A 받았니? 축하해!"
+    },
+    {
+        "단어": "contain",
+        "단어 뜻": "들어 있다",
+        "품사": "동사",
+        "예문": "Many foods contain sugar.",
+        "예문 뜻": "많은 음식들에는 설탕이 들어 있어."
+    },
+    {
+        "단어": "contest",
+        "단어 뜻": "대회",
+        "품사": "명사",
+        "예문": "I won first prize in the English speech contest.",
+        "예문 뜻": "나는 영어 말하기 대회에서 일등 상을 받았어."
+    },
+    {
+        "단어": "continue",
+        "단어 뜻": "계속되다",
+        "품사": "동사",
+        "예문": "The party continued until late into the night.",
+        "예문 뜻": "파티는 밤 늦게까지 계속됐어."
+    }
+]

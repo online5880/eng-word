@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "collect",
+        "단어 뜻": "수집하다",
+        "품사": "동사",
+        "예문": "She collects stamps.",
+        "예문 뜻": "그녀는 우표를 수집해."
+    },
+    {
+        "단어": "elect",
+        "단어 뜻": "선출하다",
+        "품사": "동사",
+        "예문": "We elected John president of our class.",
+        "예문 뜻": "우리는 John을 학급 회장으로 선출했어."
+    },
+    {
+        "단어": "marry",
+        "단어 뜻": "결혼하다",
+        "품사": "동사",
+        "예문": "Will you marry me?",
+        "예문 뜻": "나와 결혼해 줄래?"
+    },
+    {
+        "단어": "neglect",
+        "단어 뜻": "무시하다",
+        "품사": "동사",
+        "예문": "Don’t neglect your mem.",
+        "예문 뜻": "네 엄마를 무시하지 마."
+    },
+    {
+        "단어": "popular",
+        "단어 뜻": "인기 있는",
+        "품사": "형용사",
+        "예문": "She is a very popular singer in the world.",
+        "예문 뜻": "그녀는 세계에서 매우 인기 있는 가수야."
+    },
+    {
+        "단어": "population",
+        "단어 뜻": "인구",
+        "품사": "명사",
+        "예문": "The world’s population is more than 7 billion.",
+        "예문 뜻": "세계의 인구는 70억이 넘어."
+    },
+    {
+        "단어": "select",
+        "단어 뜻": "선택하다",
+        "품사": "동사",
+        "예문": "Please select only one person.",
+        "예문 뜻": "단 한 사람만 선택하세요."
+    },
+    {
+        "단어": "wedding",
+        "단어 뜻": "결혼",
+        "품사": "명사",
+        "예문": "She was so beautiful at her wedding.",
+        "예문 뜻": "그녀의 결혼식에서 그녀는 매우 아름다웠어."
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "advice",
+        "단어 뜻": "충고",
+        "품사": "명사",
+        "예문": "Whose advice should I follow?",
+        "예문 뜻": "누구의 충고를 받아들여야 할까?"
+    },
+    {
+        "단어": "death",
+        "단어 뜻": "죽음",
+        "품사": "명사",
+        "예문": "Is there life after death?",
+        "예문 뜻": "죽음 이후의 삶이 있을까?"
+    },
+    {
+        "단어": "foreign",
+        "단어 뜻": "외국의",
+        "품사": "형용사",
+        "예문": "I’d like to travel to lots of foreign countries.",
+        "예문 뜻": "나는 외국으로 여행을 많이 다니고 싶어."
+    },
+    {
+        "단어": "life",
+        "단어 뜻": "생활",
+        "품사": "명사",
+        "예문": "We use gestures in daily life.",
+        "예문 뜻": "우리는 일상생활에서 몸짓을 사용해."
+    },
+    {
+        "단어": "neighbor",
+        "단어 뜻": "이웃",
+        "품사": "명사",
+        "예문": "I’m your new neighbor.",
+        "예문 뜻": "저는 새로 온 이웃입니다."
+    },
+    {
+        "단어": "newspaper",
+        "단어 뜻": "신문",
+        "품사": "명사",
+        "예문": "Newspaper reporters gather news from many sources.",
+        "예문 뜻": "신문 기자들은 여러 정보원으로부터 뉴스를 모아."
+    },
+    {
+        "단어": "problem",
+        "단어 뜻": "문제",
+        "품사": "명사",
+        "예문": "What’s the problem?",
+        "예문 뜻": "문제가 뭐야?"
+    },
+    {
+        "단어": "remember",
+        "단어 뜻": "기억하다",
+        "품사": "동사",
+        "예문": "Remember to call me when you arrive.",
+        "예문 뜻": "도착하면 내게 전화하는 것을 기억해."
+    }
+]
