@@ -14,7 +14,7 @@ function startRecording() {
                 recorder.start();
             })
             .catch(err => console.log("Audio error: " + err));
-  }
+    }
 }
 
 function stopRecording() {
@@ -36,14 +36,31 @@ function processRecording() {
     .then(response => response.json())
     .then(data => {
         const score = data.score;
-        displayFeedback(score);
+        const feedback = data.feedback;
+        displayFeedback(score, feedback);
     })
     .catch(error => console.error("Error processing recording: ", error));
 }
 
-function displayFeedback(score) {
+function displayFeedback(score, feedback) {
     document.getElementById("score").textContent = score;
     document.getElementById("score-bar").style.width = score + "%";
+
+    // 피드백 텍스트 표시
+    const feedbackSection = document.getElementById("feedback-section");
+    const feedbackDisplay = document.getElementById("feedback");
+    feedbackDisplay.textContent = feedback;
+    feedbackSection.style.display = 'block';
+
+    // 진행 바 색상 변경 (점수에 따라)
+    const progressBar = document.getElementById('score-bar');
+    if (score >= 80) {
+        progressBar.className = 'green';
+    } else if (score >= 60) {
+        progressBar.className = 'yellow';
+    } else {
+        progressBar.className = 'red';
+    }
 }
 
 function nextWord() {
