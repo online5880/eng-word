@@ -69,3 +69,14 @@ button:hover {
 #score-bar.red {
     background-color: red;
 }
+
+/* 오디오 미리보기 중앙 배치 */
+#audio-preview {
+    display: block;
+    margin: 20px auto;
+}
+
+#native-audio-preview {
+    display: block;
+    margin: 20px auto;
+}
