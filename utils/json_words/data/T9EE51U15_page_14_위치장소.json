@@ -1,0 +1,72 @@
+[
+    {
+        "단어": "bakery",
+        "단어 뜻": "제과점",
+        "품사": "명사",
+        "예문": "There is a lot of delicious bread in this bakery.",
+        "예문 뜻": "이 제과점에는 맛있는 빵이 많이 있어."
+    },
+    {
+        "단어": "behind",
+        "단어 뜻": "~뒤에",
+        "품사": "전치사",
+        "예문": "What do you have behind your back?",
+        "예문 뜻": "네 등 뒤에 무엇을 가지고 있니?"
+    },
+    {
+        "단어": "downstairs",
+        "단어 뜻": "아래층으\n로",
+        "품사": "부사",
+        "예문": "A turtle is going downstairs.",
+        "예문 뜻": "거북이 한 마리가 아래층으로 내려가고 있어."
+    },
+    {
+        "단어": "far",
+        "단어 뜻": "멀리",
+        "품사": "부사",
+        "예문": "That ball is far from me.",
+        "예문 뜻": "저 공은 내 멀리 있어."
+    },
+    {
+        "단어": "fire station",
+        "단어 뜻": "소방서",
+        "품사": "명사",
+        "예문": "The fire station has one fire engine.",
+        "예문 뜻": "그 소방서는 소방차 한 대가 있어."
+    },
+    {
+        "단어": "in front of",
+        "단어 뜻": "~앞에",
+        "품사": "전치사",
+        "예문": "Tommy’s family took a picture in front of their house.",
+        "예문 뜻": "Tommy의 가족은 집 앞에서 사진을 찍었어."
+    },
+    {
+        "단어": "near",
+        "단어 뜻": "가까이에",
+        "품사": "부사",
+        "예문": "This ball is near me.",
+        "예문 뜻": "이 공은 내 가까이에 있어."
+    },
+    {
+        "단어": "next to",
+        "단어 뜻": "~옆에",
+        "품사": "전치사",
+        "예문": "My cat is next to Kate’s dog.",
+        "예문 뜻": "내 고양이가 Kate의 개 옆에 있어."
+    },
+    {
+        "단어": "theater",
+        "단어 뜻": "극장",
+        "품사": "명사",
+        "예문": "They are watching a movie in the theater.",
+        "예문 뜻": "그들은 극장에서 영화를 보고 있어."
+    },
+    {
+        "단어": "upstairs",
+        "단어 뜻": "위층으로",
+        "품사": "부사",
+        "예문": "She is going upstairs.",
+        "예문 뜻": "그녀가 위층으로 올라가고 있어."
+    }
+]

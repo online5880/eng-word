@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "interact",
+        "단어 뜻": "소통하다",
+        "품사": "동사",
+        "예문": "Tony interacts well with other children in the class.",
+        "예문 뜻": "Tony는 학급의 다른 아이들과 소통을 잘 해."
+    },
+    {
+        "단어": "international",
+        "단어 뜻": "국제적인",
+        "품사": "형용사",
+        "예문": "The united nations is an international organization.",
+        "예문 뜻": "UN은 국제적인 기구야."
+    },
+    {
+        "단어": "internet",
+        "단어 뜻": "인터넷",
+        "품사": "명사",
+        "예문": "You can find all kinds of information on the internet.",
+        "예문 뜻": "여러분은 인터넷에서 모든 종류의 정보를 찾을 수 있어요."
+    },
+    {
+        "단어": "interview",
+        "단어 뜻": "인터뷰",
+        "품사": "명사",
+        "예문": "The TV reporter did interviews with the movie star.",
+        "예문 뜻": "그 TV 리포터는 그 영화 배우와 인터뷰를 했어."
+    },
+    {
+        "단어": "surface",
+        "단어 뜻": "표면",
+        "품사": "명사",
+        "예문": "There are many rocks on the surface of the moon.",
+        "예문 뜻": "달의 표면에는 많은 암석들이 있어."
+    },
+    {
+        "단어": "surprise",
+        "단어 뜻": "놀라게 하다",
+        "품사": "명사",
+        "예문": "The news surprised me.",
+        "예문 뜻": "그 소식은 나를 놀라게 했어."
+    },
+    {
+        "단어": "survey",
+        "단어 뜻": "조사",
+        "품사": "명사",
+        "예문": "They did a phone survey of TV programs.",
+        "예문 뜻": "그들은 TV 프로그램에 대해 전화 조사를 했어."
+    },
+    {
+        "단어": "survive",
+        "단어 뜻": "살아남다",
+        "품사": "동사",
+        "예문": "The plant survives on very little water.",
+        "예문 뜻": "그 식물은 매우 적은 물에서도 살아남아."
+    }
+]

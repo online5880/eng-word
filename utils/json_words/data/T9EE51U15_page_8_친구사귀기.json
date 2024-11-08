@@ -1,0 +1,72 @@
+[
+    {
+        "단어": "address",
+        "단어 뜻": "주소",
+        "품사": "명사",
+        "예문": "This is my home address.",
+        "예문 뜻": "이것은 우리 집 주소야."
+    },
+    {
+        "단어": "band",
+        "단어 뜻": "밴드",
+        "품사": "명사",
+        "예문": "How about joining the school band?",
+        "예문 뜻": "학교 밴드에 가입하는 것은 어때?"
+    },
+    {
+        "단어": "club",
+        "단어 뜻": "동아리",
+        "품사": "명사",
+        "예문": "What’s your favorite club?",
+        "예문 뜻": "가장 마음에 드는 동아리가 무엇이니?"
+    },
+    {
+        "단어": "grade",
+        "단어 뜻": "학년",
+        "품사": "명사",
+        "예문": "My name is Sally and I’m in the fifth grade.",
+        "예문 뜻": "내 이름은 Sally고 5학년이야."
+    },
+    {
+        "단어": "history",
+        "단어 뜻": "역사",
+        "품사": "명사",
+        "예문": "Do you like Korean history?",
+        "예문 뜻": "너는 한국 역사를 좋아하니?"
+    },
+    {
+        "단어": "hometown",
+        "단어 뜻": "고향",
+        "품사": "명사",
+        "예문": "My hometown is Seoul.",
+        "예문 뜻": "내 고향은 서울이야."
+    },
+    {
+        "단어": "Phone number",
+        "단어 뜻": "전화번호",
+        "품사": "",
+        "예문": "What’s your phone number?",
+        "예문 뜻": "네 전호번호는 무엇이니?"
+    },
+    {
+        "단어": "same",
+        "단어 뜻": "같은",
+        "품사": "형용사",
+        "예문": "Jay and Clare like the same food.",
+        "예문 뜻": "Jay와 Clare는 같은 음식을 좋아해."
+    },
+    {
+        "단어": "spell",
+        "단어 뜻": "철자를 쓰\n다",
+        "품사": "동사",
+        "예문": "How do you spell your name?",
+        "예문 뜻": "네 이름의 철자를 어떻게 쓰니?"
+    },
+    {
+        "단어": "student",
+        "단어 뜻": "학생",
+        "품사": "명사",
+        "예문": "We are elementary school students.",
+        "예문 뜻": "우리는 초등학생이야."
+    }
+]

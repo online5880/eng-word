@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "size",
+        "단어 뜻": "크기",
+        "품사": "명사",
+        "예문": "The size of the box is 12 inches long.",
+        "예문 뜻": "그 상자의 크기는 길이가 12인치야."
+    },
+    {
+        "단어": "small",
+        "단어 뜻": "작은",
+        "품사": "형용사",
+        "예문": "They live in a small house.",
+        "예문 뜻": "그들은 작은 집에 살아."
+    },
+    {
+        "단어": "medium",
+        "단어 뜻": "중간의",
+        "품사": "형용사",
+        "예문": "I ordered a medium, not a large.",
+        "예문 뜻": "나는 큰 것이 아니라 중간 크기를 주문했어."
+    },
+    {
+        "단어": "large",
+        "단어 뜻": "큰",
+        "품사": "형용사",
+        "예문": "These T-shirts come in three size: small, medium, and large.",
+        "예문 뜻": "이 티셔츠들은 세 가지 크기가 있어: 작은 것, 중간 것, 큰 것."
+    },
+    {
+        "단어": "specialty",
+        "단어 뜻": "전문",
+        "품사": "명사",
+        "예문": "My uncle runs a specialty coffee shop.",
+        "예문 뜻": "우리 삼촌은 커피 전문점을 운영하셔."
+    },
+    {
+        "단어": "hobby",
+        "단어 뜻": "취미",
+        "품사": "명사",
+        "예문": "Her favorite hobby is making dolls.",
+        "예문 뜻": "그녀가 가장 좋아하는 취미는 인형 만들기야."
+    },
+    {
+        "단어": "strength",
+        "단어 뜻": "힘, 장점",
+        "품사": "명사",
+        "예문": "She had no strength after her illness.",
+        "예문 뜻": "그녀는 병을 얇은 후에 힘이 없었어."
+    },
+    {
+        "단어": "talent",
+        "단어 뜻": "재능",
+        "품사": "명사",
+        "예문": "He has a talent for acting",
+        "예문 뜻": "그는 연기에 재능이 있어."
+    }
+]
