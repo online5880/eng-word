@@ -21,8 +21,8 @@ class AdvancedGrammarScorer:
             "word_count": 0.1,
             "complexity": 0.1,
             "lexical_diversity": 0.05,
-            "semantic_coherence": 0.15,
-            "meaningful_words": 0.25
+            "semantic_coherence": 0.25,
+            "meaningful_words": 0.15
         }
 
     def score_sentence(self, sentence: str) -> Tuple[float, Dict]:
