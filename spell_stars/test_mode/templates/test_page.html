@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +7,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Mode</title>
-    {% load static %}
-    <!-- static 태그를 로드 -->
   </head>
 
   <body>
@@ -21,7 +21,7 @@
       <button type="button" onclick="submitAnswers()">Submit Answers</button>
     </form>
 
-    <script src="{% static 'test_mode/test_mode.js' %}"></script>
+    <script src="{% static 'test_mode.js' %}"></script>
   </body>
 
 </html>
