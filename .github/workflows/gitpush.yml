@@ -19,4 +19,6 @@ jobs:
         BRANCH_NAME=$(echo "${GITHUB_REF}" | sed 's|refs/heads/||')
 
         # Slack 메시지 포맷
-        curl -X POST -H "Content-type: application/json" --data "{'text':':rocket: *New Push by [${AUTHOR_NAME}]*\n\n*Branch:* ${BRANCH_NAME}\n\n*Files Changed:*\n'''${FILES_CHANGED}'''\n\n*Commit Message:*\n'''${COMMIT_MESSAGE}'''}" "${SLACK_WEBHOOK_URL}"
+        curl -X POST -H "Content-type: application/json" --data "{
+          \'text\':\':rocket: *New Push by [${AUTHOR_NAME}]*\n\n*Branch:* ${BRANCH_NAME}\n\n*Files Changed:*\n\`\`\`${FILES_CHANGED}\`\`\`\n\n*Commit Message:*\n\`\`\`${COMMIT_MESSAGE}\`\`\`\'
+        }" "${SLACK_WEBHOOK_URL}"
