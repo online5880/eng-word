@@ -32,4 +32,4 @@ def word_learning_view(request):
         # 아직 단어가 남아 있으면 현재 단어 반환
         return JsonResponse({"score": pronunciation_level, "all_words_learned": False})
 
-    return render(request, "word_learning.html", {"word": word})
+    return render(request, "vocab_mode/word_learning.html", {"word": word})
