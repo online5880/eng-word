@@ -7,27 +7,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>시험 모드</title>
-    <!-- CSS 파일 경로 설정 -->
     <link rel="stylesheet" href="{% static 'css/test_styles.css' %}">
   </head>
 
   <body>
-    <h1>시험 모드</h1>
-    <p>다음 문장의 빈칸에 들어갈 단어를 맞혀보세요:</p>
+    <div class="container">
+      <h1>시험 모드</h1>
+      <p>다음 문장의 빈칸에 들어갈 단어를 맞혀보세요:</p>
+      <p>{{ sentence }}</p>
 
-    <p>{{ sentence }}</p>
+      <div class="button-container">
+        <button id="start-recording">녹음 시작</button>
+        <button id="stop-recording" disabled="disabled">녹음 중지</button>
+      </div>
 
-    <!-- 녹음 버튼 및 음성 미리보기 -->
-    <button id="start-recording">녹음 시작</button>
-    <button id="stop-recording" disabled="disabled">녹음 중지</button>
-    <p>녹음된 음성:</p>
-    <audio id="audio-preview" controls="controls"></audio>
+      <div>
+        <p>녹음된 음성:</p>
+        <audio id="audio-preview" controls="controls"></audio>
+      </div>
 
-    <!-- 음성 인식 결과 표시 -->
-    <div id="audio-result"></div>
-
-    <!-- JS 파일 경로 설정 -->
-    <script src="{% static 'js/test_mode.js' %}"></script>
+      <div id="audio-result"></div>
+    </div>
   </body>
 
 </html>

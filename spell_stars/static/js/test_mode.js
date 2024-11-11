@@ -1,84 +1,87 @@
-let mediaRecorder;
-let audioChunks = [];
-let audioBlob;
-let audioUrl;
+let recorder;
+let audioStream;
+let audioData = [];
 let audioPreview = document.getElementById("audio-preview");
-let audioStream;  // 마이크 스트림을 저장할 변수
 
-// 녹음 시작 버튼 클릭
-document.getElementById("start-recording").onclick = function() {
-    navigator.mediaDevices.getUserMedia({ audio: true })
-        .then(stream => {
-            audioStream = stream;  // 마이크 스트림 저장
-            mediaRecorder = new MediaRecorder(stream);
-            mediaRecorder.start();
+const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
-            mediaRecorder.ondataavailable = function(event) {
-                audioChunks.push(event.data);
-            };
+// 녹음 시작
+function startRecording() {
+    if (navigator.mediaDevices) {
+        audioData = [];
 
-            mediaRecorder.onstop = function() {
-                // 녹음이 끝난 후 Blob을 생성하고 URL을 할당
-                audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
-                audioUrl = URL.createObjectURL(audioBlob);
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(stream => {
+                audioStream = stream;
+                recorder = new MediaRecorder(stream);
 
-                // 오디오 미리보기
-                audioPreview.src = audioUrl;
+                recorder.ondataavailable = event => {
+                    if (event.data.size > 0) {
+                        audioData.push(event.data);
+                    }
+                };
 
-                // 서버로 오디오 전송 (수정된 방식)
-                saveAudioToServer(audioBlob);
-            };
+                recorder.onstop = () => {
+                    if (audioData.length > 0) {
+                        processRecording();
+                    } else {
+                        alert("녹음 데이터가 없습니다. 다시 시도해주세요.");
+                    }
+                };
 
-            // 버튼 상태 변경
-            document.getElementById("stop-recording").disabled = false;
-            document.getElementById("start-recording").disabled = true;
-        })
-        .catch(error => {
-            console.error('Error accessing media devices.', error);
-            document.getElementById("error-message").textContent = "음성 녹음 장치를 사용할 수 없습니다.";
-        });
-};
-
-// 녹음 중지 버튼 클릭
-document.getElementById("stop-recording").onclick = function() {
-    mediaRecorder.stop();
-    
-    // 녹음이 끝난 후 마이크 스트림을 종료
-    if (audioStream) {
-        audioStream.getTracks().forEach(track => track.stop());  // 마이크 종료
+                recorder.start(); // 녹음 시작
+                document.getElementById("startBtn").disabled = true;
+                document.getElementById("stopBtn").disabled = false;
+            })
+            .catch(err => {
+                console.log("Audio error: " + err);
+                alert("녹음 시작에 실패했습니다. 마이크 권한을 확인해주세요.");
+            });
     }
+}
 
-    // 버튼 상태 변경
-    document.getElementById("start-recording").disabled = false;
-    document.getElementById("stop-recording").disabled = true;
-};
+// 녹음 중지
+function stopRecording() {
+    if (recorder && recorder.state === 'recording') {
+        recorder.stop();
+        audioStream.getTracks().forEach(track => track.stop()); // 마이크 종료
 
-// 음성 파일을 서버에 저장 (수정된 부분)
-function saveAudioToServer(audioBlob) {
-    let formData = new FormData();
-    formData.append("audio_file", audioBlob, "audio.wav");
+        document.getElementById("startBtn").disabled = false;
+        document.getElementById("stopBtn").disabled = true;
+    }
+}
 
-    // JavaScript에서 questionId를 사용해 URL을 동적으로 만듭니다.
-    fetch(`/recognize_audio/${questionId}/`, {  // questionId를 URL에 동적으로 삽입
-        method: "POST",
-        body: formData
+// 녹음 처리
+function processRecording() {
+    const audioBlob = new Blob(audioData, { type: 'audio/wav' });
+    const formData = new FormData();
+    formData.append('audio_file', audioBlob);
+
+    fetch(`/recognize_audio/${questionId}/`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': csrfToken
+        }
     })
     .then(response => response.json())
     .then(data => {
         const resultDiv = document.getElementById("audio-result");
 
-        if (data.message) {  // 서버에서의 응답
-            resultDiv.textContent = "파일이 성공적으로 저장되었습니다.";
-            resultDiv.className = "green";  // 결과 색상 변경
+        if (data.transcript) {
+            resultDiv.textContent = "음성 인식 결과: " + data.transcript;
+            resultDiv.className = "green";
         } else {
-            resultDiv.textContent = "파일 저장에 실패했습니다.";
-            resultDiv.className = "red";  // 결과 색상 변경
+            resultDiv.textContent = "음성 인식에 실패했습니다.";
+            resultDiv.className = "red";
         }
+
+        const audioUrl = URL.createObjectURL(audioBlob);
+        audioPreview.src = audioUrl;
+        audioPreview.style.display = 'block';
     })
     .catch(error => {
-        console.error('Error:', error);
-        const resultDiv = document.getElementById("audio-result");
-        resultDiv.textContent = "서버와의 통신 중 오류가 발생했습니다.";
-        resultDiv.className = "red";
+        console.error("Error processing recording: ", error);
+        alert("서버 처리 중 오류가 발생했습니다.");
     });
 }
