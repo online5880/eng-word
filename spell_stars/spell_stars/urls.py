@@ -23,3 +23,4 @@ urlpatterns = [
     path("",mainViews.index, name="index"),
     path('accounts/', include('django.contrib.auth.urls')),  # Django의 기본 인증 URL 패턴 추가
 ]
+
