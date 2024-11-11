@@ -4,61 +4,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pronunciation Practice</title>
-  <link rel="stylesheet" href="{% static 'styles.css' %}">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronunciation Practice</title>
+    <link rel="stylesheet" href="{% static 'pron_styles.css' %}">
+  </head>
 
-<body>
-  <div id="practice-container">
-    <h2>Pronunciation Practice</h2>
-    <p>Current word:
-      <span id="current-word">{{ word }}</span>
-    </p>
+  <body>
+    <div id="practice-container">
+      <h2>Pronunciation Practice</h2>
+      <p>Current word:
+        <span id="current-word">{{ word }}</span>
+      </p>
 
-    <!-- 원어민 발음 듣기 -->
-    <div>
-      <h3>Listen to the Native Pronunciation</h3>
-      <audio id="native-audio-preview" controls="controls">
-        <source src="/media/audio/native/eraser_a.wav" type="audio/wav">
+      <div>
+        <h3>Listen to the Native Pronunciation</h3>
+        <!-- 오디오 요소 -->
+        <audio id="native-audio-preview" controls="controls">
+          <source src="/media/audio/native/eraser_a.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <!-- 카운트다운 표시 -->
+      <div id="countdown"></div>
+
+      <!-- Start/Stop Recording buttons -->
+      <button id="startBtn" onclick="startRecording()">Start Recording</button>
+      <button id="stopBtn" onclick="stopRecording()" disabled="disabled">Stop Recording</button>
+
+      <!-- Score display -->
+      <div>
+        <p>Score:
+          <span id="score">0</span>
+        </p>
+        <div id="score-bar"></div>
+      </div>
+
+      <!-- Feedback section -->
+      <div id="feedback-section" style="display: none;">
+        <p id="feedback"></p>
+      </div>
+
+      <!-- Audio preview section (녹음한 음성 미리보기) -->
+      <audio id="audio-preview" controls="controls" style="display: none;">
         Your browser does not support the audio element.
       </audio>
+
+      <!-- Navigation buttons -->
+      <button onclick="nextWord()">Next Word</button>
+      <button onclick="exitPractice()">Exit Practice</button>
     </div>
 
-    <!-- 카운트다운 표시 -->
-    <div id="countdown"></div>
-
-    <!-- Start/Stop Recording buttons -->
-    <button id="startBtn" onclick="startRecording()">Start Recording</button>
-    <button id="stopBtn" onclick="stopRecording()" disabled="disabled">Stop Recording</button>
-
-    <!-- Score display -->
-    <div>
-      <p>Score:
-        <span id="score">0</span>
-      </p>
-      <div id="score-bar"></div>
-    </div>
-
-    <!-- Feedback section -->
-    <div id="feedback-section" style="display: none;">
-      <p id="feedback"></p>
-    </div>
-
-    <!-- Audio preview section (녹음한 음성 미리보기) -->
-    <audio id="audio-preview" controls="controls" style="display: none;">
-      Your browser does not support the audio element.
-    </audio>
-
-    <!-- Navigation buttons -->
-    <button onclick="nextWord()">Next Word</button>
-    <button onclick="exitPractice()">Exit Practice</button>
-  </div>
-
-  <!-- Link to the JS file -->
-  <script src="{% static 'practice.js' %}"></script>
-</body>
+    <!-- Link to the JS file -->
+    <script src="{% static 'practice.js' %}"></script>
+  </body>
 
 </html>

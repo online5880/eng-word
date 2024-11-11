@@ -8,14 +8,19 @@ let countdownText = document.getElementById('countdown'); // 카운트다운을 
 
 const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
-// 원어민 음성 재생
-function loadNativeAudio() {
-    let nativeAudioUrl = '/media/audio/native/eraser_a.wav';
-    nativeAudioPreview.src = nativeAudioUrl;
-    nativeAudioPreview.style.display = 'block';
-    nativeAudioPreview.load();
-    nativeAudioPreview.play();
+
+// 페이지 로드 후 음성을 준비만 하고 자동으로 재생되지 않도록 설정
+window.onload = function () {
+    let nativeAudioPreview = document.getElementById("native-audio-preview");
+    nativeAudioPreview.load();  // 음성을 로드만 시킴 (자동 재생 X)
+};
+
+// 오디오 재생을 위한 함수 (Play 버튼을 눌렀을 때)
+function playNativeAudio() {
+    let nativeAudioPreview = document.getElementById("native-audio-preview");
+    nativeAudioPreview.play();  // 버튼 클릭 시 음성 재생
 }
+
 
 // 카운트다운 시작
 function startCountdown() {
@@ -146,7 +151,3 @@ function exitPractice() {
     window.location.href = '/';
 }
 
-// 페이지 로드 시 원어민 음성 로드
-window.onload = function () {
-    loadNativeAudio();
-}

@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -5,21 +6,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영어 단어 암기 프로그램</title>
+    <link rel="stylesheet" href="{% static 'home_styles.css' %}">
   </head>
 
   <body>
-    <h1>영어 단어 암기 프로그램</h1>
+    <div id="container">
+      <header>
+        <h1>영어 단어 암기 프로그램</h1>
+        <p>효율적인 단어 학습을 시작하세요!</p>
+      </header>
 
-    <div>
-      <h2>학습 모드</h2>
-      <a href="{% url 'test_mode' %}">시험 모드</a>
-      <!-- 시험 모드로 이동 -->
-    </div>
+      <section class="mode">
+        <h2>시험 모드</h2>
+        <div class="button-container">
+          <a href="{% url 'test_mode' %}" class="mode-button">시험 모드</a>
+          <!-- 시험 모드로 이동 -->
+        </div>
+      </section>
 
-    <div>
-      <h2>발음 연습 모드</h2>
-      <a href="{% url 'pronunciation_practice' %}">발음 연습</a>
-      <!-- 발음 연습 모드로 이동 -->
+      <section class="mode">
+        <h2>발음 연습 모드</h2>
+        <div class="button-container">
+          <a href="{% url 'pronunciation_practice' %}" class="mode-button">발음 연습</a>
+          <!-- 발음 연습 모드로 이동 -->
+        </div>
+      </section>
     </div>
   </body>
 
