@@ -28,16 +28,11 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("account/", include("accounts.urls")),
     path("", mainViews.index, name="index"),
-    path(
-        "accounts/", include("django.contrib.auth.urls")
-    ),  # Django의 기본 인증 URL 패턴 추가
+    path("accounts/", include("django.contrib.auth.urls")),  # Django의 기본 인증 URL 패턴 추가
     path("vocab_mode/", vocabViews.word_learning_view, name="vocab_mode"),
     path("test_mode/", testViews.test_mode_view, name="test_mode"),
-    path(
-        "pron_practice/",
-        pronViews.pronunciation_practice_view,
-        name="pron_practice",
-    ),
+    path("pron_practice/",pronViews.pronunciation_practice_view,name="pron_practice",),
+    
 ]
 
 if settings.DEBUG:
