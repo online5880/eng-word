@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영어 단어 암기 프로그램</title>
+  </head>
+
+  <body>
+    <h1>영어 단어 암기 프로그램</h1>
+
+    <div>
+      <h2>학습 모드</h2>
+      <a href="{% url 'test_mode' %}">시험 모드</a>
+      <!-- 시험 모드로 이동 -->
+    </div>
+
+    <div>
+      <h2>발음 연습 모드</h2>
+      <a href="{% url 'pronunciation_practice' %}">발음 연습</a>
+      <!-- 발음 연습 모드로 이동 -->
+    </div>
+  </body>
+
+</html>
