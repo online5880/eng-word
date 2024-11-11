@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     "pron_practice",
     "test_mode",
     "vocab_mode",
+    "rest_framework",
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +142,9 @@ LOGOUT_REDIRECT_URL = "/"  # 로그아웃 후 메인 페이지로 리디렉션
 
 MEDIA_URL = "/media/"  # URL로 접근할 때 사용할 경로
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # 실제 파일이 저장될 경로
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+}

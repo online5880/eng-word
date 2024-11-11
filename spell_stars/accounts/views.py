@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView, LogoutView
 from .forms import LoginForm, SignupForm
 from django.contrib.auth.decorators import login_required
+from rest_framework import generics
+from .models import User
+from .serializers import UserSerializer
 # Create your views here.
 
 # 로그인뷰
@@ -25,3 +28,7 @@ def signup(request):
 @login_required
 def profileView(request):
     return render(request,"accounts/profile.html",{"user":request.user})
+
+class UserListAPIView(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
