@@ -37,6 +37,13 @@ button {
     font-size: 16px;
     border-radius: 5px;
     margin-top: 20px;
+    transition: background-color 0.2s ease, transform 0.1s;
+}
+
+/* 버튼 눌릴 때 스타일 */
+button:active {
+    transform: scale(0.98);
+    background-color: #014f92; /* 눌렀을 때 어두운 색상 */
 }
 
 button:disabled {

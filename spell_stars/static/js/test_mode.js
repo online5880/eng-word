@@ -16,16 +16,24 @@ document.getElementById("start-recording").onclick = function() {
             };
 
             mediaRecorder.onstop = function() {
+                // 녹음이 끝난 후 Blob을 생성하고 URL을 할당
                 audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
                 audioUrl = URL.createObjectURL(audioBlob);
+
+                // 오디오 미리보기
                 audioPreview.src = audioUrl;
 
-                // 녹음이 끝난 후 서버로 오디오 전송
+                // 서버로 오디오 전송
                 sendAudioToServer(audioBlob);
             };
 
+            // 버튼 상태 변경
             document.getElementById("stop-recording").disabled = false;
             document.getElementById("start-recording").disabled = true;
+        })
+        .catch(error => {
+            console.error('Error accessing media devices.', error);
+            document.getElementById("error-message").textContent = "음성 녹음 장치를 사용할 수 없습니다.";
         });
 };
 
@@ -51,13 +59,16 @@ function sendAudioToServer(audioBlob) {
 
         if (data.transcript) {
             resultDiv.textContent = "음성 인식 결과: " + data.transcript;
-            resultDiv.style.color = "green";
+            resultDiv.className = "green";  // 결과 색상 변경
         } else {
             resultDiv.textContent = "음성 인식에 실패했습니다.";
-            resultDiv.style.color = "red";
+            resultDiv.className = "red";  // 결과 색상 변경
         }
     })
     .catch(error => {
         console.error('Error:', error);
+        const resultDiv = document.getElementById("audio-result");
+        resultDiv.textContent = "서버와의 통신 중 오류가 발생했습니다.";
+        resultDiv.className = "red";
     });
 }
