@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영어 단어 암기 프로그램</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <header>
-        <h1>영어 단어 암기 프로그램</h1>
-        <p>효율적인 단어 학습을 시작하세요!</p>
-      </header>
+      <h1>영어 단어 암기 프로그램</h1>
+      <p>효율적인 단어 학습을 시작하세요!</p>
+    </header>
 
     <form action="{% url 'logout' %}" method="post">
-        {% csrf_token %}
-        <button type="submit">로그아웃</button>
+      {% csrf_token %}
+      <button type="submit">로그아웃</button>
     </form>
-    
+
     <section class="mode">
-        <h2>사전 학습 모드</h2>
-        <div class="button-container">
-          <a href="{% url 'vocab_mode' %}" class="mode-button">사전 학습 모드</a>
-          <!-- 사전 학습 모드로 이동 -->
-        </div>
-      </section>
+      <h2>사전 학습 모드</h2>
+      <div class="button-container">
+        <a href="{% url 'vocab_mode' %}" class="mode-button">사전 학습 모드</a>
+        <!-- 사전 학습 모드로 이동 -->
+      </div>
+    </section>
 
-      <section class="mode">
-        <h2>시험 모드</h2>
-        <div class="button-container">
-          <a href="{% url 'test_mode' %}" class="mode-button">시험 모드</a>
-          <!-- 시험 모드로 이동 -->
-        </div>
-      </section>
+    <section class="mode">
+      <h2>시험 모드</h2>
+      <div class="button-container">
+        <a href="{% url 'test_mode' %}" class="mode-button">시험 모드</a>
+        <!-- 시험 모드로 이동 -->
+      </div>
+    </section>
 
-      <section class="mode">
-        <h2>발음 연습 모드</h2>
-        <div class="button-container">
-          <a href="{% url 'pronunciation_practice' %}" class="mode-button">발음 연습</a>
-          <!-- 발음 연습 모드로 이동 -->
-        </div>
-      </section>
-</body>
+    <section class="mode">
+      <h2>발음 연습 모드</h2>
+      <div class="button-container">
+        <a href="{% url 'pron_practice' %}" class="mode-button">발음 연습</a>
+        <!-- 발음 연습 모드로 이동 -->
+      </div>
+    </section>
+  </body>
+
 </html>

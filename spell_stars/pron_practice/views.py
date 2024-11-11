@@ -18,9 +18,11 @@ model = whisper.load_model("small")
 # 단어를 고정 (eraser만)
 current_word = "eraser"
 
+
 # 발음 연습 페이지를 렌더링하는 뷰
 def pronunciation_practice_view(request):
-    return render(request, "practice.html", {"word": current_word})
+    return render(request, "pron_practice/pron_practice.html", {"word": current_word})
+
 
 def evaluate_pronunciation(request):
     try:
@@ -38,11 +40,16 @@ def evaluate_pronunciation(request):
             print(f"File type: {file_type}")
 
             if file_size == 0:
-                return JsonResponse({"error": "Uploaded file is empty. Please upload a valid audio file."}, status=400)
+                return JsonResponse(
+                    {
+                        "error": "Uploaded file is empty. Please upload a valid audio file."
+                    },
+                    status=400,
+                )
 
             # 확장자 강제로 .wav로 변경 (이름에 .wav가 포함되지 않는 경우에만)
             if not file_name.endswith(".wav"):
-                file_name = file_name.split('.')[0] + ".wav"
+                file_name = file_name.split(".")[0] + ".wav"
 
             # 파일 저장 경로 설정
             user_file_path = os.path.join(settings.MEDIA_ROOT, "user", file_name)
@@ -50,32 +57,41 @@ def evaluate_pronunciation(request):
 
             # 디렉토리 생성 및 파일 저장
             try:
-                os.makedirs(os.path.dirname(user_file_path), exist_ok=True)  # 사용자 파일 디렉토리 생성
+                os.makedirs(
+                    os.path.dirname(user_file_path), exist_ok=True
+                )  # 사용자 파일 디렉토리 생성
                 with open(user_file_path, "wb") as f:
                     for chunk in audio_file.chunks():
                         f.write(chunk)
                 print(f"File saved successfully at {user_file_path}")
             except Exception as e:
                 print(f"Error saving file: {e}")
-                return JsonResponse({"error": f"Failed to save file: {str(e)}"}, status=500)
+                return JsonResponse(
+                    {"error": f"Failed to save file: {str(e)}"}, status=500
+                )
 
             # 발음 비교 수행
-            score, waveform_similarity, mfcc_similarity, feedback = compare_pronunciation(user_file_path, current_word)
+            score, waveform_similarity, mfcc_similarity, feedback = (
+                compare_pronunciation(user_file_path, current_word)
+            )
 
             return JsonResponse(
                 {
                     "score": score,
                     "feedback": feedback,
                     "waveform_similarity": waveform_similarity,
-                    "mfcc_similarity": mfcc_similarity
+                    "mfcc_similarity": mfcc_similarity,
                 }
             )
 
         return JsonResponse({"error": "No audio file uploaded"}, status=400)
-    
+
     except Exception as e:
         print(f"Unexpected error: {str(e)}")
-        return JsonResponse({"error": f"An unexpected error occurred: {str(e)}"}, status=500)
+        return JsonResponse(
+            {"error": f"An unexpected error occurred: {str(e)}"}, status=500
+        )
+
 
 # 발음 비교 함수
 def compare_pronunciation(user_file_path, target_word):
@@ -108,6 +124,7 @@ def compare_pronunciation(user_file_path, target_word):
 
     return score, waveform_similarity, mfcc_similarity, feedback
 
+
 # 파형 비교 함수
 def compare_waveform(student_audio, native_audio):
     # 평균을 통해 1차원 벡터로 변환
@@ -115,15 +132,18 @@ def compare_waveform(student_audio, native_audio):
     native_waveform = np.mean(native_audio)
     return 1 - cosine([student_waveform], [native_waveform])
 
+
 # MFCC 특징 벡터 추출
 def extract_mfcc(audio, sr):
     mfcc = librosa.feature.mfcc(y=audio, sr=sr, n_mfcc=13)  # MFCC 벡터 생성
     return np.mean(mfcc, axis=1)  # 각 차원의 평균값을 통해 1차원 벡터로 변환
 
+
 # MFCC 비교 함수
 def compare_mfcc(student_mfcc, native_mfcc):
     # 1차원 벡터로 비교 수행
     return 1 - cosine(student_mfcc, native_mfcc)
+
 
 # 텍스트 비교 함수
 def compare_text(transcription, target_word):
@@ -149,6 +169,7 @@ def compare_text(transcription, target_word):
 
     return score, feedback
 
+
 # STT 모델을 통해 음성을 텍스트로 변환
 def transcribe_audio(file_path):
     try:
@@ -160,6 +181,7 @@ def transcribe_audio(file_path):
     except Exception as e:
         print(f"Error during transcription: {str(e)}")
         return f"Error during transcription: {str(e)}"
+
 
 # 다음 단어로 이동하는 뷰 (단어가 하나라 계속 "eraser"로 유지)
 def next_word(request):
