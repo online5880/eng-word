@@ -4,6 +4,7 @@ let audioData = [];
 let currentWord = document.getElementById("current-word").textContent;
 let audioPreview = document.getElementById("audio-preview");
 let nativeAudioPreview = document.getElementById("native-audio-preview");
+let countdownText = document.getElementById('countdown'); // 카운트다운을 표시할 요소
 
 const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
@@ -14,6 +15,26 @@ function loadNativeAudio() {
     nativeAudioPreview.style.display = 'block';
     nativeAudioPreview.load();
     nativeAudioPreview.play();
+}
+
+// 카운트다운 시작
+function startCountdown() {
+    countdownText.style.display = 'block'; // 카운트다운 영역을 보이게 설정
+    let countdownNumbers = [3, 2, 1];
+    let index = 0;
+
+    function updateCountdown() {
+        if (index < countdownNumbers.length) {
+            countdownText.innerText = countdownNumbers[index];
+            index++;
+            setTimeout(updateCountdown, 1000); // 1초마다 숫자 변경
+        } else {
+            countdownText.style.display = 'none'; // 카운트다운 숨기기
+            startRecording(); // 카운트다운이 끝나면 녹음 시작
+        }
+    }
+
+    updateCountdown(); // 카운트다운 시작
 }
 
 // 녹음 시작
@@ -46,7 +67,6 @@ function startRecording() {
                     document.getElementById("startBtn").disabled = true;
                     document.getElementById("stopBtn").disabled = false;
                 }, 300); // 300ms 지연 추가
-
             })
             .catch(err => {
                 console.log("Audio error: " + err);
@@ -59,7 +79,7 @@ function startRecording() {
 function stopRecording() {
     if (recorder && recorder.state === 'recording') {
         recorder.stop();
-        audioStream.getTracks().forEach(track => track.stop());
+        audioStream.getTracks().forEach(track => track.stop()); // 마이크 종료
 
         document.getElementById("startBtn").disabled = false;
         document.getElementById("stopBtn").disabled = true;

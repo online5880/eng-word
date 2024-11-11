@@ -7,6 +7,10 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from difflib import SequenceMatcher
 from django.conf import settings
+import warnings
+
+warnings.filterwarnings("ignore", category=FutureWarning)
+
 
 # Whisper 모델 로드 (small 모델 사용)
 model = whisper.load_model("small")
