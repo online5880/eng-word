@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "accounts",
-    "main"
+    "main",
+    "sent_mode",
+    "pron_practice",
+    "test_mode",
+    "vocab_mode"
 ]
 
 MIDDLEWARE = [

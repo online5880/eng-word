@@ -17,10 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from main import views as mainViews
+from vocab_mode import views as vocabViews
+from test_mode import views as testViews
+from pron_practice import views as pronViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("account/",include("accounts.urls")),
     path("",mainViews.index, name="index"),
     path('accounts/', include('django.contrib.auth.urls')),  # Django의 기본 인증 URL 패턴 추가
+    path("vocab_mode/",vocabViews.word_learning_view, name="vocab_mode"),
+    path("test_mode/",testViews.test_mode_view, name="test_mode"),
+    path("pronunciation_practice/",pronViews.pronunciation_practice_view, name="pronunciation_practice"),
 ]
 
