@@ -12,11 +12,13 @@
 
   <body>
     <h1>Test Mode</h1>
+    <!-- index.html로 이동하는 버튼 추가 -->
+    <button onclick="location.href='{% url 'index' %}'">메인 페이지로 이동</button>
     <form id="quiz-form">
       <div id="questions-container">
         {% for question in questions %}
           <div class="question">
-            <p>{{ question.sentence | replace: '____', '<input type="text" id="answer_'|add: question.id|add:'" placeholder="Type your answer here">' }}</p>
+            {% comment %} <p>{{ question.sentence | replace: '____', '<input type="text" id="answer_'|add: question.id|add:'" placeholder="Type your answer here">' }}</p> {% endcomment %}
             <button type="button" onclick="startRecording({{ question.id }})">🎤 Record</button>
             <input type="hidden" id="question_id_{{ question.id }}" value="{{ question.id }}">
           </div>

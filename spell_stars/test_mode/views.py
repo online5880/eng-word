@@ -19,4 +19,4 @@ def recognize_audio(request, question_id):
 
 def test_mode_view(request):
     # 단순히 템플릿을 렌더링하는 view 함수
-    return render(request, "test_page.html")
+    return render(request, "test_mode/test_page.html")
