@@ -1,134 +1,87 @@
-/* 기본 스타일 */
+/* 기본 페이지 스타일 */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-}
-
-/* 퀴즈 컨테이너 스타일 */
-#quiz-form {
-    width: 80%;
-    max-width: 800px;
-    margin: 50px auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: #333;
 }
 
 h1 {
-    text-align: center;
     color: #333;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
-#questions-container {
-    margin-bottom: 20px;
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px 0;
 }
 
-.question {
-    margin-bottom: 20px;
-}
-
-.question p {
-    font-size: 18px;
+/* 문제 영역 */
+#sentence {
+    font-size: 20px;
     font-weight: bold;
     color: #333;
+    text-align: center;
+    margin-top: 30px;
 }
 
-input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
+/* 녹음 버튼 스타일 */
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #016ccf;
     color: white;
-}
-
-button:hover {
-    background-color: #45a049;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 button:disabled {
-    background-color: #ddd;
+    background-color: #B0C4DE;
     cursor: not-allowed;
 }
 
-/* 피드백 섹션 */
-#feedback-section {
-    margin-top: 30px;
+button:hover:enabled {
+    background-color: #016ccf;
+}
+
+/* 음성 인식 결과 스타일 */
+#audio-result {
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
+    margin-top: 20px;
 }
 
-#feedback {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* 입력란의 스타일 */
-input[type="text"] {
-    width: 50%;
-    padding: 8px;
-    font-size: 16px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* 질문 텍스트 스타일 */
-.question p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* 녹음 버튼 */
-button[type="button"] {
-    background-color: #4CAF50;
-    color: white;
-    margin-top: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-button[type="button"]:hover {
-    background-color: #45a049;
-}
-
-/* 제출 버튼 */
-button[type="submit"] {
-    background-color: #008CBA;
-    color: white;
-}
-
-button[type="submit"]:hover {
-    background-color: #007B9E;
-}
-
-/* 피드백 색상 */
-#feedback.green {
+#audio-result.green {
     color: green;
 }
 
-#feedback.red {
+#audio-result.red {
     color: red;
 }
 
-#feedback.yellow {
-    color: yellow;
+/* 녹음된 음성 미리보기 */
+#audio-preview {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 버튼 컨테이너 */
+.button-container {
+    text-align: center;
+}
+
+/* 오류 메시지 */
+#error-message {
+    color: red;
+    font-size: 16px;
+    text-align: center;
 }
