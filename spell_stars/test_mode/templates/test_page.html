@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Mode</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+
+  <body>
+    <h1>Test Mode</h1>
+    <form id="quiz-form">
+      <div id="questions-container">
+        {% for question in questions %}
+          <div class="question">
+            <p>{{ question.sentence | replace: '____', '<input type="text" id="answer_'|add: question.id|add:'" placeholder="Type your answer here">' }}</p>
+            <button type="button" onclick="startRecording({{ question.id }})">🎤 Record</button>
+            <input type="hidden" id="question_id_{{ question.id }}" value="{{ question.id }}">
+          </div>
+        {% endfor %}
+      </div>
+
+      <button type="button" onclick="submitAnswers()">Submit Answers</button>
+    </form>
+
+    <div id="feedback-section" style="display: none;">
+      <h2>Feedback</h2>
+      <p id="feedback"></p>
+    </div>
+
+    <script src="{% static 'test_mode.js' %}"></script>
+  </body>
+
+</html>

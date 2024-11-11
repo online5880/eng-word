@@ -1,0 +1,45 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영어 단어 암기 프로그램</title>
+    <link rel="stylesheet" href="{% static 'home_styles.css' %}">
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <h1>영어 단어 암기 프로그램</h1>
+        <p>효율적인 단어 학습을 시작하세요!</p>
+      </header>
+
+      <section class="mode">
+        <h2>사전 학습 모드</h2>
+        <div class="button-container">
+          <a href="{% url 'vocab_mode' %}" class="mode-button">사전 학습 모드</a>
+          <!-- 사전 학습 모드로 이동 -->
+        </div>
+      </section>
+
+      <section class="mode">
+        <h2>시험 모드</h2>
+        <div class="button-container">
+          <a href="{% url 'test_mode' %}" class="mode-button">시험 모드</a>
+          <!-- 시험 모드로 이동 -->
+        </div>
+      </section>
+
+      <section class="mode">
+        <h2>발음 연습 모드</h2>
+        <div class="button-container">
+          <a href="{% url 'pronunciation_practice' %}" class="mode-button">발음 연습</a>
+          <!-- 발음 연습 모드로 이동 -->
+        </div>
+      </section>
+    </div>
+  </body>
+
+</html>
