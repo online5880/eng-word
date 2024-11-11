@@ -1,35 +1,49 @@
-from django.shortcuts import render, redirect
+import json
 from django.http import JsonResponse
-from .models import Word
-from django.contrib.sessions.models import Session
+from django.shortcuts import render, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
+from .models import VocabularyBook, Word
+import whisper
+import difflib
 
+# Whisper 모델 로드
+model = whisper.load_model("base")
 
-def word_learning_view(request):
-    # 현재 단어의 인덱스를 세션에 저장하고 불러오기
-    current_word_index = request.session.get("current_word_index", 0)
-    words = Word.objects.all()
+def display_vocabulary_book(request, book_id):
+    vocabulary_book = get_object_or_404(VocabularyBook, id=book_id)
 
-    # 모든 단어를 학습했으면 예문 학습 모드로 이동
-    if current_word_index >= len(words):
-        return redirect("sent_mode")  # 예문 학습 모드로 리다이렉트
+    # JSON 파일에서 데이터를 읽어옴
+    if vocabulary_book.json_file:
+        with open(vocabulary_book.json_file.path, 'r', encoding='utf-8') as file:
+            word_data = json.load(file)
+    else:
+        word_data = []
 
-    word = words[current_word_index]
+    return render(request, 'display_vocabulary.html', {'words': word_data, 'book': vocabulary_book})
 
-    if request.method == "POST":
-        pronunciation_level = int(request.POST.get("pronunciation_level", 0))
+@csrf_exempt
+def evaluate_pronunciation(request):
+    if request.method == 'POST' and request.FILES.get('audio'):
+        word_id = request.POST.get('word_id')
+        word = get_object_or_404(Word, id=word_id)
+        uploaded_audio = request.FILES['audio']
 
-        # 발음 수준이 기준을 넘으면 다음 단어로 이동
-        if pronunciation_level >= 80:
-            current_word_index += 1
-            request.session["current_word_index"] = (
-                current_word_index  # 세션에 현재 단어 인덱스 저장
-            )
+        # 임시 파일에 저장
+        with open('temp_audio.wav', 'wb') as f:
+            for chunk in uploaded_audio.chunks():
+                f.write(chunk)
 
-        # 모든 단어 학습이 끝났으면 예문 학습 모드로 리다이렉트
-        if current_word_index >= len(words):
-            return JsonResponse({"all_words_learned": True})
+        # Whisper로 STT 처리
+        result = model.transcribe('temp_audio.wav')
+        student_text = result['text'].strip()
 
-        # 아직 단어가 남아 있으면 현재 단어 반환
-        return JsonResponse({"score": pronunciation_level, "all_words_learned": False})
+        # 유사도 계산
+        target_text = word.text.strip()
+        similarity_score = difflib.SequenceMatcher(None, student_text, target_text).ratio() * 100
 
-    return render(request, "vocab_mode/word_learning.html", {"word": word})
+        return JsonResponse({
+            'original_text': target_text,
+            'student_text': student_text,
+            'score': similarity_score,
+            'success': True
+        })

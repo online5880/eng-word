@@ -1,59 +1,88 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ko">
-
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>단어 학습</title>
+    <title>{{ book.student.username }}'s Vocabulary Book</title>
     <link rel="stylesheet" href="{% static 'css/vocab_styles.css' %}">
-  </head>
+</head>
+<body>
+    <h1>{{ book.student.username }}'s Vocabulary Book</h1>
 
-  <body>
-    <h1>단어 학습</h1>
-
-    <div>
-      <h2>단어:
-        {{ word.word }}</h2>
-      <p>뜻:
-        {{ word.meaning }}</p>
-      <p>예문:
-        {{ word.example_sentence }}</p>
-
-      <!-- 원어민 발음 듣기 -->
-      <audio id="native-audio" controls="controls">
-        <source src="{{ word.audio_file.url }}" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
-
-      <!-- 음성 녹음 -->
-      <button onclick="startRecording()">Start Recording</button>
-      <button onclick="stopRecording()">Stop Recording</button>
-      <audio id="recorded-audio" controls="controls"></audio>
-
-      <!-- 발음 평가 버튼 -->
-      <button onclick="evaluatePronunciation()">Evaluate Pronunciation</button>
-
-      <!-- 발음 수준 입력 (후에 POST로 전송될 값) -->
-      <form id="pronunciation-form" method="POST" style="display:none;">
-        {% csrf_token %}
-        <input type="hidden" name="pronunciation_level" id="pronunciation_level">
-      </form>
-
-      <!-- 다음 단어로 이동 (단어 학습이 끝난 후) -->
-      <div id="next-word-container" style="display:none;">
-        <p>발음 기준을 넘었어요! 이제 다음 단어로 넘어갈게요.</p>
-        <a href="{% url 'word_learning' %}">다음 단어</a>
-      </div>
-
-      <!-- 예문 학습으로 넘어가기 (모든 단어 학습이 끝난 후) -->
-      <div id="go-to-sentence-practice" style="display:none;">
-        <a href="{% url 'sent_mode' %}">예문 학습으로 가기</a>
-      </div>
-
+    <div style="max-height: 500px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px;">
+        <ul id="word-list">
+            {% for word in words %}
+                <li style="margin-bottom: 20px;">
+                    <strong>{{ word.text }}</strong> - {{ word.meaning }}
+                    <button onclick="playAudio('{{ word.audio_file.url }}')">Play Native Audio</button>
+                    <button onclick="startRecording('{{ word.id }}')">Record My Voice</button>
+                    <audio id="native-audio-{{ word.id }}" controls="controls" style="display:none;">
+                        <source src="{{ word.audio_file.url }}" type="audio/wav">
+                    </audio>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 
-    <script src="{% static 'js/vocab.js' %}"></script>
-  </body>
+    <audio id="recorded-audio" controls="controls" style="display:none;"></audio>
 
+    <script src="{% static 'js/vocab.js' %}"></script>
+    <script>
+        function playAudio(url) {
+            const audio = new Audio(url);
+            audio.play();
+        }
+
+        let mediaRecorder;
+        let recordedChunks = [];
+
+        function startRecording(wordId) {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+                    recordedChunks = [];
+                    mediaRecorder.ondataavailable = event => {
+                        if (event.data.size > 0) {
+                            recordedChunks.push(event.data);
+                        }
+                    };
+                    mediaRecorder.onstop = () => {
+                        const audioBlob = new Blob(recordedChunks, { type: 'audio/wav' });
+                        const audioURL = URL.createObjectURL(audioBlob);
+                        document.getElementById('recorded-audio').src = audioURL;
+                        document.getElementById('recorded-audio').style.display = 'block';
+
+                        // Send the recorded audio to the server for evaluation
+                        sendAudioToServer(audioBlob, wordId);
+                    };
+                    mediaRecorder.start();
+                    setTimeout(() => mediaRecorder.stop(), 5000); // Automatically stop after 5 seconds
+                })
+                .catch(error => {
+                    console.error("Microphone access denied", error);
+                });
+        }
+
+        function sendAudioToServer(audioBlob, wordId) {
+            const formData = new FormData();
+            formData.append('audio', audioBlob);
+            formData.append('word_id', wordId);
+
+            fetch(window.location.href, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(`Your pronunciation score for "${data.original_text}": ${data.score}`);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
 </html>
