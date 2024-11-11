@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예문 학습</title>
+    <link rel="stylesheet" href="{% static 'sent_styles.css' %}">
+  </head>
+
+  <body>
+    <div id="example-learning-container">
+      <h1>예문 학습</h1>
+
+      <div id="word-container">
+        <h2>단어:
+          {{ word.word }}</h2>
+        <p>{{ word.definition }}</p>
+      </div>
+
+      <div id="example-container">
+        <h3>예문</h3>
+        {% for example in examples %}
+          <p>
+            <strong>빈칸 예문:</strong><br>
+            {{ example.blank_sentence }}
+            <!-- 빈칸 예문 -->
+          </p>
+        {% endfor %}
+      </div>
+
+      <!-- 음성 녹음 관련 -->
+      <div id="audio-section">
+        <button onclick="startRecording()">녹음 시작</button>
+        <button onclick="stopRecording()" disabled="disabled">녹음 종료</button>
+        <audio id="audio-preview" controls="controls"></audio>
+      </div>
+
+      <button onclick="submitAnswer()">정답 제출</button>
+    </div>
+
+    <script src="{% static 'sent.js' %}"></script>
+  </body>
+
+</html>

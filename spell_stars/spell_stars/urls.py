@@ -25,6 +25,7 @@ urlpatterns = [
     path("", include("main_page.urls")),  # 메인 페이지 앱 연결
     path("test_mode/", include("test_mode.urls")),
     path("pron_practice/", include("pron_practice.urls")),
+    path("vocab_mode/", include("vocab_mode.urls")),
 ]
 
 # media 파일을 제공하는 URL 패턴 추가

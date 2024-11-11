@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "main_page",
     "test_mode",
     "pron_practice",
+    "vocab_mode",
+    "sent_mode",
 ]
 
 MIDDLEWARE = [

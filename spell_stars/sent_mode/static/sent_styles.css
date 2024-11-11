@@ -1,0 +1,73 @@
+/* 예문 학습에 필요한 스타일 */
+#example-learning-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+#word-container {
+    margin-bottom: 20px;
+}
+
+#word-container h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+#word-container p {
+    font-size: 18px;
+    color: #666;
+}
+
+#example-container {
+    margin-bottom: 20px;
+}
+
+#example-container h3 {
+    font-size: 22px;
+    color: #444;
+}
+
+#example-container p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#audio-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#feedback-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#feedback-section p {
+    font-size: 18px;
+    color: #FF6347;  /* 피드백 색상 */
+}

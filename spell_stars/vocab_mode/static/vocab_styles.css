@@ -1,0 +1,60 @@
+/* 단어 학습에 필요한 스타일 */
+#word-learning-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+#word-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#word-container h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+#word-container p {
+    font-size: 18px;
+    color: #666;
+}
+
+#audio-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#score-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#score-container span {
+    font-size: 24px;
+    color: #4CAF50;
+}
