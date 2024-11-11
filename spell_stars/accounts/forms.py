@@ -23,6 +23,11 @@ class SignupForm(UserCreationForm):
         label="아이디",
     )
     
+    age = forms.IntegerField(
+        label="나이",
+        help_text="5세부터 100세 사이를 입력하세요."
+    )
+    
     password1 = forms.CharField(
         label="비밀번호",
         widget=forms.PasswordInput,
@@ -36,7 +41,7 @@ class SignupForm(UserCreationForm):
     
     class Meta:
         model = User
-        fields = ["nickname","username","password1","password2"]
+        fields = ["nickname","username","age","password1","password2"]
         
     def save(self, commit=True):
         user = super().save(commit=True)
