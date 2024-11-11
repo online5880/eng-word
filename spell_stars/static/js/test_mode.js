@@ -3,11 +3,13 @@ let audioChunks = [];
 let audioBlob;
 let audioUrl;
 let audioPreview = document.getElementById("audio-preview");
+let audioStream;  // 마이크 스트림을 저장할 변수
 
 // 녹음 시작 버튼 클릭
 document.getElementById("start-recording").onclick = function() {
     navigator.mediaDevices.getUserMedia({ audio: true })
         .then(stream => {
+            audioStream = stream;  // 마이크 스트림 저장
             mediaRecorder = new MediaRecorder(stream);
             mediaRecorder.start();
 
@@ -23,8 +25,8 @@ document.getElementById("start-recording").onclick = function() {
                 // 오디오 미리보기
                 audioPreview.src = audioUrl;
 
-                // 서버로 오디오 전송
-                sendAudioToServer(audioBlob);
+                // 서버로 오디오 전송 (수정된 방식)
+                saveAudioToServer(audioBlob);
             };
 
             // 버튼 상태 변경
@@ -40,16 +42,24 @@ document.getElementById("start-recording").onclick = function() {
 // 녹음 중지 버튼 클릭
 document.getElementById("stop-recording").onclick = function() {
     mediaRecorder.stop();
+    
+    // 녹음이 끝난 후 마이크 스트림을 종료
+    if (audioStream) {
+        audioStream.getTracks().forEach(track => track.stop());  // 마이크 종료
+    }
+
+    // 버튼 상태 변경
     document.getElementById("start-recording").disabled = false;
     document.getElementById("stop-recording").disabled = true;
 };
 
-// 음성 파일을 서버로 전송
-function sendAudioToServer(audioBlob) {
+// 음성 파일을 서버에 저장 (수정된 부분)
+function saveAudioToServer(audioBlob) {
     let formData = new FormData();
-    formData.append("audio", audioBlob, "audio.wav");
+    formData.append("audio_file", audioBlob, "audio.wav");
 
-    fetch("{% url 'recognize_audio' 1 %}", {  // '1'은 예시 question_id
+    // JavaScript에서 questionId를 사용해 URL을 동적으로 만듭니다.
+    fetch(`/recognize_audio/${questionId}/`, {  // questionId를 URL에 동적으로 삽입
         method: "POST",
         body: formData
     })
@@ -57,11 +67,11 @@ function sendAudioToServer(audioBlob) {
     .then(data => {
         const resultDiv = document.getElementById("audio-result");
 
-        if (data.transcript) {
-            resultDiv.textContent = "음성 인식 결과: " + data.transcript;
+        if (data.message) {  // 서버에서의 응답
+            resultDiv.textContent = "파일이 성공적으로 저장되었습니다.";
             resultDiv.className = "green";  // 결과 색상 변경
         } else {
-            resultDiv.textContent = "음성 인식에 실패했습니다.";
+            resultDiv.textContent = "파일 저장에 실패했습니다.";
             resultDiv.className = "red";  // 결과 색상 변경
         }
     })

@@ -5,22 +5,14 @@ import re
 from django.shortcuts import render
 from django.http import JsonResponse
 import whisper
-from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
+from django.core.files.storage import default_storage
+import warnings
 
+warnings.filterwarnings("ignore", category=FutureWarning)
 
-# 음성 인식 API를 통해 음성 파일을 텍스트로 변환
-@csrf_exempt
-def recognize_audio(request, question_id):
-    if request.method == "POST" and request.FILES.get("audio"):
-        audio_file = request.FILES["audio"]
-
-        # Whisper 모델 로드 및 음성 변환
-        model = whisper.load_model("small")  # 작은 모델을 사용할 경우 변경
-        result = model.transcribe(audio_file)
-
-        return JsonResponse({"transcript": result["text"]})
-    return JsonResponse({"error": "Audio file not provided"}, status=400)
+# Whisper 모델 로드 (small 모델 사용)
+model = whisper.load_model("small")
 
 
 # 시험 문제 페이지
@@ -76,3 +68,46 @@ def test_mode_view(request):
         "test_mode/test_page.html",
         {"sentence": problem_sentence, "answer": selected_word},
     )
+
+
+# 음성 인식 API를 통해 음성 파일을 텍스트로 변환
+def recognize_audio(request, question_id):
+    if request.method == "POST" and request.FILES.get("audio_file"):
+        audio_file = request.FILES["audio_file"]
+
+        # 업로드된 파일의 정보 확인
+        file_name = audio_file.name
+        file_size = audio_file.size
+        file_type = audio_file.content_type
+
+        print(f"Received file: {file_name}")
+        print(f"File size: {file_size} bytes")
+        print(f"File type: {file_type}")
+
+        # 파일 이름을 고유하게 설정
+        file_name = f"audio_{question_id}.wav"
+        file_path = os.path.join(settings.MEDIA_ROOT, "audio_files", file_name)
+
+        # 음성 파일을 서버에 저장
+        try:
+            with default_storage.open(file_path, "wb") as f:
+                for chunk in audio_file.chunks():
+                    f.write(chunk)
+            print(f"Audio file saved at {file_path}")
+        except Exception as e:
+            return JsonResponse({"error": f"Failed to save file: {str(e)}"}, status=500)
+
+        # Whisper를 사용해 음성 파일을 텍스트로 변환
+        try:
+            # Whisper 모델로 음성 파일을 텍스트로 변환
+            result = model.transcribe(file_path, language="ko")  # 한국어로 설정
+            transcript = result["text"]
+
+            return JsonResponse({"transcript": transcript})
+
+        except Exception as e:
+            return JsonResponse(
+                {"error": f"Failed to transcribe audio: {str(e)}"}, status=500
+            )
+
+    return JsonResponse({"error": "No audio file received"}, status=400)
