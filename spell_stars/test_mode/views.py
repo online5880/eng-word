@@ -68,35 +68,39 @@ def test_mode_view(request):
 
 def recognize_audio(request, question_id):
     print(f"recognize_audio called for question_id: {question_id}")
+
+    # POST 요청에서 파일이 포함되어 있는지 확인
     if request.method == "POST" and request.FILES.get("audio_file"):
         audio_file = request.FILES["audio_file"]
         print(f"Received file: {audio_file.name}, Size: {audio_file.size} bytes")
 
+        # 파일 저장 경로 설정
         file_name = f"audio_{question_id}.wav"
         file_path = os.path.join(settings.MEDIA_ROOT, "test_mode", file_name)
-        print(f"Saving audio file to {file_path}")
 
         try:
+            # 파일 저장
             with default_storage.open(file_path, "wb") as f:
                 for chunk in audio_file.chunks():
                     f.write(chunk)
             print(f"Audio file saved at {file_path}")
-        except Exception as e:
-            print(f"Failed to save file: {str(e)}")
-            return JsonResponse({"error": f"Failed to save file: {str(e)}"}, status=500)
 
-        try:
+            # Whisper 모델로 음성 텍스트 변환
             result = model.transcribe(file_path, language="ko")
             transcript = result["text"]
             print(f"Transcript from Whisper: {transcript}")
 
-            return JsonResponse({"transcript": transcript})
+            # 음성 파일 URL 반환
+            audio_url = os.path.join(settings.MEDIA_URL, "test_mode", file_name)
+            return JsonResponse({
+                "transcript": transcript,
+                "audio_url": audio_url  # 음성 파일 URL 반환
+            })
 
         except Exception as e:
             print(f"Failed to transcribe audio: {str(e)}")
-            return JsonResponse(
-                {"error": f"Failed to transcribe audio: {str(e)}"}, status=500
-            )
+            return JsonResponse({"error": f"Failed to transcribe audio: {str(e)}"}, status=500)
 
+    # 파일이 없을 경우
     print("No audio file received in request")
     return JsonResponse({"error": "No audio file received"}, status=400)

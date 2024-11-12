@@ -49,9 +49,8 @@
       window.currentWord = currentWord;
 
       // CSRF 토큰을 meta 태그에서 가져와서 JavaScript에 설정
-      window.csrfToken = document
-        .querySelector('meta[name="csrf-token"]')
-        .content;
+      window.csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+      console.log("CSRF Token:", window.csrfToken);  // CSRF 토큰 확인
     </script>
 
   </body>

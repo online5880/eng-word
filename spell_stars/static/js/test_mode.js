@@ -3,12 +3,9 @@ let audioStream;
 let audioData = [];
 let audioPreview = document.getElementById("audio-preview");
 
-// CSRF 토큰을 전역 변수로 설정
-const csrfToken = window.csrfToken;
-
 // 녹음 시작
 function startRecording() {
-    console.log("startRecording 호출됨");  // 녹음 시작 함수 호출 확인
+    console.log("startRecording 호출됨");
 
     if (navigator.mediaDevices) {
         audioData = [];
@@ -18,8 +15,6 @@ function startRecording() {
             .then(stream => {
                 audioStream = stream;
                 recorder = new MediaRecorder(stream);
-
-                console.log("녹음기 시작됨");
 
                 recorder.ondataavailable = event => {
                     console.log("ondataavailable 호출됨, 크기: " + event.data.size);
@@ -38,81 +33,54 @@ function startRecording() {
                     }
                 };
 
-                // 녹음 시작 지연 추가
-                setTimeout(() => {
-                    recorder.start(); // 녹음 시작
-                    document.getElementById("startBtn").disabled = true;
-                    document.getElementById("stopBtn").disabled = false;
-                }, 300); // 300ms 지연 추가
+                // 녹음 시작
+                recorder.start();
+                document.getElementById("startBtn").disabled = true;
+                document.getElementById("stopBtn").disabled = false;
             })
             .catch(err => {
                 console.log("Audio error: " + err);
-                alert("녹음 시작에 실패했습니다. 마이크 권한을 확인해주세요.");
+                alert("마이크 권한을 확인해주세요.");
             });
+    } else {
+        alert("이 브라우저는 오디오 녹음을 지원하지 않습니다.");
     }
 }
 
 // 녹음 중지
 function stopRecording() {
-    console.log("stopRecording 호출됨");  // 녹음 중지 함수 호출 확인
-
-    if (recorder && recorder.state === 'recording') {
-        recorder.stop();
-        audioStream.getTracks().forEach(track => track.stop()); // 마이크 종료
-
-        console.log("녹음 중지됨");
-        document.getElementById("startBtn").disabled = false;
-        document.getElementById("stopBtn").disabled = true;
-    } else {
-        console.log("녹음이 진행 중이 아닙니다.");
-    }
+    console.log("stopRecording 호출됨");
+    recorder.stop();
+    audioStream.getTracks().forEach(track => track.stop()); // 모든 트랙 중지
+    document.getElementById("stopBtn").disabled = true;
 }
 
-// 녹음 처리
+// 음성 파일 처리 및 서버 전송
 function processRecording() {
-    console.log("processRecording 호출됨");  // 녹음 처리 함수 호출 확인
-
-    const audioBlob = new Blob(audioData, { type: 'audio/wav' });
-    console.log("오디오 Blob 생성됨, 크기: " + audioBlob.size);
-
+    const blob = new Blob(audioData, { type: 'audio/wav' });
     const formData = new FormData();
-    formData.append('audio_file', audioBlob);
+    formData.append("audio_file", blob, "audio.wav");
 
-    fetch(`/recognize_audio/${window.questionId}/`, {
-        method: 'POST',
-        body: formData,
+    // 서버로 전송
+    fetch(`recognize_audio/${window.questionId}/`, {
+        method: "POST",
         headers: {
-            'X-CSRFToken': csrfToken
-        }
+            "X-CSRFToken": csrfToken, // CSRF 토큰 포함
+        },
+        body: formData
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok: ' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log("서버 응답: ", data);
-    
-        const resultDiv = document.getElementById("audio-result");
-    
-        if (data.transcript) {
-            console.log("음성 인식 결과: " + data.transcript);
-            resultDiv.textContent = "음성 인식 결과: " + data.transcript;
-            resultDiv.className = "green";
-        } else {
-            console.log("음성 인식 실패");
-            resultDiv.textContent = "음성 인식에 실패했습니다.";
-            resultDiv.className = "red";
-        }
-    
-        const audioUrl = URL.createObjectURL(audioBlob);
-        audioPreview.src = audioUrl;
-        audioPreview.style.display = 'block';
-    })
-    .catch(error => {
-        console.error("Error processing recording: ", error);
-        alert("서버 처리 중 오류가 발생했습니다.");
-    });
-    
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert("Error: " + data.error);
+            } else {
+                console.log("Transcript: ", data.transcript);
+                document.getElementById("audio-result").textContent = `Transcript: ${data.transcript}`;
+
+                // 음성 파일 URL로 음성 미리듣기
+                audioPreview.style.display = "block";
+                audioPreview.src = data.audio_url;  // 반환된 URL을 사용
+            }
+        })
+        .catch(error => console.log("Error during audio upload:", error));
 }
