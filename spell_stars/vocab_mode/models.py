@@ -1,3 +1,4 @@
+# models.py
 from django.db import models
 from django.conf import settings
 
@@ -12,6 +13,8 @@ class Word(models.Model):
     theme = models.ForeignKey(Theme, on_delete=models.CASCADE)
     text = models.CharField(max_length=50)
     pronunciation_guide = models.TextField()
+    meaning = models.TextField()  # 뜻 필드 추가
+    audio_file = models.FileField(upload_to='word_audios/', null=True, blank=True)  # 네이티브 오디오 필드 추가
 
     def __str__(self):
         return self.text
@@ -19,7 +22,7 @@ class Word(models.Model):
 class VocabularyBook(models.Model):
     student = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     words = models.ManyToManyField(Word)
-    json_file = models.FileField(upload_to='utils/combined_words.json', null=True, blank=True)  # JSON 파일 필드 추가
+    json_file = models.FileField(upload_to='utils/combined_words.json', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

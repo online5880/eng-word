@@ -13,17 +13,17 @@
 
   <body>
     <div id="practice-container">
-      <h2>Pronunciation Practice</h2>
+      <h2>발음 연습 모드</h2>
       <p>Current word:
         <span id="current-word">{{ word }}</span>
       </p>
 
       <div>
-        <h3>Listen to the Native Pronunciation</h3>
+        <h3>원어민 발음을 들어볼까요?</h3>
         <!-- 오디오 요소 -->
         <audio id="native-audio-preview" controls="controls">
           <source src="/media/audio/native/eraser_a.wav" type="audio/wav">
-          Your browser does not support the audio element.
+          오디오 파일이 지원되지 않는 브라우저입니다.
         </audio>
       </div>
 
@@ -31,12 +31,12 @@
       <div id="countdown"></div>
 
       <!-- Start/Stop Recording buttons -->
-      <button id="startBtn" onclick="startRecording()">Start Recording</button>
-      <button id="stopBtn" onclick="stopRecording()" disabled="disabled">Stop Recording</button>
+      <button id="startBtn" onclick="startRecording()">녹음 시작</button>
+      <button id="stopBtn" onclick="stopRecording()" disabled="disabled">녹음 중지</button>
 
       <!-- Score display -->
       <div>
-        <p>Score:
+        <p>점수:
           <span id="score">0</span>
         </p>
         <div id="score-bar"></div>
@@ -49,7 +49,7 @@
 
       <!-- Audio preview section (녹음한 음성 미리보기) -->
       <audio id="audio-preview" controls="controls" style="display: none;">
-        Your browser does not support the audio element.
+        오디오 파일이 지원되지 않는 브라우저입니다.
       </audio>
 
       <!-- Navigation buttons -->

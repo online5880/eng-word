@@ -14,11 +14,10 @@
             {% for word in words %}
                 <li style="margin-bottom: 20px;">
                     <strong>{{ word.text }}</strong> - {{ word.meaning }}
-                    <button onclick="playAudio('{{ word.audio_file.url }}')">Play Native Audio</button>
+                    {% if word.audio_file %}
+                        <button onclick="playAudio('{{ word.audio_file.url }}')">Play Native Audio</button>
+                    {% endif %}
                     <button onclick="startRecording('{{ word.id }}')">Record My Voice</button>
-                    <audio id="native-audio-{{ word.id }}" controls="controls" style="display:none;">
-                        <source src="{{ word.audio_file.url }}" type="audio/wav">
-                    </audio>
                 </li>
             {% endfor %}
         </ul>

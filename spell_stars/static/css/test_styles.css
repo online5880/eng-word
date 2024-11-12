@@ -1,134 +1,82 @@
-/* 기본 스타일 */
+/* 전체 페이지 스타일 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-}
-
-/* 퀴즈 컨테이너 스타일 */
-#quiz-form {
-    width: 80%;
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 수평 중앙 정렬 */
+    justify-content: center;
+    /* 수직 중앙 정렬 */
+    height: 100vh;
+    /* 전체 화면을 차지 */
     text-align: center;
-    color: #333;
+    /* 텍스트 중앙 정렬 */
+    background-color: #f4f4f4;
+}
+
+/* 제목 스타일 */
+h1 {
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
-#questions-container {
-    margin-bottom: 20px;
+/* 설명 텍스트 스타일 */
+p {
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
-.question {
-    margin-bottom: 20px;
-}
-
-.question p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
+/* 버튼 스타일 */
 button {
+    margin: 10px;
     padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px 5px;
-    border: none;
-    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    background-color: #4CAF50;
+    border: 1px solid #ccc;
     color: white;
+    border-radius: 5px;
+    background-color: #016ccf;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-button:disabled {
-    background-color: #ddd;
+/* 버튼 비활성화 상태 */
+button:disabled,
+.disabled {
+    background-color: #B0C4DE;
     cursor: not-allowed;
 }
 
-/* 피드백 섹션 */
-#feedback-section {
-    margin-top: 30px;
-    text-align: center;
+button:hover {
+    background-color: #005bb5;
 }
 
-#feedback {
-    font-size: 18px;
-    font-weight: bold;
+/* 오디오 미리보기 영역 */
+audio {
+    margin-top: 20px;
+}
+
+/* 음성 인식 결과 표시 영역 */
+#audio-result {
+    margin-top: 20px;
+    font-size: 1.2rem;
     color: #333;
 }
 
-/* 입력란의 스타일 */
-input[type="text"] {
-    width: 50%;
-    padding: 8px;
-    font-size: 16px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* 질문 텍스트 스타일 */
-.question p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* 녹음 버튼 */
-button[type="button"] {
-    background-color: #4CAF50;
-    color: white;
-    margin-top: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-button[type="button"]:hover {
-    background-color: #45a049;
-}
-
-/* 제출 버튼 */
-button[type="submit"] {
-    background-color: #008CBA;
-    color: white;
-}
-
-button[type="submit"]:hover {
-    background-color: #007B9E;
-}
-
-/* 피드백 색상 */
-#feedback.green {
+/* 음성 인식 결과 클래스 */
+.green {
     color: green;
 }
 
-#feedback.red {
+.red {
     color: red;
 }
 
-#feedback.yellow {
-    color: yellow;
+/* 추가적으로 요소들 간 간격을 설정 */
+div,
+button,
+audio {
+    margin-bottom: 20px;
+    /* 각 요소 사이에 간격 추가 */
 }
