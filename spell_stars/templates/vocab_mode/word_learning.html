@@ -1,59 +1,49 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
-
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>단어 학습</title>
-    <link rel="stylesheet" href="{% static 'css/vocab_styles.css' %}">
-  </head>
-
-  <body>
-    <h1>단어 학습</h1>
-
-    <div>
-      <h2>단어:
-        {{ word.word }}</h2>
-      <p>뜻:
-        {{ word.meaning }}</p>
-      <p>예문:
-        {{ word.example_sentence }}</p>
-
-      <!-- 원어민 발음 듣기 -->
-      <audio id="native-audio" controls="controls">
-        <source src="{{ word.audio_file.url }}" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
-
-      <!-- 음성 녹음 -->
-      <button onclick="startRecording()">Start Recording</button>
-      <button onclick="stopRecording()">Stop Recording</button>
-      <audio id="recorded-audio" controls="controls"></audio>
-
-      <!-- 발음 평가 버튼 -->
-      <button onclick="evaluatePronunciation()">Evaluate Pronunciation</button>
-
-      <!-- 발음 수준 입력 (후에 POST로 전송될 값) -->
-      <form id="pronunciation-form" method="POST" style="display:none;">
-        {% csrf_token %}
-        <input type="hidden" name="pronunciation_level" id="pronunciation_level">
-      </form>
-
-      <!-- 다음 단어로 이동 (단어 학습이 끝난 후) -->
-      <div id="next-word-container" style="display:none;">
-        <p>발음 기준을 넘었어요! 이제 다음 단어로 넘어갈게요.</p>
-        <a href="{% url 'word_learning' %}">다음 단어</a>
-      </div>
-
-      <!-- 예문 학습으로 넘어가기 (모든 단어 학습이 끝난 후) -->
-      <div id="go-to-sentence-practice" style="display:none;">
-        <a href="{% url 'sent_mode' %}">예문 학습으로 가기</a>
-      </div>
-
+    <title>단어장</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            width: 80%;
+        }
+        .word-list {
+            max-height: 400px; /* 스크롤 영역 높이 설정 */
+            overflow-y: auto; /* 세로 스크롤 활성화 */
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .word-list ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .word-list li {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>단어장</h1>
+        <div class="word-list">
+            <ul>
+                {% for word in words %}
+                    <li>{{ word.text }}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-
-    <script src="{% static 'js/vocab.js' %}"></script>
-  </body>
-
+</body>
 </html>

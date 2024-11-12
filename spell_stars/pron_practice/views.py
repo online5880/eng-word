@@ -29,15 +29,15 @@ def evaluate_pronunciation(request):
         if request.method == "POST" and request.FILES.get("audio_file"):
             # 사용자 음성을 파일로 저장
             audio_file = request.FILES["audio_file"]
+            print(f"Received file: {audio_file.name}, Size: {audio_file.size} bytes")
 
             # 업로드된 파일의 정보 확인
             file_name = audio_file.name
             file_size = audio_file.size
             file_type = audio_file.content_type
-
-            print(f"Received file: {file_name}")
-            print(f"File size: {file_size} bytes")
-            print(f"File type: {file_type}")
+            print(
+                f"File details: Name = {file_name}, Size = {file_size}, Type = {file_type}"
+            )
 
             if file_size == 0:
                 return JsonResponse(
@@ -50,10 +50,11 @@ def evaluate_pronunciation(request):
             # 확장자 강제로 .wav로 변경 (이름에 .wav가 포함되지 않는 경우에만)
             if not file_name.endswith(".wav"):
                 file_name = file_name.split(".")[0] + ".wav"
+                print(f"File extension changed to .wav: {file_name}")
 
             # 파일 저장 경로 설정
-            user_file_path = os.path.join(settings.MEDIA_ROOT, "user", file_name)
-            print(f"User file path: {user_file_path}")
+            user_file_path = os.path.join(settings.MEDIA_ROOT, "pron_pc", file_name)
+            print(f"Saving file to: {user_file_path}")
 
             # 디렉토리 생성 및 파일 저장
             try:
@@ -73,6 +74,9 @@ def evaluate_pronunciation(request):
             # 발음 비교 수행
             score, waveform_similarity, mfcc_similarity, feedback = (
                 compare_pronunciation(user_file_path, current_word)
+            )
+            print(
+                f"Pronunciation comparison results: Score = {score}, Feedback = {feedback}, Waveform similarity = {waveform_similarity}, MFCC similarity = {mfcc_similarity}"
             )
 
             return JsonResponse(

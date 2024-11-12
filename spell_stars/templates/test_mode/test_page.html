@@ -1,4 +1,5 @@
 {% load static %}
+{% csrf_token %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,34 +7,53 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Mode</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>시험 모드</title>
+
+    <!-- CSRF 토큰을 meta 태그에 포함 -->
+    <meta name="csrf-token" content="{{ csrf_token }}">
+
+    <!-- CSS 파일 경로 설정 -->
+    <link rel="stylesheet" href="{% static 'css/test_styles.css' %}">
   </head>
 
   <body>
-    <h1>Test Mode</h1>
-    <!-- index.html로 이동하는 버튼 추가 -->
-    <button onclick="location.href='{% url 'index' %}'">메인 페이지로 이동</button>
-    <form id="quiz-form">
-      <div id="questions-container">
-        {% for question in questions %}
-          <div class="question">
-            {% comment %} <p>{{ question.sentence | replace: '____', '<input type="text" id="answer_'|add: question.id|add:'" placeholder="Type your answer here">' }}</p> {% endcomment %}
-            <button type="button" onclick="startRecording({{ question.id }})">🎤 Record</button>
-            <input type="hidden" id="question_id_{{ question.id }}" value="{{ question.id }}">
-          </div>
-        {% endfor %}
-      </div>
+    <h1>시험 모드</h1>
+    <p>다음 문장의 빈칸에 들어갈 단어를 맞혀보세요:</p>
 
-      <button type="button" onclick="submitAnswers()">Submit Answers</button>
-    </form>
+    <p>{{ sentence }}</p>
 
-    <div id="feedback-section" style="display: none;">
-      <h2>Feedback</h2>
-      <p id="feedback"></p>
-    </div>
+    <!-- 녹음 버튼 및 음성 미리보기 -->
+    <button id="startBtn" onclick="startRecording()">녹음 시작</button>
+    <button id="stopBtn" onclick="stopRecording()" disabled="disabled">녹음 중지</button>
 
-    <script src="{% static 'test_mode.js' %}"></script>
+    <p>녹음된 음성:</p>
+    <audio id="audio-preview" controls="controls" style="display: none;"></audio>
+
+    <!-- 음성 인식 결과 표시 -->
+    <div id="audio-result"></div>
+
+    <!-- JS 파일 경로 설정 -->
+    <script src="{% static 'js/test_mode.js' %}"></script>
+
+    <script>
+      // Django 템플릿에서 전달된 변수
+      const questionId = "{{ question_id }}"; // question id
+      const currentWord = "{{ answer }}"; // 정답 단어 (빈칸에 들어갈 단어)
+
+      // 확인용으로 출력
+      console.log("Question ID:", questionId);
+      console.log("Current Word:", currentWord);
+
+      // JavaScript에서 사용할 수 있게 값 설정
+      window.questionId = questionId;
+      window.currentWord = currentWord;
+
+      // CSRF 토큰을 meta 태그에서 가져와서 JavaScript에 설정
+      window.csrfToken = document
+        .querySelector('meta[name="csrf-token"]')
+        .content;
+    </script>
+
   </body>
 
 </html>

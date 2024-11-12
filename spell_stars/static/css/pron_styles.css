@@ -41,10 +41,18 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    color: white;
+    background-color: #016ccf;
+}
+
+button:disabled {
+    background-color: #B0C4DE;
+    /* 비활성화된 버튼의 배경색 (연한 파란색) */
+    cursor: not-allowed;
 }
 
 button:hover {
-    background-color: #f0f0f0;
+    background-color: #005bb5;
 }
 
 #score-bar {

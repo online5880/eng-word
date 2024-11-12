@@ -1,56 +1,118 @@
-let mediaRecorder;
-let audioChunks = [];
+let recorder;
+let audioStream;
+let audioData = [];
+let audioPreview = document.getElementById("audio-preview");
 
-function startRecording(questionId) {
-    navigator.mediaDevices.getUserMedia({ audio: true })
-        .then(stream => {
-            mediaRecorder = new MediaRecorder(stream);
-            mediaRecorder.start();
+// CSRF 토큰을 전역 변수로 설정
+const csrfToken = window.csrfToken;
 
-            mediaRecorder.ondataavailable = event => {
-                audioChunks.push(event.data);
-            };
+// 녹음 시작
+function startRecording() {
+    console.log("startRecording 호출됨");  // 녹음 시작 함수 호출 확인
 
-            mediaRecorder.onstop = () => {
-                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
-                audioChunks = [];
-                sendAudioToServer(audioBlob, questionId);
-            };
+    if (navigator.mediaDevices) {
+        audioData = [];
+        console.log("마이크 접근 시도 중...");
 
-            // 녹음이 완료되면 자동으로 서버에 전송
-            document.getElementById(`status_${questionId}`).textContent = "녹음 중...";
-        })
-        .catch(error => {
-            console.error("Error accessing microphone:", error);
-            alert("마이크 접근에 문제가 발생했습니다. 권한을 확인해주세요.");
-        });
-}
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(stream => {
+                audioStream = stream;
+                recorder = new MediaRecorder(stream);
 
-function stopRecording() {
-    if (mediaRecorder && mediaRecorder.state === "recording") {
-        mediaRecorder.stop();
-        document.getElementById(`status_${questionId}`).textContent = "녹음 종료";
+                console.log("녹음기 시작됨");
+
+                recorder.ondataavailable = event => {
+                    console.log("ondataavailable 호출됨, 크기: " + event.data.size);
+                    if (event.data.size > 0) {
+                        audioData.push(event.data);
+                    }
+                };
+
+                recorder.onstop = () => {
+                    console.log("녹음 종료됨");
+                    if (audioData.length > 0) {
+                        processRecording();
+                    } else {
+                        console.log("녹음 데이터가 없습니다.");
+                        alert("녹음 데이터가 없습니다. 다시 시도해주세요.");
+                    }
+                };
+
+                // 녹음 시작 지연 추가
+                setTimeout(() => {
+                    recorder.start(); // 녹음 시작
+                    document.getElementById("startBtn").disabled = true;
+                    document.getElementById("stopBtn").disabled = false;
+                }, 300); // 300ms 지연 추가
+            })
+            .catch(err => {
+                console.log("Audio error: " + err);
+                alert("녹음 시작에 실패했습니다. 마이크 권한을 확인해주세요.");
+            });
     }
 }
 
-function sendAudioToServer(audioBlob, questionId) {
-    const formData = new FormData();
-    formData.append("audio", audioBlob, "recording.wav");
+// 녹음 중지
+function stopRecording() {
+    console.log("stopRecording 호출됨");  // 녹음 중지 함수 호출 확인
 
-    fetch(`/test_mode/recognize/${questionId}/`, {
-        method: "POST",
-        body: formData
+    if (recorder && recorder.state === 'recording') {
+        recorder.stop();
+        audioStream.getTracks().forEach(track => track.stop()); // 마이크 종료
+
+        console.log("녹음 중지됨");
+        document.getElementById("startBtn").disabled = false;
+        document.getElementById("stopBtn").disabled = true;
+    } else {
+        console.log("녹음이 진행 중이 아닙니다.");
+    }
+}
+
+// 녹음 처리
+function processRecording() {
+    console.log("processRecording 호출됨");  // 녹음 처리 함수 호출 확인
+
+    const audioBlob = new Blob(audioData, { type: 'audio/wav' });
+    console.log("오디오 Blob 생성됨, 크기: " + audioBlob.size);
+
+    const formData = new FormData();
+    formData.append('audio_file', audioBlob);
+
+    fetch(`/recognize_audio/${window.questionId}/`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': csrfToken
+        }
     })
-        .then(response => response.json())
-        .then(data => {
-            if (data.transcript) {
-                document.getElementById(`answer_${questionId}`).value = data.transcript;
-            } else {
-                document.getElementById(`status_${questionId}`).textContent = "인식 오류: 다시 시도해주세요.";
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            document.getElementById(`status_${questionId}`).textContent = "서버 오류: 다시 시도해주세요.";
-        });
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("서버 응답: ", data);
+    
+        const resultDiv = document.getElementById("audio-result");
+    
+        if (data.transcript) {
+            console.log("음성 인식 결과: " + data.transcript);
+            resultDiv.textContent = "음성 인식 결과: " + data.transcript;
+            resultDiv.className = "green";
+        } else {
+            console.log("음성 인식 실패");
+            resultDiv.textContent = "음성 인식에 실패했습니다.";
+            resultDiv.className = "red";
+        }
+    
+        const audioUrl = URL.createObjectURL(audioBlob);
+        audioPreview.src = audioUrl;
+        audioPreview.style.display = 'block';
+    })
+    .catch(error => {
+        console.error("Error processing recording: ", error);
+        alert("서버 처리 중 오류가 발생했습니다.");
+    });
+    
 }
