@@ -32,20 +32,23 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    # 기본 Django 앱들
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "accounts",
+    
+    # 커스텀 앱들
     "main",
     "sent_mode",
     "pron_practice",
     "test_mode",
     "vocab_mode",
     "rest_framework",
-    'drf_yasg',
+    "drf_yasg",
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -56,6 +59,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    
+    'accounts.middleware.UpdateLastLoginMiddleware'
 ]
 
 ROOT_URLCONF = "spell_stars.urls"
