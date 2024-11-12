@@ -1,86 +1,82 @@
-/* 전체 페이지 중앙 정렬을 위한 설정 */
+/* 전체 페이지 스타일 */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
-    color: #333;
-}
-
-.container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 수평 중앙 정렬 */
+    justify-content: center;
+    /* 수직 중앙 정렬 */
+    height: 100vh;
+    /* 전체 화면을 차지 */
     text-align: center;
-    max-width: 600px;
-    width: 100%;
+    /* 텍스트 중앙 정렬 */
+    background-color: #f4f4f4;
 }
 
+/* 제목 스타일 */
 h1 {
-    color: #333;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
+/* 설명 텍스트 스타일 */
 p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 20px 0;
-}
-
-/* 문제 영역 스타일 */
-#sentence {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 30px;
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
 /* 버튼 스타일 */
 button {
-    background-color: #016ccf;
-    color: white;
+    margin: 10px;
     padding: 10px 20px;
-    border: none;
+    font-size: 1rem;
     cursor: pointer;
-    font-size: 16px;
+    border: 1px solid #ccc;
+    color: white;
     border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.2s ease, transform 0.1s;
+    background-color: #016ccf;
+    transition: background-color 0.3s;
 }
 
-button:active {
-    transform: scale(0.98);
-    background-color: #014f92;
-}
-
-button:disabled {
+/* 버튼 비활성화 상태 */
+button:disabled,
+.disabled {
     background-color: #B0C4DE;
     cursor: not-allowed;
 }
 
-button:hover:enabled {
+button:hover {
     background-color: #005bb5;
 }
 
-/* 녹음된 음성 미리보기 */
-#audio-preview {
-    display: block;
-    width: 100%;
-    margin: 20px auto;
-}
-
-/* 음성 인식 결과 스타일 */
-#audio-result {
-    font-size: 18px;
-    font-weight: bold;
+/* 오디오 미리보기 영역 */
+audio {
     margin-top: 20px;
 }
 
-#audio-result.green {
+/* 음성 인식 결과 표시 영역 */
+#audio-result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* 음성 인식 결과 클래스 */
+.green {
     color: green;
 }
 
-#audio-result.red {
+.red {
     color: red;
+}
+
+/* 추가적으로 요소들 간 간격을 설정 */
+div,
+button,
+audio {
+    margin-bottom: 20px;
+    /* 각 요소 사이에 간격 추가 */
 }

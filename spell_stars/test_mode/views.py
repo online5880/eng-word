@@ -12,7 +12,6 @@ import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 model = whisper.load_model("small")
 
-
 def test_mode_view(request):
     parent_dir = os.path.dirname(settings.BASE_DIR)
     words_file_path = os.path.join(
@@ -45,12 +44,16 @@ def test_mode_view(request):
         r"\b" + re.escape(selected_word) + r"\b", "_____", selected_example
     )
 
+    # 콘솔에 선택된 단어와 예문을 출력
+    print(f"Selected Word: {selected_word}")
+    print(f"Original Sentence: {selected_example}")
+    print(f"Problem Sentence: {problem_sentence}")
+
     return render(
         request,
         "test_mode/test_page.html",
         {"sentence": problem_sentence, "answer": selected_word},
     )
-
 
 def recognize_audio(request, question_id):
     if request.method == "POST" and request.FILES.get("audio_file"):
@@ -71,6 +74,10 @@ def recognize_audio(request, question_id):
         try:
             result = model.transcribe(file_path, language="ko")
             transcript = result["text"]
+
+            # 콘솔에 인식된 텍스트를 출력
+            print(f"Transcript: {transcript}")
+
             return JsonResponse({"transcript": transcript})
 
         except Exception as e:
