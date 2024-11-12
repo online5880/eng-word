@@ -3,7 +3,8 @@ let audioStream;
 let audioData = [];
 let audioPreview = document.getElementById("audio-preview");
 
-const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+// CSRF 토큰을 전역 변수로 설정
+const csrfToken = window.csrfToken;
 
 // 녹음 시작
 function startRecording() {
@@ -77,7 +78,8 @@ function processRecording() {
     const formData = new FormData();
     formData.append('audio_file', audioBlob);
 
-    fetch(`/recognize_audio/${questionId}/`, {
+    // 수정된 URL 경로: questionId가 올바르게 URL에 포함되도록 수정
+    fetch(`/recognize_audio/${window.questionId}/`, {
         method: 'POST',
         body: formData,
         headers: {
