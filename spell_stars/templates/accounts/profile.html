@@ -12,6 +12,7 @@
     <p><strong>아이디:</strong> {{ user.username }}</p>
     <p><strong>나이:</strong> {{ user.age }}</p>
     <p><strong>가입 날짜:</strong> {{ user.date_joined }}</p>
+    <p><strong>마지막 접속 시간:</strong> {{ user.last_login }}</p>
     <button onclick="location.href='{% url 'index' %}'">돌아가기</button>
 </body>
 </html>

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.decorators import login_required
 from rest_framework import generics
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAdminUser
 from .serializers import UserSerializer, UserCreationSerializer
 from .forms import LoginForm, SignupForm
 from .models import User
@@ -35,8 +35,9 @@ def profileView(request):
 class UserListAPIView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [IsAdminUser]
     
 class UserCreateAPIView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserCreationSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAdminUser]
