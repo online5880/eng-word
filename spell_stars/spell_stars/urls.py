@@ -53,6 +53,8 @@ urlpatterns = [
     # 학습 모드 및 기타 기능 URL
     path("vocab_mode/", vocabViews.word_learning_view, name="vocab_mode"),
     path("test_mode/", testViews.test_mode_view, name="test_mode"),
+    path("test_mode/", include("test_mode.urls")),
+    path("pron_practice/", include("pron_practice.urls")),
     path("pron_practice/", pronViews.pronunciation_practice_view, name="pron_practice"),
     
     # API 문서
