@@ -12,6 +12,7 @@ import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 model = whisper.load_model("small")
 
+
 def test_mode_view(request):
     parent_dir = os.path.dirname(settings.BASE_DIR)
     words_file_path = os.path.join(
@@ -39,7 +40,10 @@ def test_mode_view(request):
             {"error": f"Word '{selected_word}' not found in any examples."}, status=404
         )
 
+    # Find the index of the selected example in the examples_data list
     selected_example = random.choice(matching_examples)
+    question_id = examples_data.index(selected_example)  # Get the index of the example
+
     problem_sentence = re.sub(
         r"\b" + re.escape(selected_word) + r"\b", "_____", selected_example
     )
@@ -48,12 +52,18 @@ def test_mode_view(request):
     print(f"Selected Word: {selected_word}")
     print(f"Original Sentence: {selected_example}")
     print(f"Problem Sentence: {problem_sentence}")
+    print(f"Question ID: {question_id}")
 
     return render(
         request,
         "test_mode/test_page.html",
-        {"sentence": problem_sentence, "answer": selected_word},
+        {
+            "sentence": problem_sentence,
+            "answer": selected_word,
+            "question_id": question_id,
+        },
     )
+
 
 def recognize_audio(request, question_id):
     if request.method == "POST" and request.FILES.get("audio_file"):
