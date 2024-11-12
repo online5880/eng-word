@@ -78,7 +78,6 @@ function processRecording() {
     const formData = new FormData();
     formData.append('audio_file', audioBlob);
 
-    // 수정된 URL 경로: questionId가 올바르게 URL에 포함되도록 수정
     fetch(`/recognize_audio/${window.questionId}/`, {
         method: 'POST',
         body: formData,
@@ -86,28 +85,34 @@ function processRecording() {
             'X-CSRFToken': csrfToken
         }
     })
-        .then(response => response.json())
-        .then(data => {
-            console.log("서버 응답: ", data);  // 서버 응답 확인
-
-            const resultDiv = document.getElementById("audio-result");
-
-            if (data.transcript) {
-                console.log("음성 인식 결과: " + data.transcript);  // 음성 인식 결과 확인
-                resultDiv.textContent = "음성 인식 결과: " + data.transcript;
-                resultDiv.className = "green";
-            } else {
-                console.log("음성 인식 실패");
-                resultDiv.textContent = "음성 인식에 실패했습니다.";
-                resultDiv.className = "red";
-            }
-
-            const audioUrl = URL.createObjectURL(audioBlob);
-            audioPreview.src = audioUrl;
-            audioPreview.style.display = 'block';
-        })
-        .catch(error => {
-            console.error("Error processing recording: ", error);
-            alert("서버 처리 중 오류가 발생했습니다.");
-        });
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("서버 응답: ", data);
+    
+        const resultDiv = document.getElementById("audio-result");
+    
+        if (data.transcript) {
+            console.log("음성 인식 결과: " + data.transcript);
+            resultDiv.textContent = "음성 인식 결과: " + data.transcript;
+            resultDiv.className = "green";
+        } else {
+            console.log("음성 인식 실패");
+            resultDiv.textContent = "음성 인식에 실패했습니다.";
+            resultDiv.className = "red";
+        }
+    
+        const audioUrl = URL.createObjectURL(audioBlob);
+        audioPreview.src = audioUrl;
+        audioPreview.style.display = 'block';
+    })
+    .catch(error => {
+        console.error("Error processing recording: ", error);
+        alert("서버 처리 중 오류가 발생했습니다.");
+    });
+    
 }
