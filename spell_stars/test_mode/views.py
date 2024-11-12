@@ -71,7 +71,7 @@ def recognize_audio(request, question_id):
         print(f"Received file: {audio_file.name}, Size: {audio_file.size} bytes")
 
         file_name = f"audio_{question_id}.wav"
-        file_path = os.path.join(settings.MEDIA_ROOT, "audio_files", file_name)
+        file_path = os.path.join(settings.MEDIA_ROOT, "test_mode", file_name)
 
         try:
             with default_storage.open(file_path, "wb") as f:

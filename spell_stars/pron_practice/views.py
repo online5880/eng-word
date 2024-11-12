@@ -52,7 +52,7 @@ def evaluate_pronunciation(request):
                 file_name = file_name.split(".")[0] + ".wav"
 
             # 파일 저장 경로 설정
-            user_file_path = os.path.join(settings.MEDIA_ROOT, "user", file_name)
+            user_file_path = os.path.join(settings.MEDIA_ROOT, "pron_pc", file_name)
             print(f"User file path: {user_file_path}")
 
             # 디렉토리 생성 및 파일 저장
