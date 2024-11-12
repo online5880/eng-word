@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>단어장</title>
+    <link rel="stylesheet" href="{% static 'css/vocab_styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-button" onclick="location.href='{% url 'index' %}'">돌아가기</button>
+        <h1>단어장</h1>
+        
+        <div class="word-card" id="currentWord">
+            <div class="word-content">
+                <h3>{{ words.0.text }}</h3>
+                <p>{{ words.0.meaning }}</p>
+            </div>
+            <div class="example-section">
+                <p><strong>예문:</strong> {{ words.0.example_sentence }}</p>
+                <p><strong>예문 뜻:</strong> {{ words.0.example_translation }}</p>
+            </div>
+        </div>
+
+        <!-- 오디오 재생 버튼 -->
+        <div class="audio-controls">
+            <button id="playAudioButton" onclick="playAudio()">🔊 원어민 발음 듣기</button>
+            <audio id="audioPlayer" src="{{ words.0.audio_file.url }}" preload="auto"></audio>
+        </div>
+
+        <div class="controls">
+            <button class="mic-status" id="micButton">
+                <div class="mic-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <div class="mic-animation"></div>
+            </button>
+            <div class="voice-level">
+                <div class="voice-level-fill"></div>
+            </div>
+            <p class="status-text">마이크를 클릭하여 시작하세요</p>
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const words = {{ words|safe }};
+    </script>
+    <script src="{% static 'js/vocab_script.js' %}"></script>
+</body>
+</html>
