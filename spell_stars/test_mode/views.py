@@ -86,7 +86,7 @@ def recognize_audio(request, question_id):
             print(f"Audio file saved at {file_path}")
 
             # Whisper 모델로 음성 텍스트 변환
-            result = model.transcribe(file_path, language="ko")
+            result = model.transcribe(file_path, language="en")
             transcript = result["text"]
             print(f"Transcript from Whisper: {transcript}")
 
