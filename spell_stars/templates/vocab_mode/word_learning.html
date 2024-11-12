@@ -3,44 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>단어장</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            text-align: center;
-            width: 80%;
-        }
-        .word-list {
-            max-height: 400px; /* 스크롤 영역 높이 설정 */
-            overflow-y: auto; /* 세로 스크롤 활성화 */
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-        .word-list ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        .word-list li {
-            padding: 5px 0;
-        }
-    </style>
 </head>
 <body>
+    
     <div class="container">
+        <button onclick="location.href='{% url 'index' %}'">돌아가기</button>
         <h1>단어장</h1>
         <div class="word-list">
             <ul>
                 {% for word in words %}
-                    <li>{{ word.text }}</li>
+                    <li>
+                        <strong>단어:</strong> {{ word.text }}<br>
+                        <strong>뜻:</strong> {{ word.meaning }}<br>
+                        <strong>예문:</strong> {{ word.example_sentence }}<br>
+                        <strong>예문 뜻:</strong> {{ word.example_translation }}
+                    </li>
                 {% endfor %}
             </ul>
         </div>
