@@ -10,7 +10,9 @@
     <h1>프로필 정보</h1>
     <p><strong>닉네임:</strong> {{ user.nickname }}</p>
     <p><strong>아이디:</strong> {{ user.username }}</p>
+    <p><strong>나이:</strong> {{ user.age }}</p>
     <p><strong>가입 날짜:</strong> {{ user.date_joined }}</p>
     <button onclick="location.href='{% url 'index' %}'">돌아가기</button>
 </body>
 </html>
+
