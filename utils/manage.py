@@ -2,7 +2,7 @@ from Pipeline.sentence_pipeline import SentenceEvaluationPipeline
 
 def main():
     # 처리할 파일 경로 설정
-    file_path = 'C:/Users/user/Desktop/eng-word/utils/Grammar_Score/grammar_sentences.csv'
+    file_path = 'C:/Users/user/Desktop/eng-word/utils/Grammar_Score/test_data.csv'
     
     # 파이프라인 초기화
     pipeline = SentenceEvaluationPipeline()
