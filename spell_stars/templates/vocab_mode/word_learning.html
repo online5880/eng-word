@@ -1,87 +1,49 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>{{ book.student.username }}'s Vocabulary Book</title>
-    <link rel="stylesheet" href="{% static 'css/vocab_styles.css' %}">
+    <title>단어장</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            width: 80%;
+        }
+        .word-list {
+            max-height: 400px; /* 스크롤 영역 높이 설정 */
+            overflow-y: auto; /* 세로 스크롤 활성화 */
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .word-list ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .word-list li {
+            padding: 5px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>{{ book.student.username }}'s Vocabulary Book</h1>
-
-    <div style="max-height: 500px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px;">
-        <ul id="word-list">
-            {% for word in words %}
-                <li style="margin-bottom: 20px;">
-                    <strong>{{ word.text }}</strong> - {{ word.meaning }}
-                    {% if word.audio_file %}
-                        <button onclick="playAudio('{{ word.audio_file.url }}')">Play Native Audio</button>
-                    {% endif %}
-                    <button onclick="startRecording('{{ word.id }}')">Record My Voice</button>
-                </li>
-            {% endfor %}
-        </ul>
+    <div class="container">
+        <h1>단어장</h1>
+        <div class="word-list">
+            <ul>
+                {% for word in words %}
+                    <li>{{ word.text }}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-
-    <audio id="recorded-audio" controls="controls" style="display:none;"></audio>
-
-    <script src="{% static 'js/vocab.js' %}"></script>
-    <script>
-        function playAudio(url) {
-            const audio = new Audio(url);
-            audio.play();
-        }
-
-        let mediaRecorder;
-        let recordedChunks = [];
-
-        function startRecording(wordId) {
-            navigator.mediaDevices.getUserMedia({ audio: true })
-                .then(stream => {
-                    mediaRecorder = new MediaRecorder(stream);
-                    recordedChunks = [];
-                    mediaRecorder.ondataavailable = event => {
-                        if (event.data.size > 0) {
-                            recordedChunks.push(event.data);
-                        }
-                    };
-                    mediaRecorder.onstop = () => {
-                        const audioBlob = new Blob(recordedChunks, { type: 'audio/wav' });
-                        const audioURL = URL.createObjectURL(audioBlob);
-                        document.getElementById('recorded-audio').src = audioURL;
-                        document.getElementById('recorded-audio').style.display = 'block';
-
-                        // Send the recorded audio to the server for evaluation
-                        sendAudioToServer(audioBlob, wordId);
-                    };
-                    mediaRecorder.start();
-                    setTimeout(() => mediaRecorder.stop(), 5000); // Automatically stop after 5 seconds
-                })
-                .catch(error => {
-                    console.error("Microphone access denied", error);
-                });
-        }
-
-        function sendAudioToServer(audioBlob, wordId) {
-            const formData = new FormData();
-            formData.append('audio', audioBlob);
-            formData.append('word_id', wordId);
-
-            fetch(window.location.href, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert(`Your pronunciation score for "${data.original_text}": ${data.score}`);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        }
-    </script>
 </body>
 </html>

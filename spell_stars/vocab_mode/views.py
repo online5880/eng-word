@@ -12,12 +12,23 @@ from tempfile import NamedTemporaryFile
 # Whisper 모델 로드 (애플리케이션 시작 시 한 번만)
 model = whisper.load_model("base")
 
-def display_vocabulary_book(request, book_id):
-    # book_id에 해당하는 VocabularyBook 객체 조회
-    vocabulary_book = get_object_or_404(VocabularyBook, id=book_id)
-    word_data = vocabulary_book.words.all()  # VocabularyBook의 words 가져오기
+def display_vocabulary_book(request):
+    # 모든 VocabularyBook 객체 조회
+    vocabulary_books = VocabularyBook.objects.all()
+    words = Word.objects.all()  # 모든 단어 가져오기
+    print(words)
 
-    return render(request, 'display_vocabulary.html', {'words': word_data, 'book': vocabulary_book})
+    return render(request, 'vocab_mode/word_learning.html', {'words': words})
+
+def load_words_from_json(json_path):
+    # JSON 파일 열기
+    with open(json_path, 'r', encoding='utf-8') as file:  # 파일 인코딩에 맞춰 조정
+        words = json.load(file)
+
+    # 각 단어를 데이터베이스에 저장
+    for word_text in words:
+        Word.objects.create(text=word_text)
+    print("단어들이 데이터베이스에 성공적으로 저장되었습니다.")
 
 @csrf_exempt
 def evaluate_pronunciation(request):
