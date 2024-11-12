@@ -23,6 +23,12 @@
             </div>
         </div>
 
+        <!-- 오디오 재생 버튼 -->
+        <div class="audio-controls">
+            <button id="playAudioButton" onclick="playAudio()">🔊 원어민 발음 듣기</button>
+            <audio id="audioPlayer" src="{{ words.0.audio_file.url }}" preload="auto"></audio>
+        </div>
+
         <div class="controls">
             <button class="mic-status" id="micButton">
                 <div class="mic-icon">

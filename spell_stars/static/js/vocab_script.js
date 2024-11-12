@@ -99,3 +99,8 @@ document.getElementById('micButton').addEventListener('click', async function() 
     }
     isRecording = !isRecording;
 });
+
+function playAudio() {
+    const audioPlayer = document.getElementById('audioPlayer');
+    audioPlayer.play();
+}
