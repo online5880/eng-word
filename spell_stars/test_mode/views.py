@@ -4,17 +4,35 @@ import random
 import re
 from django.shortcuts import render
 from django.http import JsonResponse
-import whisper
 from django.conf import settings
 from django.core.files.storage import default_storage
+import whisper
+from .models import TestResult  # TestResult 모델을 import
+
 import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning)
+
 model = whisper.load_model("small")
+
+# 문제 수와 총점
+TOTAL_QUESTIONS = 20
+MAX_SCORE = 100
+POINTS_PER_QUESTION = MAX_SCORE / TOTAL_QUESTIONS  # 1문제당 점수 계산
+
+
+def calculate_score(
+    correct_answers, total_questions=TOTAL_QUESTIONS, max_score=MAX_SCORE
+):
+    # 맞힌 문제 수에 따라 점수를 계산
+    score = correct_answers * (max_score / total_questions)
+    return round(score, 2)
 
 
 def test_mode_view(request):
     print("test_mode_view called")
+
+    # 데이터 경로
     parent_dir = os.path.dirname(settings.BASE_DIR)
     words_file_path = os.path.join(
         parent_dir, "utils", "json_words", "combined", "combined_words.json"
@@ -92,15 +110,26 @@ def recognize_audio(request, question_id):
 
             # 음성 파일 URL 반환
             audio_url = os.path.join(settings.MEDIA_URL, "test_mode", file_name)
-            return JsonResponse({
-                "transcript": transcript,
-                "audio_url": audio_url  # 음성 파일 URL 반환
-            })
+            return JsonResponse(
+                {"transcript": transcript, "audio_url": audio_url}  # 음성 파일 URL 반환
+            )
 
         except Exception as e:
             print(f"Failed to transcribe audio: {str(e)}")
-            return JsonResponse({"error": f"Failed to transcribe audio: {str(e)}"}, status=500)
+            return JsonResponse(
+                {"error": f"Failed to transcribe audio: {str(e)}"}, status=500
+            )
 
     # 파일이 없을 경우
     print("No audio file received in request")
     return JsonResponse({"error": "No audio file received"}, status=400)
+
+
+def save_test_result(user, correct_answers, test_date):
+    # 점수 계산
+    score = calculate_score(correct_answers)
+
+    # 시험 결과 저장
+    result = TestResult(user=user, score=score, test_date=test_date)
+    result.save()
+    print(f"Test result saved: {result}")
