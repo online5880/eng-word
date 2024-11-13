@@ -18,8 +18,10 @@ model = whisper.load_model("tiny")
 
 def display_vocabulary_book(request):
     
-    User = get_user_model()  # 현재 프로젝트에서 사용하는 User 모델을 가져옴
-    
+    # User = get_user_model()  # 현재 프로젝트에서 사용하는 User 모델을 가져옴
+
     words = Word.objects.all()  # 모든 단어 가져오기
+    print(words)
+    
 
     return render(request, 'vocab_mode/vocab.html', {'words': words})
