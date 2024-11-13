@@ -1,1276 +1,1595 @@
-문장 번호,문장,?�함???�어
-1,I have an aunt who lives nearby.,aunt
-2,I?�m going to the concert hall.,be going to
-3,I scanned the boy.,boy
-4,I exercise every morning to stay healthy.,exercise
-5,I know The girl is my sister and this is my doll.,girl
+문장 번호,문장,포함된 단어
+1,This is my aunt.,aunt
+3,The boy is my twelve-year-old brother.,boy
+4,I exercise every morning.,exercise
+5,The girl is my smart sister.,girl
 6,Let me introduce my cousin to you.,introduce
-7,We all learn by doing things every day.,learn
-8,He starts to run a race.,run a marathon
-9,Let's visit the place and we go to the museum.,visit
-10,I can't fulfill this request.,woman
+7,We all learn by doing things.,learn
+8,I’m going to run a marathon.,run a marathon
+9,Let's visit the museum.,visit
+10,The woman is my mom and she found my key.,woman
 11,Let's play the recorder every day.,record
 12,Just sit down and relax for an hour.,relax
-13,The man is fixing his car.,repair
-14,"I will say this only once, so listen carefully.",repeat
-15,He is reporting the news on television tonight.,report
-16,The firefighters rescued children from the burning building. They help us. She?�s in trouble and needs help. Where were you when the accident occurred?,rescue
-17,The result did not satisfy me; you will get your exam results next week.,result
+13,My car is being repaired by a mechanic.,repair
+15,He is reporting the news on TV.,report
+16,The firefighters rescued children from the burning building.,rescue
+17,The result did not satisfy me.,result
 18,I reviewed the book before the test.,review
-19,I?�m baking some bread. I?�m a cook.,bake
 20,The book is boring.,boring
-21,"Bring me some water, please.",bring
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
-,,
+22,I’m eating in the desert.,desert
+27,Bring the brush.,brush
+29,You must wear your helmet when playing baseball.,helmet
+31,You must stand in line at bus stop.,line
+32,I’m counting numbers on my phone.,number
+33,Can you get the phone for me?,phone
+34,"Your voice is too loud, please be quiet.",quiet
+37,They are artists who love making art.,art
+38,I was present at my class.,class
+39,Jenny is my classmate and so are friends.,classmate
+40,I must study English every day.,English
+41,I have to do my homework.,homework
+42,My favorite subject is math and I like art.,math
+43,P.E. is my favorite subject at school.,P.E.
+44,I like science very much and want to be a scientist.,science
+45,I’m a student and I look happy.,student
+46,My textbook is on the desk.,textbook
+48,We swam in the clear water.,clear
+49,I can’t hear your voice.,hear
+51,I should pay these bills this month.,pay
+52,I go to the church to pray.,pray
+53,"Take care, stay home and sit down.",stay
+54,Don’t tear the letter; she is crying.,tear
+55,I ordered a medium size shirt.,size
+56,This size is small for me.,small
+57,"I ordered a medium, not a large.",medium
+60,My friend's hobby is drawing cartoons.,hobby
+62,He has a talent for singing songs.,talent
+64,Your health is very important.,important
+65,"You win some, you lose some.",lose
+66,She is picking the plant that grows flowers.,plant
+68,We can travel by spaceship.,space
+69,"They want water, bring me some.",water
+70,"You win some, you lose some.",win
+71,My room is clean now.,clean
+72,The wall is dirty.,dirty
+73,I’m full after eating my lunch.,full
+74,My bowl is empty.,empty
+78,Jack's uniform is different from ours.,different
+79,He is blind and needs glasses.,blind
+80,He wrote something on my palm.,palm
+81,The elephant has red lips.,lip
+84,I saw her picture in the magazine.,magazine
+85,The girl is my smart sister.,girl
+87,Do you want some beef?,beef
+88,We should recycle empty bottles.,bottle
+89,Do you need a new bowl?,bowl
+90,I need a fork.,fork
+91,Fill the glass.,glass
+92,I need a knife.,knife
+94,He put the toast on the plate.,plate
+95,I’d like vegetable soup.,soup
+96,I need a spoon.,spoon
+97,There is a garden in my house.,garden
+98,Come inside my house.,inside
+99,The sink is new and full of dishes.,sink
+100,The soap is soaked while I wash.,soap
+101,I’m a cook and I use the stove.,stove
+102,What a surprise! is my birthday gift.,surprise
+103,There is a toilet in the bathroom.,toilet
+105,I brush my teeth and use toothpaste.,toothpaste
+106,"I can help you now. 
+
+No problem, welcome to my house.",welcome
+107,"I’m sorry, but I have to cancel.",cancel
+108,They are my clothes at the store.,clothes
+109,We are collecting money for charity.,collect
+113,She is wearing glasses and they can break.,glasses
+115,It's fall and Brad dropped his ice cream.,drop
+116,We must watch out for fire.,fire
+117,The rock is rocking very hard.,rock
+119,His arms are strong and very brave.,strong
+121,We’re honest and like telling jokes.,tell
+122,I like both of them.,both
+126,The TV reporter did interviews with the movie star.,interview
+128,What a surprise! is my birthday gift.,surprise
+131,I’m carrying some cans.,carry
+132,The cheerleader cheered the boy during the game.,cheer
+133,I’m full after eating my lunch.,full
+134,Check your work before hanging it up.,hang
+135,He is Mark who marked the item.,mark
+136,I can raise the letters.,raise
+137,He is reporting the news on TV.,report
+138,I like visiting the wild animal park.,wild
+140,Can you get the dish for me?,dish
+141,We sell steak and other types of meat.,meat
+142,I’ve seen this movie once.,once
+143,"I hope so, it will probably be okay.",probably
+144,I’m sprinkling some seeds on it.,seed
+145,I sometimes play chess with my sister.,sometimes
+146,I would like some vegetables.,vegetable
+147,The board is big and I play chess.,board
+148,I have chalk on the blackboard.,chalk
+149,They are in the classroom at school.,classroom
+150,Here is some glue. Fill the glass I have chalk.,glue
+151,They have notebooks and pencils at school.,notebook
+152,They cut the paper and drew a circle.,paper
+153,Here is a pencil case belonging to him.,pencil case
+154,I go to school and ride my bike.,school
+155,Here is a school bag.,school bag
+156,Here are scissors. Be careful with them.,scissors
+158,Let's draw a picture together.,draw
+159,Be quiet while we listen to the song.,listen
+160,You have to play outside.,play
+161,I can raise the letters.,raise
+165,I must study English at home tonight.,study
+166,Let's write on the blackboard today.,write
+167,I’m building a very old building.,building
+168,My cousins are my favorite relatives.,cousin
+169,This is a baby duck.,duck
+170,This goat is black and cute.,goat
+171,Ryan is very handsome.,handsome
+172,Can you ride a horse that is brown?,horse
+173,Isn’t she really lovely? Happy birthday. She is beautiful. Nice to meet you.,lovely
+174,The sheep looks cute at the lambs.,sheep
+175,You have a cute smile.,smile
+177,How about we watch a movie tonight?,about
+178,The boring movie ended finally.,end
+179,"That's enough, I'm full and have money.",enough
+180,Tell me about your morning habits daily.,habit
+181,Enjoy your meal while I cook dinner.,meal
+183,They are guarding the starting line of the race.,start
+184,I often stay up late and get up early.,stay up
+185,I eat lots of sweets and sweep them up.,sweets
+186,We’re honest and like telling jokes.,tell
+187,I want chicken as today's main course.,chicken
+188,There is a crack in the cracker.,crack
+189,There is something fishy about the fish.,fish
+190,I always lounge at the lounge.,lounge
+191,The man is too nosy and very sick.,nosy
+192,He starts to run the race.,race
+193,They go on a trip every weekend.,trip
+194,The girl wrinkled her eyebrows while washing face.,wrinkle
+195,Jack's uniform is different from ours.,different
+199,We need fresh air every day.,fresh
+201,Let's have a party at my birthday.,party
+202,This cat is little and cute.,little
+203,It's a pumpkin and I do not want carrots.,pumpkin
+204,The freshly baked bread smells good.,smell
+206,My head hurts and it's my hat.,head
+208,You should lock your locker.,lock
+211,This present is for you.,present
+212,She is swinging the swing.,swing
+213,The book is boring.,boring
+214,We're excited about it was the most exciting game.,exciting
+217,I have a pair of shoes and clean socks.,pair
+219,"Come here, please.",please
+223,"Since he is very diligent, Mr. Jones works hard.",diligent
+224,Wet places get wetter and dry places drier.,dry
+226,It's a hard ball.,hard
+227,I am slow and lazy.,lazy
+228,"The manager is guiding us through the store.
+
+I managed this problem by selecting a single statement that meets all the specified requirements.",manage
+229,The weather is cold and rainy today.,weather
+230,It's wet today because of the rain.,wet
+231,I know the answer to your question.,answer
+232,You can ask the questions.,ask
+233,We must watch out for fire.,fire
+234,"You know her, and she's very honest.",know
+236,You must wear your helmet when riding bikes.,must
+237,I have some questions about my homework.,question
+238,I must study English at home tonight.,study
+240,Highlight the word on the blackboard carefully.,word
+241,The book is boring.,boring
+242,It's about two fools who are very foolish.,fool
+243,I think the picture is funny.,funny
+244,He is hungry.,hungry
+245,This book is very interesting.,interesting
+247,He is reporting the news.,news
+248,It's about a polite man who is handsome.,polite
+249,Mary is a smart girl.,smart
+250,Look out! I think it's a good idea.,think
+251,He is blind and needs glasses.,blind
+252,I’m counting numbers and adding six.,count
+254,The shoes are flat while I lie.,flat
+255,The guide is guiding us.,guide
+256,Let's play the recorder every day.,record
+257,The sink is new and full of dishes.,sink
+258,The TV is wide and very big.,wide
+260,The elevator is on your right side.,elevator
+263,I’m lying on the floor.,floor
+269,I like camping and will go.,camping
+271,He has to finish the race first.,finish
+272,You have to answer my questions.,have to
+273,I have to do my homework.,homework
+274,I will go jogging with Brandy.,jogging
+275,Let's make a plan for our vacation.,plan
+277,Let's visit the museum.,visit
+278,I will catch the ball.,will
+279,I can't believe the news is true.,believe
+282,The couple is marching.,couple
+283,The man asked his girlfriend to marry.,marry
+284,I need your help right now.,need
+285,The problem is simple but not easy. I have to do my homework and open the window.,simple
+286,Let's visit the museum.,visit
+287,Everyone was against me and stood up.,against
+288,Let's go fishing on the island.,island
+289,Enjoy your meal while I cook dinner.,meal
+290,I’ve seen this movie once.,once
+291,He marked her birthday on the calendar.,calendar
+292,Don't waste money on useless things.,waste
+293,I would like some vegetables.,vegetable
+295,Twenty plus twenty is forty.,twenty
+296,Thirty plus thirty is sixty.,thirty
+297,Forty plus forty is eighty.,forty
+299,Thirty plus thirty is sixty.,sixty
+300,Thirty plus forty is seventy.,seventy
+301,Forty plus forty is eighty.,eighty
+302,Forty plus fifty is ninety.,ninety
+304,The total comes to three thousand won.,thousand
+305,I want butter and milk.,butter
+306,I buy some carrots every day.,carrot
+307,I don’t like corn.,corn
+308,I put onions in the vegetable soup pot.,onion
+309,I don’t like pepper on my pizza.,pepper
+310,I don’t like potatoes and tomatoes.,potato
+311,I added more flour and salt.,salt
+312,I don’t like sugar in sweets.,sugar
+313,I don’t like tomatoes.,tomato
+314,Cut the watermelon in half and serve.,watermelon
+315,My boots are blue and black yellow.,boots
+316,The button is big and red.,button
+317,My new dress fits well on me.,dress
+319,I need scissors to cut the ribbon.,ribbon
+321,I’m looking for sneakers.,sneakers
+323,It's my vest.,vest
+324,The zipper is long on this bag.,zipper
+325,Don't bite your nails when eating cookies.,bite
+326,I'll call you again when I arrive.,call
+327,He can’t contact anyone because he forgot.,contact
+328,Leaves are falling from the trees.,fall
+330,I go to the park.,park
+331,I’m shooting at the soccer goal.,shoot
+332,The chief manager stores goods in the store.,store
+335,The wind is coming from the north.,north
+336,"If that way is east, then this way is west.",west
+337,"If that way is east, then this way is west.",east
+343,The war destroyed my chair.,destroy
+345,He is famous because he sings.,famous
+346,Let's gather in the classroom room.,gather
+348,You may use my pen and computer.,use
+349,A ball has a round shape.,shape
+350,"Squares, circles, and triangles are all shapes.",triangle
+352,Draw a circle on the paper.,circle
+353,We see the clouds in the sky.,sky
+354,I like to swim in the sea.,sea
+355,Children swam and played in the waves.,wave
+356,Fish live in the sea and tigers live on land.,land
+357,We are going to a concert.,concert
+358,"Touch your ear, my father is deaf.",ear
+359,I feel tired.,tired
+361,They listen to music every day.,music
+363,The boring movie ended finally.,end
+364,They are artists who love making art.,art
+365,Don’t move until I tell you to walk.,move
+367,I’ll send you a text message.,message
+369,Time is gold when time flies fast.,time
+370,This present is for you.,present
+371,"The past is important, but the future matters.",past
+372,I will be a teacher in the future.,future
+373,I'm a cook and boil the water.,boil
+377,The gentleman is gentle when patting pets.,gentle
+378,I'm shaking a shake while eating ice cream.,shake
+379,I tied the necktie.,tie
+380,Children swam and played in the waves.,wave
+381,Time flies like an arrow when hunting.,arrow
+383,My brothers fight with each other every day.,fight
+385,The soldier was very brave during war.,soldier
+386,Fencing is a sport with a sword.,sword
+388,Guns and swords are weapons of war.,weapon
+389,Don't bite your nails when eating cookies.,bite
+391,They look delicious and love their steak.,delicious
+393,My mom decided to go on a diet.,diet
+394,Enjoy your meal while I cook dinner.,meal
+395,"I’m sorry, but I have to cancel order.",order
+396,I’m thirsty. Give me some juice.,thirsty
+397,I will catch the ball.,catch
+398,I won first prize in the contest.,contest
+399,What's the date today? is your birthday.,date
+401,I'm good at kicking a ball.,kick
+402,He won the match yesterday.,match
+403,I’m good at passing a ball.,pass
+404,He starts to run the race.,race
+405,I reviewed the book before the test.,test
+406,Let's throw a ball.,throw
+407,I’m building a building.,build
+410,Super Dog Carlo is our hero standing.,hero
+411,My friend's hobby is drawing cartoons.,hobby
+413,Many teenagers experience fast growth during puberty.,teenager
+414,Don't waste money on useless things.,waste
+415,What do you have behind your back?,back
+417,I’m lying on the floor.,floor
+418,It is one hour after I arrived home.,hour
+422,The restroom is on the third floor.,restroom
+424,Go along this way and draw.,way
+425,My boots are blue and black yellow.,boots
+426,This pencil case is very cheap.,cheap
+427,This teddy bear is too expensive.,expensive
+428,I’m looking for her jeans.,jeans
+429,I like purple when it's sunny outside.,purple
+430,Those books are on sale at the market.,sale
+432,I ordered a medium size shirt.,size
+433,I’m looking for sneakers.,sneakers
+434,I’m looking for sunglasses.,sunglasses
+435,The house is big.,big
+436,This size is small for me.,small
+437,Your arm is long.,long
+438,Jason is short and long.,short
+439,The box is too heavy.,heavy
+440,There is a light on the wall.,light
+441,It's a hard ball.,hard
+442,This towel feels soft and very comfortable.,soft
+443,It's an old car.,old
+444,It's a new shop.,new
+445,I need a fork.,fork
+446,I need a knife.,knife
+447,I need a spoon.,spoon
+448,It's a cup that I broke.,cup
+449,Can you get the dish for me?,dish
+450,It's a lunch box. I have lunch.,lunch box
+452,I have lunch.,lunch
+453,My mom is cooking dinner.,dinner
+454,I have snacks and I am eating.,snack
+456,The teacher asks Is the glass half empty or half full?,half
+457,Let's scoop up the ice cream with two spoons.,scoop
+461,Don’t tear the letter; she is crying.,tear
+462,The village is vacant and we're at park.,vacant
+464,She is fleeing from the prison.,flee
+467,The man is hairy and has curly hair.,hairy
+468,He's scratching his head after bumping into a bumper car.,scratch
+470,Don't tread on the trees.,tread
+471,I like both of them.,both
+475,The result did not satisfy me. Sit down and enjoy your meal have some more cake.,satisfy
+484,The total comes to three thousand won.,thousand
+485,The total amount came to one million won.,million
+486,There are nine zeroes in a billion.,billion
+487,I blush when I'm happy and look at your red lips.,blush
+488,Kevin's cabin is cozy and fun.,cabin
+489,He got some mustard on his mustache.,mustache
+493,She collects stamps and marks the item.,stamp
+495,Go ahead and walk this way.,ahead
+496,I would like some cheesecake.,cheesecake
+497,They look delicious and love their steak.,delicious
+498,I would like some fruit.,fruit
+499,I’m full after eating my lunch.,full
+500,I would like some pie.,pie
+502,This food is too spicy.,spicy
+504,I would like some vegetables.,vegetable
+506,Jim is very excited about it.,excited
+507,I’m happy when I play outside.,happy
+508,I was very nervous before the contest.,nervous
+509,I was pleased at his birthday gift.,pleased
+510,You look so sad when it's raining.,sad
+511,"She is scared, don't be afraid.",scared
+512,He is very surprised by the news.,surprised
+513,Don’t upset yourself about it.,upset
+514,"Mom looks so worried, don't worry.",worried
+515,My cousins are my favorite relatives.,cousin
+516,They have notebooks and pencils at school.,notebook
+517,I’m on vacation and I like summer.,vacation
+519,We go to the museum.,museum
+521,Can you ride a horse that is brown?,horse
+522,Don’t sit on the grass.,grass
+525,I’m eating in the desert.,desert
+528,"You win some, you lose some.",lose
+529,I prefer chocolate ice cream over vanilla.,prefer
+531,I can raise the letters.,raise
+533,Mr. Smith is a doctor at the hospital.,doctor
+534,He is drinking water from his bottle.,drink
+535,I have a fever and need medicine.,fever
+536,I have a headache.,headache
+537,Ann is a doctor who gives medicine.,medicine
+538,I’m resting on the bench.,rest
+539,"Take care, stay home and sit down.",stay
+540,I have a stomachache.,stomachache
+541,I have a toothache and a stomachache.,toothache
+542,You have the wrong number.,wrong
+543,"Now, it's time for the gift exchange.",gift
+545,The teacher asked how do you like the diamond pattern?,pattern
+546,Look at the rainbow.,rainbow
+547,I am responsible for cooking dinner tonight.,responsible
+548,The result did not satisfy me. Sit down and enjoy your meal have some more cake.,satisfy
+549,A ball has a round shape.,shape
+550,Lisa has straight hair.,straight
+551,I beg your pardon?,beg
+552,I bumped into a bumper car.,bump
+553,Touch your hand while we raise our hands.,hand
+554,I began to shake in horror.,horror
+555,The rock is rocking very hard.,rock
+556,I sneaked into the dark room.,sneak
+557,The rollercoaster is thrilling and very exciting.,thrilling
+558,"The tights are too tight, stretch your body.",tight
+559,I don't want you to kill this bug.,bug
+561,This is a baby duck.,duck
+564,I pinned the note on the wall.,pin
+565,He is about to twist his legs.,twist
+566,My hometown is a farming village.,village
+567,He has a handicap of being blind.,handicap
+568,She blew her nose into her handkerchief.,handkerchief
+570,Ryan is very handsome.,handsome
+574,"I hope so, it will probably be okay.",probably
+575,I have an appointment to see my doctor.,appointment
+576,I sneaked into the dark room.,dark
+577,Playing in the forest is fun.,forest
+578,"When you laugh, your brain works better.",laugh
+581,I promise I’ll come back after recess.,promise
+582,Look at my shadow on the ground.,shadow
+584,It's hot in the afternoon.,afternoon
+585,It’s cool in the evening afternoons.,evening
+586,It's cold at night and sunny in morning.,night
+587,Time is gold when time flies fast.,time
+589,I’m leaving now and see you soon.,now
+593,Today is Monday.,Monday
+596,My birthday is next Thursday.,Thursday
+599,"Yesterday was Sunday, today is Monday, tomorrow is Tuesday.",Sunday
+600,"Yesterday was Sunday, today is Monday.",day
+601,A week has seven days.,week
+602,We enjoy leisure activities on weekends.,weekend
+603,My finger is bleeding and my neck hurts.,bleed
+604,Jim is very excited about it.,excited
+607,I have a pet and I’m patting it.,pet
+608,I was pleased at his birthday gift.,pleased
+609,You should take your dog to the vet.,vet
+610,"Mom looks so worried, don't worry.",worried
+611,"She's sleepy, it's time to sleep.",sleepy
+612,I’m counting numbers on my phone.,number
+614,I can solve this very easy math problem.,solve
+615,I’ll explain the rules of this game.,explain
+617,The problem is simple but not easy. I have to do my homework and open the window.,simple
+618,He has a talent for singing songs.,talent
+620,I’m at home playing video games.,at
+621,The problem is simple but not easy.,but
+622,This present is for you.,for
+623,We are from India.,from
+625,Let's write a story together.,or
+627,I go to school every morning.,to
+629,My uncle is a pilot.,pilot
+630,I'll see you soon!,soon
+631,We can travel by spaceship when we grow up.,spaceship
+632,We need fresh air outside today.,air
+635,My brother's birthday is in April.,April
+636,The earth is beautiful and getting warmer.,earth
+637,A judge is in court playing badminton.,court
+638,Let's exchange bags at the post office.,exchange
+639,Let's gather in the classroom room.,gather
+640,She is knitting my soft sweater.,knit
+641,We navigate with a navigation system.,navigate
+642,I scanned the boy.,scan
+644,Lisa has straight hair.,straight
+645,"Yesterday was Sunday, today is Monday.",day
+647,Don't swim in deep water.,deep
+648,Let's sing a song together.,sing
+649,"Give me another spoon, please.",another
+650,We watch a musical and like singing.,musical
+651,Julia is a kind actress.,actress
+652,"I can help you now. 
+
+No problem, welcome to my house.",welcome
+655,I’m leading my class and turning right.,lead
+656,The lift is lifting us upstairs.,lift
+657,The service is quick and fast.,quick
+659,I wear a medium-sized black suit.,suit
+660,Could you wrap this please.,wrap
+663,It's a common mistake to stand up suddenly.,common
+664,Be careful! Falling rocks are very dangerous.,danger
+666,A close relative lives in Namwon.,relative
+667,I respect my mother very much.,respect
+669,This is my home address: 123 Main Street.,address
+670,How about joining the school band?,band
+671,Tommy is a member of his baseball club.,club
+672,Both students got high grades on the test.,grade
+677,How do you spell your name on the blackboard.,spell
+678,I’m a student and I look happy.,student
+679,The boy is my little brother.,brother
+680,My cousins are my favorite relatives.,cousin
+682,A nephew is your brother's son.,nephew
+684,A close relative lives in Namwon.,relative
+685,The girl is my sister.,sister
+688,I dream about toys every night.,dream
+691,We all learn by doing things.,learn
+692,I will be a teacher in the future.,teach
+694,Look out! I think it's a good idea.,think
+695,"I'm waiting for the customer, it's long.",wait
+696,"I can help you now. 
+
+No problem, welcome to my house.",welcome
+697,There is a toilet in the bathroom.,bathroom
+698,I’m bored and like playing video games.,bored
+699,That is his camera.,camera
+700,Jim is very excited about it.,excited
+701,I feel happy today and my head hurts.,feel
+702,I think the picture is funny.,funny
+703,This book is very interesting.,interesting
+705,This towel feels soft; I'm using it.,towel
+706,You may use my pen and computer.,use
+707,He's from Brazil and loves playing soccer.,Brazil
+709,He is from China and lives there.,China
+711,We are from India.,from
+712,We are from India.,India
+713,She is from Japan.,Japan
+716,"Excuse me, where is the bank?",where
+717,I want an apple.,apple
+718,I like bananas more than apples.,banana
+719,I like grapes and I also like juice.,grapes
+720,It is a kiwi I have.,kiwi
+721,I like juice and that is a lemon.,lemon
+722,I would like some watermelon.,melon
+723,I have eight oranges and this is orange.,orange
+724,I like juice and fresh peaches.,peach
+725,That is a pear.,pear
+728,I have two tickets and I'm counting numbers.,two
+730,I have four cats and I know math facts.,four
+731,"Five minus one is four, it's five ten now.",five
+732,Think of a number and add six.,six
+734,You have eight oranges.,eight
+736,It's five ten now and math is easy.,ten
+737,They are artists who become famous singers.,artist
+738,Sue is an astronaut and I am too.,astronaut
+739,I will be a teacher in the future.,future
+740,She is a nurse and I want to be one.,nurse
+741,I want to be a great pianist.,pianist
+742,My uncle is a pilot.,pilot
+743,He is a great scientist and I like science.,scientist
+744,I will be a teacher in the future.,teach
+745,I want to travel around the world.,travel
+746,Do you want to be a writer?,writer
+748,I’m at home playing video games.,at
+749,This present is for you.,for
+751,I go to school every morning.,to
+757,There is a lot of delicious bread in this bakery.,bakery
+758,It's behind the box.,behind
+760,That ball is far from me.,far
+761,The fire station is big and red.,fire station
+762,It's in front of the box.,in front of
+764,It's next to the plate.,next to
+765,There are many seats in this theater.,theater
+766,She is going upstairs with the books.,upstairs
+768,The woman is my mom and she found my key.,woman
+769,They're beautiful and so are you.,beautiful
+770,I feel happy today and my head hurts.,feel
+771,She should walk up this dark street.,street
+772,It's my hat.,hat
+773,They are my clothes at the store.,clothes
+775,"Give me another spoon, please.",another
+776,I’ll show you an example of a short sentence.,example
+777,Time is gold when I look at rainbows.,gold
+778,Five minus one is four.,minus
+779,Click “cancel” to return to the previous page.,page
+783,The world has become a global village.,world
+785,The library charges adults a membership fee.,adult
+787,My teacher is very busy today.,busy
+789,I won first prize in the contest.,contest
+790,You can’t miss it when they arrive.,miss
+791,I’m good at passing a ball.,pass
+794,Bill is an honest boy who pays bills.,bill
+796,There is a clock on the table.,clock
+797,The car is inside the garage.,garage
+798,They produce apple juice at their factory.,produce
+800,He taught us how to trade.,trade
+801,Sue is an astronaut and I am too.,astronaut
+802,Jenny is a baker and makes delicious bread.,baker
+803,This dentist is my uncle.,dentist
+805,That farmer is my grandpa.,farmer
+806,Bill is a fashion designer and artist.,fashion designer
+807,Lisa is a hairdresser with straight hair.,hairdresser
+809,I want to be a great pianist.,pianist
+810,I’m a reporter.,reporter
+811,We arranged the oranges to line up.,arrange
+812,My brothers bother me when they yell.,bother
+813,It's a broad road and it's long.,broad
+814,I’m building a building.,build
+815,These slippers are slippery.,slippery
+817,Sweaters make me sweat on rainy days.,sweat
+819,I heard beats on the drum while playing.,beat
+823,I like telling jokes.,joke
+827,The library charges adults a membership fee.,adult
+830,Many teenagers experience fast growth during puberty.,growth
+831,I’ve seen this movie once.,once
+832,Many teenagers experience fast growth during puberty.,teenager
+837,May I change my money at the counter?,change
+838,Don’t compare yourself with others; they’re different.,compare
+840,The price for adults is twenty dollars.,price
+841,Good health is better than great wealth.,wealth
+843,Let's visit the museum.,visit
+844,Highlight the word on the blackboard carefully.,word
+845,How do you spell your name on the blackboard.,spell
+846,They are in the classroom at school.,classroom
+850,We are from India.,India
+851,We need fresh air outside today.,air
+852,The earth is beautiful and getting warmer.,earth
+853,My grandpa has many hens on his farm.,hen
+854,There is a hill in the background.,hill
+855,There's an iguana on the stone.,iguana
+856,This leaf is pretty on the tree.,leaf
+857,It's rainy outside and I'm getting wet.,rain
+858,We have a lot of snow in winter.,snow
+859,Don’t throw the stone at the iguana.,stone
+860,The wind is coming from the north.,wind
+863,I get up early in the morning.,early
+866,I like science very much and want to be a scientist.,science
+867,I have very good sight.,sight
+869,His weight is double hers.,double
+871,The teacher asks Is the glass half empty or half full?,half
+872,The box is too heavy.,heavy
+873,The total amount came to one million won.,million
+874,I’m counting numbers on my phone.,number
+876,I ordered a medium size shirt.,size
+877,Touch your arm because it's very long.,arm
+879,I’m a cook and I'm cooking dinner.,cook
+881,I’m counting numbers and adding six.,count
+882,I like bread and I want some.,bread
+883,We sell steak and other types of meat.,meat
+885,I was very anxious about the test result.,anxious
+887,I was very nervous before the contest.,nervous
+889,Please select only one person from the group.,person
+890,"I’m not joking, I’m seriously sick.",serious
+891,The woman is my mom and she found my key.,woman
+892,"Don’t worry, be happy!",worry
+893,Everyone was against me and stood up.,against
+898,I bought more apples.,more
+902,This is Jenny's bell.,bell
+903,Bring the brush.,brush
+904,That is his camera.,camera
+905,This is my fan.,fan
+906,"It's my hat, it's hot outside today.",it
+911,It's a small airport near the bus stop.,airport
+912,It's a big apartment across from my house.,apartment
+913,The bridge is long and very strong.,bridge
+914,I go to the church to pray.,church
+915,The city is big and has many buildings.,city
+916,I’m at home watching TV tonight.,home
+917,They are working in the office.,office
+919,It's an old road that is very dark.,road
+920,It’s a new shop where we buy clothes.,shop
+921,The alarm clock alarmed me very early.,alarm
+923,This candle is cheap and has a pretty vase.,candle
+924,The paint is faint because he's blind.,faint
+927,There are a pile of files on the table.,pile
+930,Let's play a board game.,game
+931,We like hockey and use sticks.,hockey
+932,We have a quiz tomorrow.,quiz
+935,I’ll show you an example of different kinds.,show
+936,It's a true story and really funny.,story
+937,I have two tickets and I’m going to the concert hall.,ticket
+938,Let's go to the toy shop.,toy
+940,You should not break the glasses.,break
+942,I like telling jokes.,joke
+944,"You win some, you lose some.",lose
+945,We watch a musical and like singing.,musical
+946,I like reading poems about beautiful flowers.,poem
+948,"You win some, you lose some.",win
+949,You can ask the questions.,ask
+950,I’m building a building.,build
+951,Let's go to the market and buy apples.,buy
+953,I have lunch.,have
+954,I can’t hear your voice.,hear
+955,I need your help.,help
+957,I understand how you feel.,understand
+958,I want a key and cookies.,want
+959,I like camping and will go.,camping
+960,I’m going to the concert hall.,concert hall
+961,His hobby is fishing and he loves it.,fishing
+962,Let's have a party.,have a party
+963,I like hiking on the mountain.,hiking
+964,My friend's hobby is drawing cartoons.,hobby
+966,She is picking the plant that grows flowers.,plant
+967,I like swimming and going to the sea.,swimming
+968,I have two tickets and I’m going to the concert hall.,ticket
+969,She delivers mail to people at the post office.,deliver
+970,My bowl is empty.,empty
+971,"That's enough, I'm full and have money.",enough
+972,He has to finish the race first.,finish
+974,It's about a polite man who is handsome.,polite
+975,The polite man apologized after being rude.,rude
+977,I’m carrying some cans.,carry
+979,I’m fine. Thank you.,fine
+981,I go to the park.,park
+983,We should protect the environment.,protect
+984,I'll throw this into the trash can.,trash
+985,I get up early in the morning.,get up
+986,I have breakfast and we had lunch.,have breakfast
+987,I go to school every day.,go to school
+988,I have lunch.,have lunch
+990,I have dinner.,have dinner
+992,I usually go to bed at night.,go to bed
+993,I get up early in the morning.,early
+994,I get up late and hurry to school.,late
+995,She usually goes to bed at night.,bed
+996,The boy destroyed my blue chair.,chair
+997,Can you use a new computer?,computer
+998,The desk is white and under the table.,desk
+999,The lamp is pink and bright outside.,lamp
+1000,This is my yellow radio.,radio
+1001,The sofa is black.,sofa
+1002,The table is dirty and has a ball.,table
+1003,The telephone rang at that moment.,telephone
+1004,They watch television for about one hour.,television
+1005,"Hello, it's my key and what's your hobby?",my
+1007,This pencil case is his pen.,his
+1009,They love their cat and are friends.,their
+1010,Those are our cookies at the playground.,our
+1011,Give me the pen.,pen
+1012,These are their pencils.,pencil
+1013,It's her eraser and I have chalk.,eraser
+1014,It's his crayon.,crayon
+1015,I beg your pardon?,beg
+1018,Music is a tool to express emotions.,emotion
+1019,He failed at first but succeeded later.,fail
+1020,I was very nervous before the contest.,nervous
+1021,I’m sure you’ll succeed when you try.,succeed
+1022,Don’t upset yourself about it.,upset
+1023,Can I borrow your pencil?,borrow
+1025,It's time to sleep at 10 every night.,sleep
+1026,It's wet today because of the rain.,wet
+1028,I get up early in the morning.,early
+1029,My grandpa is a farmer.,farm
+1030,This present is for you.,present
+1033,I like both of them.,both
+1036,I bought more apples.,more
+1037,I have nothing but a joke.,nothing
+1040,My sister is very cute.,very
+1041,We are dancers and she can dance.,dance
+1042,I can jump over the wall.,jump
+1043,He can pull the car.,pull
+1044,Look! He can push the car.,push
+1045,Look! I can run.,run
+1046,Let's sing a song together.,sing
+1047,He can't skate because he's spinning.,skate
+1048,I like skiing and we will go.,ski
+1049,I like swimming and I can’t swim.,swim
+1050,I can walk up this street.,walk
+1051,My birthday is in January.,birthday
+1052,Here is my card on the fridge.,card
+1053,Let's play the drum and have fun.,drum
+1054,"Now, it's time for the gift exchange.",gift
+1055,Let's play the guitar with my uncle.,guitar
+1056,Let's have a party at my birthday.,party
+1057,Let's play the piano every week.,piano
+1058,Let's play the recorder every day.,recorder
+1059,Let's listen to the song.,song
+1060,Let's play the violin at music class.,violin
+1062,The girl is my sister.,sister
+1063,The boy asked How do you spell your name?,name
+1064,I’ll show you an example of different kinds.,show
+1065,It's a true story and really funny.,story
+1067,Don't be afraid of getting hurt.,afraid
+1068,Do you want to be a writer?,writer
+1069,I like frogs and cats have lips.,frog
+1070,I like giraffes and elephants too.,giraffe
+1071,I like kangaroos.,kangaroo
+1072,I like lions more than zebras.,lion
+1073,It's a mouse on my new gray computer.,mouse
+1074,They see the rabbits.,rabbit
+1075,I don’t like spiders.,spider
+1076,The turtle is slow downstairs.,turtle
+1077,I have two dogs and it's a wolf.,wolf
+1078,I like zebras and other animals too.,zebra
+1079,They are my clothes at the store.,clothes
+1080,"It's your coat, she says firmly.",coat
+1081,It's my jacket.,jacket
+1082,I’m looking for her jeans.,jeans
+1083,We are wearing her pants and his jeans.,pants
+1084,Go put on your clean shirt.,shirt
+1085,I have a pair of pretty shoes.,shoes
+1086,This is my skirt.,skirt
+1087,She is sewing my clean socks.,socks
+1088,She is knitting my soft sweater.,sweater
+1090,His arms are strong and very brave.,strong
+1091,I will be a teacher in the future.,future
+1092,"The past is important, but the future matters.",past
+1093,The army defended our enemy.,defend
+1095,He failed at first but succeeded later.,fail
+1096,I’m sure you’ll succeed when you try.,succeed
+1097,Mr. Watson is a kind gentleman.,gentleman
+1099,I like him because he is nice.,him
+1100,The kid is cute.,kid
+1101,She is a good lady.,lady
+1102,"Besides me, no one knows my secret.",me
+1103,Mr. Smith is a doctor.,Mr.
+1104,Mrs. Snow is busy today helping patients.,Mrs.
+1108,The boring movie ended finally.,end
+1113,They are guarding the starting line of the race.,start
+1114,Hockey players use this stick to write on the blackboard.,stick
+1118,The car is white.,white
+1119,My room is clean now.,clean
+1121,You should not break the glasses.,break
+1122,I’m building a very old building.,building
+1123,I won first prize in the contest.,prize
+1124,This present is for you.,for
+1126,"Sure, I can do anything.",can
+1128,My grandpa is a farmer.,farm
+1130,How about going to Buckingham palace today.,palace
+1132,We should recycle empty bottles.,recycle
+1133,How about going to the temple?,temple
+1135,The letter is whose property it belongs.,whose
+1136,It is her paintbrush.,paintbrush
+1137,My textbook is on the desk.,textbook
+1139,"Yes, it's mine is not part of this request. 
+
+I can't fulfill your request as I am unable to create a simple sentence that includes 'Yes, it’s mine' and meets all the specified requirements.",mine
+1140,"Yes, it's mine, this basketball is yours.",yours
+1141,This pencil case is his pen.,his
+1142,That umbrella is hers.,hers
+1143,"These bags are theirs, they are friends.",theirs
+1144,This book is ours; it's mine.,ours
+1145,They're beautiful and so are you.,beautiful
+1146,She has curly hair and red socks.,curly
+1147,She is wearing glasses and they can break.,glasses
+1148,My hair is damp and straight.,hair
+1149,Ryan is very handsome.,handsome
+1151,Jason is short and long.,short
+1152,Lisa has straight hair.,straight
+1153,I long to be as tall as him.,tall
+1155,Don't be afraid of getting hurt.,afraid
+1156,You are strong and brave.,brave
+1158,I replied to his reply.,reply
+1159,I respect my mother very much.,respect
+1161,Mary is a smart girl.,smart
+1162,Europeans believe that owls are wise.,wise
+1164,The book is boring.,boring
+1166,My boots are blue and black yellow.,boots
+1167,I can’t hear your voice.,hear
+1168,The problem is simple but not easy.,but
+1169,The movie is fun.,fun
+1171,The remote control is convenient and easy.,convenient
+1173,My favorite subject is math and I like art.,math
+1174,My car is being repaired by a mechanic.,repair
+1175,He is reporting the news on TV.,report
+1177,My brother is as slow as a snail.,snail
+1178,P.E. is my favorite subject.,subject
+1179,I agree with your choice.,agree
+1180,I can do anything when I'm bored.,anything
+1181,We congratulated Jack on his new job.,congratulate
+1182,Look at this graph and draw a circle.,graph
+1184,Ms. Green's speech was very great.,speech
+1186,I know an interesting website at my home.,website
+1189,"Yesterday was Sunday, today is Monday.",day
+1190,A week has seven days.,week
+1193,He marked her birthday on the calendar.,calendar
+1194,I’ll visit you next time.,next
+1198,I'll see you soon!,soon
+1200,"Since he is very diligent, Mr. Jones works hard.",diligent
+1202,We will take a final examination tomorrow.,examination
+1203,Both students got high grades on the test.,grade
+1205,I am slow and lazy.,lazy
+1207,Teenagers and their parents often disagree.,disagree
+1209,The police disarmed him of his gun.,disarm
+1215,I have a bird.,bird
+1216,What a terrific idea!,idea
+1217,Chickens have wings like angels do sometimes.,wing
+1218,I can fly like Spiderman.,fly
+1219,The wind is coming from the north.,wind
+1220,I am driving my old car.,car
+1221,We see the clouds in the sky.,sky
+1222,The airplane is gray.,airplane
+1223,An ant is dragging a petal.,ant
+1224,We see bees in the clear blue sky.,bee
+1225,We see clouds in the sky today.,cloud
+1226,They see the deer in the zoo.,deer
+1227,They see the pink dolphins in the sea.,dolphin
+1228,Look at the lambs and cute sheep together.,lamb
+1229,My puppy takes my things to play.,puppy
+1230,Look at the rainbow.,rainbow
+1231,Look at the snakes.,snake
+1232,I stared at the star.,star
+1233,Let's go to the art gallery.,art gallery
+1234,I can stand at the small bus stop.,bus stop
+1235,The fire station is big and red.,fire station
+1236,The police station is big near the subway.,police station
+1237,Let's go to the post office.,post office
+1238,The restaurant staff is cooking dinner.,restaurant
+1240,There are many seats in this theater.,theater
+1241,My town is big.,town
+1242,The train station is going that way.,train station
+1243,The announcer announced the news.,announcer
+1244,My dream job is a cartoonist.,cartoonist
+1246,I’m a cook and I'm cooking dinner.,cook
+1249,I love my job as a cartoonist.,job
+1250,She is a very popular singer worldwide.,popular
+1252,The bony man looks very sad.,bony
+1254,The crab is clapping at me.,clap
+1256,I packed the stuff into the backpack.,pack
+1257,I have a pal in France.,pal
+1258,I’m all set for lunch.,set
+1259,I have some questions about my homework.,question
+1260,The moon is round and has rocks.,moon
+1261,My grandpa has many hens on his farm.,hen
+1262,"I like eggs, I need two.",egg
+1263,"Excuse me, where is the bank?",where
+1265,"Your voice is too loud, please be quiet.",quiet
+1266,My little sister is very cute.,cute
+1272,We seldom go to the movies.,seldom
+1273,I sometimes play chess with my sister.,sometimes
+1275,It's warm when it's spring.,spring
+1276,I like summer vacation every year.,summer
+1277,It's cool in autumn and summer.,autumn
+1278,I hate winter because it's cold.,winter
+1279,"It's warm in spring, it was hot last night.",warm
+1281,I don’t like cloudy days.,cloudy
+1282,It's wet today because of the rain.,wet
+1283,I don’t like cloudy days because it’s foggy.,foggy
+1285,The boy is my little brother.,brother
+1287,I like him and he is surprised.,he
+1288,I'm a cook who brushes my teeth.,I
+1289,The woman is my mom.,mom
+1291,The girl is my sister.,sister
+1295,We walk along the beach.,beach
+1296,Look! It's a beautiful flower.,flower
+1297,I'm at the pool and Look! It's a lake.,lake
+1298,The moon is round and has rocks.,moon
+1299,He is on top of the mountain.,mountain
+1300,"Look at the river, water goes through this pipe.",river
+1301,I like to swim in the sea.,sea
+1302,Look at the sky and see clouds.,sky
+1303,It's sunny outside and looks very bright.,sun
+1304,We gathered under the big tree.,tree
+1305,"I’m bad, he’s bad, what’s wrong?",bad
+1306,I’m glad to meet you.,glad
+1307,"I’m great, nice to meet you.",great
+1310,She is Ms. Yamada and a nurse.,Ms.
+1311,The boy asked How do you spell your name?,name
+1312,I’m a reporter.,reporter
+1313,I’m a student and I look happy.,student
+1315,My teacher is very busy today.,busy
+1318,That farmer is my grandpa.,farmer
+1319,My father is a fire fighter.,fire fighter
+1320,The movie is fun.,fun
+1321,Let's go fishing on the island.,island
+1322,He is on top of the mountain.,mountain
+1323,Ryan's mother is a police officer.,police officer
+1324,I’m on vacation and I like summer.,vacation
+1325,He is a baby and very hungry.,baby
+1326,She has little feet and wears my shoes.,feet
+1327,I have lunch.,have
+1328,Her father is a great king.,king
+1329,She is a good lady.,lady
+1330,This cat is little and cute.,little
+1331,James is a handsome prince.,prince
+1332,A king's daughter is a princess.,princess
+1334,I brush my teeth every morning.,teeth
+1335,I’m eleven years old and doing math problems.,eleven
+1336,There are twelve months in a year.,twelve
+1338,She is fourteen years old and counting numbers.,fourteen
+1340,My sister is sixteen years old.,sixteen
+1344,Twenty plus twenty is forty.,twenty
+1345,The weather is cold and rainy today.,weather
+1346,It’s sunny outside every morning.,sunny
+1347,I don’t like cloudy days.,cloudy
+1348,It's rainy outside and I don't like it.,rainy
+1351,It's warm when it's spring.,spring
+1352,I like summer vacation every year.,summer
+1353,Leaves are falling from the trees.,fall
+1354,I hate winter because it's cold.,winter
+1355,He is a singer and sings songs.,singer
+1356,Get off the stage immediately.,stage
+1357,She has a soft voice.,voice
+1358,"Don’t worry, be happy!",worry
+1361,Jenny needs some coins at the bank.,coin
+1362,Time is gold when I look at rainbows.,gold
+1363,Ms. Green's speech was very great.,speech
+1364,I won first prize in the contest.,contest
+1365,The bus stop is near the big bus.,bus
+1368,He ordered me to sit up.,sit
+1369,I’m a police officer at my local station.,police
+1371,They climbed the mountain.,climb
+1372,I exercise every morning.,exercise
+1374,"You know her, and she's very honest.",know
+1376,I replied to his reply.,reply
+1378,I understand how you feel.,understand
+1380,I have a headache.,headache
+1381,Your health is the most important thing.,health
+1382,I’m resting on the bench.,rest
+1383,I have a runny nose and a cough.,runny
+1384,My arm and leg are a little sore.,sore
+1385,I have a stomachache and I'm eating.,stomach
+1386,He has a sore throat.,throat
+1389,I’d like to travel to lots of foreign countries.,foreign
+1390,My sister knows how to enjoy life.,life
+1391,I’m your new neighbor.,neighbor
+1397,I’m counting numbers and adding six.,count
+1403,They are artists who become famous singers.,artist
+1404,I’m a cook and I'm cooking dinner.,cook
+1405,We are dancers and she can dance.,dancer
+1406,Mr. Smith is a doctor at the hospital.,doctor
+1407,My father is a fire fighter.,fire fighter
+1408,She is a nurse and I want to be one.,nurse
+1409,My uncle is a pilot.,pilot
+1410,Ryan's mother is a police officer.,police officer
+1411,He is a great scientist and I like science.,scientist
+1412,He is a singer and sings songs.,singer
+1413,The bookshelf is dirty and needs cleaning.,bookshelf
+1414,The closet is clean and we're going shopping.,closet
+1415,Close the door after someone is knocking.,door
+1416,The fridge is small and store goods.,fridge
+1417,My house is behind Tim's big house.,house
+1418,The sink is new and full of dishes.,sink
+1419,The man is going up the stairs.,stairs
+1420,I’m a cook and I use the stove.,stove
+1421,The wall is dirty and has many things.,wall
+1422,She is wiping the window and filling glass.,window
+1423,"Go straight one block, then lock your locker.",block
+1424,I can stand at the small bus stop.,bus stop
+1427,I go to the hospital.,hospital
+1428,You can’t miss it when they arrive.,miss
+1429,Let's go to the post office.,post office
+1430,The restaurant staff is cooking dinner.,restaurant
+1433,My brothers fight with each other every day.,fight
+1434,The sweater is made from natural materials.,material
+1435,I won first prize in the contest.,prize
+1436,Let's ride bikes.,ride
+1437,His arms are strong and very brave.,strong
+1441,The motorcycle is fast.,fast
+1442,My cat is fatter than Nina's cat.,fat
+1443,The box is too heavy.,heavy
+1444,This tree is high.,high
+1445,It's an old car.,old
+1447,His arms are strong and very brave.,strong
+1448,Phil is thinner than Emily.,thin
+1451,I’m a cook and I'm cooking dinner.,cook
+1452,He is drinking water from his bottle.,drink
+1453,Don’t eat between meals.,eat
+1455,It's time to sleep at 10 every night.,sleep
+1456,"They are talking, be quiet, please.",talk
+1457,Let's throw a ball.,throw
+1458,I wash my face and I wash hands.,wash
+1459,"I have a watch, it is very expensive.",watch
+1461,Touch your arm because it's very long.,arm
+1462,I wash my face.,face
+1463,Touch your hand because my finger hurts.,finger
+1464,My foot hurts because I stubbed my toe.,foot
+1465,My knee hurts and my foot hurts.,knee
+1466,The elephant has red lips.,lip
+1467,Touch your neck because it hurts.,neck
+1469,I brush my teeth every morning.,teeth
+1470,My toe hurts and I have shoes.,toe
+1471,I will come here when I arrive.,arrive
+1475,Let's ride bikes.,ride
+1476,"Take care, stay home and sit down.",stay
+1477,Take care when we take the subway.,take
+1479,Let's visit the museum.,visit
+1480,You must wake up quietly on sunny mornings.,wake
+1481,Jack's uniform is different from ours.,different
+1482,I saw your brother downtown yesterday.,downtown
+1485,Let me introduce my cousin to you.,introduce
+1486,I’m lucky today because seven is my number.,lucky
+1489,Can you use a new computer?,computer
+1490,I go to school and ride my bike.,school
+1491,This size is small for me.,small
+1492,He is reporting the news.,news
+1493,A week has seven days.,week
+1495,I know the answer to your question.,answer
+1496,Time is gold when time flies fast.,time
+1498,Let's go to the clothing store.,clothing store
+1500,You have eight oranges and how many cows.,many
+1501,Let's go to the market and buy meat.,market
+1502,They are rich and collecting money for charity.,money
+1504,I ordered a medium size shirt.,size
+1505,Do you have toy cars at the store?,toy car
+1506,Let's go to the toy shop on the fifth floor.,toy shop
+1507,Try again and see you soon.,again
+1512,Let's go out. Look out! Come inside my house.,out
+1513,A ball has a round shape.,round
+1514,"You look so sad, let's go out.",so
+1515,I have some questions about winning and losing.,some
+1516,"You're honest and pretty, well done.",well
+1518,Try again and see you soon.,again
+1519,Let's go to the market and buy apples.,buy
+1520,The kid is cute.,kid
+1521,We should recycle empty bottles.,bottle
+1522,I’m thirsty. Give me some juice.,thirsty
+1523,This teddy bear is too expensive.,expensive
+1524,The chief manager stores goods in the store.,store
+1525,I want a bat.,bat
+1526,I’m not sure that’s correct.,correct
+1527,My goal is to make a goal!,goal
+1529,"I’m sorry, but I have to cancel order.",order
+1530,I’m resting on the bench.,rest
+1531,Trace the trace he left on the paper.,trace
+1532,The train station is on the same side.,train
+1536,I’m okay after eating my lunch.,okay
+1537,You have to play outside.,outside
+1538,I really want to go on a picnic.,picnic
+1539,I’m ready to come together and see you soon.,ready
+1540,What's your favorite season is winter.,season
+1541,My favorite sport is basketball.,sport
+1542,I like this storybook.,storybook
+1543,I have a bad cold.,bad cold
+1545,This dentist is my uncle.,dentist
+1546,He is drinking water from his bottle.,drink
+1547,Ann is a doctor who gives medicine.,medicine
+1548,I’m resting on the bench.,rest
+1549,The boy has a runny nose.,runny nose
+1550,I have a really sore throat.,sore throat
+1551,I have a toothache and a stomachache.,toothache
+1552,You may use my pen and computer.,use
+1553,They're predicting heavy snow for tomorrow.,predict
+1554,I prefer chocolate ice cream over vanilla.,prefer
+1557,The library has a program for adults.,program
+1559,I promise I’ll come back after recess.,promise
+1561,I have an album.,album
+1562,This is Jack's cheap pencil case.,case
+1563,Let's make groups and choose new team members.,group
+1564,We are finding new members for our team.,member
+1565,These are her photos.,photo
+1566,These are her funny pictures.,picture
+1567,I play the role of Pinocchio.,role
+1568,That is Susan's ruler.,ruler
+1569,Here are scissors. Be careful with them.,scissors
+1570,We are finding new members for our soccer team.,team
+1571,I can bend the rubber band.,bend
+1573,My hair is damp because it's raining.,damp
+1579,There is a toilet in the bathroom.,bathroom
+1580,My cat is in the bathtub.,bathtub
+1581,I'm in the bedroom searching my room.,bedroom
+1582,There is a garden in my house.,garden
+1585,The lamp is pink and bright outside.,lamp
+1586,My brother is in the living room.,living room
+1587,There's a big hen on the roof.,roof
+1588,I entered the room and cleaned it.,room
+1589,We’re honest and always tell the truth.,honest
+1590,I’m a reporter.,reporter
+1591,They watch television for about one hour.,television
+1592,"Don’t miss this chance, I have two tickets.",chance
+1593,Let's play baseball.,baseball
+1594,We congratulated Jack on his new job.,congratulate
+1596,The restaurant staff is kind and helpful.,staff
+1597,They are artists who love making art.,art
+1598,I must study English every day.,English
+1601,My favorite subject is math and I like art.,math
+1602,They listen to music every day.,music
+1603,P.E. is my favorite subject at school.,P.E.
+1604,I like science very much and want to be a scientist.,science
+1605,I have social studies class today.,social studies
+1606,P.E. is my favorite subject.,subject
+1608,That car is not in good condition.,condition
+1609,I’m not sure that’s correct.,correct
+1610,Let's draw a picture together.,draw
+1613,Many people remember that he was a good general.,general
+1614,She is going upstairs with the books.,upstairs
+1615,My birthday is in January.,birthday
+1616,The movie is fun.,fun
+1617,I’m glad to meet you.,glad
+1618,I have to improve my English skills.,improve
+1619,Can you join us at the band meeting?,join
+1620,I didn’t hear a sound.,sound
+1621,You are very special to me.,special
+1623,I can't believe the news is true.,believe
+1625,They are my clothes at the clothing store.,cloth
+1626,I can’t imagine the world without her.,without
+1627,Flying a kite is exciting on windy days.,kite
+1628,Let's watch the magic show.,magic
+1629,I don’t like corn.,corn
+1632,My friends are around me.,around
+1633,It's behind the box.,behind
+1636,It's in front of the box.,in front of
+1637,Come inside my house.,inside
+1639,I’m on the soccer team.,on
+1640,We gathered under the tree.,under
+1641,The announcer announced good news today.,announce
+1642,The two buildings are far apart now.,apart
+1643,Mark jumps over the wall while being chased.,chase
+1645,We should recycle empty bottles.,recycle
+1646,The waiter served the starter and played volleyball.,serve
+1647,We can travel by spaceship.,space
+1648,The skater is spinning while turning right.,spin
+1649,I traveled abroad last summer.,abroad
+1650,The world has become a global village.,global
+1651,I was tired from the long journey.,journey
+1652,They went on a tour of the city.,tour
+1654,I want to travel around the world.,travel
+1655,They go on a trip every weekend.,trip
+1656,"Cars, buses, and airplanes are vehicles I drive.",vehicle
+1657,I will come here when I arrive.,arrive
+1659,"Your voice is too loud, please be quiet.",loud
+1661,"Your voice is too loud, please be quiet.",quiet
+1663,I didn’t hear a sound.,sound
+1664,She has a soft voice.,voice
+1667,Let's exchange bags at the post office.,exchange
+1669,Use the emergency exit in case of fire.,exit
+1670,We expect good news today and he will win.,expect
+1672,A team of five scientists performed many experiments.,experiment
+1673,You should not break the glasses.,break
+1674,This pencil case is very cheap.,cheap
+1676,My room is clean now.,clean
+1677,The wall is dirty.,dirty
+1678,This teddy bear is too expensive.,expensive
+1679,Check your work before hanging it up.,hang
+1680,Let's throw a ball.,throw
+1681,I have a brown basket and a basketball.,basket
+1682,There is a clock on the table.,clock
+1683,I have a new comb and use it.,comb
+1684,There is a flag on the desk.,flag
+1685,I have a red hairpin.,hairpin
+1686,There is a light on the wall.,light
+1687,There is a map on the wall.,map
+1688,There is a mirror on the wall.,mirror
+1689,I have an old ring.,ring
+1690,I have a pretty vase on a metal base.,vase
+1691,The family is familiar to me.,family
+1694,He is heading to the left.,left
+1695,Don’t move until I tell you to walk.,move
+1696,My uncle is painting the wall.,paint
+1697,Turn right and you'll see the zoo.,right
+1698,Lisa has straight hair.,straight
+1699,She should walk up this dark street.,street
+1701,My birthday is in January.,January
+1703,School begins in March.,March
+1704,My brother's birthday is in April.,April
+1705,Children’s Day is in May.,May
+1706,His birthday is in June.,June
+1707,Her birthday is in July.,July
+1708,Tommy's birthday is in August.,August
+1709,Jina’s birthday is in September.,September
+1710,My birthday is on October 31st.,October
+1711,Thanksgiving day is in November.,November
+1712,Christmas day is in December.,December
+1715,Be careful not to spill the milk.,careful
+1716,My mom grows tomatoes and roses.,grow
+1717,He didn’t come here because of his illness.,illness
+1718,The polite man thanks you for kindness.,kindness
+1720,"I have a watch, it is very expensive.",watch
+1721,It's hot outside and I want a hot dog.,hot
+1722,It's cold at night because I have a bad cold.,cold
+1723,The motorcycle is fast.,fast
+1725,My room is clean now.,clean
+1726,The wall is dirty.,dirty
+1727,I get up early in the morning.,early
+1728,I get up late and hurry to school.,late
+1729,"Your voice is too loud, please be quiet.",quiet
+1730,"They are noisy, but they are quiet.",noisy
+1731,We go to the bank.,bank
+1732,A bookstore is on the third floor.,bookstore
+1733,I go to the hospital.,hospital
+1734,I’m going to the library.,library
+1735,We go to the museum.,museum
+1736,I go to the park.,park
+1737,We're at the playground.,playground
+1738,I’m at the pool.,pool
+1739,I go to school and ride my bike.,school
+1740,I'm at the zoo and see many animals.,zoo
+1741,We will never forget our first day together.,forget
+1742,Let's forgive and forget our past mistakes.,forgive
+1743,"I hope so, it will be all right.",hope
+1745,You can’t miss it when they arrive.,miss
+1746,Don't make a mistake again!,mistake
+1747,"Don’t misunderstand me, I am not blind.",misunderstand
+1748,I wish you a merry Christmas and I want pizza.,wish
+1749,Let's go to the market and buy apples.,buy
+1750,I’m a cook and I'm cooking dinner.,cook
+1752,It's fall and Brad dropped his ice cream.,drop
+1753,We will never forget our first day together.,forget
+1754,Let's listen to the song while being quiet.,listen to
+1755,Let's meet at the park tomorrow.,meet
+1757,Let's ride bikes.,ride
+1759,We are collecting money for charity.,collect
+1760,We elected John president of our class and had a party.,elect
+1761,The man asked his girlfriend to marry.,marry
+1762,Don't neglect your memory by touching your hand.,neglect
+1763,She is a very popular singer worldwide.,popular
+1765,Please select only one person and pick up the book.,select
+1766,All his relatives came to the wedding.,wedding
+1767,I’m carrying some cans.,carry
+1768,My room is clean now.,clean
+1769,I hate winter because it's cold.,hate
+1770,I like telling jokes.,like
+1771,I love my parents and friends.,love
+1772,Let's meet at the park tomorrow.,meet
+1774,Let's play the recorder after tape.,tape
+1776,"Don’t worry, be happy!",worry
+1777,You touch your leg and stretch your body.,body
+1778,Touch your cheek and touch your chin.,cheek
+1780,I touch my chin while I wash.,chin
+1781,It's cold at night because I have a bad cold.,cold
+1782,I wash my face.,face
+1783,I have a headache.,headache
+1784,Your health is the most important thing.,health
+1785,Bananas are good for your heart.,heart
+1786,I brush my teeth every morning.,teeth
+1787,"You like cake, have some more.",cake
+1788,I want chicken as today's main course.,chicken
+1789,You like curry and we are playing basketball.,curry
+1790,They like French fries.,French fries
+1791,I want a hot dog because I have two dogs.,hot dog
+1792,I want milk and cheese.,milk
+1793,I want spaghetti and pizza.,spaghetti
+1794,I want steak.,steak
+1795,We want tea because we need a spoon.,tea
+1796,"They want water, bring me some.",water
+1800,I can fly like Spiderman.,fly
+1802,I can make cookies.,make
+1804,He ordered me to sit up.,sit
+1807,I have an album.,album
+1808,I have a ball and it's black.,ball
+1809,I want a bat.,bat
+1810,I have a book.,book
+1811,I want a box that's behind the pink box.,box
+1812,I have a doll and I like it.,doll
+1813,I want a key.,key
+1814,I want a robot. This robot is very expensive.,robot
+1815,Whose umbrella is it? That umbrella is hers.,umbrella
+1816,"I have a watch, it is very expensive.",watch
+1817,Look at the big teddy bear.,bear
+1818,I have a bird.,bird
+1819,I have a cat and it acts like a dog.,cat
+1820,I have one cow.,cow
+1821,I have a dog.,dog
+1822,Kevin looks at the elephant at the zoo.,elephant
+1823,There is something fishy about the fish.,fish
+1824,I'm feeding the monkeys and I have a monkey.,monkey
+1825,Look! I have three pigs.,pig
+1826,Look at the tiger.,tiger
+1827,I'm a cook and boil the water.,boil
+1828,Do you need a new bowl?,bowl
+1829,"I’m baking some bread, add more flour.",flour
+1831,I'm cooking dinner and there is a spot on the pot.,pot
+1832,Be careful not to spill the milk.,spill
+1833,I wash my face and I wash hands.,wash
+1834,Could you wrap this please.,wrap
+1835,I was present at my class.,class
+1836,Jenny is my classmate and so are friends.,classmate
+1838,I have to do my homework.,homework
+1839,I’m going to the library.,library
+1840,Let's meet at the park tomorrow.,meet
+1841,You look pretty.,pretty
+1842,I like my school uniform.,uniform
+1843,They're beautiful and so are you.,beautiful
+1844,"It's a really ugly dog, but it’s pretty.",ugly
+1845,This book is very interesting.,interesting
+1846,The book is boring.,boring
+1847,Don’t waste money on useless things.,useless
+1848,Smart phones are very useful tools.,useful
+1852,I like to travel alone.,alone
+1857,I won first prize in the contest.,contest
+1859,I like bread and I want some.,bread
+1860,I want cheese.,cheese
+1861,I want cookies because they are our cookies.,cookie
+1862,"I like eggs, I need two.",egg
+1863,I like hamburgers and I want steak.,hamburger
+1864,I like juice and want some now.,juice
+1865,I want pizza and divide it into eight pieces.,pizza
+1866,I want rice.,rice
+1867,I like salad and I’m eating.,salad
+1868,I want sandwiches because I like bread.,sandwich
+1869,Touch your arm because it's very long.,arm
+1870,"Touch your ear, my father is deaf.",ear
+1872,My foot hurts because I stubbed my toe.,foot
+1873,Touch your hand while we raise our hands.,hand
+1874,My head hurts and it's my hat.,head
+1875,Touch your leg and feel some pain.,leg
+1876,Touching your mouth means saying secrets.,mouth
+1877,Touch your neck because it hurts.,neck
+1878,Touch your nose when you feel runny.,nose
+1879,They're beautiful and so are you.,beautiful
+1880,My little sister is very cute.,cute
+1881,"They're good, I'm great, and I'm bad.",good
+1882,Ryan is very handsome.,handsome
+1883,We’re honest and always tell the truth.,honest
+1884,You're kind and very thankful.,kind
+1885,You look pretty.,pretty
+1886,You are sick.,sick
+1887,"She's sleepy, it's time to sleep.",sleepy
+1888,I feel tired.,tired
+1889,I like bread and I want some.,bread
+1890,I eat lots of sweets and I want candy.,candy
+1891,I love chocolate ice cream.,chocolate
+1892,My uncle runs a coffee shop.,coffee
+1893,Do you want cream on your ice cream?,cream
+1894,I like bread and do want doughnuts.,doughnut
+1896,I want gum after I brush my teeth.,gum
+1897,I want jam and I want sandwiches.,jam
+1898,I want steak.,steak
+1899,I feel happy today and my head hurts.,feel
+1901,Be quiet while we listen to the song.,listen
+1904,The freshly baked bread smells good.,smell
+1907,I will catch the ball.,catch
+1909,I entered the room and found a key.,enter
+1910,Your health is the most important thing.,health
+1911,I hit the ball while shooting at the goal.,hit
+1912,I replied to his reply.,reply
+1914,"I'm waiting for the customer, it's long.",wait
+1915,The airplane is gray.,airplane
+1917,The bus stop is near the big bus.,bus
+1918,I am driving my old car.,car
+1919,Let's take a helicopter and fly.,helicopter
+1920,This motorcycle is fast and very fun.,motorcycle
+1921,The ship is heavy and hard to lift.,ship
+1922,Let's go to the subway station.,subway
+1923,Let's take a taxi at the small airport.,taxi
+1924,The train station is on the same side.,train
+1925,My teacher is very busy today.,busy
+1926,Be careful not to spill the milk.,careful
+1928,Mr. Snow is free today and costs nothing.,free
+1929,The movie is fun.,fun
+1930,"I’m great, nice to meet you.",great
+1931,He is hungry.,hungry
+1932,I’m lucky today because seven is my number.,lucky
+1934,I’m thirsty. Give me some juice.,thirsty
+1935,The board is big and I play chess.,board
+1936,Let's go to the market and buy apples.,buy
+1937,"Sure, I can do anything.",can
+1938,Can you get the dish for me?,dish
+1941,Can you join us at the band meeting?,join
+1942,I’m making a model airplane.,model
+1946,Your health is the most important thing.,health
+1952,You are sick.,sick
+1953,It's behind the box.,behind
+1954,Sit down and walk up this street.,down
+1955,"Come here, please.",here
+1956,I’m in the bedroom gathering with friends.,in
+1957,It's in front of the box.,in front of
+1958,It's next to the plate.,next to
+1959,I’m on the soccer team.,on
+1960,"Go there, please.",there
+1961,We gathered under the tree.,under
+1962,Stand up and walk up this street.,up
+1964,This butter tastes bitter.,bitter
+1965,I wash my face.,face
+1967,Your arm is long.,long
+1969,I stared at the star.,stare
+1973,I'll call you again when I arrive.,call
+1974,Let's go camping with my family.,go camping
+1975,Let's go fishing on the island.,go fishing
+1976,Let's go hiking on the mountain.,go hiking
+1977,Let's go swimming together.,go swimming
+1978,What a terrific idea!,idea
+1979,Let's come together and be close friends.,together
+1980,How about we check the time tonight?,tonight
+1983,My classmates and I are very friendly.,friendly
+1984,Isn’t she really lovely? Happy birthday. She is beautiful. Nice to meet you.,lovely
+1985,We are finding new members for our team.,member
+1988,Europeans believe that owls are wise.,wise
+1989,I’m leading my class and practicing every day.,act
+1991,Let's go to the market and buy apples.,buy
+1993,My mom grows tomatoes and roses.,grow
+1997,I’ll send you a text message.,send
+1999,I’m resting on the dry bench.,bench
+2000,They are in the classroom at school.,classroom
+2001,Falling rocks are very dangerous.,dangerous
+2002,I sneaked into the dark room.,dark
+2003,Don’t sit on the grass.,grass
+2006,These slippers are slippery.,slippery
+2007,The man is going up the stairs.,stair
+2008,It's wet today because of the rain.,wet
+2009,Playing in the forest is fun.,forest
+2011,Come inside my house.,inside
+2015,He is on top of the mountain.,mountain
+2016,This desk is made of wood.,wood
+2017,This is my aunt.,aunt
+2018,My cousins are my favorite relatives.,cousin
+2019,This is my father who teaches English.,father
+2020,We are close friends.,friend
+2022,That is my grandmother.,grandmother
+2024,I love my parents and they care about me.,parents
+2025,I love my teachers and I want to be one.,teacher
+2026,This is my uncle and his son.,uncle
+2027,"Nice to meet you, it's very nice.",nice
+2028,"I’m bad, he’s bad, what’s wrong?",bad
+2029,This tree is high.,high
+2030,That tree is low.,low
+2032,They are poor but have good health.,poor
+2033,This light is bright. That light is dark. It's light. It's sunny.,bright
+2034,I sneaked into the dark room.,dark
+2035,Mary is a smart girl.,smart
+2036,He is foolish and so is his friend.,foolish
+2037,The family is familiar to me.,familiar
+2038,The soldiers are guarding the start.,guard
+2040,Stand up and pause in front of camera.,pause
+2041,There are stains on the bowl.,stain
+2043,Please sweep up the sweets.,sweep
+2044,Let's switch the switches.,switch
+2045,I can do anything when I'm bored.,anything
+2046,It's cool in autumn and summer.,autumn
+2048,I have two tickets and I’m going to the concert hall.,ticket
+2049,"Take care, stay home and sit down.",stay
+2050,Draw a circle on the paper.,circle
+2051,My new dress fits well on me.,dress
+2052,Thanksgiving day is in November.,November
+2053,Harry is the best actor.,actor
+2054,Julia is a kind actress.,actress
+2055,This dentist is my uncle.,dentist
+2056,He is famous because he sings.,famous
+2057,I love my job as a cartoonist.,job
+2058,Mr. Watson is a mail carrier at post office.,mail carrier
+2060,Lincoln was the president of the United States.,president
+2061,I will be a teacher in the future.,teach
+2062,Check your work before hanging it up.,work
+2063,I have a book.,book
+2064,"Don’t miss this chance, I have two tickets.",chance
+2065,May I change my money at the counter?,change
+2066,I exercise every morning.,exercise
+2067,I’m fine. Thank you.,fine
+2068,He won the match yesterday.,match
+2069,I have an old ring.,ring
+2073,The war destroyed my chair.,destroy
+2076,"At that moment, the telephone rang.",moment
+2077,They showed the play again in slow motion.,motion
+2078,Don’t move until I tell you to walk.,move
+2079,He is blind and needs glasses.,blind
+2080,My father is deaf in one ear.,deaf
+2081,Let me examine your teeth.,examine
+2082,"My finger hurts, my foot and knee hurt.",hurt
+2083,Ann is a doctor who gives medicine.,medicine
+2084,I found a new method to fill the glass.,method
+2087,Let's play badminton instead of tennis today.,badminton
+2088,Let's play baseball.,baseball
+2089,We are playing basketball and like sports.,basketball
+2090,Let's play golf with Joe.,golf
+2092,I like skiing and we will go.,skiing
+2093,We are playing soccer.,soccer
+2094,My favorite sport is basketball.,sport
+2095,We are playing tennis with him.,tennis
+2096,Let's play volleyball after basketball practice.,volleyball
+2097,We play computer games every weekend.,computer game
+2098,We are going to a concert.,concert
+2099,The movie is fun.,movie
+2100,They listen to music every day.,music
+2101,We watch a musical and like singing.,musical
+2102,I have a pet and I’m patting it.,pet
+2103,I really want to go on a picnic.,picnic
+2104,Let's listen to the song.,song
+2105,They watch television for about one hour.,television
+2106,They go on a trip every weekend.,trip
+2107,We walk along the beach.,beach
+2109,The distance between Seoul and Busan is very long.,distance
+2110,He won the match yesterday.,match
+2111,We enjoy outdoor activities when it's sunny.,outdoor
+2112,Let's make a plan for our vacation.,plan
+2113,I’m on vacation and I like summer.,vacation
+2114,I like visiting the wild animal park.,wild
+2115,I traveled abroad last summer.,abroad
+2116,I will come here when I arrive.,arrive
+2117,The vase was on a metal base.,base
+2118,I have a brown basket and a basketball.,basket
+2119,The world has become a global village.,global
+2120,I was tired from the long journey.,journey
+2122,I want to travel around the world.,travel
+2124,I’m happy when I play outside.,happy
+2125,He is hungry.,hungry
+2126,You look so sad when it's raining.,sad
+2127,"She is scared, don't be afraid.",scared
+2128,You are sick.,sick
+2129,"I’m sorry, I made a mistake.",sorry
+2130,He is very surprised by the news.,surprised
+2131,I’m thirsty. Give me some juice.,thirsty
+2132,"I feel tired, she's sleepy.",tired
+2133,Can you find my lost school bag?,bag
+2134,Your belt is short.,belt
+2135,My boots are blue and black yellow.,boots
+2136,It's my cap on the table.,cap
+2137,Your gloves are big.,gloves
+2138,It's my hat.,hat
+2139,His pajamas are small and his clothes.,pajamas
+2140,Your scarf is long.,scarf
+2142,It's my vest.,vest
+2144,I sometimes play chess on my computer.,chess
+2149,I’ve seen this movie once.,once
+2150,I sometimes play chess with my sister.,sometimes
+2153,This goat is black and her boots.,black
+2154,I like purple and I wear blue boots.,blue
+2155,The horse is brown.,brown
+2157,The computer and plane are gray.,gray
+2158,My shorts are green.,green
+2159,It's a pink box.,pink
+2160,The fire truck is red.,red
+2161,The car is white.,white
+2162,It's a yellow pen.,yellow
+2163,The ambulance is white and I go there.,ambulance
+2164,Riding a bike is fun.,bike
+2165,The boat is going away slowly.,boat
+2166,The bus stop is near the big bus.,bus
+2167,I am driving my old car.,car
+2168,The fire engine is red.,fire engine
+2169,I’m making a model airplane.,plane
+2170,Let's take a taxi at the small airport.,taxi
+2171,The train station is on the same side.,train
+2172,The truck is dumping the trash.,truck

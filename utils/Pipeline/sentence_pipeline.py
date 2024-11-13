@@ -39,7 +39,7 @@ class SentenceEvaluationPipeline:
 
     def process_all_sentences(self, file_path: str):
         # CSV 파일 로드
-        df = pd.read_csv(file_path,encoding='cp949')
+        df = pd.read_csv(file_path)
         results = []
 
         # 모든 문장에 대해 파이프라인 실행
@@ -50,4 +50,4 @@ class SentenceEvaluationPipeline:
             result["word"] = word
             results.append(result)
 
-        return results
+        return pd.DataFrame(results)

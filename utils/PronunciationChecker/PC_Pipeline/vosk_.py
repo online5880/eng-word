@@ -1,13 +1,14 @@
 import wave
 import json
-from utils.PronunciationChecker.vosk_ import Model, KaldiRecognizer
+from vosk import Model, KaldiRecognizer
 from difflib import SequenceMatcher
 
 # 모델
-model = Model("./model.vosk-model-en-us-0.22")
+model = Model("C:/Users/user/Desktop/eng-word/utils/PronunciationChecker/PC_Pipeline/model/vosk-model-en-us-0.22")
+
 
 def transcribe_audio_vosk(audio_path):
-    wf = wave.open(audio_path,"rb")
+    wf = wave.open(audio_path, "rb")
     recognizer = KaldiRecognizer(model, wf.getframerate())
 
     result_text = ""
@@ -17,12 +18,13 @@ def transcribe_audio_vosk(audio_path):
             break
         if recognizer.AcceptWaveform(data):
             result = json.loads(recognizer.Result())
-            result_text += result.get("text","") + " "
+            print(f"Intermediate Result: {result.get('text', '')}")  # 중간 결과 출력
+            result_text += result.get("text", "") + " "
 
     final_result = json.loads(recognizer.FinalResult())
     result_text += final_result.get("text", "")
+    print(f"Final Transcribed Text: {result_text}")  # 최종 결과 출력
     return result_text
-
 
 def evaluate_pronunciation(audio_path, expected_word):
     recognized_text = transcribe_audio_vosk(audio_path)
