@@ -32,6 +32,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+# CSRF_TRUSTED_ORIGINS = [
+#     'https://bf1e-121-140-172-195.ngrok-free.app',
+# ]
 
 # Application definition
 
@@ -53,6 +56,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_yasg",
     'accounts'
+    
 ]
 
 MIDDLEWARE = [
