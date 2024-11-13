@@ -1,7 +1,9 @@
-from PC_Pipeline.Parselscore import get_formants
-from PC_Pipeline.vosk_ import evaluate_pronunciation
+from .Parselscore import get_formants
+from .vosk_ import evaluate_pronunciation
 
 def calculate_formant_score(native_audio_path, student_audio_path):
+    print("calculate_formant_score [native_audio_path] : ", native_audio_path)
+    print("calculate_formant_score [student_audio_path] : ", student_audio_path)
     f1_native, f2_native = get_formants(native_audio_path)
     f1_student, f2_student = get_formants(student_audio_path)
 
