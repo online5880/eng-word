@@ -1,0 +1,25 @@
+
+huggingface-hub==0.26.2
+
+matplotlib==3.9.2
+matplotlib-inline @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-inline_1713250518406/work
+
+numpy==2.0.2
+
+pandas==2.2.3
+
+spacy==3.8.2
+spacy-legacy==3.0.12
+spacy-loggers==1.0.5
+
+tensorboard==2.18.0
+tensorboard-data-server==0.7.2
+tensorflow==2.18.0
+tensorflow-cpu==2.18.0
+tensorflow-io-gcs-filesystem==0.31.0
+tensorflow_intel==2.18.0
+
+torch==2.5.1
+tornado @ file:///D:/bld/tornado_1724956258948/work
+tqdm==4.67.0
+
