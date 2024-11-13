@@ -1,103 +1,142 @@
+// DOM 요소들
+const micButton = document.getElementById("micButton");
+const statusText = document.getElementById("statusText");
+const progressFill = document.getElementById("progressFill");
+const audioPreview = document.getElementById("audio-preview");
+const resultText = document.getElementById("audio-result");
+
+// 변수들
 let recorder;
 let audioStream;
 let audioData = [];
-let currentWord = document.getElementById("current-word").textContent;
-let audioPreview = document.getElementById("audio-preview");
-let feedbackDisplay = document.getElementById("feedback");
-const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+let isRecording = false;
 
-// 녹음 시작
+// 마이크 버튼 클릭 시 녹음 시작 또는 중지
+micButton.addEventListener("click", () => {
+    if (isRecording) {
+        stopRecording();  // 녹음 중이면 중지
+    } else {
+        startRecording();  // 녹음 시작
+    }
+});
+
+// 녹음 시작 함수
 function startRecording() {
+    console.log("startRecording 호출됨");
     if (navigator.mediaDevices) {
         audioData = [];
-
+        console.log("마이크 접근 시도 중...");
         navigator.mediaDevices.getUserMedia({ audio: true })
             .then(stream => {
                 audioStream = stream;
                 recorder = new MediaRecorder(stream);
-
                 recorder.ondataavailable = event => {
                     if (event.data.size > 0) {
                         audioData.push(event.data);
                     }
                 };
-
                 recorder.onstop = () => {
                     if (audioData.length > 0) {
-                        processRecording();
+                        processRecording();  // 녹음이 완료되면 처리 함수 호출
                     } else {
                         alert("녹음 데이터가 없습니다. 다시 시도해주세요.");
                     }
                 };
-
                 recorder.start();
-                document.getElementById("startBtn").disabled = true;
-                document.getElementById("stopBtn").disabled = false;
+                isRecording = true;
+                updateUIForRecording();  // UI 상태 업데이트
             })
             .catch(err => {
                 console.log("Audio error: " + err);
-                alert("녹음 시작에 실패했습니다. 마이크 권한을 확인해주세요.");
+                alert("마이크 권한을 확인해주세요.");
             });
+    } else {
+        alert("이 브라우저는 오디오 녹음을 지원하지 않습니다.");
     }
 }
 
-// 녹음 종료
+// 녹음 중지 함수
 function stopRecording() {
-    if (recorder && recorder.state === 'recording') {
+    console.log("stopRecording 호출됨");
+    if (recorder && recorder.state === "recording") {
         recorder.stop();
-        audioStream.getTracks().forEach(track => track.stop()); // 마이크 종료
-
-        document.getElementById("startBtn").disabled = false;
-        document.getElementById("stopBtn").disabled = true;
+        audioStream.getTracks().forEach(track => track.stop());  // 모든 트랙 중지
+        isRecording = false;
+        updateUIForStopped();  // UI 상태 업데이트
     }
 }
 
-// 녹음 처리
+// 녹음이 완료되면 서버로 전송
 function processRecording() {
-    const audioBlob = new Blob(audioData, { type: 'audio/wav' });
+    const blob = new Blob(audioData, { type: 'audio/wav' });
     const formData = new FormData();
-    formData.append('audio_file', audioBlob);
-    formData.append('target_word', currentWord);
+    formData.append("audio_file", blob, "audio.wav");
 
-    fetch('/pron_practice/evaluate_pronunciation/', {
-        method: 'POST',
-        body: formData,
+    // 서버로 전송
+    fetch(`/recognize_audio/${window.sentenceId}/`, {
+        method: "POST",
         headers: {
-            'X-CSRFToken': csrfToken
+            "X-CSRFToken": csrfToken,  // CSRF 토큰
+        },
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert("음성 인식 오류가 발생했습니다.");
+        } else {
+            displayResult(data);  // 음성 인식 결과 표시
         }
     })
-        .then(response => response.json())
-        .then(data => {
-            const score = data.score;
-            const feedback = data.feedback;
-            displayFeedback(score, feedback);
-
-            const audioUrl = URL.createObjectURL(audioBlob);
-            audioPreview.src = audioUrl;
-            audioPreview.style.display = 'block';
-        })
-        .catch(error => {
-            console.error("Error processing recording: ", error);
-            alert("서버 처리 중 오류가 발생했습니다.");
-        });
+    .catch(error => {
+        console.log("서버 오류:", error);
+        alert("서버 처리 중 오류가 발생했습니다.");
+    });
 }
 
-// 피드백 표시
-function displayFeedback(score, feedback) {
-    feedbackDisplay.textContent = feedback;
+// 음성 인식 결과 표시 함수
+function displayResult(data) {
+    resultText.textContent = `Transcript: ${data.transcript}`;
+    audioPreview.style.display = "block";
+    audioPreview.src = data.audio_url;  // 성공/실패 피드백 오디오
 
-    if (score >= 80) {
-        feedbackDisplay.style.color = 'green';
-    } else if (score >= 60) {
-        feedbackDisplay.style.color = 'yellow';
+    if (data.is_correct) {
+        resultText.className = "green";
+        alert("정답입니다!");
     } else {
-        feedbackDisplay.style.color = 'red';
+        resultText.className = "red";
+        resultText.textContent += ` (정답: ${data.correct_answer})`;
+        alert(`틀렸습니다. 정답은 ${data.correct_answer}입니다.`);
     }
 }
 
-// 정답 제출
-function submitAnswer() {
-    // 예문 학습에서 정답 제출 및 피드백 표시 로직을 처리합니다.
-    alert("정답 제출 완료! 예문 학습이 끝났습니다.");
-    // 예시: window.location.href = '/next_word/';
+// UI 업데이트 함수 (녹음 중 상태)
+function updateUIForRecording() {
+    micButton.innerHTML = '<div class="mic-icon"><i class="fas fa-stop"></i></div>'; // 마이크 아이콘을 중지 아이콘으로 변경
+    statusText.textContent = "녹음 중...";  // 상태 텍스트
+    progressFill.style.width = "0";  // 프로그레스 바 초기화
+    voiceLevelFill.style.width = "0";  // 음성 레벨 초기화
+    micAnimation.style.display = "block";  // 애니메이션 시작
+    progressBarAnimation();  // 프로그레스 바 애니메이션
+}
+
+// UI 업데이트 함수 (녹음 중지 후 상태)
+function updateUIForStopped() {
+    micButton.innerHTML = '<div class="mic-icon"><i class="fas fa-microphone"></i></div>'; // 마이크 아이콘으로 변경
+    statusText.textContent = "녹음이 완료되었습니다. 결과를 확인하세요.";  // 상태 텍스트
+    micAnimation.style.display = "none";  // 애니메이션 종료
+}
+
+
+// 프로그레스 바 애니메이션
+function progressBarAnimation() {
+    let progress = 0;
+    const interval = setInterval(() => {
+        if (progress >= 100) {
+            clearInterval(interval);
+        } else {
+            progress += 1;
+            progressFill.style.width = progress + "%";
+        }
+    }, 100);
 }
