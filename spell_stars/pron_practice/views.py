@@ -7,21 +7,29 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from difflib import SequenceMatcher
 from django.conf import settings
+from .models import Word
+import random
 import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-
 # Whisper 모델 로드 (small 모델 사용)
 model = whisper.load_model("small")
-
-# 단어를 고정 (eraser만)
-current_word = "eraser"
 
 
 # 발음 연습 페이지를 렌더링하는 뷰
 def pronunciation_practice_view(request):
-    return render(request, "pron_practice/pron_practice.html", {"word": current_word})
+    # Word 모델에서 단어를 랜덤으로 선택
+    random_word = Word.objects.order_by("?").first()
+
+    if random_word:
+        return render(
+            request, "pron_practice/pron_practice.html", {"word": random_word.word_text}
+        )
+    else:
+        return JsonResponse(
+            {"error": "No words available in the database."}, status=404
+        )
 
 
 def evaluate_pronunciation(request):
@@ -29,54 +37,39 @@ def evaluate_pronunciation(request):
         if request.method == "POST" and request.FILES.get("audio_file"):
             # 사용자 음성을 파일로 저장
             audio_file = request.FILES["audio_file"]
-            print(f"Received file: {audio_file.name}, Size: {audio_file.size} bytes")
-
-            # 업로드된 파일의 정보 확인
             file_name = audio_file.name
             file_size = audio_file.size
-            file_type = audio_file.content_type
-            print(
-                f"File details: Name = {file_name}, Size = {file_size}, Type = {file_type}"
-            )
 
-            if file_size == 0:
+            # 단어를 랜덤으로 선택
+            random_word = Word.objects.order_by("?").first()
+            if not random_word:
                 return JsonResponse(
-                    {
-                        "error": "Uploaded file is empty. Please upload a valid audio file."
-                    },
-                    status=400,
+                    {"error": "No words available in the database."}, status=404
                 )
 
-            # 확장자 강제로 .wav로 변경 (이름에 .wav가 포함되지 않는 경우에만)
-            if not file_name.endswith(".wav"):
-                file_name = file_name.split(".")[0] + ".wav"
-                print(f"File extension changed to .wav: {file_name}")
+            target_word = random_word.word_text
+
+            # 원어민 발음 파일 경로 설정
+            native_file_path = os.path.join(
+                settings.MEDIA_ROOT, "audio_files", "native", f"{target_word}.wav"
+            )
+
+            if not os.path.exists(native_file_path):
+                return JsonResponse(
+                    {"error": f"Native audio file for {target_word} not found."},
+                    status=404,
+                )
 
             # 파일 저장 경로 설정
             user_file_path = os.path.join(settings.MEDIA_ROOT, "pron_pc", file_name)
-            print(f"Saving file to: {user_file_path}")
-
-            # 디렉토리 생성 및 파일 저장
-            try:
-                os.makedirs(
-                    os.path.dirname(user_file_path), exist_ok=True
-                )  # 사용자 파일 디렉토리 생성
-                with open(user_file_path, "wb") as f:
-                    for chunk in audio_file.chunks():
-                        f.write(chunk)
-                print(f"File saved successfully at {user_file_path}")
-            except Exception as e:
-                print(f"Error saving file: {e}")
-                return JsonResponse(
-                    {"error": f"Failed to save file: {str(e)}"}, status=500
-                )
+            os.makedirs(os.path.dirname(user_file_path), exist_ok=True)
+            with open(user_file_path, "wb") as f:
+                for chunk in audio_file.chunks():
+                    f.write(chunk)
 
             # 발음 비교 수행
             score, waveform_similarity, mfcc_similarity, feedback = (
-                compare_pronunciation(user_file_path, current_word)
-            )
-            print(
-                f"Pronunciation comparison results: Score = {score}, Feedback = {feedback}, Waveform similarity = {waveform_similarity}, MFCC similarity = {mfcc_similarity}"
+                compare_pronunciation(user_file_path, target_word, native_file_path)
             )
 
             return JsonResponse(
@@ -85,34 +78,26 @@ def evaluate_pronunciation(request):
                     "feedback": feedback,
                     "waveform_similarity": waveform_similarity,
                     "mfcc_similarity": mfcc_similarity,
+                    "target_word": target_word,
                 }
             )
 
         return JsonResponse({"error": "No audio file uploaded"}, status=400)
 
     except Exception as e:
-        print(f"Unexpected error: {str(e)}")
         return JsonResponse(
             {"error": f"An unexpected error occurred: {str(e)}"}, status=500
         )
 
 
 # 발음 비교 함수
-def compare_pronunciation(user_file_path, target_word):
+def compare_pronunciation(user_file_path, target_word, native_file_path):
     # 사용자 음성 로드
     try:
         student_audio, sr = librosa.load(user_file_path, sr=16000)
-    except Exception as e:
-        return None, None, None, f"Error loading user audio file: {str(e)}"
-
-    # 원어민 기준 음성 파일 로드
-    native_file_path = os.path.join(
-        settings.MEDIA_ROOT, "audio", "native", "eraser_a.wav"
-    )
-    try:
         native_audio, _ = librosa.load(native_file_path, sr=16000)
     except Exception as e:
-        return None, None, None, f"Error loading native audio file: {str(e)}"
+        return None, None, None, f"Error loading audio files: {str(e)}"
 
     # 파형 비교
     waveform_similarity = compare_waveform(student_audio, native_audio)
@@ -189,4 +174,10 @@ def transcribe_audio(file_path):
 
 # 다음 단어로 이동하는 뷰 (단어가 하나라 계속 "eraser"로 유지)
 def next_word(request):
-    return JsonResponse({"next_word": current_word})
+    random_word = Word.objects.order_by("?").first()
+    if random_word:
+        return JsonResponse({"next_word": random_word.word_text})
+    else:
+        return JsonResponse(
+            {"error": "No words available in the database."}, status=404
+        )

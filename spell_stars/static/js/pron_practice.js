@@ -8,19 +8,15 @@ let countdownText = document.getElementById('countdown'); // 카운트다운을 
 
 const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
-
 // 페이지 로드 후 음성을 준비만 하고 자동으로 재생되지 않도록 설정
 window.onload = function () {
-    let nativeAudioPreview = document.getElementById("native-audio-preview");
     nativeAudioPreview.load();  // 음성을 로드만 시킴 (자동 재생 X)
 };
 
 // 오디오 재생을 위한 함수 (Play 버튼을 눌렀을 때)
 function playNativeAudio() {
-    let nativeAudioPreview = document.getElementById("native-audio-preview");
     nativeAudioPreview.play();  // 버튼 클릭 시 음성 재생
 }
-
 
 // 카운트다운 시작
 function startCountdown() {
@@ -34,8 +30,11 @@ function startCountdown() {
             index++;
             setTimeout(updateCountdown, 1000); // 1초마다 숫자 변경
         } else {
-            countdownText.style.display = 'none'; // 카운트다운 숨기기
-            startRecording(); // 카운트다운이 끝나면 녹음 시작
+            countdownText.innerText = '녹음을 시작하세요'; // 안내 문구 표시
+            setTimeout(() => {
+                countdownText.style.display = 'none'; // 안내 문구 숨기기
+                startRecording(); // 녹음 시작
+            }, 1000); // 안내 문구가 1초 동안 표시된 후 녹음 시작
         }
     }
 
@@ -66,12 +65,9 @@ function startRecording() {
                     }
                 };
 
-                // 녹음 시작 지연 추가
-                setTimeout(() => {
-                    recorder.start(); // 녹음 시작
-                    document.getElementById("startBtn").disabled = true;
-                    document.getElementById("stopBtn").disabled = false;
-                }, 300); // 300ms 지연 추가
+                recorder.start(); // 녹음 시작
+                document.getElementById("startBtn").disabled = true;
+                document.getElementById("stopBtn").disabled = false;
             })
             .catch(err => {
                 console.log("Audio error: " + err);
@@ -150,4 +146,3 @@ function nextWord() {
 function exitPractice() {
     window.location.href = '/';
 }
-
