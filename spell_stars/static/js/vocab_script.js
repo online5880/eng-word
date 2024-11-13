@@ -101,6 +101,8 @@ document.getElementById('micButton').addEventListener('click', async function() 
 });
 
 function playAudio() {
-    const audioPlayer = document.getElementById('audioPlayer');
-    audioPlayer.play();
+    const audioPlayer = document.getElementById("audioPlayer");
+    if (audioPlayer) {
+        audioPlayer.play();
+    }
 }
