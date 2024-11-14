@@ -4,5 +4,8 @@ from . import views
 
 urlpatterns = [
     path("vocab_mode/", views.display_vocabulary_book, name="vocab_mode"),  # 단어 학습 페이지
-    # path('sent_practice/', views.sent_mode_view, name='sent_mode'),  # 예문 학습 모드 페이지로의 전환
+    path('upload_audio/', views.upload_audio, name='upload_audio'),
+    path('api/words/',views.WordListAPIView.as_view(),name='word-list'),
+    path('api/categories/',views.CategoryListAPIView.as_view(),name='category-list'),
+    path('api/categories/<int:id>',views.CategoryListAPIView.as_view(),name='category-list')
 ]

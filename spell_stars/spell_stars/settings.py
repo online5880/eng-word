@@ -32,9 +32,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-# CSRF_TRUSTED_ORIGINS = [
-#     'https://bf1e-121-140-172-195.ngrok-free.app',
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    # 'https://a0d0-121-140-172-195.ngrok-free.app',
+]
 
 # Application definition
 
@@ -58,6 +58,14 @@ INSTALLED_APPS = [
     'accounts'
     
 ]
+
+REST_FRAMEWORK={
+    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE' : 100,
+    'DEFAULT_FILTER_BACKENDS': [
+        
+    ]
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
