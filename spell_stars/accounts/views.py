@@ -5,45 +5,52 @@ from rest_framework import generics
 from rest_framework.permissions import AllowAny, IsAdminUser
 from .serializers import UserSerializer, UserCreationSerializer
 from .forms import LoginForm, SignupForm
-from .models import User
+from .models import StudentInfo
 
 
 # Create your views here.
+
 
 # 로그인뷰
 class UserLoginView(LoginView):
     template_name = "accounts/login.html"
     form_class = LoginForm
-    
+
+
 class UserLogoutView(LogoutView):
     next_page = "/"
-    
+
+
 def signup(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = SignupForm(request.POST)
         if form.is_valid():
             user = form.save()
             return redirect("/")
     else:
         form = SignupForm()
-    return render(request,"accounts/signup.html",{"form":form})
+    return render(request, "accounts/signup.html", {"form": form})
+
 
 @login_required
 def profileView(request):
-    return render(request,"accounts/profile.html",{"user":request.user})
+    return render(request, "accounts/profile.html", {"user": request.user})
+
 
 class UserListAPIView(generics.ListAPIView):
-    queryset = User.objects.all()
+    queryset = StudentInfo.objects.all()
     serializer_class = UserSerializer
     permission_classes = [IsAdminUser]
-    
+
+
 class UserCreateAPIView(generics.CreateAPIView):
-    queryset = User.objects.all()
+    queryset = StudentInfo.objects.all()
     serializer_class = UserCreationSerializer
     permission_classes = [IsAdminUser]
-    
+
+
 class UserRetrieveAPIView(generics.RetrieveAPIView):
-    queryset = User.objects.all()
+    queryset = StudentInfo.objects.all()
     serializer_class = UserSerializer
     permission_classes = [IsAdminUser]
-    lookup_field = 'id'
+    lookup_field = "id"

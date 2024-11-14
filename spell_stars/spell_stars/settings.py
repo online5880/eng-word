@@ -19,8 +19,6 @@ path = dotenv.find_dotenv()
 dotenv.load_dotenv(override=True)
 
 
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -50,7 +48,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    
     # 커스텀 앱들
     "main",
     "sent_mode",
@@ -59,16 +56,13 @@ INSTALLED_APPS = [
     "vocab_mode",
     "rest_framework",
     "drf_yasg",
-    'accounts'
-    
+    "accounts",
 ]
 
-REST_FRAMEWORK={
-    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE' : 100,
-    'DEFAULT_FILTER_BACKENDS': [
-        
-    ]
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 100,
+    "DEFAULT_FILTER_BACKENDS": [],
 }
 
 MIDDLEWARE = [
@@ -79,8 +73,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    
-    'accounts.middleware.UpdateLastLoginMiddleware'
+    "accounts.middleware.UpdateLastLoginMiddleware",
 ]
 
 ROOT_URLCONF = "spell_stars.urls"
@@ -108,13 +101,13 @@ WSGI_APPLICATION = "spell_stars.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("NAME"),
-        'USER': os.getenv("USERNAME"),
-        'PASSWORD': os.getenv("PASSWORD"),
-        'HOST': os.getenv("HOST"),  
-        'PORT': os.getenv("PORT"),
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv("NAME"),
+        "USER": os.getenv("USERNAME"),
+        "PASSWORD": os.getenv("PASSWORD"),
+        "HOST": os.getenv("HOST"),
+        "PORT": os.getenv("PORT"),
     }
 }
 
@@ -162,7 +155,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = "accounts.User"
+AUTH_USER_MODEL = "accounts.StudentInfo"
 
 LOGIN_URL = "/accounts/login/"  # @login_required가 리디렉션할 로그인 URL
 LOGOUT_URL = "/accounts/logout/"  # 로그아웃 버튼이나 링크가 사용할 로그아웃 URL
@@ -173,7 +166,7 @@ MEDIA_URL = "/media/"  # URL로 접근할 때 사용할 경로
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # 실제 파일이 저장될 경로
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
     ],
 }

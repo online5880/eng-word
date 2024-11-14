@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Word, Category
+
+"""from .models import Word, Category
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -18,4 +19,4 @@ class WordAdmin(admin.ModelAdmin):
         if isinstance(obj.meanings, list):
             return ', '.join(obj.meanings)
         return str(obj.meanings)
-    get_meanings.short_description = '의미'  # 컬럼 헤더 이름 설정
+    get_meanings.short_description = '의미'  # 컬럼 헤더 이름 설정"""
