@@ -1,27 +1,72 @@
-# views.py
-import json
 import os
-from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
+
+from utils.PronunciationChecker.manage import process_audio_files
+
 from .models import  Word
-import whisper
-import difflib
-from tempfile import NamedTemporaryFile
-from faker import Faker
-import random
-from django.contrib.auth import get_user_model
-
-
-# Whisper 모델 로드 (애플리케이션 시작 시 한 번만)
-model = whisper.load_model("tiny")
+from django.conf import settings
+from django.http import JsonResponse
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+import os
 
 def display_vocabulary_book(request):
-    
-    # User = get_user_model()  # 현재 프로젝트에서 사용하는 User 모델을 가져옴
+    words = Word.objects.all().order_by('category', 'word')
+    context = {
+        'words': words,
+        'MEDIA_URL': settings.MEDIA_URL
+    }
+    print("MEDIA_URL:", settings.MEDIA_URL)  # 디버깅용
+    print("words[0].audio_file:", words[0].audio_file if words else None)  # 디버깅용
+    return render(request, 'vocab_mode/vocab.html', context)
 
-    words = Word.objects.all()  # 모든 단어 가져오기
-    print(words)
-    
 
-    return render(request, 'vocab_mode/vocab.html', {'words': words})
+@csrf_exempt
+def upload_audio(request):
+    if request.method == 'POST' and request.FILES.get('audio'):
+        try:
+            user_id = request.user.id
+            word = request.POST.get('word')
+            
+            if not word:
+                return JsonResponse({'status': 'error', 'message': 'Word is required'}, status=400)
+            
+            # 저장 경로 설정
+            save_path = f'audio_files/students/user_{user_id}/'
+            os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
+            
+            # 파일 이름 설정
+            file_name = f"{word}_student.wav"
+            file_path = os.path.join(save_path, file_name)
+            
+            # 기존 파일이 있으면 삭제
+            if default_storage.exists(file_path):
+                default_storage.delete(file_path)
+            
+            # 새 파일 저장
+            full_path = default_storage.save(file_path, ContentFile(request.FILES['audio'].read()))
+            
+            # 절대 경로로 변환
+            native_audio_path = os.path.join(settings.MEDIA_ROOT, 'audio_files/native/', f"{word}.wav")
+            full_student_audio_path = os.path.join(settings.MEDIA_ROOT, file_path)
+
+            print("Native audio path:", native_audio_path)  # 디버깅용
+            print("Student audio path:", full_student_audio_path)  # 디버깅용
+            
+            # process_audio_files 호출
+            result = process_audio_files(native_audio_path, full_student_audio_path, word)
+            print(result)  # 결과 출력
+            
+            return JsonResponse({
+                'status': 'success', 
+                'file_path': full_student_audio_path,
+                'message': '음성 파일이 성공적으로 저장되었습니다.'
+            })
+              
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+            
+    return JsonResponse({'status': 'error', 'message': 'Invalid request'}, status=400)
+
+

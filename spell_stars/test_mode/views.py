@@ -11,6 +11,7 @@ from .models import TestResult  # TestResult 모델을 import
 
 import warnings
 
+<<<<<<< HEAD
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 model = whisper.load_model("small")
@@ -122,6 +123,11 @@ def recognize_audio(request, question_id):
 
     # 파일이 없을 경우
     print("No audio file received in request")
+=======
+
+def test_mode_view(request):
+    
+>>>>>>> feature/django/pretraining
     return JsonResponse({"error": "No audio file received"}, status=400)
 
 

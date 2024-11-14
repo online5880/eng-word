@@ -1,5 +1,4 @@
 import os
-import whisper
 import librosa
 import numpy as np
 from scipy.spatial.distance import cosine
@@ -13,6 +12,7 @@ import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
+<<<<<<< HEAD
 # Whisper 모델 로드 (small 모델 사용)
 model = whisper.load_model("small")
 
@@ -181,3 +181,6 @@ def next_word(request):
         return JsonResponse(
             {"error": "No words available in the database."}, status=404
         )
+=======
+
+>>>>>>> feature/django/pretraining

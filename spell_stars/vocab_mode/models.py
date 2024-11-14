@@ -17,7 +17,7 @@ class Word(models.Model):
     part_of_speech = models.CharField(max_length=20, blank=True, null=True)  # 품사
     examples = models.JSONField()  # 예문 - 문자열 또는 리스트 저장 가능
     example_translations = models.JSONField()  # 예문 뜻 - 문자열 또는 리스트 저장 가능
-    audio_file = models.FileField(upload_to='audio_files/native/', blank=True, null=True)  # 원어민 음성 파일 경로
+    audio_file = models.CharField(max_length=255, blank=True, null=True)  # 원어민 음성 파일 경로
 
     def __str__(self):
         return self.word
