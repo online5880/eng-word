@@ -38,64 +38,64 @@
         "단어": "dessert",
         "단어 뜻": "후식",
         "품사": "n.",
-        "예문": "Would you care for some dessert? 후식 좀 드시겠어요?",
-        "예문 뜻": "a little"
+        "예문": "Would you care for some dessert?",
+        "예문 뜻": "후식 좀 드시겠어요?"
     },
     {
-        "단어": "You",
-        "단어 뜻": "use a little cream and milk to bake bread.",
-        "품사": "can",
-        "예문": "너는 빵을 굽기 위해 약간의 크림과 우유를 사용할 수 있다.",
-        "예문 뜻": "little"
+        "단어": "a_little",
+        "단어 뜻": "(양이) 조금/약간 있는",
+        "품사": "phr.",
+        "예문": "You can use a_little cream and milk to bake bread.",
+        "예문 뜻": "너는 빵을 굽기 위해 약간의 크림과 우유를 사용할 수 있다."
     },
     {
-        "단어": "There",
-        "단어 뜻": "little food on the snow-covered mainland.",
-        "품사": "was",
-        "예문": "눈으로 덮인 본토에는 음식이 거의 없었다.",
-        "예문 뜻": "loose"
+        "단어": "little",
+        "단어 뜻": "(양이) 거의 없는",
+        "품사": "adj.",
+        "예문": "There was little food on the snow-covered mainland.",
+        "예문 뜻": "눈으로 덮인 본토에는 음식이 거의 없었다."
     },
     {
-        "단어": "The",
-        "단어 뜻": "pants are too loose for you.",
-        "품사": "black",
-        "예문": "그 검정 바지는 너에게 너무 헐렁하다.",
-        "예문 뜻": "lose"
+        "단어": "loose",
+        "단어 뜻": "헐렁한",
+        "품사": "adj.",
+        "예문": "The black pants are too loose for you.",
+        "예문 뜻": "그 검정 바지는 너에게 너무 헐렁하다."
     },
     {
-        "단어": "Using",
-        "단어 뜻": "pills is not a safe way to lose weight.",
-        "품사": "diet",
-        "예문": "다이어트 약을 사용하는 것은 체중을 줄이는 안전한 방법이 아니다.",
-        "예문 뜻": "principal"
+        "단어": "lose",
+        "단어 뜻": "잃다, 줄다",
+        "품사": "v.",
+        "예문": "Using diet pills is not a safe way to lose weight.",
+        "예문 뜻": "다이어트 약을 사용하는 것은 체중을 줄이는 안전한 방법이 아니다."
     },
     {
-        "단어": "The",
-        "단어 뜻": "principal spoke to us this morning.",
-        "품사": "new",
-        "예문": "새 교장 선생님은 오늘 아침 우리에게 연설하셨다.",
-        "예문 뜻": "principle"
+        "단어": "principal",
+        "단어 뜻": "교장",
+        "품사": "n.",
+        "예문": "The new principal spoke to us this morning.",
+        "예문 뜻": "새 교장 선생님은 오늘 아침 우리에게 연설하셨다."
     },
     {
-        "단어": "It",
-        "단어 뜻": "my principle not to be late for school.",
-        "품사": "is",
-        "예문": "학교에 늦지 않는다는 것이 나의 원칙이다.",
-        "예문 뜻": "prefer"
+        "단어": "principle",
+        "단어 뜻": "원칙",
+        "품사": "n.",
+        "예문": "It is my principle not to be late for school.",
+        "예문 뜻": "학교에 늦지 않는다는 것이 나의 원칙이다."
     },
     {
-        "단어": "Which",
-        "단어 뜻": "you prefer, a house with a green roof or with a red roof?",
-        "품사": "do",
-        "예문": "녹색 지붕의 집과 빨간색 지붕의 집 중, 어느 것이 더 좋니?",
-        "예문 뜻": "proper"
+        "단어": "prefer",
+        "단어 뜻": "(더) 좋아하다",
+        "품사": "v.",
+        "예문": "Which do you prefer, a house with a green roof or with a red roof?",
+        "예문 뜻": "녹색 지붕의 집과 빨간색 지붕의 집 중, 어느 것이 더 좋니?"
     },
     {
-        "단어": "The",
-        "단어 뜻": "are going to be put in their proper places the next day.",
-        "품사": "plants",
-        "예문": "그 식물들은",
-        "예문 뜻": "다음 날 적절한 장소에 놓여질 것이다."
+        "단어": "proper",
+        "단어 뜻": "적절한",
+        "품사": "adj.",
+        "예문": "The plants are going to be put in their proper places the next day.",
+        "예문 뜻": "그 식물들은"
     },
     {
         "단어": "quiet",
