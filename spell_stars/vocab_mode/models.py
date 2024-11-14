@@ -3,7 +3,6 @@ from django.db import models
 # 카테고리 모델
 class Category(models.Model):
     name = models.CharField(max_length=50, unique=True)  # 카테고리 이름
-
     def __str__(self):
         return self.name
 
