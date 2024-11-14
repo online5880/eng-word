@@ -12,7 +12,7 @@
   <body>
     <div id="practice-container">
       <h2>발음 연습 모드</h2>
-      <p>Current word:
+      <p>단어:
         <span id="current-word">{{ word }}</span>
       </p>
 
@@ -64,8 +64,8 @@
       </audio>
 
       <!-- 네비게이션 버튼 -->
-      <button onclick="nextWord()">Next Word</button>
-      <button onclick="exitPractice()">Exit Practice</button>
+      <button id="nextWordButton">다음 단어</button>
+      <button onclick="exitPractice()">나가기</button>
     </div>
 
     <script src="{% static 'js/pron_practice.js' %}"></script>

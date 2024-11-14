@@ -7,4 +7,9 @@ urlpatterns = [
     
     # 음성 파일 업로드 (발음 평가)
     path('evaluate_pronunciation/', views.evaluate_pronunciation, name='evaluate_pronunciation'),
+    
+    # 다음 단어
+    path('next_word/', views.next_word, name='next_word'),
+    
+    path('upload_audio/', views.upload_audio, name='upload_audio'),
 ]
