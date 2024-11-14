@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const playButton = document.getElementById('playAudioButton');
+    const playButtons = document.querySelectorAll('.playAudioButton');  // 모든 playAudioButton 버튼 선택
     const audioPlayer = document.getElementById('audioPlayer');
     const micButton = document.getElementById('micButton');
     const statusText = document.querySelector('.status-text');
@@ -11,23 +11,25 @@ document.addEventListener('DOMContentLoaded', function() {
     let isRecording = false;
     
     // 오디오 재생 버튼 이벤트
-    if (playButton && audioPlayer) {
-        playButton.addEventListener('click', function() {
-            if (audioPlayer.src) {
-                console.log('오디오 재생 시도:', audioPlayer.src); // 디버깅용
+    playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const audioSrc = button.getAttribute('data-audio');
+            
+            if (audioSrc) {
+                audioPlayer.src = audioSrc;  // 버튼의 data-audio 속성을 audioPlayer src에 설정
                 audioPlayer.load(); // 오디오 다시 로드
                 audioPlayer.play()
                     .then(() => {
-                        console.log('오디오 재생 성공');
+                        console.log('오디오 재생 성공:', audioSrc);
                     })
-                    .catch(function(error) {
+                    .catch(error => {
                         console.error('오디오 재생 오류:', error);
                     });
             } else {
                 console.error('오디오 소스가 없습니다');
             }
         });
-    }
+    });
 
     // 마이크 버튼 이벤트
     if (micButton) {
@@ -75,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const data = await response.json();
                 if (data.status === 'success') {
                     statusText.textContent = '녹음이 성공적으로 저장되었습니다.';
-                    // 오디오 플레이어 소스 업데이트
                     if (audioPlayer) {
                         audioPlayer.src = '/' + data.file_path;
                     }
@@ -92,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
         statusText.textContent = '녹음 중...';
         micButton.classList.add('recording');
         
-        // 음성 레벨 표시
         const audioContext = new AudioContext();
         const analyser = audioContext.createAnalyser();
         const microphone = audioContext.createMediaStreamSource(stream);

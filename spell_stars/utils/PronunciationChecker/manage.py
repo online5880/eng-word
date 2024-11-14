@@ -73,18 +73,3 @@ def process_audio_files(native_file, student_file, expected_word):
         return {"status": "error", "message": str(e)}
     
     return results
-
-if __name__ == "__main__":
-    native_directory = "C:/Users/user/Desktop/eng-word/utils/PronunciationChecker/test_data/native_data"
-    student_directory = "C:/Users/user/Desktop/eng-word/utils/PronunciationChecker/test_data/student_data"
-    expected_word = "project"
-
-    start_time = datetime.now()
-    results = process_audio_files(native_directory, student_directory, expected_word)
-    end_time = datetime.now()
-
-    print(end_time - start_time)
-    
-    with open("pronunciation_results.txt", "w") as f:
-        for result in results:
-            f.write(f"{result}\n")

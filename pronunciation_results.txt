@@ -1,1 +1,0 @@
-{'native_file': 'eraser_native.wav', 'student_file': 'eraser_student.wav', 'formant_score': np.float64(44.97995954414931), 'phoneme_score': 23.52941176470588, 'overall_score': np.float64(32.10963087648325), 'formant_plot': 'formant_comparison_eraser_native.wav_eraser_student.wav.png', 'waveform_plot': 'waveform_comparison_eraser_native.wav_eraser_student.wav.png'}
