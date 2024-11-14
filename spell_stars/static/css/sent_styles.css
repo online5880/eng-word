@@ -1,73 +1,131 @@
-/* 예문 학습에 필요한 스타일 */
-#example-learning-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-}
+/* 예문 학습 모드 스타일링 */
 
-#word-container {
-    margin-bottom: 20px;
-}
-
-#word-container h2 {
-    font-size: 24px;
-    color: #333;
-}
-
-#word-container p {
-    font-size: 18px;
-    color: #666;
-}
-
-#example-container {
-    margin-bottom: 20px;
-}
-
-#example-container h3 {
-    font-size: 22px;
-    color: #444;
-}
-
-#example-container p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-#audio-section {
-    margin-top: 20px;
+/* 페이지 전체 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     text-align: center;
 }
 
-button {
-    padding: 12px 24px;
-    background-color: #4CAF50;
-    color: white;
+/* 제목 스타일 */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* 마이크 버튼 */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mic-status {
+    background-color: #016ccf;
     border: none;
-    border-radius: 5px;
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px;
     cursor: pointer;
-    font-size: 16px;
-    margin: 5px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    position: relative;
 }
 
-button:disabled {
-    background-color: #d3d3d3;
-    cursor: not-allowed;
+.mic-status:hover {
+    background-color: #005bb5;
 }
 
-button:hover {
-    background-color: #45a049;
+.mic-icon {
+    font-size: 2.5rem;
 }
 
-#feedback-section {
+.mic-animation {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: pulse 1s infinite;
+    display: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+}
+
+/* 음성 레벨 표시 */
+.voice-level {
+    width: 100px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
     margin-top: 20px;
-    text-align: center;
 }
 
-#feedback-section p {
-    font-size: 18px;
-    color: #FF6347;  /* 피드백 색상 */
+.voice-level-fill {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+/* 상태 텍스트 */
+.status-text {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* 녹음 진행 상태 (progress bar) */
+.progress-bar {
+    width: 80%;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.progress-bar #progressFill {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+/* 결과 텍스트 */
+#audio-result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+/* 음성 미리듣기 */
+#audio-preview {
+    margin-top: 20px;
+    display: none;
+    width: 100%;
+    max-width: 300px;
 }

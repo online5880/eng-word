@@ -1,28 +1,26 @@
 {% load static %}
 {% csrf_token %}
-
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pronunciation Practice</title>
+    <title>발음 연습 모드</title>
     <link rel="stylesheet" href="{% static 'css/pron_styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
 
   <body>
     <div id="practice-container">
       <h2>발음 연습 모드</h2>
-      <p>Current word:
+      <p>단어:
         <span id="current-word">{{ word }}</span>
       </p>
 
       <div>
         <h3>원어민 발음을 들어볼까요?</h3>
-        <!-- 오디오 요소 -->
+        <!-- 원어민 발음 오디오 소스 동적으로 설정 -->
         <audio id="native-audio-preview" controls="controls">
-          <source src="/media/audio/native/eraser_a.wav" type="audio/wav">
+          <source src="{{ MEDIA_URL }}audio_files/native/{{ word }}.wav" type="audio/wav">
           오디오 파일이 지원되지 않는 브라우저입니다.
         </audio>
       </div>
@@ -30,11 +28,24 @@
       <!-- 카운트다운 표시 -->
       <div id="countdown"></div>
 
-      <!-- Start/Stop Recording buttons -->
-      <button id="startBtn" onclick="startRecording()">녹음 시작</button>
-      <button id="stopBtn" onclick="stopRecording()" disabled="disabled">녹음 중지</button>
+      <!-- 녹음 버튼 (마이크 아이콘) -->
+      <div class="controls">
+        <button class="mic-status" id="micButton">
+          <div class="mic-icon">
+            <i class="fas fa-microphone"></i>
+          </div>
+          <div class="mic-animation"></div>
+        </button>
+        <div class="voice-level">
+          <div class="voice-level-fill"></div>
+        </div>
+        <p class="status-text">마이크를 클릭하여 시작하세요</p>
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+      </div>
 
-      <!-- Score display -->
+      <!-- 점수 표시 -->
       <div>
         <p>점수:
           <span id="score">0</span>
@@ -42,22 +53,21 @@
         <div id="score-bar"></div>
       </div>
 
-      <!-- Feedback section -->
+      <!-- 피드백 섹션 -->
       <div id="feedback-section" style="display: none;">
         <p id="feedback"></p>
       </div>
 
-      <!-- Audio preview section (녹음한 음성 미리보기) -->
+      <!-- 녹음한 음성 미리보기 -->
       <audio id="audio-preview" controls="controls" style="display: none;">
         오디오 파일이 지원되지 않는 브라우저입니다.
       </audio>
 
-      <!-- Navigation buttons -->
-      <button onclick="nextWord()">Next Word</button>
-      <button onclick="exitPractice()">Exit Practice</button>
+      <!-- 네비게이션 버튼 -->
+      <button id="nextWordButton">다음 단어</button>
+      <button onclick="exitPractice()">나가기</button>
     </div>
 
-    <!-- Link to the JS file -->
     <script src="{% static 'js/pron_practice.js' %}"></script>
   </body>
 

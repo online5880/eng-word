@@ -1,153 +1,213 @@
-let recorder;
-let audioStream;
-let audioData = [];
-let currentWord = document.getElementById("current-word").textContent;
-let audioPreview = document.getElementById("audio-preview");
-let nativeAudioPreview = document.getElementById("native-audio-preview");
-let countdownText = document.getElementById('countdown'); // 카운트다운을 표시할 요소
+document.addEventListener('DOMContentLoaded', function () {
+    const playButton = document.getElementById('playAudioButton');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const micButton = document.getElementById('micButton');
+    const statusText = document.querySelector('.status-text');
+    const voiceLevelFill = document.querySelector('.voice-level-fill');
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    const targetWord = document.getElementById('current-word').textContent;  // HTML에서 텍스트로 가져옴
 
-const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    let mediaRecorder;
+    let audioChunks = [];
+    let isRecording = false;
+
+    // 페이지 로드 후 오디오 준비 (자동 재생 X)
+    window.onload = function () {
+        if (audioPlayer) {
+            console.log('오디오 로드:', audioPlayer.src);
+            audioPlayer.load();
+        }
+    };
+
+    // 오디오 재생 버튼 이벤트
+    if (playButton && audioPlayer) {
+        playButton.addEventListener('click', function () {
+            if (audioPlayer.src) {
+                console.log('오디오 재생 시도:', audioPlayer.src);
+                audioPlayer.load();
+                audioPlayer.play()
+                    .then(() => {
+                        console.log('오디오 재생 성공');
+                    })
+                    .catch(function (error) {
+                        console.error('오디오 재생 오류:', error);
+                    });
+            } else {
+                console.error('오디오 소스가 없습니다');
+            }
+        });
+    }
+
+    
+    // 마이크 버튼 이벤트
+    if (micButton) {
+        micButton.addEventListener('click', async function () {
+            if (!isRecording) {
+                try {
+                    console.log('마이크 접근 시도...');
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    console.log('마이크 접근 성공');
+                    startRecording(stream);
+                } catch (err) {
+                    console.error('마이크 접근 오류:', err);
+                    statusText.textContent = '마이크 접근이 거부되었습니다.';
+                }
+            } else {
+                console.log('녹음 중... 녹음 종료');
+                stopRecording();
+            }
+        });
+    }
 
 
-// 페이지 로드 후 음성을 준비만 하고 자동으로 재생되지 않도록 설정
-window.onload = function () {
-    let nativeAudioPreview = document.getElementById("native-audio-preview");
-    nativeAudioPreview.load();  // 음성을 로드만 시킴 (자동 재생 X)
-};
+    // 녹음 시작
+    function startRecording(stream) {
+        console.log('녹음 시작');
+        mediaRecorder = new MediaRecorder(stream);
+        audioChunks = [];
+        isRecording = true;
 
-// 오디오 재생을 위한 함수 (Play 버튼을 눌렀을 때)
-function playNativeAudio() {
-    let nativeAudioPreview = document.getElementById("native-audio-preview");
-    nativeAudioPreview.play();  // 버튼 클릭 시 음성 재생
-}
+        mediaRecorder.addEventListener('dataavailable', event => {
+            console.log('오디오 데이터 수집:', event.data);
+            audioChunks.push(event.data);
+        });
 
+        mediaRecorder.addEventListener('stop', async () => {
+            console.log('녹음 종료');
+            const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
 
-// 카운트다운 시작
-function startCountdown() {
-    countdownText.style.display = 'block'; // 카운트다운 영역을 보이게 설정
-    let countdownNumbers = [3, 2, 1];
-    let index = 0;
+            const formData = new FormData();
+            formData.append('audio', audioBlob, `${targetWord}.wav`);
+            formData.append('word', targetWord);
 
-    function updateCountdown() {
-        if (index < countdownNumbers.length) {
-            countdownText.innerText = countdownNumbers[index];
-            index++;
-            setTimeout(updateCountdown, 1000); // 1초마다 숫자 변경
+            const uploadAudioUrl = '/pron_practice/upload_audio/';
+            try {
+                console.log('오디오 업로드 시도');
+                const response = await fetch(uploadAudioUrl, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRFToken': csrfToken
+                    }
+                });
+
+                const data = await response.json();
+                console.log('서버 응답:', data);
+                if (data.status === 'success') {
+                    statusText.textContent = '녹음이 성공적으로 저장되었습니다.';
+                    if (audioPlayer) {
+                        audioPlayer.src = '/' + data.file_path;
+                    }
+                } else {
+                    statusText.textContent = '녹음 저장에 실패했습니다.';
+                }
+            } catch (error) {
+                console.error('녹음 저장 오류:', error);
+                statusText.textContent = '녹음 저장 중 오류가 발생했습니다.';
+            }
+        });
+
+        mediaRecorder.start();
+        statusText.textContent = '녹음 중...';
+        micButton.classList.add('recording');
+
+        // 음성 레벨 표시
+        const audioContext = new AudioContext();
+        const analyser = audioContext.createAnalyser();
+        const microphone = audioContext.createMediaStreamSource(stream);
+        microphone.connect(analyser);
+        analyser.fftSize = 256;
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+
+        function updateVoiceLevel() {
+            if (isRecording) {
+                analyser.getByteFrequencyData(dataArray);
+                const average = dataArray.reduce((a, b) => a + b) / bufferLength;
+                const level = (average / 255) * 100;
+                voiceLevelFill.style.height = `${level}%`;
+                requestAnimationFrame(updateVoiceLevel);
+            }
+        }
+        updateVoiceLevel();
+    }
+
+    // 녹음 종료
+    function stopRecording() {
+        console.log('녹음 종료 함수 실행');
+        if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+            mediaRecorder.stop();
+            mediaRecorder.stream.getTracks().forEach(track => track.stop());
+            isRecording = false;
+            statusText.textContent = '녹음이 완료되었습니다.';
+            micButton.classList.remove('recording');
+            voiceLevelFill.style.height = '0%';
+        }
+    }
+
+    // 피드백 표시
+    function displayFeedback(score, feedback) {
+        console.log(`점수: ${score}, 피드백: ${feedback}`);
+        document.getElementById("score").textContent = score;
+        document.getElementById("score-bar").style.width = score + "%";
+
+        const feedbackSection = document.getElementById("feedback-section");
+        const feedbackDisplay = document.getElementById("feedback");
+        feedbackDisplay.textContent = feedback;
+        feedbackSection.style.display = 'block';
+
+        const progressBar = document.getElementById('score-bar');
+        if (score >= 80) {
+            progressBar.className = 'green';
+        } else if (score >= 60) {
+            progressBar.className = 'yellow';
         } else {
-            countdownText.style.display = 'none'; // 카운트다운 숨기기
-            startRecording(); // 카운트다운이 끝나면 녹음 시작
+            progressBar.className = 'red';
         }
     }
 
-    updateCountdown(); // 카운트다운 시작
-}
-
-// 녹음 시작
-function startRecording() {
-    if (navigator.mediaDevices) {
-        audioData = [];
-
-        navigator.mediaDevices.getUserMedia({ audio: true })
-            .then(stream => {
-                audioStream = stream;
-                recorder = new MediaRecorder(stream);
-
-                recorder.ondataavailable = event => {
-                    if (event.data.size > 0) {
-                        audioData.push(event.data);
-                    }
-                };
-
-                recorder.onstop = () => {
-                    if (audioData.length > 0) {
-                        processRecording();
-                    } else {
-                        alert("녹음 데이터가 없습니다. 다시 시도해주세요.");
-                    }
-                };
-
-                // 녹음 시작 지연 추가
-                setTimeout(() => {
-                    recorder.start(); // 녹음 시작
-                    document.getElementById("startBtn").disabled = true;
-                    document.getElementById("stopBtn").disabled = false;
-                }, 300); // 300ms 지연 추가
-            })
-            .catch(err => {
-                console.log("Audio error: " + err);
-                alert("녹음 시작에 실패했습니다. 마이크 권한을 확인해주세요.");
-            });
-    }
-}
-
-// 녹음 종료
-function stopRecording() {
-    if (recorder && recorder.state === 'recording') {
-        recorder.stop();
-        audioStream.getTracks().forEach(track => track.stop()); // 마이크 종료
-
-        document.getElementById("startBtn").disabled = false;
-        document.getElementById("stopBtn").disabled = true;
-    }
-}
-
-// 녹음 처리
-function processRecording() {
-    const audioBlob = new Blob(audioData, { type: 'audio/wav' });
-    const formData = new FormData();
-    formData.append('audio_file', audioBlob);
-    formData.append('target_word', currentWord);
-
-    fetch('/pron_practice/evaluate_pronunciation/', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-CSRFToken': csrfToken
-        }
-    })
+    // 다음 단어로 이동
+    function nextWord() {
+        console.log('다음 단어 요청');
+        fetch('/pron_practice/next_word/', {
+            method: 'GET',
+            headers: {
+                'X-CSRFToken': csrfToken
+            }
+        })
         .then(response => response.json())
         .then(data => {
-            const score = data.score;
-            const feedback = data.feedback;
-            displayFeedback(score, feedback);
-
-            const audioUrl = URL.createObjectURL(audioBlob);
-            audioPreview.src = audioUrl;
-            audioPreview.style.display = 'block';
+            console.log('다음 단어 응답:', data);
+            if (data.success) {
+                document.getElementById('current-word').textContent = data.nextWord;
+                const audioPreview = document.getElementById('native-audio-preview');
+                const source = audioPreview.querySelector('source');
+                source.src = `${data.audioUrl}`;
+                audioPreview.load();
+            } else {
+                console.log('새 단어를 가져오지 못했습니다.');
+            }
         })
         .catch(error => {
-            console.error("Error processing recording: ", error);
-            alert("서버 처리 중 오류가 발생했습니다.");
+            console.error('AJAX 요청 오류:', error);
         });
-}
-
-// 피드백 표시
-function displayFeedback(score, feedback) {
-    document.getElementById("score").textContent = score;
-    document.getElementById("score-bar").style.width = score + "%";
-
-    const feedbackSection = document.getElementById("feedback-section");
-    const feedbackDisplay = document.getElementById("feedback");
-    feedbackDisplay.textContent = feedback;
-    feedbackSection.style.display = 'block';
-
-    const progressBar = document.getElementById('score-bar');
-    if (score >= 80) {
-        progressBar.className = 'green';
-    } else if (score >= 60) {
-        progressBar.className = 'yellow';
-    } else {
-        progressBar.className = 'red';
     }
-}
 
-// 다음 단어로 이동
-function nextWord() {
-    window.location.href = '/pron_practice/next_word/';
-}
+    // 연습 종료
+    function exitPractice() {
+        console.log('연습 종료');
+        window.location.href = '/';
+    }
 
-// 연습 종료
-function exitPractice() {
-    window.location.href = '/';
-}
+    // 이벤트 리스너 추가
+    const nextWordButton = document.getElementById("nextWordButton");
+    const exitPracticeButton = document.getElementById("exitPracticeButton");
 
+    if (nextWordButton) {
+        nextWordButton.addEventListener('click', nextWord);
+    }
+
+    if (exitPracticeButton) {
+        exitPracticeButton.addEventListener('click', exitPractice);
+    }
+});

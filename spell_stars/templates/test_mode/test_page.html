@@ -2,35 +2,59 @@
 {% csrf_token %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>시험 모드</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시험 모드</title>
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <link rel="stylesheet" href="{% static 'css/test_styles.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
 
-    <!-- CSRF 토큰을 meta 태그에 포함 -->
-    <meta name="csrf-token" content="{{ csrf_token }}">
-
-    <!-- CSS 파일 경로 설정 -->
-    <link rel="stylesheet" href="{% static 'css/test_styles.css' %}">
-  </head>
-
-  <body>
-    <h1>시험 모드</h1>
+<body>
+  <div id="practice-container">
+    <h2>시험 모드</h2>
     <p>다음 문장의 빈칸에 들어갈 단어를 맞혀보세요:</p>
 
+    <!-- 문제 문장 -->
     <p>{{ sentence }}</p>
 
     <!-- 녹음 버튼 및 음성 미리보기 -->
-    <button id="startBtn" onclick="startRecording()">녹음 시작</button>
-    <button id="stopBtn" onclick="stopRecording()" disabled="disabled">녹음 중지</button>
+    <div class="controls">
+      <button class="mic-status" id="micButton" onclick="startRecording()">
+        <div class="mic-icon">
+          <i class="fas fa-microphone"></i>
+        </div>
+        <div class="mic-animation"></div>
+      </button>
+      <div class="voice-level">
+        <div class="voice-level-fill"></div>
+      </div>
+      <p class="status-text">마이크를 클릭하여 시작하세요</p>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+    </div>
 
     <p>녹음된 음성:</p>
     <audio id="audio-preview" controls="controls" style="display: none;"></audio>
 
     <!-- 음성 인식 결과 표시 -->
     <div id="audio-result"></div>
+
+    <!-- 점수 및 피드백 -->
+    <div>
+      <p>점수: <span id="score">0</span></p>
+      <div class="progress-bar">
+        <div id="score-bar"></div>
+      </div>
+      <p id="feedback"></p>
+    </div>
+
+    <!-- 다음 문제 버튼 -->
+    <button id="next-question-btn" disabled onclick="nextQuestion()">다음 문제</button>
 
     <!-- JS 파일 경로 설정 -->
     <script src="{% static 'js/test_mode.js' %}"></script>
@@ -52,8 +76,10 @@
       window.csrfToken = document
         .querySelector('meta[name="csrf-token"]')
         .content;
+      console.log("CSRF Token:", window.csrfToken); // CSRF 토큰 확인
     </script>
+  </div>
 
-  </body>
+</body>
 
 </html>
