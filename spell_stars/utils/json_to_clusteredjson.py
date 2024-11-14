@@ -2,126 +2,137 @@ import json
 import os
 import numpy as np
 from sklearn.cluster import DBSCAN
+from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
+from collections import Counter
 
 # 랜덤 시드 고정
 np.random.seed(42)
 
-
-# Step 1: 단어장 JSON 파일 불러오기
+# Step 1: Load JSON files containing vocabulary
 def load_words_from_json(directory_path):
     word_dict = {}
     for filename in os.listdir(directory_path):
         if filename.endswith(".json"):
-            with open(
-                os.path.join(directory_path, filename), "r", encoding="utf-8"
-            ) as file:
+            with open(os.path.join(directory_path, filename), "r", encoding="utf-8") as file:
                 data = json.load(file)
                 for item in data:
-                    word = item["단어"]
-                    meaning = item["단어 뜻"]
-
-                    # 단어가 이미 word_dict에 있는 경우
+                    word = item["단어"].replace("\n", "")
+                    meaning = item["단어 뜻"].replace("\n", "")
+                    
+                    # If word is already in word_dict
                     if word in word_dict:
                         existing_item = word_dict[word]
-
-                        # 단어 뜻 중복 검사 후 추가
-                        if meaning not in existing_item["단어 뜻"]:
-                            existing_item["단어 뜻"].append(meaning)
-
-                        # 예문과 예문 뜻을 "영문"과 "한글" 필드로 묶어 리스트에 추가
+                        
+                        # Add meaning if not already present
+                        if meaning not in existing_item["meanings"]:
+                            existing_item["meanings"].append(meaning)
+                        
+                        # Add example sentences in both English and Korean
                         example = {
-                            "영문": item.get("예문", ""),
-                            "한글": item.get("예문 뜻", ""),
+                            "english": item.get("예문", "").replace("\n", ""),
+                            "korean": item.get("예문 뜻", "").replace("\n", "")
                         }
-                        if example not in existing_item["예문"]:
-                            existing_item["예문"].append(example)
+                        if example not in existing_item["examples"]:
+                            existing_item["examples"].append(example)
                     else:
-                        # 새로운 단어의 경우 리스트로 초기화하여 저장
+                        # Initialize new word entry
                         word_dict[word] = {
-                            "단어": word,
-                            "단어 뜻": [meaning],
-                            "품사": item.get("품사", ""),
-                            "예문": [
-                                {
-                                    "영문": item.get("예문", ""),
-                                    "한글": item.get("예문 뜻", ""),
-                                }
-                            ],
+                            "meanings": [meaning],
+                            "part_of_speech": item.get("품사", ""),
+                            "examples": [{
+                                "english": item.get("예문", "").replace("\n", ""),
+                                "korean": item.get("예문 뜻", "").replace("\n", "")
+                            }]
                         }
-    return list(word_dict.values())
+    return word_dict
 
-
-# Step 2: 단어를 벡터화
+# Step 2: Vectorize words
 def vectorize_words(word_list):
-    model = SentenceTransformer("all-mpnet-base-v2", device="cpu")  # 모델 초기화
-    words = [word["단어"] for word in word_list]
-    vectors = model.encode(words)
+    model = SentenceTransformer('all-mpnet-base-v2', device='cpu')  # Initialize model
+    vectors = model.encode(word_list)
     return vectors
 
-
-# Step 3: DBSCAN으로 군집화
+# Step 3: Cluster words using DBSCAN
 def cluster_words(word_list, vectors, eps=0.35, min_samples=2):
-    dbscan = DBSCAN(eps=eps, min_samples=min_samples, metric="cosine")
+    dbscan = DBSCAN(eps=eps, min_samples=min_samples, metric='cosine')
     clusters = dbscan.fit_predict(vectors)
-
-    # 클러스터링 결과 저장
+    
+    # Store clustering results
     clustered_words = {}
     noise = []
     for idx, cluster_id in enumerate(clusters):
-        if cluster_id != -1:  # 클러스터에 속한 경우
+        if cluster_id != -1:  # If part of a cluster
             if cluster_id not in clustered_words:
                 clustered_words[cluster_id] = []
             clustered_words[cluster_id].append((word_list[idx], vectors[idx]))
-        else:  # 노이즈로 분류된 경우
+        else:  # If classified as noise
             noise.append((word_list[idx], vectors[idx]))
-
+    
     return clustered_words, noise
 
-
-# Step 4: 노이즈 단어를 가장 가까운 클러스터에 추가
+# Step 4: Assign noise words to nearest clusters individually
 def assign_noise_to_nearest_cluster(clustered_words, noise):
-    cluster_centers = {
-        cluster_id: np.mean([vec for _, vec in words], axis=0)
-        for cluster_id, words in clustered_words.items()
-    }
+    if not noise:
+        return clustered_words
 
-    for word_data, vec in noise:
-        closest_cluster = min(
-            cluster_centers.keys(),
-            key=lambda c: np.linalg.norm(cluster_centers[c] - vec),
-        )
-        clustered_words[closest_cluster].append((word_data, vec))
+    # Compare each noise word with clusters to find the most similar cluster
+    for noise_word, noise_vector in noise:
+        max_similarity = -1
+        best_cluster_id = None
 
+        # Calculate similarity with each cluster
+        for cluster_id, words_with_vectors in clustered_words.items():
+            cluster_vectors = np.array([vec for _, vec in words_with_vectors])
+            similarities = cosine_similarity([noise_vector], cluster_vectors)
+            avg_similarity = np.mean(similarities)
+
+            # Find cluster with highest similarity
+            if avg_similarity > max_similarity:
+                max_similarity = avg_similarity
+                best_cluster_id = cluster_id
+
+        # Add noise word to the most similar cluster
+        if best_cluster_id is not None:
+            clustered_words[best_cluster_id].append((noise_word, noise_vector))
+    
     return clustered_words
 
-
-# Step 5: 주제별로 세분화
-def refine_clusters_auto(clustered_words):
+# Step 5: Assign categories and save refined clusters
+def refine_clusters_auto(clustered_words, word_dict):
     refined_clusters = {}
+    category_counts = Counter()  # Word count by category
+    category_id = 0
+
+    # Assign categories without further re-clustering
     for cluster_id, words_with_vectors in clustered_words.items():
-        words = [
-            word_data for word_data, _ in words_with_vectors
-        ]  # 벡터를 제거하고 단어 데이터만 가져옴
-        topic_name = f"category_{cluster_id}"  # 자동으로 생성된 주제명
-        refined_clusters[topic_name] = words
+        for word, _ in words_with_vectors:
+            word_dict[word]["category"] = int(category_id)
+            refined_clusters[word] = word_dict[word]
+        category_counts[category_id] = len(words_with_vectors)
+        category_id += 1
+
+    # Print word count by category
+    print("\nWord count by category:")
+    for category, count in category_counts.items():
+        print(f"Category {category}: {count} words")
+
     return refined_clusters
 
-
-# Step 6: JSON 파일로 저장
+# Step 6: Save refined clusters to JSON
 def save_refined_clusters_to_single_json(refined_clusters, output_path):
     with open(output_path, "w", encoding="utf-8") as file:
         json.dump(refined_clusters, file, ensure_ascii=False, indent=4)
 
-
-# 실행
-directory_path = "./data"  # JSON 파일들이 있는 폴더 경로 설정
-output_path = "./clustered_wordbook.json"  # 군집화 결과를 저장할 파일 경로 설정
-word_list = load_words_from_json(directory_path)
-vectors = vectorize_words(word_list)  # 단어 자체를 벡터화
+# Execution
+directory_path = "./data"  # Path to folder with JSON files
+output_path = "./clustered_wordbook.json"  # Path to save clustered output
+word_dict = load_words_from_json(directory_path)
+word_list = list(word_dict.keys())
+vectors = vectorize_words(word_list)  # Vectorize words
 clustered_words, noise = cluster_words(word_list, vectors, eps=0.35, min_samples=2)
 clustered_words_with_noise = assign_noise_to_nearest_cluster(clustered_words, noise)
-refined_clusters = refine_clusters_auto(clustered_words_with_noise)
-
-
+refined_clusters = refine_clusters_auto(clustered_words_with_noise, word_dict)
 save_refined_clusters_to_single_json(refined_clusters, output_path)
+
+print(f"\nClustered vocabulary saved to {output_path}")
