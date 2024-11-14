@@ -19,36 +19,35 @@
       <button class="back-button" onclick="location.href='{% url 'index' %}'">돌아가기</button>
       <h1>단어장</h1>
 
-      <!-- 첫 번째 단어 카드 -->
-      {% if words.0 %}
-        <div class="word-card" id="currentWord">
-          <div class="word-content">
-            <h3>{{ words.0.word }}</h3>
-            <p>{{ words.0.meanings }}</p>
-          </div>
-          <div class="example-section">
-            <p>
-              <strong>예문:</strong>
-              {{ words.0.examples.0 }}</p>
-            <p>
-              <strong>예문 뜻:</strong>
-              {{ words.0.example_translations.0 }}</p>
-          </div>
-
-          <!-- 오디오 재생 버튼 -->
-          <div class="audio-controls">
-            {% if words.0.audio_file %}
-                <!-- 경로 확인용 출력 -->
-                <p>오디오 파일 경로: {{ MEDIA_URL }}{{ words.0.audio_file }}</p>
-                
-                <button id="playAudioButton" data-word="{{ words.0.word }}">🔊 원어민 발음 듣기</button>
-                <audio id="audioPlayer" src="{{ MEDIA_URL }}{{ words.0.audio_file }}" preload="auto"></audio>
-            {% else %}
+      <div class="word-cards">
+        {% for word in words %}
+        {% if word %}
+          <div class="word-card">
+            <div class="word-content">
+              <h3>{{ word.word }}</h3>
+              <p>{{ word.meanings }}</p>
+            </div>
+            <div class="example-section">
+              <p><strong>예문:</strong> {{ word.examples.0.영문 }}</p>
+              <p><strong>예문 뜻:</strong> {{ word.examples.0.한글 }}</p>
+            </div>
+      
+            <!-- 오디오 재생 버튼 -->
+            <div class="audio-controls">
+              {% if word.audio_file %}
+                <button class="playAudioButton styled-button" data-audio="{{ MEDIA_URL }}{{ word.audio_file }}">🔊 원어민 발음 듣기</button>
+              {% else %}
                 <p>원어민 음성 파일이 존재하지 않습니다.</p>
-            {% endif %}
+              {% endif %}
+            </div>
           </div>
-        </div>
-      {% endif %}
+        {% endif %}
+        {% endfor %}
+      </div>
+      
+      <!-- 공통 오디오 플레이어 (화면에는 표시되지 않음) -->
+      <audio id="audioPlayer" preload="auto"></audio>
+      
 
       <div class="controls">
         <button class="mic-status" id="micButton">

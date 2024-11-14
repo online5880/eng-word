@@ -17,8 +17,6 @@ def display_vocabulary_book(request):
         'words': words,
         'MEDIA_URL': settings.MEDIA_URL
     }
-    print("MEDIA_URL:", settings.MEDIA_URL)  # 디버깅용
-    print("words[0].audio_file:", words[0].audio_file if words else None)  # 디버깅용
     return render(request, 'vocab_mode/vocab.html', context)
 
 
