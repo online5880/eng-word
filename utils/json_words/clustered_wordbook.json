@@ -39,7 +39,6 @@
     },
     "lovely": {
         "meanings": [
-            "사랑스\n러운",
             "사랑스러운"
         ],
         "part_of_speech": "형용사",
@@ -299,7 +298,7 @@
     },
     "certain": {
         "meanings": [
-            "확신하는, 확\n실한"
+            "확신하는, 확실한"
         ],
         "part_of_speech": "형용사",
         "examples": [
@@ -418,7 +417,7 @@
     "wise": {
         "meanings": [
             "현명한",
-            "지혜로운,\n현명한"
+            "지혜로운,현명한"
         ],
         "part_of_speech": "형용사",
         "examples": [
@@ -1078,7 +1077,7 @@
     "sister": {
         "meanings": [
             "여자 형제",
-            "언니, 누나, 여동\n생"
+            "언니, 누나, 여동생"
         ],
         "part_of_speech": "명사",
         "examples": [
@@ -1264,7 +1263,7 @@
     },
     "elder": {
         "meanings": [
-            "(가족 중) 나이\n가 더 많은"
+            "(가족 중) 나이가 더 많은"
         ],
         "part_of_speech": "형용사",
         "examples": [
@@ -2600,7 +2599,6 @@
     },
     "stove": {
         "meanings": [
-            "가스레인\n지",
             "가스레인지"
         ],
         "part_of_speech": "명사",
@@ -3070,7 +3068,7 @@
     },
     "because": {
         "meanings": [
-            "~하기 때문\n에"
+            "~하기 때문에"
         ],
         "part_of_speech": "접속사",
         "examples": [
@@ -3726,7 +3724,7 @@
     },
     "call": {
         "meanings": [
-            "부르다, 전\n화하다",
+            "부르다, 전화하다",
             "전화하다"
         ],
         "part_of_speech": "동사",
@@ -3744,7 +3742,7 @@
     },
     "contact": {
         "meanings": [
-            "연락하다,\n접촉하다"
+            "연락하다,접촉하다"
         ],
         "part_of_speech": "동사",
         "examples": [
@@ -4236,7 +4234,7 @@
     "draw": {
         "meanings": [
             "그리다",
-            "그리다, 이동하\n다"
+            "그리다, 이동하다"
         ],
         "part_of_speech": "",
         "examples": [
@@ -4502,7 +4500,6 @@
     },
     "spell": {
         "meanings": [
-            "철자를 쓰\n다",
             "철자를 쓰다"
         ],
         "part_of_speech": "동사",
@@ -5802,7 +5799,7 @@
     },
     "slippery": {
         "meanings": [
-            "미끄러\n운"
+            "미끄러운"
         ],
         "part_of_speech": "형용사",
         "examples": [
@@ -7062,7 +7059,7 @@
     },
     "inside": {
         "meanings": [
-            "안에, 안으\n로",
+            "안에, 안으로",
             "~안에",
             "~ 안에"
         ],
@@ -7393,7 +7390,7 @@
     "welcome": {
         "meanings": [
             "환영하다",
-            "환영합니다, 환영\n해"
+            "환영합니다, 환영해"
         ],
         "part_of_speech": "동사",
         "examples": [
@@ -7458,7 +7455,7 @@
     "thank": {
         "meanings": [
             "감사하다",
-            "(~ 고마워\n하다"
+            "(~ 고마워하다"
         ],
         "part_of_speech": "",
         "examples": [
@@ -7571,7 +7568,7 @@
     },
     "disarm": {
         "meanings": [
-            "무장을 해제하\n다"
+            "무장을 해제하다"
         ],
         "part_of_speech": "동사",
         "examples": [
@@ -8481,7 +8478,7 @@
     },
     "lift": {
         "meanings": [
-            "들어 올리\n다"
+            "들어 올리다"
         ],
         "part_of_speech": "동사",
         "examples": [
@@ -11852,7 +11849,7 @@
     },
     "course": {
         "meanings": [
-            "개별 요\n리"
+            "개별 요리"
         ],
         "part_of_speech": "명사",
         "examples": [
@@ -12467,7 +12464,6 @@
     },
     "pianist": {
         "meanings": [
-            "피아니스\n트",
             "피아니스트"
         ],
         "part_of_speech": "명사",
@@ -13255,7 +13251,7 @@
     },
     "dozen": {
         "meanings": [
-            "12개짜리 한 묶\n음"
+            "12개짜리 한 묶음"
         ],
         "part_of_speech": "명사",
         "examples": [
@@ -13788,7 +13784,7 @@
     },
     "must": {
         "meanings": [
-            "~해야 하\n다"
+            "~해야 하다"
         ],
         "part_of_speech": "동사",
         "examples": [
@@ -14725,7 +14721,7 @@
     },
     "shoot": {
         "meanings": [
-            "쏘다, 발사\n하다"
+            "쏘다, 발사하다"
         ],
         "part_of_speech": "동사",
         "examples": [
@@ -14765,7 +14761,7 @@
     "pass": {
         "meanings": [
             "전달하다",
-            "지나가다, 합격\n하다"
+            "지나가다, 합격하다"
         ],
         "part_of_speech": "동사",
         "examples": [
@@ -15038,7 +15034,7 @@
     },
     "hello": {
         "meanings": [
-            "여보세\n요",
+            "여보세요",
             "안녕하세요"
         ],
         "part_of_speech": "감탄사",
@@ -15599,7 +15595,7 @@
     },
     "sore": {
         "meanings": [
-            "(염증이나 근육\n통의 등의) 아픈"
+            "(염증이나 근육통의 등의) 아픈"
         ],
         "part_of_speech": "형용사",
         "examples": [
@@ -16109,7 +16105,7 @@
     },
     "fit": {
         "meanings": [
-            "(모양, 크기가)\n맞다"
+            "(모양, 크기가)맞다"
         ],
         "part_of_speech": "동사",
         "examples": [
@@ -16203,8 +16199,7 @@
     },
     "drop": {
         "meanings": [
-            "떨어뜨리다",
-            "떨어뜨리\n다"
+            "떨어뜨리다"
         ],
         "part_of_speech": "",
         "examples": [
@@ -17136,7 +17131,7 @@
     },
     "gentle": {
         "meanings": [
-            "부드러\n운"
+            "부드러운"
         ],
         "part_of_speech": "형용사",
         "examples": [
@@ -18145,7 +18140,7 @@
     },
     "afraid": {
         "meanings": [
-            "두려워하는, 겁내\n는",
+            "두려워하는, 겁내는",
             "무서워하는"
         ],
         "part_of_speech": "",
@@ -19143,7 +19138,7 @@
     },
     "responsible": {
         "meanings": [
-            "~에 대해 책\n임이 있는"
+            "~에 대해 책임이 있는"
         ],
         "part_of_speech": "형용사",
         "examples": [
@@ -19656,7 +19651,7 @@
     },
     "alarm": {
         "meanings": [
-            "깜짝 놀라\n게 하다"
+            "깜짝 놀라게 하다"
         ],
         "part_of_speech": "동사",
         "examples": [
@@ -19864,7 +19859,6 @@
     },
     "astronaut": {
         "meanings": [
-            "우주 비행\n사",
             "우주 비행사"
         ],
         "part_of_speech": "명사",
@@ -20704,7 +20698,7 @@
     },
     "downstairs": {
         "meanings": [
-            "아래층으\n로"
+            "아래층으로"
         ],
         "part_of_speech": "부사",
         "examples": [
@@ -21333,7 +21327,6 @@
     },
     "feed": {
         "meanings": [
-            "먹이를 주\n다",
             "먹이를 주다",
             "먹이다"
         ],
@@ -21659,7 +21652,7 @@
     },
     "ride": {
         "meanings": [
-            "(차, 자전거\n등을)타다",
+            "(차, 자전거등을)타다",
             "~을 타다",
             "타다"
         ],
@@ -22315,7 +22308,7 @@
     },
     "worth": {
         "meanings": [
-            "~의 가치가\n있는"
+            "~의 가치가있는"
         ],
         "part_of_speech": "형용사",
         "examples": [
@@ -22574,7 +22567,7 @@
     "park": {
         "meanings": [
             "주차하다",
-            "주차하다, 명사)\n공원",
+            "주차하다, 명사)공원",
             "공원"
         ],
         "part_of_speech": "동사",
@@ -23217,7 +23210,7 @@
     },
     "play": {
         "meanings": [
-            "(게임, 놀이등\n 하다"
+            "(게임, 놀이등 하다"
         ],
         "part_of_speech": "을",
         "examples": [
@@ -23679,7 +23672,7 @@
     },
     "try": {
         "meanings": [
-            "노력하다, 시\n도하다",
+            "노력하다, 시도하다",
             "~해 보다",
             "시도하다"
         ],
@@ -23807,7 +23800,7 @@
     },
     "look like": {
         "meanings": [
-            "닮다, ~처럼 보\n이다"
+            "닮다, ~처럼 보이다"
         ],
         "part_of_speech": "",
         "examples": [
@@ -24050,7 +24043,7 @@
     },
     "cover": {
         "meanings": [
-            "덮다, 가리\n다"
+            "덮다, 가리다"
         ],
         "part_of_speech": "동사",
         "examples": [
@@ -24501,7 +24494,6 @@
     },
     "anything": {
         "meanings": [
-            "무엇이\n든",
             "무엇이든"
         ],
         "part_of_speech": "대명사",
@@ -24653,7 +24645,7 @@
     },
     "beat": {
         "meanings": [
-            "울림, 울리는 소\n리"
+            "울림, 울리는 소리"
         ],
         "part_of_speech": "명사",
         "examples": [
@@ -24718,7 +24710,7 @@
     },
     "skate": {
         "meanings": [
-            "스케이트를 타\n다"
+            "스케이트를 타다"
         ],
         "part_of_speech": "",
         "examples": [
@@ -25143,7 +25135,7 @@
     },
     "among": {
         "meanings": [
-            "~(셋 이상) 사\n이에"
+            "~(셋 이상) 사이에"
         ],
         "part_of_speech": "전치사",
         "examples": [
@@ -27325,7 +27317,7 @@
     },
     "bring": {
         "meanings": [
-            "가지고 오\n다",
+            "가지고 오다",
             "가져오다"
         ],
         "part_of_speech": "동사",
@@ -27369,7 +27361,7 @@
     "present": {
         "meanings": [
             "출석한",
-            "현재, 형용사)\n참석한",
+            "현재, 형용사)참석한",
             "선물"
         ],
         "part_of_speech": "형용사",
@@ -27830,7 +27822,7 @@
     },
     "lie": {
         "meanings": [
-            "눕다, 거짓\n말하다",
+            "눕다, 거짓말하다",
             "거짓말"
         ],
         "part_of_speech": "동사",
