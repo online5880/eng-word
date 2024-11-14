@@ -6,11 +6,11 @@ from accounts.models import User  # accounts에서 사용자 모델 임포트
 # 예문 테이블
 class Sentence(models.Model):
     word = models.ForeignKey(Word, on_delete=models.CASCADE)  # 단어와 연결
-    examples = models.JSONField()  # 예문 - 문자열 또는 리스트 저장 가능
-    example_translations = models.JSONField()  # 예문 뜻 - 문자열 또는 리스트 저장 가능
+    sentence = models.TextField()  # 예문
+    meaning = models.TextField()  # 예문 뜻
 
     def __str__(self):
-        return f"{self.word} - {self.examples}"
+        return f"{self.word} - {self.sentence}"
 
 
 # 학습 결과 테이블

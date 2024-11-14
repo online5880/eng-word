@@ -1,4 +1,5 @@
 {% load static %}
+{% csrf_token %}
 <html lang="ko">
 
   <head>
@@ -19,7 +20,7 @@
         <h3>원어민 발음을 들어볼까요?</h3>
         <!-- 원어민 발음 오디오 소스 동적으로 설정 -->
         <audio id="native-audio-preview" controls="controls">
-          <source src="{{ MEDIA_URL }}audio/native/{{ word }}.wav" type="audio/wav">
+          <source src="{{ MEDIA_URL }}audio_files/native/{{ word }}.wav" type="audio/wav">
           오디오 파일이 지원되지 않는 브라우저입니다.
         </audio>
       </div>

@@ -22,13 +22,14 @@ model = whisper.load_model("small")
 
 # 발음 연습 페이지를 렌더링하는 뷰
 def pronunciation_practice_view(request):
-    random_word = Word.objects.order_by("?").first()
+    random_word = Word.objects.values('word', 'meanings').order_by("?").first()
     if random_word:
         return render(
-            request, "pron_practice/pron_practice.html", {"word": random_word.word_text}
+            request, "pron_practice/pron_practice.html", {"word": random_word['word']}
         )
     else:
         return JsonResponse({"error": "No words available in the database."}, status=404)
+
 
 
 @csrf_exempt

@@ -33,26 +33,6 @@ h2 {
     color: #333;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-    background-color: #016ccf;
-}
-
-button:disabled {
-    background-color: #B0C4DE;
-    cursor: not-allowed;
-}
-
-button:hover {
-    background-color: #005bb5;
-}
-
 #score-bar {
     width: 100%;
     height: 20px;
@@ -116,7 +96,38 @@ button:hover {
     font-weight: bold;
 }
 
-/* 마이크 버튼과 녹음 상태 관련 스타일 */
+#recordButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#recordButton.recording {
+    background-color: #f44336;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
 .mic-status {
     position: relative;
     width: 60px;
@@ -153,21 +164,6 @@ button:hover {
     color: #666;
 }
 
-/* 녹음 중 스타일 */
-.mic-status.recording .mic-icon {
-    background-color: #f44336; /* 빨간색 배경 */
-}
-
-.mic-status.recording .mic-icon i {
-    color: white; /* 아이콘 색을 흰색으로 변경 */
-}
-
-.mic-status.recording .mic-animation {
-    display: block;
-    background-color: rgba(244, 67, 54, 0.4); /* 빨간색 배경의 애니메이션 */
-}
-
-/* 애니메이션 정의 */
 .mic-animation {
     position: absolute;
     top: 0;
@@ -178,6 +174,19 @@ button:hover {
     animation: pulse 1.5s ease-in-out infinite;
     display: none;
     pointer-events: none;
+}
+
+.mic-status.recording .mic-icon {
+    background-color: #f44336;
+}
+
+.mic-status.recording .mic-icon i {
+    color: white;
+}
+
+.mic-status.recording .mic-animation {
+    display: block;
+    background-color: rgba(244, 67, 54, 0.4);
 }
 
 @keyframes pulse {
@@ -203,7 +212,7 @@ button:hover {
 .voice-level-fill {
     width: 0%;
     height: 100%;
-    background-color: #4CAF50; /* 녹색 음성 레벨 */
+    background-color: #4CAF50;
     transition: width 0.1s ease;
 }
 
@@ -219,4 +228,32 @@ button:hover {
 
 .mic-status::-moz-focus-inner {
     border: 0;
+}
+
+
+/* 네비게이션 버튼 스타일 */
+.next-word {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #28a745;  /* Next Word 버튼 색상 */
+    color: white;
+    margin: 10px 5px;
+}
+
+.next-word:hover {
+    background-color: #218838;  /* Next Word 버튼 hover 색상 */
+}
+
+.exit-practice {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #dc3545;  /* Exit Practice 버튼 색상 */
+    color: white;
+    margin: 10px 5px;
+}
+
+.exit-practice:hover {
+    background-color: #c82333;  /* Exit Practice 버튼 hover 색상 */
 }
