@@ -17,8 +17,9 @@
 
       <div>
         <h3>원어민 발음을 들어볼까요?</h3>
+        <!-- 원어민 발음 오디오 소스 동적으로 설정 -->
         <audio id="native-audio-preview" controls="controls">
-          <source src="/media/audio/native/eraser_a.wav" type="audio/wav">
+          <source src="{{ MEDIA_URL }}audio/native/{{ word }}.wav" type="audio/wav">
           오디오 파일이 지원되지 않는 브라우저입니다.
         </audio>
       </div>
@@ -43,7 +44,7 @@
         </div>
       </div>
 
-      <!-- Score display -->
+      <!-- 점수 표시 -->
       <div>
         <p>점수:
           <span id="score">0</span>
@@ -51,17 +52,17 @@
         <div id="score-bar"></div>
       </div>
 
-      <!-- Feedback section -->
+      <!-- 피드백 섹션 -->
       <div id="feedback-section" style="display: none;">
         <p id="feedback"></p>
       </div>
 
-      <!-- Audio preview section (녹음한 음성 미리보기) -->
+      <!-- 녹음한 음성 미리보기 -->
       <audio id="audio-preview" controls="controls" style="display: none;">
         오디오 파일이 지원되지 않는 브라우저입니다.
       </audio>
 
-      <!-- Navigation buttons -->
+      <!-- 네비게이션 버튼 -->
       <button onclick="nextWord()">Next Word</button>
       <button onclick="exitPractice()">Exit Practice</button>
     </div>

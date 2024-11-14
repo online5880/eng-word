@@ -66,7 +66,7 @@ function startRecording() {
                 };
 
                 recorder.start(); // 녹음 시작
-                document.getElementById("startBtn").disabled = true;
+                document.getElementById("micButton").disabled = true;
                 document.getElementById("stopBtn").disabled = false;
             })
             .catch(err => {
@@ -82,7 +82,7 @@ function stopRecording() {
         recorder.stop();
         audioStream.getTracks().forEach(track => track.stop()); // 마이크 종료
 
-        document.getElementById("startBtn").disabled = false;
+        document.getElementById("micButton").disabled = false;
         document.getElementById("stopBtn").disabled = true;
     }
 }

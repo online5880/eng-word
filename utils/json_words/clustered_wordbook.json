@@ -477,8 +477,6 @@
             ]
         },
         {
-<<<<<<< HEAD
-=======
             "단어": "proper",
             "단어 뜻": [
                 "적절한"
@@ -492,7 +490,6 @@
             ]
         },
         {
->>>>>>> feature/django/main
             "단어": "quite",
             "단어 뜻": [
                 "꽤"
@@ -926,8 +923,6 @@
             "예문 뜻": [
                 "물론 할 수 있어."
             ]
-<<<<<<< HEAD
-=======
         },
         {
             "단어": "here",
@@ -954,7 +949,6 @@
             "예문 뜻": [
                 "거기에서 만나자."
             ]
->>>>>>> feature/django/main
         }
     ],
     "category_1": [
@@ -3463,8 +3457,6 @@
             ]
         },
         {
-<<<<<<< HEAD
-=======
             "단어": "principle",
             "단어 뜻": [
                 "원칙"
@@ -3478,7 +3470,6 @@
             ]
         },
         {
->>>>>>> feature/django/main
             "단어": "explain",
             "단어 뜻": [
                 "설명하다"
@@ -4466,8 +4457,6 @@
             ]
         },
         {
-<<<<<<< HEAD
-=======
             "단어": "principal",
             "단어 뜻": [
                 "교장"
@@ -4481,7 +4470,6 @@
             ]
         },
         {
->>>>>>> feature/django/main
             "단어": "example",
             "단어 뜻": [
                 "예"
@@ -5243,27 +5231,18 @@
             "단어": "little",
             "단어 뜻": [
                 "작은",
-<<<<<<< HEAD
-=======
                 "(양이) 거의 없는",
->>>>>>> feature/django/main
                 "어린"
             ],
             "품사": "형용사",
             "예문": [
                 "This cat is little and cute.",
-<<<<<<< HEAD
-=======
                 "There was little food on the snow-covered mainland.",
->>>>>>> feature/django/main
                 "I have a little brother."
             ],
             "예문 뜻": [
                 "이 고양이는 작고 귀여워.",
-<<<<<<< HEAD
-=======
                 "눈으로 덮인 본토에는 음식이 거의 없었다.",
->>>>>>> feature/django/main
                 "나는 어린 남동생이 있어."
             ]
         },
@@ -5281,21 +5260,6 @@
             ]
         },
         {
-<<<<<<< HEAD
-            "단어": "medium",
-            "단어 뜻": [
-                "중간의"
-            ],
-            "품사": "형용사",
-            "예문": [
-                "I ordered a medium, not a large."
-            ],
-            "예문 뜻": [
-                "나는 큰 것이 아니라 중간 크기를 주문했어."
-            ]
-        },
-        {
-=======
             "단어": "a_little",
             "단어 뜻": [
                 "(양이) 조금/약간 있는"
@@ -5335,7 +5299,6 @@
             ]
         },
         {
->>>>>>> feature/django/main
             "단어": "area",
             "단어 뜻": [
                 "지역"
@@ -5613,27 +5576,18 @@
             "단어": "lose",
             "단어 뜻": [
                 "지다",
-<<<<<<< HEAD
-=======
                 "잃다, 줄다",
->>>>>>> feature/django/main
                 "잃어버리다"
             ],
             "품사": "동사",
             "예문": [
                 "You win some, you lose some.",
-<<<<<<< HEAD
-=======
                 "Using diet pills is not a safe way to lose weight.",
->>>>>>> feature/django/main
                 "Lisa is searching for her bag because she lost her key."
             ],
             "예문 뜻": [
                 "이길 때도 있고, 질 때도 있는 거야.",
-<<<<<<< HEAD
-=======
                 "다이어트 약을 사용하는 것은 체중을 줄이는 안전한 방법이 아니다.",
->>>>>>> feature/django/main
                 "Lisa는 열쇠를 잃어버렸기 때문에 가방을 뒤지고 있어."
             ]
         },
@@ -5761,8 +5715,6 @@
             ]
         },
         {
-<<<<<<< HEAD
-=======
             "단어": "loose",
             "단어 뜻": [
                 "헐렁한"
@@ -5776,7 +5728,6 @@
             ]
         },
         {
->>>>>>> feature/django/main
             "단어": "dream",
             "단어 뜻": [
                 "꿈을 꾸다"
@@ -10212,19 +10163,11 @@
             "품사": "명사",
             "예문": [
                 "I enjoy eating ice cream for dessert.",
-<<<<<<< HEAD
-                "Would you care for some dessert? 후식 좀 드시겠어요?"
-            ],
-            "예문 뜻": [
-                "나는 후식으로 아이스크림을 즐겨 먹어요.",
-                "a little"
-=======
                 "Would you care for some dessert?"
             ],
             "예문 뜻": [
                 "나는 후식으로 아이스크림을 즐겨 먹어요.",
                 "후식 좀 드시겠어요?"
->>>>>>> feature/django/main
             ]
         },
         {
@@ -15598,8 +15541,6 @@
             ]
         },
         {
-<<<<<<< HEAD
-=======
             "단어": "prefer",
             "단어 뜻": [
                 "(더) 좋아하다",
@@ -15616,7 +15557,6 @@
             ]
         },
         {
->>>>>>> feature/django/main
             "단어": "beg",
             "단어 뜻": [
                 "애원하다",
@@ -15665,22 +15605,6 @@
             ]
         },
         {
-<<<<<<< HEAD
-            "단어": "prefer",
-            "단어 뜻": [
-                "~을좋아하다"
-            ],
-            "품사": "동사",
-            "예문": [
-                "I prefer chocolate ice cream."
-            ],
-            "예문 뜻": [
-                "나는 초콜릿 아이스크림을 더 좋아해."
-            ]
-        },
-        {
-=======
->>>>>>> feature/django/main
             "단어": "wish",
             "단어 뜻": [
                 "바라다"
@@ -17070,54 +16994,6 @@
     ],
     "category_112": [
         {
-<<<<<<< HEAD
-            "단어": "use",
-            "단어 뜻": [
-                "사용하다"
-            ],
-            "품사": "동사",
-            "예문": [
-                "You may use my pen.",
-                "May I use your pencil?",
-                "Why don’t you use a cold towel?"
-            ],
-            "예문 뜻": [
-                "제 펜을 쓰셔도 됩니다.",
-                "네 연필을 사용해도 될까?",
-                "차가운 수건을 사용해 보는 것이 어떠니?"
-            ]
-        },
-        {
-            "단어": "Using",
-            "단어 뜻": [
-                "pills is not a safe way to lose weight."
-            ],
-            "품사": "diet",
-            "예문": [
-                "다이어트 약을 사용하는 것은 체중을 줄이는 안전한 방법이 아니다."
-            ],
-            "예문 뜻": [
-                "principal"
-            ]
-        },
-        {
-            "단어": "misuse",
-            "단어 뜻": [
-                "남용"
-            ],
-            "품사": "n.",
-            "예문": [
-                "Misuse of medicine can cause very dangerous problems."
-            ],
-            "예문 뜻": [
-                "약의 남용은 아주 위험한 문제를 초래할 수 있다."
-            ]
-        }
-    ],
-    "category_113": [
-        {
-=======
->>>>>>> feature/django/main
             "단어": "circle",
             "단어 뜻": [
                 "원",
@@ -17191,11 +17067,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_114": [
-=======
     "category_113": [
->>>>>>> feature/django/main
         {
             "단어": "concert",
             "단어 뜻": [
@@ -17265,11 +17137,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_115": [
-=======
     "category_114": [
->>>>>>> feature/django/main
         {
             "단어": "tired",
             "단어 뜻": [
@@ -17404,11 +17272,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_116": [
-=======
     "category_115": [
->>>>>>> feature/django/main
         {
             "단어": "pain",
             "단어 뜻": [
@@ -17501,11 +17365,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_117": [
-=======
     "category_116": [
->>>>>>> feature/django/main
         {
             "단어": "prevent",
             "단어 뜻": [
@@ -17598,11 +17458,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_118": [
-=======
     "category_117": [
->>>>>>> feature/django/main
         {
             "단어": "die",
             "단어 뜻": [
@@ -17658,11 +17514,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_119": [
-=======
     "category_118": [
->>>>>>> feature/django/main
         {
             "단어": "fight",
             "단어 뜻": [
@@ -17718,11 +17570,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_120": [
-=======
     "category_119": [
->>>>>>> feature/django/main
         {
             "단어": "diet",
             "단어 뜻": [
@@ -17801,22 +17649,6 @@
             ]
         },
         {
-<<<<<<< HEAD
-            "단어": "fit",
-            "단어 뜻": [
-                "(모양, 크기가)\n맞다"
-            ],
-            "품사": "동사",
-            "예문": [
-                "Your new dress fits well."
-            ],
-            "예문 뜻": [
-                "당신의 새 드레스는 잘 맞는군요."
-            ]
-        },
-        {
-=======
->>>>>>> feature/django/main
             "단어": "chew",
             "단어 뜻": [
                 "씹다"
@@ -17888,11 +17720,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_121": [
-=======
     "category_120": [
->>>>>>> feature/django/main
         {
             "단어": "throw",
             "단어 뜻": [
@@ -17952,11 +17780,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_122": [
-=======
     "category_121": [
->>>>>>> feature/django/main
         {
             "단어": "friendship",
             "단어 뜻": [
@@ -18093,11 +17917,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_123": [
-=======
     "category_122": [
->>>>>>> feature/django/main
         {
             "단어": "hour",
             "단어 뜻": [
@@ -18155,11 +17975,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_124": [
-=======
     "category_123": [
->>>>>>> feature/django/main
         {
             "단어": "purple",
             "단어 뜻": [
@@ -18410,11 +18226,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_125": [
-=======
     "category_124": [
->>>>>>> feature/django/main
         {
             "단어": "sale",
             "단어 뜻": [
@@ -18535,11 +18347,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_126": [
-=======
     "category_125": [
->>>>>>> feature/django/main
         {
             "단어": "short",
             "단어 뜻": [
@@ -18599,11 +18407,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_127": [
-=======
     "category_126": [
->>>>>>> feature/django/main
         {
             "단어": "heavy",
             "단어 뜻": [
@@ -18661,11 +18465,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_128": [
-=======
     "category_127": [
->>>>>>> feature/django/main
         {
             "단어": "soft",
             "단어 뜻": [
@@ -18706,11 +18506,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_129": [
-=======
     "category_128": [
->>>>>>> feature/django/main
         {
             "단어": "lunch box",
             "단어 뜻": [
@@ -18753,11 +18549,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_130": [
-=======
     "category_129": [
->>>>>>> feature/django/main
         {
             "단어": "candidate",
             "단어 뜻": [
@@ -19110,11 +18902,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_131": [
-=======
     "category_130": [
->>>>>>> feature/django/main
         {
             "단어": "half",
             "단어 뜻": [
@@ -19170,11 +18958,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_132": [
-=======
     "category_131": [
->>>>>>> feature/django/main
         {
             "단어": "stuff",
             "단어 뜻": [
@@ -19215,11 +18999,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_133": [
-=======
     "category_132": [
->>>>>>> feature/django/main
         {
             "단어": "giggle",
             "단어 뜻": [
@@ -19286,11 +19066,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_134": [
-=======
     "category_133": [
->>>>>>> feature/django/main
         {
             "단어": "hairy",
             "단어 뜻": [
@@ -19398,11 +19174,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_135": [
-=======
     "category_134": [
->>>>>>> feature/django/main
         {
             "단어": "husband",
             "단어 뜻": [
@@ -19448,11 +19220,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_136": [
-=======
     "category_135": [
->>>>>>> feature/django/main
         {
             "단어": "angry",
             "단어 뜻": [
@@ -19762,11 +19530,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_137": [
-=======
     "category_136": [
->>>>>>> feature/django/main
         {
             "단어": "nervous",
             "단어 뜻": [
@@ -19928,11 +19692,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_138": [
-=======
     "category_137": [
->>>>>>> feature/django/main
         {
             "단어": "vacation",
             "단어 뜻": [
@@ -19978,11 +19738,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_139": [
-=======
     "category_138": [
->>>>>>> feature/django/main
         {
             "단어": "museum",
             "단어 뜻": [
@@ -20067,11 +19823,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_140": [
-=======
     "category_139": [
->>>>>>> feature/django/main
         {
             "단어": "animal",
             "단어 뜻": [
@@ -20248,11 +20000,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_141": [
-=======
     "category_140": [
->>>>>>> feature/django/main
         {
             "단어": "beside",
             "단어 뜻": [
@@ -20336,11 +20084,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_142": [
-=======
     "category_141": [
->>>>>>> feature/django/main
         {
             "단어": "borrow",
             "단어 뜻": [
@@ -20383,136 +20127,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_143": [
-        {
-            "단어": "You",
-            "단어 뜻": [
-                "use a little cream and milk to bake bread."
-            ],
-            "품사": "can",
-            "예문": [
-                "너는 빵을 굽기 위해 약간의 크림과 우유를 사용할 수 있다."
-            ],
-            "예문 뜻": [
-                "little"
-            ]
-        },
-        {
-            "단어": "you",
-            "단어 뜻": [
-                "너"
-            ],
-            "품사": "",
-            "예문": [
-                "You are Betty."
-            ],
-            "예문 뜻": [
-                "너는 Betty야."
-            ]
-        }
-    ],
-    "category_144": [
-        {
-            "단어": "There",
-            "단어 뜻": [
-                "little food on the snow-covered mainland."
-            ],
-            "품사": "was",
-            "예문": [
-                "눈으로 덮인 본토에는 음식이 거의 없었다."
-            ],
-            "예문 뜻": [
-                "loose"
-            ]
-        },
-        {
-            "단어": "there",
-            "단어 뜻": [
-                "거기에"
-            ],
-            "품사": "서",
-            "예문": [
-                "Let’s meet there."
-            ],
-            "예문 뜻": [
-                "거기에서 만나자."
-            ]
-        },
-        {
-            "단어": "here",
-            "단어 뜻": [
-                "여기에"
-            ],
-            "품사": "서",
-            "예문": [
-                "Let’s have dinner here."
-            ],
-            "예문 뜻": [
-                "여기에서 저녁 식사를 하자."
-            ]
-        }
-    ],
-    "category_145": [
-        {
-            "단어": "It",
-            "단어 뜻": [
-                "my principle not to be late for school."
-            ],
-            "품사": "is",
-            "예문": [
-                "학교에 늦지 않는다는 것이 나의 원칙이다."
-            ],
-            "예문 뜻": [
-                "prefer"
-            ]
-        },
-        {
-            "단어": "it",
-            "단어 뜻": [
-                "그것"
-            ],
-            "품사": "",
-            "예문": [
-                "It is my key."
-            ],
-            "예문 뜻": [
-                "그것은 내 열쇠야."
-            ]
-        }
-    ],
-    "category_146": [
-        {
-            "단어": "Which",
-            "단어 뜻": [
-                "you prefer, a house with a green roof or with a red roof?"
-            ],
-            "품사": "do",
-            "예문": [
-                "녹색 지붕의 집과 빨간색 지붕의 집 중, 어느 것이 더 좋니?"
-            ],
-            "예문 뜻": [
-                "proper"
-            ]
-        },
-        {
-            "단어": "which",
-            "단어 뜻": [
-                "어느 것"
-            ],
-            "품사": "",
-            "예문": [
-                "Which do you have, vanilla or strawberry?"
-            ],
-            "예문 뜻": [
-                "너는 바닐라 또는 딸기 중 어느 것을 먹을래?"
-            ]
-        }
-    ],
-    "category_147": [
-=======
     "category_142": [
->>>>>>> feature/django/main
         {
             "단어": "sew",
             "단어 뜻": [
@@ -20542,11 +20157,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_148": [
-=======
     "category_143": [
->>>>>>> feature/django/main
         {
             "단어": "stomachache",
             "단어 뜻": [
@@ -20606,11 +20217,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_149": [
-=======
     "category_144": [
->>>>>>> feature/django/main
         {
             "단어": "wrong",
             "단어 뜻": [
@@ -20876,11 +20483,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_150": [
-=======
     "category_145": [
->>>>>>> feature/django/main
         {
             "단어": "responsible",
             "단어 뜻": [
@@ -20949,11 +20552,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_151": [
-=======
     "category_146": [
->>>>>>> feature/django/main
         {
             "단어": "hand",
             "단어 뜻": [
@@ -21025,11 +20624,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_152": [
-=======
     "category_147": [
->>>>>>> feature/django/main
         {
             "단어": "village",
             "단어 뜻": [
@@ -21141,11 +20736,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_153": [
-=======
     "category_148": [
->>>>>>> feature/django/main
         {
             "단어": "forest",
             "단어 뜻": [
@@ -21188,11 +20779,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_154": [
-=======
     "category_149": [
->>>>>>> feature/django/main
         {
             "단어": "o’clock",
             "단어 뜻": [
@@ -21222,11 +20809,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_155": [
-=======
     "category_150": [
->>>>>>> feature/django/main
         {
             "단어": "exchange",
             "단어 뜻": [
@@ -21300,11 +20883,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_156": [
-=======
     "category_151": [
->>>>>>> feature/django/main
         {
             "단어": "actress",
             "단어 뜻": [
@@ -21348,11 +20927,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_157": [
-=======
     "category_152": [
->>>>>>> feature/django/main
         {
             "단어": "unlucky",
             "단어 뜻": [
@@ -21382,11 +20957,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_158": [
-=======
     "category_153": [
->>>>>>> feature/django/main
         {
             "단어": "explore",
             "단어 뜻": [
@@ -21506,11 +21077,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_159": [
-=======
     "category_154": [
->>>>>>> feature/django/main
         {
             "단어": "quick",
             "단어 뜻": [
@@ -21609,11 +21176,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_160": [
-=======
     "category_155": [
->>>>>>> feature/django/main
         {
             "단어": "danger",
             "단어 뜻": [
@@ -21760,11 +21323,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_161": [
-=======
     "category_156": [
->>>>>>> feature/django/main
         {
             "단어": "wait",
             "단어 뜻": [
@@ -21836,11 +21395,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_162": [
-=======
     "category_157": [
->>>>>>> feature/django/main
         {
             "단어": "Canada",
             "단어 뜻": [
@@ -22045,11 +21600,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_163": [
-=======
     "category_158": [
->>>>>>> feature/django/main
         {
             "단어": "where",
             "단어 뜻": [
@@ -22080,11 +21631,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_164": [
-=======
     "category_159": [
->>>>>>> feature/django/main
         {
             "단어": "downstairs",
             "단어 뜻": [
@@ -22114,11 +21661,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_165": [
-=======
     "category_160": [
->>>>>>> feature/django/main
         {
             "단어": "far",
             "단어 뜻": [
@@ -22177,11 +21720,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_166": [
-=======
     "category_161": [
->>>>>>> feature/django/main
         {
             "단어": "fire station",
             "단어 뜻": [
@@ -22334,11 +21873,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_167": [
-=======
     "category_162": [
->>>>>>> feature/django/main
         {
             "단어": "street",
             "단어 뜻": [
@@ -22381,11 +21916,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_168": [
-=======
     "category_163": [
->>>>>>> feature/django/main
         {
             "단어": "seat",
             "단어 뜻": [
@@ -22482,11 +22013,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_169": [
-=======
     "category_164": [
->>>>>>> feature/django/main
         {
             "단어": "dentist",
             "단어 뜻": [
@@ -22523,11 +22050,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_170": [
-=======
     "category_165": [
->>>>>>> feature/django/main
         {
             "단어": "farmer",
             "단어 뜻": [
@@ -22559,11 +22082,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_171": [
-=======
     "category_166": [
->>>>>>> feature/django/main
         {
             "단어": "fashion designer",
             "단어 뜻": [
@@ -22591,11 +22110,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_172": [
-=======
     "category_167": [
->>>>>>> feature/django/main
         {
             "단어": "magician",
             "단어 뜻": [
@@ -22623,11 +22138,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_173": [
-=======
     "category_168": [
->>>>>>> feature/django/main
         {
             "단어": "bicycle",
             "단어 뜻": [
@@ -22773,11 +22284,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_174": [
-=======
     "category_169": [
->>>>>>> feature/django/main
         {
             "단어": "century",
             "단어 뜻": [
@@ -22805,11 +22312,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_175": [
-=======
     "category_170": [
->>>>>>> feature/django/main
         {
             "단어": "anticipate",
             "단어 뜻": [
@@ -22876,11 +22379,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_176": [
-=======
     "category_171": [
->>>>>>> feature/django/main
         {
             "단어": "arrange",
             "단어 뜻": [
@@ -22949,11 +22448,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_177": [
-=======
     "category_172": [
->>>>>>> feature/django/main
         {
             "단어": "client",
             "단어 뜻": [
@@ -22981,11 +22476,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_178": [
-=======
     "category_173": [
->>>>>>> feature/django/main
         {
             "단어": "rent",
             "단어 뜻": [
@@ -23254,11 +22745,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_179": [
-=======
     "category_174": [
->>>>>>> feature/django/main
         {
             "단어": "value",
             "단어 뜻": [
@@ -23286,11 +22773,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_180": [
-=======
     "category_175": [
->>>>>>> feature/django/main
         {
             "단어": "entrance",
             "단어 뜻": [
@@ -23430,11 +22913,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_181": [
-=======
     "category_176": [
->>>>>>> feature/django/main
         {
             "단어": "outside",
             "단어 뜻": [
@@ -23465,11 +22944,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_182": [
-=======
     "category_177": [
->>>>>>> feature/django/main
         {
             "단어": "growth",
             "단어 뜻": [
@@ -23499,11 +22974,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_183": [
-=======
     "category_178": [
->>>>>>> feature/django/main
         {
             "단어": "after",
             "단어 뜻": [
@@ -23578,11 +23049,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_184": [
-=======
     "category_179": [
->>>>>>> feature/django/main
         {
             "단어": "wind",
             "단어 뜻": [
@@ -23612,11 +23079,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_185": [
-=======
     "category_180": [
->>>>>>> feature/django/main
         {
             "단어": "early",
             "단어 뜻": [
@@ -23680,11 +23143,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_186": [
-=======
     "category_181": [
->>>>>>> feature/django/main
         {
             "단어": "more",
             "단어 뜻": [
@@ -23740,11 +23199,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_187": [
-=======
     "category_182": [
->>>>>>> feature/django/main
         {
             "단어": "film",
             "단어 뜻": [
@@ -23804,11 +23259,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_188": [
-=======
     "category_183": [
->>>>>>> feature/django/main
         {
             "단어": "game",
             "단어 뜻": [
@@ -23903,11 +23354,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_189": [
-=======
     "category_184": [
->>>>>>> feature/django/main
         {
             "단어": "toy",
             "단어 뜻": [
@@ -23961,11 +23408,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_190": [
-=======
     "category_185": [
->>>>>>> feature/django/main
         {
             "단어": "flight",
             "단어 뜻": [
@@ -24107,11 +23550,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_191": [
-=======
     "category_186": [
->>>>>>> feature/django/main
         {
             "단어": "find",
             "단어 뜻": [
@@ -24156,11 +23595,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_192": [
-=======
     "category_187": [
->>>>>>> feature/django/main
         {
             "단어": "look",
             "단어 뜻": [
@@ -24245,11 +23680,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_193": [
-=======
     "category_188": [
->>>>>>> feature/django/main
         {
             "단어": "swimming",
             "단어 뜻": [
@@ -24318,11 +23749,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_194": [
-=======
     "category_189": [
->>>>>>> feature/django/main
         {
             "단어": "taste",
             "단어 뜻": [
@@ -24366,11 +23793,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_195": [
-=======
     "category_190": [
->>>>>>> feature/django/main
         {
             "단어": "protect",
             "단어 뜻": [
@@ -24439,11 +23862,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_196": [
-=======
     "category_191": [
->>>>>>> feature/django/main
         {
             "단어": "my",
             "단어 뜻": [
@@ -24679,45 +24098,6 @@
         },
         {
             "단어": "both",
-<<<<<<< HEAD
-            "단어 뜻": [
-                "둘 다",
-                "둘 다의",
-                "양쪽"
-            ],
-            "품사": "",
-            "예문": [
-                "I miss them both.",
-                "Both students got high grades.",
-                "I like both of them."
-            ],
-            "예문 뜻": [
-                "나는 그들이 둘 다 그립다.",
-                "두 학생 다 높은 점수를 받았어.",
-                "나는 양쪽 다 좋아."
-            ]
-        },
-        {
-            "단어": "mark",
-            "단어 뜻": [
-                "표시하다",
-                "점수"
-            ],
-            "품사": "동사",
-            "예문": [
-                "I marked the item.",
-                "She got high marks on the math test."
-            ],
-            "예문 뜻": [
-                "나는 그 항목에 표시했어.",
-                "그녀는 수학 시험에서 높은 점수를 받았다."
-            ]
-        },
-        {
-            "단어": "habit",
-            "단어 뜻": [
-                "습관"
-=======
             "단어 뜻": [
                 "둘 다",
                 "둘 다의",
@@ -24987,339 +24367,9 @@
             "단어 뜻": [
                 "깡통",
                 "~할 수 있다"
->>>>>>> feature/django/main
             ],
             "품사": "명사",
             "예문": [
-<<<<<<< HEAD
-                "I have a habit of waking up late in the morning."
-            ],
-            "예문 뜻": [
-                "나는 아침에 늦잠을 자는 습관이 있어."
-            ]
-        },
-        {
-            "단어": "have to",
-            "단어 뜻": [
-                "~해야 하다"
-            ],
-            "품사": "",
-            "예문": [
-                "You have to play outside."
-            ],
-            "예문 뜻": [
-                "너는 밖에서 놀아야 해."
-            ]
-        },
-        {
-            "단어": "every",
-            "단어 뜻": [
-                "모든"
-            ],
-            "품사": "형용사",
-            "예문": [
-                "Every child in the class is important.",
-                "They run to me after school every day."
-            ],
-            "예문 뜻": [
-                "학급의 모든 아이들이 중요해.",
-                "그들은 매일 방과 후에 나에게 달려와."
-            ]
-        },
-        {
-            "단어": "The",
-            "단어 뜻": [
-                "pants are too loose for you.",
-                "principal spoke to us this morning.",
-                "are going to be put in their proper places the next day."
-            ],
-            "품사": "black",
-            "예문": [
-                "그 검정 바지는 너에게 너무 헐렁하다.",
-                "새 교장 선생님은 오늘 아침 우리에게 연설하셨다.",
-                "그 식물들은"
-            ],
-            "예문 뜻": [
-                "lose",
-                "principle",
-                "다음 날 적절한 장소에 놓여질 것이다."
-            ]
-        },
-        {
-            "단어": "and",
-            "단어 뜻": [
-                "~와, 그리고",
-                "~와"
-            ],
-            "품사": "",
-            "예문": [
-                "Kevin and I are friends.",
-                "Amy likes oranges and bananas."
-            ],
-            "예문 뜻": [
-                "Kevin과 나는 친구야.",
-                "에이미는 오렌지와 바나나를 좋아한다."
-            ]
-        },
-        {
-            "단어": "of",
-            "단어 뜻": [
-                "~의"
-            ],
-            "품사": "",
-            "예문": [
-                "I like the color of your sneakers.",
-                "Where is one of my pictures?"
-            ],
-            "예문 뜻": [
-                "나는 네 운동화의 색이 마음에 들어.",
-                "내 그림 중에 하나가 어디 있지?"
-            ]
-        },
-        {
-            "단어": "to",
-            "단어 뜻": [
-                "~으로, ~에게",
-                "~으로"
-            ],
-            "품사": "",
-            "예문": [
-                "She’s going to the park.",
-                "I’m going to the library."
-            ],
-            "예문 뜻": [
-                "그녀는 공원으로 가고 있어.",
-                "난 도서관으로 가는 중이야."
-            ]
-        },
-        {
-            "단어": "with",
-            "단어 뜻": [
-                "~와 함께"
-            ],
-            "품사": "",
-            "예문": [
-                "I’m playing tennis with him."
-            ],
-            "예문 뜻": [
-                "나는 그와 함께 테니스를 치고 있어."
-            ]
-        },
-        {
-            "단어": "unique",
-            "단어 뜻": [
-                "독특한"
-            ],
-            "품사": "adj.",
-            "예문": [
-                "I can express myself through these unique sneakers."
-            ],
-            "예문 뜻": [
-                "나는 이 독특한 운동화를 통해 내 자신을 표현할 수 있다."
-            ]
-        },
-        {
-            "단어": "possess",
-            "단어 뜻": [
-                "소유하다"
-            ],
-            "품사": "v.",
-            "예문": [
-                "Many people save their wealth to possess bigger houses."
-            ],
-            "예문 뜻": [
-                "많은 사람들이 더 큰 집을 소유하기 위해 그들의 재산을 모은다."
-            ]
-        },
-        {
-            "단어": "insist",
-            "단어 뜻": [
-                "고집하다, 주장하다"
-            ],
-            "품사": "v.",
-            "예문": [
-                "I didn't really want to play the computer game, but my big brother insisted"
-            ],
-            "예문 뜻": [
-                "나는 사실 컴퓨터 게임을 하고 싶지 않았는데 우리 형이 우겼다."
-            ]
-        },
-        {
-            "단어": "that",
-            "단어 뜻": [
-                "저것"
-            ],
-            "품사": "",
-            "예문": [
-                "That is a watch."
-            ],
-            "예문 뜻": [
-                "저것은 시계야."
-            ]
-        },
-        {
-            "단어": "these",
-            "단어 뜻": [
-                "이것들"
-            ],
-            "품사": "",
-            "예문": [
-                "These are their pencils."
-            ],
-            "예문 뜻": [
-                "이것들은 그들의 연필이야."
-            ]
-        },
-        {
-            "단어": "this",
-            "단어 뜻": [
-                "이것"
-            ],
-            "품사": "",
-            "예문": [
-                "This is my radio."
-            ],
-            "예문 뜻": [
-                "이것은 내 라디오야."
-            ]
-        },
-        {
-            "단어": "those",
-            "단어 뜻": [
-                "저것들"
-            ],
-            "품사": "",
-            "예문": [
-                "Those are my shoes."
-            ],
-            "예문 뜻": [
-                "저것들은 내 신발이야."
-            ]
-        },
-        {
-            "단어": "keep",
-            "단어 뜻": [
-                "유지하다"
-            ],
-            "품사": "동사",
-            "예문": [
-                "You have a cute smile. Keep smiling."
-            ],
-            "예문 뜻": [
-                "당신은 웃는 모습이 귀여워요. 늘 웃으세요."
-            ]
-        },
-        {
-            "단어": "can",
-            "단어 뜻": [
-                "깡통",
-                "~할 수 있다"
-            ],
-            "품사": "명사",
-            "예문": [
-                "Look! There are cans.",
-                "I can go to her birthday party."
-            ],
-            "예문 뜻": [
-                "봐! 깡통이 있어.",
-                "나는 그녀의 생일 파티에 갈 수 있어."
-            ]
-        },
-        {
-            "단어": "whose",
-            "단어 뜻": [
-                "누구의"
-            ],
-            "품사": "",
-            "예문": [
-                "Whose umbrella is it?"
-            ],
-            "예문 뜻": [
-                "그것은 누구의 우산이니?"
-            ]
-        },
-        {
-            "단어": "personal",
-            "단어 뜻": [
-                "개인의, 개인적인"
-            ],
-            "품사": "adj.",
-            "예문": [
-                "My teacher checked our personal belongings today."
-            ],
-            "예문 뜻": [
-                "우리 선생님께서는 오늘 우리 개인 소지품을 검사하셨다."
-            ]
-        },
-        {
-            "단어": "set",
-            "단어 뜻": [
-                "준비가 된"
-            ],
-            "품사": "형용사",
-            "예문": [
-                "I’m all set for lunch."
-            ],
-            "예문 뜻": [
-                "나는 점심 먹을 준비가 됐어."
-            ]
-        },
-        {
-            "단어": "owner",
-            "단어 뜻": [
-                "주인"
-            ],
-            "품사": "n.",
-            "예문": [
-                "The owner of the farm takes good care of many pigs."
-            ],
-            "예문 뜻": [
-                "그 농장 주인은 많은 돼지들을 잘 돌본다."
-            ]
-        },
-        {
-            "단어": "I",
-            "단어 뜻": [
-                "나"
-            ],
-            "품사": "",
-            "예문": [
-                "I am Harry."
-            ],
-            "예문 뜻": [
-                "나는 Harry야."
-            ]
-        },
-        {
-            "단어": "what",
-            "단어 뜻": [
-                "무엇"
-            ],
-            "품사": "",
-            "예문": [
-                "What’s your name?",
-                "What does Harry like?"
-            ],
-            "예문 뜻": [
-                "네 이름은 무엇이니?",
-                "해리는 무엇을 좋아하니?"
-            ]
-        },
-        {
-            "단어": "nickname",
-            "단어 뜻": [
-                "애칭"
-            ],
-            "품사": "명사",
-            "예문": [
-                "Sue is the nickname for Susan."
-            ],
-            "예문 뜻": [
-                "Sue는 Susan의 애칭이야."
-            ]
-        },
-        {
-=======
                 "Look! There are cans.",
                 "I can go to her birthday party."
             ],
@@ -25435,7 +24485,6 @@
             ]
         },
         {
->>>>>>> feature/django/main
             "단어": "any",
             "단어 뜻": [
                 "무슨, 어떤",
@@ -25653,11 +24702,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_197": [
-=======
     "category_192": [
->>>>>>> feature/django/main
         {
             "단어": "succeed",
             "단어 뜻": [
@@ -25752,11 +24797,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_198": [
-=======
     "category_193": [
->>>>>>> feature/django/main
         {
             "단어": "nothing",
             "단어 뜻": [
@@ -25813,11 +24854,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_199": [
-=======
     "category_194": [
->>>>>>> feature/django/main
         {
             "단어": "dance",
             "단어 뜻": [
@@ -25871,11 +24908,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_200": [
-=======
     "category_195": [
->>>>>>> feature/django/main
         {
             "단어": "ski",
             "단어 뜻": [
@@ -25903,11 +24936,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_201": [
-=======
     "category_196": [
->>>>>>> feature/django/main
         {
             "단어": "lion",
             "단어 뜻": [
@@ -26052,11 +25081,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_202": [
-=======
     "category_197": [
->>>>>>> feature/django/main
         {
             "단어": "turtle",
             "단어 뜻": [
@@ -26149,11 +25174,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_203": [
-=======
     "category_198": [
->>>>>>> feature/django/main
         {
             "단어": "Mrs.",
             "단어 뜻": [
@@ -26211,11 +25232,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_204": [
-=======
     "category_199": [
->>>>>>> feature/django/main
         {
             "단어": "them",
             "단어 뜻": [
@@ -26243,11 +25260,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_205": [
-=======
     "category_200": [
->>>>>>> feature/django/main
         {
             "단어": "go up",
             "단어 뜻": [
@@ -26333,11 +25346,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_206": [
-=======
     "category_201": [
->>>>>>> feature/django/main
         {
             "단어": "prize",
             "단어 뜻": [
@@ -26422,8 +25431,6 @@
             "예문 뜻": [
                 "제게 영수증 좀 보여 주시겠어요?"
             ]
-<<<<<<< HEAD
-=======
         }
     ],
     "category_202": [
@@ -26672,262 +25679,10 @@
             "예문 뜻": [
                 "지난주에 내 여동생이 초등학교를 졸업했다."
             ]
->>>>>>> feature/django/main
         }
     ],
     "category_207": [
         {
-<<<<<<< HEAD
-            "단어": "paintbrush",
-            "단어 뜻": [
-                "붓"
-            ],
-            "품사": "",
-            "예문": [
-                "Whose paintbrush is it?"
-            ],
-            "예문 뜻": [
-                "그것은 누구의 붓이니?"
-            ]
-        },
-        {
-            "단어": "paint",
-            "단어 뜻": [
-                "페인트칠하다"
-            ],
-            "품사": "",
-            "예문": [
-                "My uncle is painting the wall."
-            ],
-            "예문 뜻": [
-                "우리 삼촌은 벽에 페인트칠하고 계셔."
-            ]
-        }
-    ],
-    "category_208": [
-        {
-            "단어": "agree",
-            "단어 뜻": [
-                "동의하다"
-            ],
-            "품사": "동사",
-            "예문": [
-                "I agree with you."
-            ],
-            "예문 뜻": [
-                "난 네 생각에 동의해."
-            ]
-        },
-        {
-            "단어": "disagree",
-            "단어 뜻": [
-                "의견이 다르다"
-            ],
-            "품사": "동사",
-            "예문": [
-                "Teenagers and their parents often disagree."
-            ],
-            "예문 뜻": [
-                "십대와 그들의 부모는 자주 의견이 달라."
-            ]
-        },
-        {
-            "단어": "agree with",
-            "단어 뜻": [
-                "~에 동의하다"
-            ],
-            "품사": "phr.",
-            "예문": [
-                "I agree with you on that point entirely."
-            ],
-            "예문 뜻": [
-                "나는 그 점에 대해서는 전적으로 너에게 동의한다."
-            ]
-        },
-        {
-            "단어": "true",
-            "단어 뜻": [
-                "실제의"
-            ],
-            "품사": "형용사",
-            "예문": [
-                "It’s a true story."
-            ],
-            "예문 뜻": [
-                "그것은 실제 이야기야."
-            ]
-        },
-        {
-            "단어": "fair",
-            "단어 뜻": [
-                "공정한"
-            ],
-            "품사": "adj.",
-            "예문": [
-                "All the players should have a fair opportunity."
-            ],
-            "예문 뜻": [
-                "모든 선수들은 공정한 기회를 가져야 한다."
-            ]
-        },
-        {
-            "단어": "especially",
-            "단어 뜻": [
-                "특히"
-            ],
-            "품사": "부사",
-            "예문": [
-                "It’s especially cold this evening."
-            ],
-            "예문 뜻": [
-                "오늘 저녁은 특히 춥네."
-            ]
-        }
-    ],
-    "category_209": [
-        {
-            "단어": "congratulate",
-            "단어 뜻": [
-                "축하하다"
-            ],
-            "품사": "동사",
-            "예문": [
-                "They are congratulating Tom.",
-                "We congratulated Jack on his new job."
-            ],
-            "예문 뜻": [
-                "그들은 Tom을 축하하고 있어.",
-                "우리는 잭이 새로운 직업을 갖게 된 것을 축하했다."
-            ]
-        },
-        {
-            "단어": "congratulation",
-            "단어 뜻": [
-                "축하합니다"
-            ],
-            "품사": "감탄사",
-            "예문": [
-                "You got an A? Congratulations!"
-            ],
-            "예문 뜻": [
-                "너 A 받았니? 축하해!"
-            ]
-        }
-    ],
-    "category_210": [
-        {
-            "단어": "examination",
-            "단어 뜻": [
-                "시험"
-            ],
-            "품사": "명사",
-            "예문": [
-                "We will take a final examination tomorrow."
-            ],
-            "예문 뜻": [
-                "우리는 내일 기말시험을 볼 거야."
-            ]
-        },
-        {
-            "단어": "examine",
-            "단어 뜻": [
-                "검사하다"
-            ],
-            "품사": "동사",
-            "예문": [
-                "Let me examine your teeth."
-            ],
-            "예문 뜻": [
-                "치아 검사를 할게요."
-            ]
-        },
-        {
-            "단어": "study",
-            "단어 뜻": [
-                "공부하다"
-            ],
-            "품사": "",
-            "예문": [
-                "Do you study English?",
-                "I must study English."
-            ],
-            "예문 뜻": [
-                "너는 영어를 공부하니?",
-                "나는 영어 공부를 해야 해."
-            ]
-        },
-        {
-            "단어": "test",
-            "단어 뜻": [
-                "시험"
-            ],
-            "품사": "명사",
-            "예문": [
-                "When is the English test?"
-            ],
-            "예문 뜻": [
-                "영어 시험은 언제니?"
-            ]
-        },
-        {
-            "단어": "scan",
-            "단어 뜻": [
-                "훑어보다"
-            ],
-            "품사": "동사",
-            "예문": [
-                "I scanned the boy."
-            ],
-            "예문 뜻": [
-                "나는 그 소년을 훑어봤어."
-            ]
-        },
-        {
-            "단어": "experiment",
-            "단어 뜻": [
-                "실험"
-            ],
-            "품사": "명사",
-            "예문": [
-                "Scientists perform many experiments."
-            ],
-            "예문 뜻": [
-                "과학자들은 많은 실험을 해."
-            ]
-        }
-    ],
-    "category_211": [
-        {
-            "단어": "graduate",
-            "단어 뜻": [
-                "졸업하다"
-            ],
-            "품사": "동사",
-            "예문": [
-                "What do you want to do after you graduate?"
-            ],
-            "예문 뜻": [
-                "너는 졸업한 뒤에 무엇을 하기를 원하니?"
-            ]
-        },
-        {
-            "단어": "graduate from",
-            "단어 뜻": [
-                "~을 졸업하다"
-            ],
-            "품사": "phr.",
-            "예문": [
-                "Last week, my little sister graduated from elementary school."
-            ],
-            "예문 뜻": [
-                "지난주에 내 여동생이 초등학교를 졸업했다."
-            ]
-        }
-    ],
-    "category_212": [
-        {
-=======
->>>>>>> feature/django/main
             "단어": "dislike",
             "단어 뜻": [
                 "싫어하다"
@@ -26967,11 +25722,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_213": [
-=======
     "category_208": [
->>>>>>> feature/django/main
         {
             "단어": "bus stop",
             "단어 뜻": [
@@ -27171,11 +25922,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_214": [
-=======
     "category_209": [
->>>>>>> feature/django/main
         {
             "단어": "post office",
             "단어 뜻": [
@@ -27231,11 +25978,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_215": [
-=======
     "category_210": [
->>>>>>> feature/django/main
         {
             "단어": "helpful",
             "단어 뜻": [
@@ -27289,8 +26032,6 @@
             ]
         },
         {
-<<<<<<< HEAD
-=======
             "단어": "use",
             "단어 뜻": [
                 "사용하다"
@@ -27308,7 +26049,6 @@
             ]
         },
         {
->>>>>>> feature/django/main
             "단어": "benefit",
             "단어 뜻": [
                 "이점, 이익"
@@ -27320,11 +26060,6 @@
             "예문 뜻": [
                 "당신은 약 한 달 후에 플러그를 뽑는 것의 이점을 느끼게 될 것이다."
             ]
-<<<<<<< HEAD
-        }
-    ],
-    "category_216": [
-=======
         },
         {
             "단어": "misuse",
@@ -27341,7 +26076,6 @@
         }
     ],
     "category_211": [
->>>>>>> feature/django/main
         {
             "단어": "hopeful",
             "단어 뜻": [
@@ -27384,11 +26118,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_217": [
-=======
     "category_212": [
->>>>>>> feature/django/main
         {
             "단어": "endless",
             "단어 뜻": [
@@ -27442,11 +26172,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_218": [
-=======
     "category_213": [
->>>>>>> feature/django/main
         {
             "단어": "librarian",
             "단어 뜻": [
@@ -27554,11 +26280,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_219": [
-=======
     "category_214": [
->>>>>>> feature/django/main
         {
             "단어": "sun",
             "단어 뜻": [
@@ -27628,11 +26350,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_220": [
-=======
     "category_215": [
->>>>>>> feature/django/main
         {
             "단어": "bad",
             "단어 뜻": [
@@ -27667,11 +26385,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_221": [
-=======
     "category_216": [
->>>>>>> feature/django/main
         {
             "단어": "runny",
             "단어 뜻": [
@@ -27699,11 +26413,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_222": [
-=======
     "category_217": [
->>>>>>> feature/django/main
         {
             "단어": "amount",
             "단어 뜻": [
@@ -27787,11 +26497,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_223": [
-=======
     "category_218": [
->>>>>>> feature/django/main
         {
             "단어": "decrease",
             "단어 뜻": [
@@ -27832,11 +26538,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_224": [
-=======
     "category_219": [
->>>>>>> feature/django/main
         {
             "단어": "house",
             "단어 뜻": [
@@ -27919,11 +26621,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_225": [
-=======
     "category_220": [
->>>>>>> feature/django/main
         {
             "단어": "stairs",
             "단어 뜻": [
@@ -27964,11 +26662,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_226": [
-=======
     "category_221": [
->>>>>>> feature/django/main
         {
             "단어": "fat",
             "단어 뜻": [
@@ -27999,11 +26693,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_227": [
-=======
     "category_222": [
->>>>>>> feature/django/main
         {
             "단어": "give",
             "단어 뜻": [
@@ -28188,11 +26878,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_228": [
-=======
     "category_223": [
->>>>>>> feature/django/main
         {
             "단어": "photo",
             "단어 뜻": [
@@ -28235,11 +26921,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_229": [
-=======
     "category_224": [
->>>>>>> feature/django/main
         {
             "단어": "apart",
             "단어 뜻": [
@@ -28323,11 +27005,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_230": [
-=======
     "category_225": [
->>>>>>> feature/django/main
         {
             "단어": "forgive",
             "단어 뜻": [
@@ -28385,11 +27063,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_231": [
-=======
     "category_226": [
->>>>>>> feature/django/main
         {
             "단어": "mislead",
             "단어 뜻": [
@@ -28462,11 +27136,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_232": [
-=======
     "category_227": [
->>>>>>> feature/django/main
         {
             "단어": "tea",
             "단어 뜻": [
@@ -28507,11 +27177,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_233": [
-=======
     "category_228": [
->>>>>>> feature/django/main
         {
             "단어": "fuel",
             "단어 뜻": [
@@ -28578,11 +27244,7 @@
             ]
         }
     ],
-<<<<<<< HEAD
-    "category_234": [
-=======
     "category_229": [
->>>>>>> feature/django/main
         {
             "단어": "happen",
             "단어 뜻": [
