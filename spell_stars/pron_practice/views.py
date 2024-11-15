@@ -7,11 +7,9 @@ from django.http import JsonResponse
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from vocab_mode.models import Word
-import random
 import warnings
 import whisper
-
-# from utils.PronunciationChecker.manage import process_audio_files
+from utils.PronunciationChecker.manage import process_audio_files
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 
@@ -23,14 +21,22 @@ model = whisper.load_model("small")
 
 # 발음 연습 페이지를 렌더링하는 뷰
 def pronunciation_practice_view(request):
-    random_word = Word.objects.values("word", "meanings").order_by("?").first()
+    random_word = Word.objects.values("word", "meanings", "file_path").order_by("?").first()
+
+    pronunciation_score = 0  # 기본값 설정 (처음에는 점수가 없음)
 
     if random_word:
         request.session["target_word"] = random_word["word"]
         return render(
             request,
             "pron_practice/pron_practice.html",
-            {"word": random_word["word"], "MEDIA_URL": settings.MEDIA_URL},
+            {
+                "word": random_word["word"],
+                "meanings": random_word["meanings"],
+                "file_path": random_word["file_path"],
+                "pronunciation_score": pronunciation_score,  # 초기 점수
+                "MEDIA_URL": settings.MEDIA_URL
+            },
         )
     else:
         return JsonResponse(
@@ -131,14 +137,19 @@ def evaluate_pronunciation(request):
                 )
 
             # 발음 비교 수행
-            # result = process_audio_files(native_file_path, full_path, target_word)
+            result = process_audio_files(native_file_path, full_path, target_word)
 
-            # return JsonResponse({
-            #     "status": "success",
-            #     "score": result['score'],
-            #     "feedback": result['feedback'],
-            #     "target_word": target_word,
-            # })
+            # 점수를 세션에 저장
+            pronunciation_score = result['result']['overall_score']
+            request.session['pronunciation_score'] = pronunciation_score
+            print(pronunciation_score)
+
+            # 점수와 피드백을 JSON으로 반환
+            return JsonResponse({
+                "status": "success",
+                "score": pronunciation_score,
+                "target_word": target_word,
+            })
 
         return JsonResponse({"error": "Invalid request"}, status=400)
 

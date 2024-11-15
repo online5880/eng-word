@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    
     // 마이크 버튼 이벤트
     if (micButton) {
         micButton.addEventListener('click', async function () {
@@ -58,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
 
     // 녹음 시작
     function startRecording(stream) {
@@ -97,6 +95,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     statusText.textContent = '녹음이 성공적으로 저장되었습니다.';
                     if (audioPlayer) {
                         audioPlayer.src = '/' + data.file_path;
+                    }
+
+                    // 서버에서 점수와 피드백 받기
+                    if (data.score !== undefined && data.feedback !== undefined) {
+                        console.log('서버에서 받은 점수:', data.score);  // 점수 출력
+                        console.log('서버에서 받은 피드백:', data.feedback);  // 피드백 출력
+                        displayFeedback(data.score, data.feedback);  // 점수와 피드백을 표시
                     }
                 } else {
                     statusText.textContent = '녹음 저장에 실패했습니다.';
@@ -148,8 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // 피드백 표시
     function displayFeedback(score, feedback) {
         console.log(`점수: ${score}, 피드백: ${feedback}`);
-        document.getElementById("score").textContent = score;
-        document.getElementById("score-bar").style.width = score + "%";
+        document.getElementById("score").textContent = score;  // 점수 업데이트
+        document.getElementById("score-bar").style.width = score + "%";  // 점수에 맞는 프로그레스 바 업데이트
 
         const feedbackSection = document.getElementById("feedback-section");
         const feedbackDisplay = document.getElementById("feedback");
@@ -158,11 +163,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const progressBar = document.getElementById('score-bar');
         if (score >= 80) {
-            progressBar.className = 'green';
+            progressBar.className = 'green';  // 80점 이상은 녹색
         } else if (score >= 60) {
-            progressBar.className = 'yellow';
+            progressBar.className = 'yellow';  // 60점 이상은 노란색
         } else {
-            progressBar.className = 'red';
+            progressBar.className = 'red';  // 그 외 점수는 빨간색
         }
     }
 
