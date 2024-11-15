@@ -1,0 +1,6105 @@
+{
+    "knife": {
+        "meanings": [
+            "칼"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a knife.",
+                "korean": "그것은 칼이야."
+            }
+        ],
+        "category": 0
+    },
+    "scissors": {
+        "meanings": [
+            "가위"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Here are scissors.",
+                "korean": "여기에 가위가 있어."
+            }
+        ],
+        "category": 0
+    },
+    "cut": {
+        "meanings": [
+            "자르다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They cut the paper.",
+                "korean": "그들은 종이를 자른다."
+            }
+        ],
+        "category": 0
+    },
+    "fork": {
+        "meanings": [
+            "포크"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a fork.",
+                "korean": "그것은 포크야."
+            }
+        ],
+        "category": 0
+    },
+    "pull": {
+        "meanings": [
+            "끌다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He can pull the car.",
+                "korean": "그는 그 자동차를 끌 수 있어."
+            }
+        ],
+        "category": 0
+    },
+    "push": {
+        "meanings": [
+            "밀다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look! He can push the car.",
+                "korean": "봐! 그는 자동차를 밀 수 있 어."
+            }
+        ],
+        "category": 0
+    },
+    "help": {
+        "meanings": [
+            "도와주다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can’t help you.",
+                "korean": "나는 너를 도울 수 없어."
+            }
+        ],
+        "category": 0
+    },
+    "lunch box": {
+        "meanings": [
+            "도시락"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a lunch box.",
+                "korean": "그것은 도시락이야."
+            }
+        ],
+        "category": 1
+    },
+    "box": {
+        "meanings": [
+            "상자"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want a box.",
+                "korean": "나는 상자 하나를 원해."
+            }
+        ],
+        "category": 1
+    },
+    "card": {
+        "meanings": [
+            "카드"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Here is my card.",
+                "korean": "여기 내 카드야."
+            }
+        ],
+        "category": 1
+    },
+    "gift": {
+        "meanings": [
+            "선물"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Here is my gift.",
+                "korean": "여기 내 선물이야."
+            }
+        ],
+        "category": 1
+    },
+    "key": {
+        "meanings": [
+            "열쇠"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want a key.",
+                "korean": "나는 열쇠 하나를 원해."
+            }
+        ],
+        "category": 1
+    },
+    "ticket": {
+        "meanings": [
+            "표"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have two tickets.",
+                "korean": "나는 표 두 장이 있어."
+            }
+        ],
+        "category": 1
+    },
+    "door": {
+        "meanings": [
+            "옷"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The door is small.",
+                "korean": "그 문은 작아."
+            }
+        ],
+        "category": 1
+    },
+    "window": {
+        "meanings": [
+            "창문"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The window is clean.",
+                "korean": "그 창문은 깨끗해."
+            }
+        ],
+        "category": 1
+    },
+    "button": {
+        "meanings": [
+            "단추"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The button is big.",
+                "korean": "그 단추는 커."
+            }
+        ],
+        "category": 1
+    },
+    "breakfast": {
+        "meanings": [
+            "아침 식사"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have breakfast.",
+                "korean": "나는 아침을 먹어."
+            }
+        ],
+        "category": 2
+    },
+    "lunch": {
+        "meanings": [
+            "점심 식사"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have lunch.",
+                "korean": "나는 점심을 먹어."
+            }
+        ],
+        "category": 2
+    },
+    "dinner": {
+        "meanings": [
+            "저녁 식사"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have dinner.",
+                "korean": "나는 저녁을 먹어."
+            }
+        ],
+        "category": 2
+    },
+    "morning": {
+        "meanings": [
+            "아침"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s sunny in the morning.",
+                "korean": "아침에는 맑아."
+            }
+        ],
+        "category": 2
+    },
+    "afternoon": {
+        "meanings": [
+            "오후"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s hot in the afternoon.",
+                "korean": "오후에는 더워."
+            }
+        ],
+        "category": 2
+    },
+    "evening": {
+        "meanings": [
+            "저녁"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s cool in the evening.",
+                "korean": "저녁에는 시원해."
+            }
+        ],
+        "category": 2
+    },
+    "night": {
+        "meanings": [
+            "밤"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s cold at night.",
+                "korean": "밤에는 추워."
+            }
+        ],
+        "category": 2
+    },
+    "home": {
+        "meanings": [
+            "집"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m at home.",
+                "korean": "나는 집에 있어."
+            }
+        ],
+        "category": 2
+    },
+    "time": {
+        "meanings": [
+            "시간"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "What time is it now?",
+                "korean": "지금 몇 시야?"
+            }
+        ],
+        "category": 2
+    },
+    "o’clock": {
+        "meanings": [
+            "~시"
+        ],
+        "part_of_speech": "정각",
+        "examples": [
+            {
+                "english": "It’s three o’clock.",
+                "korean": "3시야."
+            }
+        ],
+        "category": 2
+    },
+    "dance": {
+        "meanings": [
+            "춤추다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look! She can dance.",
+                "korean": "봐! 그녀는 춤출 수 있어."
+            }
+        ],
+        "category": 3
+    },
+    "dancer": {
+        "meanings": [
+            "무용수"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We are dancers.",
+                "korean": "우리는 무용수야."
+            }
+        ],
+        "category": 3
+    },
+    "walk": {
+        "meanings": [
+            "걷다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can walk.",
+                "korean": "나는 걸을 수 있어."
+            }
+        ],
+        "category": 3
+    },
+    "train": {
+        "meanings": [
+            "기차"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The train is black.",
+                "korean": "그 기차는 검은색이야."
+            }
+        ],
+        "category": 3
+    },
+    "trip": {
+        "meanings": [
+            "여행"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They go on a trip every weekend.",
+                "korean": "그들은 주말마다 여행 을 가."
+            }
+        ],
+        "category": 3
+    },
+    "shop": {
+        "meanings": [
+            "가게"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a new shop.",
+                "korean": "그것은 새로운 가게야."
+            }
+        ],
+        "category": 3
+    },
+    "ski": {
+        "meanings": [
+            "스키를 타다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She can’t ski.",
+                "korean": "그녀는 스키를 탈 수 없어."
+            }
+        ],
+        "category": 4
+    },
+    "skiing": {
+        "meanings": [
+            "스키"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like skiing.",
+                "korean": "나를 스키를 좋아해."
+            }
+        ],
+        "category": 4
+    },
+    "skate": {
+        "meanings": [
+            "스케이트를 타다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He can’t skate.",
+                "korean": "그는 스케이트를 탈 수 없어."
+            }
+        ],
+        "category": 4
+    },
+    "bike": {
+        "meanings": [
+            "자전거"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The bike is brown.",
+                "korean": "그 자전거는 갈색이야."
+            }
+        ],
+        "category": 4
+    },
+    "swim": {
+        "meanings": [
+            "수영하다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can’t swim.",
+                "korean": "나는 수영할 수 없어."
+            }
+        ],
+        "category": 5
+    },
+    "pool": {
+        "meanings": [
+            "수영장"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m at the pool.",
+                "korean": "나는 수영장에 있어."
+            }
+        ],
+        "category": 5
+    },
+    "swimming": {
+        "meanings": [
+            "수영"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like swimming.",
+                "korean": "나는 수영을 좋아해."
+            }
+        ],
+        "category": 5
+    },
+    "jump": {
+        "meanings": [
+            "깡충 뛰다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can jump.",
+                "korean": "나는 깡충 뛸 수 있어."
+            }
+        ],
+        "category": 5
+    },
+    "run": {
+        "meanings": [
+            "달리다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look! I can run.",
+                "korean": "봐! 나는 달릴 수 있어."
+            }
+        ],
+        "category": 5
+    },
+    "fly": {
+        "meanings": [
+            "날다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can fly.",
+                "korean": "나는 날 수 있어."
+            }
+        ],
+        "category": 5
+    },
+    "go": {
+        "meanings": [
+            "가다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Go there, please.",
+                "korean": "거기로 가 주세요."
+            }
+        ],
+        "category": 5
+    },
+    "throw": {
+        "meanings": [
+            "던지다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s throw a ball.",
+                "korean": "공을 던지자."
+            }
+        ],
+        "category": 5
+    },
+    "party": {
+        "meanings": [
+            "파티"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s have a party.",
+                "korean": "파티를 열자"
+            }
+        ],
+        "category": 6
+    },
+    "have a party": {
+        "meanings": [
+            "파티를 하다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s have a party.",
+                "korean": "파티를 하자."
+            }
+        ],
+        "category": 6
+    },
+    "birthday": {
+        "meanings": [
+            "생일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Happy birthday!",
+                "korean": "생일 축하해!."
+            }
+        ],
+        "category": 6
+    },
+    "picnic": {
+        "meanings": [
+            "소풍"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We go on a picnic every weekend.",
+                "korean": "우리는 주말마다 소풍 을 가."
+            }
+        ],
+        "category": 6
+    },
+    "piano": {
+        "meanings": [
+            "피아노"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s play the piano.",
+                "korean": "피아노를 치자."
+            }
+        ],
+        "category": 7
+    },
+    "violin": {
+        "meanings": [
+            "바이올린"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s play the violin.",
+                "korean": "바이올린을 켜자."
+            }
+        ],
+        "category": 7
+    },
+    "music": {
+        "meanings": [
+            "음악"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They listen to music.",
+                "korean": "그들은 음악을 들어."
+            }
+        ],
+        "category": 7
+    },
+    "musical": {
+        "meanings": [
+            "뮤지컬"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We watch a musical.",
+                "korean": "우리는 뮤지컬을 봐."
+            }
+        ],
+        "category": 7
+    },
+    "light": {
+        "meanings": [
+            "가벼운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s light.",
+                "korean": "그것은 가벼워."
+            }
+        ],
+        "category": 7
+    },
+    "drum": {
+        "meanings": [
+            "북"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s play the drum.",
+                "korean": "드럼을 치자."
+            }
+        ],
+        "category": 7
+    },
+    "guitar": {
+        "meanings": [
+            "기타"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s play the guitar.",
+                "korean": "기타를 치자."
+            }
+        ],
+        "category": 7
+    },
+    "recorder": {
+        "meanings": [
+            "피리"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s play the recorder.",
+                "korean": "피리를 불자"
+            }
+        ],
+        "category": 7
+    },
+    "song": {
+        "meanings": [
+            "노래"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s sing a song.",
+                "korean": "노래를 부르자."
+            },
+            {
+                "english": "They sing songs.",
+                "korean": "그들은 노래 불러."
+            }
+        ],
+        "category": 7
+    },
+    "radio": {
+        "meanings": [
+            "라디오"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The radio is yellow.",
+                "korean": "그 라디오는 노란색이야."
+            }
+        ],
+        "category": 7
+    },
+    "singer": {
+        "meanings": [
+            "가수"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is a singer.",
+                "korean": "그는 가수야."
+            }
+        ],
+        "category": 7
+    },
+    "fast": {
+        "meanings": [
+            "빠른"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s fast.",
+                "korean": "그것은 빨라."
+            }
+        ],
+        "category": 8
+    },
+    "slow": {
+        "meanings": [
+            "느린"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The turtle is slow.",
+                "korean": "그 거북이는 느려."
+            }
+        ],
+        "category": 8
+    },
+    "long": {
+        "meanings": [
+            "긴"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s long.",
+                "korean": "그것은 길어."
+            }
+        ],
+        "category": 8
+    },
+    "short": {
+        "meanings": [
+            "짧은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s short.",
+                "korean": "그것은 짧아."
+            }
+        ],
+        "category": 8
+    },
+    "smart": {
+        "meanings": [
+            "똑똑한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She is smart.",
+                "korean": "그녀는 똑똑해."
+            }
+        ],
+        "category": 8
+    },
+    "foolish": {
+        "meanings": [
+            "바보 같은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is foolish.",
+                "korean": "그는 바보 같아."
+            }
+        ],
+        "category": 8
+    },
+    "clean": {
+        "meanings": [
+            "깨끗한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s clean.",
+                "korean": "그것은 깨끗해."
+            }
+        ],
+        "category": 9
+    },
+    "dirty": {
+        "meanings": [
+            "더러운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The table is dirty.",
+                "korean": "그 탁자는 더러워."
+            }
+        ],
+        "category": 9
+    },
+    "bad": {
+        "meanings": [
+            "나쁜"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is bad.",
+                "korean": "그는 나빠."
+            }
+        ],
+        "category": 9
+    },
+    "good": {
+        "meanings": [
+            "기분이 좋은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They’re good.",
+                "korean": "그들은 기분이 좋아."
+            }
+        ],
+        "category": 9
+    },
+    "honest": {
+        "meanings": [
+            "정직한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We’re honest.",
+                "korean": "우리는 정직해."
+            }
+        ],
+        "category": 9
+    },
+    "early": {
+        "meanings": [
+            "일찍"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I get up early.",
+                "korean": "나는 일찍 일어나."
+            }
+        ],
+        "category": 10
+    },
+    "late": {
+        "meanings": [
+            "늦은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I get up late.",
+                "korean": "나는 늦게 일어나."
+            }
+        ],
+        "category": 10
+    },
+    "close": {
+        "meanings": [
+            "닫다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Close the door.",
+                "korean": "문을 닫아."
+            }
+        ],
+        "category": 10
+    },
+    "come": {
+        "meanings": [
+            "오다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Come here, please.",
+                "korean": "여기로 오세요."
+            }
+        ],
+        "category": 10
+    },
+    "open": {
+        "meanings": [
+            "열다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Open the window.",
+                "korean": "창문을 열어."
+            }
+        ],
+        "category": 10
+    },
+    "quiet": {
+        "meanings": [
+            "조용한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are quiet.",
+                "korean": "그들은 조용해."
+            }
+        ],
+        "category": 11
+    },
+    "noisy": {
+        "meanings": [
+            "시끄러운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are noisy.",
+                "korean": "그들은 시끄러워."
+            }
+        ],
+        "category": 11
+    },
+    "sorry": {
+        "meanings": [
+            "미안한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m sorry.",
+                "korean": "미안해."
+            }
+        ],
+        "category": 11
+    },
+    "stop": {
+        "meanings": [
+            "멈추다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Stop here, please.",
+                "korean": "여기에 멈추세요."
+            }
+        ],
+        "category": 11
+    },
+    "hear": {
+        "meanings": [
+            "듣다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can’t hear you.",
+                "korean": "네 말이 안 들려."
+            }
+        ],
+        "category": 11
+    },
+    "understand": {
+        "meanings": [
+            "이해하다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He can understand it.",
+                "korean": "그는 그것을 이해할 수 있어."
+            }
+        ],
+        "category": 11
+    },
+    "listen": {
+        "meanings": [
+            "듣다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s listen to the song.",
+                "korean": "노래를 듣자"
+            }
+        ],
+        "category": 11
+    },
+    "bookstore": {
+        "meanings": [
+            "서점"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We’re in the bookstore.",
+                "korean": "우리는 서점에 있어."
+            }
+        ],
+        "category": 12
+    },
+    "bookshelf": {
+        "meanings": [
+            "책장"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The bookshelf is dirty.",
+                "korean": "그 책장은 더러워."
+            }
+        ],
+        "category": 12
+    },
+    "bank": {
+        "meanings": [
+            "은행"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We go to the bank.",
+                "korean": "우리는 은행에 가."
+            }
+        ],
+        "category": 12
+    },
+    "library": {
+        "meanings": [
+            "도서관"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m in the library.",
+                "korean": "나는 도서관에 있어."
+            }
+        ],
+        "category": 12
+    },
+    "book": {
+        "meanings": [
+            "책"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have a book.",
+                "korean": "나는 책 한 권이 있어."
+            }
+        ],
+        "category": 12
+    },
+    "post office": {
+        "meanings": [
+            "우체국"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s go to the post office.",
+                "korean": "우체국에 가자."
+            }
+        ],
+        "category": 12
+    },
+    "closet": {
+        "meanings": [
+            "옷장"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The closet is clean.",
+                "korean": "그 옷장은 깨끗해."
+            }
+        ],
+        "category": 12
+    },
+    "fridge": {
+        "meanings": [
+            "냉장고"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The fridge is small.",
+                "korean": "그 냉장고는 작아."
+            }
+        ],
+        "category": 12
+    },
+    "house": {
+        "meanings": [
+            "집"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The house is big.",
+                "korean": "그 집은 커."
+            }
+        ],
+        "category": 12
+    },
+    "wall": {
+        "meanings": [
+            "벽"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The wall is dirty.",
+                "korean": "그 벽은 더러워"
+            }
+        ],
+        "category": 12
+    },
+    "apartment": {
+        "meanings": [
+            "아파트"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a big apartment.",
+                "korean": "그것은 큰 아파트야."
+            }
+        ],
+        "category": 12
+    },
+    "hospital": {
+        "meanings": [
+            "병원"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I go to the hospital.",
+                "korean": "나는 병원에 가."
+            }
+        ],
+        "category": 13
+    },
+    "ambulance": {
+        "meanings": [
+            "구급차"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The ambulance is white.",
+                "korean": "그 구급차는 흰색이야."
+            }
+        ],
+        "category": 13
+    },
+    "nurse": {
+        "meanings": [
+            "간호사"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She is a nurse.",
+                "korean": "그녀는 간호사야."
+            }
+        ],
+        "category": 13
+    },
+    "telephone": {
+        "meanings": [
+            "전화"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The telephone is white.",
+                "korean": "그 전화기는 흰색이야."
+            }
+        ],
+        "category": 13
+    },
+    "doctor": {
+        "meanings": [
+            "의사"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Ann is a doctor.",
+                "korean": "Ann은 의사야."
+            }
+        ],
+        "category": 13
+    },
+    "ball": {
+        "meanings": [
+            "공"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have a ball.",
+                "korean": "나는 공 하나가 있어."
+            }
+        ],
+        "category": 14
+    },
+    "badminton": {
+        "meanings": [
+            "배드민턴"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s play badminton.",
+                "korean": "배드민턴을 치자."
+            }
+        ],
+        "category": 14
+    },
+    "baseball": {
+        "meanings": [
+            "야구"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s play baseball.",
+                "korean": "야구를 하자."
+            }
+        ],
+        "category": 14
+    },
+    "basketball": {
+        "meanings": [
+            "농구"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We are playing basketball.",
+                "korean": "우리는 농구를 하고 있어."
+            }
+        ],
+        "category": 14
+    },
+    "golf": {
+        "meanings": [
+            "골프"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s play golf.",
+                "korean": "골프를 치자."
+            }
+        ],
+        "category": 14
+    },
+    "ping-pong": {
+        "meanings": [
+            "탁구"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We are playing ping-pong.",
+                "korean": "우리는 탁구를 치고 있어."
+            }
+        ],
+        "category": 14
+    },
+    "soccer": {
+        "meanings": [
+            "축구"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We are playing soccer.",
+                "korean": "우리는 축구를 하고 있어."
+            }
+        ],
+        "category": 14
+    },
+    "sport": {
+        "meanings": [
+            "운동"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We like sports.",
+                "korean": "우리는 운동을 좋아해."
+            }
+        ],
+        "category": 14
+    },
+    "tennis": {
+        "meanings": [
+            "테니스"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We are playing tennis.",
+                "korean": "우리는 테니스를 치고 있어."
+            }
+        ],
+        "category": 14
+    },
+    "volleyball": {
+        "meanings": [
+            "배구"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s play volleyball.",
+                "korean": "배구를 하자."
+            }
+        ],
+        "category": 14
+    },
+    "television": {
+        "meanings": [
+            "텔레비전"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The television is red.",
+                "korean": "그 텔레비전은 빨간색이야."
+            },
+            {
+                "english": "They watch a movie on television.",
+                "korean": "그들은 텔레비전으로 영화를 봐."
+            }
+        ],
+        "category": 14
+    },
+    "computer game": {
+        "meanings": [
+            "컴퓨터 게임"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We play computer games.",
+                "korean": "우리는 컴퓨터 게임을 해."
+            }
+        ],
+        "category": 14
+    },
+    "bridge": {
+        "meanings": [
+            "다리"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The bridge is long.",
+                "korean": "그 다리는 길어."
+            }
+        ],
+        "category": 14
+    },
+    "board": {
+        "meanings": [
+            "칠판"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The board is big.",
+                "korean": "그 칠판은 커."
+            }
+        ],
+        "category": 14
+    },
+    "play": {
+        "meanings": [
+            "(게임, 놀이등 하다"
+        ],
+        "part_of_speech": "을",
+        "examples": [
+            {
+                "english": "Do you play soccer?",
+                "korean": "너는 축구를 하니?"
+            }
+        ],
+        "category": 14
+    },
+    "bird": {
+        "meanings": [
+            "새"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have a bird.",
+                "korean": "나는 새 한 마리가 있어."
+            }
+        ],
+        "category": 15
+    },
+    "chicken": {
+        "meanings": [
+            "통닭"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want chicken.",
+                "korean": "나는 통닭을 원해."
+            }
+        ],
+        "category": 15
+    },
+    "bat": {
+        "meanings": [
+            "야구 방망이"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want a bat.",
+                "korean": "나는 야구 방망이 하나를 원해."
+            }
+        ],
+        "category": 15
+    },
+    "plane": {
+        "meanings": [
+            "비행기"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The plane gray.",
+                "korean": "그 비행기는 회색이야."
+            }
+        ],
+        "category": 15
+    },
+    "curry": {
+        "meanings": [
+            "카레"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You like curry.",
+                "korean": "너는 카레를 좋아하는구나."
+            }
+        ],
+        "category": 15
+    },
+    "bee": {
+        "meanings": [
+            "벌"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We see the bees in the sky.",
+                "korean": "우리는 하늘에 있는 별을 봐."
+            }
+        ],
+        "category": 15
+    },
+    "pilot": {
+        "meanings": [
+            "조종사"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is a pilot.",
+                "korean": "그는 조종사야."
+            }
+        ],
+        "category": 15
+    },
+    "cat": {
+        "meanings": [
+            "고양이"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have a cat.",
+                "korean": "나는 고양이 한 마리가 있어."
+            }
+        ],
+        "category": 16
+    },
+    "dog": {
+        "meanings": [
+            "개"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have a dog.",
+                "korean": "나는 개 한 마리가 있어."
+            }
+        ],
+        "category": 16
+    },
+    "puppy": {
+        "meanings": [
+            "강아지"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We see the puppies in the park.",
+                "korean": "우리는 공원에서 강아지들 을 봐."
+            }
+        ],
+        "category": 16
+    },
+    "pet": {
+        "meanings": [
+            "애완동물"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They have a pet.",
+                "korean": "그들은 애완동물이 있어."
+            }
+        ],
+        "category": 16
+    },
+    "doll": {
+        "meanings": [
+            "인형"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have a doll.",
+                "korean": "나는 인형 하나가 있어."
+            }
+        ],
+        "category": 16
+    },
+    "robot": {
+        "meanings": [
+            "로봇"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want a robot.",
+                "korean": "나는 로봇 하나를 원해."
+            }
+        ],
+        "category": 16
+    },
+    "computer": {
+        "meanings": [
+            "컴퓨터"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The computer is gray.",
+                "korean": "그 컴퓨터는 회색이야."
+            }
+        ],
+        "category": 16
+    },
+    "mouse": {
+        "meanings": [
+            "쥐"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a mouse.",
+                "korean": "그것은 쥐야."
+            }
+        ],
+        "category": 16
+    },
+    "spider": {
+        "meanings": [
+            "거미"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I don’t like spiders.",
+                "korean": "나는 거미를 좋아하지 않아."
+            }
+        ],
+        "category": 16
+    },
+    "camera": {
+        "meanings": [
+            "카메라"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That is his camera.",
+                "korean": "저것은 그의 카메라야."
+            }
+        ],
+        "category": 16
+    },
+    "fan": {
+        "meanings": [
+            "부채"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is my fan.",
+                "korean": "이것은 나의 부채야."
+            }
+        ],
+        "category": 16
+    },
+    "fish": {
+        "meanings": [
+            "물고기"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the fish.",
+                "korean": "물고기를 봐."
+            }
+        ],
+        "category": 17
+    },
+    "fishing": {
+        "meanings": [
+            "낚시"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "His hobby is fishing.",
+                "korean": "그의 취미는 낚시야."
+            }
+        ],
+        "category": 17
+    },
+    "boat": {
+        "meanings": [
+            "보트"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The boat is yellow.",
+                "korean": "그 보트는 노란색이야."
+            }
+        ],
+        "category": 17
+    },
+    "river": {
+        "meanings": [
+            "강"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the river.",
+                "korean": "강을 봐."
+            }
+        ],
+        "category": 17
+    },
+    "sea": {
+        "meanings": [
+            "바다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the sea.",
+                "korean": "바다를 봐."
+            }
+        ],
+        "category": 17
+    },
+    "dolphin": {
+        "meanings": [
+            "돌고래"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They see the pink dolphins in the sea.",
+                "korean": "구들은 바다에서 분홍 돌고래를 봐."
+            }
+        ],
+        "category": 17
+    },
+    "sink": {
+        "meanings": [
+            "싱크대"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The sink is new.",
+                "korean": "그 싱크대는 새것이야."
+            }
+        ],
+        "category": 17
+    },
+    "tiger": {
+        "meanings": [
+            "호랑이"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the tiger.",
+                "korean": "호랑이를 봐"
+            }
+        ],
+        "category": 18
+    },
+    "lion": {
+        "meanings": [
+            "사자"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like lions.",
+                "korean": "나는 사자를 좋아해."
+            }
+        ],
+        "category": 18
+    },
+    "zoo": {
+        "meanings": [
+            "동물원"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m at the zoo.",
+                "korean": "나는 동물원에 있어."
+            }
+        ],
+        "category": 18
+    },
+    "bear": {
+        "meanings": [
+            "곰"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the bear.",
+                "korean": "곰을 봐."
+            }
+        ],
+        "category": 18
+    },
+    "cow": {
+        "meanings": [
+            "젖소"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look! I have a cow.",
+                "korean": "봐! 나는 젖소 한 마리가 있어."
+            }
+        ],
+        "category": 18
+    },
+    "elephant": {
+        "meanings": [
+            "코끼리"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the elephant.",
+                "korean": "코끼리를 봐."
+            }
+        ],
+        "category": 18
+    },
+    "monkey": {
+        "meanings": [
+            "원숭이"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look! I have a monkey.",
+                "korean": "봐! 나는 원숭이 한 마리가 있어."
+            }
+        ],
+        "category": 18
+    },
+    "pig": {
+        "meanings": [
+            "돼지"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look! I have a pig.",
+                "korean": "봐! 나는 돼지 한 마리가 있어."
+            }
+        ],
+        "category": 18
+    },
+    "frog": {
+        "meanings": [
+            "개구리"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like frogs.",
+                "korean": "나는 개구리를 좋아해."
+            }
+        ],
+        "category": 18
+    },
+    "giraffe": {
+        "meanings": [
+            "기린"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like giraffes.",
+                "korean": "나는 기린을 좋아해."
+            }
+        ],
+        "category": 18
+    },
+    "kangaroo": {
+        "meanings": [
+            "캥거루"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like kangaroos.",
+                "korean": "나는 캥거루를 좋아해."
+            }
+        ],
+        "category": 18
+    },
+    "rabbit": {
+        "meanings": [
+            "토끼"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I don’t like rabbits.",
+                "korean": "나는 토기를 좋아하지 않아."
+            }
+        ],
+        "category": 18
+    },
+    "wolf": {
+        "meanings": [
+            "늑대"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a wolf.",
+                "korean": "그것은 늑대야."
+            }
+        ],
+        "category": 18
+    },
+    "zebra": {
+        "meanings": [
+            "얼룩말"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a zebra.",
+                "korean": "그것은 얼룩말이야."
+            }
+        ],
+        "category": 18
+    },
+    "deer": {
+        "meanings": [
+            "사슴"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They see the deer in the zoo.",
+                "korean": "구들은 동물원에서 사슴을 봐."
+            }
+        ],
+        "category": 18
+    },
+    "lamb": {
+        "meanings": [
+            "어린 양"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the lambs.",
+                "korean": "어린 양을 봐."
+            }
+        ],
+        "category": 18
+    },
+    "snake": {
+        "meanings": [
+            "뱀"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the snakes.",
+                "korean": "뱀을 봐."
+            }
+        ],
+        "category": 18
+    },
+    "melon": {
+        "meanings": [
+            "멜론"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is a melon.",
+                "korean": "이것은 멜론이야."
+            }
+        ],
+        "category": 19
+    },
+    "watermelon": {
+        "meanings": [
+            "수박"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Do you like watermelons?",
+                "korean": "너는 수박을 좋아하니?"
+            }
+        ],
+        "category": 19
+    },
+    "grapes": {
+        "meanings": [
+            "포도"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like grapes.",
+                "korean": "나는 포도를 좋아해."
+            }
+        ],
+        "category": 19
+    },
+    "lemon": {
+        "meanings": [
+            "레몬"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That is a lemon.",
+                "korean": "저것은 레몬이야"
+            }
+        ],
+        "category": 19
+    },
+    "strawberry": {
+        "meanings": [
+            "딸기"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is a strawberry.",
+                "korean": "이것은 딸기야"
+            }
+        ],
+        "category": 19
+    },
+    "juice": {
+        "meanings": [
+            "주스"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like juice.",
+                "korean": "나는 주스를 좋아해."
+            }
+        ],
+        "category": 19
+    },
+    "carrot": {
+        "meanings": [
+            "당근"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Do you want carrots?",
+                "korean": "너는 당근을 원하니?"
+            }
+        ],
+        "category": 19
+    },
+    "onion": {
+        "meanings": [
+            "양파"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Do you want onions?",
+                "korean": "너는 양파를 원하니?"
+            }
+        ],
+        "category": 19
+    },
+    "pepper": {
+        "meanings": [
+            "후추"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I don’t like pepper.",
+                "korean": "나는 후추를 좋아하지 않아."
+            }
+        ],
+        "category": 19
+    },
+    "jam": {
+        "meanings": [
+            "잼"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want jam.",
+                "korean": "나는 잼을 원해."
+            }
+        ],
+        "category": 19
+    },
+    "orange": {
+        "meanings": [
+            "오렌지"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is an orange.",
+                "korean": "이것은 오렌지야."
+            }
+        ],
+        "category": 20
+    },
+    "black": {
+        "meanings": [
+            "검은색, 검은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a black ball.",
+                "korean": "그것은 검은색 공이야."
+            }
+        ],
+        "category": 20
+    },
+    "blue": {
+        "meanings": [
+            "파란색, 파란"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a blue doll.",
+                "korean": "그것은 파란색 인형이야."
+            }
+        ],
+        "category": 20
+    },
+    "brown": {
+        "meanings": [
+            "갈색, 갈색의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s brown.",
+                "korean": "그것은 갈색이야."
+            }
+        ],
+        "category": 20
+    },
+    "color": {
+        "meanings": [
+            "색깔"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like this color.",
+                "korean": "나는 이 색깔을 좋아해."
+            }
+        ],
+        "category": 20
+    },
+    "gray": {
+        "meanings": [
+            "회색, 회색의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s gray.",
+                "korean": "그것은 회색이야."
+            }
+        ],
+        "category": 20
+    },
+    "green": {
+        "meanings": [
+            "초록색, 초록"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s green.",
+                "korean": "그것은 초록색이야."
+            }
+        ],
+        "category": 20
+    },
+    "pink": {
+        "meanings": [
+            "분홍색, 분홍"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a pink box.",
+                "korean": "그것은 분홍색 상자야."
+            }
+        ],
+        "category": 20
+    },
+    "red": {
+        "meanings": [
+            "빨간색, 빨간"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s red.",
+                "korean": "그것은 빨간색이야."
+            }
+        ],
+        "category": 20
+    },
+    "white": {
+        "meanings": [
+            "흰색, 흰"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s white.",
+                "korean": "그것은 흰색이야."
+            }
+        ],
+        "category": 20
+    },
+    "yellow": {
+        "meanings": [
+            "노란색, 노란"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a yellow pen.",
+                "korean": "그것은 노란색 펜이야."
+            }
+        ],
+        "category": 20
+    },
+    "dark": {
+        "meanings": [
+            "어두운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That light is dark.",
+                "korean": "저 빛은 어두워."
+            }
+        ],
+        "category": 20
+    },
+    "rainbow": {
+        "meanings": [
+            "무지개"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the rainbow.",
+                "korean": "무지개를 봐."
+            }
+        ],
+        "category": 20
+    },
+    "bright": {
+        "meanings": [
+            "밝은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This light is bright.",
+                "korean": "이 빛은 밝아."
+            }
+        ],
+        "category": 20
+    },
+    "peach": {
+        "meanings": [
+            "복숭아"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It is a peach.",
+                "korean": "그것은 복숭아야."
+            }
+        ],
+        "category": 21
+    },
+    "pear": {
+        "meanings": [
+            "배"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That is a pear.",
+                "korean": "저것은 배야."
+            }
+        ],
+        "category": 21
+    },
+    "apple": {
+        "meanings": [
+            "사과"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is an apple.",
+                "korean": "이것은 사과야."
+            }
+        ],
+        "category": 21
+    },
+    "flower": {
+        "meanings": [
+            "꽃"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look! It’s a flower.",
+                "korean": "봐! 그것은 꽃이야."
+            }
+        ],
+        "category": 21
+    },
+    "tree": {
+        "meanings": [
+            "나무"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the tree",
+                "korean": "나무를 봐."
+            }
+        ],
+        "category": 21
+    },
+    "plant": {
+        "meanings": [
+            "심다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We are planting flowers.",
+                "korean": "우리는 꽃을 심고 있어."
+            }
+        ],
+        "category": 21
+    },
+    "one": {
+        "meanings": [
+            "1, 하나의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have one cow.",
+                "korean": "나는 젓소 한 마리가 있어."
+            }
+        ],
+        "category": 22
+    },
+    "two": {
+        "meanings": [
+            "2, 둘의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You have two dogs.",
+                "korean": "너는 개 두 마리가 있구나."
+            }
+        ],
+        "category": 22
+    },
+    "three": {
+        "meanings": [
+            "3, 셋의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have three pigs.",
+                "korean": "나는 돼지 세 마리가 있어."
+            }
+        ],
+        "category": 22
+    },
+    "four": {
+        "meanings": [
+            "4, 넷의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have four cats.",
+                "korean": "너는 고양이 네 마리가 있구나."
+            }
+        ],
+        "category": 22
+    },
+    "five": {
+        "meanings": [
+            "5, 다섯의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have five fish.",
+                "korean": "나는 물고기 다섯 마리가 있어."
+            }
+        ],
+        "category": 22
+    },
+    "six": {
+        "meanings": [
+            "6, 여섯의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You have six apples.",
+                "korean": "너는 사과 여섯 개가 있구나."
+            }
+        ],
+        "category": 22
+    },
+    "seven": {
+        "meanings": [
+            "7, 일곱의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have seven pears.",
+                "korean": "나는 배 일곱 개가 있어."
+            }
+        ],
+        "category": 22
+    },
+    "eight": {
+        "meanings": [
+            "8, 여덟의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You have eight oranges.",
+                "korean": "너는 오렌지 여덟 개가 있구나."
+            }
+        ],
+        "category": 22
+    },
+    "nine": {
+        "meanings": [
+            "9, 아홉의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have nine kiwis.",
+                "korean": "나는 키위 아홉 개가 있어."
+            }
+        ],
+        "category": 22
+    },
+    "ten": {
+        "meanings": [
+            "10, 열의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You have ten strawberries.",
+                "korean": "너는 딸기 열 개가 있구나."
+            }
+        ],
+        "category": 22
+    },
+    "eleven": {
+        "meanings": [
+            "11, 열하나"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m eleven years old.",
+                "korean": "나는 열한 살이야."
+            }
+        ],
+        "category": 22
+    },
+    "twelve": {
+        "meanings": [
+            "12, 열둘"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You are twelve years old.",
+                "korean": "너도 열두 살이구나."
+            }
+        ],
+        "category": 22
+    },
+    "thirteen": {
+        "meanings": [
+            "13, 열셋"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is thirteen years old.",
+                "korean": "그는 열세 살이야."
+            }
+        ],
+        "category": 22
+    },
+    "fourteen": {
+        "meanings": [
+            "14, 열넷"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She is fourteen years old.",
+                "korean": "그녀는 열네 살이야."
+            }
+        ],
+        "category": 22
+    },
+    "fifteen": {
+        "meanings": [
+            "15, 열다섯"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are fifteen years old.",
+                "korean": "그들은 열다섯 살이야."
+            }
+        ],
+        "category": 22
+    },
+    "sixteen": {
+        "meanings": [
+            "16, 열여섯"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My sister is sixteen years old.",
+                "korean": "우리 누나는 열여섯 살이 야."
+            }
+        ],
+        "category": 22
+    },
+    "seventeen": {
+        "meanings": [
+            "17, 열일곱"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My brother is seventeen years old.",
+                "korean": "우리 형은 열일곱 살 이야."
+            }
+        ],
+        "category": 22
+    },
+    "eighteen": {
+        "meanings": [
+            "18, 열여덟"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My cousin is eighteen years old.",
+                "korean": "내 사촌은 열여덟 살이 야."
+            }
+        ],
+        "category": 22
+    },
+    "nineteen": {
+        "meanings": [
+            "19, 열아홉"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Kevin is nineteen years old.",
+                "korean": "Kevin은 열아홉 살이야."
+            }
+        ],
+        "category": 22
+    },
+    "twenty": {
+        "meanings": [
+            "20, 스물"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Becky is twenty years old.",
+                "korean": "Becky는 스무 살이야."
+            }
+        ],
+        "category": 22
+    },
+    "old": {
+        "meanings": [
+            "낡은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s an old car.",
+                "korean": "그것은 낡은 자동차야."
+            }
+        ],
+        "category": 22
+    },
+    "bus": {
+        "meanings": [
+            "버스"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The bus is green.",
+                "korean": "그 버스는 초록색이야."
+            }
+        ],
+        "category": 23
+    },
+    "bus stop": {
+        "meanings": [
+            "버스 정류장"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The bus stop is small.",
+                "korean": "그 버스 정류장은 작아."
+            }
+        ],
+        "category": 23
+    },
+    "subway station": {
+        "meanings": [
+            "지하철역"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’ go to the subway station.",
+                "korean": "지하철역에 가자."
+            }
+        ],
+        "category": 23
+    },
+    "train station": {
+        "meanings": [
+            "기차역"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s go to the train station.",
+                "korean": "기차역에 가자."
+            }
+        ],
+        "category": 23
+    },
+    "park": {
+        "meanings": [
+            "공원"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I go to the park.",
+                "korean": "나는 공원에 가."
+            }
+        ],
+        "category": 23
+    },
+    "playground": {
+        "meanings": [
+            "운동장"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We’re at the playground.",
+                "korean": "우리는 운동장에 있어."
+            }
+        ],
+        "category": 23
+    },
+    "taxi": {
+        "meanings": [
+            "택시"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The taxi is pink.",
+                "korean": "그 택시는 분홍색이야."
+            }
+        ],
+        "category": 23
+    },
+    "town": {
+        "meanings": [
+            "마을"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My town is big.",
+                "korean": "내 마을은 커."
+            }
+        ],
+        "category": 23
+    },
+    "airport": {
+        "meanings": [
+            "공항"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a small airport.",
+                "korean": "그것은 작은 공항이야."
+            }
+        ],
+        "category": 23
+    },
+    "city": {
+        "meanings": [
+            "도시"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The city is big.",
+                "korean": "그 도시는 커."
+            }
+        ],
+        "category": 23
+    },
+    "place": {
+        "meanings": [
+            "장소"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s visit the place.",
+                "korean": "그 장소에 방문하자."
+            }
+        ],
+        "category": 23
+    },
+    "road": {
+        "meanings": [
+            "길"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s an old road.",
+                "korean": "그것은 오래된 길이야."
+            }
+        ],
+        "category": 23
+    },
+    "fire engine": {
+        "meanings": [
+            "소방차"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The fire engine is red.",
+                "korean": "그 소방차는 빨간색이야."
+            }
+        ],
+        "category": 24
+    },
+    "fire station": {
+        "meanings": [
+            "소방서"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The fire station is big.",
+                "korean": "그 소방서는 커."
+            }
+        ],
+        "category": 24
+    },
+    "police station": {
+        "meanings": [
+            "경찰서"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The police station is big.",
+                "korean": "그 경찰서는 커."
+            }
+        ],
+        "category": 24
+    },
+    "fire fighter": {
+        "meanings": [
+            "소방관"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Tom is a fire fighter.",
+                "korean": "Tom은 소방관이야."
+            }
+        ],
+        "category": 24
+    },
+    "police officer": {
+        "meanings": [
+            "경찰관"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m a police officer.",
+                "korean": "나는 경찰관이야."
+            }
+        ],
+        "category": 24
+    },
+    "car": {
+        "meanings": [
+            "자동차"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The car is white.",
+                "korean": "그 자동차는 흰색이야."
+            }
+        ],
+        "category": 24
+    },
+    "truck": {
+        "meanings": [
+            "트럭"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The truck is blue.",
+                "korean": "그 트럭은 파란색이야."
+            }
+        ],
+        "category": 24
+    },
+    "stove": {
+        "meanings": [
+            "가스레인지"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The stove is big.",
+                "korean": "그 가스레인지는 커."
+            }
+        ],
+        "category": 24
+    },
+    "bread": {
+        "meanings": [
+            "빵"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like bread.",
+                "korean": "나는 빵을 좋아해."
+            },
+            {
+                "english": "Do you want bread?",
+                "korean": "너는 빵을 원하니?"
+            }
+        ],
+        "category": 25
+    },
+    "sandwich": {
+        "meanings": [
+            "샌드위치"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want sandwiches.",
+                "korean": "나는 샌드위치를 원해."
+            }
+        ],
+        "category": 25
+    },
+    "dish": {
+        "meanings": [
+            "접시"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a dish.",
+                "korean": "그것은 접시야."
+            }
+        ],
+        "category": 25
+    },
+    "cheese": {
+        "meanings": [
+            "치즈"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want cheese.",
+                "korean": "나는 치즈를 원해."
+            }
+        ],
+        "category": 25
+    },
+    "hamburger": {
+        "meanings": [
+            "햄버거"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like hamburgers.",
+                "korean": "나는 햄버거를 좋아해."
+            }
+        ],
+        "category": 25
+    },
+    "pizza": {
+        "meanings": [
+            "피자"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want pizza.",
+                "korean": "나는 피자를 원해."
+            }
+        ],
+        "category": 25
+    },
+    "salad": {
+        "meanings": [
+            "샐러드"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like salad.",
+                "korean": "나는 샐러드를 좋아해."
+            }
+        ],
+        "category": 25
+    },
+    "French fries": {
+        "meanings": [
+            "감자 튀김"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They like French fries.",
+                "korean": "그들은 감자 튀김을 좋아해."
+            }
+        ],
+        "category": 25
+    },
+    "hot dog": {
+        "meanings": [
+            "핫도그"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want a hot dog.",
+                "korean": "나는 핫도그를 원해."
+            }
+        ],
+        "category": 25
+    },
+    "spaghetti": {
+        "meanings": [
+            "스파게티"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want spaghetti.",
+                "korean": "나는 스파게티를 원해."
+            }
+        ],
+        "category": 25
+    },
+    "steak": {
+        "meanings": [
+            "스테이크"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We like steak.",
+                "korean": "우리는 스테이크를 좋아해."
+            },
+            {
+                "english": "I want steak.",
+                "korean": "나는 스테이크를 원해."
+            }
+        ],
+        "category": 25
+    },
+    "cook": {
+        "meanings": [
+            "요리사",
+            "요리하다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m a cook.",
+                "korean": "나는 요리사야."
+            },
+            {
+                "english": "She is cooking.",
+                "korean": "그녀는 요리하고 있어."
+            }
+        ],
+        "category": 25
+    },
+    "arm": {
+        "meanings": [
+            "팔"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Touch your arm.",
+                "korean": "네 팔을 만져."
+            },
+            {
+                "english": "Your arm is long.",
+                "korean": "네 팔은 길구나."
+            }
+        ],
+        "category": 26
+    },
+    "foot": {
+        "meanings": [
+            "발"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My foot hurts.",
+                "korean": "내 발이 아파."
+            }
+        ],
+        "category": 26
+    },
+    "leg": {
+        "meanings": [
+            "다리"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Touch your leg.",
+                "korean": "네 다리를 만져."
+            }
+        ],
+        "category": 26
+    },
+    "knee": {
+        "meanings": [
+            "무릎"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My knee hurts.",
+                "korean": "내 무릎이 아파."
+            }
+        ],
+        "category": 26
+    },
+    "shoulder": {
+        "meanings": [
+            "어깨"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My shoulder hurts.",
+                "korean": "내 어깨가 아파."
+            }
+        ],
+        "category": 26
+    },
+    "toe": {
+        "meanings": [
+            "발가락"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My toe hurts.",
+                "korean": "내 발가락이 아파."
+            }
+        ],
+        "category": 26
+    },
+    "neck": {
+        "meanings": [
+            "목"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Touch your neck.",
+                "korean": "네 목을 만져."
+            },
+            {
+                "english": "My neck hurts.",
+                "korean": "내 목이 아파."
+            }
+        ],
+        "category": 26
+    },
+    "hand": {
+        "meanings": [
+            "손"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Touch your hand.",
+                "korean": "네 손을 만져."
+            }
+        ],
+        "category": 27
+    },
+    "finger": {
+        "meanings": [
+            "손가락"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My finger hurts.",
+                "korean": "내 손가락이 아파."
+            }
+        ],
+        "category": 27
+    },
+    "ear": {
+        "meanings": [
+            "귀"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Touch your ear.",
+                "korean": "네 귀를 만져."
+            }
+        ],
+        "category": 27
+    },
+    "eye": {
+        "meanings": [
+            "눈"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Touch your eye.",
+                "korean": "네 눈을 만져."
+            }
+        ],
+        "category": 27
+    },
+    "head": {
+        "meanings": [
+            "머리"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My head hurts.",
+                "korean": "내 머리가 아파."
+            }
+        ],
+        "category": 27
+    },
+    "bell": {
+        "meanings": [
+            "종"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is his bell.",
+                "korean": "이것은 그의 종이야."
+            }
+        ],
+        "category": 27
+    },
+    "mouth": {
+        "meanings": [
+            "입"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Touch your mouth.",
+                "korean": "네 입을 만져."
+            }
+        ],
+        "category": 28
+    },
+    "lip": {
+        "meanings": [
+            "입술"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Your lips are red.",
+                "korean": "네 입술은 빨간색이구나."
+            }
+        ],
+        "category": 28
+    },
+    "spoon": {
+        "meanings": [
+            "숟가락"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a spoon.",
+                "korean": "그것은 숟가락이야."
+            }
+        ],
+        "category": 28
+    },
+    "nose": {
+        "meanings": [
+            "코"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Touch your nose.",
+                "korean": "네 코를 만져."
+            }
+        ],
+        "category": 28
+    },
+    "face": {
+        "meanings": [
+            "얼굴"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I wash my face.",
+                "korean": "나는 세수를 해."
+            }
+        ],
+        "category": 28
+    },
+    "teeth": {
+        "meanings": [
+            "이"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I brush my teeth.",
+                "korean": "나는 이를 닦아."
+            }
+        ],
+        "category": 28
+    },
+    "brother": {
+        "meanings": [
+            "남자 형제"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is my brother.",
+                "korean": "그는 내 오빠(형/남동생)야."
+            }
+        ],
+        "category": 29
+    },
+    "dad": {
+        "meanings": [
+            "아빠"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is my dad.",
+                "korean": "그는 우리 아빠야."
+            }
+        ],
+        "category": 29
+    },
+    "mom": {
+        "meanings": [
+            "엄마"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She is my mom.",
+                "korean": "그녀는 우리 엄마야."
+            }
+        ],
+        "category": 29
+    },
+    "sister": {
+        "meanings": [
+            "여자 형제"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She is my sister.",
+                "korean": "그녀는 내 여동생(누나/언니)이야."
+            }
+        ],
+        "category": 29
+    },
+    "aunt": {
+        "meanings": [
+            "이모, 고모"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is my aunt.",
+                "korean": "이 분은 우리 이모셔."
+            }
+        ],
+        "category": 29
+    },
+    "cousin": {
+        "meanings": [
+            "사촌"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "These are my cousins.",
+                "korean": "이 사람들은 내 사촌들이야."
+            }
+        ],
+        "category": 29
+    },
+    "father": {
+        "meanings": [
+            "아버지"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is my father.",
+                "korean": "이 분은 우리 아빠셔."
+            }
+        ],
+        "category": 29
+    },
+    "grandfather": {
+        "meanings": [
+            "할아버지"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That is my grandfather.",
+                "korean": "저 분은 우리 할아버지셔."
+            }
+        ],
+        "category": 29
+    },
+    "grandmother": {
+        "meanings": [
+            "할머니"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That is my grandmother.",
+                "korean": "저 분은 우리 할머니셔."
+            }
+        ],
+        "category": 29
+    },
+    "mother": {
+        "meanings": [
+            "어머니"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is my mother.",
+                "korean": "이 분은 우리 엄마셔."
+            }
+        ],
+        "category": 29
+    },
+    "parents": {
+        "meanings": [
+            "부모님"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I love my parents.",
+                "korean": "나는 우리 부모님을 사랑해."
+            }
+        ],
+        "category": 29
+    },
+    "uncle": {
+        "meanings": [
+            "삼촌, 아저씨"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is my uncle.",
+                "korean": "이 분은 우리 삼촌이셔."
+            }
+        ],
+        "category": 29
+    },
+    "friend": {
+        "meanings": [
+            "친구"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I love my friends.",
+                "korean": "나는 내 친구들을 사랑해."
+            }
+        ],
+        "category": 29
+    },
+    "he": {
+        "meanings": [
+            "그"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is Mark.",
+                "korean": "그는 Mark야."
+            }
+        ],
+        "category": 30
+    },
+    "she": {
+        "meanings": [
+            "그녀"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She is Julia.",
+                "korean": "그녀는 Julia야."
+            }
+        ],
+        "category": 30
+    },
+    "her": {
+        "meanings": [
+            "그녀의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That is her book.",
+                "korean": "저것은 그녀의 책이야."
+            }
+        ],
+        "category": 30
+    },
+    "I": {
+        "meanings": [
+            "나"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I am Harry.",
+                "korean": "나는 Harry야."
+            }
+        ],
+        "category": 30
+    },
+    "they": {
+        "meanings": [
+            "그들"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are friends.",
+                "korean": "그들은 친구들이야."
+            }
+        ],
+        "category": 30
+    },
+    "you": {
+        "meanings": [
+            "너"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You are Betty.",
+                "korean": "너는 Betty야."
+            }
+        ],
+        "category": 30
+    },
+    "it": {
+        "meanings": [
+            "그것"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It is my key.",
+                "korean": "그것은 내 열쇠야."
+            }
+        ],
+        "category": 30
+    },
+    "that": {
+        "meanings": [
+            "저것"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That is a watch.",
+                "korean": "저것은 시계야."
+            }
+        ],
+        "category": 30
+    },
+    "this": {
+        "meanings": [
+            "이것"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is my radio.",
+                "korean": "이것은 내 라디오야."
+            }
+        ],
+        "category": 30
+    },
+    "we": {
+        "meanings": [
+            "우리"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We are friends.",
+                "korean": "우리는 친구들이야."
+            }
+        ],
+        "category": 31
+    },
+    "our": {
+        "meanings": [
+            "우리의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Those are our cookies.",
+                "korean": "저것들은 우리의 쿠키야."
+            }
+        ],
+        "category": 31
+    },
+    "chair": {
+        "meanings": [
+            "의자"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The chair is blue.",
+                "korean": "그 의자는 파란색이야."
+            }
+        ],
+        "category": 32
+    },
+    "sofa": {
+        "meanings": [
+            "소파"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The sofa is black.",
+                "korean": "그 소파는 검정색이야."
+            }
+        ],
+        "category": 32
+    },
+    "bed": {
+        "meanings": [
+            "침대"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The bed is brown.",
+                "korean": "그 침대는 갈색이야."
+            }
+        ],
+        "category": 32
+    },
+    "desk": {
+        "meanings": [
+            "책상"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The desk is white.",
+                "korean": "그 책상은 흰색이야"
+            }
+        ],
+        "category": 32
+    },
+    "lamp": {
+        "meanings": [
+            "전등"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The lamp is pink.",
+                "korean": "그 전등은 분홍색이야."
+            }
+        ],
+        "category": 32
+    },
+    "table": {
+        "meanings": [
+            "탁자"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The table is green.",
+                "korean": "그 탁자는 녹색이야."
+            }
+        ],
+        "category": 32
+    },
+    "sit": {
+        "meanings": [
+            "앉다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Sit down.",
+                "korean": "앉아."
+            }
+        ],
+        "category": 32
+    },
+    "stand": {
+        "meanings": [
+            "서다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Stand up.",
+                "korean": "일어서"
+            }
+        ],
+        "category": 32
+    },
+    "my": {
+        "meanings": [
+            "나의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is my doll.",
+                "korean": "이것은 내 인형이야."
+            }
+        ],
+        "category": 33
+    },
+    "your": {
+        "meanings": [
+            "너의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That is your robot.",
+                "korean": "저것은 네 로봇이야."
+            }
+        ],
+        "category": 33
+    },
+    "his": {
+        "meanings": [
+            "그의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is his pen.",
+                "korean": "이것은 그의 펜이야."
+            }
+        ],
+        "category": 33
+    },
+    "new": {
+        "meanings": [
+            "새로운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a new computer.",
+                "korean": "그것은 새로운 컴퓨터야."
+            }
+        ],
+        "category": 33
+    },
+    "their": {
+        "meanings": [
+            "그들의"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "These are their pencils.",
+                "korean": "이것들은 그들의 연필이야."
+            }
+        ],
+        "category": 33
+    },
+    "pen": {
+        "meanings": [
+            "펜"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s my pen.",
+                "korean": "그것은 내 펜이야."
+            }
+        ],
+        "category": 34
+    },
+    "pencil": {
+        "meanings": [
+            "연필"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s your pencil.",
+                "korean": "그것은 네 연필이야."
+            }
+        ],
+        "category": 34
+    },
+    "crayon": {
+        "meanings": [
+            "크레용"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s his crayon.",
+                "korean": "그것은 그의 크레용이야."
+            }
+        ],
+        "category": 34
+    },
+    "pencil case": {
+        "meanings": [
+            "필통"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Here is a pencil case.",
+                "korean": "여기에 필통이 있어."
+            }
+        ],
+        "category": 34
+    },
+    "eraser": {
+        "meanings": [
+            "지우개"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s her eraser.",
+                "korean": "그것은 그녀의 지우개야."
+            }
+        ],
+        "category": 34
+    },
+    "artist": {
+        "meanings": [
+            "화가"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are artists.",
+                "korean": "그들은 화가야."
+            }
+        ],
+        "category": 34
+    },
+    "brush": {
+        "meanings": [
+            "빗"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is her brush.",
+                "korean": "이것은 그녀의 빗이야."
+            }
+        ],
+        "category": 34
+    },
+    "chalk": {
+        "meanings": [
+            "분필"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have chalk.",
+                "korean": "나는 분필이 있어."
+            }
+        ],
+        "category": 34
+    },
+    "paper": {
+        "meanings": [
+            "종이"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at this big green paper.",
+                "korean": "이 큰 녹색 종이를 봐."
+            }
+        ],
+        "category": 34
+    },
+    "draw": {
+        "meanings": [
+            "그리다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s draw.",
+                "korean": "그리자."
+            }
+        ],
+        "category": 34
+    },
+    "write": {
+        "meanings": [
+            "쓰다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s write.",
+                "korean": "쓰자"
+            }
+        ],
+        "category": 34
+    },
+    "clothes": {
+        "meanings": [
+            "옷"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are my clothes.",
+                "korean": "그것들은 나의 옷이야."
+            }
+        ],
+        "category": 35
+    },
+    "jeans": {
+        "meanings": [
+            "청바지"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "These are his jeans.",
+                "korean": "이것들은 그의 청바지야."
+            }
+        ],
+        "category": 35
+    },
+    "pants": {
+        "meanings": [
+            "바지"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are her pants.",
+                "korean": "그것들은 그녀의 바지야."
+            }
+        ],
+        "category": 35
+    },
+    "shorts": {
+        "meanings": [
+            "반바지"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My shorts are green.",
+                "korean": "내 반바지는 초록색이야."
+            },
+            {
+                "english": "My dad has blue shorts.",
+                "korean": "우리 아빠는 파란색 반바지가 있 어."
+            }
+        ],
+        "category": 35
+    },
+    "skirt": {
+        "meanings": [
+            "치마"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This is my skirt.",
+                "korean": "이것은 내 치마야."
+            }
+        ],
+        "category": 35
+    },
+    "pajamas": {
+        "meanings": [
+            "파자마"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "His pajamas are small.",
+                "korean": "그의 파자마는 작아."
+            }
+        ],
+        "category": 35
+    },
+    "dress": {
+        "meanings": [
+            "드레스"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "My mom has a red dress.",
+                "korean": "우리 엄마는 빨간색 드레스가 있어."
+            }
+        ],
+        "category": 35
+    },
+    "zipper": {
+        "meanings": [
+            "지퍼"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The zipper is long.",
+                "korean": "그 지퍼는 길어."
+            }
+        ],
+        "category": 35
+    },
+    "wash": {
+        "meanings": [
+            "씻다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m washing my hands.",
+                "korean": "나는 손을 씻고 있어."
+            }
+        ],
+        "category": 35
+    },
+    "wear": {
+        "meanings": [
+            "입다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We are wearing pants.",
+                "korean": "우리는 바지를 입고 있어."
+            }
+        ],
+        "category": 35
+    },
+    "coat": {
+        "meanings": [
+            "코트"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s your coat.",
+                "korean": "그것은 네 코트야."
+            }
+        ],
+        "category": 36
+    },
+    "jacket": {
+        "meanings": [
+            "재킷"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s my jacket.",
+                "korean": "그것은 내 재킷이야."
+            }
+        ],
+        "category": 36
+    },
+    "sweater": {
+        "meanings": [
+            "스웨터"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s my sweater.",
+                "korean": "그것은 내 스웨터야."
+            }
+        ],
+        "category": 36
+    },
+    "scarf": {
+        "meanings": [
+            "스카프"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Your scarf is long.",
+                "korean": "네 스카프는 길구나."
+            }
+        ],
+        "category": 36
+    },
+    "vest": {
+        "meanings": [
+            "조끼"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s my vest.",
+                "korean": "그것은 내 조끼야."
+            },
+            {
+                "english": "My sister has a green vest.",
+                "korean": "내 여동생은 초록색 조끼가 있어."
+            }
+        ],
+        "category": 36
+    },
+    "belt": {
+        "meanings": [
+            "허리띠"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Your belt is short.",
+                "korean": "네 허리띠는 짧구나."
+            }
+        ],
+        "category": 36
+    },
+    "cap": {
+        "meanings": [
+            "야구 모자"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s my cap.",
+                "korean": "그것은 내 야구 모자야."
+            }
+        ],
+        "category": 36
+    },
+    "hat": {
+        "meanings": [
+            "모자"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s my hat.",
+                "korean": "그것은 내 모자야."
+            }
+        ],
+        "category": 36
+    },
+    "ribbon": {
+        "meanings": [
+            "리본"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The ribbon is short.",
+                "korean": "그 리본은 짧아."
+            }
+        ],
+        "category": 36
+    },
+    "shirt": {
+        "meanings": [
+            "셔츠"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s your shirt.",
+                "korean": "그것은 네 셔츠야."
+            }
+        ],
+        "category": 37
+    },
+    "T-shirt": {
+        "meanings": [
+            "티셔츠"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have a white T-shirt.",
+                "korean": "나는 흰색 티셔츠가 있어."
+            }
+        ],
+        "category": 37
+    },
+    "big": {
+        "meanings": [
+            "큰"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s big.",
+                "korean": "그것은 커."
+            }
+        ],
+        "category": 37
+    },
+    "small": {
+        "meanings": [
+            "작은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s small.",
+                "korean": "그것은 작아."
+            }
+        ],
+        "category": 37
+    },
+    "shoes": {
+        "meanings": [
+            "신발"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "These are your shoes.",
+                "korean": "이것들은 네 신발이야."
+            }
+        ],
+        "category": 38
+    },
+    "socks": {
+        "meanings": [
+            "양말"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "These are my socks.",
+                "korean": "이것들은 내 양말이야."
+            }
+        ],
+        "category": 38
+    },
+    "boots": {
+        "meanings": [
+            "부츠"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Her boots are black.",
+                "korean": "그녀의 부츠는 검은색이야."
+            },
+            {
+                "english": "My brother has yellow boots.",
+                "korean": "내 남동생은 노란색 부츠가 있어."
+            }
+        ],
+        "category": 38
+    },
+    "sneakers": {
+        "meanings": [
+            "운동화"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The sneakers are brown.",
+                "korean": "그 운동화는 갈색이야."
+            }
+        ],
+        "category": 38
+    },
+    "gloves": {
+        "meanings": [
+            "장갑"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Your gloves are big.",
+                "korean": "네 장갑은 크구나."
+            }
+        ],
+        "category": 38
+    },
+    "stairs": {
+        "meanings": [
+            "계단"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The stairs are old.",
+                "korean": "그 계단은 오래된 것이야."
+            }
+        ],
+        "category": 38
+    },
+    "these": {
+        "meanings": [
+            "이것들"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "These are their pencils.",
+                "korean": "이것들은 그들의 연필이야."
+            }
+        ],
+        "category": 38
+    },
+    "those": {
+        "meanings": [
+            "저것들"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Those are my shoes.",
+                "korean": "저것들은 내 신발이야."
+            }
+        ],
+        "category": 38
+    },
+    "hungry": {
+        "meanings": [
+            "배고픈"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is hungry.",
+                "korean": "그는 배고파."
+            }
+        ],
+        "category": 39
+    },
+    "thirsty": {
+        "meanings": [
+            "목마른"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m thirsty.",
+                "korean": "나는 목말라."
+            }
+        ],
+        "category": 39
+    },
+    "heavy": {
+        "meanings": [
+            "무거운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s heavy.",
+                "korean": "그것은 무거워."
+            }
+        ],
+        "category": 39
+    },
+    "hard": {
+        "meanings": [
+            "딱딱한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a hard ball.",
+                "korean": "그것은 딱딱한 공이야."
+            }
+        ],
+        "category": 39
+    },
+    "soft": {
+        "meanings": [
+            "부드러운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a soft sweater.",
+                "korean": "그것은 부드러운 스웨터야."
+            }
+        ],
+        "category": 39
+    },
+    "high": {
+        "meanings": [
+            "높은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "This tree is high.",
+                "korean": "이 나무는 높아."
+            }
+        ],
+        "category": 39
+    },
+    "low": {
+        "meanings": [
+            "낮은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That tree is low.",
+                "korean": "저 나무는 낮아."
+            }
+        ],
+        "category": 39
+    },
+    "rich": {
+        "meanings": [
+            "부유한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are rich.",
+                "korean": "그들은 부유해."
+            }
+        ],
+        "category": 39
+    },
+    "poor": {
+        "meanings": [
+            "가난한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are poor.",
+                "korean": "그들은 가난해."
+            }
+        ],
+        "category": 39
+    },
+    "tired": {
+        "meanings": [
+            "피곤한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m tired.",
+                "korean": "나는 피곤해."
+            },
+            {
+                "english": "He’s tired.",
+                "korean": "그는 피곤해."
+            }
+        ],
+        "category": 40
+    },
+    "sleepy": {
+        "meanings": [
+            "졸리운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She’s sleepy.",
+                "korean": "그녀는 졸려."
+            }
+        ],
+        "category": 40
+    },
+    "sleep": {
+        "meanings": [
+            "자다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are sleeping.",
+                "korean": "그들은 자고 있어."
+            }
+        ],
+        "category": 40
+    },
+    "angry": {
+        "meanings": [
+            "화난"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m angry.",
+                "korean": "나는 화나."
+            }
+        ],
+        "category": 40
+    },
+    "sad": {
+        "meanings": [
+            "슬픈"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She is sad.",
+                "korean": "그녀는 슬퍼."
+            }
+        ],
+        "category": 40
+    },
+    "scared": {
+        "meanings": [
+            "무서운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She is scared.",
+                "korean": "그녀가 무섭대."
+            }
+        ],
+        "category": 40
+    },
+    "surprised": {
+        "meanings": [
+            "놀란"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is surprised.",
+                "korean": "그가 놀랐어."
+            }
+        ],
+        "category": 40
+    },
+    "bag": {
+        "meanings": [
+            "가방"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s my bag.",
+                "korean": "그것은 내 가방이야."
+            }
+        ],
+        "category": 41
+    },
+    "school bag": {
+        "meanings": [
+            "책가방"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Here is a school bag.",
+                "korean": "여기에 책가방이 있어."
+            }
+        ],
+        "category": 41
+    },
+    "hobby": {
+        "meanings": [
+            "취미"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "What’s your hobby?",
+                "korean": "네 취미는 무엇이니?"
+            }
+        ],
+        "category": 41
+    },
+    "pocket": {
+        "meanings": [
+            "주머니"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The pocket is small.",
+                "korean": "그 주머니는 작아."
+            }
+        ],
+        "category": 41
+    },
+    "notebook": {
+        "meanings": [
+            "공책"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They have notebooks.",
+                "korean": "그들은 공책이 있어."
+            }
+        ],
+        "category": 41
+    },
+    "tea": {
+        "meanings": [
+            "티"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We want tea.",
+                "korean": "우리는 차를 원해."
+            }
+        ],
+        "category": 42
+    },
+    "coffee": {
+        "meanings": [
+            "커피"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want coffee.",
+                "korean": "나는 커피를 원해."
+            }
+        ],
+        "category": 42
+    },
+    "cup": {
+        "meanings": [
+            "컵"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s a cup.",
+                "korean": "그것은 컵이야."
+            }
+        ],
+        "category": 42
+    },
+    "rice": {
+        "meanings": [
+            "밥"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want rice.",
+                "korean": "나는 밥을 원해."
+            }
+        ],
+        "category": 42
+    },
+    "water": {
+        "meanings": [
+            "물"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They want water.",
+                "korean": "그들은 물을 원해."
+            }
+        ],
+        "category": 42
+    },
+    "salt": {
+        "meanings": [
+            "소금"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Do you like salt?",
+                "korean": "너는 소금을 좋아하니?"
+            }
+        ],
+        "category": 42
+    },
+    "drink": {
+        "meanings": [
+            "마시다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is drinking.",
+                "korean": "그는 마시고 있어."
+            }
+        ],
+        "category": 42
+    },
+    "concert": {
+        "meanings": [
+            "콘서트"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We go to a concert.",
+                "korean": "우리는 콘서트에 가."
+            }
+        ],
+        "category": 43
+    },
+    "concert hall": {
+        "meanings": [
+            "콘서트장"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m going to the concert hall.",
+                "korean": "나는 콘서트장에 가고 있 어."
+            }
+        ],
+        "category": 43
+    },
+    "museum": {
+        "meanings": [
+            "박물관"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We go to the museum.",
+                "korean": "우리는 박물관에 가."
+            }
+        ],
+        "category": 43
+    },
+    "album": {
+        "meanings": [
+            "사진첩"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have an album.",
+                "korean": "나는 사진첩 한 권이 있어."
+            }
+        ],
+        "category": 43
+    },
+    "art gallery": {
+        "meanings": [
+            "미술관"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s go to the art gallery.",
+                "korean": "미술관에 가자."
+            }
+        ],
+        "category": 43
+    },
+    "theater": {
+        "meanings": [
+            "극장"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The theater is small.",
+                "korean": "그 극장은 작아."
+            }
+        ],
+        "category": 43
+    },
+    "movie": {
+        "meanings": [
+            "영화"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They watch a movie.",
+                "korean": "그들은 영화를 봐."
+            }
+        ],
+        "category": 43
+    },
+    "camping": {
+        "meanings": [
+            "캠핑"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like camping.",
+                "korean": "나는 캠핑을 좋아해."
+            }
+        ],
+        "category": 44
+    },
+    "hiking": {
+        "meanings": [
+            "하이킹"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Her hobby is hiking.",
+                "korean": "그녀의 취미는 하이킹이야."
+            }
+        ],
+        "category": 44
+    },
+    "beach": {
+        "meanings": [
+            "해변"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Looks at the beach.",
+                "korean": "해변을 봐."
+            }
+        ],
+        "category": 44
+    },
+    "lake": {
+        "meanings": [
+            "호수"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look! It’s a lake.",
+                "korean": "봐! 그것은 호수야."
+            }
+        ],
+        "category": 44
+    },
+    "mountain": {
+        "meanings": [
+            "산"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look! It’s a mountain.",
+                "korean": "봐! 그것은 산이야."
+            }
+        ],
+        "category": 44
+    },
+    "teacher": {
+        "meanings": [
+            "선생님"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I love my teachers.",
+                "korean": "나는 내 선생님들을 사랑해."
+            }
+        ],
+        "category": 45
+    },
+    "classroom": {
+        "meanings": [
+            "교실"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are in the classroom.",
+                "korean": "그들은 교실에 있어."
+            }
+        ],
+        "category": 45
+    },
+    "school": {
+        "meanings": [
+            "학교"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I go to school.",
+                "korean": "나는 학교에 가."
+            },
+            {
+                "english": "They are at school.",
+                "korean": "그들은 학교에 있어."
+            }
+        ],
+        "category": 45
+    },
+    "restaurant": {
+        "meanings": [
+            "식당"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s go to the restaurant.",
+                "korean": "식당에 가자."
+            }
+        ],
+        "category": 45
+    },
+    "scientist": {
+        "meanings": [
+            "과학자"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She is a scientist.",
+                "korean": "그녀는 과학자야."
+            }
+        ],
+        "category": 45
+    },
+    "church": {
+        "meanings": [
+            "교회"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The church is old.",
+                "korean": "그 교회는 오래되었어."
+            }
+        ],
+        "category": 45
+    },
+    "office": {
+        "meanings": [
+            "사무실"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "The office is small.",
+                "korean": "그 사무실은 작아."
+            }
+        ],
+        "category": 45
+    },
+    "study": {
+        "meanings": [
+            "공부하다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Do you study English?",
+                "korean": "너는 영어를 공부하니?"
+            }
+        ],
+        "category": 45
+    },
+    "potato": {
+        "meanings": [
+            "감자"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I don’t like potatoes",
+                "korean": "나는 감자를 좋아하지 않아."
+            }
+        ],
+        "category": 46
+    },
+    "tomato": {
+        "meanings": [
+            "토마토"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I don’t like tomatoes.",
+                "korean": "나는 토마토를 좋아하지 않아."
+            }
+        ],
+        "category": 46
+    },
+    "banana": {
+        "meanings": [
+            "바나나"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like bananas.",
+                "korean": "나는 바나나를 좋아해."
+            }
+        ],
+        "category": 46
+    },
+    "kiwi": {
+        "meanings": [
+            "키위"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It is a kiwi.",
+                "korean": "그것은 키위야."
+            }
+        ],
+        "category": 46
+    },
+    "egg": {
+        "meanings": [
+            "달걀"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I like eggs.",
+                "korean": "나는 달걀을 좋아해."
+            }
+        ],
+        "category": 46
+    },
+    "moon": {
+        "meanings": [
+            "달"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the moon.",
+                "korean": "달을 봐."
+            }
+        ],
+        "category": 46
+    },
+    "turtle": {
+        "meanings": [
+            "거북이"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I don’t like turtles.",
+                "korean": "나는 거북이를 좋아하지 않아."
+            }
+        ],
+        "category": 46
+    },
+    "ant": {
+        "meanings": [
+            "개미"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the ants.",
+                "korean": "개미를 봐."
+            }
+        ],
+        "category": 46
+    },
+    "balloon": {
+        "meanings": [
+            "풍선"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "That is your balloon.",
+                "korean": "저것은 네 풍선이야."
+            }
+        ],
+        "category": 46
+    },
+    "sugar": {
+        "meanings": [
+            "설탕"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I don’t like sugar.",
+                "korean": "나는 설탕을 좋아하지 않아."
+            }
+        ],
+        "category": 47
+    },
+    "candy": {
+        "meanings": [
+            "사탕"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want candy.",
+                "korean": "나는 사탕을 원해."
+            }
+        ],
+        "category": 47
+    },
+    "chocolate": {
+        "meanings": [
+            "초콜릿"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Do you want some chocolate?",
+                "korean": "너는 초콜릿을 원하니?"
+            }
+        ],
+        "category": 47
+    },
+    "gum": {
+        "meanings": [
+            "껌"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want gum.",
+                "korean": "나는 껌을 원해."
+            }
+        ],
+        "category": 47
+    },
+    "snack": {
+        "meanings": [
+            "간식"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have snacks.",
+                "korean": "나는 간식을 먹어."
+            }
+        ],
+        "category": 47
+    },
+    "cookie": {
+        "meanings": [
+            "쿠키"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want cookies.",
+                "korean": "나는 쿠키를 원해."
+            }
+        ],
+        "category": 47
+    },
+    "cake": {
+        "meanings": [
+            "케이크"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You like cake.",
+                "korean": "너는 케이크를 좋아하는구나."
+            }
+        ],
+        "category": 47
+    },
+    "milk": {
+        "meanings": [
+            "우유"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want milk.",
+                "korean": "나는 우유를 원해."
+            }
+        ],
+        "category": 47
+    },
+    "butter": {
+        "meanings": [
+            "버터"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Do you like butter?",
+                "korean": "너는 버터를 좋아하니?"
+            }
+        ],
+        "category": 47
+    },
+    "corn": {
+        "meanings": [
+            "옥수수"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I don’t like corn.",
+                "korean": "나는 옥수수를 좋아하지 않아."
+            }
+        ],
+        "category": 47
+    },
+    "cream": {
+        "meanings": [
+            "크림"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Do you want cream?",
+                "korean": "너는 크림을 원하니?"
+            }
+        ],
+        "category": 47
+    },
+    "doughnut": {
+        "meanings": [
+            "도넛"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Do you want doughnuts?",
+                "korean": "너는 도넛을 원하니?"
+            }
+        ],
+        "category": 47
+    },
+    "food": {
+        "meanings": [
+            "음식"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I love these foods.",
+                "korean": "나는 이 음식들이 정말 좋아."
+            }
+        ],
+        "category": 47
+    },
+    "eat": {
+        "meanings": [
+            "먹다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m eating.",
+                "korean": "나는 먹고 있어."
+            }
+        ],
+        "category": 47
+    },
+    "glue": {
+        "meanings": [
+            "풀"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Here is some glue.",
+                "korean": "여기에 풀이 있어."
+            }
+        ],
+        "category": 47
+    },
+    "beautiful": {
+        "meanings": [
+            "아름다운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They’re beautiful.",
+                "korean": "그들은 아름다워."
+            }
+        ],
+        "category": 48
+    },
+    "cute": {
+        "meanings": [
+            "귀여운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She’s cute.",
+                "korean": "그녀는 귀여워."
+            }
+        ],
+        "category": 48
+    },
+    "handsome": {
+        "meanings": [
+            "잘생긴"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He’s handsome.",
+                "korean": "그는 잘생겼어."
+            }
+        ],
+        "category": 48
+    },
+    "pretty": {
+        "meanings": [
+            "예쁜"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You’re pretty.",
+                "korean": "너는 예뻐."
+            }
+        ],
+        "category": 48
+    },
+    "hot": {
+        "meanings": [
+            "더운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s hot.",
+                "korean": "더워."
+            }
+        ],
+        "category": 48
+    },
+    "happy": {
+        "meanings": [
+            "행복한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I’m happy.",
+                "korean": "나는 행복해."
+            }
+        ],
+        "category": 48
+    },
+    "sick": {
+        "meanings": [
+            "아픈"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You are sick.",
+                "korean": "너는 아프구나."
+            },
+            {
+                "english": "I’m sick.",
+                "korean": "나는 아파."
+            }
+        ],
+        "category": 48
+    },
+    "nice": {
+        "meanings": [
+            "좋은"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "He is nice.",
+                "korean": "그는 착해."
+            }
+        ],
+        "category": 48
+    },
+    "kind": {
+        "meanings": [
+            "친절한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You’re kind.",
+                "korean": "너는 친절하구나."
+            }
+        ],
+        "category": 48
+    },
+    "cloudy": {
+        "meanings": [
+            "흐린"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I don’t like cloudy days.",
+                "korean": "나는 흐린 날을 좋아하지 않아."
+            }
+        ],
+        "category": 49
+    },
+    "rainy": {
+        "meanings": [
+            "비가 오는"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s rainy.",
+                "korean": "비가와."
+            }
+        ],
+        "category": 49
+    },
+    "umbrella": {
+        "meanings": [
+            "우산"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want an umbrella.",
+                "korean": "나는 우산 하나를 원해."
+            }
+        ],
+        "category": 49
+    },
+    "sky": {
+        "meanings": [
+            "하늘"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the sky",
+                "korean": "하늘을 봐."
+            }
+        ],
+        "category": 49
+    },
+    "sun": {
+        "meanings": [
+            "태양"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the sun.",
+                "korean": "태양을 봐."
+            }
+        ],
+        "category": 49
+    },
+    "cloud": {
+        "meanings": [
+            "구름"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We see the clouds in the sky.",
+                "korean": "우리는 하늘에 있는 구름을 봐."
+            }
+        ],
+        "category": 49
+    },
+    "star": {
+        "meanings": [
+            "별"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Look at the stars in the sky.",
+                "korean": "하늘에 있는 별을 봐."
+            }
+        ],
+        "category": 49
+    },
+    "sunny": {
+        "meanings": [
+            "화창한"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s sunny.",
+                "korean": "화창해."
+            }
+        ],
+        "category": 49
+    },
+    "spring": {
+        "meanings": [
+            "봄"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s spring.",
+                "korean": "봄이야."
+            }
+        ],
+        "category": 50
+    },
+    "summer": {
+        "meanings": [
+            "여름"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s summer.",
+                "korean": "여름이야."
+            }
+        ],
+        "category": 50
+    },
+    "winter": {
+        "meanings": [
+            "겨울"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s winter.",
+                "korean": "겨울이야."
+            }
+        ],
+        "category": 50
+    },
+    "cold": {
+        "meanings": [
+            "추운"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s cold.",
+                "korean": "추워."
+            }
+        ],
+        "category": 50
+    },
+    "weather": {
+        "meanings": [
+            "날씨"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "How is the weather today?",
+                "korean": "오늘 날씨는 어때?"
+            }
+        ],
+        "category": 50
+    },
+    "snowy": {
+        "meanings": [
+            "눈이 오는"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They don’t like snowy days.",
+                "korean": "그들은 눈 오는 날을 좋아하 지 않아."
+            }
+        ],
+        "category": 50
+    },
+    "windy": {
+        "meanings": [
+            "바람 부는"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s windy.",
+                "korean": "바람이 불어."
+            }
+        ],
+        "category": 50
+    },
+    "fall": {
+        "meanings": [
+            "가을"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s fall.",
+                "korean": "가을이야."
+            }
+        ],
+        "category": 50
+    },
+    "talk": {
+        "meanings": [
+            "말하다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They are talking.",
+                "korean": "그들은 이야기하고 있어."
+            }
+        ],
+        "category": 51
+    },
+    "speak": {
+        "meanings": [
+            "말하다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Do you speak English?",
+                "korean": "너는 영어를 말하니?"
+            }
+        ],
+        "category": 51
+    },
+    "sing": {
+        "meanings": [
+            "노래하다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "She can sing.",
+                "korean": "그녀는 노래할 수 있어."
+            }
+        ],
+        "category": 51
+    },
+    "watch": {
+        "meanings": [
+            "시계",
+            "보다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I have a watch.",
+                "korean": "나는 시계 하나가 있어."
+            },
+            {
+                "english": "She is watching television.",
+                "korean": "그녀는 텔레비전을 보고 있어."
+            }
+        ],
+        "category": 51
+    },
+    "do": {
+        "meanings": [
+            "하다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can do it.",
+                "korean": "나는 할 수 있어."
+            }
+        ],
+        "category": 51
+    },
+    "make": {
+        "meanings": [
+            "만들다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can make cookies.",
+                "korean": "나는 쿠키를 만들 수 있어."
+            }
+        ],
+        "category": 51
+    },
+    "ask": {
+        "meanings": [
+            "물어보다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "You can ask the questions.",
+                "korean": "너는 그 질문들을 물어볼 수 있어."
+            }
+        ],
+        "category": 51
+    },
+    "build": {
+        "meanings": [
+            "짓다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can’t build the house.",
+                "korean": "나는 그 집을 지을 수 없어."
+            }
+        ],
+        "category": 51
+    },
+    "buy": {
+        "meanings": [
+            "사다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can buy this doll.",
+                "korean": "나는 이 인형을 살 수 있어."
+            }
+        ],
+        "category": 51
+    },
+    "find": {
+        "meanings": [
+            "찾다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Find my book.",
+                "korean": "내 책을 찾아."
+            }
+        ],
+        "category": 51
+    },
+    "have": {
+        "meanings": [
+            "가지다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I can’t have a pet.",
+                "korean": "나는 애완동물을 가질 수 없어."
+            }
+        ],
+        "category": 51
+    },
+    "look": {
+        "meanings": [
+            "보다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s look at the kangaroos.",
+                "korean": "캥거루를 보자."
+            }
+        ],
+        "category": 51
+    },
+    "want": {
+        "meanings": [
+            "원하다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "I want an apple.",
+                "korean": "나는 사과를 원해."
+            }
+        ],
+        "category": 51
+    },
+    "give": {
+        "meanings": [
+            "주다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Give me the pen.",
+                "korean": "나에게 그 펜을 줘."
+            }
+        ],
+        "category": 51
+    },
+    "raise": {
+        "meanings": [
+            "올리다"
+        ],
+        "part_of_speech": "들어",
+        "examples": [
+            {
+                "english": "Let’s raise your hands.",
+                "korean": "너희 손을 들어 올리자."
+            }
+        ],
+        "category": 51
+    },
+    "read": {
+        "meanings": [
+            "읽다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They read books.",
+                "korean": "그들은 책을 읽어."
+            }
+        ],
+        "category": 51
+    },
+    "see": {
+        "meanings": [
+            "보다"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "They see the rabbits.",
+                "korean": "그들은 토끼를 본다."
+            }
+        ],
+        "category": 51
+    },
+    "now": {
+        "meanings": [
+            "지금"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "It’s five ten now.",
+                "korean": "지금 5시 10분이야."
+            }
+        ],
+        "category": 52
+    },
+    "today": {
+        "meanings": [
+            "오늘"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Today is Monday.",
+                "korean": "오늘은 월요일이야."
+            }
+        ],
+        "category": 52
+    },
+    "yesterday": {
+        "meanings": [
+            "어제"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Yesterday was Sunday.",
+                "korean": "어제는 일요일이었어."
+            }
+        ],
+        "category": 52
+    },
+    "tomorrow": {
+        "meanings": [
+            "내일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Tomorrow is Tuesday.",
+                "korean": "내일은 화요일이야."
+            }
+        ],
+        "category": 52
+    },
+    "Monday": {
+        "meanings": [
+            "월요일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "On Monday, I go to the pool.",
+                "korean": "나는 월요일에 수영장에 가."
+            }
+        ],
+        "category": 52
+    },
+    "Tuesday": {
+        "meanings": [
+            "화요일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "On Tuesday, I go to the library.",
+                "korean": "나는 화요일에 도서관에 가."
+            }
+        ],
+        "category": 52
+    },
+    "Wednesday": {
+        "meanings": [
+            "수요일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "On Wednesday, I go to the park.",
+                "korean": "나는 수요일에 공원에 가."
+            }
+        ],
+        "category": 52
+    },
+    "Thursday": {
+        "meanings": [
+            "목요일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "On Thursday, I go to the museum.",
+                "korean": "나는 목요일에 박물관에 가."
+            }
+        ],
+        "category": 52
+    },
+    "Friday": {
+        "meanings": [
+            "금요일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "On Friday, I go to the bookstore.",
+                "korean": "나는 금요일에 서점에 가."
+            }
+        ],
+        "category": 52
+    },
+    "Saturday": {
+        "meanings": [
+            "토요일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "On Saturday, I go to the playground.",
+                "korean": "나는 토요일에 운동 장에 가."
+            }
+        ],
+        "category": 52
+    },
+    "Sunday": {
+        "meanings": [
+            "일요일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "On Sunday, I go to the zoo.",
+                "korean": "나는 일요일에 동물원에 가."
+            }
+        ],
+        "category": 52
+    },
+    "week": {
+        "meanings": [
+            "주, 일주일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "We don’t go to school this week.",
+                "korean": "우리는 이번 주에 학교에 가지 않아."
+            }
+        ],
+        "category": 52
+    },
+    "weekend": {
+        "meanings": [
+            "주말"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Let’s go skiing this weekend.",
+                "korean": "이번 주말에 스키를 타러 가 자."
+            }
+        ],
+        "category": 52
+    },
+    "holiday": {
+        "meanings": [
+            "휴일"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "Today is a holiday.",
+                "korean": "오늘은 휴일이야."
+            }
+        ],
+        "category": 52
+    },
+    "day": {
+        "meanings": [
+            "요일, 하루"
+        ],
+        "part_of_speech": "",
+        "examples": [
+            {
+                "english": "What day is it, Mom?",
+                "korean": "무슨 요일이에요, 엄마?"
+            }
+        ],
+        "category": 52
+    }
+}

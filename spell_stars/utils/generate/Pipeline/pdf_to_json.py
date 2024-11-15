@@ -1,5 +1,4 @@
 #  최종 코드
-
 import pdfplumber
 import fitz  # PyMuPDF
 import os
@@ -84,7 +83,7 @@ def pdf_to_json(pdf_path, output_directory):  # beyond.pdf를 제외한 pdf용 :
             output_file = os.path.join(output_directory, f"{os.path.basename(pdf_path).replace('.pdf', '')}_page_{page_number + 1}_{safe_title_text}.json")
             with open(output_file, "w", encoding="utf-8") as json_file:
                 json.dump(data, json_file, ensure_ascii=False, indent=4)
-            print(f"Parsed data for {pdf_path} page {page_number + 1}:", data)
+            # print(f"Parsed data for {pdf_path} page {page_number + 1}:", data)
 
 def clean_text(text):  # 텍스트의 양끝 공백을 제거하는 함수
     return text.strip()
@@ -152,9 +151,9 @@ def process_pdfs(pdf_directory, output_directory):
             else:
                 pdf_to_json(pdf_path, output_directory)
 
-# 디렉토리 설정
-pdf_directory = "./json_words/pdf" # PDF 경로
-output_directory = "./json_words/data" # 변환된 json들이 들어갈 폴더
+# # 디렉토리 설정
+# pdf_directory = "./json_words/pdf" # PDF 경로
+# output_directory = "./json_words/data" # 변환된 json들이 들어갈 폴더
 
-# PDF 파일 처리
-process_pdfs(pdf_directory, output_directory)
+# # PDF 파일 처리
+# process_pdfs(pdf_directory, output_directory)

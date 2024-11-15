@@ -25,10 +25,15 @@ class AdvancedGrammarScorer:
             "meaningful_words": 0.15
         }
 
-    def score_sentence(self, sentence: str) -> Tuple[float, Dict]:
+    def score_sentence(self, sentence: str):
+        # 빈 문자열인 경우 기본 점수 반환
+        if not sentence:
+            return 0.0, {"basic_requirements": 0.0}
+
+        # 기존 검사 코드
         doc = self.nlp(sentence)
         scores = {}
-        
+
         # 1. 기본 검사
         basic_checks = {
             "starts_with_capital": sentence[0].isupper(),
@@ -67,7 +72,6 @@ class AdvancedGrammarScorer:
         
         # 최종 점수 계산
         final_score = sum(score * self.weights[category] for category, score in scores.items())
-        
         return round(final_score, 2), scores
 
     def _check_verb_agreement(self, doc) -> bool:

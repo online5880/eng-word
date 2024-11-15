@@ -124,15 +124,15 @@ def save_refined_clusters_to_single_json(refined_clusters, output_path):
     with open(output_path, "w", encoding="utf-8") as file:
         json.dump(refined_clusters, file, ensure_ascii=False, indent=4)
 
-# Execution
-directory_path = "./data"  # Path to folder with JSON files
-output_path = "./clustered_wordbook.json"  # Path to save clustered output
-word_dict = load_words_from_json(directory_path)
-word_list = list(word_dict.keys())
-vectors = vectorize_words(word_list)  # Vectorize words
-clustered_words, noise = cluster_words(word_list, vectors, eps=0.35, min_samples=2)
-clustered_words_with_noise = assign_noise_to_nearest_cluster(clustered_words, noise)
-refined_clusters = refine_clusters_auto(clustered_words_with_noise, word_dict)
-save_refined_clusters_to_single_json(refined_clusters, output_path)
+# # Execution
+# directory_path = "./data"  # Path to folder with JSON files
+# output_path = "./clustered_wordbook.json"  # Path to save clustered output
+# word_dict = load_words_from_json(directory_path)
+# word_list = list(word_dict.keys())
+# vectors = vectorize_words(word_list)  # Vectorize words
+# clustered_words, noise = cluster_words(word_list, vectors, eps=0.35, min_samples=2)
+# clustered_words_with_noise = assign_noise_to_nearest_cluster(clustered_words, noise)
+# refined_clusters = refine_clusters_auto(clustered_words_with_noise, word_dict)
+# save_refined_clusters_to_single_json(refined_clusters, output_path)
 
-print(f"\nClustered vocabulary saved to {output_path}")
+# print(f"\nClustered vocabulary saved to {output_path}")
