@@ -10,7 +10,6 @@ from .models import StudentInfo
 
 # Create your views here.
 
-
 # 로그인뷰
 class UserLoginView(LoginView):
     template_name = "accounts/login.html"

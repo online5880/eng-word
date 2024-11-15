@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}영어 단어 암기 프로그램{% endblock %}</title>
+    <script src="{% static 'js/logoutHandler.js' %}"></script> <!-- 공통 스크립트 -->
+</head>
+<body data-authenticated="{{ user.is_authenticated|yesno:'true,false' }}">
+    <!-- 본문 영역 -->
+    <main>
+        {% block content %}
+        <!-- 각 페이지의 콘텐츠가 들어갈 영역 -->
+        {% endblock %}
+    </main>
+
+    <!-- 푸터 -->
+    <footer style="text-align: center; margin-top: 20px;">
+        <p>© 2024 영어 단어 암기 프로그램. All rights reserved.</p>
+    </footer>
+</body>
+</html>

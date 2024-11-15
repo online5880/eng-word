@@ -57,8 +57,17 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_yasg",
     "accounts",
-    'spell_stars.apps.SpellStarsConfig',
+    "channels"
 ]
+
+ASGI_APPLICATION = 'spell_stars.asgi.application'
+
+# Channels Layer 설정 (기본적으로 In-Memory 사용, Redis를 권장)
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    },
+}
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
@@ -74,7 +83,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "accounts.middleware.UpdateLastLoginMiddleware",
+    'accounts.middleware.UpdateLastLoginMiddleware',
+    'accounts.middleware.AutoLogoutMiddleware',
 ]
 
 ROOT_URLCONF = "spell_stars.urls"
@@ -171,3 +181,6 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.AllowAny",
     ],
 }
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # 브라우저 닫으면 세션 종료
+SESSION_COOKIE_AGE = 10  # 세션 만료 시간 (초 단위, 여기선 1시간)
