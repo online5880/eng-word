@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const statusText = document.querySelector('.status-text');
     const voiceLevelFill = document.querySelector('.voice-level-fill');
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-    const targetWord = document.getElementById('current-word').textContent;  // HTML에서 텍스트로 가져옴
 
     let mediaRecorder;
     let audioChunks = [];
@@ -75,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
 
             const formData = new FormData();
+            const targetWord = document.getElementById('current-word').textContent; 
             formData.append('audio', audioBlob, `${targetWord}.wav`);
             formData.append('word', targetWord);
 
@@ -97,11 +97,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         audioPlayer.src = '/' + data.file_path;
                     }
 
-                    // 서버에서 점수와 피드백 받기
-                    if (data.score !== undefined && data.feedback !== undefined) {
+                    // 서버에서 점수 받기
+                    if (data.score !== undefined) {
                         console.log('서버에서 받은 점수:', data.score);  // 점수 출력
-                        console.log('서버에서 받은 피드백:', data.feedback);  // 피드백 출력
-                        displayFeedback(data.score, data.feedback);  // 점수와 피드백을 표시
+                        displayFeedback(data.score);  // 점수 표시
                     }
                 } else {
                     statusText.textContent = '녹음 저장에 실패했습니다.';
@@ -151,15 +150,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // 피드백 표시
-    function displayFeedback(score, feedback) {
-        console.log(`점수: ${score}, 피드백: ${feedback}`);
+    function displayFeedback(score) {
+        console.log(`점수: ${score}`);
         document.getElementById("score").textContent = score;  // 점수 업데이트
         document.getElementById("score-bar").style.width = score + "%";  // 점수에 맞는 프로그레스 바 업데이트
-
-        const feedbackSection = document.getElementById("feedback-section");
-        const feedbackDisplay = document.getElementById("feedback");
-        feedbackDisplay.textContent = feedback;
-        feedbackSection.style.display = 'block';
 
         const progressBar = document.getElementById('score-bar');
         if (score >= 80) {
@@ -184,11 +178,23 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             console.log('다음 단어 응답:', data);
             if (data.success) {
+                // 단어 갱신
                 document.getElementById('current-word').textContent = data.nextWord;
+
+                // 뜻 갱신
+                document.getElementById('current-meaning').textContent = data.nextMeanings;
+
+                // 오디오 파일 경로 갱신
                 const audioPreview = document.getElementById('native-audio-preview');
                 const source = audioPreview.querySelector('source');
-                source.src = `${data.audioUrl}`;
+                source.src = `/media/${data.nextFilePath}`;
                 audioPreview.load();
+
+                // 점수 초기화 및 갱신
+                document.getElementById("score").textContent = '0';
+                document.getElementById("score-bar").style.width = '0%';
+                document.getElementById("feedback").textContent = '';
+                document.getElementById("feedback-section").style.display = 'none';
             } else {
                 console.log('새 단어를 가져오지 못했습니다.');
             }
@@ -197,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('AJAX 요청 오류:', error);
         });
     }
+
 
     // 연습 종료
     function exitPractice() {

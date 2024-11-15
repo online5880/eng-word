@@ -1,7 +1,4 @@
 import os
-import librosa
-import numpy as np
-from scipy.spatial.distance import cosine
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.conf import settings
@@ -19,14 +16,13 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 model = apps.get_app_config('spell_stars').whisper_model
 
 
-# 발음 연습 페이지를 렌더링하는 뷰
 def pronunciation_practice_view(request):
+    # 새로운 단어 선택
     random_word = Word.objects.values("word", "meanings", "file_path").order_by("?").first()
-
-    pronunciation_score = 0  # 기본값 설정 (처음에는 점수가 없음)
 
     if random_word:
         request.session["target_word"] = random_word["word"]
+
         return render(
             request,
             "pron_practice/pron_practice.html",
@@ -34,7 +30,7 @@ def pronunciation_practice_view(request):
                 "word": random_word["word"],
                 "meanings": random_word["meanings"],
                 "file_path": random_word["file_path"],
-                "pronunciation_score": pronunciation_score,  # 초기 점수
+                "pronunciation_score": 0,
                 "MEDIA_URL": settings.MEDIA_URL
             },
         )
@@ -79,20 +75,22 @@ def upload_audio(request):
             )
             full_student_audio_path = os.path.join(settings.MEDIA_ROOT, file_path)
 
-            print("Native audio path:", native_audio_path)  # 디버깅용
-            print("Student audio path:", full_student_audio_path)  # 디버깅용
+            # 발음 비교 처리
+            result = process_audio_files(native_audio_path, full_student_audio_path, word)
 
-            # process_audio_files 호출
-            result = process_audio_files(
-                native_audio_path, full_student_audio_path, word
-            )
-            print(result)  # 결과 출력
+            if result["status"] == "error":
+                return JsonResponse(result)
+
+            # 발음 점수 저장
+            pronunciation_score = result["result"]["overall_score"]
+            request.session["pronunciation_score"] = pronunciation_score
 
             return JsonResponse(
                 {
                     "status": "success",
                     "file_path": full_student_audio_path,
-                    "message": "음성 파일이 성공적으로 저장되었습니다.",
+                    "score": round(pronunciation_score, 1),  # 소수점 한자리까지 반환
+                    "message": "음성 파일이 성공적으로 저장되고 발음 평가가 완료되었습니다.",
                 }
             )
 
@@ -102,73 +100,24 @@ def upload_audio(request):
     return JsonResponse({"status": "error", "message": "Invalid request"}, status=400)
 
 
-@csrf_exempt
-def evaluate_pronunciation(request):
-    try:
-        if request.method == "POST":
-            user_id = request.user.id
-
-            # 세션에서 단어 가져오기
-            target_word = request.session.get("target_word")
-            if not target_word:
-                return JsonResponse(
-                    {"error": "No target word found in session."}, status=404
-                )
-
-            # 업로드된 파일 경로
-            file_path = f"pron_pc/students/user_{user_id}/{target_word}_student.wav"
-            full_path = os.path.join(settings.MEDIA_ROOT, file_path)
-
-            # 파일이 존재하지 않으면 오류 반환
-            if not os.path.exists(full_path):
-                return JsonResponse(
-                    {"error": f"Audio file for {target_word} not found."}, status=404
-                )
-
-            # 원어민 발음 파일 경로 설정
-            native_file_path = os.path.join(
-                settings.MEDIA_ROOT, "audio_files", "native", f"{target_word}.wav"
-            )
-
-            if not os.path.exists(native_file_path):
-                return JsonResponse(
-                    {"error": f"Native audio file for {target_word} not found."},
-                    status=404,
-                )
-
-            # 발음 비교 수행
-            result = process_audio_files(native_file_path, full_path, target_word)
-
-            # 점수를 세션에 저장
-            pronunciation_score = result['result']['overall_score']
-            request.session['pronunciation_score'] = pronunciation_score
-            print(pronunciation_score)
-
-            # 점수와 피드백을 JSON으로 반환
-            return JsonResponse({
-                "status": "success",
-                "score": pronunciation_score,
-                "target_word": target_word,
-            })
-
-        return JsonResponse({"error": "Invalid request"}, status=400)
-
-    except Exception as e:
-        return JsonResponse(
-            {"error": f"An unexpected error occurred: {str(e)}"}, status=500
-        )
-
-
 # 다음 단어로 이동하는 뷰
 def next_word(request):
     try:
         # 새로운 단어를 임의로 선택
         next_word = Word.objects.order_by("?").first()  # 랜덤으로 단어 가져오기
-
+        print(next_word)
         if next_word:
+            # 세션에서 발음 점수 초기화
+            request.session["pronunciation_score"] = 0  # 점수 초기화
+
             return JsonResponse(
-                {"success": True, "nextWord": next_word.text}
-            )  # 단어 텍스트 반환
+                {
+                    "success": True,
+                    "nextWord": next_word.word,  # 단어 텍스트 반환
+                    "nextMeanings": next_word.meanings,  # 단어 뜻 텍스트 반환
+                    "nextFilePath": next_word.file_path,  # 오디오 경로 반환
+                }
+            )  # 단어 텍스트와 오디오 경로 반환
         else:
             return JsonResponse({"success": False, "message": "단어가 없습니다."})
 
