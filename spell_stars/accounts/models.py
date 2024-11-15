@@ -43,7 +43,7 @@ class StudentInfo(AbstractUser):
 class StudentLog(models.Model):
     student = models.ForeignKey(StudentInfo, on_delete=models.CASCADE)
     login_time = models.DateTimeField()
-    logout_time = models.DateTimeField()
+    logout_time = models.DateTimeField(null=True, blank=True) 
 
 
 # 학생 학습 로그 데이터 테이블
