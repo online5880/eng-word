@@ -1,4 +1,5 @@
 import os
+import random
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 
@@ -18,8 +19,14 @@ from rest_framework import filters
 
 
 def display_vocabulary_book(request):
-    words = Word.objects.all().order_by("category", "word")
-    context = {"words": words, "MEDIA_URL": settings.MEDIA_URL}
+    # words = Word.objects.all().order_by("category", "word")
+    # for word in words:
+    #     print(word.word, word.meanings, word.examples,word.file_path)  # 데이터 구조 확인
+    # context = {"words": words, "MEDIA_URL": settings.MEDIA_URL}
+    all_words = list(Word.objects.all())
+    random_words = random.sample(all_words, min(len(all_words), 15))  # 단어가 15개 미만인 경우 전체를 사용
+    
+    context = {"words": random_words, "MEDIA_URL": settings.MEDIA_URL}
     return render(request, "vocab_mode/vocab.html", context)
 
 

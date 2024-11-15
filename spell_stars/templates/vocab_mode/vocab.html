@@ -18,24 +18,24 @@
     <div class="container">
       <button class="back-button" onclick="location.href='{% url 'index' %}'">돌아가기</button>
       <h1>단어장</h1>
-
       <div class="word-cards">
         {% for word in words %}
         {% if word %}
-          <div class="word-card">
+          <div class="word-card"> 
             <div class="word-content">
               <h3>{{ word.word }}</h3>
-              <p>{{ word.meanings }}</p>
+              <p>{{ word.meanings|join:", " }}</p>
+              <p>{{ word.category }}</p>
             </div>
             <div class="example-section">
-              <p><strong>예문:</strong> {{ word.examples.0.영문 }}</p>
-              <p><strong>예문 뜻:</strong> {{ word.examples.0.한글 }}</p>
+              <p><strong>예문:</strong> {{ word.examples.0.english }}</p>
+              <p><strong>예문 뜻:</strong> {{ word.examples.0.korean }}</p>
             </div>
       
             <!-- 오디오 재생 버튼 -->
             <div class="audio-controls">
-              {% if word.audio_file %}
-                <button class="playAudioButton styled-button" data-audio="{{ MEDIA_URL }}{{ word.audio_file }}">🔊 원어민 발음 듣기</button>
+              {% if word.file_path %}
+                <button class="playAudioButton styled-button" data-audio="{{ MEDIA_URL }}{{ word.file_path }}">🔊 원어민 발음 듣기</button>
               {% else %}
                 <p>원어민 음성 파일이 존재하지 않습니다.</p>
               {% endif %}
