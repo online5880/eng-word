@@ -1,5 +1,5 @@
 from  rest_framework import serializers
-from .models import Word, Category
+from .models import Word
 
 class WordSerializer(serializers.ModelSerializer):
     audio_file_url = serializers.SerializerMethodField()
@@ -13,14 +13,4 @@ class WordSerializer(serializers.ModelSerializer):
         if obj.audio_file:
             return request.build_absolute_uri(f"/media/{obj.audio_file}")
         return None
-        
-class CategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = ['id','name']
-        
-class CategoryDetailSerializer(serializers.ModelSerializer):
-    words = WordSerializer(many=True, read_only=True)
-    class Meta:
-        model = Category
-        fields = ['id','name','words']
+    

@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 
 # from utils.PronunciationChecker.manage import process_audio_files
-from .models import Word, Category
+from .models import Word
 from django.conf import settings
 from django.http import JsonResponse
 from django.core.files.storage import default_storage
@@ -13,7 +13,7 @@ import os
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
-from .serializers import WordSerializer, CategorySerializer, CategoryDetailSerializer
+from .serializers import WordSerializer
 from rest_framework import filters
 
 
@@ -91,14 +91,3 @@ class WordListAPIView(ListAPIView):
     pagination_class = WordPagination
     filter_backends = [filters.SearchFilter]
     search_fields = ["word", "meanings"]  # 정확히 일치하는 단어로 검색
-
-
-class CategoryListAPIView(ListAPIView):
-    queryset = Category.objects.all().order_by("name")
-    serializer_class = CategorySerializer
-
-
-class CategoryDetailAPIView(RetrieveAPIView):
-    queryset = Category.objects.all()
-    serializer_class = CategoryDetailSerializer
-    lookup_field = "id"

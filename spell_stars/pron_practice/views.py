@@ -8,7 +8,7 @@ from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from vocab_mode.models import Word
 import warnings
-import whisper
+from django.apps import apps
 from utils.PronunciationChecker.manage import process_audio_files
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
@@ -16,7 +16,7 @@ from django.core.files.base import ContentFile
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Whisper 모델 로드 (small 모델 사용)
-model = whisper.load_model("small")
+model = apps.get_app_config('spell_stars').whisper_model
 
 
 # 발음 연습 페이지를 렌더링하는 뷰

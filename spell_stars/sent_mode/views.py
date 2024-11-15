@@ -1,15 +1,12 @@
-import whisper
 from django.http import JsonResponse
 from django.shortcuts import render
 from .models import Sentence, LearningResult
 from vocab_mode.models import Word
 from accounts.models import User
-from .utils import (
-    calculate_score,
-)  # 사용자 정의 점수 계산 함수 (정오답, 단어 사용 빈도 등)
+from django.apps import apps
 
 # Whisper 모델 초기화 (whisper-small)
-model = whisper.load_model("small")
+model = apps.get_app_config('spell_stars').whisper_model
 
 
 # 예문 학습 페이지 렌더링
