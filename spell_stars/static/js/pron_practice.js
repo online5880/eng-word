@@ -74,9 +74,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
 
             const formData = new FormData();
-            const targetWord = document.getElementById('current-word').textContent; 
-            formData.append('audio', audioBlob, `${targetWord}.wav`);
-            formData.append('word', targetWord);
+            const targetedWord = document.getElementById('current-word').textContent; 
+            formData.append('audio', audioBlob, `${targetedWord}.wav`);
+            formData.append('word', targetedWord);
 
             const uploadAudioUrl = '/pron_practice/upload_audio/';
             try {

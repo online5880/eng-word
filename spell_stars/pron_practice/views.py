@@ -13,12 +13,14 @@ from django.core.files.base import ContentFile
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Whisper 모델 로드 (small 모델 사용)
-model = apps.get_app_config('spell_stars').whisper_model
+model = apps.get_app_config("spell_stars").whisper_model
 
 
 def pronunciation_practice_view(request):
     # 새로운 단어 선택
-    random_word = Word.objects.values("word", "meanings", "file_path").order_by("?").first()
+    random_word = (
+        Word.objects.values("word", "meanings", "file_path").order_by("?").first()
+    )
 
     if random_word:
         request.session["target_word"] = random_word["word"]
@@ -31,7 +33,7 @@ def pronunciation_practice_view(request):
                 "meanings": random_word["meanings"],
                 "file_path": random_word["file_path"],
                 "pronunciation_score": 0,
-                "MEDIA_URL": settings.MEDIA_URL
+                "MEDIA_URL": settings.MEDIA_URL,
             },
         )
     else:
@@ -76,7 +78,9 @@ def upload_audio(request):
             full_student_audio_path = os.path.join(settings.MEDIA_ROOT, file_path)
 
             # 발음 비교 처리
-            result = process_audio_files(native_audio_path, full_student_audio_path, word)
+            result = process_audio_files(
+                native_audio_path, full_student_audio_path, word
+            )
 
             if result["status"] == "error":
                 return JsonResponse(result)
@@ -123,3 +127,11 @@ def next_word(request):
 
     except Exception as e:
         return JsonResponse({"success": False, "message": str(e)})
+
+
+from django.shortcuts import redirect
+
+
+def exit_practice(request):
+    # 발음 연습에 관련된 데이터 처리(필요한 경우)
+    return redirect("main")  # 메인 페이지로 리다이렉트 (URL 패턴에 맞게 변경)
