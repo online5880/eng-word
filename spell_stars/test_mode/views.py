@@ -1,21 +1,18 @@
-import json
 import os
-import random
-import re
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.conf import settings
 from django.core.files.storage import default_storage
-import whisper
 from .models import TestResult  # TestResult 모델을 import
 from vocab_mode.models import Word
 from sent_mode.models import Sentence
 from accounts.models import StudentInfo
 import warnings
+from django.apps import apps
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-model = whisper.load_model("small")
+model = apps.get_app_config('spell_stars').whisper_model
 
 # 문제 수와 총점
 TOTAL_QUESTIONS = 20

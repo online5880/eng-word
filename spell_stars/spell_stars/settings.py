@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_yasg",
     "accounts",
+    'spell_stars.apps.SpellStarsConfig',
 ]
 
 REST_FRAMEWORK = {
