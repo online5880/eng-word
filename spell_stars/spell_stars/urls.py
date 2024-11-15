@@ -21,24 +21,18 @@ from django.conf import settings
 from django.conf.urls.static import static
 from main import views as mainViews
 
-# from vocab_mode import views as vocabViews
-# from test_mode import views as testViews
-# from pron_practice import views as pronViews
-from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from rest_framework.permissions import IsAuthenticated
 
 schema_view = get_schema_view(
     openapi.Info(
         title="API",
         default_version="v1",
         description="API 문서",
-        #   terms_of_service="https://www.google.com/policies/terms/",
-        #   contact=openapi.Contact(email="contact@example.com"),
-        #   license=openapi.License(name="BSD License"),
     ),
-    public=True,
-    permission_classes=(permissions.AllowAny,),
+    public=False,  # 공개하지 않음
+    permission_classes=(IsAuthenticated,),  # 인증된 사용자만 접근 가능
 )
 
 urlpatterns = [
@@ -53,11 +47,7 @@ urlpatterns = [
     path("test_mode/", include("test_mode.urls")),
     path("pron_practice/", include("pron_practice.urls")),
     # API 문서
-    path(
-        "swagger/v1/",
-        schema_view.with_ui("swagger", cache_timeout=0),
-        name="schema-swagger-ui",
-    ),
+    path('swagger/v1/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),  # Swagger URL
     path(
         "redoc/v1/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"
     ),

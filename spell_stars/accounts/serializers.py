@@ -1,59 +1,32 @@
 from rest_framework import serializers
-from .models import StudentInfo
-from django.contrib.auth.password_validation import validate_password
-from django.core.exceptions import ValidationError
-from datetime import date
+from .models import StudentInfo, StudentLog, StudentLearningLog
 
-
-class UserSerializer(serializers.ModelSerializer):
+# 학생 기본 정보 Serializer
+class StudentInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = StudentInfo
-        fields = ["username", "nickname", "birth_date", "date_joined"]
+        fields = ['id', 'username', 'name', 'birth_date', 'grade', 'age', 'derived_grade']
 
-
-class UserCreationSerializer(serializers.ModelSerializer):
-    password1 = serializers.CharField(write_only=True)
-    password2 = serializers.CharField(write_only=True)
-    birth_date = serializers.DateField(required=True)  # 생년월일 필드
+# 학생 로그 Serializer
+class StudentLogSerializer(serializers.ModelSerializer):
+    # 학생 이름을 표시하기 위해 student 필드를 직렬화
+    student_name = serializers.ReadOnlyField(source='student.name')
 
     class Meta:
-        model = StudentInfo
-        fields = ["username", "nickname", "birth_date", "password1", "password2"]
+        model = StudentLog
+        fields = ['id', 'student', 'student_name', 'login_time', 'logout_time']
+        extra_kwargs = {
+            'student': {'write_only': True},  # POST 시 student_id를 전달
+        }
 
-    # 유효성 검사
-    def validate(self, data):
-        # password1과 password2가 일치하는지 확인
-        if data["password1"] != data["password2"]:
-            raise serializers.ValidationError("Passwords do not match.")
+# 학생 학습 로그 Serializer
+class StudentLearningLogSerializer(serializers.ModelSerializer):
+    # 학생 이름을 표시하기 위해 student 필드를 직렬화
+    student_name = serializers.ReadOnlyField(source='student.name')
 
-        # 생년월일을 통해 나이 유효성 검사
-        if "birth_date" in data:
-            today = date.today()
-            birth_date = data["birth_date"]
-            age = (
-                today.year
-                - birth_date.year
-                - ((today.month, today.day) < (birth_date.month, birth_date.day))
-            )
-
-            if age < 5 or age > 100:
-                raise serializers.ValidationError("나이는 5 ~ 100 사이여야 합니다.")
-
-        # Django의 기본 비밀번호 검증기 적용
-        try:
-            validate_password(data["password1"])
-        except ValidationError as e:
-            raise serializers.ValidationError({"password1": list(e.messages)})
-
-        return data
-
-    # 생성
-    def create(self, validated_data):
-        user = StudentInfo(
-            username=validated_data["username"],
-            nickname=validated_data.get("nickname", ""),
-            birth_date=validated_data.get("birth_date"),  # birth_date로 저장
-        )
-        user.set_password(validated_data["password1"])
-        user.save()
-        return user
+    class Meta:
+        model = StudentLearningLog
+        fields = ['id', 'student', 'student_name', 'learning_mode', 'start_time', 'end_time']
+        extra_kwargs = {
+            'student': {'write_only': True},  # POST 시 student_id를 전달
+        }

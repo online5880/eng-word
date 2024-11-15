@@ -1,9 +1,18 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework_nested.routers import DefaultRouter, NestedDefaultRouter
+from .views import StudentInfoViewSet, StudentLogViewSet, StudentLearningLogViewSet
 
-# from . import views
+# Default Router
+router = DefaultRouter()
+router.register(r'students', StudentInfoViewSet, basename='students')
 
+# Nested Router
+logs_router = NestedDefaultRouter(router, r'students', lookup='student')
+logs_router.register(r'logs', StudentLogViewSet, basename='student-logs')
+logs_router.register(r'learning-logs', StudentLearningLogViewSet, basename='student-learning-logs')
+
+# URL Patterns
 urlpatterns = [
-    # path('users/', views.UserListAPIView.as_view(), name='user-list'),  # 예: 전체 유저 조회
-    # path('users/<int:id>/',views.UserRetrieveAPIView.as_view(),name='user-detail'),
-    # path('register/',views.UserCreateAPIView.as_view(),name="user-register"), # 생성
+    path('', include(router.urls)),  # 기본 학생 정보 URLs
+    path('', include(logs_router.urls)),  # Nested URLs
 ]
