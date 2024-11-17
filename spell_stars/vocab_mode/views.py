@@ -1,3 +1,4 @@
+from datetime import datetime
 import os
 import random
 from django.shortcuts import render, get_object_or_404
@@ -16,6 +17,9 @@ from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
 from .serializers import WordSerializer
 from rest_framework import filters
+from rest_framework.request import Request
+from rest_framework.test import APIRequestFactory
+from accounts.views import StudentLearningLogViewSet, start_learning_session
 
 def display_vocabulary_book_random_category(request):
     # 모든 카테고리 가져오기 (중복 제거)
@@ -80,16 +84,15 @@ def display_vocabulary_book(request):
     selected_words = request.session.get('selected_words')
     
     if selected_words:
-        # 세션에 저장된 단어들 사용
         context = {"words": selected_words, "MEDIA_URL": settings.MEDIA_URL}
-        # 세션 데이터 삭제
         del request.session['selected_words']
     else:
-        # 기존 랜덤 로직 사용
         all_words = list(Word.objects.all())
         random_words = random.sample(all_words, min(len(all_words), 15))
         context = {"words": random_words, "MEDIA_URL": settings.MEDIA_URL}
     
+    # 학습 시작 로그 생성
+    start_learning_session(request, learning_mode=1)  # vocab_mode는 1번
     return render(request, "vocab_mode/vocab.html", context)
 
 

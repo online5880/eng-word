@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
     let audioChunks = [];
     let isRecording = false;
 
+    // beforeunload 이벤트 리스너 추가
+    window.addEventListener('beforeunload', function(e) {
+        fetch('/accounts/end-learning/', {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': csrfToken
+            }
+        });
+    });
+
     // 현재 단어 가져오기
     function getCurrentWord() {
         const currentCard = cards[currentIndex];
@@ -138,4 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 초기 상태 설정
     showCard(currentIndex);
+
+    
 });
