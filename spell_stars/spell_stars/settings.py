@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     "drf_yasg",
     "accounts",
     "channels",
+    "spell_stars"
 
 ]
 
@@ -169,8 +170,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "accounts.StudentInfo"
 
-LOGIN_URL = "/accounts/login/"  # @login_required가 리디렉션할 로그인 URL
-LOGOUT_URL = "/accounts/logout/"  # 로그아웃 버튼이나 링크가 사용할 로그아웃 URL
+LOGIN_URL = "/auth/login/"  # @login_required가 리디렉션할 로그인 URL
+LOGOUT_URL = "/auth/logout/"  # 로그아웃 버튼이나 링크가 사용할 로그아웃 URL
 LOGIN_REDIRECT_URL = "/"  # 로그인 후 리디렉션될 URL
 LOGOUT_REDIRECT_URL = "/"  # 로그아웃 후 메인 페이지로 리디렉션
 
