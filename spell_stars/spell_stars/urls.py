@@ -42,3 +42,6 @@ urlpatterns = [
     # API 엔드포인트
     path("api/v1/accounts/", include("accounts.api_urls")),  # API를 위한 계정 URL
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

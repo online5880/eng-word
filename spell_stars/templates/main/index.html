@@ -3,35 +3,28 @@
 {% block title %}홈 - 영어 단어 암기 프로그램{% endblock %}
 
 {% block content %}
-<header style="text-align: center; margin-bottom: 20px;">
-    <h1>영어 단어 암기 프로그램</h1>
+<div style="text-align: center; padding: 2rem;">
+    <h1>환영합니다!</h1>
     <p>효율적인 단어 학습을 시작하세요!</p>
-    <div style="margin-top: 10px;">
-        <!-- 내 정보 보기 버튼 -->
-        <a href="{% url 'profile' %}" style="margin-right: 10px; padding: 8px 12px; text-decoration: none; background-color: #4CAF50; color: white; border-radius: 5px;">내 정보 보기</a>
-        <!-- 로그아웃 버튼 -->
-        <form action="{% url 'logout' %}" method="post" style="display: inline;">
-            {% csrf_token %}
-            <button type="submit" style="padding: 8px 12px; background-color: #f44336; color: white; border: none; border-radius: 5px;">로그아웃</button>
-        </form>
+
+    <div style="max-width: 800px; margin: 2rem auto; display: grid; gap: 2rem;">
+        <section style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
+            <h2>📚 사전 학습 모드</h2>
+            <p>기초 단어를 사전에 학습할 수 있는 모드입니다.</p>
+            <a href="{% url 'vocab_mode' %}" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background-color: #2196F3; color: white; text-decoration: none; border-radius: 5px;">시작하기</a>
+        </section>
+
+        <section style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
+            <h2>📝 시험 모드</h2>
+            <p>지금까지 학습한 단어들을 시험해보세요!</p>
+            <a href="{% url 'test_mode' %}" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background-color: #ff9800; color: white; text-decoration: none; border-radius: 5px;">시작하기</a>
+        </section>
+
+        <section style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
+            <h2>🗣️ 발음 연습 모드</h2>
+            <p>단어 발음을 연습해보는 모드입니다.</p>
+            <a href="{% url 'pron_practice' %}" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background-color: #9c27b0; color: white; text-decoration: none; border-radius: 5px;">시작하기</a>
+        </section>
     </div>
-</header>
-
-<section style="text-align: center; margin: 20px 0;">
-    <h2>📚 사전 학습 모드</h2>
-    <p>기초 단어를 사전에 학습할 수 있는 모드입니다.</p>
-    <a href="{% url 'vocab_mode' %}" style="padding: 10px 20px; background-color: #2196F3; color: white; text-decoration: none; border-radius: 5px;">사전 학습 모드로 가기</a>
-</section>
-
-<section style="text-align: center; margin: 20px 0;">
-    <h2>📝 시험 모드</h2>
-    <p>지금까지 학습한 단어들을 시험해보세요!</p>
-    <a href="{% url 'test_mode' %}" style="padding: 10px 20px; background-color: #ff9800; color: white; text-decoration: none; border-radius: 5px;">시험 모드로 가기</a>
-</section>
-
-<section style="text-align: center; margin: 20px 0;">
-    <h2>🗣️ 발음 연습 모드</h2>
-    <p>단어 발음을 연습해보는 모드입니다.</p>
-    <a href="{% url 'pron_practice' %}" style="padding: 10px 20px; background-color: #9c27b0; color: white; text-decoration: none; border-radius: 5px;">발음 연습 모드로 가기</a>
-</section>
+</div>
 {% endblock %}
