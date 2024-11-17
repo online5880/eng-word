@@ -21,7 +21,9 @@ class WordAdmin(admin.ModelAdmin):
     get_meanings.short_description = "Meanings"  # 열 이름을 설정
     
     def get_examples(self, obj):
-        return ", ".join([f"{k}: {v}" for k, v in obj.examples.items()])
+        # obj.examples가 리스트인 경우, 각 항목을 쉼표로 구분하여 반환
+        return ", ".join(str(example) for example in obj.examples)
+
     get_examples.short_description = "Examples"
 
     # 읽기 전용 필드를 관리 인터페이스에 표시
