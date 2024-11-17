@@ -209,3 +209,110 @@
   .styled-button:active {
     background-color: #3e8e41; /* 클릭 시 배경색 */
   }
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.navigation-buttons .nav-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navigation-buttons .nav-button:hover {
+    background-color: #45a049;
+}
+
+#cardIndex {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 1rem;
+}
+
+.word-cards {
+    position: relative;
+}
+
+.word-card {
+    transition: opacity 0.3s ease;
+}
+
+.category-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.random-category-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.random-category-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.random-category-btn:active {
+    transform: scale(0.95);
+}
+
+.random-category-btn i {
+    font-size: 20px;
+}
+
+.start-btn {
+    background-color: #2196F3;  /* 파란색 계열로 변경 */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.start-btn:hover {
+    background-color: #1976D2;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.start-btn:active {
+    transform: scale(0.95);
+}
+
+.start-btn i {
+    font-size: 20px;
+}

@@ -51,4 +51,4 @@ class StudentLearningLog(models.Model):
     student = models.ForeignKey(StudentInfo, on_delete=models.CASCADE)
     learning_mode = models.IntegerField()
     start_time = models.DateTimeField()
-    end_time = models.DateTimeField()
+    end_time = models.DateTimeField(null=True, blank=True) 
