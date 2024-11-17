@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData();
                 formData.append('audio', audioBlob, 'recording.wav');
                 formData.append('word', getCurrentWord());
+                console.log(getCurrentWord())
 
                 try {
                     const response = await fetch(uploadAudioUrl, {
