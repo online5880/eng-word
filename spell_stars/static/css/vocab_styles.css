@@ -209,3 +209,39 @@
   .styled-button:active {
     background-color: #3e8e41; /* 클릭 시 배경색 */
   }
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.navigation-buttons .nav-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navigation-buttons .nav-button:hover {
+    background-color: #45a049;
+}
+
+#cardIndex {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 1rem;
+}
+
+.word-cards {
+    position: relative;
+}
+
+.word-card {
+    transition: opacity 0.3s ease;
+}
