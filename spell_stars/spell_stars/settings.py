@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     "drf_yasg",
     "accounts",
     "channels",
-    "spell_stars",
 ]
 
 ASGI_APPLICATION = "spell_stars.asgi.application"
@@ -184,4 +183,4 @@ REST_FRAMEWORK = {
 }
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # 브라우저 닫으면 세션 종료
-SESSION_COOKIE_AGE = 10  # 세션 만료 시간 (초 단위, 여기선 1시간)
+SESSION_COOKIE_AGE = 600  # 세션 만료 시간 (초 단위, 여기선 1시간)
