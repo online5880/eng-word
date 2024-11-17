@@ -80,22 +80,6 @@ h2 {
     margin: 20px auto;
 }
 
-/* 카운트다운 스타일 */
-#countdown {
-    font-size: 3em;
-    color: #fff;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
 #recordButton {
     background-color: #4CAF50;
     color: white;
@@ -232,28 +216,38 @@ h2 {
 
 
 /* 네비게이션 버튼 스타일 */
-.next-word {
+#navButtons {
+    display: flex;
+    justify-content: center;  /* 버튼들을 가로로 중앙 정렬 */
+    gap: 10px;  /* 버튼 간 간격 */
+}
+
+/* 다음 단어 버튼 스타일 */
+#nextWordButton {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
-    background-color: #28a745;  /* Next Word 버튼 색상 */
+    background-color: #016ccf; /* Next Word 버튼 색상 */
     color: white;
     margin: 10px 5px;
+    border: none;
 }
 
-.next-word:hover {
-    background-color: #218838;  /* Next Word 버튼 hover 색상 */
+#nextWordButton:hover {
+    background-color: #005bb5; /* Next Word 버튼 hover 색상 */
 }
 
-.exit-practice {
+/* 나가기 버튼 스타일 */
+#exitPracticeButton {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
-    background-color: #dc3545;  /* Exit Practice 버튼 색상 */
+    background-color: #016ccf; /* Exit Practice 버튼 색상 */
     color: white;
     margin: 10px 5px;
+    border: none;
 }
 
-.exit-practice:hover {
-    background-color: #c82333;  /* Exit Practice 버튼 hover 색상 */
+#exitPracticeButton:hover {
+    background-color: #005bb5; /* Exit Practice 버튼 hover 색상 */
 }

@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
             formData.append('audio', audioBlob, `${targetedWord}.wav`);
             formData.append('word', targetedWord);
 
-            const uploadAudioUrl = '/pron_practice/upload_audio/';
+            const uploadAudioUrl = '/practice/upload_audio/';
             try {
                 console.log('오디오 업로드 시도');
                 const response = await fetch(uploadAudioUrl, {
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 다음 단어로 이동
     function nextWord() {
         console.log('다음 단어 요청');
-        fetch('/pron_practice/next_word/', {
+        fetch('/practice/next_word/', {
             method: 'GET',
             headers: {
                 'X-CSRFToken': csrfToken

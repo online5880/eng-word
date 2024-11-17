@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8">
     <title>발음 연습 모드</title>
-    <link rel="stylesheet" href="{% static 'css/pron_styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pron_styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
 
@@ -73,9 +73,10 @@
         오디오 파일이 지원되지 않는 브라우저입니다.
       </audio>
 
-      <!-- 네비게이션 버튼 -->
-      <button id="nextWordButton">다음 단어</button>
-      <button onclick="exitPractice()">나가기</button>
+      <div id="navButtons">
+        <button id="nextWordButton">다음 단어</button>
+        <button id="exitPracticeButton">나가기</button>
+    </div>
     </div>
 
     <script src="{% static 'js/pron_practice.js' %}"></script>
