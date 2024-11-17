@@ -64,7 +64,7 @@ function processRecording() {
     const formData = new FormData();
     formData.append("audio_file", blob, "audio.wav");
     // 서버로 전송
-    fetch(`/test_mode/submit_audio/`, {  // test_mode로 경로 수정
+    fetch(`/test/submit_audio/`, {  // test로 경로 수정
         method: "POST",
         headers: {
             "X-CSRFToken": csrfToken,  // CSRF 토큰 포함
@@ -147,7 +147,7 @@ function resetButtons() {
 // 다음 문제로 이동
 function nextQuestion() {
     console.log("다음 문제로 이동");
-    fetch('/test_mode/next_question/', {  // nextQuestion로 경로 수정
+    fetch('/test/next_question/', {  // nextQuestion로 경로 수정
         method: 'GET',
         headers: {
             'X-CSRFToken': csrfToken

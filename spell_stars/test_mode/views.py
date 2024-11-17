@@ -72,8 +72,8 @@ def test_mode_view(request):
         )
 
 
-def recognize_audio(request, question_id):
-    print(f"recognize_audio called for question_id: {question_id}")
+def submit_audio(request, question_id):
+    print(f"submit_audio called for question_id: {question_id}")
 
     # POST 요청에서 파일이 포함되어 있는지 확인
     if request.method == "POST" and request.FILES.get("audio_file"):
