@@ -57,8 +57,19 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_yasg",
     "accounts",
-    'spell_stars.apps.SpellStarsConfig',
+    "channels",
+    "spell_stars"
+
 ]
+
+ASGI_APPLICATION = 'spell_stars.asgi.application'
+
+# Channels Layer 설정 (기본적으로 In-Memory 사용, Redis를 권장)
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    },
+}
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
@@ -74,7 +85,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "accounts.middleware.UpdateLastLoginMiddleware",
+    'accounts.middleware.UpdateLastLoginMiddleware',
+    'accounts.middleware.AutoLogoutMiddleware',
 ]
 
 ROOT_URLCONF = "spell_stars.urls"
@@ -158,8 +170,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "accounts.StudentInfo"
 
-LOGIN_URL = "/accounts/login/"  # @login_required가 리디렉션할 로그인 URL
-LOGOUT_URL = "/accounts/logout/"  # 로그아웃 버튼이나 링크가 사용할 로그아웃 URL
+LOGIN_URL = "/auth/login/"  # @login_required가 리디렉션할 로그인 URL
+LOGOUT_URL = "/auth/logout/"  # 로그아웃 버튼이나 링크가 사용할 로그아웃 URL
 LOGIN_REDIRECT_URL = "/"  # 로그인 후 리디렉션될 URL
 LOGOUT_REDIRECT_URL = "/"  # 로그아웃 후 메인 페이지로 리디렉션
 
@@ -171,3 +183,6 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.AllowAny",
     ],
 }
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # 브라우저 닫으면 세션 종료
+SESSION_COOKIE_AGE = 600  # 세션 만료 시간 (초 단위, 여기선 1시간)
