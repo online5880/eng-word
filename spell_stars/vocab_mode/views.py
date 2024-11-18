@@ -92,7 +92,7 @@ def display_vocabulary_book(request):
         context = {"words": random_words, "MEDIA_URL": settings.MEDIA_URL}
     
     # 학습 시작 로그 생성
-    start_learning_session(request, learning_mode=1)  # vocab_mode는 1번
+    start_learning_session(request, learning_mode=0)
     return render(request, "vocab_mode/vocab.html", context)
 
 
