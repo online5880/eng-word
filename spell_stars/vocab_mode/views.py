@@ -4,7 +4,7 @@ import random
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 
-# from utils.PronunciationChecker.manage import process_audio_files
+from utils.PronunciationChecker.manage import process_audio_files
 from .models import Word
 from django.conf import settings
 from django.http import JsonResponse
@@ -109,7 +109,7 @@ def upload_audio(request):
             os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
 
             # 파일 이름 설정
-            file_name = f"{current_word}_student.wav"
+            file_name = f"{current_word}.wav"
             file_path = os.path.join(save_path, file_name)
 
             # 기존 파일이 있으면 삭제
@@ -121,10 +121,23 @@ def upload_audio(request):
                 file_path, ContentFile(audio_file.read())
             )
             
+            native_audio_path = os.path.join(
+                settings.MEDIA_ROOT, "audio_files/native/", f"{current_word}.wav"
+            )
+            student_audio_path = os.path.join(
+                settings.MEDIA_ROOT, save_path, f"{current_word}.wav"
+            )
+            
+            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
+            print(student_audio_path)
+            print(native_audio_path)
+            # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
+            print("결과",result)
             return JsonResponse({
                 "status": "success",
                 "message": "녹음이 완료되었습니다.",
-                "file_path": full_path
+                "file_path": full_path,
+                "result":result
             })
 
         except Exception as e:

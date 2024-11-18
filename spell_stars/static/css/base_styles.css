@@ -91,3 +91,9 @@ body {
     margin: 0;
     min-height: 100vh;
 }
+
+.nav-button.active {
+    pointer-events: none; /* 클릭 비활성화 */
+    opacity: 0.5; /* 버튼을 시각적으로 구별 */
+    cursor: default; /* 클릭 커서 제거 */
+}

@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let mediaRecorder = null;
     let audioChunks = [];
     let isRecording = false;
+    let passedWords = new Set();  // 통과한 단어들을 저장할 Set
 
     // beforeunload 이벤트 리스너 추가
     window.addEventListener('beforeunload', function(e) {
@@ -34,17 +35,36 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.display = i === index ? 'block' : 'none';
         });
         cardIndex.textContent = `${currentIndex + 1}/${cards.length}`;
+        updateNavigationButtons();  // 버튼 상태 업데이트
+    }
+
+    // 버튼 상태 업데이트 함수 추가
+    function updateNavigationButtons() {
+        // 현재 단어가 통과했거나, 이전 단어로 가는 경우에만 버튼 활성화
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex === cards.length - 1 || !passedWords.has(getCurrentWord());
+        
+        // 버튼 스타일 업데이트
+        [prevButton, nextButton].forEach(button => {
+            if (button.disabled) {
+                button.classList.add('disabled');
+            } else {
+                button.classList.remove('disabled');
+            }
+        });
     }
 
     // 이전 버튼 클릭
     prevButton.addEventListener('click', () => {
         currentIndex = currentIndex > 0 ? currentIndex - 1 : cards.length - 1;
+        stopRecording();
         showCard(currentIndex);
     });
 
     // 다음 버튼 클릭
     nextButton.addEventListener('click', () => {
         currentIndex = currentIndex < cards.length - 1 ? currentIndex + 1 : 0;
+        stopRecording();
         showCard(currentIndex);
     });
 
@@ -64,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData();
                 formData.append('audio', audioBlob, 'recording.wav');
                 formData.append('word', getCurrentWord());
-                console.log(getCurrentWord())
 
                 try {
                     const response = await fetch(uploadAudioUrl, {
@@ -77,6 +96,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     if (response.ok) {
                         statusText.textContent = '녹음이 성공적으로 저장되었습니다.';
+                        
+                        // 응답 데이터를 JSON으로 변환
+                        const data = await response.json();
+
+                        // 결과 보여주기
+                        displayResult(data.result.result)
+                        
                     } else {
                         throw new Error('녹음 저장 실패');
                     }
@@ -150,4 +176,34 @@ document.addEventListener('DOMContentLoaded', function() {
     showCard(currentIndex);
 
     
+    function displayResult(result) {
+        console.log("displayResult received result:", result);
+    
+        if (!result || typeof result.overall_score !== "number") {
+            console.error("Error: result or overall_score is invalid", result);
+            statusText.textContent = "결과를 불러오는 중 오류가 발생했습니다.";
+            return;
+        }
+    
+        const score = result.overall_score;
+        const currentWord = getCurrentWord();
+        
+        // 점수가 80점 이상이면 통과 처리
+        if (score >= 80) {
+            passedWords.add(currentWord);
+            statusText.textContent = `발음 점수: ${score.toFixed(2)}점 - 통과!`;
+            statusText.style.color = '#4CAF50';  // 초록색으로 표시
+        } else {
+            statusText.textContent = `발음 점수: ${score.toFixed(2)}점 - 다시 시도하세요`;
+            statusText.style.color = '#f44336';  // 빨간색으로 표시
+        }
+    
+        // 진행률 바 업데이트
+        const progressBar = document.getElementById("progressFill");
+        progressBar.style.width = `${score}%`;
+        progressBar.style.backgroundColor = score >= 80 ? '#4CAF50' : '#f44336';
+        
+        updateNavigationButtons();  // 버튼 상태 업데이트
+    }
+
 });
