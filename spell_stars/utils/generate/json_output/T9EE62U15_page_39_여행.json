@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "abroad",
+        "단어 뜻": "해외에",
+        "품사": "부사",
+        "예문": "I want to travel abroad.",
+        "예문 뜻": "해외여행을 하고 싶어."
+    },
+    {
+        "단어": "arrive",
+        "단어 뜻": "도착하다",
+        "품사": "동사",
+        "예문": "What time did you arrive at home?",
+        "예문 뜻": "너는 집에 몇 시에 도착했니?"
+    },
+    {
+        "단어": "base",
+        "단어 뜻": "받침대",
+        "품사": "명사",
+        "예문": "The vase was on a metal base.",
+        "예문 뜻": "그 꽃병은 금속 받침대 위에 있었어."
+    },
+    {
+        "단어": "basket",
+        "단어 뜻": "바구니",
+        "품사": "명사",
+        "예문": "He is walking with a basket full of food.",
+        "예문 뜻": "그는 음식이 가득한 바구니를 들고 걷고 있어."
+    },
+    {
+        "단어": "global",
+        "단어 뜻": "지구의",
+        "품사": "형용사",
+        "예문": "The world has become a global village.",
+        "예문 뜻": "세계는 지구촌이 되고 있어."
+    },
+    {
+        "단어": "journey",
+        "단어 뜻": "여행",
+        "품사": "명사",
+        "예문": "I was tired from the long journey.",
+        "예문 뜻": "나는 장거리 여행으로 피곤했어."
+    },
+    {
+        "단어": "leave",
+        "단어 뜻": "떠나다",
+        "품사": "동사",
+        "예문": "If you leave right now, you won’t be late.",
+        "예문 뜻": "지금 당장 떠나면 늦지 않을 거야."
+    },
+    {
+        "단어": "travel",
+        "단어 뜻": "여행하다",
+        "품사": "동사",
+        "예문": "I like to travel alone.",
+        "예문 뜻": "나는 혼자 여행하는 것을 좋아해."
+    }
+]

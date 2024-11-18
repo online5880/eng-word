@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "allergy",
+        "단어 뜻": "알레르기",
+        "품사": "n.",
+        "예문": "I have an allergy to peanuts.",
+        "예문 뜻": "나는 땅콩 알레르기가 있다."
+    },
+    {
+        "단어": "cancer",
+        "단어 뜻": "암",
+        "품사": "n.",
+        "예문": "His father died of lung cancer.",
+        "예문 뜻": "그의 아버지께서는 폐암으로 돌아가셨다."
+    },
+    {
+        "단어": "cough",
+        "단어 뜻": "기침",
+        "품사": "n.",
+        "예문": "My grandfather has a bad cough.",
+        "예문 뜻": "우리 할아버지께서는 기침이 심하시다."
+    },
+    {
+        "단어": "digest",
+        "단어 뜻": "소화하다",
+        "품사": "v.",
+        "예문": "The stomach plays an important role to digest the food.",
+        "예문 뜻": "위는 음식을 소화시키는 중요한 역할을 한다."
+    },
+    {
+        "단어": "dizzy",
+        "단어 뜻": "어지러운",
+        "품사": "adj.",
+        "예문": "My mother felt dizzy when she stood up.",
+        "예문 뜻": "우리 어머니께서는 일어설 때 어지러움을 느끼셨다."
+    },
+    {
+        "단어": "emergency",
+        "단어 뜻": "응급, 비상사태",
+        "품사": "n.",
+        "예문": "My baby had emergency treatment yesterday.",
+        "예문 뜻": "우리 아기는 어제 응급 치료를 받았다."
+    },
+    {
+        "단어": "fever",
+        "단어 뜻": "열",
+        "품사": "n.",
+        "예문": "My little sister has a high fever.",
+        "예문 뜻": "내 여동생은 고열이 있다."
+    },
+    {
+        "단어": "heal",
+        "단어 뜻": "치유하다",
+        "품사": "v.",
+        "예문": "Laughter therapy is widely used to heal many patients.",
+        "예문 뜻": "웃음 치료는 많은 환자들을 치유하기 위해 널리 사용된다."
+    },
+    {
+        "단어": "infect",
+        "단어 뜻": "감염시키다",
+        "품사": "v.",
+        "예문": "Anyone with an eye disease may infect the people around him.",
+        "예문 뜻": "눈병에 걸린 사람은 주위 사람들을 감염시킬 수 있다."
+    },
+    {
+        "단어": "joint",
+        "단어 뜻": "관절",
+        "품사": "n.",
+        "예문": "Stretching can help to loosen your wrist joint.",
+        "예문 뜻": "스트레칭은 손목 관절을 이완시키는 데 도움이 될 수 있다."
+    },
+    {
+        "단어": "medicine",
+        "단어 뜻": "약",
+        "품사": "n.",
+        "예문": "Take this medicine two times a day.",
+        "예문 뜻": "이 약을 하루에 두 번 복용하세요."
+    },
+    {
+        "단어": "mental",
+        "단어 뜻": "정신의, 심적인",
+        "품사": "adj.",
+        "예문": "Stress is not good for our mental and physical health.",
+        "예문 뜻": "스트레스는 정신 건강과 신체 건강에 좋지 않다."
+    },
+    {
+        "단어": "operate",
+        "단어 뜻": "수술하다",
+        "품사": "v.",
+        "예문": "Dr. June is going to operate on my mother.",
+        "예문 뜻": "June 의사 선생님께서 우리 엄마를 수술하실 것이다."
+    },
+    {
+        "단어": "pain",
+        "단어 뜻": "고통",
+        "품사": "n.",
+        "예문": "This aspirin will cure your pain.",
+        "예문 뜻": "이 아스피린이 네 통증을 치료해 줄 것이다."
+    },
+    {
+        "단어": "prescribe",
+        "단어 뜻": "처방을 내리다",
+        "품사": "v.",
+        "예문": "The doctor will prescribe me painkillers to stop my headache.",
+        "예문 뜻": "의사는 두통을 멈추게 하는 진통제를 나에게 처방해 줄 것이다."
+    },
+    {
+        "단어": "pressure",
+        "단어 뜻": "압력, 압박",
+        "품사": "n.",
+        "예문": "The nurse applied pressure to my arm to stop the bleeding.",
+        "예문 뜻": "간호사는 출혈을 멈추기 위해 내 팔에 압력을 가했다."
+    },
+    {
+        "단어": "pulse",
+        "단어 뜻": "맥박",
+        "품사": "n.",
+        "예문": "The doctor carefully checked my pulse rate.",
+        "예문 뜻": "의사는 신중히 내 맥박 수를 체크했다."
+    },
+    {
+        "단어": "recover",
+        "단어 뜻": "회복하다",
+        "품사": "v.",
+        "예문": "I hope my grandmother will recover her senses soon.",
+        "예문 뜻": "나는 우리 할머니께서 곧 의식을 회복하시길 바란다."
+    },
+    {
+        "단어": "shot",
+        "단어 뜻": "주사",
+        "품사": "n.",
+        "예문": "I had a shot in my arm because of flu.",
+        "예문 뜻": "나는 독감 때문에 팔에 주사를 맞았다."
+    },
+    {
+        "단어": "wound",
+        "단어 뜻": "상처",
+        "품사": "n.",
+        "예문": "I applied this ointment to my wound.",
+        "예문 뜻": "나는 이 연고를 상처에 발랐다."
+    }
+]

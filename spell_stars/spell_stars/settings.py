@@ -58,8 +58,7 @@ INSTALLED_APPS = [
     "drf_yasg",
     "accounts",
     "channels",
-    "spell_stars"
-
+    "spell_stars",
 ]
 
 ASGI_APPLICATION = "spell_stars.asgi.application"

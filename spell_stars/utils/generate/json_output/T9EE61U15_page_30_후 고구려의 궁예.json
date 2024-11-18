@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "handicap",
+        "단어 뜻": "장애",
+        "품사": "명사",
+        "예문": "He has a handicap of being blind.",
+        "예문 뜻": "그는 눈이 보이지 않는 장애가 있어."
+    },
+    {
+        "단어": "handkerchief",
+        "단어 뜻": "손수건",
+        "품사": "명사",
+        "예문": "She blew her nose into her handkerchief.",
+        "예문 뜻": "그녀는 자기 손수건에 코를 풀었어."
+    },
+    {
+        "단어": "handle",
+        "단어 뜻": "다루다",
+        "품사": "동사",
+        "예문": "He handled the angry dog very well.",
+        "예문 뜻": "그는 화난 개를 매우 잘 다루었다."
+    },
+    {
+        "단어": "handsome",
+        "단어 뜻": "잘생긴",
+        "품사": "형용사",
+        "예문": "He is tall and handsome.",
+        "예문 뜻": "그는 키가 크고 잘생겼어."
+    },
+    {
+        "단어": "maybe",
+        "단어 뜻": "아마",
+        "품사": "부사",
+        "예문": "Maybe we’ll meet again.",
+        "예문 뜻": "아마 우리는 다시 만나게 될 거야."
+    },
+    {
+        "단어": "perhaps",
+        "단어 뜻": "아마",
+        "품사": "부사",
+        "예문": "Perhaps I will see you tomorrow.",
+        "예문 뜻": "아마 나는 너를 내일 보게 될 거야."
+    },
+    {
+        "단어": "possibly",
+        "단어 뜻": "아마",
+        "품사": "부사",
+        "예문": "That cannot possibly be true.",
+        "예문 뜻": "그것은 아마 사실일 리가 없어."
+    },
+    {
+        "단어": "probably",
+        "단어 뜻": "아마",
+        "품사": "부사",
+        "예문": "It will probably snow today.",
+        "예문 뜻": "아마 오늘 눈이 올 거야."
+    }
+]

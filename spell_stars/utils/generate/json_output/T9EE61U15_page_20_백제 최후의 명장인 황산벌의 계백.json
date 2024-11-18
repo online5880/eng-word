@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "record",
+        "단어 뜻": "기록",
+        "품사": "명사",
+        "예문": "He set a new world record for swimming.",
+        "예문 뜻": "그는 수영에서 새로운 세계 기록을 세웠어."
+    },
+    {
+        "단어": "relax",
+        "단어 뜻": "휴식은 취하다",
+        "품사": "동사",
+        "예문": "Just sit down and relax for an hour.",
+        "예문 뜻": "그냥 앉아서 한 시간 동안 휴식을 취해."
+    },
+    {
+        "단어": "repair",
+        "단어 뜻": "수리하다",
+        "품사": "동사",
+        "예문": "He repairs computers.",
+        "예문 뜻": "그는 컴퓨터를 수리해."
+    },
+    {
+        "단어": "repeat",
+        "단어 뜻": "반복하다",
+        "품사": "동사",
+        "예문": "The teacher repeated the question.",
+        "예문 뜻": "선생님은 질문을 반복하셨어."
+    },
+    {
+        "단어": "report",
+        "단어 뜻": "발표하다",
+        "품사": "동사",
+        "예문": "The doctor reported that the patient recovered.",
+        "예문 뜻": "의사는 그 환자가 회복되었다고 발표했어."
+    },
+    {
+        "단어": "rescue",
+        "단어 뜻": "구하다",
+        "품사": "동사",
+        "예문": "The firefighters rescued children from the burning building.",
+        "예문 뜻": "그 소방관들은 불타는 건물에서 아이들을 구했어."
+    },
+    {
+        "단어": "result",
+        "단어 뜻": "결과",
+        "품사": "명사",
+        "예문": "You will get your exam results next week.",
+        "예문 뜻": "여러분은 다음 주에 시험 결과를 받을 거에요."
+    },
+    {
+        "단어": "review",
+        "단어 뜻": "복습하다",
+        "품사": "동사",
+        "예문": "I reviewed the book before the test.",
+        "예문 뜻": "나는 시험 전에 책을 복습했어."
+    }
+]

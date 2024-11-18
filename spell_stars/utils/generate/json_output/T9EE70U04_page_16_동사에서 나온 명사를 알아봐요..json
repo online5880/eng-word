@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "foundation",
+        "단어 뜻": "토대, 근거",
+        "품사": "n.",
+        "예문": "Some people spread rumors which are totally without foundation.",
+        "예문 뜻": "몇몇 사람들은 전혀 근거 없는 소문을 퍼뜨린다."
+    },
+    {
+        "단어": "information",
+        "단어 뜻": "정보",
+        "품사": "n.",
+        "예문": "TV gives us lots of information quickly.",
+        "예문 뜻": "TV는 우리에게 많은 정보를 신속하게 전달한다."
+    },
+    {
+        "단어": "presentation",
+        "단어 뜻": "제출, 발표",
+        "품사": "n.",
+        "예문": "Our group is going to do the presentation about global warming.",
+        "예문 뜻": "우리 조는 지구 온난화에 관한 발표를 할 것이다."
+    },
+    {
+        "단어": "transportation",
+        "단어 뜻": "수송, 교통 수단",
+        "품사": "n.",
+        "예문": "I use public transportation to go to school.",
+        "예문 뜻": "나는 대중교통을 이용해서 학교에 간다."
+    },
+    {
+        "단어": "amusement",
+        "단어 뜻": "즐거움, 재미",
+        "품사": "n.",
+        "예문": "She keeps a pet for amusement.",
+        "예문 뜻": "그녀는 즐거움을 위해 애완동물을 기른다."
+    },
+    {
+        "단어": "development",
+        "단어 뜻": "발달, 개발",
+        "품사": "n.",
+        "예문": "Learning environment has an effect on growth and development of students.",
+        "예문 뜻": "학습 환경은 학생들의 성장과 발달에 영향을 끼친다."
+    },
+    {
+        "단어": "statement",
+        "단어 뜻": "발표, 진술",
+        "품사": "n.",
+        "예문": "He made a public statement in front of many students.",
+        "예문 뜻": "그는 많은 학생들 앞에서 공개적인 발표를 했다."
+    },
+    {
+        "단어": "treatment",
+        "단어 뜻": "치료, 처치",
+        "품사": "n.",
+        "예문": "The new treatment was a great success.",
+        "예문 뜻": "그 새로운 치료법은 매우 성공적이었다."
+    },
+    {
+        "단어": "discussion",
+        "단어 뜻": "논의, 토론",
+        "품사": "n.",
+        "예문": "I attend a book discussion twice a month.",
+        "예문 뜻": "나는 한 달에 두 번 독서 토론에 참여한다."
+    },
+    {
+        "단어": "expression",
+        "단어 뜻": "표현",
+        "품사": "n.",
+        "예문": "I learned some important expressions when I studied Chinese online.",
+        "예문 뜻": "나는 온라인으로 중국어를 공부할 때, 몇몇 중요한 표현들을 배웠다."
+    },
+    {
+        "단어": "impression",
+        "단어 뜻": "인상",
+        "품사": "n.",
+        "예문": "My first impression of a new classmate was good.",
+        "예문 뜻": "새 전학생에 대한 내 첫인상은 좋았다."
+    },
+    {
+        "단어": "procession",
+        "단어 뜻": "행진, 행렬",
+        "품사": "n.",
+        "예문": "A funeral procession made its way up to the hill.",
+        "예문 뜻": "장례 행렬은 언덕 위로 나아갔다."
+    },
+    {
+        "단어": "competition",
+        "단어 뜻": "경쟁",
+        "품사": "n.",
+        "예문": "There is a lot of competition between clubs to attract students.",
+        "예문 뜻": "동아리들 사이에서 학생들을 유치하기 위한 경쟁이 치열하다."
+    },
+    {
+        "단어": "composition",
+        "단어 뜻": "구성 요소, 구성",
+        "품사": "n.",
+        "예문": "The main composition of hair is keratin.",
+        "예문 뜻": "모발의 주 구성 요소는 케라틴이다."
+    },
+    {
+        "단어": "definition",
+        "단어 뜻": "정의, 의미",
+        "품사": "n.",
+        "예문": "Some people have different opinions about the definition of a planet.",
+        "예문 뜻": "몇몇 사람들은 행성의 정의에 대해 다른 의견을 가지고 있다."
+    },
+    {
+        "단어": "position",
+        "단어 뜻": "위치",
+        "품사": "n.",
+        "예문": "The best position for a wall clock is the center on the wall.",
+        "예문 뜻": "벽시계의 가장 좋은 위치는 벽의 중앙이다."
+    },
+    {
+        "단어": "decision",
+        "단어 뜻": "결정, 판단",
+        "품사": "n.",
+        "예문": "I will put my decision to exercise regularly in action soon.",
+        "예문 뜻": "나는 규칙적으로 운동을 하겠다는 결심을 곧 실천에 옮길 것이다."
+    },
+    {
+        "단어": "conclusion",
+        "단어 뜻": "결론",
+        "품사": "n.",
+        "예문": "The jury reached the conclusion that he was guilty.",
+        "예문 뜻": "배심원단은 그가 유죄라는 결론을 내렸다."
+    },
+    {
+        "단어": "division",
+        "단어 뜻": "분할, 분배",
+        "품사": "n.",
+        "예문": "We observed cell division through a microscope.",
+        "예문 뜻": "우리는 현미경을 통해 세포 분열을 관찰했다."
+    },
+    {
+        "단어": "expansion",
+        "단어 뜻": "확대, 팽창",
+        "품사": "n.",
+        "예문": "We learned the expansion and contraction of the metal in the science class",
+        "예문 뜻": "우리는 과학 시간에 금속의 팽창과 수축에 대해 배웠다."
+    }
+]

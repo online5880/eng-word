@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "forest",
+        "단어 뜻": "숲",
+        "품사": "명사",
+        "예문": "Many animals live in the forest.",
+        "예문 뜻": "많은 동물들이 숲 속에 살아."
+    },
+    {
+        "단어": "include",
+        "단어 뜻": "포함하다",
+        "품사": "동사",
+        "예문": "The list includes her name.",
+        "예문 뜻": "그 명단에는 그녀의 이름이 포함되어 있어."
+    },
+    {
+        "단어": "inside",
+        "단어 뜻": "~ 안에",
+        "품사": "전치사",
+        "예문": "Please don’t wear your shoes inside the house.",
+        "예문 뜻": "집 안에서 신발을 신지 마세요."
+    },
+    {
+        "단어": "instant",
+        "단어 뜻": "즉각적인",
+        "품사": "형용사",
+        "예문": "Instant food is a kind of fast food.",
+        "예문 뜻": "즉석 음식은 일종의 패스트푸드야."
+    },
+    {
+        "단어": "instead",
+        "단어 뜻": "대신에",
+        "품사": "부사",
+        "예문": "I don’t like hiking, so let’s go fishing instead.",
+        "예문 뜻": "나는 하이킹을 좋아하지 않으니까, 대신에 낚시하러 가자."
+    },
+    {
+        "단어": "invade",
+        "단어 뜻": "침략하다",
+        "품사": "동사",
+        "예문": "On September 1, 1939, Germany invaded Poland.",
+        "예문 뜻": "1939년 9월 1일에 독일이 폴란드를 침략했어."
+    },
+    {
+        "단어": "mountain",
+        "단어 뜻": "산",
+        "품사": "명사",
+        "예문": "They climbed the mountain.",
+        "예문 뜻": "그들은 그 산을 올랐어."
+    },
+    {
+        "단어": "wood",
+        "단어 뜻": "나무",
+        "품사": "명사",
+        "예문": "This desk is made of wood.",
+        "예문 뜻": "이 책상은 나무로 만들어져 있어."
+    }
+]

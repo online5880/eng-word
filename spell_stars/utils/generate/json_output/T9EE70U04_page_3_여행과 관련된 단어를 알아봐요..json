@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "adventure",
+        "단어 뜻": "모험",
+        "품사": "n.",
+        "예문": "We're looking forward to having an amazing adventure there.",
+        "예문 뜻": "우리는 그곳에서 놀라운 모험을 하는 것을 기대하고 있다."
+    },
+    {
+        "단어": "apply",
+        "단어 뜻": "신청하다",
+        "품사": "v.",
+        "예문": "He is going to apply for a visa for a journey.",
+        "예문 뜻": "그는 여행을 위해 비자를 신청할 것이다."
+    },
+    {
+        "단어": "arrive",
+        "단어 뜻": "도착하다",
+        "품사": "v.",
+        "예문": "My grandmother will arrive in China next morning.",
+        "예문 뜻": "우리 할머니께서는 내일 아침 중국에 도착하실 것이다."
+    },
+    {
+        "단어": "baggage",
+        "단어 뜻": "짐, 수하물",
+        "품사": "n.",
+        "예문": "Do you know where I can find my baggage?",
+        "예문 뜻": "제 짐을 어디에서 찾을 수 있는지 아세요?"
+    },
+    {
+        "단어": "delay",
+        "단어 뜻": "미루다, 연기하다",
+        "품사": "v.",
+        "예문": "I was angry that my plane was delayed for 2 hours.",
+        "예문 뜻": "나는 내가 탈 비행기가 두 시간 지연되어서 화가 났다."
+    },
+    {
+        "단어": "depart",
+        "단어 뜻": "출발하다",
+        "품사": "v.",
+        "예문": "The next train will depart 10 minutes later.",
+        "예문 뜻": "다음 열차는 10분 후 출발할 것이다."
+    },
+    {
+        "단어": "flight",
+        "단어 뜻": "비행",
+        "품사": "n.",
+        "예문": "How was your flight to Spain?",
+        "예문 뜻": "스페인까지의 비행은 어땠니?"
+    },
+    {
+        "단어": "guest",
+        "단어 뜻": "손님, 숙박인",
+        "품사": "n.",
+        "예문": "I wrote my name and drew a picture in the guest book.",
+        "예문 뜻": "나는 방명록에 내 이름을 적고 그림을 하나 그렸다."
+    },
+    {
+        "단어": "host",
+        "단어 뜻": "주인",
+        "품사": "n.",
+        "예문": "The host of the house shared his rooms with travelers.",
+        "예문 뜻": "그 집주인은 여행객들과 함께 그의 방들을 공유했다."
+    },
+    {
+        "단어": "insurance",
+        "단어 뜻": "보험",
+        "품사": "n.",
+        "예문": "Did you buy travel insurance?",
+        "예문 뜻": "넌 여행자 보험에 들었니?"
+    },
+    {
+        "단어": "locate",
+        "단어 뜻": "(특정 위치에) 두다",
+        "품사": "v.",
+        "예문": "This tourist spot is located far from our hotel.",
+        "예문 뜻": "이 관광지는 우리 호텔에서 멀리 위치해 있다."
+    },
+    {
+        "단어": "passenger",
+        "단어 뜻": "승객",
+        "품사": "n.",
+        "예문": "The bus can carry 25 passengers at a time.",
+        "예문 뜻": "그 버스는 한 번에 25명의 승객을 실어 나를 수 있다."
+    },
+    {
+        "단어": "passport",
+        "단어 뜻": "여권",
+        "품사": "n.",
+        "예문": "Can I see your passport, please?",
+        "예문 뜻": "당신의 여권 좀 볼 수 있을까요?"
+    },
+    {
+        "단어": "platform",
+        "단어 뜻": "승강장",
+        "품사": "n.",
+        "예문": "We are standing on a subway platform.",
+        "예문 뜻": "우리는 지하철 승강장에 서 있다."
+    },
+    {
+        "단어": "reserve",
+        "단어 뜻": "예약하다",
+        "품사": "v.",
+        "예문": "She wants to reserve a window seat.",
+        "예문 뜻": "그녀는 창가 쪽 좌석을 예약하길 원한다."
+    },
+    {
+        "단어": "route",
+        "단어 뜻": "노선, 항로",
+        "품사": "n.",
+        "예문": "They're going to walk along the route of the bus",
+        "예문 뜻": "그들은 버스 노선을 따라 걸을 것이다."
+    },
+    {
+        "단어": "scenery",
+        "단어 뜻": "풍경",
+        "품사": "n.",
+        "예문": "We stopped walking to enjoy the scenery.",
+        "예문 뜻": "우리는 풍경을 즐기기 위해 걸음을 멈추었다."
+    },
+    {
+        "단어": "sightseeing",
+        "단어 뜻": "관광",
+        "품사": "n.",
+        "예문": "I went to Paris to go sightseeing.",
+        "예문 뜻": "나는 관광하러 파리에 갔다."
+    },
+    {
+        "단어": "souvenir",
+        "단어 뜻": "기념품",
+        "품사": "n.",
+        "예문": "He bought a souvenir from his trip to London.",
+        "예문 뜻": "그는 런던 여행에서 기념품을 하나 샀다."
+    },
+    {
+        "단어": "transfer",
+        "단어 뜻": "갈아타다",
+        "품사": "v.",
+        "예문": "She can transfer at Turkey for a flight to France.",
+        "예문 뜻": "그녀는 터키에서 프랑스로 가는 비행기로 갈아탈 수 있다."
+    }
+]

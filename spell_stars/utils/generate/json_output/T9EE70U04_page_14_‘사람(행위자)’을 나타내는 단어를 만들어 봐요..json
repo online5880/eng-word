@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "librarian",
+        "단어 뜻": "사서",
+        "품사": "n.",
+        "예문": "The librarian is putting new books on the bookshelves.",
+        "예문 뜻": "사서는 책꽂이에 새 책들을 꽂고 있다."
+    },
+    {
+        "단어": "physician",
+        "단어 뜻": "의사, 내과 의사",
+        "품사": "n.",
+        "예문": "If this pain continues, you should see a physician.",
+        "예문 뜻": "이 통증이 계속되면, 너는 의사의 진찰을 받아야 한다."
+    },
+    {
+        "단어": "politician",
+        "단어 뜻": "정치인",
+        "품사": "n.",
+        "예문": "We should choose a right politician carefully.",
+        "예문 뜻": "우리는 올바른 정치인을 신중하게 선택해야 한다."
+    },
+    {
+        "단어": "applicant",
+        "단어 뜻": "지원자",
+        "품사": "n.",
+        "예문": "An applicant must pass a speaking test in English.",
+        "예문 뜻": "지원자는 영어 말하기 시험을 통과해야 한다."
+    },
+    {
+        "단어": "consultant",
+        "단어 뜻": "상담가",
+        "품사": "n.",
+        "예문": "He is an experienced medical consultant.",
+        "예문 뜻": "그는 숙련된 의료 상담가이다."
+    },
+    {
+        "단어": "descendant",
+        "단어 뜻": "자손, 후손",
+        "품사": "n.",
+        "예문": "He said that he might be a descendant of a king.",
+        "예문 뜻": "그는 자신이 왕의 후손일지도 모른다고 말했다."
+    },
+    {
+        "단어": "participant",
+        "단어 뜻": "참가자",
+        "품사": "n.",
+        "예문": "There were many participants in the race.",
+        "예문 뜻": "그 경주에는 참가자가 많았다."
+    },
+    {
+        "단어": "missionary",
+        "단어 뜻": "선교사",
+        "품사": "n.",
+        "예문": "He went to Africa as a missionary last year.",
+        "예문 뜻": "그는 작년에 선교사로 아프리카에 갔다."
+    },
+    {
+        "단어": "secretary",
+        "단어 뜻": "비서",
+        "품사": "n.",
+        "예문": "If you have more questions, ask my secretary.",
+        "예문 뜻": "더 궁금한 사항이 있으면, 제 비서에게 문의하세요."
+    },
+    {
+        "단어": "employer",
+        "단어 뜻": "고용주",
+        "품사": "n.",
+        "예문": "The employer has dismissed a lot of people because of the financial problem.",
+        "예문 뜻": "그 고용주는 자금난 때문에 많은 사람들을 해고했다."
+    },
+    {
+        "단어": "interviewer",
+        "단어 뜻": "면접관",
+        "품사": "n.",
+        "예문": "The interviewer is going over Kate's resume.",
+        "예문 뜻": "면접관이 Kate의 이력서를 검토하고 있다."
+    },
+    {
+        "단어": "owner",
+        "단어 뜻": "주인",
+        "품사": "n.",
+        "예문": "The owner of the farm takes good care of many pigs.",
+        "예문 뜻": "그 농장 주인은 많은 돼지들을 잘 돌본다."
+    },
+    {
+        "단어": "journalist",
+        "단어 뜻": "기자, 언론인",
+        "품사": "n.",
+        "예문": "What I have to do as a journalist is to reveal the truth.",
+        "예문 뜻": "기자로서 내가 해야 할 것은 진실을 밝히는 것이다."
+    },
+    {
+        "단어": "novelist",
+        "단어 뜻": "소설가",
+        "품사": "n.",
+        "예문": "He is a teacher and novelist.",
+        "예문 뜻": "그는 교사이자 소설가이다."
+    },
+    {
+        "단어": "psychologist",
+        "단어 뜻": "심리학자",
+        "품사": "n.",
+        "예문": "She is a psychologist who studies children's behavior.",
+        "예문 뜻": "그녀는 어린이의 행동을 연구하는 심리학자이다."
+    },
+    {
+        "단어": "tourist",
+        "단어 뜻": "관광객",
+        "품사": "n.",
+        "예문": "It's easy for a tourist to get lost in a big city.",
+        "예문 뜻": "관광객은 대도시에서 길을 잃기 쉽다."
+    },
+    {
+        "단어": "editor",
+        "단어 뜻": "편집자",
+        "품사": "n.",
+        "예문": "The writer sent an email to the editor.",
+        "예문 뜻": "그 작가는 편집자에게 이메일을 보냈다."
+    },
+    {
+        "단어": "narrator",
+        "단어 뜻": "내레이터",
+        "품사": "n.",
+        "예문": "He is the narrator of documentaries about wild animals.",
+        "예문 뜻": "그는 야생"
+    },
+    {
+        "단어": "instructor",
+        "단어 뜻": "강사",
+        "품사": "n.",
+        "예문": "I learned the basic posture by a private ski instructor.",
+        "예문 뜻": "나는 개인 스키 강사로부터 기본 자세를 배웠다."
+    },
+    {
+        "단어": "professor",
+        "단어 뜻": "교수",
+        "품사": "n.",
+        "예문": "The professor failed him in modern art.",
+        "예문 뜻": "그 교수는 현대 미술 과목에서 그를 낙제시켰다."
+    }
+]

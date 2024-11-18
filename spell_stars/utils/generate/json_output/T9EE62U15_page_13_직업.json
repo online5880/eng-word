@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "announcer",
+        "단어 뜻": "아나운서",
+        "품사": "명사",
+        "예문": "My sister is an announcer for BBC television.",
+        "예문 뜻": "우리 언니는 BBC 텔레비전의 아나운서야."
+    },
+    {
+        "단어": "cartoonist",
+        "단어 뜻": "만화가",
+        "품사": "명사",
+        "예문": "My dream job is a cartoonist.",
+        "예문 뜻": "내가 하고 싶은 일은 만화가야."
+    },
+    {
+        "단어": "company",
+        "단어 뜻": "회사",
+        "품사": "명사",
+        "예문": "I worked for 5 years at the company.",
+        "예문 뜻": "나는 그 회사에서 5년간 근무했어."
+    },
+    {
+        "단어": "cook",
+        "단어 뜻": "요리사",
+        "품사": "명사",
+        "예문": "The cook taught the cooking class.",
+        "예문 뜻": "그 요리사는 요리 반을 지도했어."
+    },
+    {
+        "단어": "entertainer",
+        "단어 뜻": "연예인",
+        "품사": "명사",
+        "예문": "Muriel is an all-around entertainer.",
+        "예문 뜻": "Muriel은 만능 연예인이야."
+    },
+    {
+        "단어": "factory",
+        "단어 뜻": "공장",
+        "품사": "명사",
+        "예문": "Sera works at the chocolate factory.",
+        "예문 뜻": "세라는 초콜릿 공장에서 근무해."
+    },
+    {
+        "단어": "job",
+        "단어 뜻": "일",
+        "품사": "명사",
+        "예문": "What’s your dream job?",
+        "예문 뜻": "네가 하고 싶은 일은 뭐야?"
+    },
+    {
+        "단어": "popular",
+        "단어 뜻": "인기 있는",
+        "품사": "형용사",
+        "예문": "My uncle is a popular guitarist.",
+        "예문 뜻": "우리 삼촌은 인기 있는 기타 연주자셔."
+    }
+]

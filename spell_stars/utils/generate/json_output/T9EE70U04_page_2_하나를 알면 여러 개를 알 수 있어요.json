@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "any",
+        "단어 뜻": "어느, 어떤",
+        "품사": "adj.",
+        "예문": "Do you have any special plans for this year?",
+        "예문 뜻": "너는 올해 어떤 특별한 계획이 있니?"
+    },
+    {
+        "단어": "anyone",
+        "단어 뜻": "누구, 아무",
+        "품사": "n.",
+        "예문": "I’ve never met anyone from Africa before.",
+        "예문 뜻": "나는 전에 아프리카 출신 사람은 만난 적이 없다."
+    },
+    {
+        "단어": "anytime",
+        "단어 뜻": "언제든지",
+        "품사": "adv.",
+        "예문": "I can take a break anytime next week.",
+        "예문 뜻": "나는"
+    },
+    {
+        "단어": "anywhere",
+        "단어 뜻": "어디에서도",
+        "품사": "adv.",
+        "예문": "The king could not find a truly happy man anywhere.",
+        "예문 뜻": "왕은 어디에서도 진실로 행복한 사람을 찾을 수 없었다."
+    },
+    {
+        "단어": "ache",
+        "단어 뜻": "아픔",
+        "품사": "n.",
+        "예문": "My father has an ache in his right leg.",
+        "예문 뜻": "나의 아버지는 오른쪽 다리에 통증이 있다."
+    },
+    {
+        "단어": "headache",
+        "단어 뜻": "두통",
+        "품사": "n.",
+        "예문": "My mom is suffering from a bad headache.",
+        "예문 뜻": "나의 어머니는 심한 두통으로 고통받고 있다."
+    },
+    {
+        "단어": "stomachache",
+        "단어 뜻": "복통",
+        "품사": "n.",
+        "예문": "After having some food, he had a bad stomachache.",
+        "예문 뜻": "그는 어떤 음식을 먹고 나서, 심한 복통이 있었다."
+    },
+    {
+        "단어": "toothache",
+        "단어 뜻": "치통",
+        "품사": "n.",
+        "예문": "I have a toothache, so I’ll go to the dentist.",
+        "예문 뜻": "나는 치통이 있어서, 치과에 갈 것이다."
+    },
+    {
+        "단어": "homesick",
+        "단어 뜻": "향수에 잠긴",
+        "품사": "adj.",
+        "예문": "As time goes by, Tomy felt more homesick.",
+        "예문 뜻": "시간이 지나면서, Tomy는 고향이 더 그리워졌다."
+    },
+    {
+        "단어": "hometown",
+        "단어 뜻": "고향",
+        "품사": "n.",
+        "예문": "The homepage is for my hometown.",
+        "예문 뜻": "그 홈페이지는 내 고향에 관한 것이다."
+    },
+    {
+        "단어": "homework",
+        "단어 뜻": "숙제",
+        "품사": "n.",
+        "예문": "If I had a robot, I could make him do my homework.",
+        "예문 뜻": "나에게 로봇이 있다면, 숙제를 하라고 시킬 수 있을 텐데."
+    },
+    {
+        "단어": "greenhouse",
+        "단어 뜻": "온실의",
+        "품사": "adj.",
+        "예문": "Food waste makes more greenhouse gases.",
+        "예문 뜻": "음식 쓰레기는 더 많은 온실가스를 만든다."
+    },
+    {
+        "단어": "household",
+        "단어 뜻": "가정의",
+        "품사": "adj.",
+        "예문": "The company produces household goods.",
+        "예문 뜻": "그 회사는 가정용품을 생산한다."
+    },
+    {
+        "단어": "housewarming",
+        "단어 뜻": "집들이",
+        "품사": "n.",
+        "예문": "Our housewarming party is on May 5.",
+        "예문 뜻": "우리 집들이는 5월 5일이다."
+    },
+    {
+        "단어": "haircut",
+        "단어 뜻": "머리 깎기",
+        "품사": "n.",
+        "예문": "Do you think I should get a haircut?",
+        "예문 뜻": "너는 내가 머리를 깎아야 한다고 생각하니?"
+    },
+    {
+        "단어": "hairpin",
+        "단어 뜻": "머리핀",
+        "품사": "n.",
+        "예문": "I bought a red hairpin for her birthday.",
+        "예문 뜻": "나는 그녀의 생일 선물로 빨간 머리핀을 샀다."
+    },
+    {
+        "단어": "hairstyle",
+        "단어 뜻": "머리 모양",
+        "품사": "n.",
+        "예문": "I look silly with my new hairstyle.",
+        "예문 뜻": "나는 새로운 머리 모양으로 우스꽝스러워 보인다."
+    },
+    {
+        "단어": "sunflower",
+        "단어 뜻": "해바라기",
+        "품사": "n.",
+        "예문": "My school will plant sunflowers and roses.",
+        "예문 뜻": "우리 학교는 해바라기와 장미를 심을 것이다."
+    },
+    {
+        "단어": "sunglasses",
+        "단어 뜻": "선글라스",
+        "품사": "n.",
+        "예문": "I will bring sunglasses to wear under the burning sun.",
+        "예문 뜻": "나는 뜨거운 태양 아래에서 쓸 선글라스를 가져올 것이다."
+    },
+    {
+        "단어": "sunshine",
+        "단어 뜻": "햇빛",
+        "품사": "n.",
+        "예문": "Time, water, and some sunshine make the vegetables grow.",
+        "예문 뜻": "시간, 물, 그리고 햇빛은 채소를 자라게 한다."
+    }
+]

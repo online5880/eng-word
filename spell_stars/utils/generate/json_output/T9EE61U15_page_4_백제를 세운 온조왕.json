@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "direction",
+        "단어 뜻": "방향",
+        "품사": "명사",
+        "예문": "What direction is the railway station?",
+        "예문 뜻": "기차역은 어떤 방향에 있니?"
+    },
+    {
+        "단어": "south",
+        "단어 뜻": "남쪽",
+        "품사": "명사",
+        "예문": "The points of the compass are north, south, east, and west.",
+        "예문 뜻": "나침반의 방위 표시들은 북쪽, 남쪽, 동쪽, 그리고 서쪽이야."
+    },
+    {
+        "단어": "north",
+        "단어 뜻": "북쪽",
+        "품사": "명사",
+        "예문": "The wind is coming from the north.",
+        "예문 뜻": "바람이 북쪽에서 불고 있어."
+    },
+    {
+        "단어": "west",
+        "단어 뜻": "서쪽",
+        "품사": "명사",
+        "예문": "If that way is east, then this way is west.",
+        "예문 뜻": "만약 저쪽이 동쪽이면, 그러면 이쪽이 서쪽이야."
+    },
+    {
+        "단어": "east",
+        "단어 뜻": "동쪽",
+        "품사": "명사",
+        "예문": "The sun rises in the east and sets in the west.",
+        "예문 뜻": "해는 동쪽에서 떠서 서쪽으로 져."
+    },
+    {
+        "단어": "return",
+        "단어 뜻": "돌아오다",
+        "품사": "동사",
+        "예문": "I’m leaving but will return at 6 p.m.",
+        "예문 뜻": "나는 떠나지만 오후 6시에 돌아올 거야."
+    },
+    {
+        "단어": "receive",
+        "단어 뜻": "받다",
+        "품사": "동사",
+        "예문": "I received an e-mail from her yesterday.",
+        "예문 뜻": "나는 어제 그녀에게서 이메일을 받았어."
+    },
+    {
+        "단어": "respond",
+        "단어 뜻": "대답하다",
+        "품사": "동사",
+        "예문": "I asked her a question, but she didn’t respond.",
+        "예문 뜻": "나는 그녀에게 질문을 했지만, 그녀는 대답하지 않았어."
+    }
+]
