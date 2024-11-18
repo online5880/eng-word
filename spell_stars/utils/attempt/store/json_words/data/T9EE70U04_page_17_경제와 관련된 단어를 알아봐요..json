@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "account",
+        "단어 뜻": "예금 계좌",
+        "품사": "n.",
+        "예문": "I opened an account in a bank yesterday.",
+        "예문 뜻": "나는 어제 은행에서 계좌를 개설했다."
+    },
+    {
+        "단어": "benefit",
+        "단어 뜻": "이점, 이익",
+        "품사": "n.",
+        "예문": "You can feel the benefit of being unplugged about a month later.",
+        "예문 뜻": "당신은 약 한 달 후에 플러그를 뽑는 것의 이점을 느끼게 될 것이다."
+    },
+    {
+        "단어": "budget",
+        "단어 뜻": "예산",
+        "품사": "n.",
+        "예문": "They are busy making a budget.",
+        "예문 뜻": "그들은 예산을 편성하느라 바쁘다."
+    },
+    {
+        "단어": "capital",
+        "단어 뜻": "자본",
+        "품사": "n.",
+        "예문": "The footwear company was started with a small amount of capital.",
+        "예문 뜻": "그 신발 회사는 소자본으로 시작했다."
+    },
+    {
+        "단어": "client",
+        "단어 뜻": "의뢰인, 고객",
+        "품사": "n.",
+        "예문": "The best form of advertising is to satisfy a client.",
+        "예문 뜻": "최고의 광고 방법은 고객을 만족시키는 것이다."
+    },
+    {
+        "단어": "consume",
+        "단어 뜻": "소비하다",
+        "품사": "v.",
+        "예문": "The company says that this refrigerator will consume less electricity.",
+        "예문 뜻": "그 회사는 이 냉장고가 전기를 덜 소비할 것이라고 말한다."
+    },
+    {
+        "단어": "credit",
+        "단어 뜻": "신용",
+        "품사": "n.",
+        "예문": "He can't borrow money because of poor credit.",
+        "예문 뜻": "그는 신용이 낮기 때문에 돈을 빌릴 수 없다."
+    },
+    {
+        "단어": "demand",
+        "단어 뜻": "수요",
+        "품사": "n.",
+        "예문": "There's a great demand for the new machine.",
+        "예문 뜻": "새로운 기계에 대한 수요가 많다."
+    },
+    {
+        "단어": "economy",
+        "단어 뜻": "경제",
+        "품사": "n.",
+        "예문": "The economy of this country is growing quickly.",
+        "예문 뜻": "이 나라의 경제는 빠르게 성장하고 있다."
+    },
+    {
+        "단어": "hire",
+        "단어 뜻": "고용하다",
+        "품사": "v.",
+        "예문": "Our factory has to hire more workers.",
+        "예문 뜻": "우리 공장은 더 많은 근로자를 고용해야 한다."
+    },
+    {
+        "단어": "invest",
+        "단어 뜻": "투자하다",
+        "품사": "v.",
+        "예문": "His company will invest much money in the business.",
+        "예문 뜻": "그의 회사는 그 사업에 많은 돈을 투자할 것이다."
+    },
+    {
+        "단어": "labor",
+        "단어 뜻": "노동",
+        "품사": "n.",
+        "예문": "Many people are against immoral child labor.",
+        "예문 뜻": "많은 사람들이 비윤리적인 어린이 노동에 반대한다."
+    },
+    {
+        "단어": "lack",
+        "단어 뜻": "부족",
+        "품사": "n.",
+        "예문": "They stopped the project due to a lack of funds.",
+        "예문 뜻": "그들은 자금 부족 때문에 그 프로젝트를 중단했다."
+    },
+    {
+        "단어": "possess",
+        "단어 뜻": "소유하다",
+        "품사": "v.",
+        "예문": "Many people save their wealth to possess bigger houses.",
+        "예문 뜻": "많은 사람들이 더 큰 집을 소유하기 위해 그들의 재산을 모은다."
+    },
+    {
+        "단어": "product",
+        "단어 뜻": "제품, 생산품",
+        "품사": "n.",
+        "예문": "The new product is out of stock.",
+        "예문 뜻": "신제품은 품절이다."
+    },
+    {
+        "단어": "rent",
+        "단어 뜻": "임대(료)",
+        "품사": "n.",
+        "예문": "The monthly rent of this apartment rises every year.",
+        "예문 뜻": "이 아파트의 월 임대료는 매년 오른다."
+    },
+    {
+        "단어": "risk",
+        "단어 뜻": "위험 요소",
+        "품사": "n.",
+        "예문": "The target of this economic policy is to reduce risk.",
+        "예문 뜻": "이번 경제 정책의 목적은 위험 요소를 줄이는 것이다."
+    },
+    {
+        "단어": "supply",
+        "단어 뜻": "공급",
+        "품사": "n.",
+        "예문": "The city's water is in short supply.",
+        "예문 뜻": "그 도시의 물은 공급이 부족하다."
+    },
+    {
+        "단어": "tax",
+        "단어 뜻": "세금",
+        "품사": "n.",
+        "예문": "Tax on cars has fallen since last year.",
+        "예문 뜻": "자동차에 대한 세금은 작년부터 떨어지고 있다."
+    },
+    {
+        "단어": "value",
+        "단어 뜻": "가치, 평가",
+        "품사": "n.",
+        "예문": "Do you know what the value of the old coin is?",
+        "예문 뜻": "넌 옛 동전의 가치가 얼마인지 아니?"
+    }
+]

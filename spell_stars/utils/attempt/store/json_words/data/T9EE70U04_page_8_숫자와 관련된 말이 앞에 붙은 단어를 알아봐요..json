@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "bicycle",
+        "단어 뜻": "자전거",
+        "품사": "n.",
+        "예문": "Riding bicycles is good for the environment.",
+        "예문 뜻": "자전거를 타는 것은 환경에 좋다."
+    },
+    {
+        "단어": "biweekly",
+        "단어 뜻": "격주의",
+        "품사": "adj.",
+        "예문": "The group has a regular meeting biweekly.",
+        "예문 뜻": "그 그룹은 정기적인 모임을 격주로 가진다."
+    },
+    {
+        "단어": "centimeter",
+        "단어 뜻": "센티미터",
+        "품사": "n.",
+        "예문": "One inch is 2.54 centimeters long.",
+        "예문 뜻": "1인치는 2.54센티미터이다."
+    },
+    {
+        "단어": "century",
+        "단어 뜻": "100년",
+        "품사": "n.",
+        "예문": "The drought in the area was the worst in a century.",
+        "예문 뜻": "그 지역의 가뭄은 100년 만에 최악이었다."
+    },
+    {
+        "단어": "decade",
+        "단어 뜻": "10년",
+        "품사": "n.",
+        "예문": "No one has broken her world record in a decade.",
+        "예문 뜻": "10년 동안 어느 누구도 그녀의 세계 기록을 깨지 못했다."
+    },
+    {
+        "단어": "dual",
+        "단어 뜻": "이중의",
+        "품사": "adj.",
+        "예문": "The famous singer has dual nationality.",
+        "예문 뜻": "그 유명한 가수는 이중 국적자이다."
+    },
+    {
+        "단어": "duo",
+        "단어 뜻": "2인조",
+        "품사": "n.",
+        "예문": "The coach and the player are the best duo in the soccer world.",
+        "예문 뜻": "그 코치와 선수는 축구계 최고의 2인조이다."
+    },
+    {
+        "단어": "kilogram",
+        "단어 뜻": "킬로그램",
+        "품사": "n.",
+        "예문": "I weighed up to 40 kilograms before getting sick.",
+        "예문 뜻": "나는 아프기 전에는 몸무게가 40킬로그램까지 나갔다."
+    },
+    {
+        "단어": "kilometer",
+        "단어 뜻": "킬로미터",
+        "품사": "n.",
+        "예문": "A marathon is a race of 42.195 kilometers.",
+        "예문 뜻": "마라톤은 42.195킬로미터의 경주이다."
+    },
+    {
+        "단어": "multimedia",
+        "단어 뜻": "멀티미디어의",
+        "품사": "adj.",
+        "예문": "This is a multimedia room holding 30 students.",
+        "예문 뜻": "여기는 30명의 학생을 수용할 수 있는 멀티미디어 방이다."
+    },
+    {
+        "단어": "multiply",
+        "단어 뜻": "곱하다",
+        "품사": "v.",
+        "예문": "Multiply 2 and 3 together and you get 6.",
+        "예문 뜻": "2와 3을 곱하면 6이다."
+    },
+    {
+        "단어": "octopus",
+        "단어 뜻": "문어",
+        "품사": "n.",
+        "예문": "How many legs does an octopus have?",
+        "예문 뜻": "문어는 다리가 몇 개입니까?"
+    },
+    {
+        "단어": "quarter",
+        "단어 뜻": "4분의 1",
+        "품사": "n.",
+        "예문": "Cut the cake into quarters with a knife.",
+        "예문 뜻": "케이크를 칼로 4등분하라."
+    },
+    {
+        "단어": "semicircle",
+        "단어 뜻": "반원",
+        "품사": "n.",
+        "예문": "We stood in a semicircle around the flag.",
+        "예문 뜻": "우리는 깃발 주위로 반원을 그리며 서 있었다."
+    },
+    {
+        "단어": "semifinal",
+        "단어 뜻": "준결승",
+        "품사": "n.",
+        "예문": "Our table tennis team wants to go into the semifinals.",
+        "예문 뜻": "우리 탁구 팀은 준결승에 나가고 싶다."
+    },
+    {
+        "단어": "triangle",
+        "단어 뜻": "삼각형",
+        "품사": "n.",
+        "예문": "Draw three triangles on the paper.",
+        "예문 뜻": "종이 위에 세 개의 삼각형을 그려라."
+    },
+    {
+        "단어": "trio",
+        "단어 뜻": "3인조",
+        "품사": "n.",
+        "예문": "I heard the news of a trio of robbers yesterday.",
+        "예문 뜻": "나는 어제 3인조 강도에 대한 소식을 들었다."
+    },
+    {
+        "단어": "triple",
+        "단어 뜻": "세 배의",
+        "품사": "adj.",
+        "예문": "Its price is about triple that of an old one.",
+        "예문 뜻": "그것의 가격은 오래된 것의 약 세 배이다."
+    },
+    {
+        "단어": "uniform",
+        "단어 뜻": "제복, 교복",
+        "품사": "n.",
+        "예문": "Your school uniform is too big.",
+        "예문 뜻": "네 교복은 너무 크다."
+    },
+    {
+        "단어": "unique",
+        "단어 뜻": "독특한",
+        "품사": "adj.",
+        "예문": "I can express myself through these unique sneakers.",
+        "예문 뜻": "나는 이 독특한 운동화를 통해 내 자신을 표현할 수 있다."
+    }
+]

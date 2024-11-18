@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "beautiful",
+        "단어 뜻": "아름다운",
+        "품사": "형용사",
+        "예문": "These flowers are beautiful.",
+        "예문 뜻": "이 꽃들은 아름다워."
+    },
+    {
+        "단어": "ugly",
+        "단어 뜻": "못생긴",
+        "품사": "형용사",
+        "예문": "It’s a really ugly dog.",
+        "예문 뜻": "그것은 정말로 못생긴 개야."
+    },
+    {
+        "단어": "interesting",
+        "단어 뜻": "흥미 있는",
+        "품사": "형용사",
+        "예문": "There are many interesting animals at the zoo.",
+        "예문 뜻": "동물원에는 많은 흥미 있는 동물들이 있어."
+    },
+    {
+        "단어": "boring",
+        "단어 뜻": "지루한",
+        "품사": "형용사",
+        "예문": "I fell asleep because the movie was boring.",
+        "예문 뜻": "영화가 지루해서 나는 잠이 들었어."
+    },
+    {
+        "단어": "useless",
+        "단어 뜻": "쓸모 없는",
+        "품사": "형용사",
+        "예문": "The tent is useless in rainy weather.",
+        "예문 뜻": "그 텐트는 비가 오는 날씨에는 쓸모가 없어."
+    },
+    {
+        "단어": "useful",
+        "단어 뜻": "유용한",
+        "품사": "형용사",
+        "예문": "Smart phones are very useful.",
+        "예문 뜻": "스마트폰은 매우 유용해."
+    },
+    {
+        "단어": "easy",
+        "단어 뜻": "쉬운",
+        "품사": "형용사",
+        "예문": "The problem is simple but not easy.",
+        "예문 뜻": "그 문제는 간단하지만 쉽지는 않아."
+    },
+    {
+        "단어": "difficult",
+        "단어 뜻": "어려운",
+        "품사": "형용사",
+        "예문": "Our last test was very difficult.",
+        "예문 뜻": "우리 지난번 시험은 매우 어려웠어."
+    }
+]

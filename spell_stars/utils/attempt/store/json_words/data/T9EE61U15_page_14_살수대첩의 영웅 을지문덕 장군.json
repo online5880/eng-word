@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "nobody",
+        "단어 뜻": "~아무도~않다",
+        "품사": "대명사",
+        "예문": "I asked a question but nobody answered.",
+        "예문 뜻": "나는 질문을 했지만 아무도 대답하지 않았어."
+    },
+    {
+        "단어": "somebody",
+        "단어 뜻": "누군가",
+        "품사": "대명사",
+        "예문": "Somebody is knocking on the door.",
+        "예문 뜻": "누군가 문을 노크하고 있어."
+    },
+    {
+        "단어": "everybody",
+        "단어 뜻": "모든 사람",
+        "품사": "대명사",
+        "예문": "Everybody likes birthday cake.",
+        "예문 뜻": "모든 사람이 생일 케이크를 좋아해."
+    },
+    {
+        "단어": "anybody",
+        "단어 뜻": "누구든지",
+        "품사": "대명사",
+        "예문": "Anybody can enjoy this game.",
+        "예문 뜻": "누구든지 이 게임을 즐길 수 있어."
+    },
+    {
+        "단어": "hundred",
+        "단어 뜻": "백",
+        "품사": "명사",
+        "예문": "I only have one hundred won.",
+        "예문 뜻": "나는 백 원만 가지고 있어."
+    },
+    {
+        "단어": "thousand",
+        "단어 뜻": "천",
+        "품사": "명사",
+        "예문": "The total comes to three thousand won.",
+        "예문 뜻": "합계가 삼천 원이야."
+    },
+    {
+        "단어": "million",
+        "단어 뜻": "백만",
+        "품사": "명사",
+        "예문": "Her book sold one million copies.",
+        "예문 뜻": "그녀의 책은 백만 부가 팔렸어."
+    },
+    {
+        "단어": "billion",
+        "단어 뜻": "십억",
+        "품사": "명사",
+        "예문": "There are nine zeroes in a billion.",
+        "예문 뜻": "십억은 영(0)이 아홉 개 있어."
+    }
+]

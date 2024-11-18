@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "allow",
+        "단어 뜻": "허락하다",
+        "품사": "동사",
+        "예문": "Allow me to sleep at Paul’s house.",
+        "예문 뜻": "Paul의 집에서 자게 허락해 주세요."
+    },
+    {
+        "단어": "condition",
+        "단어 뜻": "상태",
+        "품사": "명사",
+        "예문": "That car is not in good condition.",
+        "예문 뜻": "저 차는 상태가 좋지 않아."
+    },
+    {
+        "단어": "correct",
+        "단어 뜻": "맞는",
+        "품사": "형용사",
+        "예문": "I’m not sure that’s correct.",
+        "예문 뜻": "그것이 맞는지 확실치 않아."
+    },
+    {
+        "단어": "draw",
+        "단어 뜻": "그리다, 이동하\n다",
+        "품사": "동사",
+        "예문": "The train is drawing into the station.",
+        "예문 뜻": "기차가 역으로 들어오고 있어."
+    },
+    {
+        "단어": "especially",
+        "단어 뜻": "특히",
+        "품사": "부사",
+        "예문": "It’s especially cold this evening.",
+        "예문 뜻": "오늘 저녁은 특히 춥네."
+    },
+    {
+        "단어": "follow",
+        "단어 뜻": "따라오다",
+        "품사": "동사",
+        "예문": "Follow me. I’ll show you the way.",
+        "예문 뜻": "따라와. 내가 길을 알려 줄게."
+    },
+    {
+        "단어": "general",
+        "단어 뜻": "장군",
+        "품사": "명사",
+        "예문": "Many people remember that he was a good general.",
+        "예문 뜻": "많은 사람들이 그는 명장이었다고 기억한다."
+    },
+    {
+        "단어": "upstairs",
+        "단어 뜻": "위층으로",
+        "품사": "부사",
+        "예문": "Carry the books upstairs.",
+        "예문 뜻": "책을 위층으로 옮겨 주세요."
+    }
+]

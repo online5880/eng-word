@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "achieve",
+        "단어 뜻": "성취하다",
+        "품사": "v.",
+        "예문": "If you don’t work hard, you can’t achieve your goal.",
+        "예문 뜻": "열심히 하지 않는다면, 너의 목표를 이룰 수 없다."
+    },
+    {
+        "단어": "activity",
+        "단어 뜻": "활동",
+        "품사": "n.",
+        "예문": "Here are some fun activities for the class.",
+        "예문 뜻": "여기 수업에 쓸 재미있는 활동들이 있다."
+    },
+    {
+        "단어": "aim",
+        "단어 뜻": "목표로 하다",
+        "품사": "v.",
+        "예문": "They aim to get the first prize in the school choir competition.",
+        "예문 뜻": "그들은 학교 합창 대회에서 우승을 목표로 하고 있다."
+    },
+    {
+        "단어": "average",
+        "단어 뜻": "평균",
+        "품사": "n.",
+        "예문": "The class average was 74 out of 100.",
+        "예문 뜻": "학급 평균은 100점 만점 중 74점이었다."
+    },
+    {
+        "단어": "award",
+        "단어 뜻": "상",
+        "품사": "n.",
+        "예문": "He showed the class his swimming awards.",
+        "예문 뜻": "그는 반 친구들에게 그가 수영 시합에서 받은 상을 보여 줬다."
+    },
+    {
+        "단어": "dictionary",
+        "단어 뜻": "사전",
+        "품사": "n.",
+        "예문": "Look up this word in the dictionary.",
+        "예문 뜻": "이 단어를 사전에서 찾아봐라."
+    },
+    {
+        "단어": "due",
+        "단어 뜻": "기일이 다 된",
+        "품사": "adj.",
+        "예문": "The final report is due at the end of the month.",
+        "예문 뜻": "최종 보고서는 그 달 말이 마감이다."
+    },
+    {
+        "단어": "educate",
+        "단어 뜻": "교육하다",
+        "품사": "v.",
+        "예문": "Parents should educate their children about traffic rules.",
+        "예문 뜻": "부모는 자녀에게 교통 규칙에 대해 교육시켜야 한다."
+    },
+    {
+        "단어": "effort",
+        "단어 뜻": "노력",
+        "품사": "n.",
+        "예문": "They got good grades without any effort.",
+        "예문 뜻": "그들은 어떠한 노력 없이 좋은 점수를 받았다."
+    },
+    {
+        "단어": "error",
+        "단어 뜻": "실수, 오류",
+        "품사": "n.",
+        "예문": "There are some typing errors in the exam paper.",
+        "예문 뜻": "시험지에 몇몇 오타가 있다."
+    },
+    {
+        "단어": "explain",
+        "단어 뜻": "설명하다",
+        "품사": "v.",
+        "예문": "Let me explain why the answer is b.",
+        "예문 뜻": "왜 답이 b인지 설명할게요."
+    },
+    {
+        "단어": "grammar",
+        "단어 뜻": "문법",
+        "품사": "n.",
+        "예문": "English grammar is difficult to learn.",
+        "예문 뜻": "영문법은 배우기 어렵다."
+    },
+    {
+        "단어": "language",
+        "단어 뜻": "언어",
+        "품사": "n.",
+        "예문": "Every student studies two languages.",
+        "예문 뜻": "모든 학생이 2개 국어를 공부한다."
+    },
+    {
+        "단어": "mark",
+        "단어 뜻": "점수",
+        "품사": "n.",
+        "예문": "She got high marks on the math test.",
+        "예문 뜻": "그녀는 수학 시험에서 높은 점수를 받았다."
+    },
+    {
+        "단어": "master",
+        "단어 뜻": "완전히 익히다",
+        "품사": "v.",
+        "예문": "It's not easy to master Chinese characters in a short time.",
+        "예문 뜻": "짧은 시간 안에 한자를 완전히 익히는 것은 쉽지 않다."
+    },
+    {
+        "단어": "motivate",
+        "단어 뜻": "동기를 부여하다",
+        "품사": "v.",
+        "예문": "My homeroom teacher tries to motivate the students.",
+        "예문 뜻": "우리 담임 선생님께서는 학생들에게 동기를 부여하려고 노력하신다."
+    },
+    {
+        "단어": "solve",
+        "단어 뜻": "해결하다",
+        "품사": "v.",
+        "예문": "He solved the question easily.",
+        "예문 뜻": "그는 그 문제를 쉽게 풀었다."
+    },
+    {
+        "단어": "submit",
+        "단어 뜻": "제출하다",
+        "품사": "v.",
+        "예문": "Please, submit the science homework by June 1.",
+        "예문 뜻": "과학 숙제를 6월 1일까지 제출하세요."
+    },
+    {
+        "단어": "summary",
+        "단어 뜻": "요약, 개요",
+        "품사": "n.",
+        "예문": "Let's write a summary of this paragraph.",
+        "예문 뜻": "이 단락의 요약문을 써 봅시다."
+    },
+    {
+        "단어": "term",
+        "단어 뜻": "학기, 기간",
+        "품사": "n.",
+        "예문": "I have to study for the term exam.",
+        "예문 뜻": "나는 기말 시험을 위해 공부해야 한다."
+    }
+]

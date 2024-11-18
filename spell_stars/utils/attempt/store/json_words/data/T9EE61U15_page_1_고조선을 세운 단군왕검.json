@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "exact",
+        "단어 뜻": "정확한",
+        "품사": "형용사",
+        "예문": "The exact time is 1:51 p.m.",
+        "예문 뜻": "정확한 시각은 오후 1시 51분이야."
+    },
+    {
+        "단어": "except",
+        "단어 뜻": "제외하고는",
+        "품사": "전치사",
+        "예문": "The store is open every day except Sunday.",
+        "예문 뜻": "그 가게는 일요일을 제외하고 매일 문을 열어."
+    },
+    {
+        "단어": "exchange",
+        "단어 뜻": "교환",
+        "품사": "명사",
+        "예문": "Now, it’s time for the gift exchange.",
+        "예문 뜻": "이제, 선물 교환 시간이야."
+    },
+    {
+        "단어": "excuse me",
+        "단어 뜻": "실례합니다",
+        "품사": "",
+        "예문": "Excuse me, where is the restroom?",
+        "예문 뜻": "실례합니다, 화장실이 어디에 있나요?"
+    },
+    {
+        "단어": "exit",
+        "단어 뜻": "출구",
+        "품사": "명사",
+        "예문": "Use the emergency exit in case of fire.",
+        "예문 뜻": "화재 시에는 비상 출구를 이용하세요."
+    },
+    {
+        "단어": "expect",
+        "단어 뜻": "기대하다",
+        "품사": "동사",
+        "예문": "We expect good news today.",
+        "예문 뜻": "우리는 오늘 좋은 소식을 기대해."
+    },
+    {
+        "단어": "experience",
+        "단어 뜻": "경험",
+        "품사": "명사",
+        "예문": "The best way to learn is by experience.",
+        "예문 뜻": "배우는 데 가장 좋은 방법은 경험에 의한 것이야."
+    },
+    {
+        "단어": "experiment",
+        "단어 뜻": "실험",
+        "품사": "명사",
+        "예문": "Scientists perform many experiments.",
+        "예문 뜻": "과학자들은 많은 실험을 해."
+    }
+]

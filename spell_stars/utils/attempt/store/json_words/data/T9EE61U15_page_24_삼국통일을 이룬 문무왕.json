@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "predict",
+        "단어 뜻": "예측하다",
+        "품사": "동사",
+        "예문": "They’re predicting heavy snow for tomorrow.",
+        "예문 뜻": "그들은 내일 많은 눈이 내릴 거라고 예측하고 있어."
+    },
+    {
+        "단어": "prefer",
+        "단어 뜻": "~을좋아하다",
+        "품사": "동사",
+        "예문": "I prefer chocolate ice cream.",
+        "예문 뜻": "나는 초콜릿 아이스크림을 더 좋아해."
+    },
+    {
+        "단어": "prepare",
+        "단어 뜻": "준비하다",
+        "품사": "동사",
+        "예문": "Did you prepare for the test?",
+        "예문 뜻": "너는 시험 준비했니?"
+    },
+    {
+        "단어": "preserve",
+        "단어 뜻": "보존하다",
+        "품사": "동사",
+        "예문": "We have to preserve the environment.",
+        "예문 뜻": "우리는 환경을 보존해야 해."
+    },
+    {
+        "단어": "program",
+        "단어 뜻": "프로그램",
+        "품사": "명사",
+        "예문": "The library has a program for adults.",
+        "예문 뜻": "그 도서관은 어른들을 위한 프로그램이 었어."
+    },
+    {
+        "단어": "project",
+        "단어 뜻": "계획",
+        "품사": "명사",
+        "예문": "Gardening is my next project.",
+        "예문 뜻": "정원 손질이 내 다음 계획이야."
+    },
+    {
+        "단어": "promise",
+        "단어 뜻": "약속하다",
+        "품사": "동사",
+        "예문": "Mom promised to buy a smart phone for me.",
+        "예문 뜻": "엄마는 내게 스마트폰을 사 주기로 약속하셨어."
+    },
+    {
+        "단어": "provide",
+        "단어 뜻": "제공하다",
+        "품사": "동사",
+        "예문": "I’ll provide the tent if you come here.",
+        "예문 뜻": "네가 여기에 오면 내가 텐트를 제공할개."
+    }
+]

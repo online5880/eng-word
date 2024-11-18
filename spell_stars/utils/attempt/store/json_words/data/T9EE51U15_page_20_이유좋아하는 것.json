@@ -1,0 +1,72 @@
+[
+    {
+        "단어": "because",
+        "단어 뜻": "~하기 때문\n에",
+        "품사": "접속사",
+        "예문": "Tim is angry because Amy made a mistake in the report.",
+        "예문 뜻": "Amy가 보고서에서 실수를 했기 때문에 Tim이 화났어."
+    },
+    {
+        "단어": "break",
+        "단어 뜻": "부수다",
+        "품사": "동사",
+        "예문": "Why do you break the bricks?",
+        "예문 뜻": "너는 왜 벽돌들을 부수니?"
+    },
+    {
+        "단어": "hike",
+        "단어 뜻": "하이킹을 하다",
+        "품사": "동사",
+        "예문": "I like hiking in the mountains.",
+        "예문 뜻": "나는 산에서 하이킹하는 것을 좋아해."
+    },
+    {
+        "단어": "joke",
+        "단어 뜻": "농담",
+        "품사": "명사",
+        "예문": "I like telling jokes.",
+        "예문 뜻": "나는 농담하는 것을 좋아해."
+    },
+    {
+        "단어": "lie",
+        "단어 뜻": "거짓말",
+        "품사": "명사",
+        "예문": "Judy’s nose is growing long because she told a lie to me.",
+        "예문 뜻": "Judy는 나에게 거짓말을 했기 때문에 코가 길어지고 있어."
+    },
+    {
+        "단어": "lose",
+        "단어 뜻": "잃어버리다",
+        "품사": "동사",
+        "예문": "Lisa is searching for her bag because she lost her key.",
+        "예문 뜻": "Lisa는 열쇠를 잃어버렸기 때문에 가방을 뒤지고 있어."
+    },
+    {
+        "단어": "musical",
+        "단어 뜻": "뮤지컬",
+        "품사": "명사",
+        "예문": "I like watching musicals.",
+        "예문 뜻": "나는 뮤지컬 보는 것을 좋아해."
+    },
+    {
+        "단어": "poem",
+        "단어 뜻": "시",
+        "품사": "명사",
+        "예문": "I like reading poems.",
+        "예문 뜻": "나는 시 읽는 것을 좋아해."
+    },
+    {
+        "단어": "why",
+        "단어 뜻": "왜",
+        "품사": "부사",
+        "예문": "Why are you so happy?",
+        "예문 뜻": "너는 왜 그렇게 행복하니?"
+    },
+    {
+        "단어": "win",
+        "단어 뜻": "이기다",
+        "품사": "동사",
+        "예문": "We are happy because we won the game.",
+        "예문 뜻": "우리는 경기에서 이겼기 때문에 행복해."
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "weak",
+        "단어 뜻": "약한",
+        "품사": "형용사",
+        "예문": "She is still weak after her illness.",
+        "예문 뜻": "그녀는 병이 난 후 아직도 몸이 약해."
+    },
+    {
+        "단어": "strong",
+        "단어 뜻": "강한",
+        "품사": "형용사",
+        "예문": "The player has strong legs.",
+        "예문 뜻": "그 선수는 강한 다리를 가지고 있어."
+    },
+    {
+        "단어": "future",
+        "단어 뜻": "미래",
+        "품사": "명사",
+        "예문": "I will be a teacher in the future.",
+        "예문 뜻": "나는 미래에 선생님이 될 거야."
+    },
+    {
+        "단어": "past",
+        "단어 뜻": "과거",
+        "품사": "명사",
+        "예문": "We can learn from the mistakes of the past.",
+        "예문 뜻": "우리는 과거의 실수에서 배울 수 있어."
+    },
+    {
+        "단어": "defend",
+        "단어 뜻": "방어하다",
+        "품사": "동사",
+        "예문": "The army defended our enemy.",
+        "예문 뜻": "그 군대는 우리 도시를 방어했어."
+    },
+    {
+        "단어": "attack",
+        "단어 뜻": "공격하다",
+        "품사": "동사",
+        "예문": "The army attacked the enemy.",
+        "예문 뜻": "그 군대는 적을 공격했어."
+    },
+    {
+        "단어": "fail",
+        "단어 뜻": "실패하다",
+        "품사": "동사",
+        "예문": "The experiment failed because of poor planning.",
+        "예문 뜻": "그 실험은 계획을 제대로 하지 않아 실패했어."
+    },
+    {
+        "단어": "succeed",
+        "단어 뜻": "성공하다",
+        "품사": "동사",
+        "예문": "He failed at first but succeeded later.",
+        "예문 뜻": "그는 처음에는 실패했지만 나중에는 성공했어."
+    }
+]
