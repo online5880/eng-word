@@ -159,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    
     // 피드백 표시
     function displayFeedback(isCorrect) {
         const feedbackElement = document.getElementById("feedback");
