@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const micButton = document.getElementById('micButton');
     const statusText = document.querySelector('.status-text');
     const voiceLevelFill = document.querySelector('.voice-level-fill');
+    const sentenceModeButton = document.getElementById('sentenceModeButton');
     let currentIndex = 0;
     let mediaRecorder = null;
     let audioChunks = [];
@@ -193,6 +194,11 @@ document.addEventListener('DOMContentLoaded', function() {
             passedWords.add(currentWord);
             statusText.textContent = `발음 점수: ${score.toFixed(2)}점 - 통과!`;
             statusText.style.color = '#4CAF50';  // 초록색으로 표시
+            
+            // 모든 단어가 통과되었는지 확인
+            if (checkAllWordsPassed()) {
+                sentenceModeButton.style.display = 'flex';
+            }
         } else {
             statusText.textContent = `발음 점수: ${score.toFixed(2)}점 - 다시 시도하세요`;
             statusText.style.color = '#f44336';  // 빨간색으로 표시
@@ -206,4 +212,25 @@ document.addEventListener('DOMContentLoaded', function() {
         updateNavigationButtons();  // 버튼 상태 업데이트
     }
 
+    // 모든 단어가 통과되었는지 확인하는 함수
+    function checkAllWordsPassed() {
+        const allWords = Array.from(cards).map(card => 
+            card.querySelector('h3').textContent.trim()
+        );
+        return allWords.every(word => passedWords.has(word));
+    }
+    
+    // 예문 학습 버튼 클릭 이벤트
+    sentenceModeButton.addEventListener('click', () => {
+        // 세션 종료 요청 보내기
+        fetch('/accounts/end-learning/', {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': csrfToken
+            }
+        }).then(() => {
+            // 예문 학습 페이지로 이동
+            window.location.href = '/sentence_mode/';
+        });
+    });
 });

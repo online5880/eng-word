@@ -151,6 +151,18 @@ def upload_audio(request):
         "message": "잘못된 요청입니다."
     }, status=400)
 
+def sentence_mode(request):
+    # 세션에서 선택된 단어들 가져오기
+    selected_words = request.session.get('selected_words', [])
+    
+    context = {
+        "words": selected_words,
+        "MEDIA_URL": settings.MEDIA_URL
+    }
+    
+    # 학습 시작 로그 생성 (예문 모드는 learning_mode=1로 설정)
+    start_learning_session(request, learning_mode=1)
+    return render(request, "sent_mode/sent_practice.html", context)
 
 ### API
 # 단어 목록 GET API

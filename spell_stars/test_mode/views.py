@@ -9,6 +9,8 @@ from sent_mode.models import Sentence
 from accounts.models import StudentInfo
 import warnings
 from django.apps import apps
+from django.core.files.base import ContentFile
+from accounts.views import start_learning_session
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -31,16 +33,14 @@ def calculate_score(
 def test_mode_view(request):
     print("test_mode_view called")
 
-    # 20개의 랜덤 단어 ID를 가져오기
-    random_word_ids = Word.objects.values_list("id", flat=True).order_by("?")[:20]
+    # 단어 선택 동적으로 처리
+    random_word_ids = Word.objects.values_list("id", flat=True).order_by("?")[:TOTAL_QUESTIONS]
 
     if random_word_ids:
-        # 각 단어 ID에 해당하는 예문을 랜덤으로 가져오기
         sentences = []
         for word_id in random_word_ids:
-            # 단어 ID와 일치하는 예문을 랜덤으로 가져옴
             sentence = Sentence.objects.filter(word_id=word_id).order_by("?").first()
-            word = Word.objects.get(id=word_id)  # word 객체 가져오기
+            word = Word.objects.get(id=word_id)
             if sentence:
                 sentence_with_blank = sentence.sentence.replace(word.word, "_____")
                 sentences.append(
@@ -48,15 +48,26 @@ def test_mode_view(request):
                         "sentence": sentence_with_blank,
                         "word": word.word,
                         "question_id": sentence.id,
+                        "sentence_meaning": sentence.sentence_meaning
                     }
                 )
 
-        # 첫 번째 문제를 세션에 저장
+        if not sentences:
+            return JsonResponse(
+                {"error": "No sentences found for the selected words."}, status=404
+            )
+
+        # 첫 번째 문제 세션에 저장
         request.session["questions"] = sentences
         request.session["current_question_index"] = 0
 
         # 첫 번째 문제 렌더링
         current_question = sentences[0]
+        request.session["target_word"] = current_question["word"]  # target_word 설정
+        
+        # 학습 시작 로그 생성
+        start_learning_session(request, learning_mode=1)  # test 1번
+        
         return render(
             request,
             "test_mode/test_page.html",
@@ -64,6 +75,7 @@ def test_mode_view(request):
                 "sentence": current_question["sentence"],
                 "word": current_question["word"],
                 "question_id": current_question["question_id"],
+                "sentence_meaning": current_question["sentence_meaning"],
             },
         )
     else:
@@ -72,24 +84,39 @@ def test_mode_view(request):
         )
 
 
-def recognize_audio(request, question_id):
-    print(f"recognize_audio called for question_id: {question_id}")
-
-    # POST 요청에서 파일이 포함되어 있는지 확인
-    if request.method == "POST" and request.FILES.get("audio_file"):
-        audio_file = request.FILES["audio_file"]
-        print(f"Received file: {audio_file.name}, Size: {audio_file.size} bytes")
-
-        # 파일 저장 경로 설정
-        file_name = f"audio_{question_id}.wav"
-        file_path = os.path.join(settings.MEDIA_ROOT, "test_mode", file_name)
+def submit_audio(request, question_id):
+    print(f"submit_audio called for question_id: {question_id}")
+    
+    if request.method == "POST" and request.FILES.get("audio"):
+        if not request.user.is_authenticated:
+            return JsonResponse({"error": "User is not authenticated"}, status=401)
 
         try:
-            # 파일 저장
-            with default_storage.open(file_path, "wb") as f:
-                for chunk in audio_file.chunks():
-                    f.write(chunk)
-            print(f"Audio file saved at {file_path}")
+            student_info = StudentInfo.objects.get(user=request.user)  # 현재 로그인한 사용자의 정보를 가져옴
+            user_id = student_info.user.id  # user_id를 가져옴 (User 모델의 id)
+
+            word = request.POST.get("word")
+            if not word:
+                return JsonResponse(
+                    {"status": "error", "message": "Word is required"}, status=400
+                )
+
+            # 저장 경로 설정
+            save_path = f"test_mode/user_{user_id}/"
+            os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
+
+            # 파일 이름 설정
+            file_name = f"{word}_student.wav"
+            file_path = os.path.join(save_path, file_name)
+
+            # 기존 파일이 있으면 삭제
+            if default_storage.exists(file_path):
+                default_storage.delete(file_path)
+
+            # 새 파일 저장
+            full_path = default_storage.save(
+                file_path, ContentFile(request.FILES["audio"].read())
+            )
 
             # Whisper 모델로 음성 텍스트 변환
             result = model.transcribe(file_path, language="en")
@@ -145,6 +172,9 @@ def next_question(request):
     # 세션에서 현재 질문 인덱스와 질문 목록 가져오기
     current_index = request.session.get("current_question_index", 0)
     questions = request.session.get("questions", [])
+
+    if not questions:
+        return JsonResponse({"error": "No questions available."}, status=404)
 
     if current_index < len(questions) - 1:
         # 다음 문제로 이동

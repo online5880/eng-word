@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8">
     <title>발음 연습 모드</title>
-    <link rel="stylesheet" href="{% static 'css/pron_styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pron_styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
 
@@ -15,18 +15,18 @@
       <p>단어:
         <span id="current-word">{{ word }}</span>
       </p>
+      <p>뜻:
+        <span id="current-meaning">{{ meanings|join:", " }}</span>
+      </p>
 
       <div>
         <h3>원어민 발음을 들어볼까요?</h3>
-        <!-- 원어민 발음 오디오 소스 동적으로 설정 -->
+        <!-- DB에서 가져온 원어민 발음 오디오 파일 경로를 동적으로 설정 -->
         <audio id="native-audio-preview" controls="controls">
-          <source src="{{ MEDIA_URL }}audio_files/native/{{ word }}.wav" type="audio/wav">
-          오디오 파일이 지원되지 않는 브라우저입니다.
+            <source src="{{ MEDIA_URL }}{{ file_path }}" type="audio/wav">
+            오디오 파일이 지원되지 않는 브라우저입니다.
         </audio>
       </div>
-
-      <!-- 카운트다운 표시 -->
-      <div id="countdown"></div>
 
       <!-- 녹음 버튼 (마이크 아이콘) -->
       <div class="controls">
@@ -48,24 +48,30 @@
       <!-- 점수 표시 -->
       <div>
         <p>점수:
-          <span id="score">0</span>
+            <span id="score">{{ pronunciation_score }}</span>
         </p>
-        <div id="score-bar"></div>
+        <div id="score-bar" style="width: {{ pronunciation_score|default:0 }}%;"></div>
       </div>
 
       <!-- 피드백 섹션 -->
-      <div id="feedback-section" style="display: none;">
-        <p id="feedback"></p>
+      <div id="feedback-section" style="display: {% if pronunciation_score %} block {% else %} none {% endif %};">
+        <p id="feedback">
+            {% if pronunciation_score %}
+                {% if pronunciation_score >= 80 %}
+                    잘하셨어요! 발음이 훌륭합니다.
+                {% elif pronunciation_score >= 50 %}
+                    좋아요, 조금 더 연습하면 더 좋아질 거예요.
+                {% else %}
+                    발음이 조금 더 필요해요. 다시 한번 시도해 보세요.
+                {% endif %}
+            {% endif %}
+        </p>
       </div>
 
-      <!-- 녹음한 음성 미리보기 -->
-      <audio id="audio-preview" controls="controls" style="display: none;">
-        오디오 파일이 지원되지 않는 브라우저입니다.
-      </audio>
-
-      <!-- 네비게이션 버튼 -->
-      <button id="nextWordButton">다음 단어</button>
-      <button onclick="exitPractice()">나가기</button>
+      <div id="navButtons">
+        <button id="nextWordButton">다음 단어</button>
+        <button id="exitPracticeButton">나가기</button>
+    </div>
     </div>
 
     <script src="{% static 'js/pron_practice.js' %}"></script>

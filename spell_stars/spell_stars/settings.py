@@ -62,12 +62,12 @@ INSTALLED_APPS = [
 
 ]
 
-ASGI_APPLICATION = 'spell_stars.asgi.application'
+ASGI_APPLICATION = "spell_stars.asgi.application"
 
 # Channels Layer 설정 (기본적으로 In-Memory 사용, Redis를 권장)
 CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
     },
 }
 
@@ -85,8 +85,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'accounts.middleware.UpdateLastLoginMiddleware',
-    'accounts.middleware.AutoLogoutMiddleware',
+    "accounts.middleware.UpdateLastLoginMiddleware",
+    "accounts.middleware.AutoLogoutMiddleware",
 ]
 
 ROOT_URLCONF = "spell_stars.urls"
