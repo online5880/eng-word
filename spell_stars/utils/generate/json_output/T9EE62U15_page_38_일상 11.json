@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "deliver",
+        "단어 뜻": "배달하다",
+        "품사": "동사",
+        "예문": "She delivers mail to people.",
+        "예문 뜻": "그녀는 사람들에게 편지를 배달해."
+    },
+    {
+        "단어": "empty",
+        "단어 뜻": "비어 있는",
+        "품사": "형용사",
+        "예문": "Is the glass half empty or half full?",
+        "예문 뜻": "잔이 반 비어 있는 거야, 반 차 있는 거야?"
+    },
+    {
+        "단어": "enough",
+        "단어 뜻": "충분한",
+        "품사": "형용사",
+        "예문": "I saved enough money to buy those shoes.",
+        "예문 뜻": "저 신발을 살 만큼 충분한 돈을 모았어."
+    },
+    {
+        "단어": "finish",
+        "단어 뜻": "끝내다",
+        "품사": "동사",
+        "예문": "It took three weeks to finish it.",
+        "예문 뜻": "그것을 끝내는 데 3주 걸렸어."
+    },
+    {
+        "단어": "invite",
+        "단어 뜻": "초대하다",
+        "품사": "동사",
+        "예문": "I invited his family to the party.",
+        "예문 뜻": "나는 그 파티에 그의 가족을 초대했어."
+    },
+    {
+        "단어": "polite",
+        "단어 뜻": "예의 바른",
+        "품사": "형용사",
+        "예문": "Kevin is polite as well as handsome.",
+        "예문 뜻": "Kevin은 잘생겼을 뿐만 아니라 예의가 발라."
+    },
+    {
+        "단어": "rude",
+        "단어 뜻": "무례한",
+        "품사": "형용사",
+        "예문": "I was rude to my mom.",
+        "예문 뜻": "나는 엄마한테 무례했어."
+    },
+    {
+        "단어": "taste",
+        "단어 뜻": "~한 맛이 나다",
+        "품사": "동사",
+        "예문": "Um, this apple tastes sweet and sour. Dam, dl",
+        "예문 뜻": "사과는 새콤달콤한 맛이 나요."
+    }
+]

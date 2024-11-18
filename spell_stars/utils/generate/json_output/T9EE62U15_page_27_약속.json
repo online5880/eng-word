@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "appointment",
+        "단어 뜻": "약속",
+        "품사": "명사",
+        "예문": "I have an appointment to see my doctor.",
+        "예문 뜻": "나는 의사 선생님을 뵙기로 약속했어요."
+    },
+    {
+        "단어": "dark",
+        "단어 뜻": "어두운",
+        "품사": "형용사",
+        "예문": "Put it in a dark place.",
+        "예문 뜻": "그것을 어두운 곳에 두어라."
+    },
+    {
+        "단어": "forest",
+        "단어 뜻": "숲",
+        "품사": "명사",
+        "예문": "Playing in the forest is fun.",
+        "예문 뜻": "숲에서 노는 것은 재미있어."
+    },
+    {
+        "단어": "laugh",
+        "단어 뜻": "웃다",
+        "품사": "동사",
+        "예문": "When you laugh, your brain works better.",
+        "예문 뜻": "웃으면 뇌 활동이 활발해져."
+    },
+    {
+        "단어": "leisure",
+        "단어 뜻": "여가",
+        "품사": "명사",
+        "예문": "We enjoy leisure activities on weekends.",
+        "예문 뜻": "우리는 주말마다 여가 활동을 즐긴다."
+    },
+    {
+        "단어": "previous",
+        "단어 뜻": "이전의, 앞의",
+        "품사": "형용사",
+        "예문": "Click “cancel” to return to the previous page.",
+        "예문 뜻": "이전 페이지로 돌아가려면 “취소”를 누르세요."
+    },
+    {
+        "단어": "promise",
+        "단어 뜻": "약속하다",
+        "품사": "동사",
+        "예문": "I promise I’ll come back.",
+        "예문 뜻": "돌아올 것을 약속할게."
+    },
+    {
+        "단어": "shadow",
+        "단어 뜻": "그림자",
+        "품사": "명사",
+        "예문": "Look at my shadow.",
+        "예문 뜻": "내 그림자를 봐."
+    }
+]

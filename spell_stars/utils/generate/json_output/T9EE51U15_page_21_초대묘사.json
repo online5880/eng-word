@@ -1,0 +1,72 @@
+[
+    {
+        "단어": "different",
+        "단어 뜻": "다른",
+        "품사": "형용사",
+        "예문": "Jack’s uniform is different from ours.",
+        "예문 뜻": "Jack의 체육복은 우리 것과 달라."
+    },
+    {
+        "단어": "difficult",
+        "단어 뜻": "어려운",
+        "품사": "형용사",
+        "예문": "This math problem is difficult.",
+        "예문 뜻": "이 수학 문제는 어려워."
+    },
+    {
+        "단어": "easy",
+        "단어 뜻": "쉬운",
+        "품사": "형용사",
+        "예문": "This math problem is very easy.",
+        "예문 뜻": "이 수학 문제는 아주 쉬어."
+    },
+    {
+        "단어": "everyone",
+        "단어 뜻": "모두",
+        "품사": "대명사",
+        "예문": "Everyone is raising their right hands.",
+        "예문 뜻": "모두 오른손을 들고 있어."
+    },
+    {
+        "단어": "fresh",
+        "단어 뜻": "신선한",
+        "품사": "형용사",
+        "예문": "The fruits are fresh.",
+        "예문 뜻": "그 과일들은 신선해."
+    },
+    {
+        "단어": "invite",
+        "단어 뜻": "초대하다",
+        "품사": "동사",
+        "예문": "Thanks for inviting me.",
+        "예문 뜻": "초대해 줘서 고마워."
+    },
+    {
+        "단어": "party",
+        "단어 뜻": "파티, 잔치",
+        "품사": "명사",
+        "예문": "Would you like to come to my birthday party?",
+        "예문 뜻": "내 생일 파티에 올래?"
+    },
+    {
+        "단어": "little",
+        "단어 뜻": "작은",
+        "품사": "형용사",
+        "예문": "This cat is little and cute.",
+        "예문 뜻": "이 고양이는 작고 귀여워."
+    },
+    {
+        "단어": "pumpkin",
+        "단어 뜻": "호박",
+        "품사": "명사",
+        "예문": "It’s a pumpkin.",
+        "예문 뜻": "그것은 호박이야."
+    },
+    {
+        "단어": "smell",
+        "단어 뜻": "~한 냄새가 나다",
+        "품사": "동사",
+        "예문": "It smells good.",
+        "예문 뜻": "냄새 좋다."
+    }
+]

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form method="post" action="{% url 'signup' %}", autocomplete="off">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <button type="submit">회원가입</button>
+    </form>
+    <form action="{% url 'index' %}" method="get">
+        <button type="submit">뒤로가기</button>
+    </form>
+</body>
+</html>

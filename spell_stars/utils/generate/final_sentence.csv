@@ -1,0 +1,22 @@
+﻿final_sentence,grammar_score,coherence_score,word,sentence_meaning
+The child is using it’s a knife.,0.76,0,knife,그 아이가 칼을 사용하고 있어요.
+Here are scissors that cut the paper.,1.0,1,scissors,여기에 종이를 자르는 가위가 있습니다.
+Here are scissors that cut the paper.,1.0,1,cut,여기에 종이를 자르는 가위가 있습니다.
+I have dinner and it’s a fork.,1.01,1,fork,저녁을 먹었는데 포크였어요.
+He can pull the car with his friend.,1.01,1,pull,그는 친구와 함께 차를 끌 수 있습니다.
+Look! He can push the car.,0.99,1,push,보세요! 그는 차를 밀 수 있어요.
+I can’t help you with my finger hurts.,0.73,1,help,손가락이 아파서 도와줄 수 없어요.
+I want a pink lunch box.,1.01,1,box,저는 분홍색 도시락 상자를 원해요.
+Here is my gift. It’s a blue bat.,0.96,1,gift,여기 내 선물이 있습니다. 파란색 박쥐입니다.
+I want a key. It is my key.,0.98,0,key,나는 열쇠를 원해요. 그것은 내 열쇠예요.
+I have two tickets. We go to a concert.,0.95,1,ticket,티켓 두 장 있어요. 콘서트에 가자.
+I have breakfast and lunch outside.,0.99,1,breakfast,저는 아침과 점심을 밖에서 먹어요.
+I have lunch and I’m eating.,0.98,1,lunch,점심을 먹고 있어요.
+I have dinner after I go to the restaurant.,0.97,1,dinner,레스토랑에 간 후에 저녁을 먹습니다.
+"It’s sunny in the morning, what day is it?",0.95,1,morning,아침에 날씨가 맑네요. 오늘은 무슨 요일인가요?
+"It’s cold in the evening, I get up late.",0.96,1,evening,저녁에는 추워서 늦게 일어나요.
+I get up late at night.,1.01,1,night,나는 늦은 밤에 일어난다.
+Close the door. Open the window. Close the window. Close the door.,0.85,1,home,문을 닫아. 창문을 열어. 창문을 닫아. 문을 닫아.
+"We are dancers, she can dance well.",1.01,1,dance,"우리는 댄서이고, 그녀는 춤을 잘 춥니다."
+We are dancers. She can dance.,0.98,1,dancer,우리는 댄서야. 그녀는 춤을 출 수 있어.
+"I can walk, and I go to the park.",0.98,1,walk,"나는 걸을 수도 있고, 공원에 갈 수도 있어요."

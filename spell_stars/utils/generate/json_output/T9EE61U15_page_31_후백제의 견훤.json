@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "happen",
+        "단어 뜻": "일어난다",
+        "품사": "동사",
+        "예문": "What happened to you?",
+        "예문 뜻": "네게 무슨 일이 일어났니?"
+    },
+    {
+        "단어": "health",
+        "단어 뜻": "건강",
+        "품사": "명사",
+        "예문": "Exercising is good for your health.",
+        "예문 뜻": "운동은 네 건강에 좋아."
+    },
+    {
+        "단어": "ill",
+        "단어 뜻": "아픈",
+        "품사": "형용사",
+        "예문": "What’s wrong? You look ill.",
+        "예문 뜻": "무슨 일 있니? 너 아파 보여."
+    },
+    {
+        "단어": "occur",
+        "단어 뜻": "발생하다",
+        "품사": "동사",
+        "예문": "Where were you when the accident occurred?",
+        "예문 뜻": "그 사건이 발생했을 때 너는 어디에 있었니?"
+    },
+    {
+        "단어": "perceive",
+        "단어 뜻": "알아차리다",
+        "품사": "동사",
+        "예문": "She perceived that she placed first.",
+        "예문 뜻": "그녀는 그녀가1등을 했다는 것을 알아차렸어."
+    },
+    {
+        "단어": "perfect",
+        "단어 뜻": "완벽한",
+        "품사": "형용사",
+        "예문": "Practice makes perfect.",
+        "예문 뜻": "연습하면 완벽해져."
+    },
+    {
+        "단어": "perform",
+        "단어 뜻": "수행하다",
+        "품사": "동사",
+        "예문": "A team of five scientists performed the experiment.",
+        "예문 뜻": "다섯 명의 과학자들로 이루어진 팀이 그 실험을 수행했어."
+    },
+    {
+        "단어": "sick",
+        "단어 뜻": "아픈",
+        "품사": "형용사",
+        "예문": "I am sick with a cold.",
+        "예문 뜻": "나는 감기에 걸려 아파."
+    }
+]

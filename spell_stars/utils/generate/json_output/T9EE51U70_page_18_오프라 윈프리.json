@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "honest",
+        "단어 뜻": "솔직한",
+        "품사": "",
+        "예문": "Bill is an honest boy.",
+        "예문 뜻": "빌은 솔직한 소년이다."
+    },
+    {
+        "단어": "reporter",
+        "단어 뜻": "기자",
+        "품사": "",
+        "예문": "The reporter met a famous artist.",
+        "예문 뜻": "그 기자는 유명한 화가를 만났다."
+    },
+    {
+        "단어": "television",
+        "단어 뜻": "텔레비전",
+        "품사": "",
+        "예문": "How long do you watch television a day?",
+        "예문 뜻": "너는 하루에 텔레비전을 얼마나 오래 보니?"
+    },
+    {
+        "단어": "chance",
+        "단어 뜻": "기회",
+        "품사": "",
+        "예문": "Don’t miss this chance.",
+        "예문 뜻": "이 기회를 놓치지 마."
+    },
+    {
+        "단어": "baseball",
+        "단어 뜻": "야구",
+        "품사": "",
+        "예문": "Do they play baseball after school?",
+        "예문 뜻": "그들은 방과 후에 야구를 하니?"
+    },
+    {
+        "단어": "congratulate",
+        "단어 뜻": "축하하다",
+        "품사": "",
+        "예문": "We congratulated Jack on his new job.",
+        "예문 뜻": "우리는 잭이 새로운 직업을 갖게 된 것을 축하했다."
+    },
+    {
+        "단어": "thank",
+        "단어 뜻": "(~ 고마워\n하다",
+        "품사": "에게",
+        "예문": "Thank you for the present.",
+        "예문 뜻": "선물 고마워"
+    },
+    {
+        "단어": "staff",
+        "단어 뜻": "직원",
+        "품사": "",
+        "예문": "The restaurant staff is kind.",
+        "예문 뜻": "그 음식점 직원은 친절하다."
+    }
+]

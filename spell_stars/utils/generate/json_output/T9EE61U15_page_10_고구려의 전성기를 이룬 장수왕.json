@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "against",
+        "단어 뜻": "~에 반대하여",
+        "품사": "전치사",
+        "예문": "Everyone was against me.",
+        "예문 뜻": "모든 사람들이 나에게 반대했어."
+    },
+    {
+        "단어": "along",
+        "단어 뜻": "~을 따라",
+        "품사": "전치사",
+        "예문": "We walked along the beach.",
+        "예문 뜻": "우리는 해변을 따라 걸었어."
+    },
+    {
+        "단어": "among",
+        "단어 뜻": "~(셋 이상) 사\n이에",
+        "품사": "전치사",
+        "예문": "There were ducks among the geese.",
+        "예문 뜻": "거위들 사이에 오리들이 있었어."
+    },
+    {
+        "단어": "between",
+        "단어 뜻": "~사이에",
+        "품사": "전치사",
+        "예문": "Mike stood in line between Jane and Cathy.",
+        "예문 뜻": "Mike는 Jane과 Cathy 사이에 줄을 섰어."
+    },
+    {
+        "단어": "during",
+        "단어 뜻": "~ 동안",
+        "품사": "전치사",
+        "예문": "I go to camp during summer vacation.",
+        "예문 뜻": "나는 여름 방학 동안에 캠프에 가."
+    },
+    {
+        "단어": "more",
+        "단어 뜻": "더 많은",
+        "품사": "형용사",
+        "예문": "I bought more apples.",
+        "예문 뜻": "나는 더 많은 사과를 샀어."
+    },
+    {
+        "단어": "most",
+        "단어 뜻": "가장",
+        "품사": "형용사",
+        "예문": "It was the most exciting game.",
+        "예문 뜻": "그것은 가장 신나는 게임이었어."
+    },
+    {
+        "단어": "through",
+        "단어 뜻": "~ 을 통해",
+        "품사": "전치사",
+        "예문": "Water goes through this pipe.",
+        "예문 뜻": "물이 이 관을 통해 지나가."
+    }
+]

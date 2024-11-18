@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "adult",
+        "단어 뜻": "어른",
+        "품사": "명사",
+        "예문": "Tickets are $3 for adults and $2 for children.",
+        "예문 뜻": "입장권은 어른은 3달러이고, 어린이는 2달러야."
+    },
+    {
+        "단어": "age",
+        "단어 뜻": "나이",
+        "품사": "명사",
+        "예문": "My age is 12.",
+        "예문 뜻": "내 나이는 열두 살이야."
+    },
+    {
+        "단어": "child",
+        "단어 뜻": "아이",
+        "품사": "명사",
+        "예문": "Mary has a four-year-old child and two school-age children.",
+        "예문 뜻": "Mary는 네 살 난 아이와 두 명의 학교에 다니는 나이의 아 이들이 있어."
+    },
+    {
+        "단어": "growth",
+        "단어 뜻": "성장",
+        "품사": "명사",
+        "예문": "Many teenagers experience fast growth.",
+        "예문 뜻": "많은 십대들이 빠른 성장을 경험해."
+    },
+    {
+        "단어": "once",
+        "단어 뜻": "한 번",
+        "품사": "부사",
+        "예문": "I will say this only once, so listen carefully.",
+        "예문 뜻": "나는 이것을 한 번만 말할 거니까 주의해서 들어."
+    },
+    {
+        "단어": "teenager",
+        "단어 뜻": "십대",
+        "품사": "명사",
+        "예문": "A teenager is someone between 13 and 19 years of age.",
+        "예문 뜻": "십대는 열세 살에서 열아홉 살 사이의 사람이야."
+    },
+    {
+        "단어": "twice",
+        "단어 뜻": "두 번",
+        "품사": "부사",
+        "예문": "We go to the movies once or twice a month.",
+        "예문 뜻": "우리는 한 달에 한 번 또는 두 번 영화를 보러 가."
+    },
+    {
+        "단어": "youth",
+        "단어 뜻": "젊은이",
+        "품사": "명사",
+        "예문": "The youth of today have no manners!",
+        "예문 뜻": "요즘 젊은이들은 예의가 없어!"
+    }
+]

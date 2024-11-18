@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "anxious",
+        "단어 뜻": "걱정하는",
+        "품사": "형용사",
+        "예문": "I was very anxious about the test result.",
+        "예문 뜻": "나는 그 시험 결과에 대해 매우 걱정했어."
+    },
+    {
+        "단어": "man",
+        "단어 뜻": "남자",
+        "품사": "명사",
+        "예문": "He was a shy boy, but now he is a strong man.",
+        "예문 뜻": "그는 부끄럼을 타는 소년이었지만, 지금 그는 강한 남자야."
+    },
+    {
+        "단어": "nervous",
+        "단어 뜻": "불안해 하는",
+        "품사": "형용사",
+        "예문": "I was very nervous before the contest.",
+        "예문 뜻": "나는 대회 전에 매우 불안했어."
+    },
+    {
+        "단어": "people",
+        "단어 뜻": "사람들",
+        "품사": "명사",
+        "예문": "Many people are waving their hands.",
+        "예문 뜻": "많은 사람들이 손을 흔들고 있어."
+    },
+    {
+        "단어": "person",
+        "단어 뜻": "사람",
+        "품사": "명사",
+        "예문": "She is a very interesting person.",
+        "예문 뜻": "그녀는 매우 재미있는 사람이야."
+    },
+    {
+        "단어": "serious",
+        "단어 뜻": "심각한",
+        "품사": "형용사",
+        "예문": "I’m not joking. I’m serious.",
+        "예문 뜻": "나 농담하는 것 아니야. 나는 심각해."
+    },
+    {
+        "단어": "woman",
+        "단어 뜻": "여자",
+        "품사": "명사",
+        "예문": "The little girl become a beautiful woman.",
+        "예문 뜻": "그 작은 소녀는 아름다운 여자가 되었어."
+    },
+    {
+        "단어": "worry",
+        "단어 뜻": "걱정하다",
+        "품사": "동사",
+        "예문": "Don’t worry, be happy!",
+        "예문 뜻": "걱정하지 말고, 행복해라!"
+    }
+]

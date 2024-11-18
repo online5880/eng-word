@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "abroad",
+        "단어 뜻": "해외로",
+        "품사": "부사",
+        "예문": "I traveled abroad last summer.",
+        "예문 뜻": "나는 지난 여름에 해외로 여행을 갔어."
+    },
+    {
+        "단어": "global",
+        "단어 뜻": "세계적인",
+        "품사": "형용사",
+        "예문": "English is becoming a global language.",
+        "예문 뜻": "영어는 세계적인 언어가 되고 있어."
+    },
+    {
+        "단어": "journey",
+        "단어 뜻": "여행",
+        "품사": "명사",
+        "예문": "He is planning a six-week journey to Europe.",
+        "예문 뜻": "그는 유럽으로 6주 간의 여행을 계획하고 있어."
+    },
+    {
+        "단어": "tour",
+        "단어 뜻": "관광",
+        "품사": "명사",
+        "예문": "They went on a tour of the city.",
+        "예문 뜻": "그들은 도시를 관광했어."
+    },
+    {
+        "단어": "traffic",
+        "단어 뜻": "교통",
+        "품사": "명사",
+        "예문": "Traffic on the road was busy this morning.",
+        "예문 뜻": "오늘 아침 도로의 교통이 붐볐어."
+    },
+    {
+        "단어": "travel",
+        "단어 뜻": "여행하다",
+        "품사": "동사",
+        "예문": "My father traveled to many countries.",
+        "예문 뜻": "우리 아버지는 많은 나라를 여행하셨어."
+    },
+    {
+        "단어": "trip",
+        "단어 뜻": "여행",
+        "품사": "명사",
+        "예문": "Last summer I went on a trip to London.",
+        "예문 뜻": "지난 여름에 나는 런던으로 여행을 갔어."
+    },
+    {
+        "단어": "vehicle",
+        "단어 뜻": "운송 수단",
+        "품사": "명사",
+        "예문": "Cars, buses, and airplanes are vehicles.",
+        "예문 뜻": "자동차, 버스, 그리고 비행기는 운송 수단이야."
+    }
+]
