@@ -21,39 +21,36 @@ model = apps.get_app_config("spell_stars").whisper_model
 
 
 # 예문 학습 페이지 렌더링
+from django.shortcuts import redirect, render
+from .models import Word, Sentence
+
+# 예문 학습 페이지 렌더링
 def example_sentence_learning(request):
     user = request.user
-    # 세션에서 선택된 테마 가져오기
-    selected_theme = request.session.get('selected_theme', None)
+    # 세션에서 선택된 단어들 가져오기
+    selected_words = request.session.get('selected_words', None)
 
-    if not selected_theme:
-        # 만약 테마가 세션에 없다면 사전 학습 페이지로 리디렉션
-        return redirect('vocab_learning')  # 사전 학습 페이지로 리디렉션
+    # selected_words에서 Word 모델 객체들을 찾아서 필터링
+    word_objects = Word.objects.filter(word__in=selected_words)
 
-    # 선택한 테마에 해당하는 단어들 가져오기
-    words_in_theme = Word.objects.filter(category=selected_theme)
-    
-    # 단어 중에서 랜덤으로 하나 선택
-    random_word = random.choice(words_in_theme)
-
-    # 해당 단어에 매칭되는 예문 가져오기
-    sentences = Sentence.objects.filter(word=random_word).order_by("?")[:5]
+    # 세션에 저장된 단어들에 해당하는 예문들 가져오기
+    sentences = Sentence.objects.filter(word__in=word_objects).order_by("?")[:5]
 
     # 예문에 단어를 빈칸으로 대체
     blank_sentences = []
     for sentence in sentences:
-        blank_sentence = sentence.sentence.replace(random_word.word, "_____")
+        blank_sentence = sentence.sentence.replace(sentence.word.word, "_____")  # sentence.word.word로 수정
         blank_sentences.append({
             "sentence": blank_sentence,
             "meaning": sentence.sentence_meaning,
-            "word": random_word.word
+            "word": sentence.word.word
         })
 
     context = {
         "sentences": blank_sentences,
-        "random_word": random_word
+        "selected_words": selected_words
     }
-    
+
     return render(request, "sent_mode/sent_practice.html", context)
 
 
@@ -139,6 +136,7 @@ def upload_audio(request):
             return JsonResponse({"status": "error", "message": str(e)}, status=500)
 
     return JsonResponse({"status": "error", "message": "Invalid request"}, status=400)
+
 
 def exit_learning_mode(request):
     # 세션 초기화

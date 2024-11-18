@@ -83,7 +83,7 @@ def upload_audio(request):
 
             # 발음 비교 처리
             result = process_audio_files(
-                native_audio_path, full_student_audio_path, word
+                native_audio_path, full_student_audio_path, word, user_id
             )
 
             if result["status"] == "error":
