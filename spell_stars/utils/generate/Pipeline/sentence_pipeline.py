@@ -3,7 +3,6 @@ from Pipeline.grammar_score import AdvancedGrammarScorer  # 문법 검사 클래
 from Pipeline.consistency import measure_sc  # 의미 일관성 검사 함수
 from Pipeline.grammar_corrector import GrammarCorrector  # Grammarformer를 사용한 문장 보완 클래스
 import chardet
-from concurrent.futures import ThreadPoolExecutor
 import time
 
 
@@ -12,15 +11,13 @@ class SentenceEvaluationPipeline:
     def __init__(self,
                  grammar_threshold: float = 0.9,
                  coherence_threshold: int = 1,
-                 batch_size=100,
-                 max_workers=4):  # 병렬 처리 워커 수 추가
+                 batch_size=100):  # 병렬 처리 제거
         self.grammar_scorer = AdvancedGrammarScorer()  # 문법 점수 측정
         self.coherence_checker = measure_sc  # 의미 일관성 점검 함수
         self.grammar_threshold = grammar_threshold  # 문법 점수 기준
         self.coherence_threshold = coherence_threshold  # 일관성 기준
         self.grammar_corrector = GrammarCorrector()  # GrammarCorrector 초기화
         self.batch_size = batch_size  # 배치 크기
-        self.max_workers = max_workers  # 병렬 처리 워커 수
 
     def evaluate_and_correct(self, sentence: str):
         start_time = time.time()
@@ -66,18 +63,6 @@ class SentenceEvaluationPipeline:
                 "error": str(e)
             }
 
-    def process_batch(self, batch):
-        batch_results = []
-        for _, row in batch.iterrows():
-            sentence = str(row["sentence"]) if pd.notnull(row["sentence"]) else ""
-            word = str(row["word"]) if pd.notnull(row["word"]) else ""
-
-            # 문장 평가 및 수정
-            result = self.evaluate_and_correct(sentence)
-            result["word"] = word
-            batch_results.append(result)
-        return batch_results
-
     def process_all_sentences(self, file_path: str, output_path: str):
         # 파일의 인코딩 감지
         with open(file_path, 'rb') as f:
@@ -90,23 +75,28 @@ class SentenceEvaluationPipeline:
         total_results = []
         num_sentences = len(df)
 
-        # 배치 단위로 문장 처리 (병렬 처리)
-        print("Starting parallel processing...")
-        with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
-            futures = []
-            for start_idx in range(0, num_sentences, self.batch_size):
-                end_idx = min(start_idx + self.batch_size, num_sentences)
-                batch = df.iloc[start_idx:end_idx]
-                print(f"Queuing batch {start_idx + 1} to {end_idx}...")
-                futures.append(executor.submit(self.process_batch, batch))
+        # 순차적으로 문장 처리
+        print("Starting sequential processing...")
+        for start_idx in range(0, num_sentences, self.batch_size):
+            end_idx = min(start_idx + self.batch_size, num_sentences)
+            batch = df.iloc[start_idx:end_idx]
+            print(f"Processing batch {start_idx + 1} to {end_idx}...")
 
-            for future in futures:
-                batch_results = future.result()
-                total_results.extend(batch_results)
+            batch_results = []
+            for _, row in batch.iterrows():
+                sentence = str(row["sentence"]) if pd.notnull(row["sentence"]) else ""
+                word = str(row["word"]) if pd.notnull(row["word"]) else ""
 
-        # 전체 결과를 DataFrame으로 저장
-        results_df = pd.DataFrame(total_results)
-        results_df.to_csv(output_path, index=False, encoding="utf-8-sig")
+                # 문장 평가 및 수정
+                result = self.evaluate_and_correct(sentence)
+                result["word"] = word
+                batch_results.append(result)
+
+            # 현재 배치 결과를 추가
+            total_results.extend(batch_results)
+
+            # 중간 결과 저장
+            batch_df = pd.DataFrame(batch_results)
+            batch_df.to_csv(output_path, mode='a', index=False, encoding="utf-8-sig", header=not bool(start_idx))
+
         print(f"All sentences processed. Results saved to {output_path}")
-
-        return results_df
