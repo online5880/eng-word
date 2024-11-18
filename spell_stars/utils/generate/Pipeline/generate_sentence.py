@@ -79,19 +79,21 @@ def generate_sentences(file_path, vector_store_path, output_path):
 
     # 프롬프트 템플릿 설정
     prompt_template = PromptTemplate(
-        input_variables=["query"],
-        template="""
-        You must create exactly one simple, complete English sentence that an elementary school student can understand.
-        
-        - The sentence must include the word '{query}' exactly as specified, without any modifications or additional forms.
-        - Use only a single statement, not a question, command, or compound sentence.
-        - The sentence should be between 5 and 8 words long.
-        - Do not create multiple sentences or add any additional information.
-        - Use only common, everyday words that are simple for an elementary school student in the US to understand.
+    input_variables=["query"],
+    template="""
+    Your task is to create exactly one natural, meaningful English sentence that follows these rules:
 
-        If you cannot create a sentence following these rules exactly, respond with "Unable to create a valid sentence."
-        """,
-    )
+    - The sentence must include the word '{query}' exactly as it is, without any changes or additional forms.
+    - The sentence must be between 6 and 8 words long.
+    - The sentence should be clear, logical, and contextually coherent.
+    - Ensure the sentence is a **single declarative statement** with one complete idea, not multiple ideas or commands.
+    - Avoid splitting the sentence into multiple parts or combining unrelated ideas.
+    - Use simple, everyday words suitable for an elementary school student in the US.
+
+    If you cannot create a valid sentence under these rules, respond with: "Unable to create a valid sentence."
+    """
+)
+
 
     # FAISS 벡터 스토어 로드
     vector_store = FAISS.load_local(vector_store_path, HuggingFaceEmbeddings(
