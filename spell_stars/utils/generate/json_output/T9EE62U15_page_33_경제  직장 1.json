@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "cash",
+        "단어 뜻": "현금",
+        "품사": "명사",
+        "예문": "If I pay cash, will I get a discount?",
+        "예문 뜻": "현금으로 내면 깎아 주나요?"
+    },
+    {
+        "단어": "celebrate",
+        "단어 뜻": "축하하다",
+        "품사": "동사",
+        "예문": "We celebrated Piggy’s birthday.",
+        "예문 뜻": "우리는 Piggy의 생일을 축하해 주었어."
+    },
+    {
+        "단어": "change",
+        "단어 뜻": "바꾸다",
+        "품사": "동사",
+        "예문": "My dad is changing the light bulb.",
+        "예문 뜻": "아빠가 전구를 바꾸고 계셔."
+    },
+    {
+        "단어": "compare",
+        "단어 뜻": "비교하다",
+        "품사": "동사",
+        "예문": "Don’t compare yourself with others.",
+        "예문 뜻": "너 자신을 남과 비교하지 마라."
+    },
+    {
+        "단어": "department",
+        "단어 뜻": "부서",
+        "품사": "명사",
+        "예문": "He works in the sales department.",
+        "예문 뜻": "그는 판매부에서 근무해."
+    },
+    {
+        "단어": "price",
+        "단어 뜻": "가격",
+        "품사": "명사",
+        "예문": "The price for juice is only 25 cents.",
+        "예문 뜻": "주스 가격이 달랑 25센트야."
+    },
+    {
+        "단어": "wealth",
+        "단어 뜻": "재산",
+        "품사": "명사",
+        "예문": "Good health is better than wealth.",
+        "예문 뜻": "건강이 재산보다 낫다."
+    },
+    {
+        "단어": "worth",
+        "단어 뜻": "~의 가치가\n있는",
+        "품사": "형용사",
+        "예문": "It is worth around 3,000 dollars.",
+        "예문 뜻": "그것은 3천 달러 가량의 가치가 있어."
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "shape",
+        "단어 뜻": "모양",
+        "품사": "명사",
+        "예문": "The cake has a round shape.",
+        "예문 뜻": "그 케이크는 둥근 모양이야."
+    },
+    {
+        "단어": "triangle",
+        "단어 뜻": "삼각형",
+        "품사": "명사",
+        "예문": "A triangle is a shape with three sides.",
+        "예문 뜻": "삼각형은 세 변을 가지고 있는 모양이야."
+    },
+    {
+        "단어": "square",
+        "단어 뜻": "정사각형",
+        "품사": "명사",
+        "예문": "Squares, circles, and triangles are all shapes.",
+        "예문 뜻": "정사각형, 원과 삼각형은 모두 모양이야."
+    },
+    {
+        "단어": "circle",
+        "단어 뜻": "원",
+        "품사": "명사",
+        "예문": "The ring has the shape of a circle.",
+        "예문 뜻": "그 반지는 원 모양이야."
+    },
+    {
+        "단어": "sky",
+        "단어 뜻": "하늘",
+        "품사": "명사",
+        "예문": "There wasn’t a cloud in the sky.",
+        "예문 뜻": "하늘에는 구름 한 점 없었어."
+    },
+    {
+        "단어": "sea",
+        "단어 뜻": "바다",
+        "품사": "명사",
+        "예문": "I like to swim in the sea, not in a pool.",
+        "예문 뜻": "나는 수영장이 아니라, 바다에서 수영하는 것을 좋아해."
+    },
+    {
+        "단어": "wave",
+        "단어 뜻": "파도",
+        "품사": "명사",
+        "예문": "Children swam and played in the waves.",
+        "예문 뜻": "아이들은 파도에서 수영하고 놀았어."
+    },
+    {
+        "단어": "land",
+        "단어 뜻": "육지",
+        "품사": "명사",
+        "예문": "Fish live in the sea, and tigers live on land.",
+        "예문 뜻": "물고기는 바다에 살고, 호랑이는 육지에 살아."
+    }
+]

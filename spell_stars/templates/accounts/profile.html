@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 정보</title>
+</head>
+<body>
+    <!-- index.html로 이동하는 버튼 추가 -->
+    <h1>프로필 정보</h1>
+    <p><strong>이름:</strong> {{ user.name }}</p>
+    <p><strong>아이디:</strong> {{ user.username }}</p>
+    <p><strong>나이:</strong> {{ user.age }}</p>
+    <p><strong>학년:</strong> {{ user.grade }} 학년</p>
+    <p><strong>가입 날짜:</strong> {{ user.date_joined }}</p>
+    <p><strong>마지막 접속 시간:</strong> {{ user.last_login }}</p>
+    <button onclick="location.href='{% url 'index' %}'">돌아가기</button>
+</body>
+</html>
+

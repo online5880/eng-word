@@ -1,0 +1,72 @@
+[
+    {
+        "단어": "fast",
+        "단어 뜻": "빠른",
+        "품사": "형용사",
+        "예문": "That motorcycle is faster than my car.",
+        "예문 뜻": "저 오토바이는 내 자동차보다 더 빨라."
+    },
+    {
+        "단어": "fat",
+        "단어 뜻": "뚱뚱한",
+        "품사": "형용사",
+        "예문": "My cat is fatter than Nina’s cat.",
+        "예문 뜻": "내 고양이는 Nina의 고양이보다 더 뚱뚱해."
+    },
+    {
+        "단어": "heavy",
+        "단어 뜻": "무거운",
+        "품사": "형용사",
+        "예문": "My dad is carrying heavier boxes than me.",
+        "예문 뜻": "우리 아빠는 내 것보다 더 무거운 상자를 옮기고 계셔."
+    },
+    {
+        "단어": "high",
+        "단어 뜻": "높게",
+        "품사": "부사",
+        "예문": "Ted can jump higher than David.",
+        "예문 뜻": "Ted는 David보다 더 높게 점프해."
+    },
+    {
+        "단어": "old",
+        "단어 뜻": "나이가 든",
+        "품사": "형용사",
+        "예문": "My grandpa is older than my grandma.",
+        "예문 뜻": "우리 할아버지는 우리 할머니보다 더 연세가 드셨어."
+    },
+    {
+        "단어": "slow",
+        "단어 뜻": "느린",
+        "품사": "형용사",
+        "예문": "One snail is slower than the other two.",
+        "예문 뜻": "달팽이 한 마리가 다른 두 마리보다 더 느려."
+    },
+    {
+        "단어": "strong",
+        "단어 뜻": "힘이 센",
+        "품사": "형용사",
+        "예문": "Cindy is stronger than Becky.",
+        "예문 뜻": "Cindy는 Becky보다 힘이 더세."
+    },
+    {
+        "단어": "thin",
+        "단어 뜻": "마른",
+        "품사": "형용사",
+        "예문": "Phil is thinner than Emily.",
+        "예문 뜻": "Phil은 Emily보다 더 말랐어."
+    },
+    {
+        "단어": "weak",
+        "단어 뜻": "힘이 약한",
+        "품사": "형용사",
+        "예문": "James is weaker than the boxer.",
+        "예문 뜻": "James는 그 권투 선수보다 힘이 더 약해."
+    },
+    {
+        "단어": "young",
+        "단어 뜻": "나이가 어린",
+        "품사": "형용사",
+        "예문": "Kelly looks younger than the other friends.",
+        "예문 뜻": "Kelly는 다른 친구들보다 나이가 더 어려 보여."
+    }
+]

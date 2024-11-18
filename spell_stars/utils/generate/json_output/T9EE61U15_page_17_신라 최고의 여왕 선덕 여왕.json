@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "feel",
+        "단어 뜻": "느끼다",
+        "품사": "동사",
+        "예문": "I feel tired.",
+        "예문 뜻": "나는 피곤해."
+    },
+    {
+        "단어": "imagine",
+        "단어 뜻": "상상하다",
+        "품사": "동사",
+        "예문": "I can’t imagine the world without her.",
+        "예문 뜻": "나는 그녀가 없는 세상을 상상할 수 없어."
+    },
+    {
+        "단어": "listen",
+        "단어 뜻": "듣다",
+        "품사": "동사",
+        "예문": "Listen carefully to the teacher’s direction.",
+        "예문 뜻": "선생님의 지시를 주의해서 들어."
+    },
+    {
+        "단어": "see",
+        "단어 뜻": "보다",
+        "품사": "동사",
+        "예문": "Can you see the top of the mountain?",
+        "예문 뜻": "너는 그 산 꼭대기를 볼 수 있니?"
+    },
+    {
+        "단어": "sense",
+        "단어 뜻": "감각",
+        "품사": "명사",
+        "예문": "The five senses are touch, smell, taste, sight, and hearing.",
+        "예문 뜻": "다섯 가지 감각은 촉각, 후각, 미각, 시각 그리고 청각이야."
+    },
+    {
+        "단어": "smell",
+        "단어 뜻": "냄새",
+        "품사": "명사",
+        "예문": "Dogs have a very good sense of smell.",
+        "예문 뜻": "개는 매우 좋은 냄새 감각을 가지고 있다."
+    },
+    {
+        "단어": "taste",
+        "단어 뜻": "맛",
+        "품사": "명사",
+        "예문": "I love the taste of chocolate.",
+        "예문 뜻": "나는 초콜릿 맛을 무척 좋아해."
+    },
+    {
+        "단어": "touch",
+        "단어 뜻": "만지다",
+        "품사": "동사",
+        "예문": "Please do not touch the picture.",
+        "예문 뜻": "그 그림을 만지지 마세요."
+    }
+]

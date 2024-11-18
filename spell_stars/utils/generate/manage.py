@@ -12,6 +12,7 @@ from Pipeline.extract_word import extract_words
 from Pipeline.generate_sentence import create_faiss_index, generate_sentences
 from Pipeline.sentence_pipeline import SentenceEvaluationPipeline
 from Pipeline.translate import translate_csv
+from spell_stars.utils.generate.Pipeline.upload import Command
 
 # from Pipeline.upload import Command
 
@@ -32,7 +33,7 @@ def main():
         base_directory, "extracted_words.json"
     )  # 추출된 단어 JSON 경로
     csv_output_path = os.path.join(
-        base_directory, "generated_sentences.csv"
+        base_directory, "generated_sentences copy.csv"
     )  # 생성된 문장 CSV 경로
     vector_store_path = os.path.join(
         base_directory, "sentence_vectorstore"
@@ -73,6 +74,7 @@ def main():
     # print("Generating sentences from extracted words...")
     # generate_sentences(extracted_words_path, vector_store_path, csv_output_path)
 
+<<<<<<< HEAD
     # Step 6: 생성된 문장에 대해 문법 검사 수행
     print("Evaluating grammar in generated sentences...")
     pipeline = SentenceEvaluationPipeline()
@@ -81,10 +83,25 @@ def main():
     # 결과 저장
     results_df.to_csv(grammar_results_path, index=False, encoding="utf-8-sig")
     print(f"Grammar evaluation completed. Results saved to {grammar_results_path}")
+=======
+    # # Step 6: 생성된 문장에 대해 문법 검사 수행
+    # print("Evaluating grammar in generated sentences...")
+    # pipeline = SentenceEvaluationPipeline()
+    # results_df = pipeline.process_all_sentences(csv_output_path)
 
-    # Step 7: 생성된 문장 번역
-    translate_csv(grammar_results_path, final_sentence_path)
-    print(f"translate completed. Results saved to {final_sentence_path}.")
+    # # 결과 저장
+    # results_df.to_csv(grammar_results_path, index=False, encoding="utf-8-sig")
+    # print(f"Grammar evaluation completed. Results saved to {grammar_results_path}")
+>>>>>>> origin/feature/django/test
+
+    # # Step 7: 생성된 문장 번역
+    # translate_csv(grammar_results_path, final_sentence_path)
+    # print(f"translate completed. Results saved to {final_sentence_path}.")
+
+    # Step 8: db에 데이터 적재
+    upload = Command()
+    upload.handle(csv_file=final_sentence_path)
+    print(f"upload completed. Results uploaded to Sentence.")
 
     # # Step 8: db에 데이터 적재
     # upload = Command()

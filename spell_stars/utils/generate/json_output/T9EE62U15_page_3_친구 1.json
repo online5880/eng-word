@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "background",
+        "단어 뜻": "배경",
+        "품사": "명사",
+        "예문": "There is a hill in the background.",
+        "예문 뜻": "배경에 언덕이 있어."
+    },
+    {
+        "단어": "diary",
+        "단어 뜻": "일기",
+        "품사": "명사",
+        "예문": "Do you write in your diary every day?",
+        "예문 뜻": "너는 매일 일기를 쓰니?"
+    },
+    {
+        "단어": "friendly",
+        "단어 뜻": "다정한",
+        "품사": "형용사",
+        "예문": "He is a very friendly person.",
+        "예문 뜻": "그는 참 다정한 사람이야."
+    },
+    {
+        "단어": "lovely",
+        "단어 뜻": "사랑스러운",
+        "품사": "형용사",
+        "예문": "Isn’t she really lovely?",
+        "예문 뜻": "그녀는 정말 사랑스럽지 않아요?"
+    },
+    {
+        "단어": "member",
+        "단어 뜻": "회원, 구성원",
+        "품사": "명사",
+        "예문": "Tommy is a member of a baseball club.",
+        "예문 뜻": "Tommy는 야구 동아리 회원이야."
+    },
+    {
+        "단어": "really",
+        "단어 뜻": "정말로",
+        "품사": "부사",
+        "예문": "I really want to go on a picnic.",
+        "예문 뜻": "나는 정말로 소풍 가고 싶어."
+    },
+    {
+        "단어": "usually",
+        "단어 뜻": "보통",
+        "품사": "부사",
+        "예문": "I usually read a book before bedtime.",
+        "예문 뜻": "나는 잠자기 전에 보통 책을 읽어."
+    },
+    {
+        "단어": "wise",
+        "단어 뜻": "지혜로운,\n현명한",
+        "품사": "형용사",
+        "예문": "Europeans believe that owls are wise.",
+        "예문 뜻": "유럽 사람들은 올빼미가 지혜롭다고 믿어."
+    }
+]

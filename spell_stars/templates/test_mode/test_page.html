@@ -1,0 +1,65 @@
+{% load static %}
+{% csrf_token %}
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시험 모드</title>
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/test_styles.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <div id="practice-container">
+    <h2>시험 모드</h2>
+    <p>다음 문장의 빈칸에 들어갈 단어를 맞혀보세요:</p>
+
+    <!-- 문제 문장 -->
+    <p id="sentence">{{ sentence }}</p>
+    <p id="sentence-meaning">{{ sentence_meaning }}</p>
+
+    <!-- 녹음 버튼 (마이크 아이콘) -->
+    <div class="controls">
+      <button class="mic-status" id="micButton">
+        <div class="mic-icon">
+          <i class="fas fa-microphone"></i>
+        </div>
+        <div class="mic-animation"></div>
+      </button>
+      <div class="voice-level">
+        <div class="voice-level-fill"></div>
+      </div>
+      <p class="status-text">마이크를 클릭하여 시작하세요</p>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+    </div>
+
+    <p>녹음된 음성:</p>
+    <audio id="audio-preview" controls="controls" style="display: none;"></audio>
+
+    <!-- 음성 인식 결과 표시 -->
+    <div id="audio-result"></div>
+
+    <!-- 점수 및 피드백 -->
+    <div>
+      <p>점수: <span id="score">0</span></p>
+      <div class="progress-bar">
+        <div id="score-bar"></div>
+      </div>
+      <p id="feedback"></p>
+    </div>
+
+    <!-- 다음 문제 버튼 -->
+    <button id="next-question-btn" disabled>다음 문제</button>
+
+  </div>
+
+  <script src="{% static 'js/test_mode.js' %}"></script> <!-- 외부 JavaScript 파일 연결 -->
+</body>
+
+</html>

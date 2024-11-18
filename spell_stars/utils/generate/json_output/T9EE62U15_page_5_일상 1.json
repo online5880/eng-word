@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "build",
+        "단어 뜻": "짓다",
+        "품사": "동사",
+        "예문": "I want to build my house out of ice.",
+        "예문 뜻": "나는 우리 집을 얼음으로 짓고 싶어."
+    },
+    {
+        "단어": "enjoy",
+        "단어 뜻": "즐기다",
+        "품사": "동사",
+        "예문": "My sister knows how to enjoy life.",
+        "예문 뜻": "우리 언니는 인생을 즐길 줄 알아."
+    },
+    {
+        "단어": "friendship",
+        "단어 뜻": "우정",
+        "품사": "명사",
+        "예문": "Building a true friendship is not difficult.",
+        "예문 뜻": "진정한 우정을 쌓는 것은 어렵지 않아."
+    },
+    {
+        "단어": "hero",
+        "단어 뜻": "영웅",
+        "품사": "명사",
+        "예문": "Super Dog Carlo is our hero.",
+        "예문 뜻": "Super Dog Carlo는 우리의 영웅이야."
+    },
+    {
+        "단어": "hobby",
+        "단어 뜻": "취미",
+        "품사": "명사",
+        "예문": "My hobby is drawing cartoons.",
+        "예문 뜻": "내 취미는 만화 그리기야."
+    },
+    {
+        "단어": "practice",
+        "단어 뜻": "연습",
+        "품사": "명사",
+        "예문": "Practice makes perfect.",
+        "예문 뜻": "연습하면 완벽해져."
+    },
+    {
+        "단어": "teenager",
+        "단어 뜻": "십대",
+        "품사": "명사",
+        "예문": "Teenagers need more sleep.",
+        "예문 뜻": "십대들은 잠이 더 필요해."
+    },
+    {
+        "단어": "waste",
+        "단어 뜻": "낭비하다",
+        "품사": "동사",
+        "예문": "Don’t waste money on useless things.",
+        "예문 뜻": "쓸데없는 것에 돈을 낭비하지 마."
+    }
+]
