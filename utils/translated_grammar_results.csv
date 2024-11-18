@@ -1,0 +1,393 @@
+﻿final_sentence,grammar_score,coherence_score,word,sentence_meaning
+It’s a knife and it’s not a fork.,0.94,1,knife,그것은 칼이고 포크가 아닙니다.
+Here are scissors that cut paper.,1.0,1,scissors,이것은 종이를 자르는 가위입니다.
+Here are scissors that cut paper and knives.,1.0,1,cut,여기에 종이를 자르는 가위와 칼이 있습니다.
+I have dinner and it's a fork.,1.01,1,fork,저녁을 먹었는데 포크였어요.
+He can pull the car.,1.01,1,pull,그는 차를 끌 수 있다.
+Look! He can push the car.,0.99,1,push,보세요! 그는 차를 밀 수 있어요.
+"I can’t help you, my finger hurts.",1.01,1,help,"도와줄 수 없어요, 손가락이 아파요."
+I want a pink lunch box like this.,1.01,1,lunch box,저도 이런 핑크색 도시락 상자를 원해요.
+I want a pink lunch box.,1.01,1,box,저는 분홍색 도시락 상자를 원해요.
+"Here is my gift, it's a blue doll.",0.85,1,gift,이것이 제 선물입니다. 파란색 인형이에요.
+It is my key.,0.86,1,key,이게 내 열쇠예요.
+I have two tickets and a key.,1.0,1,ticket,저는 티켓 두 장과 열쇠 한 장을 가지고 있습니다.
+Close the door and open the window.,0.87,1,door,문을 닫고 창문을 여세요.
+Close the door and open the window.,0.87,1,window,문을 닫고 창문을 여세요.
+"I have breakfast and lunch, but it's sunny.",0.98,1,breakfast,아침과 점심을 먹었는데 날씨가 맑네요.
+I have lunch and I’m eating.,0.98,1,lunch,점심을 먹고 있어요.
+I have dinner and I have breakfast.,0.99,1,dinner,저녁을 먹고 아침도 먹어요.
+"It's sunny in the morning, I have breakfast.",0.98,1,morning,"아침은 맑고, 아침밥을 먹습니다."
+It's cool in the evening at night.,0.87,1,evening,저녁에는 시원해요.
+It’s cold at night and I get up late.,0.96,1,night,밤에는 추워서 늦게 일어나요.
+"I’m at home, open the window.",0.99,1,home,나는 집에 있어요. 창문을 열어주세요.
+It’s three o’clock and I get up.,1.0,1,o’clock,오후 3시가 되어서 일어났습니다.
+We are dancers playing instruments together.,0.95,1,dance,우리는 함께 악기를 연주하는 댄서입니다.
+We are dancers and she can dance.,1.0,1,dancer,우리는 댄서이고 그녀는 춤을 출 수 있어요.
+I can walk and stand up slowly.,1.01,1,walk,나는 천천히 걷고 일어설 수 있습니다.
+Let's go to the train station.,1.0,1,train,기차역으로 가자.
+They go on a trip every weekend.,1.0,1,trip,그들은 주말마다 여행을 간다.
+It's a new shop on Friday.,0.62,1,shop,금요일에 새로운 매장이 오픈해요.
+I like skiing and I also like swimming.,0.96,1,ski,저는 스키를 좋아하고 수영도 좋아해요.
+I like skiing this weekend.,1.0,1,skiing,이번 주말에는 스키를 타는 걸 좋아해요.
+He can’t skate because he fell.,0.99,1,skate,그는 넘어져서 스케이트를 탈 수 없습니다.
+I like riding my bike.,1.01,1,bike,저는 자전거 타는 걸 좋아해요.
+I like swimming at the pool.,1.0,1,swim,저는 수영장에서 수영하는 것을 좋아해요.
+I’m at the pool and I like swimming.,0.95,1,pool,저는 수영장에 있고 수영하는 것을 좋아해요.
+I like swimming at the pool.,1.0,1,swimming,저는 수영장에서 수영하는 것을 좋아해요.
+I can jump and run quickly.,1.0,1,jump,나는 빠르게 점프하고 달릴 수 있어요.
+Look! I can run. Sit down now.,0.97,0,run,보세요! 달릴 수 있어요. 지금 앉아요.
+I can fly because I am a pilot.,0.99,1,fly,나는 조종사이기 때문에 날 수 있어요.
+Let's go to the subway station.,1.0,1,go,지하철역으로 가자.
+Let's throw a ball.,1.01,1,throw,공을 던지자.
+Let's have a party at home.,1.01,1,party,집에서 파티를 열자.
+Let's have a party and play volleyball.,1.0,1,have a party,파티를 열고 배구를 즐기자.
+It's time to say Happy birthday!,0.93,1,birthday,생일 축하할 시간이 왔어요!
+We go on a picnic every weekend.,1.0,1,picnic,우리는 매주말마다 피크닉을 갑니다.
+Let's play the piano and other instruments.,0.98,1,piano,피아노와 다른 악기를 연주해 봅시다.
+Let's play the violin.,1.01,1,violin,바이올린을 연주하자.
+They listen to music while singing songs.,1.0,1,music,그들은 노래를 부르면서 음악을 듣는다.
+We watch a musical and play piano.,0.75,1,musical,우리는 뮤지컬을 보고 피아노를 연주합니다.
+That light is dark.,0.86,1,light,그 빛은 어둠입니다.
+Let's play the drum.,1.01,1,drum,드럼을 연주하자.
+Let's play the guitar.,1.01,1,guitar,기타를 연주하자.
+Let's play the recorder while listening music.,0.99,1,recorder,음악을 들으며 레코더를 연주해 보세요.
+Let's sing a song.,1.01,1,song,노래를 부르자.
+This is my yellow radio that listens.,0.75,1,radio,이건 제 노란색 라디오예요.
+He is a singer and sings songs.,0.94,1,singer,그는 가수이고 노래를 부릅니다.
+It's fast.,0.84,1,fast,빠르죠.
+Your arm is long.,0.86,1,long,당신의 팔은 길다.
+Your belt is short and your arm is long.,0.84,1,short,당신의 벨트는 짧고 팔은 길어요.
+"She is smart, he is foolish, it’s fast and you’re kind.",0.65,0,smart,"그녀는 똑똑하고, 그는 어리석고, 빠르고, 당신은 친절해요."
+He is foolish and very poor today.,0.87,1,foolish,그는 오늘 어리석고 매우 가난합니다.
+He is bad because he is sick.,0.85,1,bad,그는 아프기 때문에 나쁘다.
+They're good snacks when I'm eating.,1.01,1,good,식사할 때 간식으로 먹기 좋아요.
+We’re honest friends who close the door.,1.0,1,honest,우리는 문을 닫는 정직한 친구입니다.
+I get up early at five ten.,1.01,1,early,저는 오전 5시 10분에 일찍 일어납니다.
+It's five ten now I get up late.,0.73,1,late,"지금은 오후 5시 10분이고, 나는 늦게 일어납니다."
+Close the door and open the window.,0.87,1,open,문을 닫고 창문을 여세요.
+They are quiet and touching your ear.,0.93,1,quiet,그들은 조용하며 당신의 귀를 만집니다.
+"They are noisy, I can't hear you.",1.01,1,noisy,그들은 시끄러워서 당신의 말이 들리지 않습니다.
+I’m sorry I didn’t hear what you said.,0.93,1,sorry,당신이 한 말을 듣지 못해서 미안해요.
+Touch your ear so I can hear.,1.01,1,hear,귀를 만져주세요. 그러면 들을 수 있게요.
+He can understand it and speak English.,0.99,1,understand,그는 그것을 이해하고 영어로 말할 수 있습니다.
+Let's listen to the song through my radio.,0.98,1,listen,라디오로 노래를 들어보자.
+We’re in the bookstore on Friday.,1.0,1,bookstore,우리는 금요일에 서점에 가요.
+The bookshelf is dirty.,0.85,1,bookshelf,책장이 더럽습니다.
+We go to the bank.,1.01,1,bank,우리는 은행에 가요.
+I’m in the library on Tuesday.,0.97,1,library,저는 화요일에 도서관에 있어요.
+"I have a book, it's her book.",1.01,1,book,"저는 책 한 권을 가지고 있는데, 그 책은 그녀의 책이에요."
+Let's go to the post office.,1.01,1,post office,우체국으로 가자.
+The closet is clean.,0.86,1,closet,옷장이 깨끗해요.
+The fridge is small and has snacks.,0.94,1,fridge,냉장고는 작고 간식도 있어요.
+The house is big.,0.86,1,house,집이 크네요.
+Close the door because The wall is dirty.,0.93,1,wall,벽이 더러우니 문을 닫으세요.
+It’s a big apartment.,1.0,1,apartment,정말 큰 아파트예요.
+I go to the hospital as a nurse.,1.0,1,hospital,저는 간호사로 병원에 갑니다.
+I'm going to the hospital with the ambulance.,0.96,1,ambulance,나는 구급차를 타고 병원에 간다.
+She is a nurse at the hospital.,0.87,1,nurse,그녀는 병원의 간호사입니다.
+The telephone is white; it's his bell.,0.87,0,telephone,전화기는 흰색이에요. 그의 종이죠.
+Ann is a doctor at the hospital.,0.87,1,doctor,앤은 병원의 의사입니다.
+I have a black ball.,1.01,1,ball,내 공은 검은색이에요.
+Let's play badminton.,0.98,1,badminton,배드민턴을 치자.
+We like sports and let's play baseball.,1.0,1,baseball,우리는 스포츠를 좋아해서 야구를 즐깁니다.
+We are playing basketball and throwing a ball.,0.99,1,basketball,우리는 농구를 하면서 공을 던지고 있어요.
+Let's play golf.,0.99,1,golf,골프를 치자.
+We are playing badminton and ping-pong together.,0.99,1,ping-pong,우리는 함께 배드민턴과 탁구를 치고 있어요.
+We are playing soccer.,0.98,1,soccer,우리는 축구를 하고 있어요.
+We like sports and want to play badminton.,1.0,1,sport,우리는 스포츠를 좋아하고 배드민턴을 치고 싶어요.
+We are playing tennis and badminton.,0.99,1,tennis,우리는 테니스와 배드민턴을 치고 있어요.
+Let's play volleyball.,0.98,1,volleyball,배구 치자.
+They watch a movie on television.,1.0,1,television,그들은 텔레비전으로 영화를 본다.
+We play computer games on the board.,1.0,1,computer game,우리는 보드에서 컴퓨터 게임을 합니다.
+The board is big and very long.,0.87,1,board,보드는 크고 매우 길어요.
+Let's play volleyball with our friends.,0.99,1,play,친구들과 배구를 하자.
+"I have a bird, it's a zebra.",1.01,1,bird,"새 한 마리를 키우고 있는데, 얼룩말이에요."
+I want chicken.,0.96,1,chicken,나는 닭고기를 먹고 싶어.
+I want a bat.,0.99,1,bat,나는 박쥐를 원한다.
+The pilot flies the plane gray.,1.0,0,plane,조종사는 회색 비행기를 조종합니다.
+You like curry when your foot hurts.,1.01,1,curry,발이 아플 때는 카레를 좋아해요.
+We see the bees in the sky.,1.0,1,bee,우리는 하늘에 벌을 봅니다.
+He is a pilot and I can fly.,1.01,0,pilot,그는 조종사이고 나는 비행을 할 수 있어요.
+I have four cats.,0.99,1,cat,나는 고양이를 네 마리나 키우고 있어요.
+I have a dog and it's a wolf.,0.97,1,dog,저는 개를 키우고 있는데 그 개는 늑대예요.
+They have a pet and I do not.,1.01,1,pet,그들은 애완동물을 키우지만 나는 키우지 않아요.
+I have a doll. It's a blue doll.,0.95,1,doll,인형이 있어요. 파란색 인형이에요.
+I have a robot and a dog.,1.0,1,robot,저는 로봇과 개를 키우고 있어요.
+It's a new computer and has notebooks.,0.93,1,computer,새로운 컴퓨터이고 노트북도 있어요.
+It’s a mouse holding your pencil.,1.0,1,mouse,연필을 잡고 있는 쥐입니다.
+I don’t like spiders.,1.0,1,spider,나는 거미를 좋아하지 않아.
+That is his camera.,0.86,1,camera,그것이 그의 카메라예요.
+This is my fan because it’s hot.,1.0,1,fan,이게 내 팬인 이유는 날씨가 더워서예요.
+Look at the fish.,0.86,1,fish,물고기를 보세요.
+His hobby is fishing.,0.98,1,fishing,그의 취미는 낚시입니다.
+The boy looks at the yellow boat.,1.0,1,boat,소년은 노란색 배를 바라본다.
+Look at the river.,0.86,1,river,강을 보세요.
+Look at the sea and see dolphins.,0.87,1,sea,바다를 바라보면 돌고래가 보입니다.
+I see the pink dolphins in the sea.,0.99,1,dolphin,바다에서 분홍 돌고래를 봅니다.
+I'm washing my hands at the sink.,1.0,1,sink,나는 세면대에서 손을 씻고 있어요.
+I like lions and look at the tiger.,1.01,1,tiger,나는 사자를 좋아하고 호랑이를 봅니다.
+"I like lions, it's a zebra.",0.76,0,lion,"나는 사자를 좋아해요, 얼룩말이에요."
+I’m at the zoo.,0.98,1,zoo,나는 동물원에 있어요.
+Look at the bear.,0.86,1,bear,곰을 보세요.
+I have one cow.,0.99,1,cow,나는 소 한 마리를 가지고 있습니다.
+Look at the elephant.,0.85,1,elephant,코끼리를 보세요.
+Look I have a monkey and a kiwi.,0.75,1,monkey,"보세요, 저는 원숭이와 키위를 가지고 있어요."
+I have three pigs.,0.99,1,pig,나는 돼지를 세 마리 키우고 있어요.
+I like frogs and I also like lemons.,0.99,1,frog,저는 개구리도 좋아하고 레몬도 좋아해요.
+I like giraffes and kangaroos.,0.99,1,giraffe,저는 기린과 캥거루를 좋아해요.
+I like kangaroos.,0.96,1,kangaroo,나는 캥거루를 좋아해요.
+I see rabbits and I don’t like them.,0.97,1,rabbit,나는 토끼를 보고 그것을 좋아하지 않는다.
+I see a wolf that looks like It’s a kiwi.,0.92,1,wolf,키위처럼 생긴 늑대가 보이네요.
+It's a zebra and I like giraffes.,1.0,1,zebra,그것은 얼룩말이고 저는 기린을 좋아해요.
+They see the deer in the zoo.,1.0,1,deer,그들은 동물원에서 사슴을 본다.
+Look at the lambs.,0.86,1,lamb,어린양들을 보세요.
+Look at the snakes.,0.86,1,snake,뱀을 보세요.
+I like watermelons more than lemons and peaches.,0.97,1,melon,나는 레몬과 복숭아보다 수박을 더 좋아한다.
+I like watermelons and strawberries too.,0.94,1,watermelon,저는 수박과 딸기도 좋아해요.
+I like grapes and strawberries.,0.97,1,grapes,저는 포도와 딸기를 좋아해요.
+"I like juice, that is a lemon.",0.76,1,lemon,"저는 주스를 좋아하는데, 그건 레몬이에요."
+I have this strawberry and I like grapes.,0.99,1,strawberry,저는 딸기를 좋아하고 포도도 좋아해요.
+I like juice.,0.98,1,juice,나는 주스를 좋아해요.
+The fruit is carrots.,0.85,1,carrot,그 과일은 당근입니다.
+I don’t like butter and do you want onions?,0.95,1,onion,저는 버터를 좋아하지 않는데 양파는 원하시나요?
+I don’t like pepper.,1.01,1,pepper,나는 후추를 좋아하지 않는다.
+I want jam and I like juice.,1.0,1,jam,나는 잼을 원하고 주스를 좋아해요.
+This is an orange that's green and red.,0.85,1,orange,이것은 녹색과 빨간색이 섞인 주황색이에요.
+The bike is brown.,0.86,1,brown,자전거는 갈색이에요.
+I like this red color.,1.01,1,color,저는 이 빨간색을 좋아해요.
+The plane is gray and brown.,0.88,1,gray,비행기는 회색과 갈색입니다.
+My shorts are It’s green.,0.76,0,green,내 반바지는 녹색이에요.
+The car and shirt are white.,0.88,1,white,자동차와 셔츠는 흰색입니다.
+"It's a yellow pen, it’s red, it’s green, it’s white.",0.86,1,yellow,"노란색 펜이에요, 빨간색이에요, 초록색이에요, 하얀색이에요."
+That light is dark.,0.86,1,dark,그 빛은 어둠입니다.
+"Look at the rainbow, it's green and red.",0.91,1,rainbow,무지개를 보세요. 녹색과 빨간색이에요.
+This light is bright.,0.86,1,bright,이 빛은 밝습니다.
+It is a peach.,0.86,1,peach,그것은 복숭아입니다.
+That is a pear.,0.86,1,pear,그것은 배입니다.
+This is an apple I want.,1.01,1,apple,이게 제가 원하는 사과예요.
+"Look, it's a flower on the ground.",0.95,1,flower,"보세요, 땅에 있는 꽃이에요."
+This tree is high.,0.86,1,tree,이 나무는 높아요.
+We are planting flowers.,0.97,1,plant,우리는 꽃을 심습니다.
+I have one cow.,0.99,1,one,나는 소 한 마리를 가지고 있습니다.
+I have two tickets and two dogs.,0.99,1,two,저는 티켓 두 장과 개 두 마리를 가지고 있습니다.
+I have three pigs and five fish.,1.01,1,three,저는 돼지 3마리와 물고기 5마리를 키우고 있어요.
+I have five fish and it's five ten now.,0.95,0,five,"제가 물고기 다섯 마리를 키웠는데, 지금은 다섯 마리, 열 마리가 되었습니다."
+You have six apples.,0.99,1,six,사과가 6개 있습니다.
+I have seven pears.,0.99,1,seven,나에게는 배가 일곱 개 있다.
+You have eight oranges and other fruits.,1.0,1,eight,오렌지와 다른 과일이 8개 있습니다.
+I’m eleven years old.,0.98,1,eleven,저는 열한 살이에요.
+You are twelve years old.,0.88,1,twelve,당신은 12살입니다.
+She is fourteen years old.,0.87,1,fourteen,그녀는 열네 살입니다.
+My sister is sixteen years old.,0.87,1,sixteen,내 여동생은 열여섯 살이에요.
+My brother is seventeen years old.,0.86,1,seventeen,내 동생은 열일곱 살이에요.
+My cousin is eighteen years old.,0.87,1,eighteen,내 사촌은 열여덟 살이에요.
+Kevin is nineteen years old.,0.87,1,nineteen,케빈은 19살입니다.
+Becky is twenty years old.,0.88,1,twenty,베키는 20살이에요.
+It's an old car.,0.88,1,old,그것은 오래된 차입니다.
+The bus is green and small.,0.88,1,bus,버스는 녹색이고 작아요.
+Bus stop is small.,0.61,1,bus stop,버스 정류장은 작습니다.
+Let's go to the subway station.,1.0,1,subway station,지하철역으로 가자.
+I go to the park.,1.01,1,park,나는 공원에 간다.
+We’re at the playground playing badminton today.,0.99,1,playground,오늘은 놀이터에서 배드민턴을 치러요.
+The taxi is pink and going downstairs.,0.68,0,taxi,택시는 분홍색이고 아래층으로 내려갑니다.
+My town is big and has new shops.,0.94,1,town,제 마을은 크고 새로운 상점들이 많아요.
+It's a small airport where he can fly.,0.98,1,airport,그가 비행할 수 있는 공항은 작습니다.
+My town is big like the city.,0.62,1,city,제 마을은 도시만큼 큽니다.
+"It’s an old road, let’s go to subway station.",0.68,0,road,"오래된 도로인데, 지하철역으로 가보자."
+The fire engine is red.,0.88,1,fire engine,소방차는 빨간색이에요.
+The fire station is big and red.,0.87,1,fire station,소방서 건물은 크고 빨간색이에요.
+I'm a police officer and Tom is a fire fighter.,0.78,1,fire fighter,저는 경찰관이고 톰은 소방관입니다.
+I’m a police officer.,0.97,1,police officer,저는 경찰관이에요.
+It's an old car he can push.,1.01,1,car,그는 밀 수 있는 오래된 차를 몰고 다닌다.
+The truck is blue.,0.86,1,truck,트럭은 파란색이에요.
+I like bread and I want butter.,1.0,1,bread,나는 빵을 좋아하고 버터도 원해요.
+I want sandwiches I want lunch.,0.98,1,sandwich,샌드위치를 먹고 싶어요. 점심을 먹고 싶어요.
+It's a dish I have for dinner.,1.01,1,dish,제가 저녁으로 먹는 요리예요.
+I want cheese and butter is yummy.,0.76,1,cheese,치즈와 버터가 맛있으면 좋겠어요.
+I like hamburgers and I want steak.,0.99,1,hamburger,저는 햄버거를 좋아하고 스테이크도 원해요.
+I want pizza.,0.98,1,pizza,나는 피자를 먹고 싶어.
+I like salad when I eat dinner.,1.0,1,salad,저는 저녁을 먹을 때 샐러드를 좋아해요.
+They like French fries and hamburgers.,1.0,1,French fries,그들은 감자튀김과 햄버거를 좋아해요.
+I want a hot dog.,1.01,1,hot dog,핫도그 먹고 싶어.
+I have spaghetti for dinner tonight.,0.99,1,spaghetti,오늘 저녁은 스파게티를 먹겠습니다.
+I want steak.,0.98,1,steak,나는 스테이크를 먹고 싶어.
+I’m a cook making dinner.,0.98,1,cook,저는 저녁 식사를 만드는 요리사입니다.
+Touch your arm because it's very long.,0.93,1,arm,팔을 만져보세요. 아주 길어요.
+"My foot hurts, touch your leg.",0.77,1,foot,발이 아프네요. 다리를 만져보세요.
+Touch your leg because your toe hurts.,0.99,1,leg,발가락이 아프니까 다리를 만져 보세요.
+Touch your leg because My knee hurts.,1.0,1,knee,다리를 만져요. 무릎이 아프거든요.
+My toe hurts because I kicked a rock.,1.0,1,toe,돌을 차서 발가락이 아프네요.
+Touch your neck because it hurts.,1.0,1,neck,목을 만져요. 아프거든요.
+"Touch your hand, then arm, and leg.",0.89,1,hand,"손을 만지세요. 그다음 팔, 다리를 만지세요."
+Touch your hand because My finger hurts.,1.0,1,finger,손을 만져요. 손가락이 아프거든요.
+"Touch your ear, then touch your eye.",0.87,1,ear,귀를 만지세요. 그리고 눈을 만지세요.
+"Look at the fish, touch your eye.",0.88,0,eye,물고기를 보시고 눈을 만져보세요.
+My head hurts because my neck hurts.,0.99,1,head,목이 아프니까 머리가 아프다.
+Touch your mouth after eating red apples.,0.87,1,mouth,붉은 사과를 먹은 후 입을 만지세요.
+You touch your red lips with butter.,1.01,1,lip,당신은 당신의 붉은 입술에 버터를 묻힙니다.
+It's a spoon and I have chalk.,1.01,1,spoon,그것은 숟가락이고 나는 분필을 가지고 있습니다.
+I touch my nose and wash face.,1.01,1,nose,나는 코를 만지고 얼굴을 씻는다.
+I wash my face after using soap.,1.01,1,face,비누를 사용한 후 얼굴을 씻습니다.
+I brush my teeth before touching my mouth.,0.99,1,teeth,나는 입을 만지기 전에 양치질을 한다.
+He is my brother and has yellow boots.,0.93,1,brother,그는 내 동생이고 노란색 부츠를 신고 있어요.
+This is my dad.,0.86,1,dad,이 분은 제 아빠예요.
+My mom is wearing a red dress.,1.0,1,mom,제 엄마는 빨간색 드레스를 입고 있어요.
+My sister is my mom.,0.87,1,sister,내 여동생은 내 엄마예요.
+My cousin is my brother's sister.,0.86,1,cousin,내 사촌은 내 형의 누나입니다.
+"This is my father, he is my dad.",0.87,1,father,"이분이 제 아버지예요, 이분이 제 아버지예요."
+That is my grandmother.,0.81,1,grandmother,그분은 저의 할머니이십니다.
+I love my parents.,0.98,1,parents,저는 부모님을 사랑해요.
+This is my uncle.,0.86,1,uncle,이 사람이 제 삼촌이에요.
+We are friends.,0.83,1,friend,우리는 친구예요.
+She is my mother.,0.86,1,her,그녀는 나의 어머니예요.
+We are friends when I'm eating.,1.0,1,I,내가 먹을 때는 우리가 친구야.
+"That light is dark, and that is my grandmother.",0.82,0,that,"저 빛은 어둡고, 저 분은 제 할머니이십니다."
+Sit down on the blue chair.,0.88,1,chair,파란색 의자에 앉으세요.
+The sofa is black.,0.86,1,sofa,소파는 검은색이에요.
+The bed is brown.,0.86,1,bed,침대는 갈색이에요.
+The desk is white and they have notebooks.,1.0,1,desk,책상은 흰색이고 노트북이 있습니다.
+The lamp is pink and very bright.,0.87,1,lamp,램프는 분홍색이고 매우 밝습니다.
+The table is dirty.,0.86,1,table,테이블이 더럽습니다.
+Those are my shoes.,0.86,1,my,그것이 내 신발이에요.
+"It's your shirt, it’s your shoes.",1.0,1,your,"그건 당신의 셔츠이고, 그건 당신의 신발이에요."
+This is his pen.,0.86,1,his,이것이 그의 펜이에요.
+It’s a new shop on the old road.,0.98,1,new,이 가게는 오래된 길가에 있는 새로운 가게예요.
+This is his pen; it's my pen.,0.87,1,pen,"이것은 그의 펜이고, 나의 펜이에요."
+It's your pencil from the case.,0.87,1,pencil,케이스에 들어 있는 연필이에요.
+It’s his crayon.,0.98,1,crayon,이건 그의 크레용이에요.
+Here is a pencil case.,0.88,1,pencil case,여기에 연필 케이스가 있습니다.
+It's her eraser.,0.86,1,eraser,그녀의 지우개예요.
+They are artists at the art gallery.,0.86,1,artist,그들은 미술관의 예술가들이다.
+I brush my teeth and use this is her brush.,0.7,0,brush,나는 이를 닦을 때 이 칫솔을 사용합니다.
+I have chalk and it's my pencil.,1.01,0,chalk,"저는 분필을 가지고 있고, 그것은 제 연필입니다."
+They cut the paper.,0.99,1,paper,그들은 종이를 잘랐습니다.
+Let's draw with my pen.,1.01,1,draw,내 펜으로 그림을 그려보자.
+Let's write and read books together.,1.0,1,write,함께 책을 쓰고 읽읍시다.
+They are my clothes.,0.85,1,clothes,그것은 내 옷이에요.
+These are his jeans.,0.86,1,jeans,이것이 그의 청바지예요.
+They are her pants.,0.86,1,pants,그것은 그녀의 바지예요.
+My dad wears green shorts and her pants.,0.76,0,shorts,"아빠는 녹색 반바지를 입고, 엄마는 바지를 입어요."
+This is my skirt and those are my pants.,0.84,1,skirt,"이게 내 치마고, 이건 내 바지예요."
+"His pajamas are small, her clothes are hers.",0.86,0,pajamas,"그의 잠옷은 작고, 그녀의 옷은 그녀의 것입니다."
+The zipper is long on my bag.,0.62,1,zipper,내 가방의 지퍼가 길어요.
+I wash my face when I'm clean.,1.0,1,wash,나는 얼굴이 깨끗할 때 얼굴을 씻는다.
+"It's my jacket, not your coat.",0.88,1,coat,"그건 내 재킷이지, 네 코트가 아니야."
+It's my jacket.,0.86,1,jacket,제 재킷이에요.
+It's my sweater.,0.85,1,sweater,제 스웨터예요.
+Your scarf is long.,0.86,1,scarf,스카프가 길어요.
+My sister has my green vest.,1.0,1,vest,제 여동생이 제 녹색 조끼를 입고 있어요.
+Your belt is short.,0.86,1,belt,벨트가 짧네요.
+It’s my cap.,0.99,1,cap,제 모자예요.
+The ribbon is short.,0.86,1,ribbon,리본이 짧습니다.
+It’s your shirt.,0.99,1,shirt,그건 당신의 셔츠예요.
+I have a white T-shirt.,1.02,1,T-shirt,나는 흰색 티셔츠를 가지고 있어요.
+My gloves are big.,0.86,1,big,내 장갑은 커요.
+His pajamas are small.,0.85,1,small,그의 잠옷은 작습니다.
+"These are your shoes, and my socks.",0.88,0,shoes,"이게 당신의 신발이고, 제 양말이에요."
+"These are my socks, those are my shoes.",0.87,1,socks,"이게 내 양말이고, 저건 내 신발이에요."
+"The sneakers are brown, those are my shoes.",0.87,1,sneakers,"그 운동화는 갈색인데, 내 신발이에요."
+Your gloves are big.,0.86,1,gloves,장갑이 크네요.
+The stairs are old and need closing.,0.93,1,stairs,계단이 오래되어서 폐쇄가 필요합니다.
+I’m thirsty and I want water.,0.97,1,thirsty,목이 마르고 물이 마시고 싶어요.
+"It's a hard ball, my head hurts.",1.01,1,hard,딱딱한 공이어서 머리가 아프네요.
+That tree is low and it's light.,0.87,1,low,저 나무는 키가 작고 가볍습니다.
+"They are rich, my town is big.",0.88,0,rich,"그들은 부유하고, 내 마을은 크다."
+She is poor because they have no money.,1.0,1,poor,그녀는 돈이 없어서 가난해요.
+He's tired. I'm tired. She is sleepy at night.,0.75,1,tired,그는 피곤해. 나는 피곤해. 그녀는 밤에 졸려.
+"She's sleepy, he's tired, I'm sleeping too.",0.96,1,sleepy,"그녀는 졸리고, 그는 피곤하고, 나도 자고 있어."
+I get up late because I'm sleepy.,0.99,1,sleep,졸려서 늦게 일어납니다.
+"I’m angry, I want coffee.",0.98,1,angry,화가 나서 커피 마시고 싶어요.
+She is sad because I'm sorry.,0.87,1,sad,그녀는 내가 미안하다고 해서 슬퍼합니다.
+She is scared of big spiders.,0.87,1,scared,그녀는 큰 거미를 무서워한다.
+He is surprised I like butter.,1.0,1,surprised,그는 내가 버터를 좋아한다는 사실에 놀랐다.
+It's my bag.,0.86,1,bag,제 가방이에요.
+Here is a school bag.,0.88,1,school bag,여기에 가방이 있습니다.
+We like sports and his hobby is fishing.,1.0,1,hobby,우리는 스포츠를 좋아하고 그의 취미는 낚시입니다.
+The pocket is small on my jacket.,0.62,1,pocket,내 재킷에는 주머니가 작아요.
+They have notebooks and new computers.,0.99,1,notebook,그들은 노트북과 새로운 컴퓨터를 가지고 있습니다.
+We want tea.,0.98,1,tea,우리는 차를 원해요.
+I want coffee.,0.98,1,coffee,나는 커피를 원해요.
+We want coffee because it’s a cup.,1.0,1,cup,우리는 커피를 원합니다. 왜냐하면 그것은 컵이기 때문입니다.
+I want rice.,0.98,1,rice,나는 밥을 원해요.
+They want water because it's very rainy.,1.0,1,water,그들은 비가 많이 오기 때문에 물이 필요합니다.
+Do you like salt after eating pepper?,1.01,1,salt,후추를 먹은 후 소금을 좋아하시나요?
+He is drinking coffee because he is thirsty.,0.97,1,drink,그는 목이 마르기 때문에 커피를 마시고 있다.
+We go to a concert.,1.0,1,concert,우리는 콘서트에 가요.
+I’m going to the concert hall.,0.98,1,concert hall,나는 콘서트 홀에 갈 거예요.
+We go to the museum every Thursday.,1.0,1,museum,우리는 매주 목요일에 박물관에 가요.
+I have an album at home.,1.01,1,album,집에 앨범이 있어요.
+Let's go to the art gallery.,1.0,1,art gallery,미술관에 가자.
+We watch a musical at the theater.,0.99,1,theater,우리는 극장에서 뮤지컬을 봅니다.
+They watch a movie on television.,1.0,1,movie,그들은 텔레비전으로 영화를 본다.
+I like camping at the park.,1.0,1,camping,저는 공원에서 캠핑하는 것을 좋아해요.
+Her hobby is hiking and I love camping.,1.0,1,hiking,"그녀의 취미는 하이킹이고, 저는 캠핑을 좋아해요."
+Looks at the beach.,0.86,1,beach,해변을 바라본다.
+I see a lake near my house.,1.01,1,lake,우리 집 근처에 호수가 보여요.
+Look! It’s a mountain near my house.,0.98,1,mountain,보세요! 제 집 근처에 산이 있어요.
+I love my teachers and I’m a police officer.,0.92,1,teacher,저는 선생님들을 사랑하고 경찰관이에요.
+They are at school and in the classroom.,0.87,1,classroom,그들은 학교에 있고 교실에 있습니다.
+I go to school every day.,1.01,1,school,저는 매일 학교에 가요.
+Let's go to the restaurant.,1.0,1,restaurant,식당에 가자.
+She is a scientist.,0.85,1,scientist,그녀는 과학자입니다.
+The church is very old.,0.88,1,church,그 교회는 매우 오래되었습니다.
+The office is small and has notebooks.,0.93,1,office,사무실은 작고 공책만 있다.
+I don’t like potatoes but I like bananas.,0.93,1,potato,저는 감자는 좋아하지 않지만 바나나는 좋아해요.
+I don’t like tomatoes.,1.0,1,tomato,나는 토마토를 좋아하지 않는다.
+I like bananas and I also like melons.,0.99,1,banana,저는 바나나도 좋아하고 멜론도 좋아해요.
+It is a kiwi I have nine.,0.76,0,kiwi,저는 키위를 9개 가지고 있습니다.
+I like eggs and I have chicken.,0.99,1,egg,나는 계란을 좋아하고 닭고기도 있어요.
+Look at the moon and stars tonight.,0.87,1,moon,오늘밤 달과 별을 보세요.
+The turtle is slow and I don't like it.,0.96,1,turtle,거북이는 느리고 나는 그것을 좋아하지 않는다.
+Look at the ants.,0.86,1,ant,개미를 보세요.
+I don’t like sugar; I want candy.,1.01,1,sugar,나는 설탕을 좋아하지 않아. 사탕을 원해.
+I want candy.,0.98,1,candy,나는 사탕을 원해요.
+Do you want some chocolate?,1.0,1,chocolate,초콜릿 먹을래?
+I want gum and jam.,1.01,1,gum,나는 껌과 잼을 원해요.
+I have snacks.,0.98,1,snack,간식이 있어요.
+I want cookies because they are our cookies.,0.98,1,cookie,저는 쿠키를 원해요. 왜냐하면 그것이 우리의 쿠키이기 때문이죠.
+You like cake and want cookies.,1.0,1,cake,당신은 케이크를 좋아하고 쿠키를 원합니다.
+I want milk because I’m thirsty.,0.96,1,milk,목이 마르니까 우유를 마시고 싶어요.
+I don’t like corn.,1.01,1,corn,나는 옥수수를 좋아하지 않는다.
+I want milk and cream.,1.01,1,cream,우유와 크림을 원해요.
+Do you want doughnuts? This is a lemon.,0.98,0,doughnut,도넛 먹을래? 이건 레몬이야.
+"I’m eating breakfast, lunch, and dinner.",0.99,1,eat,"저는 아침, 점심, 저녁을 다 먹어요."
+Here is some glue and pencils.,0.87,1,glue,여기에 접착제와 연필이 있습니다.
+They're beautiful gifts from my grandmother.,0.84,1,beautiful,할머니께서 주신 아름다운 선물이에요.
+She’s cute and pretty like her sister.,1.01,1,cute,그녀는 언니처럼 귀엽고 예쁘네요.
+"He's handsome, she's cute, they're all beautiful.",0.82,1,handsome,"그는 잘생겼고, 그녀는 귀엽고, 모두 아름다워요."
+You’re pretty and I like this color.,1.01,1,pretty,너는 예쁘고 이 색깔이 맘에 들어.
+It’s hot in the afternoon and I want a hot dog.,0.9,1,hot,오후에는 날씨가 더운데 핫도그를 먹고 싶어요.
+I’m happy when I’m eating.,0.95,1,happy,나는 먹을 때 행복해요.
+You are sick.,0.84,1,sick,당신은 아프다.
+You're kind and pretty just like me.,0.87,1,kind,당신은 나처럼 친절하고 예쁘네요.
+I don’t like cloudy days.,0.88,1,cloudy,나는 흐린 날씨를 좋아하지 않는다.
+It's rainy and windy outside today.,0.87,1,rainy,오늘은 비가 내리고 바람이 불어요.
+I want an umbrella on rainy days.,1.0,1,umbrella,비오는 날에는 우산이 필요해요.
+"Look at the sky, we see clouds.",0.76,1,sky,"하늘을 보세요, 구름이 보이네요."
+Look at the sun when it's very bright.,0.91,1,sun,아주 밝을 때 태양을 보세요.
+We see clouds in the gray sky.,1.01,1,cloud,우리는 회색 하늘에 구름을 봅니다.
+Look at the stars in the sky.,0.87,1,star,하늘의 별을 보세요.
+It’s sunny in the morning and afternoon.,0.99,1,sunny,아침과 오후에는 맑아요.
+"It's spring, summer, fall, and winter.",0.9,1,spring,"봄, 여름, 가을, 겨울이 있습니다."
+It's sunny because it’s summer.,0.99,1,summer,여름이라서 맑아요.
+"It’s winter, It’s cold, It’s fall, or spring.",0.89,1,winter,겨울이에요. 추워요. 가을이에요. 아니면 봄이에요.
+It's cold at night because it’s winter.,0.97,1,cold,겨울이라 밤에는 추워요.
+I don’t like rainy weather days.,1.0,1,weather,나는 비오는 날씨를 좋아하지 않는다.
+It’s windy.,0.98,1,windy,바람이 많이 불어요.
+It’s fall; It’s spring; It’s winter; it’s cold.,0.85,1,fall,가을이에요. 봄이에요. 겨울이에요. 추워요.
+They are talking while touching their hand.,0.99,1,talk,그들은 손을 만지면서 이야기를 나누고 있습니다.
+Let's sing a song.,1.01,1,sing,노래를 부르자.
+I have a watch and look at the sea.,0.98,1,watch,나는 시계를 가지고 바다를 바라본다.
+Sit down and be quiet now.,0.88,1,do,앉아서 조용히 있으세요.
+"I’m a cook, I can make cookies.",0.98,1,make,저는 요리사라서 쿠키를 만들 수 있어요.
+You can ask the questions while touching your body parts.,0.95,1,ask,신체 부위를 만지면서 질문할 수 있습니다.
+I can’t build the house.,1.01,1,build,나는 집을 지을 수 없습니다.
+I can buy this doll.,1.01,1,buy,이 인형을 살 수 있어요.
+I have a dog.,0.99,1,have,나는 개를 키운다.
+I want milk and gum.,1.01,1,want,우유와 껌을 원해요.
+They read books and find my book.,0.76,1,read,그들은 책을 읽다가 내 책을 찾아낸다.
+"On Monday, I go to the pool.",1.01,1,Monday,월요일에는 수영장에 가요.
+Tomorrow is Tuesday. Tomorrow is Tuesday.,0.8,1,Tuesday,내일은 화요일이다. 내일은 화요일이다.
+"Yesterday was Sunday, and today is Monday.",0.87,1,Sunday,"어제는 일요일이었고, 오늘은 월요일입니다."
+Today is a holiday.,0.85,1,holiday,오늘은 공휴일입니다.
+It's sunny outside this holiday morning.,0.85,1,day,오늘 휴일 아침은 날씨가 맑네요.
