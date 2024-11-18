@@ -1,5 +1,10 @@
 import csv
 from django.core.management.base import BaseCommand
+import os
+import sys
+
+sys.path.append(os.path.abspath('C:/Users/user/Desktop/eng_word/spell_stars'))
+
 from sent_mode.models import Sentence
 from vocab_mode.models import Word
 
@@ -16,7 +21,13 @@ class Command(BaseCommand):
         try:
             with open(csv_file, newline="", encoding="utf-8-sig") as file:
                 reader = csv.DictReader(file)
+                count = 0  # 처리한 행 수를 셀 변수
+
                 for row in reader:
+                    # 첫 5행만 처리하도록 제한
+                    if count >= 5:
+                        break
+
                     # CSV 데이터 확인
                     print(f"Processing row: {row}")
 
@@ -33,6 +44,7 @@ class Command(BaseCommand):
 
                     # Word 모델에서 단어 이름으로 조회
                     try:
+                        print(f"Looking for Word: {word_name}")  # 디버깅: 단어 찾기 전에 로그
                         word = Word.objects.get(word=word_name)
                     except Word.DoesNotExist:
                         self.stdout.write(
@@ -40,17 +52,23 @@ class Command(BaseCommand):
                                 f"단어 '{word_name}'가 Word 테이블에 존재하지 않습니다."
                             )
                         )
-                        continue
+                        continue  # 단어가 없으면 건너뜁니다.
 
                     # Sentence 모델에 데이터 저장
-                    Sentence.objects.create(
-                        word=word,  # 외래 키로 저장
-                        sentence=sentence,
-                        sentence_meaning=sentence_meaning,
-                    )
-                    self.stdout.write(
-                        self.style.SUCCESS(f"Sentence '{sentence}' 저장 성공")
-                    )
+                    try:
+                        print(f"Saving Sentence: {sentence}")  # 디버깅: 저장 전 로그
+                        Sentence.objects.create(
+                            word=word,  # 외래 키로 저장
+                            sentence=sentence,
+                            sentence_meaning=sentence_meaning,
+                        )
+                        self.stdout.write(
+                            self.style.SUCCESS(f"Sentence '{sentence}' 저장 성공")
+                        )
+                    except Exception as e:
+                        self.stdout.write(self.style.ERROR(f"Sentence 저장 중 오류 발생: {e}"))
+
+                    count += 1  # 처리한 행 수 증가
 
         except FileNotFoundError:
             self.stdout.write(
