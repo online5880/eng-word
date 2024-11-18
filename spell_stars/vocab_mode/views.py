@@ -82,10 +82,8 @@ def display_vocabulary_book_random_category(request):
 def display_vocabulary_book(request):
     # 세션에서 선택된 단어들 가져오기
     selected_words = request.session.get('selected_words')
-    
     if selected_words:
         context = {"words": selected_words, "MEDIA_URL": settings.MEDIA_URL}
-        del request.session['selected_words']
     else:
         all_words = list(Word.objects.all())
         random_words = random.sample(all_words, min(len(all_words), 15))
@@ -128,10 +126,10 @@ def upload_audio(request):
                 settings.MEDIA_ROOT, save_path, f"{current_word}.wav"
             )
             
-            # result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
+            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
             print(student_audio_path)
             print(native_audio_path)
-            result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
+            # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
             print("결과",result)
             return JsonResponse({
                 "status": "success",
@@ -162,7 +160,7 @@ def sentence_mode(request):
     
     # 학습 시작 로그 생성 (예문 모드는 learning_mode=1로 설정)
     start_learning_session(request, learning_mode=1)
-    return render(request, "sent_mode/sent_practice.html", context)
+    return render(request, "sent_mode", context)
 
 ### API
 # 단어 목록 GET API

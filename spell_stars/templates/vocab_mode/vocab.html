@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <button class="back-button" onclick="location.href='{% url 'index' %}'">돌아가기</button>
-      <h1>단어장</h1>
+      <h1>단어 연습</h1>
       
       <div class="navigation-buttons">
         <button id="prevButton" class="nav-button styled-button">◀ 이전</button>
@@ -31,7 +31,7 @@
             <div class="word-content">
               <h3>{{ word.word }}</h3>
               <p>{{ word.meanings|join:", " }}</p>
-              <p>{{ word.category }}</p>
+              {% comment %} <p>{{ word.category }}</p> {% endcomment %}
             </div>
             <div class="example-section">
               <p><strong>예문:</strong> {{ word.examples.0.english }}</p>

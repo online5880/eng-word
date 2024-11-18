@@ -229,8 +229,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 'X-CSRFToken': csrfToken
             }
         }).then(() => {
-            // 예문 학습 페이지로 이동
-            window.location.href = '/sentence_mode/';
+            // 예문 학습 페이지로 이동 ('/sent/'로 수정)
+            window.location.href = '/sent/';
         });
     });
 });
