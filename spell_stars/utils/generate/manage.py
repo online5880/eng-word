@@ -11,7 +11,9 @@ from Pipeline.json_to_clusteredjson import (
 from Pipeline.extract_word import extract_words
 from Pipeline.generate_sentence import create_faiss_index, generate_sentences
 from Pipeline.sentence_pipeline import SentenceEvaluationPipeline
-# from Pipeline.translate import translate_csv
+from Pipeline.translate import translate_csv
+
+# from Pipeline.upload import Command
 
 
 def main():
@@ -20,12 +22,24 @@ def main():
 
     # 경로 설정
     pdf_directory = os.path.join(base_directory, "pdf")  # PDF 파일 폴더
-    json_output_directory = os.path.join(base_directory, "json_output")  # JSON 파일 저장 폴더
-    clustered_json_path = os.path.join(base_directory, "clustered_wordbook.json")  # 군집화된 JSON 출력 경로
-    extracted_words_path = os.path.join(base_directory, "extracted_words.json")  # 추출된 단어 JSON 경로
-    csv_output_path = os.path.join(base_directory, "generated_sentences.csv")  # 생성된 문장 CSV 경로
-    vector_store_path = os.path.join(base_directory, "sentence_vectorstore")  # FAISS 인덱스 저장 경로
-    grammar_results_path = os.path.join(base_directory, "grammar_results.csv")  # 문법 검사 결과 저장 경로
+    json_output_directory = os.path.join(
+        base_directory, "json_output"
+    )  # JSON 파일 저장 폴더
+    clustered_json_path = os.path.join(
+        base_directory, "clustered_wordbook.json"
+    )  # 군집화된 JSON 출력 경로
+    extracted_words_path = os.path.join(
+        base_directory, "extracted_words.json"
+    )  # 추출된 단어 JSON 경로
+    csv_output_path = os.path.join(
+        base_directory, "generated_sentences.csv"
+    )  # 생성된 문장 CSV 경로
+    vector_store_path = os.path.join(
+        base_directory, "sentence_vectorstore"
+    )  # FAISS 인덱스 저장 경로
+    grammar_results_path = os.path.join(
+        base_directory, "grammar_results.csv"
+    )  # 문법 검사 결과 저장 경로
     final_sentence_path = os.path.join(base_directory, "final_sentence.csv")
 
     # 필요한 디렉토리 생성
@@ -62,15 +76,20 @@ def main():
     # Step 6: 생성된 문장에 대해 문법 검사 수행
     print("Evaluating grammar in generated sentences...")
     pipeline = SentenceEvaluationPipeline()
-    results_df = pipeline.process_all_sentences(csv_output_path,grammar_results_path)
+    results_df = pipeline.process_all_sentences(csv_output_path, grammar_results_path)
 
-    # # 결과 저장
-    # results_df.to_csv(grammar_results_path, index=False, encoding="utf-8-sig")
-    # print(f"Grammar evaluation completed. Results saved to {grammar_results_path}")
+    # 결과 저장
+    results_df.to_csv(grammar_results_path, index=False, encoding="utf-8-sig")
+    print(f"Grammar evaluation completed. Results saved to {grammar_results_path}")
 
-    # # Step 7: 생성된 문장 번역
-    # translate_csv(grammar_results_path, final_sentence_path)
-    # print(f"translate completed. Results saved to {final_sentence_path}.")
+    # Step 7: 생성된 문장 번역
+    translate_csv(grammar_results_path, final_sentence_path)
+    print(f"translate completed. Results saved to {final_sentence_path}.")
+
+    # # Step 8: db에 데이터 적재
+    # upload = Command()
+    # upload.handle(csv_file=final_sentence_path)
+    # print(f"upload completed. Results uploaded to Sentence.")
 
 
 if __name__ == "__main__":

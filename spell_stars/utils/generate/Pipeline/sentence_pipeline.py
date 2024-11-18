@@ -1,7 +1,9 @@
 import pandas as pd
 from Pipeline.grammar_score import AdvancedGrammarScorer  # 문법 검사 클래스
 from Pipeline.consistency import measure_sc  # 의미 일관성 검사 함수
-from Pipeline.grammar_corrector import GrammarCorrector  # Grammarformer를 사용한 문장 보완 클래스
+from Pipeline.grammar_corrector import (
+    GrammarCorrector,
+)  # Grammarformer를 사용한 문장 보완 클래스
 import chardet
 from concurrent.futures import ThreadPoolExecutor
 import time
@@ -9,11 +11,13 @@ import time
 
 class SentenceEvaluationPipeline:
 
-    def __init__(self,
-                 grammar_threshold: float = 0.9,
-                 coherence_threshold: int = 1,
-                 batch_size=100,
-                 max_workers=4):  # 병렬 처리 워커 수 추가
+    def __init__(
+        self,
+        grammar_threshold: float = 0.95,
+        coherence_threshold: int = 1,
+        batch_size=10,
+        max_workers=2,
+    ):  # 병렬 처리 워커 수 추가
         self.grammar_scorer = AdvancedGrammarScorer()  # 문법 점수 측정
         self.coherence_checker = measure_sc  # 의미 일관성 점검 함수
         self.grammar_threshold = grammar_threshold  # 문법 점수 기준
@@ -29,7 +33,9 @@ class SentenceEvaluationPipeline:
             original_sentence = sentence
 
             # 문법 점수 계산
-            grammar_score, grammar_details = self.grammar_scorer.score_sentence(sentence)
+            grammar_score, grammar_details = self.grammar_scorer.score_sentence(
+                sentence
+            )
 
             # 문법 점수 기준 충족 여부 확인 및 교정
             if grammar_score < self.grammar_threshold:
@@ -49,7 +55,6 @@ class SentenceEvaluationPipeline:
                 if corrected_sentence != sentence:
                     sentence = corrected_sentence
                     coherence_score = self.coherence_checker(sentence)
-
             end_time = time.time()
             print(f"Processed sentence in {end_time - start_time:.2f} seconds.")
             return {
@@ -63,7 +68,7 @@ class SentenceEvaluationPipeline:
                 "final_sentence": sentence,
                 "grammar_score": 0,
                 "coherence_score": 0,
-                "error": str(e)
+                "error": str(e),
             }
 
     def process_batch(self, batch):
@@ -80,9 +85,9 @@ class SentenceEvaluationPipeline:
 
     def process_all_sentences(self, file_path: str, output_path: str):
         # 파일의 인코딩 감지
-        with open(file_path, 'rb') as f:
+        with open(file_path, "rb") as f:
             result = chardet.detect(f.read())
-            encoding = result['encoding']
+            encoding = result["encoding"]
 
         # 감지된 인코딩으로 CSV 파일 로드
         df = pd.read_csv(file_path, encoding=encoding)
