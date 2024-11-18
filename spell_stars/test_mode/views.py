@@ -1,31 +1,31 @@
-import os
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.conf import settings
 from django.core.files.storage import default_storage
-from .models import TestResult  # TestResult 모델을 import
+from .models import TestResult
 from vocab_mode.models import Word
 from sent_mode.models import Sentence
 from accounts.models import StudentInfo
-import warnings
+import os
+from django.db.models import Max
+from django.utils import timezone
+from django.views.decorators.csrf import csrf_exempt
 from django.apps import apps
 from django.core.files.base import ContentFile
 from accounts.views import start_learning_session
+import warnings
+import random
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 model = apps.get_app_config('spell_stars').whisper_model
 
-# 문제 수와 총점
-TOTAL_QUESTIONS = 20
+TOTAL_QUESTIONS = 2
 MAX_SCORE = 100
-POINTS_PER_QUESTION = MAX_SCORE / TOTAL_QUESTIONS  # 1문제당 점수 계산
+POINTS_PER_QUESTION = MAX_SCORE / TOTAL_QUESTIONS
 
 
-def calculate_score(
-    correct_answers, total_questions=TOTAL_QUESTIONS, max_score=MAX_SCORE
-):
-    # 맞힌 문제 수에 따라 점수를 계산
+def calculate_score(correct_answers, total_questions=TOTAL_QUESTIONS, max_score=MAX_SCORE):
     score = correct_answers * (max_score / total_questions)
     return round(score, 2)
 
@@ -47,7 +47,6 @@ def test_mode_view(request):
                     {
                         "sentence": sentence_with_blank,
                         "word": word.word,
-                        "question_id": sentence.id,
                         "sentence_meaning": sentence.sentence_meaning
                     }
                 )
@@ -57,25 +56,34 @@ def test_mode_view(request):
                 {"error": "No sentences found for the selected words."}, status=404
             )
 
+        # TestResult 모델에서 가장 최근의 test_number를 가져옵니다.
+        last_test_result = TestResult.objects.aggregate(Max('test_number'))
+        last_test_number = last_test_result['test_number__max'] or 0
+
+        # 새로운 시험 번호는 마지막 번호 + 1
+        test_number = last_test_number + 1
+
         # 첫 번째 문제 세션에 저장
         request.session["questions"] = sentences
         request.session["current_question_index"] = 0
+        request.session["test_number"] = test_number
+        request.session["answers"] = []  # 답을 기록할 리스트 초기화
 
         # 첫 번째 문제 렌더링
         current_question = sentences[0]
         request.session["target_word"] = current_question["word"]  # target_word 설정
-        
+
         # 학습 시작 로그 생성
-        start_learning_session(request, learning_mode=1)  # test 1번
-        
+        start_learning_session(request, learning_mode=1)
+
         return render(
             request,
             "test_mode/test_page.html",
             {
                 "sentence": current_question["sentence"],
                 "word": current_question["word"],
-                "question_id": current_question["question_id"],
                 "sentence_meaning": current_question["sentence_meaning"],
+                "MEDIA_URL": settings.MEDIA_URL,
             },
         )
     else:
@@ -84,17 +92,16 @@ def test_mode_view(request):
         )
 
 
-def submit_audio(request, question_id):
-    print(f"submit_audio called for question_id: {question_id}")
-    
+@csrf_exempt
+def submit_audio(request):
+    print("submit_audio called")
+
     if request.method == "POST" and request.FILES.get("audio"):
         if not request.user.is_authenticated:
             return JsonResponse({"error": "User is not authenticated"}, status=401)
 
         try:
-            student_info = StudentInfo.objects.get(user=request.user)  # 현재 로그인한 사용자의 정보를 가져옴
-            user_id = student_info.user.id  # user_id를 가져옴 (User 모델의 id)
-
+            user_id = request.user.id
             word = request.POST.get("word")
             if not word:
                 return JsonResponse(
@@ -107,7 +114,7 @@ def submit_audio(request, question_id):
 
             # 파일 이름 설정
             file_name = f"{word}_student.wav"
-            file_path = os.path.join(save_path, file_name)
+            file_path = os.path.join(settings.MEDIA_ROOT, save_path, file_name)
 
             # 기존 파일이 있으면 삭제
             if default_storage.exists(file_path):
@@ -117,6 +124,8 @@ def submit_audio(request, question_id):
             full_path = default_storage.save(
                 file_path, ContentFile(request.FILES["audio"].read())
             )
+            
+            print(file_path)
 
             # Whisper 모델로 음성 텍스트 변환
             result = model.transcribe(file_path, language="en")
@@ -124,23 +133,18 @@ def submit_audio(request, question_id):
             print(f"Transcript from Whisper: {transcript}")
 
             # 예문에서 정답 단어와 비교하여 점수 계산
-            target_word = request.session.get("target_word")
+            target_word = word
             is_correct = target_word.lower() in transcript.lower()
 
-            # 점수 업데이트
-            user = request.user
-            correct_answers = 1 if is_correct else 0
-            test_date = request.POST.get("test_date", None)  # 시험 날짜는 요청으로 받음
+            # 답을 세션에 저장
+            question_index = request.session.get("current_question_index", 0)
+            if "answers" not in request.session:
+                request.session["answers"] = []
 
-            # 시험 결과 저장
-            save_test_result(user, correct_answers, test_date)
-
-            # 음성 파일 URL 반환
-            audio_url = os.path.join(settings.MEDIA_URL, "test_mode", file_name)
-            return JsonResponse(
+            request.session["answers"].append(
                 {
+                    "word": target_word,
                     "transcript": transcript,
-                    "audio_url": audio_url,
                     "is_correct": is_correct,
                 }
             )
@@ -151,49 +155,77 @@ def submit_audio(request, question_id):
                 {"error": f"Failed to transcribe audio: {str(e)}"}, status=500
             )
 
-    # 파일이 없을 경우
-    print("No audio file received in request")
     return JsonResponse({"error": "No audio file received"}, status=400)
-
-
-def save_test_result(user, correct_answers, test_date):
-    # 점수 계산
-    score = calculate_score(correct_answers)
-
-    # 시험 결과 저장
-    result = TestResult(user=user, score=score, test_date=test_date)
-    result.save()
-    print(f"Test result saved: {result}")
 
 
 def next_question(request):
     print("next_question called")
 
-    # 세션에서 현재 질문 인덱스와 질문 목록 가져오기
-    current_index = request.session.get("current_question_index", 0)
-    questions = request.session.get("questions", [])
+    # 세션에서 이미 푼 단어의 인덱스를 가져옵니다.
+    answered_words = request.session.get("answered_words", [])
 
-    if not questions:
-        return JsonResponse({"error": "No questions available."}, status=404)
+    # 이미 푼 단어를 제외하고 랜덤으로 하나 가져오기
+    next_word = Word.objects.exclude(id__in=answered_words).order_by("?").first()
 
-    if current_index < len(questions) - 1:
-        # 다음 문제로 이동
-        next_index = current_index + 1
-        next_question = questions[next_index]
-
-        # 세션에 현재 질문 인덱스 업데이트
-        request.session["current_question_index"] = next_index
-
+    if not next_word:
+        # 모든 단어를 다 푼 경우 결과 저장
+        save_all_test_results(request)
         return JsonResponse(
-            {
-                "success": True,
-                "sentence": next_question["sentence"],
-                "word": next_question["word"],
-                "question_id": next_question["question_id"],
-            }
+            {"success": False, "message": "All words have been answered."}
         )
-    else:
-        # 문제가 모두 끝났으면 종료 메시지
-        return JsonResponse(
-            {"success": False, "message": "All questions have been answered."}
+
+    # 해당 단어를 answered_words에 추가
+    answered_words.append(next_word.id)
+
+    # 세션에 갱신된 answered_words 리스트 저장
+    request.session["answered_words"] = answered_words
+
+    # 해당 단어의 예문을 불러옵니다.
+    sentence = Sentence.objects.filter(word=next_word).first()
+
+    # 문제 수가 5번에 다다르면 결과 저장
+    current_question_index = request.session.get("current_question_index", 0) + 1
+    request.session["current_question_index"] = current_question_index
+
+    if current_question_index == TOTAL_QUESTIONS:
+        save_all_test_results(request)
+
+    return JsonResponse(
+        {
+            "success": True,
+            "word": next_word.word,
+            "sentence": sentence.sentence if sentence else "No sentence available.",
+            "sentence_meaning": sentence.sentence_meaning if sentence else "No sentence meaning available.",
+        }
+    )
+
+
+def save_all_test_results(request):
+    try:
+        user_id = request.user.id
+        student = StudentInfo.objects.get(id=user_id)
+        answers = request.session.get("answers", [])
+
+        correct_answers = sum([1 for answer in answers if answer["is_correct"]])
+        score = calculate_score(correct_answers)
+
+        test_number = request.session.get("test_number", 1)
+        test_date = timezone.now()
+
+        # 시험 결과 저장
+        result = TestResult(
+            student=student,
+            test_number=test_number,
+            test_date=test_date,
+            accuracy_score=score,
+            frequency_score=0,
         )
+        result.save()
+
+        print(f"Test result saved: {result}")
+        
+        return redirect("main")
+
+    except StudentInfo.DoesNotExist:
+        print(f"Student with id {user_id} does not exist.")
+        raise

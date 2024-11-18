@@ -21,6 +21,7 @@
     <!-- 문제 문장 -->
     <p id="sentence">{{ sentence }}</p>
     <p id="sentence-meaning">{{ sentence_meaning }}</p>
+    <div id="targeted-word" style="display: none;">{{ word }}</div>
 
     <!-- 녹음 버튼 (마이크 아이콘) -->
     <div class="controls">
@@ -39,23 +40,13 @@
       </div>
     </div>
 
-    <p>녹음된 음성:</p>
-    <audio id="audio-preview" controls="controls" style="display: none;"></audio>
-
-    <!-- 음성 인식 결과 표시 -->
-    <div id="audio-result"></div>
-
     <!-- 점수 및 피드백 -->
     <div>
-      <p>점수: <span id="score">0</span></p>
-      <div class="progress-bar">
-        <div id="score-bar"></div>
-      </div>
-      <p id="feedback"></p>
+      <p><span id="score">{{ is_correct }}</span></p>
     </div>
 
     <!-- 다음 문제 버튼 -->
-    <button id="next-question-btn" disabled>다음 문제</button>
+    <button id="nextQuestionBtn" disabled>다음 문제</button>
 
   </div>
 

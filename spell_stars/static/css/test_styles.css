@@ -157,3 +157,19 @@ p {
 .mic-status::-moz-focus-inner {
     border: 0;
 }
+
+/* 다음 문제 버튼 스타일 */
+#nextQuestionBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #016ccf; /* Next question 버튼 색상 */
+    color: white;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#nextQuestionBtn:hover {
+    background-color: #005bb5; /* Next question 버튼 hover 색상 */
+}

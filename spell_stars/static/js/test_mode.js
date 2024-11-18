@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let mediaRecorder;
     let audioChunks = [];
     let isRecording = false;
-    let targetedWord = "";  // 단어를 저장하는 변수
+    let targetedWord = '';  // 여기서 초기화
 
     // beforeunload 이벤트 리스너 추가
     window.addEventListener('beforeunload', function(e) {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-    
+
     // 마이크 버튼 이벤트
     if (micButton) {
         micButton.addEventListener('click', async function () {
@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
 
             const formData = new FormData();
-            formData.append('audio', audioBlob, `${targetedWord}.wav`);  // 단어 추가
+            const targetedWord = document.getElementById('targeted-word').textContent; 
+            formData.append('audio', audioBlob, `${targetedWord}.wav`);
             formData.append('word', targetedWord);
 
             const uploadAudioUrl = '/test/submit_audio/';
@@ -72,16 +73,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const data = await response.json();
                 console.log('서버 응답:', data);
-                if (data.status === 'success') {
+                if (data.success === 'true') {
                     statusText.textContent = '녹음이 성공적으로 저장되었습니다.';
                     if (audioPlayer) {
                         audioPlayer.src = '/' + data.file_path;
                     }
 
                     // 서버에서 점수 받기
-                    if (data.is_correct !== undefined) {
-                        console.log('서버에서 받은 점수:', data.is_correct ? '정답' : '오답');
-                        displayFeedback(data.is_correct);  // 피드백 표시
+                    if (data.score !== undefined) {
+                        console.log('서버에서 받은 점수:', data.score);  // 점수 출력
+                        displayFeedback(data.score);  // 점수 표시
                     }
                 } else {
                     statusText.textContent = '녹음 저장에 실패했습니다.';
@@ -109,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (isRecording) {
                 analyser.getByteFrequencyData(dataArray);
                 const average = dataArray.reduce((a, b) => a + b) / bufferLength;
-                const level = (average / 255) * 100;
-                voiceLevelFill.style.height = `${level}%`;
+                const level = (average / 255) * 100;  // 음성 레벨 계산 수정
+                voiceLevelFill.style.width = `${level}%`;  // 여기도 높이로 변경
                 requestAnimationFrame(updateVoiceLevel);
             }
         }
@@ -135,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const feedbackElement = document.getElementById("feedback");
         const feedbackSection = document.getElementById("feedback-section");
         const scoreBar = document.getElementById("score-bar");
-        
+
         if (isCorrect) {
             feedbackElement.textContent = '정답입니다!';
             feedbackSection.style.display = 'block';
@@ -149,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // 다음 문제로 이동
+    // 다음 문제 요청 시 단어 갱신
     function nextQuestion() {
         console.log('다음 단어 요청');
         fetch('/test/next_question/', {
@@ -162,8 +163,8 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             console.log('다음 단어 응답:', data);
             if (data.success) {
-                // 단어 갱신 (HTML에 표시하지 않음, 그냥 변수로 사용)
-                targetedWord = data.word;
+                // 단어 갱신
+                document.getElementById('targeted-word').textContent = data.word;
 
                 // 예문 갱신
                 document.getElementById('sentence').textContent = data.sentence;
@@ -175,6 +176,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById("feedback-section").style.display = 'none';
             } else {
                 console.log('새 단어를 가져오지 못했습니다.');
+                // 모든 문제를 완료한 경우 세션 리셋 또는 다시 시작 요청
+                alert('모든 문제를 완료했습니다. 새로 시작하려면 학습을 종료하고 다시 시작하세요.');
             }
         })
         .catch(error => {
@@ -186,6 +189,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextQuestionButton = document.getElementById("nextQuestionButton");
 
     if (nextQuestionButton) {
-        nextQuestionButton.addEventListener('click', nextQuestion);  // 수정된 부분
+        nextQuestionButton.addEventListener('click', nextQuestion);
     }
 });
