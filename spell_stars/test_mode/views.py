@@ -10,6 +10,7 @@ from accounts.models import StudentInfo
 import warnings
 from django.apps import apps
 from django.core.files.base import ContentFile
+from accounts.views import start_learning_session
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -63,6 +64,10 @@ def test_mode_view(request):
         # 첫 번째 문제 렌더링
         current_question = sentences[0]
         request.session["target_word"] = current_question["word"]  # target_word 설정
+        
+        # 학습 시작 로그 생성
+        start_learning_session(request, learning_mode=1)  # test 1번
+        
         return render(
             request,
             "test_mode/test_page.html",

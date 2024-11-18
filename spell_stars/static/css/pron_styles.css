@@ -80,6 +80,10 @@ h2 {
     margin: 20px auto;
 }
 
+.controls {
+    margin: 20px 0;
+}
+
 #recordButton {
     background-color: #4CAF50;
     color: white;
@@ -214,12 +218,12 @@ h2 {
     border: 0;
 }
 
-
 /* 네비게이션 버튼 스타일 */
 #navButtons {
     display: flex;
     justify-content: center;  /* 버튼들을 가로로 중앙 정렬 */
     gap: 10px;  /* 버튼 간 간격 */
+    cursor: pointer;
 }
 
 /* 다음 단어 버튼 스타일 */
@@ -231,6 +235,7 @@ h2 {
     color: white;
     margin: 10px 5px;
     border: none;
+    cursor: pointer;
 }
 
 #nextWordButton:hover {
@@ -246,6 +251,7 @@ h2 {
     color: white;
     margin: 10px 5px;
     border: none;
+    cursor: pointer;
 }
 
 #exitPracticeButton:hover {

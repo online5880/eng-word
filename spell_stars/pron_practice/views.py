@@ -9,6 +9,7 @@ from django.apps import apps
 from utils.PronunciationChecker.manage import process_audio_files
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
+from accounts.views import start_learning_session
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -24,6 +25,9 @@ def pronunciation_practice_view(request):
 
     if random_word:
         request.session["target_word"] = random_word["word"]
+        
+        # 학습 시작 로그 생성
+        start_learning_session(request, learning_mode=2)  # pron_practice 2번
 
         return render(
             request,

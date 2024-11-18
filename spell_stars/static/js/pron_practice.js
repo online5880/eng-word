@@ -10,6 +10,16 @@ document.addEventListener('DOMContentLoaded', function () {
     let audioChunks = [];
     let isRecording = false;
 
+    // beforeunload 이벤트 리스너 추가
+    window.addEventListener('beforeunload', function(e) {
+        fetch('/accounts/end-learning/', {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': csrfToken
+            }
+        });
+    });
+
     // 페이지 로드 후 오디오 준비 (자동 재생 X)
     window.onload = function () {
         if (audioPlayer) {
@@ -128,8 +138,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (isRecording) {
                 analyser.getByteFrequencyData(dataArray);
                 const average = dataArray.reduce((a, b) => a + b) / bufferLength;
-                const level = (average / 255) * 100;
-                voiceLevelFill.style.height = `${level}%`;
+                const level = (average / 255) * 100;  // 음성 레벨 계산 수정
+                voiceLevelFill.style.width = `${level}%`;  // 여기도 높이로 변경
                 requestAnimationFrame(updateVoiceLevel);
             }
         }

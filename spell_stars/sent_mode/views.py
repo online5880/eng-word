@@ -53,7 +53,7 @@ def example_sentence_learning(request):
         "sentences": blank_sentences,
         "random_word": random_word
     }
-
+    
     return render(request, "sent_mode/sent_practice.html", context)
 
 

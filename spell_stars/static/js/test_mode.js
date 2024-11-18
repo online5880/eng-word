@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
     let isRecording = false;
     let targetedWord = "";  // 단어를 저장하는 변수
 
+    // beforeunload 이벤트 리스너 추가
+    window.addEventListener('beforeunload', function(e) {
+        fetch('/accounts/end-learning/', {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': csrfToken
+            }
+        });
+    });
+    
     // 마이크 버튼 이벤트
     if (micButton) {
         micButton.addEventListener('click', async function () {
