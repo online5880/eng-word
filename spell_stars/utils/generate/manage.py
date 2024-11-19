@@ -11,8 +11,8 @@ from Pipeline.json_to_clusteredjson import (
 from Pipeline.extract_word import extract_words
 from Pipeline.generate_sentence import create_faiss_index, generate_sentences
 from Pipeline.sentence_pipeline import SentenceEvaluationPipeline
-from Pipeline.translate import translate_csv
-from spell_stars.utils.generate.Pipeline.upload import Command
+# from Pipeline.translate import translate_csv
+# from spell_stars.utils.generate.Pipeline.upload import Command
 
 # from Pipeline.upload import Command
 
@@ -33,7 +33,7 @@ def main():
         base_directory, "extracted_words.json"
     )  # 추출된 단어 JSON 경로
     csv_output_path = os.path.join(
-        base_directory, "generated_sentences copy.csv"
+        base_directory, "generated_sentences.csv"
     )  # 생성된 문장 CSV 경로
     vector_store_path = os.path.join(
         base_directory, "sentence_vectorstore"
@@ -87,10 +87,10 @@ def main():
     # translate_csv(grammar_results_path, final_sentence_path)
     # print(f"translate completed. Results saved to {final_sentence_path}.")
 
-    # Step 8: db에 데이터 적재
-    upload = Command()
-    upload.handle(csv_file=final_sentence_path)
-    print(f"upload completed. Results uploaded to Sentence.")
+    # # Step 8: db에 데이터 적재
+    # upload = Command()
+    # upload.handle(csv_file=final_sentence_path)
+    # print(f"upload completed. Results uploaded to Sentence.")
 
     # # Step 8: db에 데이터 적재
     # upload = Command()

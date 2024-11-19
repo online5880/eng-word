@@ -32,35 +32,43 @@ class SentenceEvaluationPipeline:
             # 원본 문장
             original_sentence = sentence
 
-            # 문법 점수 계산
-            grammar_score, grammar_details = self.grammar_scorer.score_sentence(
-                sentence
-            )
+            while True:
+                # 문법 점수 계산
+                grammar_score, grammar_details = self.grammar_scorer.score_sentence(sentence)
 
-            # 문법 점수 기준 충족 여부 확인 및 교정
-            if grammar_score < self.grammar_threshold:
-                corrected_sentence = self.grammar_corrector.correct_sentence(sentence)
-
-                # 중복 확인: 수정된 문장이 원래 문장과 같다면 더 이상 수정하지 않음
-                if corrected_sentence != sentence:
+                # 문법 점수 기준 미달 시 교정
+                if grammar_score < self.grammar_threshold:
+                    corrected_sentence = self.grammar_corrector.correct_sentence(sentence)
+                    if corrected_sentence == sentence:  # 교정 불가능 시 종료
+                        break
                     sentence = corrected_sentence
-                    grammar_score, _ = self.grammar_scorer.score_sentence(sentence)
+                else:
+                    break  # 기준 충족 시 종료
 
-            # 의미 일관성 점검 및 교정
-            coherence_score = self.coherence_checker(sentence)
-            if coherence_score < self.coherence_threshold:
-                corrected_sentence = self.grammar_corrector.correct_sentence(sentence)
+            while True:
+                # 의미 일관성 점수 계산
+                coherence_score = self.coherence_checker(sentence)
 
-                # 중복 확인: 수정된 문장이 원래 문장과 같다면 더 이상 수정하지 않음
-                if corrected_sentence != sentence:
+                # 의미 일관성 기준 미달 시 교정
+                if coherence_score < self.coherence_threshold:
+                    corrected_sentence = self.grammar_corrector.correct_sentence(sentence)
+                    if corrected_sentence == sentence:  # 교정 불가능 시 종료
+                        break
                     sentence = corrected_sentence
-                    coherence_score = self.coherence_checker(sentence)
+                else:
+                    break  # 기준 충족 시 종료
+
             end_time = time.time()
             print(f"Processed sentence in {end_time - start_time:.2f} seconds.")
+
+            # 최종 점수 확인
+            final_grammar_score, _ = self.grammar_scorer.score_sentence(sentence)
+            final_coherence_score = self.coherence_checker(sentence)
+
             return {
                 "final_sentence": sentence,
-                "grammar_score": grammar_score,
-                "coherence_score": coherence_score,
+                "grammar_score": final_grammar_score,
+                "coherence_score": final_coherence_score,
             }
         except Exception as e:
             print(f"Error processing sentence: {sentence[:50]}... Error: {e}")
@@ -70,6 +78,7 @@ class SentenceEvaluationPipeline:
                 "coherence_score": 0,
                 "error": str(e),
             }
+
 
     def process_batch(self, batch):
         batch_results = []
