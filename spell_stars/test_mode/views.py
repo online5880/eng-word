@@ -266,12 +266,12 @@ def results_view(request):
         latest_result = save_all_test_results(request)
 
         if latest_result:
-            # 저장된 결과를 결과 페이지로 전달
-            return render(request, 'test_mode/results.html', {'result': latest_result})
+            # 단일 결과를 리스트로 감싸 템플릿에 전달
+            return render(request, 'test_mode/results.html', {'results': [latest_result]})
         else:
             # 결과가 없을 경우 메시지 전달
-            return render(request, 'test_mode/results.html', {'error': 'No results found.'})
+            return render(request, 'test_mode/results.html', {'results': [], 'error': 'No results found.'})
 
     except TestResult.DoesNotExist:
         # 예외 처리 (테스트 결과가 없을 경우)
-        return render(request, 'test_mode/results.html', {'error': 'Test result not found.'})
+        return render(request, 'test_mode/results.html', {'results': [], 'error': 'Test result not found.'})
