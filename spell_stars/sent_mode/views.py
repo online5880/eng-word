@@ -29,17 +29,26 @@ def example_sentence_learning(request):
     user = request.user
     # 세션에서 선택된 단어들 가져오기
     selected_words = request.session.get('selected_words', None)
+    
+    selected_words_list = [item['word'] for  item in selected_words]
 
     # selected_words에서 Word 모델 객체들을 찾아서 필터링
-    word_objects = Word.objects.filter(word__in=selected_words)
+    word_objects = Word.objects.filter(word__in=selected_words_list)
+    print("sent words : ",word_objects)
 
     # 세션에 저장된 단어들에 해당하는 예문들 가져오기
-    sentences = Sentence.objects.filter(word__in=word_objects).order_by("?")[:5]
+    sentences = Sentence.objects.filter(word__in=word_objects).order_by("?")
+    # print("sent sentence : ",sentence)
 
     # 예문에 단어를 빈칸으로 대체
     blank_sentences = []
     for sentence in sentences:
-        blank_sentence = sentence.sentence.replace(sentence.word.word, "_____")  # sentence.word.word로 수정
+        # 단어의 길이만큼 언더바 생성
+        word_length = len(sentence.word.word)
+        blank = "_" * word_length  # 예: "toilet" -> "______"
+
+        # 문장에서 해당 단어를 언더바로 대체
+        blank_sentence = sentence.sentence.replace(sentence.word.word, blank)
         blank_sentences.append({
             "sentence": blank_sentence,
             "meaning": sentence.sentence_meaning,
@@ -50,7 +59,7 @@ def example_sentence_learning(request):
         "sentences": blank_sentences,
         "selected_words": selected_words
     }
-
+    
     return render(request, "sent_mode/sent_practice.html", context)
 
 
@@ -58,29 +67,16 @@ def example_sentence_learning(request):
 def upload_audio(request):
     if request.method == "POST" and request.FILES.get("audio"):
         try:
-            user_id = request.user.id
-            word = request.POST.get("word")
-
-            if not word:
-                return JsonResponse(
-                    {"status": "error", "message": "Word is required"}, status=400
-                )
-
-            # 세션에서 테마 정보 가져오기
-            selected_theme = request.session.get('selected_theme', None)
-
-            if not selected_theme:
-                return JsonResponse(
-                    {"status": "error", "message": "Theme is required, please start vocabulary learning first."},
-                    status=400
-                )
-
+            audio_file = request.FILES["audio"]
+            current_word = request.POST.get("word", "unknown")
+            user_id = request.user.id if request.user.is_authenticated else "anonymous"
+            
             # 저장 경로 설정
-            save_path = f"pron_pc/user_{user_id}/"
+            save_path = f"audio_files/students/user_{user_id}/"
             os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
 
             # 파일 이름 설정
-            file_name = f"{word}_student.wav"
+            file_name = f"{current_word}.wav"
             file_path = os.path.join(save_path, file_name)
 
             # 기존 파일이 있으면 삭제
@@ -89,53 +85,38 @@ def upload_audio(request):
 
             # 새 파일 저장
             full_path = default_storage.save(
-                file_path, ContentFile(request.FILES["audio"].read())
+                file_path, ContentFile(audio_file.read())
             )
-
-            # 절대 경로로 변환
+            
             native_audio_path = os.path.join(
-                settings.MEDIA_ROOT, "audio_files/native/", f"{word}.wav"
+                settings.MEDIA_ROOT, "audio_files/native/", f"{current_word}.wav"
             )
-            full_student_audio_path = os.path.join(settings.MEDIA_ROOT, file_path)
-
-            # 발음 비교 처리
-            result = process_audio_files(
-                native_audio_path, full_student_audio_path, word
+            student_audio_path = os.path.join(
+                settings.MEDIA_ROOT, save_path, f"{current_word}.wav"
             )
-
-            if result["status"] == "error":
-                return JsonResponse(result)
-
-            # 발음 점수 저장
-            pronunciation_score = result["result"]["overall_score"]
-            accuracy_score = 100 if word in request.POST.get("answer", "") else 0  # 예시 답안 비교
-            frequency_score = 10  # 예시로 고정 점수 사용
-
-            # 결과 저장
-            student = StudentInfo.objects.get(user_id=user_id)
-            LearningResult.objects.create(
-                word=Word.objects.get(word=word),
-                student=student,
-                learning_category=selected_theme,  # 테마 정보 저장
-                learning_date=request.POST.get("date"),
-                pronunciation_score=pronunciation_score,
-                accuracy_score=accuracy_score,
-                frequency_score=frequency_score,
-            )
-
-            return JsonResponse(
-                {
-                    "status": "success",
-                    "file_path": full_student_audio_path,
-                    "score": round(pronunciation_score, 1),
-                    "message": "음성 파일이 성공적으로 저장되고 발음 평가가 완료되었습니다.",
-                }
-            )
+            
+            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
+            print(student_audio_path)
+            print(native_audio_path)
+            # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
+            print("결과",result)
+            return JsonResponse({
+                "status": "success",
+                "message": "녹음이 완료되었습니다.",
+                "file_path": full_path,
+                "result":result
+            })
 
         except Exception as e:
-            return JsonResponse({"status": "error", "message": str(e)}, status=500)
+            return JsonResponse({
+                "status": "error",
+                "message": str(e)
+            }, status=500)
 
-    return JsonResponse({"status": "error", "message": "Invalid request"}, status=400)
+    return JsonResponse({
+        "status": "error",
+        "message": "잘못된 요청입니다."
+    }, status=400)
 
 
 def exit_learning_mode(request):

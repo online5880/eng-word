@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
+
   <head>
     <title>단어장</title>
     <link rel="stylesheet" href="{% static 'css/vocab_styles.css' %}">
@@ -40,7 +40,7 @@
       
             <div class="audio-controls">
               {% if word.file_path %}
-                <button class="playAudioButton styled-button" data-audio="{{ MEDIA_URL }}{{ word.file_path }}">🔊 원어민 발음 듣기</button>
+                <button class="playAudioButton styled-button" data-audio="{{ MEDIA_URL }}{{ word.file_path }}">🔊 발음 듣기</button>
               {% else %}
                 <p>원어민 음성 파일이 존재하지 않습니다.</p>
               {% endif %}
@@ -66,11 +66,6 @@
         <div class="progress-bar">
           <div id="progressFill"></div>
         </div>
-        
-        <button id="sentenceModeButton" class="sentence-mode-btn" style="display: none;">
-          <i class="fas fa-book"></i>
-          예문 학습하기
-        </button>
       </div>
     </div>
 

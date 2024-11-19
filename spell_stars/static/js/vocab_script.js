@@ -36,7 +36,26 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.display = i === index ? 'block' : 'none';
         });
         cardIndex.textContent = `${currentIndex + 1}/${cards.length}`;
-        updateNavigationButtons();  // 버튼 상태 업데이트
+        
+        // 프로그레스 바 초기화
+        const progressBar = document.getElementById("progressFill");
+        const currentWord = getCurrentWord();
+        
+        if (passedWords.has(currentWord)) {
+            // 이미 통과한 단어인 경우
+            progressBar.style.width = '100%';
+            progressBar.style.backgroundColor = '#4CAF50';
+            statusText.textContent = '이미 통과한 단어입니다!';
+            statusText.style.color = '#4CAF50';
+        } else {
+            // 아직 통과하지 못한 단어인 경우
+            progressBar.style.width = '0%';
+            progressBar.style.backgroundColor = '#f44336';
+            statusText.textContent = '마이크를 클릭하여 시작하세요';
+            statusText.style.color = '#666';
+        }
+        
+        updateNavigationButtons();
     }
 
     // 버튼 상태 업데이트 함수 추가
@@ -146,11 +165,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 녹음 중지
     function stopRecording() {
-        if (mediaRecorder && isRecording) {
+        if (mediaRecorder && mediaRecorder.state !== 'inactive') {
             mediaRecorder.stop();
+            mediaRecorder.stream.getTracks().forEach(track => track.stop());
             isRecording = false;
-            micButton.classList.remove('recording');
             statusText.textContent = '녹음이 완료되었습니다.';
+            micButton.classList.remove('recording');
             voiceLevelFill.style.width = '0%';
         }
     }

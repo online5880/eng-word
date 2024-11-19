@@ -26,7 +26,10 @@
 }
 
 .word-content {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
 .word-content h3 {
@@ -369,4 +372,40 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.sentence-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.hint-section, .word-section {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.hint-button, .word-button {
+    min-width: 100px;
+}
+
+.sentence {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.sentence-meaning {
+    font-size: 16px;
+    color: #666;
 }

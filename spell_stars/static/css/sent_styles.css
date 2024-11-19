@@ -1,24 +1,57 @@
-/* 페이지 전체 스타일 */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
 }
 
-/* 제목 스타일 */
-h1 {
-    font-size: 2rem;
+.back-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     margin-bottom: 20px;
 }
 
-/* 마이크 버튼 */
+.word-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 500px;
+}
+
+.word-content {
+    margin-bottom: 20px;
+}
+
+.word-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.word-content p {
+    font-size: 18px;
+    color: #666;
+}
+
+.example-section {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.example-section p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+}
+
 .controls {
     margin: 20px 0;
 }
@@ -157,34 +190,219 @@ h1 {
     border: 0;
 }
 
-/* 다음 단어 버튼 스타일 */
-#nextQuestionButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: #016ccf; /* Next Question 버튼 색상 */
+.styled-button {
+    background-color: #4CAF50; /* 버튼 배경색 */
+    color: white; /* 글자색 */
+    padding: 10px 20px; /* 버튼 안 여백 */
+    font-size: 16px; /* 글자 크기 */
+    font-weight: bold; /* 글자 굵기 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 둥근 모서리 */
+    cursor: pointer; /* 마우스 포인터 */
+    transition: background-color 0.3s ease; /* 색 변경 애니메이션 */
+  }
+  
+  .styled-button:hover {
+    background-color: #45a049; /* 호버 시 배경색 */
+  }
+  
+  .styled-button:active {
+    background-color: #3e8e41; /* 클릭 시 배경색 */
+  }
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.navigation-buttons .nav-button {
+    background-color: #4CAF50;
     color: white;
-    margin: 10px 5px;
+    padding: 8px 16px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#nextQuestionButton:hover {
-    background-color: #005bb5; /* Next Question 버튼 hover 색상 */
+.navigation-buttons .nav-button:hover {
+    background-color: #45a049;
 }
 
-/* 나가기 버튼 스타일 */
-#exitPracticeButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: #016ccf; /* Exit Practice 버튼 색상 */
+#cardIndex {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 1rem;
+}
+
+.word-cards {
+    position: relative;
+}
+
+.word-card {
+    transition: opacity 0.3s ease;
+}
+
+.category-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.random-category-btn {
+    background-color: #4CAF50;
     color: white;
-    margin: 10px 5px;
+    padding: 15px 30px;
     border: none;
+    border-radius: 25px;
     cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
 }
 
-#exitPracticeButton:hover {
-    background-color: #005bb5; /* Exit Practice 버튼 hover 색상 */
+.random-category-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.random-category-btn:active {
+    transform: scale(0.95);
+}
+
+.random-category-btn i {
+    font-size: 20px;
+}
+
+.start-btn {
+    background-color: #2196F3;  /* 파란색 계열로 변경 */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.start-btn:hover {
+    background-color: #1976D2;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.start-btn:active {
+    transform: scale(0.95);
+}
+
+.start-btn i {
+    font-size: 20px;
+}
+
+.nav-button.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.nav-button.disabled:hover {
+    background-color: #cccccc;
+}
+
+.status-text {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+}
+
+.sentence-mode-btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.sentence-mode-btn:hover {
+    background-color: #1976D2;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.sentence-mode-btn i {
+    font-size: 20px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sentence-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.hint-section, .word-section {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.hint-button, .word-button {
+    min-width: 100px;
+}
+
+.sentence {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.sentence-meaning {
+    font-size: 18px;
+    color: #666;
 }
