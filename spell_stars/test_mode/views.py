@@ -21,7 +21,7 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 
 model = apps.get_app_config('spell_stars').whisper_model
 
-TOTAL_QUESTIONS = 2
+TOTAL_QUESTIONS = 10
 MAX_SCORE = 100
 POINTS_PER_QUESTION = MAX_SCORE / TOTAL_QUESTIONS
 
@@ -159,11 +159,6 @@ def submit_audio(request):
                     "is_correct": is_correct,
                 }
             )
-            # 마지막 문제인지를 확인하고, 그 후에 결과를 저장해야 합니다
-            is_last_question = request.session.get("is_last_question", False)
-            
-            if is_last_question and (is_correct or not is_correct):
-                save_all_test_results(request)
 
             # 성공 응답 반환
             return JsonResponse(
@@ -235,7 +230,7 @@ def save_all_test_results(request):
         student = StudentInfo.objects.get(id=user_id)
         answers = request.session.get("answers", [])
 
-        correct_answers = sum([1 for answer in answers if answer["is_correct"]])
+        correct_answers = sum([1 for answer in answers if answer.get("is_correct")])
         score = calculate_score(correct_answers)
 
         test_number = request.session.get("test_number", 1)
@@ -251,26 +246,32 @@ def save_all_test_results(request):
         result.save()
 
         print(f"Test result saved: {result}")
-        
-        return render(request, 'test_mode/results.html', {"results": [result]})
+
+        # 저장 후 세션 초기화
+        request.session.pop("answers", None)
+        request.session.pop("test_number", None)
+        request.session.pop("is_last_question", None)
+        request.session.pop("current_question_index", None)
+
+        return result
 
     except StudentInfo.DoesNotExist:
         print(f"Student with id {user_id} does not exist.")
         raise
-    
-    
+
+
 def results_view(request):
     try:
-        # 가장 최근의 시험 결과를 가져옵니다.
-        latest_result = TestResult.objects.filter(student=request.user).order_by('-test_date').first()
-        
+        # 결과 저장
+        latest_result = save_all_test_results(request)
+
         if latest_result:
-            # 최신 결과가 존재하면, 이를 결과 페이지에 전달
+            # 저장된 결과를 결과 페이지로 전달
             return render(request, 'test_mode/results.html', {'result': latest_result})
         else:
             # 결과가 없을 경우 메시지 전달
             return render(request, 'test_mode/results.html', {'error': 'No results found.'})
-    
+
     except TestResult.DoesNotExist:
         # 예외 처리 (테스트 결과가 없을 경우)
         return render(request, 'test_mode/results.html', {'error': 'Test result not found.'})
