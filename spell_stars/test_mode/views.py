@@ -7,6 +7,7 @@ from vocab_mode.models import Word
 from sent_mode.models import Sentence
 from accounts.models import StudentInfo
 import os
+import re
 from django.db.models import Max
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
@@ -34,22 +35,22 @@ def test_mode_view(request):
     print("test_mode_view called")
 
     # 단어 선택 동적으로 처리
-    random_word_ids = Word.objects.values_list("id", flat=True).order_by("?")[:TOTAL_QUESTIONS]
+    word_id = Word.objects.values_list("id", flat=True).order_by("?").first()
 
-    if random_word_ids:
+    if word_id:
         sentences = []
-        for word_id in random_word_ids:
-            sentence = Sentence.objects.filter(word_id=word_id).order_by("?").first()
-            word = Word.objects.get(id=word_id)
-            if sentence:
-                sentence_with_blank = sentence.sentence.replace(word.word, "_____")
-                sentences.append(
-                    {
-                        "sentence": sentence_with_blank,
-                        "word": word.word,
-                        "sentence_meaning": sentence.sentence_meaning
-                    }
-                )
+        sentence = Sentence.objects.filter(word_id=word_id).order_by("?").first()
+        word = Word.objects.get(id=word_id)
+        if sentence:
+            sentence_with_blank = sentence.sentence.replace(word.word, "_____")
+            sentences.append(
+                {
+                    "sentence": sentence_with_blank,
+                    "word_id": word.id,
+                    "word": word.word,
+                    "sentence_meaning": sentence.sentence_meaning
+                }
+            )
 
         if not sentences:
             return JsonResponse(
@@ -71,7 +72,7 @@ def test_mode_view(request):
 
         # 첫 번째 문제 렌더링
         current_question = sentences[0]
-        request.session["target_word"] = current_question["word"]  # target_word 설정
+        request.session["target_word"] = [current_question["word_id"]]  # target_word 설정
 
         # 학습 시작 로그 생성
         start_learning_session(request, learning_mode=1)
@@ -121,7 +122,7 @@ def submit_audio(request):
                 default_storage.delete(file_path)
 
             # 새 파일 저장
-            full_path = default_storage.save(
+            full_student_audio_path = default_storage.save(
                 file_path, ContentFile(request.FILES["audio"].read())
             )
             
@@ -132,20 +133,41 @@ def submit_audio(request):
             transcript = result["text"]
             print(f"Transcript from Whisper: {transcript}")
 
-            # 예문에서 정답 단어와 비교하여 점수 계산
-            target_word = word
-            is_correct = target_word.lower() in transcript.lower()
+            # 정답 단어와 비교 (특수문자 제외)
+            def clean_text(text):
+                """특수문자를 제거하고 소문자로 변환"""
+                return re.sub(r"[^\w\s]", "", text).lower()
+
+            clean_transcript = clean_text(transcript)
+            clean_target_word = clean_text(word)
+
+            is_correct = clean_target_word in clean_transcript.split()
+
+            if is_correct:
+                score = "정답입니다!"
+            else:
+                score = f"틀렸습니다. 정답은 '{word}'입니다."
 
             # 답을 세션에 저장
-            question_index = request.session.get("current_question_index", 0)
             if "answers" not in request.session:
                 request.session["answers"] = []
 
             request.session["answers"].append(
                 {
-                    "word": target_word,
+                    "word": word,
                     "transcript": transcript,
                     "is_correct": is_correct,
+                }
+            )
+
+            # 성공 응답 반환
+            return JsonResponse(
+                {
+                    "status": "success",
+                    "file_path": full_student_audio_path,
+                    "is_correct": is_correct,  # True/False 그대로 유지
+                    "score_message": score,   # 친화적 메시지 추가
+                    "message": "음성 파일이 성공적으로 저장되고 발음 평가가 완료되었습니다.",
                 }
             )
 
@@ -162,7 +184,7 @@ def next_question(request):
     print("next_question called")
 
     # 세션에서 이미 푼 단어의 인덱스를 가져옵니다.
-    answered_words = request.session.get("answered_words", [])
+    answered_words = request.session.get("target_word", [])
 
     # 이미 푼 단어를 제외하고 랜덤으로 하나 가져오기
     next_word = Word.objects.exclude(id__in=answered_words).order_by("?").first()
@@ -178,26 +200,32 @@ def next_question(request):
     answered_words.append(next_word.id)
 
     # 세션에 갱신된 answered_words 리스트 저장
-    request.session["answered_words"] = answered_words
+    request.session["target_word"] = answered_words
 
     # 해당 단어의 예문을 불러옵니다.
     sentence = Sentence.objects.filter(word=next_word).first()
+    sentence_with_blank = sentence.sentence.replace(next_word.word, "_____")
 
-    # 문제 수가 5번에 다다르면 결과 저장
+    # 문제 끝나면 결과 저장
     current_question_index = request.session.get("current_question_index", 0) + 1
     request.session["current_question_index"] = current_question_index
 
-    if current_question_index == TOTAL_QUESTIONS:
+    # 마지막 문제인지 확인
+    is_last_question = current_question_index >= (TOTAL_QUESTIONS-1)
+
+    if is_last_question:
         save_all_test_results(request)
 
     return JsonResponse(
         {
             "success": True,
             "word": next_word.word,
-            "sentence": sentence.sentence if sentence else "No sentence available.",
+            "sentence": sentence_with_blank if sentence else "No sentence available.",
             "sentence_meaning": sentence.sentence_meaning if sentence else "No sentence meaning available.",
+            "is_last_question": is_last_question,  # 마지막 문제 여부 추가
         }
     )
+
 
 
 def save_all_test_results(request):
@@ -218,13 +246,12 @@ def save_all_test_results(request):
             test_number=test_number,
             test_date=test_date,
             accuracy_score=score,
-            frequency_score=0,
         )
         result.save()
 
         print(f"Test result saved: {result}")
         
-        return redirect("main")
+        return render(request, 'test_mode/results.html', {"results": [result]})
 
     except StudentInfo.DoesNotExist:
         print(f"Student with id {user_id} does not exist.")

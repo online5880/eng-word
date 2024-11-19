@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결과 페이지</title>
+</head>
+<body>
+    <h1>테스트 결과</h1>
+    <ul>
+        {% for result in results %}
+            <li>테스트 날짜: {{ result.test_date }} | 점수: {{ result.accuracy_score }} / 100</li>
+        {% endfor %}
+    </ul>
+    <a href="">나가기</a>
+</body>
+</html>

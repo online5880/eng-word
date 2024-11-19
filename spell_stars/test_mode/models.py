@@ -8,4 +8,3 @@ class TestResult(models.Model):
     test_number = models.IntegerField()
     test_date = models.DateTimeField()
     accuracy_score = models.IntegerField()
-    frequency_score = models.IntegerField()

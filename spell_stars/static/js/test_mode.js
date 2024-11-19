@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const micButton = document.getElementById('micButton');
+    const audioPlayer = document.getElementById('audioPlayer');
     const statusText = document.querySelector('.status-text');
     const voiceLevelFill = document.querySelector('.voice-level-fill');
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
@@ -73,16 +74,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const data = await response.json();
                 console.log('서버 응답:', data);
-                if (data.success === 'true') {
+                if (data.file_path) {
                     statusText.textContent = '녹음이 성공적으로 저장되었습니다.';
                     if (audioPlayer) {
                         audioPlayer.src = '/' + data.file_path;
                     }
 
                     // 서버에서 점수 받기
-                    if (data.score !== undefined) {
-                        console.log('서버에서 받은 점수:', data.score);  // 점수 출력
-                        displayFeedback(data.score);  // 점수 표시
+                    if (data.score_message !== undefined) {
+                        console.log('서버에서 받은 점수:', data.score_message);  // 점수 출력
+                        const scoreDisplay = document.getElementById("scoreDisplay");
+                        if (scoreDisplay) {
+                            // 점수 메시지 업데이트
+                            scoreDisplay.textContent = data.score_message;
+                        }
                     }
                 } else {
                     statusText.textContent = '녹음 저장에 실패했습니다.';
@@ -131,25 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // 피드백 표시
-    function displayFeedback(isCorrect) {
-        const feedbackElement = document.getElementById("feedback");
-        const feedbackSection = document.getElementById("feedback-section");
-        const scoreBar = document.getElementById("score-bar");
-
-        if (isCorrect) {
-            feedbackElement.textContent = '정답입니다!';
-            feedbackSection.style.display = 'block';
-            scoreBar.style.width = '100%';
-            scoreBar.className = 'green';
-        } else {
-            feedbackElement.textContent = '오답입니다.';
-            feedbackSection.style.display = 'block';
-            scoreBar.style.width = '0%';
-            scoreBar.className = 'red';
-        }
-    }
-
     // 다음 문제 요청 시 단어 갱신
     function nextQuestion() {
         console.log('다음 단어 요청');
@@ -168,15 +154,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // 예문 갱신
                 document.getElementById('sentence').textContent = data.sentence;
+                // 예문 뜻 갱신
+                document.getElementById('sentence-meaning').textContent = data.sentence_meaning;
 
                 // 점수 초기화
-                document.getElementById("score").textContent = '0';
-                document.getElementById("score-bar").style.width = '0%';
-                document.getElementById("feedback").textContent = '';
-                document.getElementById("feedback-section").style.display = 'none';
+                document.getElementById("scoreDisplay").textContent = '';
+
+                // 마지막 문제일 경우 버튼을 나가기 버튼으로 변경
+                if (data.is_last_question) {
+                    document.getElementById('nextQuestionBtn').textContent = '나가기';
+                    document.getElementById('nextQuestionBtn').removeEventListener('click', nextQuestion);
+                    document.getElementById('nextQuestionBtn').addEventListener('click', exitTest);
+                } else {
+                    document.getElementById('nextQuestionBtn').textContent = '다음 문제';
+                    document.getElementById('nextQuestionBtn').removeEventListener('click', exitTest);
+                    document.getElementById('nextQuestionBtn').addEventListener('click', nextQuestion);
+                }
             } else {
                 console.log('새 단어를 가져오지 못했습니다.');
-                // 모든 문제를 완료한 경우 세션 리셋 또는 다시 시작 요청
                 alert('모든 문제를 완료했습니다. 새로 시작하려면 학습을 종료하고 다시 시작하세요.');
             }
         })
@@ -185,10 +180,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 이벤트 리스너 추가
-    const nextQuestionButton = document.getElementById("nextQuestionButton");
+    // 나가기 버튼 클릭 시 학습 종료
+    function exitTest() {
+        window.location.href = '/';  // 홈 화면이나 결과 페이지로 리디렉션
+    }
 
-    if (nextQuestionButton) {
-        nextQuestionButton.addEventListener('click', nextQuestion);
+    // 이벤트 리스너 추가
+    const nextQuestionBtn = document.getElementById("nextQuestionBtn");
+
+    if (nextQuestionBtn) {
+        nextQuestionBtn.addEventListener('click', nextQuestion);
     }
 });
