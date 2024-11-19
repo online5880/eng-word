@@ -13,4 +13,6 @@ urlpatterns = [
         views.next_question,
         name="next_question",
     ),  # 다음 문제로 이동하는 URL
+    
+    path('results/', views.results_view, name='results'),
 ]

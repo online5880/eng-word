@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 나가기 버튼 클릭 시 학습 종료
     function exitTest() {
-        window.location.href = '/';  // 홈 화면이나 결과 페이지로 리디렉션
+        window.location.href = 'results';  // 결과 페이지로 리디렉션
     }
 
     // 이벤트 리스너 추가

@@ -159,6 +159,11 @@ def submit_audio(request):
                     "is_correct": is_correct,
                 }
             )
+            # 마지막 문제인지를 확인하고, 그 후에 결과를 저장해야 합니다
+            is_last_question = request.session.get("is_last_question", False)
+            
+            if is_last_question and (is_correct or not is_correct):
+                save_all_test_results(request)
 
             # 성공 응답 반환
             return JsonResponse(
@@ -213,9 +218,6 @@ def next_question(request):
     # 마지막 문제인지 확인
     is_last_question = current_question_index >= (TOTAL_QUESTIONS-1)
 
-    if is_last_question:
-        save_all_test_results(request)
-
     return JsonResponse(
         {
             "success": True,
@@ -225,7 +227,6 @@ def next_question(request):
             "is_last_question": is_last_question,  # 마지막 문제 여부 추가
         }
     )
-
 
 
 def save_all_test_results(request):
@@ -256,3 +257,20 @@ def save_all_test_results(request):
     except StudentInfo.DoesNotExist:
         print(f"Student with id {user_id} does not exist.")
         raise
+    
+    
+def results_view(request):
+    try:
+        # 가장 최근의 시험 결과를 가져옵니다.
+        latest_result = TestResult.objects.filter(student=request.user).order_by('-test_date').first()
+        
+        if latest_result:
+            # 최신 결과가 존재하면, 이를 결과 페이지에 전달
+            return render(request, 'test_mode/results.html', {'result': latest_result})
+        else:
+            # 결과가 없을 경우 메시지 전달
+            return render(request, 'test_mode/results.html', {'error': 'No results found.'})
+    
+    except TestResult.DoesNotExist:
+        # 예외 처리 (테스트 결과가 없을 경우)
+        return render(request, 'test_mode/results.html', {'error': 'Test result not found.'})
