@@ -34,6 +34,7 @@ urlpatterns = [
     path("vocab/", include("vocab_mode.urls")),  # 단어 학습 모드
     path("test/", include("test_mode.urls")),  # 테스트 모드
     path("practice/", include("pron_practice.urls")),  # 발음 연습 모드
+    path("sent/",include("sent_mode.urls")),
 
     # API 문서 URL
     path("api/v1/swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),

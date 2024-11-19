@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>시험 모드</title>
   <meta name="csrf-token" content="{{ csrf_token }}">
-  <link rel="stylesheet" href="{% static 'css/test_styles.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/test_styles.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
@@ -19,11 +19,12 @@
     <p>다음 문장의 빈칸에 들어갈 단어를 맞혀보세요:</p>
 
     <!-- 문제 문장 -->
-    <p>{{ sentence }}</p>
+    <p id="sentence">{{ sentence }}</p>
+    <p id="sentence-meaning">{{ sentence_meaning }}</p>
 
-    <!-- 녹음 버튼 및 음성 미리보기 -->
+    <!-- 녹음 버튼 (마이크 아이콘) -->
     <div class="controls">
-      <button class="mic-status" id="micButton" onclick="startRecording()">
+      <button class="mic-status" id="micButton">
         <div class="mic-icon">
           <i class="fas fa-microphone"></i>
         </div>
@@ -54,32 +55,11 @@
     </div>
 
     <!-- 다음 문제 버튼 -->
-    <button id="next-question-btn" disabled onclick="nextQuestion()">다음 문제</button>
+    <button id="next-question-btn" disabled>다음 문제</button>
 
-    <!-- JS 파일 경로 설정 -->
-    <script src="{% static 'js/test_mode.js' %}"></script>
-
-    <script>
-      // Django 템플릿에서 전달된 변수
-      const questionId = "{{ question_id }}"; // question id
-      const currentWord = "{{ answer }}"; // 정답 단어 (빈칸에 들어갈 단어)
-
-      // 확인용으로 출력
-      console.log("Question ID:", questionId);
-      console.log("Current Word:", currentWord);
-
-      // JavaScript에서 사용할 수 있게 값 설정
-      window.questionId = questionId;
-      window.currentWord = currentWord;
-
-      // CSRF 토큰을 meta 태그에서 가져와서 JavaScript에 설정
-      window.csrfToken = document
-        .querySelector('meta[name="csrf-token"]')
-        .content;
-      console.log("CSRF Token:", window.csrfToken); // CSRF 토큰 확인
-    </script>
   </div>
 
+  <script src="{% static 'js/test_mode.js' %}"></script> <!-- 외부 JavaScript 파일 연결 -->
 </body>
 
 </html>

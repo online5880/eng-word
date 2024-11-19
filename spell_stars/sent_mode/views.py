@@ -1,78 +1,128 @@
-from django.http import JsonResponse
+import os
+import random
 from django.shortcuts import render
-from .models import Sentence, LearningResult
+from django.http import JsonResponse
+from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import redirect
 from vocab_mode.models import Word
-from accounts.models import User
+from accounts.models import StudentInfo
+import warnings
 from django.apps import apps
+from utils.PronunciationChecker.manage import process_audio_files
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+from .models import Sentence, LearningResult
 
-# Whisper 모델 초기화 (whisper-small)
-model = apps.get_app_config('spell_stars').whisper_model
+warnings.filterwarnings("ignore", category=FutureWarning)
+
+# Whisper 모델 로드 (small 모델 사용)
+model = apps.get_app_config("spell_stars").whisper_model
 
 
 # 예문 학습 페이지 렌더링
+from django.shortcuts import redirect, render
+from .models import Word, Sentence
+
+# 예문 학습 페이지 렌더링
 def example_sentence_learning(request):
-    # 사용자가 이미 학습한 테마 중 랜덤으로 하나 선택
     user = request.user
-    selected_theme = user.selected_theme  # 사용자가 선택한 테마 (랜덤 선택 로직 필요)
+    # 세션에서 선택된 단어들 가져오기
+    selected_words = request.session.get('selected_words', None)
+    
+    selected_words_list = [item['word'] for  item in selected_words]
 
-    # 예문 테이블에서 해당 테마의 예문 랜덤으로 가져오기
-    sentences = Sentence.objects.filter(theme_id=selected_theme.id).order_by("?")[:5]
+    # selected_words에서 Word 모델 객체들을 찾아서 필터링
+    word_objects = Word.objects.filter(word__in=selected_words_list)
+    print("sent words : ",word_objects)
 
-    # 예문 정보 준비 (빈칸으로 대체된 예문과 그 의미 포함)
+    # 세션에 저장된 단어들에 해당하는 예문들 가져오기
+    sentences = Sentence.objects.filter(word__in=word_objects).order_by("?")
+    # print("sent sentence : ",sentence)
+
+    # 예문에 단어를 빈칸으로 대체
+    blank_sentences = []
+    for sentence in sentences:
+        # 단어의 길이만큼 언더바 생성
+        word_length = len(sentence.word.word)
+        blank = "_" * word_length  # 예: "toilet" -> "______"
+
+        # 문장에서 해당 단어를 언더바로 대체
+        blank_sentence = sentence.sentence.replace(sentence.word.word, blank)
+        blank_sentences.append({
+            "sentence": blank_sentence,
+            "meaning": sentence.sentence_meaning,
+            "word": sentence.word.word
+        })
+
     context = {
-        "sentences": sentences,
+        "sentences": blank_sentences,
+        "selected_words": selected_words
     }
-
+    
     return render(request, "sent_mode/sent_practice.html", context)
 
 
-# 음성 인식 처리 (Whisper 사용)
-def recognize_audio(request, sentence_id):
-    if request.method == "POST":
-        audio_file = request.FILES.get("audio_file")  # 사용자가 제출한 오디오 파일
-        sentence = Sentence.objects.get(id=sentence_id)  # 해당 예문 찾기
-        word = sentence.word.word  # 예문에서 해당 단어 (정답)
+@csrf_exempt
+def upload_audio(request):
+    if request.method == "POST" and request.FILES.get("audio"):
+        try:
+            audio_file = request.FILES["audio"]
+            current_word = request.POST.get("word", "unknown")
+            user_id = request.user.id if request.user.is_authenticated else "anonymous"
+            
+            # 저장 경로 설정
+            save_path = f"audio_files/students/user_{user_id}/"
+            os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
 
-        # 음성 파일 저장 (임시 저장)
-        with open("audio_temp.wav", "wb") as f:
-            for chunk in audio_file.chunks():
-                f.write(chunk)
+            # 파일 이름 설정
+            file_name = f"{current_word}.wav"
+            file_path = os.path.join(save_path, file_name)
 
-        # Whisper 모델로 음성 파일 텍스트 변환
-        result = model.transcribe("audio_temp.wav")
-        transcript = result["text"]  # 음성 인식 결과
+            # 기존 파일이 있으면 삭제
+            if default_storage.exists(file_path):
+                default_storage.delete(file_path)
 
-        # 음성 인식 결과와 정답 비교
-        is_correct = transcript.lower() == word.lower()
+            # 새 파일 저장
+            full_path = default_storage.save(
+                file_path, ContentFile(audio_file.read())
+            )
+            
+            native_audio_path = os.path.join(
+                settings.MEDIA_ROOT, "audio_files/native/", f"{current_word}.wav"
+            )
+            student_audio_path = os.path.join(
+                settings.MEDIA_ROOT, save_path, f"{current_word}.wav"
+            )
+            
+            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
+            print(student_audio_path)
+            print(native_audio_path)
+            # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
+            print("결과",result)
+            return JsonResponse({
+                "status": "success",
+                "message": "녹음이 완료되었습니다.",
+                "file_path": full_path,
+                "result":result
+            })
 
-        # 정오답 결과 처리
-        if is_correct:
-            feedback = {
-                "error": False,
-                "transcript": transcript,
-                "audio_url": "/media/audio_files/success.mp3",  # 성공시 반환할 오디오 파일
-            }
-        else:
-            feedback = {
-                "error": False,
-                "transcript": transcript,
-                "audio_url": "/media/audio_files/fail.mp3",  # 실패시 반환할 오디오 파일
-            }
+        except Exception as e:
+            return JsonResponse({
+                "status": "error",
+                "message": str(e)
+            }, status=500)
 
-        # 학습 결과 저장 (결과 테이블에 저장)
-        # 사용자 ID, 예문 ID, 정오답, 단어 사용 빈도 점수 등을 기반으로 결과 기록
-        result_data = {
-            "user_id": request.user.id,
-            "sentence_id": sentence.id,
-            "is_correct": is_correct,
-            "score": calculate_score(
-                is_correct, word, transcript
-            ),  # 사용자 정의 점수 계산 함수
-        }
+    return JsonResponse({
+        "status": "error",
+        "message": "잘못된 요청입니다."
+    }, status=400)
 
-        # 학습 결과 테이블에 저장
-        LearningResult.objects.create(**result_data)
 
-        return JsonResponse(feedback)
+def exit_learning_mode(request):
+    # 세션 초기화
+    if 'selected_theme' in request.session:
+        del request.session['selected_theme']
 
-    return JsonResponse({"error": "Invalid request"}, status=400)
+    # 메인 페이지로 리디렉션
+    return redirect('home')  # 홈 페이지로 이동

@@ -1,41 +1,46 @@
 <!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
-<html lang="ko">
+{% block content %}
 
   <head>
-    <meta charset="UTF-8">
     <title>단어장</title>
     <link rel="stylesheet" href="{% static 'css/vocab_styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script>
-      // JavaScript에서 사용할 Django URL과 CSRF 토큰 설정
-      const uploadAudioUrl = "{% url 'upload_audio' %}";
+      const uploadAudioUrl = "{% url 'vocab_upload_audio' %}";
       const csrfToken = "{{ csrf_token }}";
-    </script>
+  </script>
   </head>
 
   <body>
     <div class="container">
       <button class="back-button" onclick="location.href='{% url 'index' %}'">돌아가기</button>
-      <h1>단어장</h1>
+      <h1>단어 연습</h1>
+      
+      <div class="navigation-buttons">
+        <button id="prevButton" class="nav-button styled-button">◀ 이전</button>
+        <span id="cardIndex">1/{{ words|length }}</span>
+        <button id="nextButton" class="nav-button styled-button">다음 ▶</button>
+      </div>
 
       <div class="word-cards">
         {% for word in words %}
         {% if word %}
-          <div class="word-card">
+          <div class="word-card" {% if not forloop.first %}style="display: none;"{% endif %}> 
             <div class="word-content">
               <h3>{{ word.word }}</h3>
-              <p>{{ word.meanings }}</p>
+              <p>{{ word.meanings|join:", " }}</p>
+              {% comment %} <p>{{ word.category }}</p> {% endcomment %}
             </div>
             <div class="example-section">
-              <p><strong>예문:</strong> {{ word.examples.0.영문 }}</p>
-              <p><strong>예문 뜻:</strong> {{ word.examples.0.한글 }}</p>
+              <p><strong>예문:</strong> {{ word.examples.0.english }}</p>
+              <p><strong>예문 뜻:</strong> {{ word.examples.0.korean }}</p>
             </div>
       
-            <!-- 오디오 재생 버튼 -->
             <div class="audio-controls">
-              {% if word.audio_file %}
-                <button class="playAudioButton styled-button" data-audio="{{ MEDIA_URL }}{{ word.audio_file }}">🔊 원어민 발음 듣기</button>
+              {% if word.file_path %}
+                <button class="playAudioButton styled-button" data-audio="{{ MEDIA_URL }}{{ word.file_path }}">🔊 발음 듣기</button>
               {% else %}
                 <p>원어민 음성 파일이 존재하지 않습니다.</p>
               {% endif %}
@@ -45,10 +50,8 @@
         {% endfor %}
       </div>
       
-      <!-- 공통 오디오 플레이어 (화면에는 표시되지 않음) -->
       <audio id="audioPlayer" preload="auto"></audio>
       
-
       <div class="controls">
         <button class="mic-status" id="micButton">
           <div class="mic-icon">
@@ -68,5 +71,4 @@
 
     <script src="{% static 'js/vocab_script.js' %}"></script>
   </body>
-
-</html>
+{% endblock %}
