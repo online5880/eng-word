@@ -4,7 +4,7 @@ from vosk import Model, KaldiRecognizer
 from difflib import SequenceMatcher
 
 # 모델
-model = Model("C:/Users/user/Desktop/eng-word/utils/PronunciationChecker/PC_Pipeline/model/vosk-model-en-us-0.22")
+model = Model("C:/Users/user/Desktop/eng-word/spell_stars/utils/PronunciationChecker/model/vosk-model-en-us-0.22")
 
 
 def transcribe_audio_vosk(audio_path):

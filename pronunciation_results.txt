@@ -1,0 +1,1 @@
+{'native_file': 'project_native.wav', 'student_file': 'project_student.wav', 'formant_score': 90.18589178699438, 'phoneme_score': 100.0, 'overall_score': 97.37412279290602}
