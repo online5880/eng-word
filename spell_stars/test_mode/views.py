@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.conf import settings
 from django.core.files.storage import default_storage
-from .models import TestResult
+from .models import TestResult, TestResultDetail
 from vocab_mode.models import Word
 from sent_mode.models import Sentence
 from accounts.models import StudentInfo
@@ -154,6 +154,7 @@ def submit_audio(request):
 
             request.session["answers"].append(
                 {
+                    "word_id": Word.objects.get(word=word).id,  # ID 저장
                     "word": word,
                     "transcript": transcript,
                     "is_correct": is_correct,
@@ -230,34 +231,50 @@ def save_all_test_results(request):
         student = StudentInfo.objects.get(id=user_id)
         answers = request.session.get("answers", [])
 
-        correct_answers = sum([1 for answer in answers if answer.get("is_correct")])
+        correct_answers = sum([1 for answer in answers if answer["is_correct"]])
         score = calculate_score(correct_answers)
 
         test_number = request.session.get("test_number", 1)
         test_date = timezone.now()
 
         # 시험 결과 저장
-        result = TestResult(
+        test_result = TestResult.objects.create(
             student=student,
             test_number=test_number,
             test_date=test_date,
             accuracy_score=score,
         )
-        result.save()
 
-        print(f"Test result saved: {result}")
+        # 단어별 상세 결과 저장
+        for answer in answers:
+            word_id = answer.get("word_id")
+            word = Word.objects.get(id=word_id)
 
+            # Sentence를 Word 기반으로 조회
+            sentence_obj = Sentence.objects.filter(word=word).first()
+
+            TestResultDetail.objects.create(
+                test_result=test_result,
+                word=word,
+                sentence=sentence_obj.sentence if sentence_obj else "No sentence provided",
+                sentence_meaning=sentence_obj.sentence_meaning if sentence_obj else "No meaning provided",
+                is_correct=answer.get("is_correct"),
+            )
+
+        print(f"Test result and details saved: {test_result}")
+
+        return test_result
+
+    except Exception as e:
+        print(f"Error saving test results: {e}")
+        raise
+    
+    finally:
         # 저장 후 세션 초기화
         request.session.pop("answers", None)
         request.session.pop("test_number", None)
         request.session.pop("is_last_question", None)
         request.session.pop("current_question_index", None)
-
-        return result
-
-    except StudentInfo.DoesNotExist:
-        print(f"Student with id {user_id} does not exist.")
-        raise
 
 
 def results_view(request):
@@ -266,12 +283,16 @@ def results_view(request):
         latest_result = save_all_test_results(request)
 
         if latest_result:
-            # 단일 결과를 리스트로 감싸 템플릿에 전달
-            return render(request, 'test_mode/results.html', {'results': [latest_result]})
+            # 시험 결과에 속한 세부 정보를 가져오기
+            details = TestResultDetail.objects.filter(test_result=latest_result)
+            
+            return render(
+                request, 
+                'test_mode/results.html', 
+                {'result': latest_result, 'details': details}
+            )
         else:
-            # 결과가 없을 경우 메시지 전달
-            return render(request, 'test_mode/results.html', {'results': [], 'error': 'No results found.'})
+            return render(request, 'test_mode/results.html', {'error': 'No results found.'})
 
     except TestResult.DoesNotExist:
-        # 예외 처리 (테스트 결과가 없을 경우)
-        return render(request, 'test_mode/results.html', {'results': [], 'error': 'Test result not found.'})
+        return render(request, 'test_mode/results.html', {'error': 'Test result not found.'})

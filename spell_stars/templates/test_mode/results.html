@@ -7,11 +7,29 @@
 </head>
 <body>
     <h1>테스트 결과</h1>
-    <ul>
-        {% for result in results %}
-            <li>테스트 날짜: {{ result.test_date }} | 점수: {{ result.accuracy_score }} / 100</li>
-        {% endfor %}
-    </ul>
+    {% if result %}
+        <p>테스트 날짜: {{ result.test_date }}</p>
+        <p>점수: {{ result.accuracy_score }} / 100</p>
+        
+        <h2>단어별 결과</h2>
+        <ul>
+            {% for detail in details %}
+                <li>
+                    <strong>단어:</strong> {{ detail.word.word }}<br>
+                    <strong>예문:</strong> {{ detail.sentence }}<br>
+                    <strong>예문 뜻:</strong> {{ detail.sentence_meaning }}<br>
+                    <strong>정오답 여부:</strong> 
+                    {% if detail.is_correct %}
+                        정답
+                    {% else %}
+                        오답
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>결과가 없습니다.</p>
+    {% endif %}
     <a href="/">나가기</a>
 </body>
 </html>
