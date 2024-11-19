@@ -74,7 +74,6 @@ def main():
     # print("Generating sentences from extracted words...")
     # generate_sentences(extracted_words_path, vector_store_path, csv_output_path)
 
-<<<<<<< HEAD
     # Step 6: 생성된 문장에 대해 문법 검사 수행
     print("Evaluating grammar in generated sentences...")
     pipeline = SentenceEvaluationPipeline()
@@ -83,16 +82,6 @@ def main():
     # 결과 저장
     results_df.to_csv(grammar_results_path, index=False, encoding="utf-8-sig")
     print(f"Grammar evaluation completed. Results saved to {grammar_results_path}")
-=======
-    # # Step 6: 생성된 문장에 대해 문법 검사 수행
-    # print("Evaluating grammar in generated sentences...")
-    # pipeline = SentenceEvaluationPipeline()
-    # results_df = pipeline.process_all_sentences(csv_output_path)
-
-    # # 결과 저장
-    # results_df.to_csv(grammar_results_path, index=False, encoding="utf-8-sig")
-    # print(f"Grammar evaluation completed. Results saved to {grammar_results_path}")
->>>>>>> origin/feature/django/test
 
     # # Step 7: 생성된 문장 번역
     # translate_csv(grammar_results_path, final_sentence_path)
