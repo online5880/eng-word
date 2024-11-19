@@ -62,7 +62,6 @@ def example_sentence_learning(request):
     
     return render(request, "sent_mode/sent_practice.html", context)
 
-
 @csrf_exempt
 def upload_audio(request):
     if request.method == "POST" and request.FILES.get("audio"):
