@@ -4,8 +4,9 @@ import os
 from datetime import datetime
 import librosa
 import soundfile as sf
-# from .PC_Pipeline.Visualization import extract_formants, plot_formants, plot_waveforms
+from .PC_Pipeline.Visualization import extract_formants, plot_formants, plot_waveforms
 from .PC_Pipeline.Score import calculate_formant_score, calculate_phoneme_score, calculate_overall_score
+
 
 def cleanup_temp_dir(temp_dir):
     """주어진 임시 폴더를 삭제"""
@@ -54,15 +55,15 @@ def process_audio_files(native_file, student_file, expected_word, student_id):
         overall_score = calculate_overall_score(formant_score, phoneme_score)
 
         # 포먼트 추출 및 그래프 그리기
-        # times_native, f1_native, f2_native = extract_formants(trimmed_native_path)
-        # times_student, f1_student, f2_student = extract_formants(trimmed_student_path)
+        times_native, f1_native, f2_native = extract_formants(trimmed_native_path)
+        times_student, f1_student, f2_student = extract_formants(trimmed_student_path)
 
         # 그래프 저장 경로 설정
-        formant_save_path = os.path.join("media", f"formant_comparison_{os.path.basename(native_file)}_{os.path.basename(student_file)}.png")
-        # plot_formants(times_native, f1_native, f2_native, times_student, f1_student, f2_student, save_path=formant_save_path)
+        formant_save_path = os.path.join("media", f"formant_comparison_{os.path.basename(native_file)}.png").replace(".wav","")
+        plot_formants(times_native, f1_native, f2_native, times_student, f1_student, f2_student, save_path=formant_save_path)
 
-        waveform_save_path = os.path.join("media", f"waveform_comparison_{os.path.basename(native_file)}_{os.path.basename(student_file)}.png")
-        # plot_waveforms(trimmed_native_path, trimmed_student_path, save_path=waveform_save_path)
+        waveform_save_path = os.path.join("media", f"waveform_comparison_{os.path.basename(native_file)}.png").replace(".wav","")
+        plot_waveforms(trimmed_native_path, trimmed_student_path, save_path=waveform_save_path)
 
         result = {
             "native_file": native_file,

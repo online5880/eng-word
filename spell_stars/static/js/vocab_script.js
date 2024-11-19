@@ -122,6 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         // 결과 보여주기
                         displayResult(data.result.result)
+                        console.log(data.result)
+                        
                         
                     } else {
                         throw new Error('녹음 저장 실패');

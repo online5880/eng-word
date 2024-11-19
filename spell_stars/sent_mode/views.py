@@ -103,7 +103,7 @@ def upload_audio(request):
                 "status": "success",
                 "message": "녹음이 완료되었습니다.",
                 "file_path": full_path,
-                "result":result
+                "result":result,
             })
 
         except Exception as e:

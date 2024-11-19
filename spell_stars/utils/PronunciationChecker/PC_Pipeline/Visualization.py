@@ -5,7 +5,8 @@ import librosa
 import soundfile as sf
 import os
 
-
+import matplotlib
+matplotlib.use("Agg")
 
 # 오디오의 시작 부분 무음 제거
 def trim_silence(file_path):
