@@ -7,7 +7,7 @@ from rest_framework import viewsets, mixins
 from rest_framework.permissions import IsAuthenticated
 from .models import StudentInfo, StudentLog, StudentLearningLog
 from .serializers import StudentInfoSerializer, StudentLogSerializer, StudentLearningLogSerializer
-
+from django.contrib import messages
 
 # Create your views here.
 
@@ -26,6 +26,7 @@ def signup(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             user = form.save()
+            messages.success(request, "회원가입 완료!")
             return redirect("/")
     else:
         form = SignupForm()

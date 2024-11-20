@@ -58,8 +58,13 @@ INSTALLED_APPS = [
     "drf_yasg",
     "accounts",
     "channels",
-
+    "crispy_forms",
+    "crispy_bootstrap5"
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 ASGI_APPLICATION = 'spell_stars.asgi.application'
 
