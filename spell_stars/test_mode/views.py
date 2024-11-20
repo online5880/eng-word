@@ -48,6 +48,7 @@ def test_mode_view(request):
         sentences = []
         sentence = Sentence.objects.filter(word_id=word_id).order_by("?").first()
         word = Word.objects.get(id=word_id)
+        request.session["problem_solved"] = 1
         if sentence:
             # 기존의 sentence.replace를 replace_word_with_blank로 변경
             sentence_with_blank = replace_word_with_blank(sentence.sentence, word.word)
@@ -93,6 +94,7 @@ def test_mode_view(request):
                 "word": current_question["word"],
                 "sentence_meaning": current_question["sentence_meaning"],
                 "MEDIA_URL": settings.MEDIA_URL,
+                "problem_solved": request.session["problem_solved"],
             },
         )
     else:
@@ -191,6 +193,8 @@ def submit_audio(request):
 
 def next_question(request):
     print("next_question called")
+    
+    request.session["problem_solved"] = request.session.get("problem_solved", 1) + 1
 
     # 세션에서 이미 푼 단어의 인덱스를 가져옵니다.
     answered_words = request.session.get("target_word", [])
@@ -213,7 +217,7 @@ def next_question(request):
 
     # 해당 단어의 예문을 불러옵니다.
     sentence = Sentence.objects.filter(word=next_word).first()
-    sentence_with_blank = sentence.sentence.replace(next_word.word, "_____")
+    sentence_with_blank = replace_word_with_blank(sentence.sentence, next_word.word)
 
     # 문제 끝나면 결과 저장
     current_question_index = request.session.get("current_question_index", 0) + 1
@@ -229,6 +233,7 @@ def next_question(request):
             "sentence": sentence_with_blank if sentence else "No sentence available.",
             "sentence_meaning": sentence.sentence_meaning if sentence else "No sentence meaning available.",
             "is_last_question": is_last_question,  # 마지막 문제 여부 추가
+            "problem_solved": request.session["problem_solved"],
         }
     )
 
@@ -283,6 +288,7 @@ def save_all_test_results(request):
         request.session.pop("test_number", None)
         request.session.pop("is_last_question", None)
         request.session.pop("current_question_index", None)
+        request.session.pop("problem_solved", None)
 
 
 def results_view(request):

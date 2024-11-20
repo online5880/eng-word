@@ -149,26 +149,35 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             console.log('다음 단어 응답:', data);
             if (data.success) {
+                const problemNumberElement = document.getElementById('problem-number');
+                if (problemNumberElement) {
+                    // 문제 번호 업데이트
+                    problemNumberElement.textContent = `문제 번호: ${data.problem_solved}`;
+                    console.log('문제 번호 갱신:', problemNumberElement.textContent);
+                } else {
+                    console.error('#problem-number 요소를 찾을 수 없습니다.');
+                }
+    
                 // 단어 갱신
                 document.getElementById('targeted-word').textContent = data.word;
-
+    
                 // 예문 갱신
                 document.getElementById('sentence').textContent = data.sentence;
-                // 예문 뜻 갱신
                 document.getElementById('sentence-meaning').textContent = data.sentence_meaning;
-
+    
                 // 점수 초기화
                 document.getElementById("scoreDisplay").textContent = '';
-
-                // 마지막 문제일 경우 버튼을 나가기 버튼으로 변경
+    
+                // 버튼 텍스트 및 이벤트 갱신
+                const nextButton = document.getElementById('nextQuestionBtn');
                 if (data.is_last_question) {
-                    document.getElementById('nextQuestionBtn').textContent = '나가기';
-                    document.getElementById('nextQuestionBtn').removeEventListener('click', nextQuestion);
-                    document.getElementById('nextQuestionBtn').addEventListener('click', exitTest);
+                    nextButton.textContent = '나가기';
+                    nextButton.removeEventListener('click', nextQuestion);
+                    nextButton.addEventListener('click', exitTest);
                 } else {
-                    document.getElementById('nextQuestionBtn').textContent = '다음 문제';
-                    document.getElementById('nextQuestionBtn').removeEventListener('click', exitTest);
-                    document.getElementById('nextQuestionBtn').addEventListener('click', nextQuestion);
+                    nextButton.textContent = '다음 문제';
+                    nextButton.removeEventListener('click', exitTest);
+                    nextButton.addEventListener('click', nextQuestion);
                 }
             } else {
                 console.log('새 단어를 가져오지 못했습니다.');
@@ -178,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => {
             console.error('AJAX 요청 오류:', error);
         });
-    }
+    }    
 
     // 나가기 버튼 클릭 시 학습 종료
     function exitTest() {
