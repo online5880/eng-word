@@ -26,6 +26,7 @@ def main():
     vector_store_path = os.path.join(base_directory, "sentence_vectorstore")
     grammar_results_path = os.path.join(base_directory, "grammar_results.csv")
     final_sentence_path = os.path.join(base_directory, "final_sentence.csv")
+    real_final_sentence_path = os.path.join(base_directory, "real_final_sentence.csv")
 
     # Create necessary directories
     os.makedirs(pdf_directory, exist_ok=True)
@@ -64,7 +65,7 @@ def main():
     # Step 8: Upload data to the database
     print("Uploading to database...")
     upload = Command()
-    upload.handle(csv_file=final_sentence_path)
+    upload.handle(csv_file=real_final_sentence_path)
     print("Upload completed. Results uploaded to Sentence.")
 
 if __name__ == "__main__":

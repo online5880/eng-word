@@ -72,75 +72,55 @@ def create_faiss_index(file_path, vector_store_path):
     except Exception as e:
         print(f"FAISS 벡터 스토어 저장 중 오류 발생: {e}")
         return
-    
-
-def generate_sentences(file_path, vector_store_path, output_path, num_sentences_per_word=5):
+def generate_sentences(file_path, vector_store_path, output_path):
     # LLM 설정
-    llm = ChatOllama(model="llama3.2", max_token=50, temperature=0.9, top_p=0.9)
+    llm = ChatOllama(model="llama3.2", max_token=60, temperature=0.8)
 
     # 프롬프트 템플릿 설정
     prompt_template = PromptTemplate(
         input_variables=["query"],
-        template="""
-        Create one clear, meaningful sentence using the word '{query}' exactly as it is.
+        template="""\
+Your task is to create one meaningful and natural English sentence for elementary school vocabulary learning. Follow these rules carefully:
 
-        Rules:
-        - The sentence must be a single declarative sentence.
-        - It must include the word '{query}' without changes or additional forms.
-        - The sentence should be between 6 and 8 words long.
-        - Use simple words suitable for elementary school students.
+- The sentence must include the word '{query}' exactly as it is, without any changes or additional forms.
+- The sentence must be clear, simple, and easy to understand for an elementary school student in the US.
+- The sentence must convey a single, logical idea and remain contextually coherent.
+- Keep the sentence between 6 and 10 words long.
+- Use simple vocabulary and grammar that is age-appropriate and engaging for children.
+- Avoid complex ideas, idioms, or culturally specific references that may confuse the learner.
 
-        If a valid sentence cannot be created, respond with: "Unable to create a valid sentence."
-        """
+If you cannot create a valid sentence under these rules, respond with: "Unable to create a valid sentence."
+"""
     )
-
-    # FAISS 벡터 스토어 로드
-    vector_store = FAISS.load_local(vector_store_path, HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-mpnet-base-v2",
-        model_kwargs={"device": "cpu", "trust_remote_code": True},
-        encode_kwargs={"normalize_embeddings": True}
-    ), allow_dangerous_deserialization=True)
-    retriever = vector_store.as_retriever()
-    print("FAISS 벡터 스토어 로드 및 리트리버 생성 완료.")
-
-    # QA 체인 설정
-    qa_chain = RetrievalQA.from_chain_type(
-        llm=llm,
-        retriever=retriever,
-        chain_type_kwargs={"prompt": prompt_template, "document_variable_name": "query"},
-    )
-    print("QA 체인 설정 완료.")
 
     # 단어 리스트 로드
-    with open(file_path, "r", encoding="utf-8") as file:
-        words = list(json.load(file))
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            words = json.load(file)
+    except Exception as e:
+        print(f"단어 파일을 로드하는 중 오류 발생: {e}")
+        return
 
     # CSV 파일에 문장 생성 결과 저장
-    with open(output_path, mode="w", newline="", encoding="utf-8") as file:
-        writer = csv.writer(file)
-        writer.writerow(["sentence_id", "sentence", "word"])
+    try:
+        with open(output_path, mode="w", newline="", encoding="utf-8") as file:
+            writer = csv.writer(file)
+            writer.writerow(["sentence_id", "sentence", "word"])
 
-        # 각 단어에 대해 다수의 문장 생성
-        for idx, word in enumerate(words, start=1):
-            generated_sentences = set()  # 중복 방지를 위한 집합
+            # 각 단어에 대해 문장 생성 및 저장
+            for idx, word in enumerate(words, start=1):
+                try:
+                    response = llm.predict(prompt_template.format(query=word))
 
-            for attempt in range(num_sentences_per_word * 2):  # 최대 시도 횟수
-                response = qa_chain.invoke({"query": word})
-                generated_sentence = response.get("result", "").strip()
+                    # 문장 생성 결과 확인 및 저장
+                    if word in response:
+                        writer.writerow([idx, response, word])
+                        print(f"Generated sentence: {response} (word: {word})")
+                    else:
+                        print(f"생성된 문장이 규칙을 따르지 않습니다. 단어: {word}")
+                except Exception as e:
+                    print(f"문장 생성 중 오류 발생. 단어: {word}, 오류: {e}")
 
-                # 문장 검증: 규칙 확인 및 중복 방지
-                if (word in generated_sentence
-                        and generated_sentence.count(".") == 1
-                        and generated_sentence not in generated_sentences):
-                    generated_sentences.add(generated_sentence)
-                    writer.writerow([f"{idx}-{len(generated_sentences)}", generated_sentence, word])
-                    print(f"Generated sentence {len(generated_sentences)} for '{word}': {generated_sentence}")
-
-                # 지정된 문장 개수 충족 시 중단
-                if len(generated_sentences) >= num_sentences_per_word:
-                    break
-
-            if len(generated_sentences) < num_sentences_per_word:
-                print(f"Warning: Only {len(generated_sentences)} sentences generated for word '{word}'")
-
-    print(f"문장 생성 완료. 결과가 {output_path}에 저장되었습니다.")
+        print(f"문장 생성 완료. 결과가 {output_path}에 저장되었습니다.")
+    except Exception as e:
+        print(f"CSV 파일 저장 중 오류 발생: {e}")

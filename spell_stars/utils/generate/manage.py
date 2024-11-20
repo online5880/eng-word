@@ -11,9 +11,8 @@ from Pipeline.json_to_clusteredjson import (
 from Pipeline.extract_word import extract_words
 from Pipeline.generate_sentence import create_faiss_index, generate_sentences
 from Pipeline.sentence_pipeline import SentenceEvaluationPipeline
-# from Pipeline.translate import translate_csv
-# from spell_stars.utils.generate.Pipeline.upload import Command
-
+from Pipeline.translate import translate_csv
+from Pipeline.sentence_filter import filter_stn
 # from Pipeline.upload import Command
 
 
@@ -42,6 +41,7 @@ def main():
         base_directory, "grammar_results.csv"
     )  # 문법 검사 결과 저장 경로
     final_sentence_path = os.path.join(base_directory, "final_sentence.csv")
+    real_final_sentence_path = os.path.join(base_directory, "real_final_sentence.csv")
 
     # 필요한 디렉토리 생성
     os.makedirs(pdf_directory, exist_ok=True)
@@ -66,13 +66,13 @@ def main():
     # print("Extracting words from clustered JSON...")
     # extract_words(clustered_json_path, extracted_words_path)
 
-    # # Step 4: FAISS 인덱스 생성
-    # print("Creating FAISS index...")
-    # create_faiss_index(clustered_json_path, vector_store_path)
+    # Step 4: FAISS 인덱스 생성
+    print("Creating FAISS index...")
+    create_faiss_index(clustered_json_path, vector_store_path)
 
-    # # Step 5: 추출된 단어로 문장 생성
-    # print("Generating sentences from extracted words...")
-    # generate_sentences(extracted_words_path, vector_store_path, csv_output_path)
+    # Step 5: 추출된 단어로 문장 생성
+    print("Generating sentences from extracted words...")
+    generate_sentences(extracted_words_path, vector_store_path, csv_output_path)
 
     # Step 6: 생성된 문장에 대해 문법 검사 수행
     print("Evaluating grammar in generated sentences...")
@@ -83,16 +83,14 @@ def main():
     results_df.to_csv(grammar_results_path, index=False, encoding="utf-8-sig")
     print(f"Grammar evaluation completed. Results saved to {grammar_results_path}")
 
-    # # Step 7: 생성된 문장 번역
-    # translate_csv(grammar_results_path, final_sentence_path)
-    # print(f"translate completed. Results saved to {final_sentence_path}.")
+    # Step 7: 생성된 문장 번역
+    translate_csv(grammar_results_path, final_sentence_path)
+    print(f"translate completed. Results saved to {final_sentence_path}.")
 
-    # # Step 8: db에 데이터 적재
-    # upload = Command()
-    # upload.handle(csv_file=final_sentence_path)
-    # print(f"upload completed. Results uploaded to Sentence.")
+    # Step 8: csv 파일에서 final_sentence에 :이 포함되면 행 삭제 -> 최종본 저장
+    filter_stn(final_sentence_path, real_final_sentence_path)
 
-    # # Step 8: db에 데이터 적재
+    # # Step 9: db에 데이터 적재
     # upload = Command()
     # upload.handle(csv_file=final_sentence_path)
     # print(f"upload completed. Results uploaded to Sentence.")

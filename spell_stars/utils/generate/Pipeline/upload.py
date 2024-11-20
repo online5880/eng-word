@@ -21,13 +21,8 @@ class Command(BaseCommand):
         try:
             with open(csv_file, newline="", encoding="utf-8-sig") as file:
                 reader = csv.DictReader(file)
-                count = 0  # 처리한 행 수를 셀 변수
 
                 for row in reader:
-                    # 첫 5행만 처리하도록 제한
-                    if count >= 5:
-                        break
-
                     # CSV 데이터 확인
                     print(f"Processing row: {row}")
 
@@ -54,6 +49,15 @@ class Command(BaseCommand):
                         )
                         continue  # 단어가 없으면 건너뜁니다.
 
+                    # 이미 존재하는 Sentence인지 확인
+                    if Sentence.objects.filter(word=word, sentence=sentence).exists():
+                        self.stdout.write(
+                            self.style.WARNING(
+                                f"Sentence '{sentence}'는 이미 존재합니다. 건너뜁니다."
+                            )
+                        )
+                        continue  # 이미 존재하면 건너뜁니다.
+
                     # Sentence 모델에 데이터 저장
                     try:
                         print(f"Saving Sentence: {sentence}")  # 디버깅: 저장 전 로그
@@ -67,8 +71,6 @@ class Command(BaseCommand):
                         )
                     except Exception as e:
                         self.stdout.write(self.style.ERROR(f"Sentence 저장 중 오류 발생: {e}"))
-
-                    count += 1  # 처리한 행 수 증가
 
         except FileNotFoundError:
             self.stdout.write(
