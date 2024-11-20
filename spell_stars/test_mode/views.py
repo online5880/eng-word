@@ -31,6 +31,13 @@ def calculate_score(correct_answers, total_questions=TOTAL_QUESTIONS, max_score=
     return round(score, 2)
 
 
+def replace_word_with_blank(sentence, target_word):
+    # 동사 변화형을 처리할 정규식 패턴
+    pattern = r'\b' + re.escape(target_word) + r'(ing|ed|d|s|es)?\b'
+    
+    return re.sub(pattern, lambda match: '_____{}'.format(match.group(1) or ''), sentence)
+
+
 def test_mode_view(request):
     print("test_mode_view called")
 
@@ -42,7 +49,8 @@ def test_mode_view(request):
         sentence = Sentence.objects.filter(word_id=word_id).order_by("?").first()
         word = Word.objects.get(id=word_id)
         if sentence:
-            sentence_with_blank = sentence.sentence.replace(word.word, "_____")
+            # 기존의 sentence.replace를 replace_word_with_blank로 변경
+            sentence_with_blank = replace_word_with_blank(sentence.sentence, word.word)
             sentences.append(
                 {
                     "sentence": sentence_with_blank,
