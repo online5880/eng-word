@@ -1,9 +1,13 @@
 import plotly.graph_objects as go
 import plotly.subplots as sp
+import matplotlib.pyplot as plt
 import librosa
 import numpy as np
+import mpld3
 from scipy.ndimage import gaussian_filter1d
 from plotly.subplots import make_subplots
+import matplotlib
+matplotlib.use('Agg')  # GUI 창을 비활성화하는 백엔드
 
 # Waveform 비교 함수
 def visualize_waveforms(native_path, student_path, smoothing_sigma=10):
@@ -60,93 +64,40 @@ def visualize_waveforms(native_path, student_path, smoothing_sigma=10):
     )
 
     return fig
-def plot_f1_f2_comparison(timestamps, f1_native, f1_student, f2_native, f2_student):
+def plot_f1_f2_comparison_mpld3(timestamps, f1_native, f1_student, f2_native, f2_student,username=""):
     """
-    F1, F2 데이터를 Plotly를 사용해 비교 시각화.
+    F1, F2 데이터를 Matplotlib과 mpld3를 사용해 비교 시각화.
     - F1 그래프는 위쪽, F2 그래프는 아래쪽.
     """
-    # F1 설명 텍스트
-    f1_hovertext = "F1 점수: 소리의 '입 벌린 정도'<br>" \
-                   "입을 크게 벌리면 F1 숫자가 커지고,<br>" \
-                   "입을 조금만 벌리면 F1 숫자가 작아져요!"
-
-    # F2 설명 텍스트
-    f2_hovertext = "F2 점수: 혀의 '앞뒤 위치'<br>" \
-                   "혀가 앞쪽에 있으면 F2 숫자가 커지고,<br>" \
-                   "혀가 뒤쪽에 있으면 F2 숫자가 작아져요!"
-
-    # 서브플롯 생성
-    fig = make_subplots(
-        rows=2, cols=1,
-        vertical_spacing=0.2
-    )
-
-    # F1 비교
-    fig.add_trace(go.Scatter(
-        x=timestamps,
-        y=f1_native,
-        mode='lines',
-        line=dict(color='blue', width=4),
-        name="선생님 F1",
-        hoverinfo="text",
-        hovertext=f1_hovertext
-    ), row=1, col=1)
-    fig.add_trace(go.Scatter(
-        x=timestamps,
-        y=f1_student,
-        mode='lines',
-        line=dict(color='orange', width=4),
-        # 이름 추가
-        name="Student F1",
-        hoverinfo="text",
-        hovertext=f1_hovertext
-    ), row=1, col=1)
-
-    # F2 비교
-    fig.add_trace(go.Scatter(
-        x=timestamps,
-        y=f2_native,
-        mode='lines',
-        line=dict(color='blue', width=4),
-        name="선생님 F2",
-        hoverinfo="text",
-        hovertext=f2_hovertext
-    ), row=2, col=1)
-    fig.add_trace(go.Scatter(
-        x=timestamps,
-        y=f2_student,
-        mode='lines',
-        line=dict(color='orange', width=4),
-        # 이름 추가
-        name="Student F2",
-        hoverinfo="text",
-        hovertext=f2_hovertext
-    ), row=2, col=1)
-
-    # 레이아웃 설정
-    # 이름 추가
-    fig.update_layout(
-        title="student의 포먼트 점수",
-        height=800,
-        template="plotly_white",
-        legend=dict(
-        title="Legend",
-        x=1,
-        y=1,
-        bgcolor="rgba(255, 255, 255, 0.7)",
-        bordercolor="black",
-        borderwidth=1
-    ),
-        xaxis_title="Time (s)",
-        showlegend=True,
-        )
+    # Matplotlib을 사용해 두 개의 서브플롯 생성
+    fig, axes = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
     
+    # 첫 번째 서브플롯 (F1 비교)
+    axes[0].plot(timestamps, f1_native, label="선생님 F1", color="blue", linewidth=2)
+    axes[0].plot(timestamps, f1_student, label=f"{username} F1", color="orange", linewidth=2)
+    axes[0].set_title("F1 점수 비교", fontsize=14)
+    axes[0].set_ylabel("Frequency (Hz)")
+    axes[0].legend(loc="upper right")
+    axes[0].grid(True)
 
-    # 축별 설정
-    fig.update_xaxes(title_text="Time (s)", row=2, col=1)
-    fig.update_yaxes(title_text="Frequency (Hz)", row=1, col=1)
-    fig.update_yaxes(title_text="Frequency (Hz)", row=2, col=1)
+    # 두 번째 서브플롯 (F2 비교)
+    axes[1].plot(timestamps, f2_native, label="선생님 F2", color="blue", linewidth=2)
+    axes[1].plot(timestamps, f2_student, label=f"{username} F2", color="orange", linewidth=2)
+    axes[1].set_title("F2 점수 비교", fontsize=14)
+    axes[1].set_xlabel("Time (s)")
+    axes[1].set_ylabel("Frequency (Hz)")
+    axes[1].legend(loc="upper right")
+    axes[1].grid(True)
 
-    # 그래프 출력
-    # fig.show()
+    # 레이아웃 조정
+    fig.suptitle("student의 포먼트 점수", fontsize=16)
+    plt.tight_layout(rect=[0, 0, 1, 0.96])
+
+    # mpld3로 HTML 변환
+    html_fig = mpld3.fig_to_html(fig)
+
+    # 그래프를 닫아 메모리 누수를 방지
+    plt.close(fig)
+
+    return html_fig
 

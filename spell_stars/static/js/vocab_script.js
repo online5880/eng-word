@@ -217,7 +217,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     function displayResult(result) {
-        console.log("displayResult received result:", result);
     
         if (!result || typeof result.overall_score !== "number") {
             console.error("Error: result or overall_score is invalid", result);
@@ -248,7 +247,27 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.style.width = `${score}%`;
         progressBar.style.backgroundColor = score >= 80 ? '#4CAF50' : '#f44336';
 
+        // HTML 그래프 삽입
+        const figContainer = document.getElementById("fig_container");
+        console.log(result.html_fig);
 
+        if (result && result.html_fig) {
+            const parser = new DOMParser();
+            const parsedDoc = parser.parseFromString(result.html_fig, "text/html");
+
+            // DOM 요소 삽입
+            figContainer.innerHTML = parsedDoc.body.innerHTML;
+
+            // 스크립트 태그 동적으로 실행
+            const scripts = parsedDoc.querySelectorAll("script");
+            scripts.forEach(script => {
+                const newScript = document.createElement("script");
+                newScript.textContent = script.textContent;
+                document.body.appendChild(newScript);
+            });
+        } else {
+            console.error("HTML figure not found in response.");
+        }
         
         updateNavigationButtons();  // 버튼 상태 업데이트
     }

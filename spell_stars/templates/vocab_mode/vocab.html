@@ -10,6 +10,8 @@
       const uploadAudioUrl = "{% url 'vocab_upload_audio' %}";
       const csrfToken = "{{ csrf_token }}";
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="https://mpld3.github.io/js/mpld3.v0.3.js"></script>
   </head>
 
   <body>
@@ -70,9 +72,8 @@
       <button type="button" id="sentenceModeButton">버튼</button>
 
       <div id="fig_container">
-        {{ fig | safe}}
+        
       </div>
-
     </div>
 
     <script src="{% static 'js/vocab_script.js' %}"></script>

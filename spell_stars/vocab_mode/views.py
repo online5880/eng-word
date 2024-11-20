@@ -3,7 +3,6 @@ import os
 import random
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
-import mpld3
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -106,6 +105,7 @@ def upload_audio(request):
             audio_file = request.FILES["audio"]
             current_word = request.POST.get("word", "unknown")
             user_id = request.user.id if request.user.is_authenticated else "anonymous"
+            username = request.user.username if request.user.is_authenticated else "anonymous"
             
             # 저장 경로 설정
             save_path = f"audio_files/students/user_{user_id}/"
@@ -133,7 +133,7 @@ def upload_audio(request):
             
             print(student_audio_path)
             print(native_audio_path)
-            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
+            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id,username)
             # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
             print("결과",result)
             return JsonResponse({

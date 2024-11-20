@@ -8,7 +8,7 @@ import pdb
 from .Pipeline.Parselscore import get_formants
 from .Pipeline.Score import calculate_formant_score, calculate_phoneme_score, calculate_overall_score
 from .Pipeline.Preprocessing import trim_and_standardize, align_start_point
-from .Pipeline.Visualization import visualize_waveforms, plot_f1_f2_comparison
+from .Pipeline.Visualization import visualize_waveforms, plot_f1_f2_comparison_mpld3
 sys.path.append("C:/Users/user/Desktop/eng-word/spell_stars/utils/PronunciationChecker/Pipeline")
 
 def cleanup_temp_dir(temp_dir):
@@ -20,7 +20,7 @@ def cleanup_temp_dir(temp_dir):
     else:
         print(f"Directory does not exist: {temp_dir}")
         
-def process_audio_files(native_audio_file_path, student_audio_file_path, expected_word, user_id):
+def process_audio_files(native_audio_file_path, student_audio_file_path, expected_word, user_id, username=""):
     """
     원어민과 학생의 오디오 파일을 처리하고 점수 및 시각화를 생성.
     """
@@ -79,15 +79,16 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
         overall_score = calculate_overall_score(formant_score, phoneme_score)
 
         # 1. 파형 비교 시각화
-        waveform_fig = visualize_waveforms(standardized_native_path, standardized_student_path)
+        visualize_waveforms(standardized_native_path, standardized_student_path)
 
         # 2. Formant 비교 시각화
-        plot_f1_f2_comparison(
+        html_fig = plot_f1_f2_comparison_mpld3(
             timestamps=common_timestamps,
             f1_native=native_f1_interp,
             f1_student=student_f1_interp,
             f2_native=native_f2_interp,
-            f2_student=student_f2_interp
+            f2_student=student_f2_interp,
+            username=username,
         )
 
         # 결과 저장
@@ -97,8 +98,9 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
             "formant_score": float(round(formant_score, 2)),
             "phoneme_score": float(round(phoneme_score, 2)),
             "overall_score": float(round(overall_score, 2)),
-            # "waveform_fig" : waveform_fig
+            "html_fig" : html_fig
         }
+        
         return result
 
         # 결과 출력
