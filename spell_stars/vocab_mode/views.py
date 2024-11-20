@@ -3,6 +3,10 @@ import os
 import random
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
+import mpld3
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
 from utils.PronunciationChecker.manage import process_audio_files
 from .models import Word
@@ -80,14 +84,37 @@ def display_vocabulary_book_random_category(request):
 
 
 def display_vocabulary_book(request):
+    np.random.seed(9615)
+
+    N = 100
+    df = pd.DataFrame((.1 * (np.random.random((N, 5)) - .5)).cumsum(0),
+                columns=['a', 'b', 'c', 'd', 'e'], )
+
+    # plot line + confidence interval
+    fig, ax = plt.subplots()
+    ax.grid(True, alpha=0.3)
+
+    for key, val in df.items():
+        l, = ax.plot(val.index, val.values, label=key)
+        ax.fill_between(val.index,
+                        val.values * .5, val.values * 1.5,
+                        color=l.get_color(), alpha=.4)
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_title('Interactive legend', size=20)
+
+    html_fig = mpld3.fig_to_html(fig,template_type='general')
+    
+    plt.close(fig)
     # 세션에서 선택된 단어들 가져오기
     selected_words = request.session.get('selected_words')
     if selected_words:
-        context = {"words": selected_words, "MEDIA_URL": settings.MEDIA_URL}
+        context = {"words": selected_words, "MEDIA_URL": settings.MEDIA_URL, "fig":html_fig}
     else:
         all_words = list(Word.objects.all())
         random_words = random.sample(all_words, min(len(all_words), 15))
-        context = {"words": random_words, "MEDIA_URL": settings.MEDIA_URL}
+        context = {"words": random_words, "MEDIA_URL": settings.MEDIA_URL,"fig":html_fig}
+        
     
     # 학습 시작 로그 생성
     start_learning_session(request, learning_mode=0)
