@@ -1,0 +1,1 @@
+{'native_file': 'project_native.wav', 'student_file': 'project_student.wav', 'formant_score': np.float64(90.18126494366577), 'phoneme_score': 100.0, 'overall_score': np.float64(96.0725059774663), 'formant_plot': 'formant_comparison_project_native.wav_project_student.wav.png', 'waveform_plot': 'waveform_comparison_project_native.wav_project_student.wav.png'}
