@@ -133,12 +133,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         },
                         body: formData
                     });
+                    
     
                     console.log('Response status:', response.status);
                     if (response.ok) {
                         const data = await response.json();
                         console.log('Upload success:', data);
-                        displayResult(data.result.result);
+                        displayResult(data.result);
                     } else {
                         const errorText = await response.text();
                         console.error('Upload failed:', errorText);

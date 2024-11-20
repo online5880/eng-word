@@ -131,9 +131,9 @@ def upload_audio(request):
                 settings.MEDIA_ROOT, save_path, f"{current_word}.wav"
             )
             
-            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
             print(student_audio_path)
             print(native_audio_path)
+            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
             # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
             print("결과",result)
             return JsonResponse({
