@@ -6,7 +6,43 @@ from langchain.chains import RetrievalQA
 from langchain_community.vectorstores import FAISS
 import json
 import csv
+from dotenv import load_dotenv  # .env 파일을 불러오기 위한 라이브러리
+import psycopg2  # PostgreSQL 사용
 
+
+# .env 파일에서 환경 변수 불러오기
+load_dotenv()
+
+# PostgreSQL에서 특정 word_id에 대한 문장 개수를 확인하는 함수
+def check_word_sentence_count(word, db_params):
+    try:
+        # PostgreSQL 연결
+        conn = psycopg2.connect(**db_params)
+        cursor = conn.cursor()
+
+        # 단어에 해당하는 word_id 조회
+        cursor.execute("SELECT id FROM vocab_mode_word WHERE word = %s", (word,))
+        word_id = cursor.fetchone()
+
+        if not word_id:
+            print(f"단어 '{word}'에 해당하는 word_id를 찾을 수 없습니다.")
+            cursor.close()
+            conn.close()
+            return 0  # word_id가 없으면 문장을 생성하지 않음
+
+        word_id = word_id[0]  # word_id 추출
+
+        # word_id에 해당하는 문장의 개수 조회
+        cursor.execute("SELECT COUNT(*) FROM sent_mode_sentence WHERE word_id = %s", (word_id,))
+        count = cursor.fetchone()[0]
+
+        cursor.close()
+        conn.close()
+
+        return count
+    except Exception as e:
+        print(f"문장 개수 조회 중 오류 발생: {e}")
+        return 0
 
 
 def create_faiss_index(file_path, vector_store_path):
@@ -72,6 +108,8 @@ def create_faiss_index(file_path, vector_store_path):
     except Exception as e:
         print(f"FAISS 벡터 스토어 저장 중 오류 발생: {e}")
         return
+    
+
 def generate_sentences(file_path, vector_store_path, output_path):
     # LLM 설정
     llm = ChatOllama(model="llama3.2", max_token=60, temperature=0.8)
@@ -93,13 +131,22 @@ If you cannot create a valid sentence under these rules, respond with: "Unable t
 """
     )
 
-    # 단어 리스트 로드
+    # 단어 리스트 로드 (JSON 파일에서)
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             words = json.load(file)
     except Exception as e:
         print(f"단어 파일을 로드하는 중 오류 발생: {e}")
         return
+
+    # .env에서 PostgreSQL 연결 정보를 불러오기
+    db_params = {
+        "dbname": os.getenv("NAME"),
+        "user": os.getenv("USERNAME"),
+        "password": os.getenv("PASSWORD"),
+        "host": os.getenv("HOST"),
+        "port": os.getenv("PORT", 5432)  # 기본 포트 5432
+    }
 
     # CSV 파일에 문장 생성 결과 저장
     try:
@@ -109,11 +156,21 @@ If you cannot create a valid sentence under these rules, respond with: "Unable t
 
             # 각 단어에 대해 문장 생성 및 저장
             for idx, word in enumerate(words, start=1):
+                # 단어에 대한 문장 개수 확인
+                sentence_count = check_word_sentence_count(word, db_params)
+
+                # 문장 개수가 5개 이상이면 생략
+                if sentence_count >= 5:
+                    print(f"단어 '{word}'에 해당하는 문장이 이미 5개 이상 존재. 문장 생성을 건너뜁니다.")
+                    continue  # 해당 단어는 문장 생성하지 않음
+
                 try:
+                    # 문장 생성
                     response = llm.predict(prompt_template.format(query=word))
 
                     # 문장 생성 결과 확인 및 저장
                     if word in response:
+                        # 문장을 DB에 저장하지 않고 CSV에만 저장
                         writer.writerow([idx, response, word])
                         print(f"Generated sentence: {response} (word: {word})")
                     else:
