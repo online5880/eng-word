@@ -1,5 +1,5 @@
-from Pipeline.Parselscore import get_formants
-from Pipeline.vosk_ import evaluate_pronunciation
+from .Parselscore import get_formants
+from .vosk_ import evaluate_pronunciation
 import numpy as np
 
 def calculate_formant_score(native_f1, native_f2, student_f1, student_f2):

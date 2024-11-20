@@ -29,9 +29,9 @@ def example_sentence_learning(request):
     user = request.user
     # 세션에서 선택된 단어들 가져오기
     selected_words = request.session.get('selected_words', None)
-    
+    print(selected_words)
     selected_words_list = [item['word'] for  item in selected_words]
-
+    print(selected_words_list)
     # selected_words에서 Word 모델 객체들을 찾아서 필터링
     word_objects = Word.objects.filter(word__in=selected_words_list)
     print("sent words : ",word_objects)
@@ -59,7 +59,7 @@ def example_sentence_learning(request):
         "sentences": blank_sentences,
         "selected_words": selected_words
     }
-    
+    print(context)
     return render(request, "sent_mode/sent_practice.html", context)
 
 
