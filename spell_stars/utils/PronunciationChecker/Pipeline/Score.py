@@ -1,18 +1,24 @@
-from PC_Pipeline.Parselscore import get_formants
-from PC_Pipeline.vosk_ import evaluate_pronunciation
+from Pipeline.Parselscore import get_formants
+from Pipeline.vosk_ import evaluate_pronunciation
+import numpy as np
 
-def calculate_formant_score(native_audio_path, student_audio_path):
-    f1_native, f2_native = get_formants(native_audio_path)
-    f1_student, f2_student = get_formants(student_audio_path)
+def calculate_formant_score(native_f1, native_f2, student_f1, student_f2):
+    """
+    시간에 따른 F1, F2 데이터를 기반으로 포먼트 점수를 계산합니다.
+    """
+    # F1, F2 차이 계산
+    f1_diff = np.abs(native_f1 - student_f1)
+    f2_diff = np.abs(native_f2 - student_f2)
 
-    f1_diff = abs(f1_native - f1_student)
-    f2_diff = abs(f2_native - f2_student)
+    # 최대 차이값 설정
+    max_diff = 1000  # 포먼트 값의 허용 범위
 
-    max_diff = 1000
+    # F1, F2 평균 차이를 점수로 변환
+    avg_diff = (f1_diff + f2_diff) / 2
+    formant_score = np.clip(100 - (avg_diff / max_diff) * 100, 0, 100)
 
-    formant_score = max(0, 100 - ((f1_diff + f2_diff) / (2 * max_diff)) * 100)
+    return np.mean(formant_score)  # 평균 점수 반환
 
-    return formant_score
 
 def calculate_phoneme_score(audio_path, expected_word):
     phoneme_score = evaluate_pronunciation(audio_path, expected_word)

@@ -47,3 +47,39 @@ def trim_and_standardize(file_path):
     trimmed_file_path = trim_silence(file_path)  # 무음 제거 수행
     standardized_file_path = standardize_audio(trimmed_file_path)  # RMS 표준화 적용
     return standardized_file_path
+
+
+# Cross-Correlation 기반 발음 동기화 함수
+
+def align_start_point(native_path, student_path, target_sr=16000):
+    """
+    Cross-Correlation을 기반으로 원어민과 학생 신호의 발음 시작점을 동기화.
+    """
+    # 원어민 오디오 로드 및 리샘플링
+    y_native, sr_native = librosa.load(native_path, sr=None)
+    if sr_native != target_sr:
+        y_native = librosa.resample(y_native, orig_sr=sr_native, target_sr=target_sr)
+        sr_native = target_sr
+
+    # 학생 오디오 로드 및 리샘플링
+    y_student, sr_student = librosa.load(student_path, sr=None)
+    if sr_student != target_sr:
+        y_student = librosa.resample(y_student, orig_sr=sr_student, target_sr=target_sr)
+        sr_student = target_sr
+
+    # Cross-Correlation 수행
+    correlation = np.correlate(y_native, y_student, mode="full")
+    lag = np.argmax(correlation) - len(y_student) + 1
+
+    # 학생 신호의 시작점 조정
+    if lag > 0:
+        y_student_aligned = np.pad(y_student, (lag, 0), mode="constant")[:len(y_native)]
+        y_native_aligned = y_native
+    elif lag < 0:
+        y_native_aligned = np.pad(y_native, (-lag, 0), mode="constant")[:len(y_student)]
+        y_student_aligned = y_student
+    else:
+        y_native_aligned = y_native
+        y_student_aligned = y_student
+
+    return y_native_aligned, y_student_aligned, target_sr
