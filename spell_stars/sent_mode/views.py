@@ -1,127 +1,138 @@
 import os
 import random
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
-from django.shortcuts import redirect
-from vocab_mode.models import Word
-from accounts.models import StudentInfo
-import warnings
-from django.apps import apps
-from utils.PronunciationChecker.manage import process_audio_files
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
-from .models import Sentence, LearningResult
-
-warnings.filterwarnings("ignore", category=FutureWarning)
-
-# Whisper 모델 로드 (small 모델 사용)
-model = apps.get_app_config("spell_stars").whisper_model
-
-
-# 예문 학습 페이지 렌더링
-from django.shortcuts import redirect, render
 from .models import Word, Sentence
+import numpy as np
+import time
+from collections import Counter
 
-# 예문 학습 페이지 렌더링
+
+# Sigmoid 함수 정의
+def sigmoid(x, k=10, threshold=0.6):
+    return 1 / (1 + np.exp(-k * (x - threshold)))
+
+
+# AI 정답률 계산
+def calculate_ai_accuracy(student_accuracy, T=0.6, k=10):
+    return sigmoid(student_accuracy, k, T)
+
+
+# AI 응답 속도 계산
+def calculate_ai_response_time(student_time, T_min=1.0, T_max=5.0, T_threshold=3.0, k_t=1.5):
+    return T_min + (T_max - T_min) * sigmoid(student_time, k_t, T_threshold)
+
+
+# 문제 학습 화면
 def example_sentence_learning(request):
-    user = request.user
-    # 세션에서 선택된 단어들 가져오기
+    # 세션에서 선택된 단어 가져오기
     selected_words = request.session.get('selected_words', None)
-    print(selected_words)
-    selected_words_list = [item['word'] for  item in selected_words]
-    print(selected_words_list)
-    # selected_words에서 Word 모델 객체들을 찾아서 필터링
-    word_objects = Word.objects.filter(word__in=selected_words_list)
-    print("sent words : ",word_objects)
+    if not selected_words:
+        return JsonResponse({"error": "No words selected for learning."}, status=400)
 
-    # 세션에 저장된 단어들에 해당하는 예문들 가져오기
-    sentences = Sentence.objects.filter(word__in=word_objects).order_by("?")
-    # print("sent sentence : ",sentence)
+    # 게임 상태 초기화 또는 세션에서 가져오기
+    game_state = request.session.get('game_state', {
+        "student_accuracy": 0.6,
+        "current_question": 0,
+        "num_questions": len(selected_words),  # 선택된 단어 개수만큼 출제
+        "student_scores": [],
+        "ai_scores": [],
+        "student_response_times": [],
+        "ai_response_times": [],
+        "student_responses": [],
+    })
 
-    # 예문에 단어를 빈칸으로 대체
-    blank_sentences = []
-    for sentence in sentences:
-        # 단어의 길이만큼 언더바 생성
-        word_length = len(sentence.word.word)
-        blank = "_" * word_length  # 예: "toilet" -> "______"
+    # 문제를 모두 푼 경우 결과 페이지로 이동
+    if game_state["current_question"] >= game_state["num_questions"]:
+        return redirect("sent_result")
 
-        # 문장에서 해당 단어를 언더바로 대체
-        blank_sentence = sentence.sentence.replace(sentence.word.word, blank)
-        blank_sentences.append({
-            "sentence": blank_sentence,
-            "meaning": sentence.sentence_meaning,
-            "word": sentence.word.word
-        })
+    # 현재 단어 및 문장 가져오기
+    current_word_data = selected_words[game_state["current_question"]]
+    current_word = current_word_data['word']  # 단어
+    sentence_data = Sentence.objects.filter(word__word=current_word).first()  # 문장
 
+    if not sentence_data:
+        return JsonResponse({"error": f"No sentences found for word: {current_word}"}, status=400)
+
+    blank_word = "_" * len(current_word)  # 단어 길이만큼 빈칸 생성
+    sentence_with_blank = sentence_data.sentence.replace(current_word, blank_word)
+
+    # 문제 데이터를 템플릿으로 전달
     context = {
-        "sentences": blank_sentences,
-        "selected_words": selected_words
+        "sentence": sentence_with_blank,
+        "meaning": sentence_data.sentence_meaning,
+        "word": current_word,
+        "current_question": game_state["current_question"] + 1,
+        "total_questions": game_state["num_questions"],
     }
-    print(context)
+
     return render(request, "sent_mode/sent_practice.html", context)
 
+
+# 학습 결과 화면
+def sent_result(request):
+    game_state = request.session.get('game_state')
+    if not game_state:
+        return redirect("sent_practice")
+
+    # 단어 사용 빈도 계산
+    word_frequencies = Counter(game_state["student_responses"])
+
+    context = {
+        "game_state": game_state,
+        "word_frequencies": word_frequencies,
+    }
+    return render(request, "sent_mode/sent_result.html", context)
+
+
+# 음성 파일 처리
 @csrf_exempt
 def upload_audio(request):
     if request.method == "POST" and request.FILES.get("audio"):
         try:
             audio_file = request.FILES["audio"]
-            current_word = request.POST.get("word", "unknown")
+            current_word = request.POST.get("word", "unknown").strip().lower()
             user_id = request.user.id if request.user.is_authenticated else "anonymous"
-            
-            # 저장 경로 설정
+
+            # 녹음 파일 저장 경로
             save_path = f"audio_files/students/user_{user_id}/"
             os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
 
-            # 파일 이름 설정
+            # 파일 저장
             file_name = f"{current_word}.wav"
             file_path = os.path.join(save_path, file_name)
-
-            # 기존 파일이 있으면 삭제
             if default_storage.exists(file_path):
                 default_storage.delete(file_path)
+            student_audio_path = default_storage.save(file_path, ContentFile(audio_file.read()))
 
-            # 새 파일 저장
-            full_path = default_storage.save(
-                file_path, ContentFile(audio_file.read())
-            )
-            
-            native_audio_path = os.path.join(
-                settings.MEDIA_ROOT, "audio_files/native/", f"{current_word}.wav"
-            )
-            student_audio_path = os.path.join(
-                settings.MEDIA_ROOT, save_path, f"{current_word}.wav"
-            )
-            
-            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
-            print(student_audio_path)
-            print(native_audio_path)
-            # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
-            print("결과",result)
+            # 정답 판단 로직 (STT 모듈 활용)
+            # 현재 테스트를 위해 STT 결과를 그대로 사용하는 것으로 설정
+            recognized_word = current_word  # 테스트용 (STT 결과를 여기에 넣음)
+
+            # 정답 여부 판단
+            is_correct = recognized_word == current_word
+
+            # 세션에서 게임 상태 업데이트
+            game_state = request.session.get('game_state', {})
+            current_index = game_state.get("current_question", 0)
+            game_state["student_scores"].append(10 if is_correct else 0)
+            game_state["student_responses"].append(recognized_word)
+            game_state["current_question"] += 1
+            request.session['game_state'] = game_state
+
             return JsonResponse({
                 "status": "success",
-                "message": "녹음이 완료되었습니다.",
-                "file_path": full_path,
-                "result":result,
+                "is_correct": is_correct,
+                "correct_word": current_word,
+                "recognized_word": recognized_word,
+                "message": "Answer checked successfully.",
             })
 
         except Exception as e:
-            return JsonResponse({
-                "status": "error",
-                "message": str(e)
-            }, status=500)
+            return JsonResponse({"status": "error", "message": str(e)}, status=500)
 
-    return JsonResponse({
-        "status": "error",
-        "message": "잘못된 요청입니다."
-    }, status=400)
-
-
-def exit_learning_mode(request):
-    # 세션 초기화
-    if 'selected_theme' in request.session:
-        del request.session['selected_theme']
-
-    # 메인 페이지로 리디렉션
-    return redirect('home')  # 홈 페이지로 이동
+    return JsonResponse({"status": "error", "message": "Invalid request."}, status=400)

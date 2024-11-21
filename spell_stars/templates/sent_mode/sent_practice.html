@@ -1,66 +1,47 @@
 <!DOCTYPE html>
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
+<html lang="en">
 
   <head>
-    <title>단어장</title>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어 학습 퀴즈</title>
     <link rel="stylesheet" href="{% static 'css/sent_styles.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script>
-      const uploadAudioUrl = "{% url 'sent_upload_audio' %}";
-      const csrfToken = "{{ csrf_token }}";
-    </script>
   </head>
 
   <body>
-    {% csrf_token %}
-    <div class="container">
-      <button class="back-button" onclick="location.href='{% url 'index' %}'">돌아가기</button>
-      <h1>예문 학습</h1>
-      
-      <div class="navigation-buttons">
-        <button id="prevButton" class="nav-button styled-button">◀ 이전</button>
-        <span id="cardIndex">1/{{ sentences|length }}</span>
-        <button id="nextButton" class="nav-button styled-button">다음 ▶</button>
-      </div>
+    <header>
+      <h2>단어 학습 퀴즈</h2>
+    </header>
 
-      <div class="word-cards">
-        {% for sentence in sentences %}
-        <div class="word-card" {% if not forloop.first %}style="display: none;"{% endif %}> 
-          <div class="word-content">
-            <div class="sentence-section">
-              <h3>{{ sentence.word }}</h3>
-              <p>{{ sentence.meanings|join:", " }}</p>
-            </div>
-            <div class="example-section">
-              <p class="sentence"><strong>예문:</strong> {{ sentence.sentence }}</p>
-              <p class="sentence-meaning"><strong>예문 뜻:</strong> {{ sentence.meaning }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
+    <main>
+      <section>
+        <p>
+          <strong>문제:</strong>
+          {{ current_question }}
+          /
+          {{ total_questions }}</p>
+        <p>
+          <strong>문장:</strong>
+          {{ sentence }}</p>
+        <p>
+          <strong>뜻:</strong>
+          {{ meaning }}</p>
+      </section>
 
-      <audio id="audioPlayer" preload="auto"></audio>
-      
-      <div class="controls">
-        <button class="mic-status" id="micButton">
-          <div class="mic-icon">
-            <i class="fas fa-microphone"></i>
-          </div>
-          <div class="mic-animation"></div>
-        </button>
-        <div class="voice-level">
-          <div class="voice-level-fill"></div>
-        </div>
-        <p class="status-text">마이크를 클릭하여 시작하세요</p>
-        <div class="progress-bar">
-          <div id="progressFill"></div>
-        </div>
-      </div>
-    </div>
+      <section>
+        <input type="hidden" id="hiddenWord" value="{{ word }}">
+        <button id="micButton">녹음 시작</button>
+        <p id="statusMessage">녹음을 시작해주세요.</p>
+        <div id="studentCorrectnessBox"></div>
+      </section>
+    </main>
 
-    <script src="{% static 'js/sent_pratice.js' %}"></script>
+    <footer>
+      <p>&copy; 2024 학습 퀴즈</p>
+    </footer>
+
+    <script src="{% static 'js/sent_practice.js' %}"></script>
   </body>
-{% endblock %}
+
+</html>
