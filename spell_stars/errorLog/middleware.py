@@ -30,6 +30,10 @@ class ErrorLoggingMiddleware:
         user_agent = request.META.get('HTTP_USER_AGENT', 'unknown')
         timestamp = localtime().strftime('%Y-%m-%d %H:%M:%S %Z')  # 지역 시간
 
+        # 사용자 정보
+        user_id = getattr(request.user, 'id', 'Anonymous')  # 로그인된 경우 ID
+        username = getattr(request.user, 'username', 'Anonymous')  # 로그인된 경우 Username
+
         # 에러 유형별 메시지
         error_messages = {
             404: "404 Error: {path} not found",
@@ -42,7 +46,7 @@ class ErrorLoggingMiddleware:
         # 로그 메시지 생성
         log_message += (
             f" | Client IP: {client_ip} | Method: {method} | User-Agent: {user_agent} | "
-            f"Timestamp: {timestamp}"
+            f"Timestamp: {timestamp} | User ID: {user_id} | Username: {username}"
         )
 
         # 로깅 (에러는 ERROR 레벨로 기록)
@@ -55,6 +59,10 @@ class ErrorLoggingMiddleware:
         method = request.method
         user_agent = request.META.get('HTTP_USER_AGENT', 'unknown')
         timestamp = localtime().strftime('%Y-%m-%d %H:%M:%S %Z')  # 지역 시간
+
+        # 사용자 정보
+        user_id = getattr(request.user, 'id', 'Anonymous')  # 로그인된 경우 ID
+        username = getattr(request.user, 'username', 'Anonymous')  # 로그인된 경우 Username
 
         # 메시지 템플릿
         error_messages = {
@@ -77,6 +85,8 @@ class ErrorLoggingMiddleware:
                         {"title": "Client IP", "value": client_ip, "short": True},
                         {"title": "Method", "value": method, "short": True},
                         {"title": "User-Agent", "value": user_agent, "short": False},
+                        {"title": "User ID", "value": user_id, "short": True},
+                        {"title": "Username", "value": username, "short": True},
                         {"title": "Timestamp", "value": timestamp, "short": False},
                     ],
                 }
