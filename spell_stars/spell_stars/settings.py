@@ -56,12 +56,14 @@ INSTALLED_APPS = [
     "vocab_mode",
     "accounts",
     "spell_stars",
+    "errorLog",
     
     "drf_yasg",
     "rest_framework",
     "channels",
     "crispy_forms",
     "crispy_bootstrap5",
+    
 ]
 
 ASGI_APPLICATION = "spell_stars.asgi.application"
@@ -95,7 +97,27 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "accounts.middleware.UpdateLastLoginMiddleware",
     "accounts.middleware.AutoLogoutMiddleware",
+    "errorLog.middleware.ErrorLoggingMiddleware"
 ]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'db': {
+            'level': 'ERROR',  # 저장할 로그 수준
+            'class': 'errorLog.logging.DatabaseLogHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['db'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
+
 
 ROOT_URLCONF = "spell_stars.urls"
 
