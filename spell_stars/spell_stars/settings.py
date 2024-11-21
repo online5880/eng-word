@@ -54,15 +54,23 @@ INSTALLED_APPS = [
     "pron_practice",
     "test_mode",
     "vocab_mode",
-    "rest_framework",
-    "drf_yasg",
     "accounts",
+    "spell_stars",
+    
+    "drf_yasg",
+    "rest_framework",
     "channels",
-    "spell_stars"
-
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 ASGI_APPLICATION = "spell_stars.asgi.application"
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+ASGI_APPLICATION = 'spell_stars.asgi.application'
 
 # Channels Layer 설정 (기본적으로 In-Memory 사용, Redis를 권장)
 CHANNEL_LAYERS = {
@@ -175,8 +183,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "accounts.StudentInfo"
 
-LOGIN_URL = "/auth/login/"  # @login_required가 리디렉션할 로그인 URL
-LOGOUT_URL = "/auth/logout/"  # 로그아웃 버튼이나 링크가 사용할 로그아웃 URL
+LOGIN_URL = "/accounts/login/"  # @login_required가 리디렉션할 로그인 URL
+LOGOUT_URL = "/accounts/logout/"  # 로그아웃 버튼이나 링크가 사용할 로그아웃 URL
 LOGIN_REDIRECT_URL = "/"  # 로그인 후 리디렉션될 URL
 LOGOUT_REDIRECT_URL = "/"  # 로그아웃 후 메인 페이지로 리디렉션
 

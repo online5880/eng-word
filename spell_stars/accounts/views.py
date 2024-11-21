@@ -13,6 +13,7 @@ from django.http import JsonResponse
 from datetime import datetime
 from rest_framework.test import APIRequestFactory
 from django.utils import timezone
+from django.contrib import messages
 
 # Create your views here.
 
@@ -31,6 +32,7 @@ def signup(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             user = form.save()
+            messages.success(request, "회원가입 완료!")
             return redirect("/")
     else:
         form = SignupForm()

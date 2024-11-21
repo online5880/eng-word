@@ -28,7 +28,6 @@ urlpatterns = [
 
     # 사용자 인증 및 계정 관련 URL
     path("accounts/", include("accounts.urls")),  # 사용자 정의 계정 관련 URL
-    path("auth/", include("django.contrib.auth.urls")),  # Django 기본 인증 URL
 
     # 학습 모드 및 기타 기능 URL
     path("vocab/", include("vocab_mode.urls")),  # 단어 학습 모드

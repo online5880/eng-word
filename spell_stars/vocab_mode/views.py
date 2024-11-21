@@ -134,7 +134,7 @@ def upload_audio(request):
             print(student_audio_path)
             print(native_audio_path)
             test_path = "/Users/mane/Documents/Project/eng-word/spell_stars/media/audio_files/native/afternoon.wav"
-            result = process_audio_files(native_audio_path,test_path,current_word,user_id,username)
+            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id,username)
             # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
             return JsonResponse({
                 "status": "success",

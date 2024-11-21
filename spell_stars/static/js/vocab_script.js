@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch('/accounts/end-learning/', {
             method: 'POST',
             headers: {
-                'X-CSRFToken': csrfToken
+    'X-CSRFToken': csrfToken
             }
         });
     });
