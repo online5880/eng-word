@@ -1,0 +1,72 @@
+[
+    {
+        "단어": "across",
+        "단어 뜻": "~건너편에",
+        "품사": "",
+        "예문": "That building is across from my office.",
+        "예문 뜻": "저 건물은 내 사무실 건너편에 있어."
+    },
+    {
+        "단어": "around",
+        "단어 뜻": "주위에",
+        "품사": "",
+        "예문": "My friends are around me.",
+        "예문 뜻": "내 친구들이 내 주위에 있어."
+    },
+    {
+        "단어": "behind",
+        "단어 뜻": "~뒤에",
+        "품사": "",
+        "예문": "My house is behind Tim’s house.",
+        "예문 뜻": "우리집은 Tim의 집 뒤에 있어."
+    },
+    {
+        "단어": "between",
+        "단어 뜻": "~사이에",
+        "품사": "",
+        "예문": "My office is between the green building and the pink one.",
+        "예문 뜻": "내 사무실은 초록 걸물과 분홍 건물 사이에 있어."
+    },
+    {
+        "단어": "by",
+        "단어 뜻": "~옆에",
+        "품사": "",
+        "예문": "There is a house by the sea.",
+        "예문 뜻": "바다 옆에 집 한 채가 있어."
+    },
+    {
+        "단어": "in front of",
+        "단어 뜻": "~앞에",
+        "품사": "",
+        "예문": "There is a mailbox in front of the post office.",
+        "예문 뜻": "우체국 앞에 우체통 하나가 있어."
+    },
+    {
+        "단어": "inside",
+        "단어 뜻": "~안에",
+        "품사": "",
+        "예문": "Come inside my house.",
+        "예문 뜻": "우리 집에 들어와."
+    },
+    {
+        "단어": "off",
+        "단어 뜻": "~떨어져",
+        "품사": "",
+        "예문": "Helen’s house is far off from my house.",
+        "예문 뜻": "Helen의 집은 우리 집으로부터 멀리 떨어져 있어."
+    },
+    {
+        "단어": "on",
+        "단어 뜻": "~위에",
+        "품사": "",
+        "예문": "There is a ball on the table.",
+        "예문 뜻": "탁자 위에 공 하나가 있어."
+    },
+    {
+        "단어": "under",
+        "단어 뜻": "~아래에",
+        "품사": "",
+        "예문": "There is a ball under the bed.",
+        "예문 뜻": "침대 아래에 공 하나가 있어."
+    }
+]

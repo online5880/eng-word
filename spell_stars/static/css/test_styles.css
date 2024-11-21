@@ -12,12 +12,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* 제목 스타일 */
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
 /* 설명 텍스트 스타일 */
 p {
     font-size: 1rem;
@@ -156,4 +150,20 @@ p {
 
 .mic-status::-moz-focus-inner {
     border: 0;
+}
+
+/* 다음 문제 버튼 스타일 */
+#nextQuestionBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #016ccf; /* Next question 버튼 색상 */
+    color: white;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#nextQuestionBtn:hover {
+    background-color: #005bb5; /* Next question 버튼 hover 색상 */
 }

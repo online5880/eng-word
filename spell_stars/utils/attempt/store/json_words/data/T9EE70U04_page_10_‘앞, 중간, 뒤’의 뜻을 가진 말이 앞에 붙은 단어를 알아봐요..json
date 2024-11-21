@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "anticipate",
+        "단어 뜻": "예상하다",
+        "품사": "v.",
+        "예문": "I anticipate that my pocket money will rise next year.",
+        "예문 뜻": "나는 내년에는 용돈이 오를 것이라고 예상한다."
+    },
+    {
+        "단어": "antique",
+        "단어 뜻": "골동품인",
+        "품사": "adj.",
+        "예문": "My grandmother has a priceless antique teapot.",
+        "예문 뜻": "우리 할머니는 귀중한 골동품 주전자를 하나 갖고 계시다."
+    },
+    {
+        "단어": "forecast",
+        "단어 뜻": "예측, 예보",
+        "품사": "n.",
+        "예문": "The forecast said it would be snowy with a strong wind.",
+        "예문 뜻": "예보에 따르면 강한 바람을 동반한 눈이 올 거라고 했다."
+    },
+    {
+        "단어": "forefinger",
+        "단어 뜻": "집게손가락",
+        "품사": "n.",
+        "예문": "She took the eraser between her thumb and forefinger.",
+        "예문 뜻": "그녀는 엄지손가락과 집게손가락으로 지우개를 잡았다."
+    },
+    {
+        "단어": "forehead",
+        "단어 뜻": "이마",
+        "품사": "n.",
+        "예문": "She cuts the bangs to hide her high forehead.",
+        "예문 뜻": "그녀는 넓은 이마를 감추기 위해 앞머리를 자른다."
+    },
+    {
+        "단어": "foretell",
+        "단어 뜻": "예언하다",
+        "품사": "v.",
+        "예문": "The fortune teller will foretell your future.",
+        "예문 뜻": "예언가는 너의 미래를 알려 줄 것이다."
+    },
+    {
+        "단어": "interfere",
+        "단어 뜻": "간섭하다",
+        "품사": "v.",
+        "예문": "I wish my mother would stop interfering in my life.",
+        "예문 뜻": "우리 엄마가 내 삶에 간섭하는 것을 그만했으면 좋겠다."
+    },
+    {
+        "단어": "intermediate",
+        "단어 뜻": "중간의",
+        "품사": "adj.",
+        "예문": "My little sister took an intermediate skiing class last winter vacation.",
+        "예문 뜻": "내 여동생은 지난 겨울 방학에 중급 스키 강좌를 들었다."
+    },
+    {
+        "단어": "interval",
+        "단어 뜻": "간격",
+        "품사": "n.",
+        "예문": "The subway runs at an interval of five minutes.",
+        "예문 뜻": "지하철은 5분 간격으로 운행한다."
+    },
+    {
+        "단어": "postpone",
+        "단어 뜻": "연기하다, 미루다",
+        "품사": "v.",
+        "예문": "They will postpone a journey because of their sick baby.",
+        "예문 뜻": "그들은 아픈 아기 때문에 여행을 미룰 것이다."
+    },
+    {
+        "단어": "postscript",
+        "단어 뜻": "(편지의) 추신",
+        "품사": "n.",
+        "예문": "Please say hello to him in postscript.",
+        "예문 뜻": "추신으로 그에게 안부를 전해 주세요."
+    },
+    {
+        "단어": "postwar",
+        "단어 뜻": "전후의",
+        "품사": "adj.",
+        "예문": "The photos well show life in postwar Korea.",
+        "예문 뜻": "그 사진들은 전후 한국의 삶을 잘 보여 주고 있다."
+    },
+    {
+        "단어": "precede",
+        "단어 뜻": "앞서다",
+        "품사": "v.",
+        "예문": "A flash of lightning precedes the thunder.",
+        "예문 뜻": "천둥이 치기 전에 번개가 번쩍인다."
+    },
+    {
+        "단어": "prehistory",
+        "단어 뜻": "선사 시대",
+        "품사": "n.",
+        "예문": "Stonehenge is a well-preserved monument in prehistory.",
+        "예문 뜻": "스톤헨지는 잘 보존된 선사 시대의 건축물이다."
+    },
+    {
+        "단어": "prejudice",
+        "단어 뜻": "편견",
+        "품사": "n.",
+        "예문": "A teacher should treat the students without prejudice.",
+        "예문 뜻": "교사는 편견 없이 학생들을 대해야 한다."
+    },
+    {
+        "단어": "preview",
+        "단어 뜻": "시사회, 예고편",
+        "품사": "n.",
+        "예문": "We saw a preview of the movie on the Internet.",
+        "예문 뜻": "우리는 그 영화의 예고편을 인터넷에서 봤다."
+    },
+    {
+        "단어": "proceed",
+        "단어 뜻": "진행되다",
+        "품사": "v.",
+        "예문": "The investigation needs to proceed in secret.",
+        "예문 뜻": "조사는 비밀리에 이루어져야 한다."
+    },
+    {
+        "단어": "progress",
+        "단어 뜻": "진전, 진행",
+        "품사": "n.",
+        "예문": "Students should report the progress of the science project.",
+        "예문 뜻": "학생들은 과학 프로젝트의 경과를 보고해야 한다."
+    },
+    {
+        "단어": "promote",
+        "단어 뜻": "고취하다, 촉진하다",
+        "품사": "v.",
+        "예문": "She started a movement to promote awareness of the environment.",
+        "예문 뜻": "그녀는 환경에 대한 의식을 고취하기 위한 운동을 시작했다."
+    },
+    {
+        "단어": "propose",
+        "단어 뜻": "제안하다",
+        "품사": "v.",
+        "예문": "The president of school proposed some changes for school life.",
+        "예문 뜻": "학교 회장은 학교 생활을 위한 몇 가지 개선점을 제안했다."
+    }
+]

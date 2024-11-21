@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "carry",
+        "단어 뜻": "나르다",
+        "품사": "동사",
+        "예문": "Frank is carrying a suitcase.",
+        "예문 뜻": "Frank는 여행 가방을 나르고 있어."
+    },
+    {
+        "단어": "environment",
+        "단어 뜻": "환경",
+        "품사": "명사",
+        "예문": "What can we do for our environment?",
+        "예문 뜻": "환경을 위해 우리는 무엇을 할 수 있을까?"
+    },
+    {
+        "단어": "fine",
+        "단어 뜻": "좋은",
+        "품사": "형용사",
+        "예문": "I’m fine. Thank you.",
+        "예문 뜻": "난 좋아요. 고마워요."
+    },
+    {
+        "단어": "keep",
+        "단어 뜻": "유지하다",
+        "품사": "동사",
+        "예문": "You have a cute smile. Keep smiling.",
+        "예문 뜻": "당신은 웃는 모습이 귀여워요. 늘 웃으세요."
+    },
+    {
+        "단어": "park",
+        "단어 뜻": "주차하다, 명사)\n공원",
+        "품사": "동사",
+        "예문": "There are lots of parking lots around this park.",
+        "예문 뜻": "이 공원 주변에는 주차할 곳이 많아."
+    },
+    {
+        "단어": "pick",
+        "단어 뜻": "고르다, 꺾다",
+        "품사": "동사",
+        "예문": "She is about to pick the plant.",
+        "예문 뜻": "그녀는 식물을 꺾으려고 하고 있어."
+    },
+    {
+        "단어": "protect",
+        "단어 뜻": "보호하다",
+        "품사": "동사",
+        "예문": "We should protect the environment.",
+        "예문 뜻": "우리는 환경을 보호해야 해."
+    },
+    {
+        "단어": "trash",
+        "단어 뜻": "쓰레기",
+        "품사": "명사",
+        "예문": "Don’t throw it away. The trash can is full.",
+        "예문 뜻": "던지지 마. 쓰레기통이 꽉 찼어."
+    }
+]

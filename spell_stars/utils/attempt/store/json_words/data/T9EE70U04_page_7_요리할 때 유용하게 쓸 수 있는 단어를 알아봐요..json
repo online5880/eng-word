@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "fat",
+        "단어 뜻": "지방",
+        "품사": "n.",
+        "예문": "This meat has a lot of fat.",
+        "예문 뜻": "이 고기는 지방이 많다."
+    },
+    {
+        "단어": "flavor",
+        "단어 뜻": "맛, 풍미",
+        "품사": "n.",
+        "예문": "This wine has a fruity flavor.",
+        "예문 뜻": "이 와인은 과일 맛이 난다."
+    },
+    {
+        "단어": "fry",
+        "단어 뜻": "튀기다",
+        "품사": "v.",
+        "예문": "Fry the onion for 1 minute.",
+        "예문 뜻": "양파를 1분 동안 튀겨라."
+    },
+    {
+        "단어": "heat",
+        "단어 뜻": "뜨겁게 만들다",
+        "품사": "v.",
+        "예문": "Dad was heating some soup and setting the table.",
+        "예문 뜻": "아빠는 수프를 데우고 식탁을 차리고 계셨다."
+    },
+    {
+        "단어": "measure",
+        "단어 뜻": "측정하다",
+        "품사": "v.",
+        "예문": "We measured the weight of the pumpkin.",
+        "예문 뜻": "우리는 호박의 무게를 쟀다."
+    },
+    {
+        "단어": "pan",
+        "단어 뜻": "팬, 냄비",
+        "품사": "n.",
+        "예문": "A chef put the butter and oil in a large pan.",
+        "예문 뜻": "요리사는 커다란 팬에 버터와 기름을 넣었다."
+    },
+    {
+        "단어": "pour",
+        "단어 뜻": "붓다, 따르다",
+        "품사": "v.",
+        "예문": "Pour some hot water into a container.",
+        "예문 뜻": "용기에 뜨거운 물을 조금 부어라."
+    },
+    {
+        "단어": "powder",
+        "단어 뜻": "가루, 분말",
+        "품사": "n.",
+        "예문": "Place cocoa or cinnamon powder on a doughnut to taste.",
+        "예문 뜻": "입맛에 따라 도넛에 코코아나 계피 가루를 발라라."
+    },
+    {
+        "단어": "recipe",
+        "단어 뜻": "요리법",
+        "품사": "n.",
+        "예문": "Tell me the recipe for the chocolate cookies.",
+        "예문 뜻": "초콜릿 쿠키 요리법을 나에게 말해 줘."
+    },
+    {
+        "단어": "roast",
+        "단어 뜻": "구운",
+        "품사": "adj.",
+        "예문": "I like roast beef and potatoes.",
+        "예문 뜻": "나는 구운 쇠고기와 감자를 좋아한다."
+    },
+    {
+        "단어": "roll",
+        "단어 뜻": "밀어 펴다",
+        "품사": "v.",
+        "예문": "Roll the dough out on the floured board.",
+        "예문 뜻": "밀가루가 뿌려진 판 위에 반죽을 밀어라."
+    },
+    {
+        "단어": "sauce",
+        "단어 뜻": "소스",
+        "품사": "n.",
+        "예문": "Dip the pizza into the garlic sauce.",
+        "예문 뜻": "피자를 마늘 소스에 찍어라."
+    },
+    {
+        "단어": "season",
+        "단어 뜻": "양념하다",
+        "품사": "v.",
+        "예문": "You can season with salt as you like.",
+        "예문 뜻": "네가 원하는 대로 소금으로 간을 할 수 있다."
+    },
+    {
+        "단어": "slice",
+        "단어 뜻": "(얇게) 썰다",
+        "품사": "v.",
+        "예문": "Slice the ham as thin as paper.",
+        "예문 뜻": "햄을 종이처럼 얇게 썰어라."
+    },
+    {
+        "단어": "sour",
+        "단어 뜻": "(맛이) 신, 시큼한",
+        "품사": "adj.",
+        "예문": "If foods taste too sour, you may add sugar.",
+        "예문 뜻": "음식이 너무 시면 설탕을 첨가해도 좋다."
+    },
+    {
+        "단어": "steam",
+        "단어 뜻": "수증기, 김",
+        "품사": "n.",
+        "예문": "Watch out for the steam coming out of the boiling kettle.",
+        "예문 뜻": "끓는 주전자에서 나오는 수증기를 조심해라."
+    },
+    {
+        "단어": "stir",
+        "단어 뜻": "젓다",
+        "품사": "v.",
+        "예문": "Stir two eggs quickly with a long fork.",
+        "예문 뜻": "긴 포크로 달걀 두 개를 빠르게 저어라."
+    },
+    {
+        "단어": "tray",
+        "단어 뜻": "쟁반",
+        "품사": "n.",
+        "예문": "Put the cheese on the tray.",
+        "예문 뜻": "치즈를 쟁반에 둬라."
+    },
+    {
+        "단어": "weigh",
+        "단어 뜻": "무게가 ~이다",
+        "품사": "v.",
+        "예문": "How much does a bag of rice weigh?",
+        "예문 뜻": "쌀 한 포대의 무게는 얼마입니까?"
+    },
+    {
+        "단어": "wheat",
+        "단어 뜻": "밀",
+        "품사": "n.",
+        "예문": "You can make various foods using wheat.",
+        "예문 뜻": "밀을 이용해 다양한 음식을 만들 수 있다."
+    }
+]

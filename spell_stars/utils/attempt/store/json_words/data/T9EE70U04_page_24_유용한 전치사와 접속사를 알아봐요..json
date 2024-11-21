@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "above",
+        "단어 뜻": "~보다 위에",
+        "품사": "prep.",
+        "예문": "Our plane was flying above the clouds.",
+        "예문 뜻": "우리 비행기는 구름 위를 날고 있었다."
+    },
+    {
+        "단어": "although",
+        "단어 뜻": "비록 ~이긴 하지만",
+        "품사": "conj.",
+        "예문": "Although I was sick, I went to school yesterday.",
+        "예문 뜻": "비록 나는 아팠지만 어제 학교에 갔다."
+    },
+    {
+        "단어": "around",
+        "단어 뜻": "~ 주위에",
+        "품사": "prep.",
+        "예문": "There are some people around the tree.",
+        "예문 뜻": "몇몇 사람들이 나무 주위에 있다."
+    },
+    {
+        "단어": "because of",
+        "단어 뜻": "~ 때문에",
+        "품사": "prep.",
+        "예문": "I couldn’t sleep last night because of you.",
+        "예문 뜻": "나는 너 때문에 지난밤 잠을 잘 수 없었다."
+    },
+    {
+        "단어": "behind",
+        "단어 뜻": "~ 뒤에",
+        "품사": "prep.",
+        "예문": "An old couple was sitting behind me in the train.",
+        "예문 뜻": "한 노부부가 기차에서 내 뒤에 앉아 있었다."
+    },
+    {
+        "단어": "below",
+        "단어 뜻": "~보다 아래에",
+        "품사": "prep.",
+        "예문": "The sun sank below the horizon.",
+        "예문 뜻": "태양이 지평선 아래로 졌다."
+    },
+    {
+        "단어": "beyond",
+        "단어 뜻": "~ 저편에, ~너머",
+        "품사": "prep.",
+        "예문": "There is a camp site beyond the hill.",
+        "예문 뜻": "언덕 너머 야영지가 있다."
+    },
+    {
+        "단어": "both A and B",
+        "단어 뜻": "A와 B 둘 다",
+        "품사": "conj.",
+        "예문": "We both watched a movie and had dinner.",
+        "예문 뜻": "우리는 영화도 보고 저녁도 먹었다."
+    },
+    {
+        "단어": "by",
+        "단어 뜻": "~ 옆에",
+        "품사": "prep.",
+        "예문": "We were standing by the door",
+        "예문 뜻": "우리는 문 옆에 서 있었다."
+    },
+    {
+        "단어": "if",
+        "단어 뜻": "만약 ~라면",
+        "품사": "conj.",
+        "예문": "If you see her, give her this camera.",
+        "예문 뜻": "네가 그녀를 만나면 이 카메라 좀 전해 줘."
+    },
+    {
+        "단어": "into",
+        "단어 뜻": "~ 안으로",
+        "품사": "prep.",
+        "예문": "He threw the firewood into the stove.",
+        "예문 뜻": "그는 장작을 난로 속으로 던졌다."
+    },
+    {
+        "단어": "once",
+        "단어 뜻": "일단 ~하면",
+        "품사": "conj.",
+        "예문": "Once I start to read comic books, I can't stop.",
+        "예문 뜻": "일단 내가 만화 책을 읽기 시작하면, 멈출 수가 없다."
+    },
+    {
+        "단어": "opposite",
+        "단어 뜻": "~ 건너편에, ~ 맞은편에",
+        "품사": "prep.",
+        "예문": "The post office is opposite city hall.",
+        "예문 뜻": "우체국은 시청 건너편에 있다."
+    },
+    {
+        "단어": "per",
+        "단어 뜻": "~당, ~마다",
+        "품사": "prep.",
+        "예문": "I go swimming twice per week.",
+        "예문 뜻": "나는 일주일에 두 번 수영하러 간다."
+    },
+    {
+        "단어": "so",
+        "단어 뜻": "그래서",
+        "품사": "conj.",
+        "예문": "I’m tired, so I can’t go with you.",
+        "예문 뜻": "나는 피곤해서 너와 함께 갈 수 없다."
+    },
+    {
+        "단어": "unless",
+        "단어 뜻": "~하지 않는다면",
+        "품사": "conj.",
+        "예문": "You’ll miss the bus unless you walk more quickly.",
+        "예문 뜻": "좀 더 빨리 걷지 않는다면, 너는 버스를 놓치게 될 것이다."
+    },
+    {
+        "단어": "until",
+        "단어 뜻": "~할 때까지",
+        "품사": "conj.",
+        "예문": "Let's take a rest in the house until the rain stops.",
+        "예문 뜻": "비가 그칠 때까지 집에서 쉬자."
+    },
+    {
+        "단어": "when",
+        "단어 뜻": "~할 때",
+        "품사": "conj.",
+        "예문": "I feel happy when I see snow",
+        "예문 뜻": "나는 눈을 볼 때 행복하다."
+    },
+    {
+        "단어": "while",
+        "단어 뜻": "~ 동안",
+        "품사": "conj.",
+        "예문": "Today, Mom asked me to do many chores while she was out.",
+        "예문 뜻": "오늘 어머니께서는 외출한 동안 많은 집안일을 나에게 시키셨다."
+    },
+    {
+        "단어": "without",
+        "단어 뜻": "~없이",
+        "품사": "prep.",
+        "예문": "We found the answer without difficulty.",
+        "예문 뜻": "우리는 어려움 없이 정답을 찾았다."
+    }
+]

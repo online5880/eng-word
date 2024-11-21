@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "disabled",
+        "단어 뜻": "장애가 있는",
+        "품사": "adj.",
+        "예문": "Helen Keller was born disabled.",
+        "예문 뜻": "헬렌 켈러는 장애를 가지고 태어났다."
+    },
+    {
+        "단어": "disadvantage",
+        "단어 뜻": "불리한 점",
+        "품사": "n.",
+        "예문": "Jiho thinks that being the older child has many disadvantages.",
+        "예문 뜻": "Jiho는 맏이는 불리한 점이 많다고 생각한다."
+    },
+    {
+        "단어": "disconnect",
+        "단어 뜻": "연결을 끊다",
+        "품사": "v.",
+        "예문": "I'd like to have my phone disconnected as of September 22.",
+        "예문 뜻": "나는 9월 22일 자로 전화가 해지되기를 원한다."
+    },
+    {
+        "단어": "dismiss",
+        "단어 뜻": "해고하다",
+        "품사": "v.",
+        "예문": "They were dismissed last month.",
+        "예문 뜻": "그들은 지난달에 해고당했다."
+    },
+    {
+        "단어": "distrust",
+        "단어 뜻": "불신(감)",
+        "품사": "n.",
+        "예문": "She has a deep distrust of all modern medical science.",
+        "예문 뜻": "그녀는 모든 현대 의학에 대해 깊은 불신을 가지고 있다."
+    },
+    {
+        "단어": "immoral",
+        "단어 뜻": "비도덕적인",
+        "품사": "adj.",
+        "예문": "People put the blame on his immoral acts.",
+        "예문 뜻": "사람들은 그의 부도덕한 행동을 비난한다."
+    },
+    {
+        "단어": "immortal",
+        "단어 뜻": "죽지 않는, 불후의",
+        "품사": "adj.",
+        "예문": "Hamlet is an immortal work",
+        "예문 뜻": "햄릿은 불후의 명작이다."
+    },
+    {
+        "단어": "impatient",
+        "단어 뜻": "안달하는, 참을성 없는",
+        "품사": "adj.",
+        "예문": "Some children are impatient to go out.",
+        "예문 뜻": "몇몇 아이들은 빨리 나가고 싶어서 안달하고 있다."
+    },
+    {
+        "단어": "impolite",
+        "단어 뜻": "무례한",
+        "품사": "adj.",
+        "예문": "The clerk was impolite to my family.",
+        "예문 뜻": "그 점원은 우리 가족에게 무례했다."
+    },
+    {
+        "단어": "impossible",
+        "단어 뜻": "불가능한",
+        "품사": "adj.",
+        "예문": "It is impossible to finish the project today.",
+        "예문 뜻": "오늘 그 프로젝트를 끝내는 것은 불가능하다."
+    },
+    {
+        "단어": "inactive",
+        "단어 뜻": "활동하지 않는",
+        "품사": "adj.",
+        "예문": "These days, children are very inactive.",
+        "예문 뜻": "요즈음 아이들은 매우 활동량이 적다."
+    },
+    {
+        "단어": "inconvenient",
+        "단어 뜻": "불편한",
+        "품사": "adj.",
+        "예문": "It is inconvenient not to have a sofa in my house.",
+        "예문 뜻": "우리 집에 소파가 없어서 불편하다."
+    },
+    {
+        "단어": "incorrect",
+        "단어 뜻": "맞지 않는",
+        "품사": "adj.",
+        "예문": "The doctor gave him an incorrect diagnosis.",
+        "예문 뜻": "의사가 그에게 잘못된 처방을 내렸다."
+    },
+    {
+        "단어": "incredible",
+        "단어 뜻": "믿을 수 없는",
+        "품사": "adj.",
+        "예문": "Usain Bolt crossed the finish line at an incredible speed.",
+        "예문 뜻": "우사인 볼트는 놀라운 속도로 결승선을 통과했다."
+    },
+    {
+        "단어": "independent",
+        "단어 뜻": "독립적인",
+        "품사": "adj.",
+        "예문": "Jane is a very independent young woman.",
+        "예문 뜻": "Jane은 아주 독립적인 젊은 여성이다."
+    },
+    {
+        "단어": "uneasy",
+        "단어 뜻": "불안한",
+        "품사": "adj.",
+        "예문": "She looked at the stage with an uneasy face.",
+        "예문 뜻": "그녀는 불안한 표정으로 무대를 보았다."
+    },
+    {
+        "단어": "unfair",
+        "단어 뜻": "불공평한",
+        "품사": "adj.",
+        "예문": "The judges of the basketball game were unfair.",
+        "예문 뜻": "농구 경기의 심판들은 불공평했다."
+    },
+    {
+        "단어": "unhappy",
+        "단어 뜻": "불행한",
+        "품사": "adj.",
+        "예문": "Steve Jobs had a very unhappy childhood.",
+        "예문 뜻": "스티브 잡스는 아주 불행한 어린 시절을 보냈다."
+    },
+    {
+        "단어": "unkind",
+        "단어 뜻": "불친절한",
+        "품사": "adj.",
+        "예문": "It is unkind of her to say things like that.",
+        "예문 뜻": "그런 말을 하는 그녀는 불친절하다."
+    },
+    {
+        "단어": "unlucky",
+        "단어 뜻": "운이 나쁜",
+        "품사": "adj.",
+        "예문": "We all felt that they were unlucky to lose.",
+        "예문 뜻": "우리 모두는 그들이 운이 없어서 졌다고 느꼈다."
+    }
+]

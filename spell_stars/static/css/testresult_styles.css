@@ -1,0 +1,84 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* 제목 스타일 */
+h1, h2 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #555;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* 네비게이션 버튼 스타일 */
+#navButtons {
+    display: flex;
+    justify-content: center;  /* 버튼들을 가로로 중앙 정렬 */
+    gap: 10px;  /* 버튼 간 간격 */
+    cursor: pointer;
+}
+
+/* 시험 다시 보기 버튼 스타일 */
+#againBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #016ccf;
+    color: white;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#againBtn:hover {
+    background-color: #005bb5; /* Next Word 버튼 hover 색상 */
+}
+
+/* 나가기 버튼 스타일 */
+#exitBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #016ccf; /* Exit Practice 버튼 색상 */
+    color: white;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#exitBtn:hover {
+    background-color: #005bb5; /* Exit Practice 버튼 hover 색상 */
+}

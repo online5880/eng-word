@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "entrance",
+        "단어 뜻": "(출)입구",
+        "품사": "n.",
+        "예문": "My family took a picture at the entrance to the Musee D’Orsay.",
+        "예문 뜻": "우리 가족은 오르세 미술관 입구에서 사진을 찍었다."
+    },
+    {
+        "단어": "entry",
+        "단어 뜻": "입장, 출입",
+        "품사": "n.",
+        "예문": "The concert is open to everyone, and there is no entry fee.",
+        "예문 뜻": "그 음악회는 누구나 들을 수 있고, 입장료는 무료이다."
+    },
+    {
+        "단어": "excess",
+        "단어 뜻": "지나침, 과잉",
+        "품사": "n.",
+        "예문": "I'm trying not to eat to excess for my health.",
+        "예문 뜻": "나는 건강을 위해 과식을 하지 않으려고 노력한다."
+    },
+    {
+        "단어": "exclude",
+        "단어 뜻": "제외하다",
+        "품사": "v.",
+        "예문": "I excluded gluten from my diet to lose weight.",
+        "예문 뜻": "나는 체중을 줄이기 위해 식단에서 글루텐을 제외시켰다."
+    },
+    {
+        "단어": "exhibit",
+        "단어 뜻": "전시(품)",
+        "품사": "n.",
+        "예문": "A special exhibit about animals has been on display since December.",
+        "예문 뜻": "동물에 관한 특별전이 12월부터 진행되고 있다."
+    },
+    {
+        "단어": "expand",
+        "단어 뜻": "확대하다, 팽창하다",
+        "품사": "v.",
+        "예문": "Metals expand when they are heated.",
+        "예문 뜻": "금속은 열을 받으면 팽창한다."
+    },
+    {
+        "단어": "extend",
+        "단어 뜻": "더 길게 만들다",
+        "품사": "v.",
+        "예문": "The government has a plan to extend the bike path on the island.",
+        "예문 뜻": "정부는 그 섬의 자전거 도로를 확장하려는 계획을 갖고 있다."
+    },
+    {
+        "단어": "extra",
+        "단어 뜻": "추가의",
+        "품사": "adj.",
+        "예문": "We need more extra time for the project.",
+        "예문 뜻": "우리는 그 프로젝트를 위해 더 많은 추가 시간이 필요하다."
+    },
+    {
+        "단어": "extracurricular",
+        "단어 뜻": "정식 과목 이외의, 과외의",
+        "품사": "adj.",
+        "예문": "Students need to do extracurricular activities like arts or sports.",
+        "예문 뜻": "학생들은 미술이나 스포츠와 같은 과외 활동을 할 필요가 있다."
+    },
+    {
+        "단어": "extraordinary",
+        "단어 뜻": "놀라운, 기이한",
+        "품사": "adj.",
+        "예문": "To draw pictures at his young age is something extraordinary.",
+        "예문 뜻": "그가 그런 어린 나이에 그림을 그리는 것은 놀라운 일이다."
+    },
+    {
+        "단어": "extreme",
+        "단어 뜻": "극도의, 극심한",
+        "품사": "adj.",
+        "예문": "The cold in Antarctica was extreme.",
+        "예문 뜻": "남극의 추위는 극심했다."
+    },
+    {
+        "단어": "income",
+        "단어 뜻": "소득, 수입",
+        "품사": "n.",
+        "예문": "Tourism is a major source of income for France.",
+        "예문 뜻": "관광이 프랑스의 주요 수입원이다."
+    },
+    {
+        "단어": "input",
+        "단어 뜻": "입력하다",
+        "품사": "v.",
+        "예문": "His job is to input data into a computer.",
+        "예문 뜻": "그의 일은 컴퓨터에 자료를 입력하는 것이다."
+    },
+    {
+        "단어": "insert",
+        "단어 뜻": "끼우다, 삽입하다",
+        "품사": "v.",
+        "예문": "Insert coins into the slot and press for a drink.",
+        "예문 뜻": "마실 것을 사려면 구멍에 동전을 넣고 누르세요."
+    },
+    {
+        "단어": "insist",
+        "단어 뜻": "고집하다, 주장하다",
+        "품사": "v.",
+        "예문": "I didn't really want to play the computer game, but my big brother insisted",
+        "예문 뜻": "나는 사실 컴퓨터 게임을 하고 싶지 않았는데 우리 형이 우겼다."
+    },
+    {
+        "단어": "outcome",
+        "단어 뜻": "결과",
+        "품사": "n.",
+        "예문": "The outcome of the baseball game is hard to foretell.",
+        "예문 뜻": "야구 경기의 결과는 예측하기 어렵다."
+    },
+    {
+        "단어": "outgoing",
+        "단어 뜻": "외향적인",
+        "품사": "adj.",
+        "예문": "When I was an elementary school student, I was an outgoing child.",
+        "예문 뜻": "나는 초등학생이었을 때 외향적인 아이였다."
+    },
+    {
+        "단어": "outline",
+        "단어 뜻": "개요",
+        "품사": "n.",
+        "예문": "Each student should write a brief outline to write an essay.",
+        "예문 뜻": "학생들은 각자 에세이를 쓰기 위해 간략한 개요를 써야 한다."
+    },
+    {
+        "단어": "output",
+        "단어 뜻": "생산량",
+        "품사": "n.",
+        "예문": "The daily output of fans is getting smaller in winter.",
+        "예문 뜻": "선풍기의 하루 생산량은 겨울에 더 줄어들고 있다."
+    },
+    {
+        "단어": "outside",
+        "단어 뜻": "밖에(서)",
+        "품사": "adv.",
+        "예문": "My little cousins like to play outside.",
+        "예문 뜻": "나의 어린 사촌들은 밖에서 노는 것을 좋아한다."
+    }
+]

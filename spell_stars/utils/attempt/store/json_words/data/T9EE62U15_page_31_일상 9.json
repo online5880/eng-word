@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "convenient",
+        "단어 뜻": "피곤한",
+        "품사": "형용사",
+        "예문": "The remote control is convenient and easy to use.",
+        "예문 뜻": "그 리모콘은 사용하기 쉽고 편리해."
+    },
+    {
+        "단어": "invent",
+        "단어 뜻": "발명하다",
+        "품사": "동사",
+        "예문": "He wants to invent something new.",
+        "예문 뜻": "그는 뭔가 새로운 것을 발명하고 싶어 해."
+    },
+    {
+        "단어": "math",
+        "단어 뜻": "수학",
+        "품사": "명사",
+        "예문": "I can solve this math problem.",
+        "예문 뜻": "나는 이 수학 문제를 풀 수 있어."
+    },
+    {
+        "단어": "repair",
+        "단어 뜻": "수리하다",
+        "품사": "동사",
+        "예문": "My car is being repaired.",
+        "예문 뜻": "내 차는 수리 중에 있어."
+    },
+    {
+        "단어": "report",
+        "단어 뜻": "성적표",
+        "품사": "명사",
+        "예문": "Where should I put this report card?",
+        "예문 뜻": "이 성적표를 어디에 두어야 할까?"
+    },
+    {
+        "단어": "search",
+        "단어 뜻": "찾아보다",
+        "품사": "동사",
+        "예문": "Search your room from top to bottom.",
+        "예문 뜻": "방을 샅샅이 살펴봐."
+    },
+    {
+        "단어": "snail",
+        "단어 뜻": "달팽이",
+        "품사": "명사",
+        "예문": "My brother is as slow as a snail.",
+        "예문 뜻": "우리 오빠는 달팽이처럼 느려."
+    },
+    {
+        "단어": "subject",
+        "단어 뜻": "주제",
+        "품사": "명사",
+        "예문": "What is the subject of this poem?",
+        "예문 뜻": "이 시의 주제는 무엇이니?"
+    }
+]

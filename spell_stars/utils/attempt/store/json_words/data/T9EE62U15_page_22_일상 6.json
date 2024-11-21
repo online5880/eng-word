@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "beat",
+        "단어 뜻": "울림, 울리는 소\n리",
+        "품사": "명사",
+        "예문": "I heard beats on the drum.",
+        "예문 뜻": "나는 북이 울리는 소리를 들었어."
+    },
+    {
+        "단어": "chief",
+        "단어 뜻": "최고위의",
+        "품사": "형용사",
+        "예문": "Who is the chief manager of this store?",
+        "예문 뜻": "이 매장의 최고 관리자가 누구인가요?"
+    },
+    {
+        "단어": "evidence",
+        "단어 뜻": "증거",
+        "품사": "명사",
+        "예문": "There is no evidence of her guilt.",
+        "예문 뜻": "그녀가 죄가 있다는 증거는 없어."
+    },
+    {
+        "단어": "experience",
+        "단어 뜻": "경험",
+        "품사": "명사",
+        "예문": "We all learn by experience.",
+        "예문 뜻": "우리는 모두 경험을 통해 배워."
+    },
+    {
+        "단어": "joke",
+        "단어 뜻": "농담",
+        "품사": "명사",
+        "예문": "It’s nothing but a joke.",
+        "예문 뜻": "그저 농담이야."
+    },
+    {
+        "단어": "month",
+        "단어 뜻": "달",
+        "품사": "명사",
+        "예문": "I go to the movies about twice a month.",
+        "예문 뜻": "나는 한 달에 두 번쯤 영화 보러 가."
+    },
+    {
+        "단어": "return",
+        "단어 뜻": "돌아오다",
+        "품사": "동사",
+        "예문": "Why does a boomerang return to its thrower?",
+        "예문 뜻": "왜 부메랑은 던진 사람에게 되돌아오는 걸까?"
+    },
+    {
+        "단어": "target",
+        "단어 뜻": "목표",
+        "품사": "명사",
+        "예문": "What is your target for this year?",
+        "예문 뜻": "너의 올해 목표는 무엇이니?"
+    }
+]

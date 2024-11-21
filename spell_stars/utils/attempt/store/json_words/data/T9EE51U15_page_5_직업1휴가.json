@@ -1,0 +1,72 @@
+[
+    {
+        "단어": "busy",
+        "단어 뜻": "바쁜",
+        "품사": "형용사",
+        "예문": "They are very busy.",
+        "예문 뜻": "그들은 매우 바빠."
+    },
+    {
+        "단어": "driver",
+        "단어 뜻": "운전기사",
+        "품사": "명사",
+        "예문": "Ryan’s father is a driver.",
+        "예문 뜻": "Ryan의 아버지는 운전기사야."
+    },
+    {
+        "단어": "during",
+        "단어 뜻": "~동안",
+        "품사": "전치사",
+        "예문": "What will you do during this holiday?",
+        "예문 뜻": "너는 이번 휴가 동안 무엇을 할 거니?"
+    },
+    {
+        "단어": "farmer",
+        "단어 뜻": "농부",
+        "품사": "명사",
+        "예문": "Uncle Bob is a farmer. Bob",
+        "예문 뜻": "삼촌은 농부셔."
+    },
+    {
+        "단어": "fire fighter",
+        "단어 뜻": "소방관",
+        "품사": "명사",
+        "예문": "My father is a fire fighter.",
+        "예문 뜻": "우리 아버지는 소방관이야."
+    },
+    {
+        "단어": "fun",
+        "단어 뜻": "재미",
+        "품사": "명사",
+        "예문": "We had fun at the beach.",
+        "예문 뜻": "우리는 해변에서 재미있었어."
+    },
+    {
+        "단어": "island",
+        "단어 뜻": "섬",
+        "품사": "명사",
+        "예문": "Let’s go fishing on the island.",
+        "예문 뜻": "그 섬에 낚시를 하러 가자."
+    },
+    {
+        "단어": "mountain",
+        "단어 뜻": "산",
+        "품사": "명사",
+        "예문": "Let’s go hiking on the mountain.",
+        "예문 뜻": "그 산에 하이킹을 하러 가자."
+    },
+    {
+        "단어": "police officer",
+        "단어 뜻": "경찰관",
+        "품사": "명사",
+        "예문": "Ryan’s mother is a police officer.",
+        "예문 뜻": "Ryan의 어머니는 경찰관이야."
+    },
+    {
+        "단어": "vacation",
+        "단어 뜻": "방학",
+        "품사": "명사",
+        "예문": "I enjoyed swimming with my family during my vacation.",
+        "예문 뜻": "나는 방학 동안 가족과 함께 수영을 즐겼어."
+    }
+]

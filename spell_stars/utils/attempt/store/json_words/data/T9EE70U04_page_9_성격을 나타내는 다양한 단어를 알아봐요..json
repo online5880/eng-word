@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "ambitious",
+        "단어 뜻": "야망을 품은",
+        "품사": "adj.",
+        "예문": "Ambitious people are always diligent.",
+        "예문 뜻": "야망을 품은 사람들은 언제나 부지런하다."
+    },
+    {
+        "단어": "attractive",
+        "단어 뜻": "매력적인",
+        "품사": "adj.",
+        "예문": "The main character of the movie is an attractive man.",
+        "예문 뜻": "그 영화 주인공은 매력적인 남성이다."
+    },
+    {
+        "단어": "tempered",
+        "단어 뜻": "화를 잘 내는",
+        "품사": "adj.",
+        "예문": "He is bad-tempered, so he has few friends.",
+        "예문 뜻": "그는 화를 잘 내서 친구가 별로 없다."
+    },
+    {
+        "단어": "careless",
+        "단어 뜻": "조심성이 없는",
+        "품사": "adj.",
+        "예문": "The careless driver didn't slow down.",
+        "예문 뜻": "그 부주의한 운전자는 속도를 늦추지 않았다."
+    },
+    {
+        "단어": "clever",
+        "단어 뜻": "영리한",
+        "품사": "adj.",
+        "예문": "The clever Robin Hood escaped from the bad guys.",
+        "예문 뜻": "영리한 로빈 후드는 나쁜 악당들의 추적을 따돌렸다."
+    },
+    {
+        "단어": "cruel",
+        "단어 뜻": "잔인한",
+        "품사": "adj.",
+        "예문": "Hitler was a cruel ruler in the Second World War.",
+        "예문 뜻": "히틀러는 제2차 세계 대전 당시 잔인한 지도자였다."
+    },
+    {
+        "단어": "curious",
+        "단어 뜻": "궁금한",
+        "품사": "adj.",
+        "예문": "I’m curious about who the painter is.",
+        "예문 뜻": "나는 화가가 누구인지 궁금하다."
+    },
+    {
+        "단어": "dull",
+        "단어 뜻": "재미없는, 지루한",
+        "품사": "adj.",
+        "예문": "He is a nice but dull man.",
+        "예문 뜻": "그는 친절하지만 지루한 남자이다."
+    },
+    {
+        "단어": "elegant",
+        "단어 뜻": "우아한, 품위 있는",
+        "품사": "adj",
+        "예문": "My mother is elegant and kind",
+        "예문 뜻": "우리 엄마는 우아하고 친절하시다."
+    },
+    {
+        "단어": "tempered",
+        "단어 뜻": "마음씨 착한",
+        "품사": "adj.",
+        "예문": "Her boss is always kind and good-tempered.",
+        "예문 뜻": "그녀의 사장은 항상 친절하고 마음씨가 착하다."
+    },
+    {
+        "단어": "greedy",
+        "단어 뜻": "욕심 많은",
+        "품사": "adj.",
+        "예문": "What a greedy woman she is!",
+        "예문 뜻": "그녀는 정말 욕심 많은 사람이구나!"
+    },
+    {
+        "단어": "working",
+        "단어 뜻": "성실한, 근면한",
+        "품사": "adj.",
+        "예문": "Coworkers in my company are hard-working.",
+        "예문 뜻": "우리 회사의 동료들은 성실하다."
+    },
+    {
+        "단어": "humorous",
+        "단어 뜻": "재미있는",
+        "품사": "adj.",
+        "예문": "My science teacher is as humorous as a comedian.",
+        "예문 뜻": "우리 과학 선생님은 코미디언처럼 재미있다."
+    },
+    {
+        "단어": "patient",
+        "단어 뜻": "참을성이 있는",
+        "품사": "adj.",
+        "예문": "Parents should be patient with children.",
+        "예문 뜻": "부모는 아이에게 참을성을 가져야 한다."
+    },
+    {
+        "단어": "sensitive",
+        "단어 뜻": "예민한, 민감한",
+        "품사": "adj.",
+        "예문": "You are so sensitive about your weight.",
+        "예문 뜻": "너는 몸무게에 대해 무척 예민하다."
+    },
+    {
+        "단어": "shy",
+        "단어 뜻": "수줍음을 많이 타는",
+        "품사": "adj.",
+        "예문": "I’m very shy, so I couldn’t talk to you first.",
+        "예문 뜻": "나는 수줍음을 많이 타서, 너에게 먼저 말을 걸 수 없었다."
+    },
+    {
+        "단어": "silly",
+        "단어 뜻": "바보 같은",
+        "품사": "adj.",
+        "예문": "I feel silly in these pink pants.",
+        "예문 뜻": "나는 이 핑크 바지를 입으니 바보가 된 것 같은 기분이 든다."
+    },
+    {
+        "단어": "sincere",
+        "단어 뜻": "진실된, 진심 어린",
+        "품사": "adj.",
+        "예문": "What should we do to have a sincere friendship?",
+        "예문 뜻": "진실된 우정을 얻기 위해 우리는 무엇을 해야 할까?"
+    },
+    {
+        "단어": "strict",
+        "단어 뜻": "엄격한",
+        "품사": "adj.",
+        "예문": "My homeroom teacher was very strict in class, but today she is trying to",
+        "예문 뜻": "smile"
+    },
+    {
+        "단어": "talkative",
+        "단어 뜻": "수다스러운",
+        "품사": "adj.",
+        "예문": "She is getting more and more talkative as time goes by.",
+        "예문 뜻": "그녀는 시간이 지날수록 점점 더 말이 많아진다."
+    }
+]

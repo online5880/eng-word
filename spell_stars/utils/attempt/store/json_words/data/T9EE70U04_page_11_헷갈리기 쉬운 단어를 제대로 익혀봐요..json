@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "beside",
+        "단어 뜻": "~옆에",
+        "품사": "prep.",
+        "예문": "Who is the boy sitting beside Eddy?",
+        "예문 뜻": "Eddy 옆에 앉은 소년은 누구니?"
+    },
+    {
+        "단어": "besides",
+        "단어 뜻": "~외에",
+        "품사": "prep.",
+        "예문": "I have no family besides my little brother.",
+        "예문 뜻": "나는 남동생 외에 가족이 없다."
+    },
+    {
+        "단어": "borrow",
+        "단어 뜻": "빌리다",
+        "품사": "v.",
+        "예문": "I borrowed Tom’s bike, but I broke it by accident.",
+        "예문 뜻": "나는 Tom의 자전거를 빌렸지만, 우연히 그것을 부수었다."
+    },
+    {
+        "단어": "lend",
+        "단어 뜻": "빌려주다",
+        "품사": "v.",
+        "예문": "I can lend you my sleeping bag if you want.",
+        "예문 뜻": "네가 원한다면, 나는 너에게 침낭을 빌려줄 수 있다."
+    },
+    {
+        "단어": "desert",
+        "단어 뜻": "사막",
+        "품사": "n.",
+        "예문": "Some runners like to run in a desert or on snow and ice.",
+        "예문 뜻": "몇몇 주자들은 사막 또는 눈과 얼음 위를 달리는 것을 좋아한다."
+    },
+    {
+        "단어": "dessert",
+        "단어 뜻": "후식",
+        "품사": "n.",
+        "예문": "Would you care for some dessert?",
+        "예문 뜻": "후식 좀 드시겠어요?"
+    },
+    {
+        "단어": "a_little",
+        "단어 뜻": "(양이) 조금/약간 있는",
+        "품사": "phr.",
+        "예문": "You can use a_little cream and milk to bake bread.",
+        "예문 뜻": "너는 빵을 굽기 위해 약간의 크림과 우유를 사용할 수 있다."
+    },
+    {
+        "단어": "little",
+        "단어 뜻": "(양이) 거의 없는",
+        "품사": "adj.",
+        "예문": "There was little food on the snow-covered mainland.",
+        "예문 뜻": "눈으로 덮인 본토에는 음식이 거의 없었다."
+    },
+    {
+        "단어": "loose",
+        "단어 뜻": "헐렁한",
+        "품사": "adj.",
+        "예문": "The black pants are too loose for you.",
+        "예문 뜻": "그 검정 바지는 너에게 너무 헐렁하다."
+    },
+    {
+        "단어": "lose",
+        "단어 뜻": "잃다, 줄다",
+        "품사": "v.",
+        "예문": "Using diet pills is not a safe way to lose weight.",
+        "예문 뜻": "다이어트 약을 사용하는 것은 체중을 줄이는 안전한 방법이 아니다."
+    },
+    {
+        "단어": "principal",
+        "단어 뜻": "교장",
+        "품사": "n.",
+        "예문": "The new principal spoke to us this morning.",
+        "예문 뜻": "새 교장 선생님은 오늘 아침 우리에게 연설하셨다."
+    },
+    {
+        "단어": "principle",
+        "단어 뜻": "원칙",
+        "품사": "n.",
+        "예문": "It is my principle not to be late for school.",
+        "예문 뜻": "학교에 늦지 않는다는 것이 나의 원칙이다."
+    },
+    {
+        "단어": "prefer",
+        "단어 뜻": "(더) 좋아하다",
+        "품사": "v.",
+        "예문": "Which do you prefer, a house with a green roof or with a red roof?",
+        "예문 뜻": "녹색 지붕의 집과 빨간색 지붕의 집 중, 어느 것이 더 좋니?"
+    },
+    {
+        "단어": "proper",
+        "단어 뜻": "적절한",
+        "품사": "adj.",
+        "예문": "The plants are going to be put in their proper places the next day.",
+        "예문 뜻": "그 식물들은"
+    },
+    {
+        "단어": "quiet",
+        "단어 뜻": "조용한",
+        "품사": "adj.",
+        "예문": "He plays the song and the whole class becomes quiet.",
+        "예문 뜻": "그가 노래를 틀면 학급 전체는 조용해진다."
+    },
+    {
+        "단어": "quite",
+        "단어 뜻": "꽤",
+        "품사": "adv.",
+        "예문": "What he did with his wealth was quite unique.",
+        "예문 뜻": "그가 자기 재산을 가지고 한 일은 꽤 독특했다."
+    },
+    {
+        "단어": "raise",
+        "단어 뜻": "들어올리다",
+        "품사": "v.",
+        "예문": "I raised my hand because I wanted to look smart.",
+        "예문 뜻": "나는 똑똑해 보이고 싶어서 손을 들었다."
+    },
+    {
+        "단어": "rise",
+        "단어 뜻": "오르다",
+        "품사": "v.",
+        "예문": "A roller coaster suddenly rises, falls, and loops.",
+        "예문 뜻": "롤러코스터는 갑자기 올라갔다가 내려가고, 고리 모양으로 회전한다."
+    },
+    {
+        "단어": "saw",
+        "단어 뜻": "톱질하다",
+        "품사": "v.",
+        "예문": "He sawed a tree down in half.",
+        "예문 뜻": "그는 나무를 절반으로 톱질해서 넘어뜨렸다."
+    },
+    {
+        "단어": "sew",
+        "단어 뜻": "바느질하다",
+        "품사": "v.",
+        "예문": "My grandmother taught me how to sew.",
+        "예문 뜻": "우리 할머니께서는 내게 바느질하는 법을 가르쳐 주셨다."
+    }
+]

@@ -1,0 +1,142 @@
+[
+    {
+        "단어": "alternative",
+        "단어 뜻": "대체 가능한",
+        "품사": "adj.",
+        "예문": "An alternative means to plastic bags is a reusable shopping bag.",
+        "예문 뜻": "비닐봉지에 대한 대체 수단은 재사용할 수 있는 장바구니이다."
+    },
+    {
+        "단어": "chemical",
+        "단어 뜻": "화학 물질",
+        "품사": "n.",
+        "예문": "The factory released toxic chemicals into the river at night.",
+        "예문 뜻": "그 공장은 밤에 독성 화학 물질을 강으로 방출했다."
+    },
+    {
+        "단어": "electricity",
+        "단어 뜻": "전기, 전력",
+        "품사": "n.",
+        "예문": "The automobile runs on electricity.",
+        "예문 뜻": "그 자동차는 전기로 움직인다."
+    },
+    {
+        "단어": "energy",
+        "단어 뜻": "에너지",
+        "품사": "n.",
+        "예문": "We can use solar energy to heat the house.",
+        "예문 뜻": "우리는 집을 데우기 위해 태양 에너지를 사용할 수 있다."
+    },
+    {
+        "단어": "environment",
+        "단어 뜻": "환경",
+        "품사": "n.",
+        "예문": "We should preserve the natural environment for future generations.",
+        "예문 뜻": "우리는 미래 세대를 위해 자연환경을 보존해야 한다."
+    },
+    {
+        "단어": "fuel",
+        "단어 뜻": "연료",
+        "품사": "n.",
+        "예문": "Engineers are doing an experiment on the car using eco-friendly fuel.",
+        "예문 뜻": "기술자들은 친환경 연료를 사용하는 자동차에 관한 실험을 하고 있다."
+    },
+    {
+        "단어": "gas",
+        "단어 뜻": "가스",
+        "품사": "n.",
+        "예문": "Making less trash helps to lower the emission of greenhouse gases.",
+        "예문 뜻": "쓰레기를 덜 만드는 것은 온실가스 배출을 줄이는 것에 도움이 된다."
+    },
+    {
+        "단어": "melt",
+        "단어 뜻": "녹다",
+        "품사": "v.",
+        "예문": "The ice caps are melting fast.",
+        "예문 뜻": "만년설이 빠르게 녹고 있다."
+    },
+    {
+        "단어": "oil",
+        "단어 뜻": "기름",
+        "품사": "n.",
+        "예문": "There is so much oil in the sea due to the ship accident.",
+        "예문 뜻": "선박 사고 때문에 바다에 너무 많은 기름이 있다."
+    },
+    {
+        "단어": "pollution",
+        "단어 뜻": "오염, 공해",
+        "품사": "n.",
+        "예문": "Air pollution is a serious problem in big cities.",
+        "예문 뜻": "대기 오염은 대도시에서 심각한 문제이다."
+    },
+    {
+        "단어": "protect",
+        "단어 뜻": "보호하다",
+        "품사": "v.",
+        "예문": "We should protect forests from illegal cutting.",
+        "예문 뜻": "우리는 불법 벌목으로부터 삼림을 보호해야 한다."
+    },
+    {
+        "단어": "recycle",
+        "단어 뜻": "재활용하다",
+        "품사": "v.",
+        "예문": "You should separate cans, bottles and glass first to recycle them.",
+        "예문 뜻": "너는 캔, 병, 그리고 유리를 재활용하기 위해 먼저 그것들을 분리해야 한다."
+    },
+    {
+        "단어": "reduce",
+        "단어 뜻": "줄이다",
+        "품사": "v.",
+        "예문": "Let's reduce food and plastic waste to make the Earth healthy.",
+        "예문 뜻": "지구를 건강하게 만들기 위해 음식과 플라스틱 쓰레기를 줄이자."
+    },
+    {
+        "단어": "resource",
+        "단어 뜻": "자원",
+        "품사": "n",
+        "예문": "There are few natural resources in Korea.",
+        "예문 뜻": "한국에는 천연 자원이 거의 없다."
+    },
+    {
+        "단어": "save",
+        "단어 뜻": "절약하다",
+        "품사": "v.",
+        "예문": "We can save paper by using both sides of paper.",
+        "예문 뜻": "우리는 이면지를 사용함으로써 종이를 절약할 수 있다."
+    },
+    {
+        "단어": "share",
+        "단어 뜻": "함께 쓰다",
+        "품사": "v.",
+        "예문": "Share useful things instead of throwing them away.",
+        "예문 뜻": "쓸 만한 것들은 버리는 대신 나눠 써라."
+    },
+    {
+        "단어": "soil",
+        "단어 뜻": "토양, 흙",
+        "품사": "n.",
+        "예문": "Trees soak up water from the soil, which helps to prevent flood.",
+        "예문 뜻": "나무는 흙에서 물을 빨아들이는데, 그것은 홍수를 방지하는 데 도움이 된다."
+    },
+    {
+        "단어": "system",
+        "단어 뜻": "제도, 체제",
+        "품사": "n.",
+        "예문": "The government is developing a system for environmentally friendly villages.",
+        "예문 뜻": "정부는 환경친화적인 마을을 위한 시스템을 개발하고 있다."
+    },
+    {
+        "단어": "transform",
+        "단어 뜻": "변형시키다",
+        "품사": "v.",
+        "예문": "The fish are genetically transformed because of the polluted water.",
+        "예문 뜻": "물고기들이 오염된 물 때문에 유전적으로 변형되었다."
+    },
+    {
+        "단어": "waste",
+        "단어 뜻": "낭비",
+        "품사": "n.",
+        "예문": "Brushing our teeth without turning off the water is a waste of water.",
+        "예문 뜻": "수돗물을 잠그지 않고 이를 닦는 것은 물의 낭비이다."
+    }
+]

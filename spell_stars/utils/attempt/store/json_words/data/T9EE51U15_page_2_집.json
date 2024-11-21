@@ -1,0 +1,72 @@
+[
+    {
+        "단어": "garden",
+        "단어 뜻": "정원",
+        "품사": "명사",
+        "예문": "There is a garden in my house.",
+        "예문 뜻": "우리 집에는 정원이 있어."
+    },
+    {
+        "단어": "inside",
+        "단어 뜻": "안에, 안으\n로",
+        "품사": "부사",
+        "예문": "Tim and his dog are inside the room.",
+        "예문 뜻": "Tim과 그의 개는 방 안에 있어."
+    },
+    {
+        "단어": "sink",
+        "단어 뜻": "싱크대",
+        "품사": "명사",
+        "예문": "There are many dishes in the sink.",
+        "예문 뜻": "싱크대 안에 접시가 많이 있어."
+    },
+    {
+        "단어": "soap",
+        "단어 뜻": "비누",
+        "품사": "명사",
+        "예문": "There is soap in the bathroom.",
+        "예문 뜻": "욕실에는 비누가 있어."
+    },
+    {
+        "단어": "stove",
+        "단어 뜻": "가스레인\n지",
+        "품사": "명사",
+        "예문": "There is a stove in the kitchen.",
+        "예문 뜻": "부엌에는 가스레인지가 있어."
+    },
+    {
+        "단어": "surprise",
+        "단어 뜻": "놀람",
+        "품사": "명사",
+        "예문": "What a surprise!",
+        "예문 뜻": "놀랍다!"
+    },
+    {
+        "단어": "toilet",
+        "단어 뜻": "변기",
+        "품사": "명사",
+        "예문": "There is a toilet in the bathroom.",
+        "예문 뜻": "욕실에는 변기가 있어."
+    },
+    {
+        "단어": "toothbrush",
+        "단어 뜻": "칫솔",
+        "품사": "명사",
+        "예문": "There is a toothbrush in the bathroom.",
+        "예문 뜻": "욕실에는 칫솔이 있어."
+    },
+    {
+        "단어": "toothpaste",
+        "단어 뜻": "치약",
+        "품사": "명사",
+        "예문": "There is toothpaste in the bathroom.",
+        "예문 뜻": "욕실에는 치약이 있어."
+    },
+    {
+        "단어": "welcome",
+        "단어 뜻": "환영하다",
+        "품사": "동사",
+        "예문": "Welcome to my house.",
+        "예문 뜻": "우리 집에 온 것을 환영해."
+    }
+]

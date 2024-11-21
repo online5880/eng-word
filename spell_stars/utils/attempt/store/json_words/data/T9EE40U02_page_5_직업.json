@@ -1,0 +1,72 @@
+[
+    {
+        "단어": "actor",
+        "단어 뜻": "남자배우",
+        "품사": "",
+        "예문": "Harry is an actor.",
+        "예문 뜻": "Harry는 배우야."
+    },
+    {
+        "단어": "actress",
+        "단어 뜻": "여자배우",
+        "품사": "",
+        "예문": "Julie wants to be an actress.",
+        "예문 뜻": "Julie는 배우가 되고 싶어 해."
+    },
+    {
+        "단어": "dentist",
+        "단어 뜻": "치과 의사",
+        "품사": "",
+        "예문": "Mr. Jones is a dentist.",
+        "예문 뜻": "Jones씨는 치과 의사셔."
+    },
+    {
+        "단어": "famous",
+        "단어 뜻": "유명한",
+        "품사": "",
+        "예문": "He is famous.",
+        "예문 뜻": "그는 유명해."
+    },
+    {
+        "단어": "job",
+        "단어 뜻": "직업",
+        "품사": "",
+        "예문": "I love my job.",
+        "예문 뜻": "나는 내 직업을 사랑해."
+    },
+    {
+        "단어": "mail carrier",
+        "단어 뜻": "우편 배달부",
+        "품사": "",
+        "예문": "Mr. Watson is a mail carrier.",
+        "예문 뜻": "Watson씨는 우편 배달부셔."
+    },
+    {
+        "단어": "musician",
+        "단어 뜻": "음악가",
+        "품사": "",
+        "예문": "My uncle is a musician.",
+        "예문 뜻": "내 삼촌은 음악가야."
+    },
+    {
+        "단어": "president",
+        "단어 뜻": "대통령",
+        "품사": "",
+        "예문": "Lincoln was the president of the United States.",
+        "예문 뜻": "Lincoln은 미국의 대통령이었어."
+    },
+    {
+        "단어": "teach",
+        "단어 뜻": "가르치다",
+        "품사": "",
+        "예문": "My dad teaches English.",
+        "예문 뜻": "우리 아빠는 영어를 가르치셔."
+    },
+    {
+        "단어": "work",
+        "단어 뜻": "일하다",
+        "품사": "",
+        "예문": "They are working in the office.",
+        "예문 뜻": "그들은 사무실에서 일하고 있어."
+    }
+]

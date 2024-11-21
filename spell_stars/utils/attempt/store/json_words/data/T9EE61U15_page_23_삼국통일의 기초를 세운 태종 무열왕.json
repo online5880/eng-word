@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "brother",
+        "단어 뜻": "남자 형제",
+        "품사": "명사",
+        "예문": "Do you have any brothers or sisters?",
+        "예문 뜻": "너는 남자 형제나 여자 형제가 있니?"
+    },
+    {
+        "단어": "cousin",
+        "단어 뜻": "사촌",
+        "품사": "명사",
+        "예문": "My favorite cousin came to my house.",
+        "예문 뜻": "내가 가장 좋아하는 사촌이 우리 집에 왔어."
+    },
+    {
+        "단어": "daughter",
+        "단어 뜻": "딸",
+        "품사": "명사",
+        "예문": "A king’s daughter is a princess.",
+        "예문 뜻": "왕의 딸이 공주야."
+    },
+    {
+        "단어": "nephew",
+        "단어 뜻": "조카",
+        "품사": "명사",
+        "예문": "A nephew is a son of your brother or sister.",
+        "예문 뜻": "조카는 여러분의 형제나 자매의 아들이에요."
+    },
+    {
+        "단어": "niece",
+        "단어 뜻": "조카딸",
+        "품사": "명사",
+        "예문": "If he’s my uncle, I’m his niece.",
+        "예문 뜻": "만약 그가 내 삼촌이면, 나는 그의 조카딸이야."
+    },
+    {
+        "단어": "relative",
+        "단어 뜻": "친척",
+        "품사": "명사",
+        "예문": "All his relatives came to the wedding.",
+        "예문 뜻": "그의 친척들 모두 결혼식에 왔어."
+    },
+    {
+        "단어": "sister",
+        "단어 뜻": "여자 형제",
+        "품사": "명사",
+        "예문": "I have two brothers and one sister.",
+        "예문 뜻": "나는 두 명의 남자 형제와 한 명의 여자 형제가 있어."
+    },
+    {
+        "단어": "son",
+        "단어 뜻": "아들",
+        "품사": "명사",
+        "예문": "They have a son and two daughters.",
+        "예문 뜻": "그들은 한 명의 아들과 두 명의 딸이 있어."
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "add",
+        "단어 뜻": "더하다",
+        "품사": "동사",
+        "예문": "Add more flour and salt.",
+        "예문 뜻": "밀가루와 소금을 더 넣으세요."
+    },
+    {
+        "단어": "amount",
+        "단어 뜻": "액수",
+        "품사": "명사",
+        "예문": "The total amount came to a million won.",
+        "예문 뜻": "총액이 백만 원에 달했어."
+    },
+    {
+        "단어": "count",
+        "단어 뜻": "세다",
+        "품사": "동사",
+        "예문": "Count how many eggs there are.",
+        "예문 뜻": "달걀이 몇 개 있는지 세어 보세요."
+    },
+    {
+        "단어": "decrease",
+        "단어 뜻": "줄이다",
+        "품사": "동사",
+        "예문": "Decrease baking time to 20 minutes.",
+        "예문 뜻": "굽는 시간을 20분 줄이세요."
+    },
+    {
+        "단어": "everything",
+        "단어 뜻": "모든 것",
+        "품사": "대명사",
+        "예문": "Everything has some beauty.",
+        "예문 뜻": "모든 것은 다 조금씩 아름다움을 지니고 있어."
+    },
+    {
+        "단어": "increase",
+        "단어 뜻": "늘리다",
+        "품사": "동사",
+        "예문": "Increase baking time to one hour.",
+        "예문 뜻": "굽는 시간을 1시간 늘리세요."
+    },
+    {
+        "단어": "several",
+        "단어 뜻": "여러 개의",
+        "품사": "형용사",
+        "예문": "Today he drank several cups of coffee.",
+        "예문 뜻": "그는 오늘 커피를 여러 잔 마셨어."
+    },
+    {
+        "단어": "something",
+        "단어 뜻": "어떤 것",
+        "품사": "대명사",
+        "예문": "Let’s try something new.",
+        "예문 뜻": "새로운 것을 해 보자."
+    }
+]

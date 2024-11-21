@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "diligent",
+        "단어 뜻": "부지런한",
+        "품사": "형용사",
+        "예문": "Mr. Jones is honest and diligent.",
+        "예문 뜻": "Jones씨는 정직하고 부지런해."
+    },
+    {
+        "단어": "dry",
+        "단어 뜻": "건조한",
+        "품사": "형용사",
+        "예문": "Wet places get wetter and dry places get drier.",
+        "예문 뜻": "습한 지역은 더 습해지고, 건조한 지역은 더 건조해져."
+    },
+    {
+        "단어": "flow",
+        "단어 뜻": "흐름",
+        "품사": "명사",
+        "예문": "How can we stop the flow of blood?",
+        "예문 뜻": "어떻게 하면 지혈할(피의 흐름을 막을) 수 있을까?"
+    },
+    {
+        "단어": "hard",
+        "단어 뜻": "딱딱한",
+        "품사": "형용사",
+        "예문": "These rocks are very hard.",
+        "예문 뜻": "이 바위들은 매우 딱딱해."
+    },
+    {
+        "단어": "lazy",
+        "단어 뜻": "게으른",
+        "품사": "형용사",
+        "예문": "I am slow and lazy.",
+        "예문 뜻": "나는 느리고 게을러."
+    },
+    {
+        "단어": "manage",
+        "단어 뜻": "간신히 해내다",
+        "품사": "동사",
+        "예문": "How did you manage that problem?",
+        "예문 뜻": "그 문제를 어떻게 했니?"
+    },
+    {
+        "단어": "weather",
+        "단어 뜻": "날씨",
+        "품사": "명사",
+        "예문": "We have rainy weather this week.",
+        "예문 뜻": "이번 주는 내내 비가 오는군."
+    },
+    {
+        "단어": "wet",
+        "단어 뜻": "젖은",
+        "품사": "형용사",
+        "예문": "I’m completely wet because of the sudden rain.",
+        "예문 뜻": "갑자기 내린 비 때문에 홀딱 젖었어."
+    }
+]

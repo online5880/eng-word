@@ -1,0 +1,58 @@
+[
+    {
+        "단어": "anyway",
+        "단어 뜻": "어쨌거나",
+        "품사": "부사",
+        "예문": "You look like a detective anyway.",
+        "예문 뜻": "어쨌거나 너는 형사처럼 보여."
+    },
+    {
+        "단어": "dish",
+        "단어 뜻": "요리",
+        "품사": "명사",
+        "예문": "Would you like to try a Turkish dish?",
+        "예문 뜻": "터키 요리를 드셔 보실래요?"
+    },
+    {
+        "단어": "meat",
+        "단어 뜻": "고기",
+        "품사": "명사",
+        "예문": "Which do you want, meat or fish?",
+        "예문 뜻": "고기와 생선 중 어느 것이 먹고 싶니?"
+    },
+    {
+        "단어": "once",
+        "단어 뜻": "한 번",
+        "품사": "부사",
+        "예문": "I’ve seen this movie once.",
+        "예문 뜻": "나는 이 영화를 한 번 본 적이 있어."
+    },
+    {
+        "단어": "probably",
+        "단어 뜻": "아마",
+        "품사": "부사",
+        "예문": "Probably it’ll be all right.",
+        "예문 뜻": "아마 괜찮을 거야."
+    },
+    {
+        "단어": "seed",
+        "단어 뜻": "씨앗",
+        "품사": "명사",
+        "예문": "The farmer is sowing the seeds.",
+        "예문 뜻": "농부가 씨앗을 뿌리고 있어."
+    },
+    {
+        "단어": "sometimes",
+        "단어 뜻": "가끔",
+        "품사": "부사",
+        "예문": "Sometimes I visit my aunt with my sister.",
+        "예문 뜻": "나는 가끔 여동생이랑 이모 댁에 가."
+    },
+    {
+        "단어": "vegetable",
+        "단어 뜻": "채소",
+        "품사": "명사",
+        "예문": "I’d like vegetable soup.",
+        "예문 뜻": "나는 채소 스프가 먹고 싶어."
+    }
+]

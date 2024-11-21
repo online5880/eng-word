@@ -1,0 +1,1099 @@
+﻿final_sentence,grammar_score,coherence_score,word,sentence_meaning
+My bat is big.,0.86,1,big,내 배트는 커요.
+What size do you wear?' It's small.,0.99,1,small,어떤 사이즈를 입으세요? 작은 사이즈예요.
+"I ordered a medium, not large. It’s big.",0.96,1,large,저는 대형이 아니라 중형을 주문했습니다. 큽니다.
+One inch is 2.54 centimeters long.,0.84,1,centimeter,1인치는 2.54센티미터 길이입니다.
+I'm short but Jason is also short.,0.87,1,short,저는 키가 작은데 제이슨도 키가 작아요.
+That train and your arm are long.,0.87,0,long,그 기차와 당신의 팔은 길군요.
+I long to be as tall as my brother.,0.84,1,tall,나는 형만큼 키가 크고 싶다.
+The pumpkin is too heavy to carry.,0.93,1,heavy,호박이 너무 무거워서 옮길 수 없습니다.
+We measured the weight of the pumpkin.,0.99,1,weigh,우리는 호박의 무게를 측정했습니다.
+There is a pile of files that train is long.,0.63,0,pile,훈련이 긴 파일이 많이 있습니다.
+He loaded the handcart. It’s too heavy.,0.98,1,load,그는 손수레에 짐을 싣습니다. 너무 무겁습니다.
+This towel feels soft and very absorbent.,1.0,1,soft,이 수건은 부드럽고 흡수성이 아주 좋습니다.
+The math test was very difficult.,0.87,1,difficult,수학 시험은 매우 어려웠습니다.
+The gentleman is gentle when giving advice.,0.93,1,gentle,신사는 조언을 할 때 친절합니다.
+You are so sensitive about your weight.,0.87,1,sensitive,당신은 체중에 너무 민감하군요.
+"My homeroom teacher was very strict in class, but today she is trying to tie tight tights.",0.9,1,strict,"우리 담임선생님은 수업 시간에는 매우 엄격하셨지만, 오늘은 꽉 끼는 스타킹을 매려고 노력하고 계십니다."
+It’s an old car on this road.,1.01,1,old,이 도로에는 오래된 차가 있습니다.
+"I have one cow, and zero is my favorite number.",0.96,0,one,"저는 소 한 마리를 키우고 있는데, 제가 가장 좋아하는 숫자는 0입니다."
+I have two tickets and know three plus two is five.,0.92,1,two,"저는 티켓 두 장을 가지고 있는데, 3 더하기 2는 5라는 걸 알아요."
+I have three pigs and I know math facts.,0.97,1,three,저는 돼지를 세 마리 키우고 있어서 수학적 사실을 잘 알아요.
+"The math problems are correct, it's five ten now.",0.82,0,five,수학 문제는 맞습니다. 지금은 5 10입니다.
+Think of a number and add six.,0.87,1,six,숫자를 생각해 낸 다음 6을 더하세요.
+Seven is my lucky number and seven pears.,0.62,1,seven,제 행운의 숫자는 7이고 배는 일곱 개예요.
+"It's five ten now, the math checks out.",0.99,1,ten,"지금은 5시 10분이에요, 수학적으로 맞는 말이에요."
+I’m eleven years old.,1.01,1,eleven,저는 열한 살이에요.
+You are twelve years old today.,0.88,1,twelve,당신은 오늘 12살이 되었습니다.
+"She is fourteen years old, just like her sister.",0.85,1,fourteen,그녀는 언니와 마찬가지로 열네 살입니다.
+The teenager is fifteen years old.,0.86,1,fifteen,그 10대는 15살이에요.
+My sister is sixteen years old.,0.87,1,sixteen,내 여동생은 열여섯 살이에요.
+My brother and cousin are both seventeen years old.,0.84,1,seventeen,저의 형과 사촌은 둘 다 열일곱 살이에요.
+My cousin is eighteen years old.,0.87,1,eighteen,내 사촌은 열여덟 살이에요.
+The math textbook proves thirty plus forty is seventy.,0.97,1,seventy,수학 교과서에서는 30 더하기 40은 70이라고 증명합니다.
+Forty plus forty is eighty.,0.62,1,eighty,사십 더하기 사십은 여든입니다.
+The math book says Forty plus fifty is ninety.,0.98,1,ninety,수학책에는 40 더하기 50은 90이라고 나와 있어요.
+I only have one hundred won.,1.0,1,hundred,내가 가진 돈은 백원뿐이에요.
+Math problems include Ten times one hundred is one thousand.,0.93,0,thousand,수학 문제에는 10 곱하기 100은 1000입니다.
+She perceived that she placed first.,0.99,1,first,그녀는 자신이 1위를 차지했다는 것을 깨달았습니다.
+Our aim is to rank third in the world.,0.91,1,third,우리의 목표는 세계 3위에 오르는 것입니다.
+Today is my twelfth birthday and they have math on Thursdays.,0.92,1,twelfth,"오늘은 제 열두 번째 생일인데, 매주 목요일마다 수학 수업이 있어요."
+The world's population is more than 7 billion.,0.84,1,billion,세계 인구는 70억 명이 넘습니다.
+"Here is a natural and meaningful English sentence that meets all the requirements: My age is twelve, I’m eleven years old.",0.89,1,age,"다음은 모든 요구 사항을 충족하는 자연스럽고 의미 있는 영어 문장입니다: My age is teenage, I&#39;m eleven years old."
+The youth of today have no manners!,1.0,1,youth,요즘 젊은이들은 예의가 없습니다!
+His weight is double hers.,0.88,0,double,그의 몸무게는 그녀의 몸무게의 두 배입니다.
+I need a knife because it’s a knife.,0.96,1,knife,칼이 필요한 이유는 그것이 칼이기 때문이다.
+Here are scissors. Be careful with them. They cut paper.,0.91,1,scissors,가위가 있습니다. 조심하세요. 종이를 자르거든요.
+Fencing is a sport that uses a sword.,0.99,1,sword,펜싱은 칼을 사용하는 스포츠이다.
+Guns and swords are weapons of war.,0.87,1,weapon,총과 칼은 전쟁의 무기입니다.
+I poked it with a fork.,1.01,1,fork,포크로 찔렀어요.
+He sawed a tree down in half.,1.01,1,saw,그는 나무를 반으로 잘랐다.
+I want a box that's pink and in it.,0.71,1,box,저는 분홍색 상자가 들어있는 것을 원해요.
+That is your black balloon.,0.87,0,balloon,저게 검은 풍선이에요.
+This is his bell.,0.86,0,bell,이것이 그의 종이에요.
+Do you need a bottle?,1.01,1,bottle,병이 필요하신가요?
+Jenny puts the cheese on the tray.,1.0,1,tray,제니가 치즈를 접시에 올려놓는다.
+I have breakfast at 7:30 every morning.,0.99,1,breakfast,저는 매일 아침 7시 30분에 아침을 먹습니다.
+I have lunch at 12 p.m.,1.0,1,lunch,나는 오후 12시에 점심을 먹습니다
+Let's have dinner here.,1.01,1,dinner,여기서 저녁을 먹자.
+I have snacks when I'm hungry.,1.0,1,snack,배고프면 간식을 먹어요.
+"I’m hungry, What’s your favorite food?",1.01,1,food,배고프네요. 당신이 가장 좋아하는 음식은 뭐예요?
+I get up at 7 in the morning.,1.0,1,morning,저는 아침 7시에 일어납니다.
+I have breakfast at 7:30 a.m.,0.99,1,have breakfast,나는 오전 7시 30분에 아침을 먹는다
+I have lunch at 12 p.m.,1.0,1,have lunch,나는 오후 12시에 점심을 먹습니다
+I have dinner here.,0.99,1,have dinner,저는 여기서 저녁을 먹습니다.
+We are dancers. B-boy dancing is from New York.,0.8,0,dancer,우리는 댄서입니다. 비보이 댄스는 뉴욕에서 온 것입니다.
+I train my team at the gym regularly.,1.0,1,gym,저는 정기적으로 체육관에서 팀원들을 훈련시킵니다.
+I’m on the soccer team; What’s your favorite club?,0.93,1,club,저는 축구팀에 속해 있어요. 당신은 어떤 클럽을 가장 좋아하세요?
+I heard beats on the drum while playing.,1.0,1,beat,연주하는 중에 드럼 비트 소리가 들렸어요.
+Some runners like to run in the desert.,1.0,1,run,일부 주자는 사막에서 달리는 것을 좋아합니다.
+I can walk up this street.,1.01,1,walk,나는 이 거리를 걸어 올라갈 수 있어요.
+Regular exercise is good for your health.,0.86,1,exercise,규칙적인 운동은 건강에 좋습니다.
+I’m going to run a marathon.,1.0,1,run a marathon,나는 마라톤에 참가할 것이다.
+I sneaked into the dark room and walked.,1.0,1,sneak,나는 어두운 방으로 들어가서 걸어갔다.
+I like skiing and my sister is not skilled.,0.98,1,ski,"나는 스키를 좋아하고, 내 여동생은 스키를 잘 타지 못해."
+I like skiing and going on adventures.,1.0,1,skiing,저는 스키를 타고 모험을 떠나는 걸 좋아해요.
+He can't skate because he's playing hockey.,0.96,1,skate,그는 하키를 하기 때문에 스케이트를 탈 수 없습니다.
+"I like swimming, but I can’t.",1.0,1,swim,"저는 수영을 좋아하지만, 할 수 없어요."
+I'm surprised they drained the pool.,0.99,1,pool,그들이 수영장 물을 빼낸 게 놀랍네요.
+I like swimming in the ocean.,1.0,1,swimming,저는 바다에서 수영하는 것을 좋아해요.
+Let's go swimming in the sea.,1.0,1,go swimming,바다에서 수영하러 가자.
+I can jump over the wall.,1.01,1,jump,나는 벽을 뛰어넘을 수 있어요.
+A flute is floating on the water.,1.0,1,float,플루트가 물 위에 떠있습니다.
+Let's play the drum after hearing beats.,0.75,1,drum,비트를 듣고 드럼을 연주해 보자.
+Let's play the guitar during music class.,1.01,1,guitar,음악 수업 시간에 기타를 연주해 보자.
+I take piano lessons once a week.,1.0,1,piano,저는 일주일에 한 번씩 피아노 레슨을 받아요.
+Let's play the violin while she practices piano.,0.98,1,violin,그녀가 피아노 연습하는 동안 우리는 바이올린을 연주하자.
+We watch a musical together every week.,0.99,1,musical,우리는 매주 함께 뮤지컬을 봅니다.
+I know the famous singer has dual nationality.,0.98,1,singer,저는 그 유명 가수가 이중 국적을 가지고 있다는 걸 알고 있어요.
+She is a great pianist who loves playing.,0.93,1,pianist,그녀는 연주를 좋아하는 훌륭한 피아니스트입니다.
+Playing an instrument is a popular hobby among musicians.,0.83,1,musician,악기를 연주하는 것은 음악가들 사이에서 인기 있는 취미이다.
+"Muriel is an all-around entertainer, who's also famous.",0.81,1,entertainer,뮤리얼은 다재다능한 엔터테이너로 유명해요.
+Playing an instrument is a popular hobby.,0.85,1,instrument,악기를 연주하는 것은 인기 있는 취미이다.
+Let's play the recorder.,1.0,1,recorder,리코더를 연주해 보자.
+He has a talent for music.,1.01,1,talent,그는 음악에 재능이 있다.
+Welcome to my birthday party!,0.86,1,party,제 생일 파티에 오신 것을 환영합니다!
+Let’s have a party at my house.,1.01,1,have a party,우리집에서 파티를 열자.
+Let's go on a picnic every weekend.,1.0,1,picnic,매주 주말마다 피크닉을 가자.
+How about going to the festival this year?,0.87,1,festival,올해 축제에 가보는 건 어때요?
+It's especially cold this evening and I have a bad cold.,0.89,1,cold,오늘 저녁은 특히 춥고 감기에 걸렸어요.
+My head hurts because I fell down.,1.0,1,head,넘어져서 머리가 아프다.
+I tied the necktie and touched my neck.,0.99,0,neck,나는 넥타이를 매고 목을 만졌다.
+Look at the elephant's nose closely now.,0.86,1,nose,이제 코끼리의 코를 자세히 살펴보세요.
+I have a bad cold and a fever.,1.0,1,bad cold,저는 심한 감기에 걸렸고 열이 있습니다.
+He has a sore throat.,1.01,1,sore throat,그는 인후염이 있다.
+My friend has a sore throat.,1.01,1,throat,제 친구가 목이 아픕니다.
+She cuts her bangs to hide her forehead.,0.99,1,forehead,그녀는 이마를 숨기기 위해 앞머리를 자른다.
+The boy has a cough like my grandfather.,0.98,1,cough,그 소년은 우리 할아버지와 마찬가지로 기침을 합니다.
+My brother is as slow as a snail.,0.86,1,slow,내 동생은 달팽이처럼 느리다.
+The service is quick and takes 10 minutes.,0.93,1,quick,서비스는 빠르며 10분이 소요됩니다.
+My room is clean now because I clean it.,0.97,1,clean,내 방은 내가 청소했기 때문에 이제 깨끗해요.
+The wall is dirty.,0.86,1,dirty,벽이 더럽습니다.
+I wash my face after washing hands.,1.0,1,wash,손을 씻은 후 얼굴을 씻습니다.
+There are stains on the brown bowl.,0.87,1,stain,갈색 그릇에 얼룩이 있습니다.
+Please sweep up the sweets.,0.88,1,sweep,사탕을 쓸어 주세요.
+I get up late and still make it.,1.01,1,late,나는 늦게 일어나도 여전히 일을 해냅니다.
+I'm going to be there when you arrive.,0.98,1,arrive,너가 도착하면 나도 거기에 있을게.
+Let’s go there later.,1.01,1,later,거기는 나중에 가자.
+They will postpone a journey because of their sick baby.,0.94,1,postpone,그들은 아픈 아기 때문에 여행을 연기할 것입니다.
+They are quiet.,0.84,1,quiet,그들은 조용하다.
+Don't make noise in the library.,0.87,1,noise,도서관에서는 소음을 내지 마세요.
+I’m shutting the shutters because it’s getting dark.,0.94,1,shut,어두워지니까 셔터를 닫아요.
+We’re in the bookstore looking at books.,0.99,1,bookstore,우리는 서점에서 책을 보고 있어요.
+Let's go to the restaurant on our right.,0.98,1,restaurant,오른쪽에 있는 레스토랑으로 가자.
+The manager is responsible for Store goods in the store.,0.79,0,store,관리자는 매장에 상품을 보관하는 일을 담당합니다.
+Let's go to the clothing store.,1.0,1,clothing store,옷가게에 가자.
+I go to the hospital.,1.0,1,hospital,나는 병원에 간다.
+I have an appointment to see Mr. Smith is a doctor.,0.66,1,doctor,저는 스미스 씨를 만나기 위해 약속이 있어요. 스미스 씨는 의사이시거든요.
+Ann is a doctor and she is a nurse. Ann is a nurse. Ann is a nurse. Ann is a doctor. Ann is a nurse. Ann is a nurse. Ann is a nurse. Ann,0.5,1,nurse,앤은 의사이고 그녀는 간호사입니다. 앤은 간호사입니다. 앤은 간호사입니다. 앤은 의사입니다. 앤은 간호사입니다. 앤은 간호사입니다. 앤은 간호사입니다. 앤
+Scientists often choose She is a scientist.,0.99,0,scientist,과학자들은 종종 그녀가 과학자라고 선택합니다.
+I like science very much and have class on Tuesday.,0.95,1,science,저는 과학을 정말 좋아해서 화요일에 수업을 듣습니다.
+Your health is better than your wealth always.,0.62,1,health,당신의 건강은 언제나 당신의 부보다 낫습니다.
+Misuse of medicine can cause very dangerous problems.,0.99,1,medicine,약을 오용하면 매우 위험한 문제가 발생할 수 있습니다.
+She is still weak after my illness.,0.87,1,illness,그녀는 내가 병을 앓은 후에도 여전히 약해요.
+She is a psychologist who studies children's behavior. She teaches math. Unable to create a valid sentence.,0.83,0,psychologist,그녀는 아이들의 행동을 연구하는 심리학자입니다. 그녀는 수학을 가르칩니다. 유효한 문장을 만들 수 없습니다.
+His father died of lung cancer.,1.01,1,cancer,그의 아버지는 폐암으로 사망했습니다.
+I’m going to the library.,1.0,1,library,나는 도서관에 갈 거예요.
+"If you have more questions, ask my secretary.",1.0,1,secretary,더 궁금한 점이 있으면 제 비서에게 물어보세요.
+My uncle started his career as a clerk.,1.0,1,clerk,제 삼촌은 사무원으로서 직장 생활을 시작했습니다.
+"The office is small, between green and pink buildings.",0.84,1,office,"사무실은 작고, 녹색과 분홍색 건물 사이에 있어요."
+The restaurant staff is kind and hard-working.,0.93,1,staff,레스토랑 직원들은 친절하고 열심히 일합니다.
+Where is the museum?,0.86,1,museum,박물관은 어디에 있나요?
+Let’s watch the magic show.,1.01,1,show,마술쇼를 구경해요.
+Thank you for the present. I have a watch.,0.96,1,present,선물 고맙습니다. 시계가 있어요.
+Our group is going to do the presentation.,0.98,1,presentation,우리 그룹이 프레젠테이션을 할 거예요.
+I go to school every day.,1.01,1,school,저는 매일 학교에 가요.
+"I’m a student, and I go to university.",0.97,1,university,저는 학생이고 대학에 다닙니다.
+I go to church on Sundays.,1.0,1,church,나는 일요일에 교회에 간다.
+What grade did you get on the midterm?,1.0,1,grade,중간고사에서 몇 점을 받았나요?
+Students need to do extracurricular activities like sports.,0.97,1,extracurricular,학생들은 스포츠와 같은 과외 활동을 해야 합니다.
+The ball is near me and it's black.,0.85,1,ball,공이 내 가까이에 있고 검은색이에요.
+Our table tennis team wants to play badminton.,1.0,1,badminton,우리 탁구팀은 배드민턴을 하고 싶어해요.
+Let's play baseball after school.,1.0,1,baseball,학교가 끝나면 야구를 하자.
+We are playing basketball.,0.97,1,basketball,우리는 농구를 하고 있어요.
+Let's play golf. Joe is a professional golfer.,0.94,1,golf,골프 치자. 조는 프로 골퍼야.
+We are playing ping-pong.,1.01,1,ping-pong,우리는 탁구를 치고 있어요.
+We like sports and I’m on the soccer team.,0.96,1,soccer,"저희는 스포츠를 좋아하고, 저는 축구팀에 속해 있어요."
+We like sports and are on the soccer team.,0.98,1,sport,우리는 스포츠를 좋아하고 축구팀에 속해 있습니다.
+We are playing tennis with my friend.,1.0,1,tennis,우리는 친구와 테니스를 치고 있어요.
+I can’t play volleyball because I’m on a soccer team.,0.89,1,volleyball,저는 축구 팀에 속해 있기 때문에 배구를 할 수 없습니다.
+I’m on the soccer team and we like hockey.,0.96,1,hockey,저는 축구 팀에 속해 있고 하키를 좋아해요.
+The athlete's confidence is boosted by strong legs.,0.9,1,athlete,운동선수의 자신감은 강한 다리로 더욱 높아집니다.
+You have to play outside before the game.,1.0,1,play,경기 전에는 밖에서 놀아야 해요.
+Do you need a bowl?,1.01,1,bowl,그릇이 필요하신가요?
+I have a brown basket. He is walking with a basket full of food.,0.87,0,basket,나는 갈색 바구니를 가지고 있다. 그는 음식이 가득 찬 바구니를 들고 걷고 있다.
+I have a book.,0.99,1,book,저는 책 한 권이 있어요.
+My textbook is on the desk.,0.87,1,textbook,교과서가 책상 위에 있어요.
+I like this storybook because it's fun.,0.99,1,storybook,저는 이 이야기책이 재밌기 때문에 좋아합니다.
+I like your story.,0.99,1,story,나는 당신의 이야기를 좋아해요.
+I have a doll.,0.99,1,doll,나는 인형을 가지고 있어요.
+Do you have toy cars at the store?,1.01,1,toy car,매장에 장난감 자동차가 있나요?
+Let’s go to the toy shop.,1.01,1,toy shop,장난감 가게에 가자.
+The boy is my brother.,0.87,1,boy,그 소년은 내 동생이에요.
+I have a bird that's perched on my roof.,0.95,1,bird,우리 집 지붕 위에 새 한 마리가 앉아 있어요.
+The chicken is so chicken that I want it.,0.96,1,chicken,닭고기가 너무 맛있어서 먹고 싶어요.
+There's a big hen on the roof.,0.87,1,hen,지붕 위에 큰 암탉이 있어요.
+I have a big bat.,1.01,1,bat,나는 큰 박쥐를 가지고 있어요.
+I like eggs. She needs two eggs.,0.98,0,egg,나는 계란을 좋아해. 그녀는 계란 두 개가 필요해.
+Is Maria from India? This basketball is yours.,0.84,0,curry,마리아는 인도 출신이야? 이 농구공은 네 거야.
+We see the bees in the sky.,1.0,1,bee,우리는 하늘에 벌을 봅니다.
+"This is a baby duck, and I have a bird.",0.96,1,duck,"이것은 새끼 오리이고, 저는 새를 키우고 있습니다."
+I have four cats.,0.99,1,cat,나는 고양이를 네 마리나 키우고 있어요.
+I have a dog and I need help.,1.0,1,dog,저는 개를 키우고 있는데 도움이 필요합니다.
+My puppy takes my things to play.,0.75,1,puppy,내 강아지가 내 물건을 가지고 놀러가요.
+They have a pet that I really want.,1.01,1,pet,제가 정말 원하는 애완동물이 있어요.
+I want a robot. That is my toy.,0.99,1,robot,나는 로봇을 원해. 그건 내 장난감이야.
+Look at the bear.,0.86,1,wolf,곰을 보세요.
+There is something fishy about the fish.,0.87,1,fish,물고기에 뭔가 수상한 게 있어요.
+A fishing contest is interesting because his hobby is fishing.,0.91,1,fishing,그의 취미가 낚시이기 때문에 낚시 대회가 흥미롭다.
+Let's go fishing on the island.,1.0,1,go fishing,섬에서 낚시하러 가자.
+The park is near that lake.,0.88,1,lake,그 공원은 저 호수 근처에 있어요.
+We are playing ping-pong. Touch your cheek.,0.99,0,poke,우리는 탁구를 하고 있어요. 뺨을 만져보세요.
+Look at the tiger while watching elephants.,0.86,1,tiger,코끼리를 보는 동안 호랑이도 보세요.
+"I like lions, but it's not my pet.",0.99,1,lion,"나는 사자를 좋아하지만, 내 애완동물은 아니야."
+I’m at the zoo.,1.01,1,zoo,나는 동물원에 있어요.
+The bear has a big chest.,1.01,1,bear,곰은 큰 가슴을 가지고 있습니다.
+It contains an elephant in the picture.,0.99,1,elephant,그림 속에는 코끼리가 있습니다.
+I'm feeding the monkeys and I like bananas.,0.96,1,monkey,"원숭이에게 먹이를 주고, 바나나를 좋아해요."
+I like giraffes while watching elephants play.,0.99,1,giraffe,코끼리가 놀고 있는 걸 보면서 기린도 보는 걸 좋아해요.
+I like kangaroos.,0.96,1,kangaroo,나는 캥거루를 좋아해요.
+It's a zebra that contains an elephant.,0.99,1,zebra,코끼리를 품은 얼룩말이에요.
+They see the deer in the zoo.,1.0,1,deer,그들은 동물원에서 사슴을 본다.
+The fisherman sees the pink dolphins in sea.,0.99,1,dolphin,어부는 바다에서 분홍색 돌고래를 본다.
+The wind was wild; I saw man.,1.01,0,wild,"바람이 사나웠고, 나는 사람을 보았다."
+I like bananas because they are cheap.,0.99,1,banana,저는 바나나를 좋아합니다. 왜냐하면 싸기 때문입니다.
+I like grapes.,0.98,1,grapes,나는 포도를 좋아해요.
+Mom cut the melon into four parts.,1.01,1,melon,엄마는 멜론을 네 조각으로 잘랐습니다.
+It is a peach. I would like some fruit. That is a pear. This is a strawberry.,0.79,1,peach,복숭아입니다. 과일을 좀 주세요. 저건 배입니다. 이건 딸기입니다.
+That is a pear. I have seven pears.,0.99,0,pear,그것은 배입니다. 저는 배가 일곱 개 있습니다.
+Do you like watermelon? This is strawberry.,0.97,0,watermelon,수박 좋아하세요? 이건 딸기예요.
+The fruits are fresh. I'd like apples.,0.99,1,fruit,과일은 신선해요. 사과를 주세요.
+I am from New Zealand where kiwis grow.,1.0,1,kiwi,저는 키위가 자라는 뉴질랜드 출신이에요.
+I like juice that is a lemon.,0.76,1,lemon,나는 레몬주스를 좋아해요.
+I want some juice.,0.99,1,juice,주스를 마시고 싶어요.
+I want jam while drinking juice.,1.0,1,jam,주스를 마실때 잼도 같이 먹고 싶어요.
+"We have eight oranges, and this is green.",1.01,1,orange,오렌지가 8개 있는데 이건 녹색이에요.
+This goat is black. It's white.,0.86,0,black,이 염소는 검은색이에요. 흰색이에요.
+My boots are blue and I like purple.,1.01,1,blue,"내 부츠는 파란색이고, 나는 보라색을 좋아해요."
+The horse is brown.,0.86,1,brown,말은 갈색이다.
+"I like this color, it's red and white.",0.99,1,color,저는 이 색깔을 좋아해요. 빨간색과 흰색이요.
+The plane is gray and brown.,0.88,1,gray,비행기는 회색과 갈색입니다.
+My shorts are green.,0.86,1,green,내 반바지는 녹색이에요.
+I have a white T-shirt and brown shoes.,0.99,1,white,저는 흰색 티셔츠와 갈색 신발을 가지고 있어요.
+"The pen’s colors are It’s red, It’s green, It’s white, and It’s yellow.",0.87,1,yellow,"펜의 색깔은 빨간색, 초록색, 흰색, 노란색이에요."
+That light is dark.,0.86,1,dark,그 빛은 어둠입니다.
+I like purple because it's red.,0.93,1,purple,저는 보라색을 좋아해요. 빨간색이거든요.
+Look at the rainbow. It’s green. It’s red.,0.9,1,rainbow,무지개를 봐. 초록색이야. 빨간색이야.
+Look out! This road is too dark.,0.92,1,bright,조심하세요! 이 길은 너무 어두워요.
+Participants are curious about the race.,0.83,1,race,참가자들은 경주에 대해 호기심을 가지고 있습니다.
+Let's ride bikes after we finish our homework.,0.98,1,bike,숙제를 다 한 후에 자전거를 타자.
+My car is being repaired because it's old.,0.9,1,car,내 차는 오래돼서 수리 중이에요.
+This motorcycle is fast. That car is not as fast.,0.79,1,motorcycle,이 오토바이는 빠르다. 저 차는 그만큼 빠르지 않다.
+"Cars, buses, and airplanes are vehicles.",0.88,1,vehicle,"자동차, 버스, 비행기는 차량입니다."
+Is this your rocket? I can fly.,0.99,1,rocket,이게 네 로켓이야? 나는 날 수 있어.
+Let's ride bikes on our summer vacation.,1.0,1,ride,여름 휴가에는 자전거를 타보자.
+Ryan's father is a bus driver.,0.87,1,driver,라이언의 아버지는 버스 운전사입니다.
+The boat is yellow and I missed it.,1.01,1,boat,배는 노란색인데 놓쳤어요.
+"The ship is heavy, let's take the airplane.",0.97,1,ship,배가 무거우니 비행기를 타세요.
+We can travel by spaceship and airplanes.,0.99,1,spaceship,우리는 우주선과 비행기로 여행할 수 있습니다.
+Are you curious about space? Look at the sky.,0.89,1,space,우주에 대해 궁금하세요? 하늘을 보세요.
+The astronomer looked at the moon.,0.99,1,moon,천문학자는 달을 바라보았다.
+Look at the sea because it's very calming.,0.9,1,sea,바다를 보세요. 매우 고요하죠.
+The earth is beautiful; it's getting warmer.,1.0,1,earth,지구는 아름다워요. 점점 더 따뜻해지고 있어요.
+Do you want to be an astronaut like Sue?,0.98,1,astronaut,수처럼 우주비행사가 되고 싶나요?
+The bus will come soon at the stop.,1.0,1,bus,버스가 정류장에 곧 도착할 것입니다.
+Bus stop is small.,0.61,1,bus stop,버스 정류장은 작습니다.
+We are going to the subway station.,1.0,1,subway station,우리는 지하철역으로 가요.
+Let's go to the train station.,1.0,1,train station,기차역으로 가자.
+The tourists asked Where is the subway station?,0.99,1,subway,관광객들은 지하철역이 어디에 있는지 물었습니다.
+Let's take a taxi.,1.01,1,taxi,택시를 타자.
+You can use the elevator to find the subway.,0.97,1,elevator,지하철을 찾으려면 엘리베이터를 이용하세요.
+The fire station is big where Tom works.,1.0,1,fire station,톰이 일하는 소방서는 크다.
+The police station is big where I work.,0.75,1,police station,제가 일하는 곳의 경찰서는 큽니다.
+My father is a fire fighter.,0.87,1,fire fighter,제 아버지는 소방관이에요.
+Ryan’s mother is a police officer.,0.87,1,police officer,라이언의 어머니는 경찰관입니다.
+I’m a police officer at Ryan’s station.,0.97,1,police,저는 라이언 경찰서의 경찰관이에요.
+I have P.E. on Wednesdays written on the blackboard.,0.96,1,P.E.,수요일에 체육수업이 있다고 칠판에 써 놓았습니다.
+The soldiers fought bravely against our enemy.,0.99,1,soldier,군인들은 우리의 적에 맞서 용감하게 싸웠습니다.
+The manager is the chief of security.,0.85,1,chief,관리자는 보안 책임자입니다.
+He went to Africa as a missionary last year.,0.98,1,missionary,그는 작년에 선교사로 아프리카에 갔습니다.
+I’m making a model airplane.,1.0,1,plane,저는 모형 비행기를 만들고 있어요.
+Let's take an airplane and make it fly.,0.98,1,airplane,비행기를 타고 날게 해보자.
+He is a pilot and so am I.,0.87,1,pilot,그는 조종사이고 나도 조종사입니다.
+It’s a small airport.,1.0,1,airport,작은 공항이에요.
+Let’s take a helicopter because he can fly.,0.97,1,helicopter,그는 날 수 있으니까 헬리콥터를 타자.
+Chickens have wings. Angels have wings. I have a bird that can fly.,0.81,1,wing,"닭은 날개가 있고, 천사는 날개가 있고, 나는 날 수 있는 새가 있어."
+Flying a kite is exciting when flying a helicopter.,0.83,0,kite,헬리콥터를 조종하면서 연을 날리는 것도 신나는 일이다.
+Time flies like an arrow as I shoot.,1.01,1,arrow,내가 총을 쏘는 동안 시간은 화살처럼 빠르게 흐른다.
+I like bread. The bread smells good.,0.98,1,bread,나는 빵을 좋아한다. 빵 냄새가 좋다.
+I want sandwiches because I like bread.,0.99,1,sandwich,나는 빵을 좋아해서 샌드위치를 먹고 싶어요.
+I don’t like corn.,1.01,1,corn,나는 옥수수를 좋아하지 않는다.
+You can make various foods using wheat.,1.0,1,wheat,밀을 이용해 다양한 음식을 만들 수 있습니다.
+I want pizza.,0.98,1,pizza,나는 피자를 먹고 싶어.
+I want rice and I really like pizza.,1.0,1,rice,"밥이 먹고 싶고, 피자도 정말 좋아해요."
+The chef put butter and oil together carefully.,0.99,1,butter,요리사는 버터와 기름을 조심스럽게 섞었습니다.
+I want cheese.,0.98,1,cheese,나는 치즈를 원해요.
+You like cake. This cake is very sweet.,0.85,1,cake,당신은 케이크를 좋아해요. 이 케이크는 매우 달콤해요.
+I eat lots of sweets and don’t like sugar.,0.96,1,sugar,저는 과자를 많이 먹고 설탕은 좋아하지 않아요.
+I love the taste of chocolate ice cream.,1.0,1,chocolate,나는 초콜릿 아이스크림 맛을 좋아해요.
+I want gum because I have a toothache.,0.99,1,gum,치통이 나서 껌을 먹고 싶어요.
+I eat lots of sweets and I love chocolate.,0.97,1,sweets,저는 과자를 많이 먹고 초콜릿을 좋아해요.
+Mom gives me a piece of cheesecake.,1.0,1,cheesecake,엄마가 나에게 치즈케이크 한 조각을 주셨어요.
+I'd love some dessert after this cake.,1.0,1,dessert,이 케이크를 먹은 후에는 디저트도 먹고 싶네요.
+I want cookies.,0.96,1,cookie,나는 쿠키를 원해요.
+Do you want cream?,0.99,1,cream,크림을 원하시나요?
+Do you want doughnuts? It's not pumpkin.,0.97,1,doughnut,도넛 먹을래? 호박이 아니야.
+I would like some pie.,1.01,1,pie,파이 좀 주세요.
+His arms are strong. My shoulder hurts.,0.98,0,arm,그의 팔은 튼튼해요. 어깨가 아프네요.
+My foot hurts because I wore shoes.,1.0,1,foot,신발을 신었기 때문에 발이 아프다.
+"Touch your leg, my foot hurts very badly.",1.01,1,leg,"다리를 만져봐, 내 발은 너무 아파."
+"Here's a sentence that meets all the requirements: ""These are your shoes. Those are my sneakers."" This sentence is 8 words long, includes the required phrases exactly as given, and forms a clear and logical statement about",0.79,1,shoes,"다음은 모든 요구 사항을 충족하는 문장입니다. &quot;이것이 당신의 신발입니다. 저것은 내 운동화입니다.&quot; 이 문장은 8단어 길이이며, 주어진 대로 필요한 구문을 정확히 포함하고 있으며, 다음에 대한 명확하고 논리적인 진술을 형성합니다."
+"Bring me a pair of clean socks, please. Bring me a pair of clean socks, please.",0.73,1,socks,깨끗한 양말 한 켤레 가져다 주세요. 깨끗한 양말 한 켤레 가져다 주세요.
+I’m looking for boots. My shoes are blue.,0.96,1,boots,부츠를 찾고 있어요. 제 신발은 파란색이에요.
+I’m looking for sneakers.,0.99,1,sneakers,운동화를 찾고 있어요.
+Where do I ache? My knee hurts.,0.99,1,knee,어디가 아픈가요? 무릎이 아파요.
+My shoulder hurts. Touch your arm. Where do you ache? Your arm is long.,0.85,0,shoulder,어깨가 아프다. 팔을 만져봐. 어디가 아프니? 팔이 길다.
+I’m good at kicking a ball.,1.0,1,kick,나는 공을 차는 데 능숙하다.
+Here is a sentence that meets the requirements: She has little hands; touch your hand.,0.89,0,hand,다음은 요구 사항을 충족하는 문장입니다: 그녀의 손은 작습니다. 당신의 손을 만져주세요.
+My finger is bleeding. Touch your hand.,0.98,0,finger,내 손가락에서 피가 나요. 손을 만져보세요.
+Touch your ear; His ears are small.,0.95,0,ear,귀를 만져보세요. 그의 귀는 작거든요.
+The doctor instructed patients to touch their eye.,0.99,1,touch,의사는 환자들에게 눈을 만지라고 지시했습니다.
+Touch your palm. Touch your hand. Your gloves are big. Touch your chin.,0.7,0,palm,손바닥을 만져. 손을 만져. 장갑이 크네. 턱을 만져.
+"He's scratching his head, don't bite your nails.",0.96,0,scratch,그는 머리를 긁고 있어요. 손톱을 물지 마세요.
+The question Which animals have lips? is often answered by touching your mouth.,0.89,0,lip,어떤 동물에게 입술이 있나요?라는 질문에는 종종 입을 만져보면 답이 나옵니다.
+I need another spoon because this one's sinking.,0.96,1,spoon,이건 가라앉고 있으니까 숟가락이 하나 더 필요해요.
+I’m facing her face. I wash my face.,0.95,0,face,나는 그녀의 얼굴을 마주보고 있다. 나는 얼굴을 씻는다.
+Touch your chin and check the animals.,0.87,1,chin,턱을 만져서 동물들을 확인해보세요.
+He is my brother.,0.85,1,brother,그는 내 동생이에요.
+My dad teaches English.,0.97,1,dad,제 아빠는 영어를 가르쳐요.
+The girl is my sister.,0.88,1,sister,그 소녀는 내 여동생이에요.
+This is my aunt.,0.86,1,aunt,이 사람이 제 이모예요.
+My cousins are kind.,0.85,1,cousin,내 사촌들은 친절해요.
+This is my father. He is my dad.,0.84,1,father,이 사람이 내 아빠야. 그는 내 아빠야.
+That is my grandfather.,0.81,1,grandfather,그분은 저의 할아버지이십니다.
+That is my grandmother. My grandma is ill.,0.81,1,grandmother,저분은 제 할머니예요. 제 할머니는 아프세요.
+This is my mother. She is my mom.,0.84,1,mother,이분은 제 어머니이십니다. 그녀는 제 엄마이십니다.
+I love my parents because they are familiar.,0.99,1,parents,저는 부모님을 사랑합니다. 부모님은 친숙한 분이기 때문입니다.
+This dentist is my uncle.,0.87,1,uncle,이 치과 의사는 제 삼촌이에요.
+The kid is cute when holding cookies.,0.93,1,kid,아이가 쿠키를 들고 있는 모습이 귀엽네요.
+The family is familiar to me.,0.87,1,family,저는 그 가족을 알고 있습니다.
+Do they have a daughter? She is my sister.,0.96,1,daughter,그들에게 딸이 있나요? 그녀는 제 자매입니다.
+A nephew is a son of your brother or sister.,0.81,1,nephew,조카는 형제 자매의 아들입니다.
+He said that he might be a descendant of a king.,0.92,1,descendant,그는 자신이 왕의 후손일지도 모른다고 말했다.
+I asked him who is he?,1.01,1,he,나는 그가 누구냐고 물었습니다.
+"She is smart, She is beautiful, You know her, and she is my sister.",0.83,1,she,그녀는 똑똑하고 아름다워요. 당신도 그녀를 알고 있죠. 그녀는 내 여동생이에요.
+"Here is a natural, meaningful English sentence that meets all the requirements: ""This is my doll, and yes it’s mine."" This sentence includes all the given words exactly as they are, without any changes or additions. It is",0.77,1,my,"다음은 모든 요구 사항을 충족하는 자연스럽고 의미 있는 영어 문장입니다. &quot;이것은 내 인형이고, 그렇습니다. 내 것입니다.&quot; 이 문장은 주어진 모든 단어를 변경이나 추가 없이 그대로 포함합니다."
+Here is a natural and meaningful English sentence that follows the given rules: It’s your shirt.,0.89,1,your,다음은 주어진 규칙을 따르는 자연스럽고 의미 있는 영어 문장입니다: It&#39;s your shirt.
+This pencil case is his.,0.88,1,his,이 연필 케이스는 그의 것입니다.
+The children are using these are their pencils.,0.74,1,their,아이들은 이것을 연필로 사용하고 있습니다.
+We like sports because this book is ours.,1.0,0,our,우리는 스포츠를 좋아합니다. 이 책이 우리의 것이기 때문이죠.
+"The bags are theirs, yes it's mine.",0.63,0,mine,"그 가방은 그들의 것이야, 그래, 내 거야."
+This basketball is yours.,0.85,1,yours,이 농구공은 당신 것입니다.
+That umbrella is hers. His weight is double hers. Those are her photos. She is my sister.,0.69,1,hers,저 우산은 그녀꺼야. 그의 몸무게는 그녀의 두 배야. 저것들은 그녀의 사진이야. 그녀는 내 자매야.
+These bags are theirs.,0.86,1,theirs,이 가방들은 그들의 것입니다.
+"We like sports, and this book is ours.",1.01,1,ours,"우리는 스포츠를 좋아하고, 이 책은 우리의 것입니다."
+I replied to his reply as we are friends.,0.72,1,I,저는 그의 답장에 친구로서 답장했습니다.
+Go along this way and share useful things.,0.87,1,this,이 길로 가서 유익한 정보를 공유하세요.
+Look at the sun when it's sunny.,0.94,1,sun,햇살이 쨍쨍할 때 태양을 바라보세요.
+It’s sunny in the morning and afternoon.,0.99,1,sunny,아침과 오후에는 맑아요.
+That light is dark. It’s light.,0.98,1,light,그 빛은 어둡다. 그것은 빛이다.
+Look at the sky. The plane is gray.,0.91,0,sky,하늘을 봐. 비행기는 회색이야.
+Here is a natural and meaningful English sentence that meets the given requirements: Our plane was flying above the clouds.,0.88,1,cloud,다음은 주어진 요구 사항을 충족하는 자연스럽고 의미 있는 영어 문장입니다: Our plane was flying above the clouds.
+Look at my shadow on the ground.,0.87,1,shadow,땅에 드리운 내 그림자를 보세요.
+Look at this tree that is high.,0.94,1,tree,저 높은 나무를 보세요.
+Many animals live in the forest and trees.,1.0,1,forest,많은 동물이 숲과 나무에 산다.
+The child looks at the tree and says 'This leaf is pretty.',0.86,1,leaf,아이는 나무를 보고 &#39;이 잎사귀가 예쁘네요.&#39;라고 말합니다.
+This desk is made of natural wood.,0.93,1,wood,이 책상은 천연목재로 만들어졌습니다.
+We can see his love of nature in his work.,0.95,1,nature,우리는 그의 작품에서 자연에 대한 사랑을 볼 수 있습니다.
+It is made from natural materials.,0.93,1,natural,천연소재로 만들어졌습니다.
+I’m in the bedroom because of the ball.,0.96,0,bed,저는 공 때문에 침실에 있어요.
+My sister is in her clean closet.,0.87,1,closet,내 여동생은 깨끗한 옷장 속에 있어요.
+I’m in the bedroom.,1.0,1,bedroom,나는 침실에 있어요.
+My brother is in the living room.,0.87,1,living room,내 동생은 거실에 있어요.
+Let's gather in the room.,1.01,1,room,방에 모이자.
+I like camping at Kevin’s cabin.,1.0,1,cabin,저는 케빈의 오두막에서 캠핑하는 걸 좋아해요.
+I’m sitting on the couch right now.,1.0,1,sit,나는 지금 소파에 앉아 있어요.
+I gave my seat to the elderly woman.,1.0,1,seat,나는 나이 많은 여성에게 자리를 양보했다.
+Don't sit on the wet bench.,0.87,1,bench,젖은 벤치에 앉지 마세요.
+I always lounge at the lounge.,1.0,1,lounge,저는 항상 라운지에서 휴식을 취합니다.
+"At that moment, the telephone rang loudly.",1.01,1,telephone,그 순간 전화가 큰 소리로 울렸습니다.
+Can you get the phone for me?,1.01,1,phone,전화기 좀 가져다 주실 수 있나요?
+I like apples more than bananas.,1.0,1,apple,나는 바나나보다 사과를 더 좋아한다.
+We can’t use it yet.,1.01,1,computer,아직은 사용할 수 없습니다.
+They have notebooks. Can I use them?,0.98,1,notebook,그들은 공책을 가지고 있습니다. 제가 그것을 쓸 수 있나요?
+You may give me this is his pen.,1.01,0,pen,이게 그의 펜이에요.
+It's your pencil.,0.86,1,pencil,그것은 당신의 연필이에요.
+Here is a single declarative sentence that meets the requirements: It’s his crayon. It’s your pencil. These are their pencils.,0.83,1,crayon,다음은 요구 사항을 충족하는 단일 선언적 문장입니다: 그것은 그의 크레용입니다. 그것은 당신의 연필입니다. 이것들은 그들의 연필입니다.
+"Here is a sentence that meets all the requirements: ""This pencil case is his."" It’s your pencil.",0.87,1,pencil case,다음은 모든 요건을 충족하는 문장입니다: &quot;이 연필 케이스는 그의 것입니다.&quot; 그것은 당신의 연필입니다.
+I have chalk on the blackboard.,1.0,1,chalk,칠판에 분필로 쓰여 있어요.
+Here is some glue.,0.86,1,glue,여기에 접착제가 있습니다.
+They cut the paper.,0.99,1,paper,그들은 종이를 잘랐습니다.
+"The towel feels soft, it is made from natural materials.",0.95,1,material,수건은 부드럽고 천연 소재로 만들어졌습니다.
+Each student should write a brief outline.,0.99,1,outline,각 학생은 간략한 개요를 작성해야 합니다.
+The turtle is slow going downstairs.,0.68,1,turtle,거북이는 천천히 아래층으로 내려갑니다.
+One snail is slower than the other two.,0.87,1,snail,한 달팽이는 다른 두 달팽이보다 느리다.
+I like frogs and octopuses have eight legs.,1.0,1,frog,저는 개구리를 좋아하고 문어는 다리가 여덟 개예요.
+Look at that white rabbit.,0.88,1,rabbit,저 하얀 토끼를 보세요.
+I don’t like spiders because I’m afraid of them.,0.91,1,spider,나는 거미를 무서워해서 좋아하지 않는다.
+Look at the ants dragging a petal.,0.87,1,ant,꽃잎을 끌어당기는 개미를 보세요.
+Look at the snakes on the stone.,0.87,1,snake,돌 위의 뱀을 보세요.
+I like giraffes and there's an iguana on the stone.,0.93,1,iguana,저는 기린을 좋아해요. 그리고 돌 위에는 이구아나가 있어요.
+I’m leading my class and writing on the blackboard.,0.69,1,lead,저는 수업을 진행하면서 칠판에 글을 쓰고 있습니다.
+Mark is patting his pets.,1.0,1,pat,마크는 자신의 애완동물을 쓰다듬고 있다.
+"The question is about octopuses, not fish.",0.87,1,octopus,이 질문은 물고기가 아니라 문어에 관한 것입니다.
+They are my clothes.,0.85,1,clothes,그것은 내 옷이에요.
+These are his jeans.,0.86,1,jeans,이것이 그의 청바지예요.
+They are her pants.,0.86,1,pants,그것은 그녀의 바지예요.
+"My dad has blue shorts, which are shorter.",1.01,1,shorts,"제 아빠는 파란색 반바지를 입고 있는데, 좀 더 짧습니다."
+This towel feels soft. May I use it?,0.99,1,towel,이 타월은 부드럽습니다. 써도 될까요?
+They are my clothes.,0.85,1,cloth,그것은 내 옷이에요.
+She blew her nose into her handkerchief.,0.97,1,handkerchief,그녀는 손수건에 코를 풀었다.
+"Here is a natural and meaningful English sentence that meets the requirements: After washing my hands, put lotion on gloves. This sentence includes the word 'Your gloves are big' (not exactly, but close enough), is between 6-8 words",0.82,1,gloves,"다음은 요구 사항을 충족하는 자연스럽고 의미 있는 영어 문장입니다: After washing my hands, put lotion on gloves. 이 문장에는 &#39;Your gloves are big&#39;이라는 단어가 포함되어 있습니다(정확히 그렇지는 않지만, 거의 비슷함). 6-8개 단어 사이입니다."
+His pajamas are small. They are my clothes. It’s a soft sweater. They are her pants.,0.82,0,pajamas,그의 파자마는 작습니다. 그것은 내 옷입니다. 그것은 부드러운 스웨터입니다. 그것은 그녀의 바지입니다.
+"The owner said, ""It’s your coat. It’s my jacket. It’s my sweater. It’s my vest.'It’s my coat. It’s my jacket. It’s my sweater",0.72,1,coat,"주인이 말했다, &quot;그건 당신의 코트야. 내 재킷이야. 내 스웨터야. 내 조끼야.&quot;그건 내 코트야. 내 재킷이야. 내 스웨터야"
+It’s my jacket. It’s my vest.,0.97,1,jacket,내 재킷이야. 내 조끼야.
+It’s my sweater.,0.98,1,sweater,제 스웨터예요.
+Your scarf is long.,0.86,1,scarf,스카프가 길어요.
+My sister wears my green vest.,1.0,1,vest,내 여동생은 내 녹색 조끼를 입고 있어요.
+Bill's design is my favorite black suit.,0.87,1,suit,빌의 디자인은 제가 가장 좋아하는 검은색 정장이에요.
+Kate owns this is my skirt.,0.76,0,skirt,이건 내 스커트예요.
+Your belt is short.,0.86,1,belt,벨트가 짧네요.
+I bought a hat and it's my cap.,0.98,1,hat,모자를 샀는데 제 캡이에요.
+Your new dress fits well on you.,1.01,1,dress,새로운 드레스가 잘 어울리네요.
+You must wear your helmet when biking.,1.01,1,helmet,자전거를 탈 때는 헬멧을 착용해야 합니다.
+"Could you wrap this, please?",1.02,1,wrap,이것을 포장해 주시겠어요?
+I like my school uniform.,1.0,1,uniform,나는 우리 학교 교복을 좋아해요.
+It's your shirt that she is hanging on.,0.98,0,shirt,그녀가 걸려 있는 건 당신의 셔츠예요.
+I have a white T-shirt.,1.02,1,T-shirt,나는 흰색 티셔츠를 가지고 있어요.
+"As she climbs, her knit top looks neat.",1.01,1,top,"그녀가 올라갈 때, 그녀의 니트 탑은 깔끔해 보인다."
+I’m happy because we won the game.,1.0,1,happy,우리가 경기에서 이겼기 때문에 기쁘다.
+I’m angry because this butter tastes bitter.,1.0,1,bitter,이 버터의 맛이 쓴 것 같아서 화가 난다.
+"Um, this apple tastes sweet and sour. Dam, dl.",0.97,0,sour,"음, 이 사과는 달콤하면서도 신맛이 나요. 젠장, dl."
+Don’t tear the letter; her sadness is real.,0.91,1,tear,편지를 찢지 마세요. 그녀의 슬픔은 진짜입니다.
+Learning music helps manage difficult emotions effectively.,0.96,1,emotion,음악을 배우는 것은 어려운 감정을 효과적으로 관리하는 데 도움이 됩니다.
+I think he is very hungry.,1.01,1,hungry,그는 매우 배고픈 것 같아요.
+I’m thirsty. Give me some juice.,0.98,1,thirsty,목마르다. 주스 좀 줘.
+"As time goes by, Tomy felt more homesick.",1.01,1,homesick,"시간이 지날수록, 토미는 점점 더 그리움을 느꼈습니다."
+Timmy looks so scared.,0.99,1,scared,티미가 너무 무서워 보여요.
+"Don’t worry about the test, I’ll help.",0.99,1,worry,시험은 걱정하지 마세요. 제가 도와드릴게요.
+Paul looks so nervous after the contest.,0.99,1,nervous,폴은 경연이 끝난 후 매우 긴장한 듯 보입니다.
+Mom looks so worried about the midterm exam.,0.99,1,worried,엄마는 중간고사를 몹시 걱정하는 듯해요.
+She is scared because I’m afraid of big spiders.,0.95,0,afraid,그녀는 내가 큰 거미를 무서워하기 때문에 무서워합니다.
+She is scared because I’m very shy.,1.0,0,shy,그녀는 내가 매우 수줍어서 무서워합니다.
+The news surprised me.,0.98,1,surprised,그 소식은 나를 놀라게 했다.
+You are very special to me.,0.87,1,special,당신은 나에게 매우 특별해요.
+I feel tired because he's really sleepy.,1.0,1,tired,그는 너무 졸려서 피곤해요.
+She's sleepy because I'm feeling very tired.,0.97,0,sleepy,내가 너무 피곤해서 그녀가 졸려요.
+I feel tired. It's time to sleep.,0.99,1,sleep,피곤해요. 이제 잘 시간이에요.
+I feel tired; why don't you get some rest?,0.96,1,rest,"피곤한데, 좀 쉬면 어때요?"
+It's my bag.,0.86,1,bag,제 가방이에요.
+The pocket is small. Can you find my bag?,0.96,1,pocket,주머니가 작아요. 가방을 찾을 수 있나요?
+It’s my jacket. It’s my bag.,0.97,1,zipper,내 재킷이야. 내 가방이야.
+I’m carrying some cans. It’s in my bag.,0.93,1,carry,캔을 몇 개 들고 있어요. 가방에 있어요.
+I packed the stuff into my bag.,1.01,1,pack,나는 그 물건들을 가방에 넣었다.
+We like steak.,0.98,1,steak,우리는 스테이크를 좋아해요.
+Do you want some beef?,1.01,1,beef,쇠고기를 드시겠어요?
+Look! I have a pig.,0.99,1,pig,보세요! 저는 돼지를 키우고 있어요.
+I like hamburgers; this one is terrible.,1.0,1,hamburger,"나는 햄버거를 좋아하지만, 이건 끔찍해."
+I want a hot dog.,1.01,1,hot dog,핫도그 먹고 싶어.
+I want spaghetti because cooking it is simple.,0.99,1,spaghetti,스파게티는 요리하기 간단해서 먹고 싶어요.
+I want spaghetti. Do you want some noodles?,0.97,1,noodles,스파게티 먹고 싶어. 국수 먹을래?
+Dad was heating some soup and setting the table.,0.97,1,soup,아빠는 수프를 데워서 식탁을 차리고 있었습니다.
+I like roast beef and potatoes.,1.0,1,roast,저는 구운 소고기와 감자를 좋아해요.
+We want tea because it's really hot outside.,0.97,1,tea,너무 더워서 차를 마시고 싶어요.
+My uncle runs a specialty coffee shop.,1.0,1,coffee,제 삼촌은 특선 커피숍을 운영해요.
+It’s a cup.,0.99,1,cup,그것은 컵이에요.
+There is a spot on the pot.,0.87,1,pot,냄비에 얼룩이 생겼습니다.
+"Bring me some water, please.",0.89,1,water,물 좀 가져다 주세요.
+We have rainy weather this week.,1.0,1,weather,이번 주에는 비가 올 것 같습니다.
+It’s cloudy today.,1.01,1,cloudy,오늘은 흐립니다.
+I’m completely wet because it’s rainy outside.,0.96,1,rainy,밖에 비가 와서 몸이 완전히 젖었어요.
+I'm completely wet because of the rain.,0.86,1,rain,비 때문에 몸이 완전히 젖었어요.
+I’m completely wet because of the rain.,0.99,1,wet,비 때문에 몸이 완전히 젖었어요.
+My hair is damp because it's raining.,0.99,1,damp,비가 와서 머리가 축축해요.
+The slippers are slippery because it's raining.,0.98,1,slippery,비가 오기 때문에 슬리퍼가 미끄럽습니다.
+I’m eating in the desert.,1.01,1,desert,나는 사막에서 식사를 하고 있어요.
+I often stay up late.,1.01,1,stay up,나는 종종 늦게까지 깨어 있다.
+The cheerleader cheered the boy after the game.,0.91,1,cheer,치어리더는 경기가 끝난 후 소년을 응원했다.
+Check your work before hanging it up.,0.87,1,hang,작품을 걸기 전에 확인하세요.
+The crab is clapping and touching your hand.,0.99,1,clap,게가 박수를 치며 당신의 손을 만지고 있습니다.
+I’m shaking a shake.,0.75,1,shake,나는 흔들고 있다.
+"Look at the lambs, it's cute.",0.95,1,lamb,어린 양을 보세요. 귀엽죠.
+The sheep looks cute. Look at the lambs.,0.98,1,sheep,양들이 귀여워요. 어린 양들을 보세요.
+Let’s go to the art gallery.,1.0,1,art gallery,미술관에 가자.
+"I like art, but they are artists.",1.01,1,art,나는 예술을 좋아해요. 하지만 그들은 예술가예요.
+My dream job is a cartoonist.,0.87,1,cartoonist,제가 꿈꾸는 직업은 만화가입니다.
+Let's go to the art gallery.,1.0,1,gallery,미술관에 가자.
+Let’s draw.,0.98,1,draw,그림을 그려보자.
+Where is the post office?,0.88,1,post office,우체국은 어디에 있나요?
+The editor is asking whose letter is that?,1.0,0,letter,편집자는 저 편지가 누구의 편지인지 묻고 있습니다.
+This is my home address.,0.87,1,address,이것은 제 집 주소입니다.
+She collects stamps at the post office daily.,1.0,1,stamp,그녀는 매일 우체국에서 우표를 모은다.
+"My town is big, not the city.",0.88,1,town,"제 마을은 크지, 도시는 크지 않아요."
+My hometown is Seoul and very big.,0.62,1,hometown,제 고향은 서울이고 아주 큽니다.
+My hometown is a farming village.,0.85,1,village,내 고향은 농촌이에요.
+The city is big because of many buildings.,0.86,1,city,그 도시는 건물이 많아서 크다.
+Let's visit the place where we live.,1.01,1,place,우리가 살고 있는 곳을 방문해 보자.
+There is a map on the wall.,0.87,1,map,벽에 지도가 있어요.
+Here is a possible sentence: How about going to the Buckingham Palace? That building is across from my office. Where is the subway station?,0.76,0,palace,다음은 가능한 문장입니다: 버킹엄 궁전에 가는 건 어때요? 그 건물은 제 사무실 건너편에 있어요. 지하철역은 어디에 있나요?
+How about going to the temple?,0.88,1,temple,사찰에 가보는 건 어때요?
+Let's go fishing on the island.,1.0,1,island,섬에서 낚시하러 가자.
+There is a spot on the pot.,0.87,1,spot,냄비에 얼룩이 생겼습니다.
+We've just passed by the downtown area.,1.0,1,downtown,우리는 방금 시내 중심가를 지나갔어요.
+I seem to have misjudged my new neighbor.,0.99,1,neighbor,나는 새로운 이웃에 대해 잘못된 판단을 내린 것 같다.
+We play computer games during our free time.,1.0,1,computer game,우리는 여가시간에 컴퓨터 게임을 합니다.
+Let's play a board game at five.,1.01,1,game,5시에 보드게임을 하자.
+"Thank you for the present, here is my card.",0.91,1,card,선물을 고맙습니다. 이게 제 카드예요.
+The bridge joins the two islands.,0.99,1,bridge,다리는 두 섬을 연결한다.
+I sometimes play chess on The board is big.,0.98,1,board,나는 가끔 체스를 두곤 해요. 판이 크거든요.
+I sometimes play chess on Fridays.,0.99,1,chess,나는 가끔 금요일에 체스를 둔다.
+I’m going to the concert hall.,1.0,1,concert,나는 콘서트 홀에 갈 거예요.
+We are going to the concert hall.,1.0,1,concert hall,우리는 콘서트 홀에 가요.
+I have an album.,0.99,1,album,앨범이 있어요.
+James is a handsome prince who is a singer.,0.83,1,prince,제임스는 가수인 잘생긴 왕자입니다.
+The rock is very hard and unthrowable.,0.85,1,rock,그 돌은 매우 단단해서 던질 수 없습니다.
+We're told to get off the stage!,0.94,1,stage,우리는 무대에서 내려오라는 말을 들었습니다!
+They watch a fun movie about an attractive man.,0.98,1,movie,그들은 매력적인 남자에 대한 재미있는 영화를 봅니다.
+There are many seats in this small theater.,0.87,1,theater,이 작은 극장에는 좌석이 많습니다.
+I found a new method! The problem is simple but not easy.,0.88,1,method,새로운 방법을 찾았어요! 문제는 간단하지만 쉽지 않아요.
+I’m building a building.,0.98,1,build,저는 건물을 짓고 있어요.
+I’m building a building.,0.98,1,building,저는 건물을 짓고 있어요.
+"Here is one: The house has a big red roof. This sentence includes the word ""There's a big hen on the roof"" (which you didn't ask for).",0.76,0,roof,여기 하나 있습니다: 그 집은 큰 붉은 지붕을 가지고 있습니다. 이 문장에는 &quot;지붕 위에 큰 암탉이 있어요&quot;라는 단어가 포함되어 있습니다(당신은 그것을 요구하지 않았습니다).
+I can buy this doll at the market.,1.01,1,buy,이 인형은 시장에서 살 수 있어요.
+Do you sell meat? Let's go to market.,0.96,1,sell,고기 팔아요? 시장으로 가자.
+He works in sales and shows receipts.,0.75,1,sale,그는 영업에 종사하며 영수증을 보여줍니다.
+Let's go to the market and buy some goods.,0.96,1,market,시장에 가서 물건을 좀 사자.
+I ordered them to line up while waiting.,0.99,1,order,나는 그들에게 줄을 서서 기다리라고 명령했다.
+There's a great demand for the new machine.,0.84,1,demand,새로운 기계에 대한 수요가 많습니다.
+I marked the item as a gift.,1.01,1,item,나는 그 물건을 선물로 표시했습니다.
+"This isn't a single declarative statement. However, I can try rearranging it to fit the requirements. Here is a revised attempt: Look at the sea and look at the sky, search your room from top to",0.76,1,search,이것은 단일 선언적 진술이 아닙니다. 그러나 요구 사항에 맞게 재배열해 볼 수 있습니다. 다음은 수정된 시도입니다. 바다를 바라보고 하늘을 바라보며 방을 위에서부터 탐색하세요.
+You can ask the questions and I will answer them.,0.95,1,ask,여러분이 질문을 하시면 저는 답변해 드리겠습니다.
+I beg your pardon? I want bread.,0.98,0,beg,실례합니다. 빵이 필요해요.
+"I go to the church to pray. Touch your hand. Touch your leg. Sit down. This is not a single declarative statement, so I will recreate it as follows: I touch my hand and sit down.",0.81,1,pray,나는 기도하기 위해 교회에 간다. 손을 만져라. 다리를 만져라. 앉으라. 이것은 단일 선언적 진술이 아니므로 다음과 같이 다시 만들 것이다. 나는 내 손을 만지고 앉는다.
+"Look at the sky, look at the sea.",0.86,1,look,하늘을 보세요. 바다를 보세요.
+Look at the sky. Touch your eye. Look at the sky. Touch your eye. Look at the sky.,0.6,1,watch,하늘을 봐. 눈을 만져. 하늘을 봐. 눈을 만져. 하늘을 봐.
+I have very good sight and can see.,1.01,1,see,저는 시력이 아주 좋아서 볼 수 있어요.
+I want milk.,0.98,1,want,나는 우유를 원해요.
+I need a spoon.,0.99,1,need,숟가락이 필요해요.
+I have breakfast and play with my dog.,1.0,1,have,나는 아침을 먹고 내 개와 놀아요.
+I must study English because it is my key.,0.97,1,must,영어는 나의 핵심이기 때문에 영어를 공부해야 합니다.
+I like camping and want to go.,1.0,1,camping,저는 캠핑을 좋아하고 가고 싶어요.
+Let's go hiking on the mountain.,1.0,1,hiking,산에 등산하러 가자.
+Let’s go camping. I like camping.,0.97,1,go camping,캠핑 가자. 나는 캠핑을 좋아해.
+Her hobby is Let's go hiking.,1.01,1,go hiking,그녀의 취미는 하이킹을 가는 것입니다.
+They went on a tour of the city.,1.01,1,tour,그들은 도시를 여행했다.
+I went to Paris to go sightseeing.,0.97,1,sightseeing,나는 관광을 위해 파리에 갔다.
+I’m on vacation and feeling very relaxed now.,0.96,1,vacation,저는 휴가 중이고 지금은 매우 편안한 기분입니다.
+Happy birthday is next Thursday.,0.86,0,birthday,생일 축하합니다 다음주 목요일이에요.
+What day is it today? Tomorrow is Tuesday.,0.84,0,day,오늘은 무슨 요일이에요? 내일은 화요일이에요.
+I can take a break anytime next week.,1.0,1,break,다음 주에는 언제든지 휴식을 취할 수 있어요.
+The group meets at the library biweekly.,0.99,1,biweekly,이 모임은 2주에 한 번씩 도서관에서 열립니다.
+It’s the best plant for your health.,1.01,1,plant,건강에 가장 좋은 식물이에요.
+Look! These flowers are beautiful.,0.91,1,flower,보세요! 이 꽃들은 아름답습니다.
+I did not drop the vase.,1.01,1,vase,나는 꽃병을 떨어뜨리지 않았어요.
+Don’t walk on the grass while gardening.,0.87,1,grass,정원 작업을 하는 동안 잔디밭을 걷지 마세요.
+The farmer is sowing seeds on the melon.,1.0,1,seed,농부가 멜론에 씨앗을 뿌리고 있다.
+I’m a cook who is teaching class.,1.0,1,cook,저는 수업을 하는 요리사입니다.
+I'm a cook who makes model airplanes.,1.0,1,make,저는 모형 비행기를 만드는 요리사입니다.
+Jenny is a baker and I like bread.,1.01,1,baker,제니는 빵 굽는 사람이고 나는 빵을 좋아해요.
+The cheese will melt if it's heated slowly.,0.98,1,melt,천천히 가열하면 치즈가 녹습니다.
+"Here is a natural, meaningful English sentence that meets the requirements: Mix the ingredients and stir according to recipe.",0.87,1,recipe,다음은 요구 사항을 충족하는 자연스럽고 의미 있는 영어 문장입니다: 재료를 섞고 레시피에 따라 저어주세요.
+Mix the ingredients and stir before serving.,0.59,1,stir,재료를 섞어서 서빙하기 전에 저어줍니다.
+The house by the sea is big.,0.87,1,house,바다 옆의 집은 크다.
+There is a stove in the kitchen.,0.87,1,kitchen,주방에 스토브가 있습니다.
+The company produces big household goods.,0.98,1,household,이 회사는 대형 가정용품을 생산합니다.
+Can you get the oval dish for me?,1.01,1,dish,타원형 접시 가져다 주실 수 있나요?
+The fire started in the big stove.,0.99,1,stove,불은 큰 난로에서 시작되었습니다.
+It’s on the plate.,1.01,1,plate,접시 위에 있어요.
+Our housewarming party is on May 5.,0.85,1,housewarming,우리 이사파티는 5월 5일이에요.
+The dishes are washing because the sink is new.,0.96,1,sink,싱크대가 새것이라 설거지를 합니다.
+They drained the water from the pool.,0.99,1,drain,그들은 수영장의 물을 빼냈다.
+The nurse applied pressure to stop my bleeding.,0.99,1,bleed,간호사가 출혈을 멈추려고 압력을 가했습니다.
+Look at the river. Water goes through this pipe. I’m thirsty. Give me some juice. How can we stop the flow of blood?,0.85,0,flow,강을 봐. 이 파이프를 통해 물이 흐른다. 목마르다. 주스를 좀 줘. 어떻게 하면 피의 흐름을 멈출 수 있을까?
+The man is going up the old stairs.,1.0,1,stairs,그 남자가 오래된 계단을 올라가고 있다.
+The man is going up old stairs carefully.,1.0,1,stair,그 남자는 조심스럽게 오래된 계단을 올라가고 있다.
+He is on top of the mountain.,0.87,1,mountain,그는 산 꼭대기에 있다.
+Look! There is a hill in the background.,0.85,1,hill,보세요! 배경에 언덕이 있어요.
+Don’t throw the stone when there’s an iguana.,0.82,1,stone,이구아나가 있을 때는 돌을 던지지 마세요.
+I can bend the rubber band while stretching my body.,0.95,1,bend,몸을 늘리는 동안 고무줄을 구부릴 수 있습니다.
+They climbed the mountain every summer vacation.,0.99,1,climb,그들은 여름방학마다 산에 올랐다.
+We are close friends.,0.85,1,friend,우리는 친한 친구예요.
+You’re kind is not present.,0.75,0,kind,당신의 친절함은 존재하지 않습니다.
+I love my parents and I love my friends.,0.95,1,love,나는 내 부모님을 사랑하고 내 친구들을 사랑합니다.
+I respect you very much and I will be quiet.,0.95,1,respect,나는 당신을 매우 존경하며 조용히 있을 것입니다.
+He is a very friendly person and nice.,0.87,1,friendly,그는 매우 친절하고 좋은 사람이에요.
+I respect her and admire my mother.,1.0,1,admire,나는 그녀를 존경하고 나의 어머니를 존경한다.
+I was present at my class today.,0.87,1,class,저는 오늘 수업에 참석했습니다.
+I go to school and I’m a student.,0.97,1,student,저는 학교에 다니고 학생이에요.
+I will be a teacher in the future.,0.87,1,teach,나는 미래에 선생님이 될 것입니다.
+The new principal spoke to us this morning.,0.99,1,principal,오늘 아침 새로운 교장 선생님께서 우리에게 연설하셨습니다.
+I think this book is very interesting.,0.98,1,interesting,저는 이 책이 매우 흥미롭다고 생각합니다.
+I tied the necktie while wearing the tights are too tight.,0.67,0,tight,타이츠를 신은 채로 넥타이를 매었는데 너무 꽉 끼네요.
+I’m bad; He is bad.,1.01,1,bad,나는 나쁘다; 그는 나쁘다.
+He is bad at making this terrible burger.,0.93,1,terrible,그는 이 끔찍한 버거를 만드는 데 서툴다.
+The people who are poor look very sad.,1.01,1,poor,가난한 사람들은 매우 슬픈 표정을 짓는다.
+I respect them very much because they're good.,0.97,1,very,저는 그들을 정말 존경합니다. 그들은 훌륭하기 때문이죠.
+Unable to create a valid sentence.,0.87,0,rich,유효한 문장을 만들 수 없습니다.
+Good health is better than wealth they had.,1.01,1,wealth,건강이 부보다 낫다.
+Do you know what the value of the old coin is?,0.93,1,coin,오래된 동전의 가치가 얼마인지 아십니까?
+I should pay these bills this month.,1.01,1,pay,이번 달에 이 청구서를 내야 해요.
+The economy of this country is growing quickly.,0.98,1,economy,이 나라의 경제는 빠르게 성장하고 있습니다.
+His company will invest much money in business.,0.99,1,invest,그의 회사는 사업에 많은 돈을 투자할 것이다.
+We collect taxes to support local charities.,0.99,1,tax,우리는 지역 자선단체를 지원하기 위해 세금을 징수합니다.
+The law helps to promote public welfare.,0.99,1,welfare,이 법은 대중복지를 증진하는 데 도움이 됩니다.
+What a greedy woman she is!,0.88,1,greedy,그녀는 정말 탐욕스러운 여자예요!
+She is smarter than my dog.,0.87,1,smart,그녀는 내 개보다 똑똑해요.
+I’m sick. You are sick because I am too.,0.92,1,sick,나는 아프다. 너도 아프니까 나도 아프다.
+I think it’s a good idea.,1.01,1,idea,좋은 생각이라고 생각해요.
+The designer chose elegant designs for her skirt.,0.99,1,elegant,디자이너는 그녀의 스커트에 우아한 디자인을 선택했다.
+He is foolish and so are his friends.,0.86,1,fool,그는 어리석고 그의 친구들도 어리석다.
+The soldier was very brave in battle.,0.87,1,brave,그 군인은 전투에서 매우 용감했습니다.
+We're honest. Be quiet. We frankly apologized.,0.95,1,frankly,우리는 정직합니다. 조용히 하세요. 우리는 솔직하게 사과했습니다.
+Many people are against immoral child labor.,0.86,1,immoral,많은 사람들이 부도덕한 아동 노동에 반대합니다.
+He should remember not to be irrational.,0.99,1,irrational,그는 비이성적이어서는 안 된다는 것을 기억해야 한다.
+Hitler was a cruel ruler in Second World War.,0.6,1,cruel,히틀러는 2차 세계대전 당시 잔인한 통치자였다.
+Do you want carrots? It’s a pumpkin.,0.97,0,carrot,당근 먹을래? 호박이야.
+I don’t like potatoes when it’s a pumpkin.,0.95,1,potato,호박인 감자는 싫다.
+I don’t like tomatoes because they’re not vegetables.,0.94,1,tomato,저는 토마토를 좋아하지 않아요. 토마토는 야채가 아니거든요.
+I’d like vegetable soup.,1.0,1,vegetable,야채수프를 주세요.
+I like salad. I would like some fruit.,0.97,1,salad,나는 샐러드를 좋아해요. 과일도 좀 먹고 싶어요.
+They like French fries when they go out.,1.0,1,French fries,그들은 외식할 때 감자튀김을 좋아한다.
+Do you want onions? This is not a melon.,0.96,1,onion,양파를 원하세요? 이건 멜론이 아니에요.
+My school will plant sunflowers and roses.,1.0,1,sunflower,우리 학교에서는 해바라기와 장미를 심을 거예요.
+You look pretty and she is beautiful.,1.0,1,beautiful,당신은 예쁘고 그녀도 아름답습니다.
+My sister is cute.,0.86,1,cute,내 여동생은 귀여워요.
+They’re good. I’m okay. That’s enough. I’m happy.,0.86,1,good,그들은 괜찮아. 나는 괜찮아. 충분해. 나는 행복해.
+Ryan thinks she's handsome.,1.0,1,handsome,라이언은 그녀가 잘생겼다고 생각한다.
+"You look pretty, and so do they.",1.01,1,pretty,"당신은 예쁘고, 그들도 예쁘죠."
+I’m great at solving puzzles and playing games.,0.96,1,great,저는 퍼즐을 풀고 게임을 하는 데 능숙합니다.
+Isn’t she really lovely? She is beautiful.,0.83,1,lovely,그녀는 정말 사랑스럽지 않아요? 그녀는 아름답습니다.
+They look delicious.,0.96,1,delicious,맛있어 보이네요.
+We're honest about telling the truth.,0.93,1,honest,우리는 진실을 솔직하게 말합니다.
+Lisa's hair is straight and very straight.,0.85,1,straight,리사의 머리카락은 곧고 매우 곧습니다.
+Bring the brush back.,0.86,1,brush,브러시를 다시 가져오세요.
+I wash my hands after using soap.,1.01,1,soap,비누를 사용한 후 손을 씻습니다.
+Walk up this street; it’s an old road.,0.99,1,road,이 거리를 따라 올라가 보세요. 오래된 길이죠.
+She will walk up this street carefully.,1.0,1,street,그녀는 이 거리를 조심스럽게 걸어 올라갈 것이다.
+They're going to walk along the old route.,0.98,1,route,그들은 오래된 길을 따라 걸을 것입니다.
+The forecast said it would be snowy.,1.0,1,snowy,예보에 따르면 눈이 올 거라고 했어요.
+We have flowers in it’s spring.,0.75,1,spring,봄에는 꽃이 피죠.
+I like summer vacation when it's warm.,1.0,1,summer,나는 따뜻한 여름 휴가를 좋아해요.
+It’s cool in autumn when leaves are falling.,0.98,1,fall,가을에는 나뭇잎이 지는 계절이 시원해요.
+It’s winter.,0.98,1,winter,겨울이에요.
+We have a lot of snow in winter.,1.01,1,snow,겨울에는 눈이 많이 옵니다.
+My father's birthday is in March.,0.87,1,March,제 아버지 생신은 3월이에요.
+My brother’s birthday is in April.,0.86,1,April,제 남동생 생일은 4월이에요.
+Children's Day is in May.,0.87,1,May,어린이날은 5월에 있습니다.
+"His birthday is in June, but no date.",0.87,1,June,그의 생일은 6월이지만 날짜는 없습니다.
+"It's summer, so her birthday is in July.",0.85,1,July,지금은 여름이니까 그녀의 생일은 7월이에요.
+"Halloween is in October, so it's on a Tuesday.",0.81,1,October,할로윈은 10월이므로 화요일입니다.
+Thanksgiving Day is in November.,0.83,1,November,추수감사절은 11월에 있습니다.
+I read many books during autumn season.,1.01,1,autumn,나는 가을에 많은 책을 읽습니다.
+There are twelve months in a year.,0.87,1,month,1년은 12개월입니다.
+What's your favorite season of the year?,0.87,1,season,당신이 가장 좋아하는 계절은 언제인가요?
+The wind was strong. It's windy.,0.86,1,wind,바람이 강했어요. 바람이 많이 불어요.
+The green umbrella is bigger than this one.,0.87,1,umbrella,녹색 우산은 이것보다 더 큽니다.
+I’m eating. Don’t eat between meals. I’m hungry.,0.88,1,eat,나는 먹고 있어. 식사 사이에 먹지 마. 배고파.
+He is drinking from a refillable water bottle.,0.99,1,drink,그는 재사용 가능한 물병에서 물을 마시고 있습니다.
+The stomach plays an important role in digesting food.,0.96,1,digest,위는 음식을 소화하는 데 중요한 역할을 합니다.
+Here is a natural and meaningful English sentence that follows the given rules: Here is my gift. You're kind.,0.86,0,give,다음은 주어진 규칙을 따르는 자연스럽고 의미 있는 영어 문장입니다: 여기 내 선물이 있습니다. 당신은 친절합니다.
+Here is my gift for you.,0.88,1,gift,이게 당신을 위한 선물이에요.
+Let me introduce myself.,0.98,1,introduce,제 소개를 하세요.
+The announcer announced the news about new team members.,0.96,1,announce,아나운서는 새로운 팀 멤버에 대한 소식을 발표했습니다.
+The waiter served the starter while I cooked.,0.99,1,serve,제가 요리하는 동안 웨이터가 전채 요리를 제공했습니다.
+They are talking.,0.96,1,talk,그들은 이야기하고 있다.
+I didn't understand his public speech statement.,0.99,1,speech,저는 그의 공개 연설 내용을 이해하지 못했습니다.
+Can you hear me while I'm on phone?,0.98,1,hear,내가 전화 통화하는 동안 내 말이 들리니?
+"Here's a revised attempt: Stop moving, don’t move until I tell you it is not correct. Here's a revised attempt: Stop moving, don’t move until I say so.",0.86,1,tell,"수정된 시도는 다음과 같습니다. 움직이지 마, 내가 틀렸다고 말할 때까지 움직이지 마. 수정된 시도는 다음과 같습니다. 움직이지 마, 내가 그렇게 말할 때까지 움직이지 마."
+Let's talk about this when we're calm.,0.98,1,talk about,차분해진 후에 이 문제에 대해 이야기합시다.
+Let’s throw a ball while I’m good at catching.,0.93,1,throw,내가 공을 잘 잡을 때 공을 던지자.
+He can pull the car while driving.,1.0,1,pull,그는 운전하면서 차를 끌 수 있다.
+Look! He can push the car.,0.99,1,push,보세요! 그는 차를 밀 수 있어요.
+I’ll call you again when I find her number.,0.95,1,call,그녀의 전화번호를 찾으면 다시 전화드릴게요.
+I will catch the ball.,1.01,1,catch,나는 공을 잡을 것이다.
+Sit down. Close the door. Did you drop the vase?,0.91,1,drop,앉아. 문을 닫아. 꽃병 떨어뜨렸어?
+He is about to twist his legs.,0.94,1,twist,그는 다리를 꼬려고 합니다.
+Let's scoop up the ice cream. It’s a spoon.,0.91,1,scoop,아이스크림을 떠올려 보자. 숟가락이야.
+Let me examine your teeth. Her teeth are very white. I have a toothache. I have a toothache.,0.84,1,teeth,이빨을 검사해 볼게요. 이빨이 아주 하얗네요. 이가 아파요. 이가 아파요.
+This dentist is my uncle.,0.87,1,dentist,이 치과 의사는 제 삼촌이에요.
+Dr. James is looking at the x-ray.,1.01,1,x-ray,제임스 박사가 엑스레이를 보고 있습니다.
+Let's listen to the song.,1.01,1,listen,노래를 들어보죠.
+Touch your ear and listen to the song.,0.87,1,listen to,귀를 만지고 노래를 들어보세요.
+Let's sing a song. She can sing.,0.98,1,sing,노래 부르자. 그녀는 노래할 수 있어.
+Let's listen to the song.,1.01,1,song,노래를 들어보죠.
+I can't hear your voice.,1.01,1,voice,당신의 목소리가 들리지 않습니다.
+I can’t hear you because I am deaf.,0.97,1,deaf,저는 귀머거리라서 당신의 말을 들을 수 없습니다.
+I can raise the letters and stand up now.,0.98,1,raise,이제 글자를 들고 일어설 수 있어요.
+Here's your change.,0.86,1,change,잔돈은 여기 있습니다.
+I bumped into a bumper car.,1.01,1,bump,범퍼카에 부딪혔어요.
+The lift is lifting us very high.,1.0,1,lift,그 엘리베이터는 우리를 매우 높이 올려주고 있어요.
+Let’s write. Do you want to be a writer?,0.94,1,write,글을 써보자. 작가가 되고 싶은가?
+Newspaper reporters gather news from many sources.,0.99,1,reporter,신문 기자들은 다양한 출처로부터 뉴스를 수집합니다.
+He is a teacher and novelist.,0.86,1,novelist,그는 교사이자 소설가입니다.
+What is the subject of this poem?,0.87,1,poem,이 시의 주제는 무엇입니까?
+Computers **displaced** typewriters from many offices quickly.,0.6,1,type,컴퓨터는 많은 사무실에서 타자기를 빠르게 **대체**했습니다.
+Do you write in your diary every day?,1.01,1,diary,매일 일기를 쓰시나요?
+He is the narrator of documentaries about wild animals.,0.81,1,narrator,그는 야생 동물에 관한 다큐멘터리의 내레이터입니다.
+There is a clock on the table.,0.87,1,clock,테이블 위에 시계가 있습니다.
+There is a calendar on the wall.,0.87,1,calendar,벽에 달력이 있어요.
+What's the date today? Let's meet at two tomorrow.,0.9,1,date,오늘은 무슨 날이에요? 내일 두 시에 만나요.
+The alarm clock alarmed me at three o'clock.,0.99,1,alarm,알람시계가 오후 3시에 울렸어요.
+What time is it now? It's five ten.,0.82,1,now,지금 몇 시예요? 다섯 시 십 분이에요.
+What's the date today? Tomorrow is Tuesday.,0.84,0,today,오늘은 무슨 날인가요? 내일은 화요일이에요.
+"The date today is tomorrow, tomorrow is Tuesday.",0.85,1,tomorrow,"오늘은 내일이고, 내일은 화요일입니다."
+Today is Monday.,0.84,1,Monday,오늘은 월요일입니다.
+Tomorrow is Tuesday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow,0.47,1,Tuesday,내일은 화요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다. 내일은 월요일입니다.
+Yesterday was Sunday. Today is Monday. Tomorrow is Tuesday. What day is it?,0.68,1,Sunday,어제는 일요일이었습니다. 오늘은 월요일입니다. 내일은 화요일입니다. 무슨 요일입니까?
+"Yesterday was Sunday, a week has seven days.",1.01,1,week,"어제는 일요일이었고, 일주일은 7일이에요."
+How about tonight? What time is it now?,0.85,1,tonight,오늘 밤은 어때요? 지금 몇 시예요?
+"The past is important, but the future is more important.",0.8,1,past,"과거는 중요하지만, 미래는 더 중요합니다."
+We have a quiz tomorrow.,1.0,1,quiz,내일은 퀴즈가 있어요.
+They did a phone survey of TV programs.,1.0,1,survey,그들은 TV 프로그램에 대한 전화 설문조사를 했습니다.
+I have some questions about the lesson plan.,1.0,1,question,수업 계획에 대해 몇 가지 질문이 있습니다.
+I must study English on Mondays.,0.99,1,English,나는 월요일에 영어를 공부해야 한다.
+"English is becoming a global language, I must study.",0.97,1,language,영어가 세계어가 되어가고 있으니 공부해야 합니다.
+"This sentence includes the word ""I’ll show you an example of how we use gestures.** This sentence includes the word ""I'll show you an example"" exactly as specified, and it follows the other rules outlined in the",0.76,1,example,"이 문장에는 &quot;제스처를 사용하는 방법의 예를 보여드리겠습니다.&quot;라는 단어가 포함되어 있습니다.** 이 문장에는 &quot;제스처를 사용하는 방법의 예를 보여드리겠습니다.&quot;라는 단어가 지정된 대로 정확히 포함되어 있으며, 다음에서 설명하는 다른 규칙을 따릅니다."
+I have social studies class today.,1.0,1,social studies,오늘은 사회 수업이 있어요.
+My favorite subject is English literature.,0.84,1,subject,제가 가장 좋아하는 과목은 영문학이에요.
+We have a history class today.,1.0,1,history,오늘은 역사 수업이 있습니다.
+We should preserve the natural environment.,0.96,1,environment,우리는 자연환경을 보존해야 합니다.
+The illiteracy rate is 15% because they are poor.,0.84,1,illiteracy,"문맹률은 15%인데, 그 이유는 그들이 가난하기 때문이다."
+The farmer are there many cows on the farm?,0.59,0,many,"농부님, 농장에 소가 많은가요?"
+She is about to pick the plant.,0.94,1,pick,그녀는 식물을 따려고 합니다.
+I’ll decide after I look at it.,1.0,1,decide,보고 나서 결정할게요.
+"Here is a natural, meaningful English sentence that follows the given rules: This is Jack's case. Here is a pencil case. A judge is in court.",0.8,0,case,다음은 주어진 규칙을 따르는 자연스럽고 의미 있는 영어 문장입니다: 이것은 잭의 사건입니다. 이것은 연필 케이스입니다. 판사가 법정에 있습니다.
+I like both of them.,1.01,1,both,둘 다 좋아해요.
+"Hold on, please sit down.",0.89,1,wait,"잠깐만요, 앉아주세요."
+This gift is for you.,0.88,1,for,이 선물은 당신을 위한 것입니다.
+It's behind the box.,0.88,1,behind,상자 뒤에 있어요.
+He is from China.,0.86,1,from,그는 중국 사람입니다.
+"Hold on, please. Come here, please.",0.87,1,please,잠깐만요. 여기로 와주세요.
+The woman is my mom. She is a nurse and scientist.,0.77,1,woman,그 여자는 제 엄마예요. 그녀는 간호사이자 과학자예요.
+Isabella is a beautiful princess and her mother.,0.6,1,princess,이사벨라는 아름다운 공주이고 그녀의 어머니입니다.
+Spiderman can't fly because he's stuck on Earth.,0.95,1,man,스파이더맨은 지구에 갇혀서 날 수 없습니다.
+"Ann is a doctor, she is Ms. Yamada.",0.87,0,Ms.,"앤은 의사이고, 그녀는 야마다 씨입니다."
+"Mr. Watson is a kind gentleman. Hello to him, Your father.",0.78,0,Mr.,"왓슨 씨는 친절한 신사입니다. 그에게 안녕하세요, 당신의 아버지."
+They are guarding the start. He starts to run.,0.96,0,start,그들은 출발을 지키고 있다. 그는 달리기 시작한다.
+"The game ends at five, please wrap it up.",0.99,1,end,게임은 5시에 끝납니다. 마무리해 주세요.
+"If you leave right now, you won’t be late.",0.95,1,leave,지금 당장 출발하면 늦지 않을 거야.
+"I’m tired, so let’s go outside.",1.01,1,go,피곤하니까 밖으로 나가자.
+I come home at 6 p.m.,1.0,1,come home,나는 오후 6시에 집에 온다
+We're making groups and can you join us?,0.98,1,join,"우리는 그룹을 만들고 있는데, 당신도 합류할 수 있나요?"
+She is fleeing from the prison.,1.0,1,flee,그녀는 감옥에서 도망치고 있다.
+I have a watch and will follow instructions.,0.98,1,follow,저는 시계를 가지고 있으므로 지시를 따를 것입니다.
+Many teenagers experience fast growth.,0.99,1,growth,많은 청소년들이 빠른 성장을 경험합니다.
+Look at this graph before drawing triangles.,0.86,1,graph,삼각형을 그리기 전에 이 그래프를 살펴보세요.
+I think that's one of my pictures.,1.0,1,picture,제 사진 중 하나인 것 같아요.
+That is his camera.,0.86,1,camera,그것이 그의 카메라예요.
+There is a mirror on the wall. I have very good sight.,0.88,0,mirror,벽에 거울이 있어요. 저는 시력이 아주 좋아요.
+We saw a preview of the movie on the Internet. We saw a preview of the movie on the Internet.,0.81,1,preview,우리는 인터넷에서 영화 미리보기를 봤어요. 우리는 인터넷에서 영화 미리보기를 봤어요.
+I think this book is boring.,1.01,1,boring,이 책은 지루하다고 생각해요.
+I’m bored and need something exciting.,0.99,1,bored,나는 지루해서 뭔가 신나는 게 필요해.
+He is a nice but dull man.,0.87,1,dull,그는 착하지만 지루한 사람이다.
+"I'm lying on the floor, wearing flat shoes.",0.98,1,flat,나는 평底화를 신고 바닥에 누워 있어요.
+It's a really ugly dog. You're pretty.,0.83,0,ugly,정말 못생긴 개야. 너는 예쁘잖아.
+"I am slow and lazy, he's tired.",0.63,1,lazy,"나는 느리고 게으르고, 그는 피곤하다."
+I want a hot dog.,1.01,1,hot,핫도그 먹고 싶어.
+We're excited about it.,0.87,1,excited,우리는 그것에 대해 기대하고 있습니다.
+I have a pair of shoes that fit my sneakers.,0.95,1,pair,내 운동화에 맞는 신발 한 켤레를 가지고 있어요.
+We are finding new members for our soccer team.,0.97,1,team,우리는 축구팀에 새로운 멤버를 모집하고 있습니다.
+"You like cake, he likes sports too.",1.01,0,like,"당신은 케이크를 좋아하고, 그는 스포츠도 좋아해요."
+I prefer chocolate ice cream.,1.0,1,prefer,나는 초콜릿 아이스크림을 더 좋아해.
+A teacher should treat students without prejudice.,0.98,1,prejudice,교사는 학생들을 편견 없이 대해야 한다.
+That farmer is my grandpa.,0.87,1,farmer,저 농부는 제 할아버지예요.
+My hometown is a farming village.,0.85,1,farm,내 고향은 농촌이에요.
+Look! I have a cow.,0.99,1,cow,보세요! 저는 소를 가지고 있어요.
+I'm making a model airplane while I have my doll.,0.92,1,model,인형이 있는 동안 모형 비행기를 만들고 있어요.
+Our factory has to hire more workers.,0.99,1,factory,우리 공장에서는 노동자를 더 고용해야 합니다.
+Let’s watch the magic show.,1.01,1,magic,마술쇼를 구경해요.
+A bag is by the pink lamp.,0.62,1,lamp,분홍색 램프 옆에 가방이 있습니다.
+I need yellow ribbons that are exactly one foot long.,0.95,1,ribbon,정확히 1피트 길이의 노란 리본이 필요해요.
+This candle is cheap. It’s your balloon.,0.98,0,candle,이 촛불은 싸요. 당신의 풍선이에요.
+The movie is fun.,0.86,1,fun,영화가 재밌어요.
+What's your hobby is drawing cartoons.,0.99,1,hobby,당신의 취미는 만화를 그리는 것입니다.
+We enjoy leisure activities on weekends.,0.98,1,leisure,우리는 주말에 여가 활동을 즐깁니다.
+The concert is exciting because Muriel is entertaining.,0.82,1,entertain,그 콘서트는 뮤리얼이 재밌어서 더 재밌어요.
+Each of us has the freedom to choose.,1.0,1,freedom,우리 각자는 선택의 자유를 가지고 있습니다.
+I won first prize because I’m lucky today.,0.97,1,lucky,오늘은 운이 좋아서 1등을 차지했어요.
+Don’t miss this chance. Seven is my lucky number.,0.87,1,chance,이 기회를 놓치지 마세요. 7은 제 행운의 숫자예요.
+I’m at home waiting for customer to sit down.,0.95,1,down,저는 집에서 고객이 앉을 때까지 기다리고 있어요.
+Walk up this street. Stand up. Let's raise our hands. Lift lift lift lifts us.',0.81,0,up,이 거리를 걸어가세요. 일어서세요. 손을 들어요. 들어올려 들어올려 들어올려요. 우리를 들어올려요.&#39;
+Can you use a computer? I can’t imagine the world without her.,0.87,0,without,컴퓨터를 쓸 수 있어? 그녀 없는 세상은 상상할 수 없어.
+May I use your bathroom?,1.0,1,bathroom,욕실을 쓸 수 있나요?
+My cat is in the bathtub.,0.87,1,bathtub,내 고양이가 욕조에 있어요.
+"Excuse me, where is the restroom?",0.94,1,restroom,"실례합니다만, 화장실은 어디에 있나요?"
+There is a toilet in the bathroom.,0.87,1,toilet,욕실에 화장실이 있습니다.
+My uncle is painting the wall is dirty.,0.74,0,wall,삼촌이 벽을 더럽게 칠하고 있어요.
+She can’t see anything without her glasses.,0.99,1,glasses,그녀는 안경 없이는 아무것도 볼 수 없습니다.
+I’m looking for sunglasses that make me giggle.,0.97,1,sunglasses,웃음이 나오는 선글라스를 찾고 있어요.
+Do you need a glass?,1.01,1,glass,잔이 필요하신가요?
+He is blind because he can't see.,0.99,1,blind,그는 아무것도 볼 수 없기 때문에 눈이 멀었습니다.
+I have very good sight.,1.01,1,sight,저는 시력이 아주 좋습니다.
+The main composition of hair is keratin.,0.84,1,hair,머리카락의 주요 구성 성분은 케라틴입니다.
+The man is hairy because of his hair.,0.87,1,hairy,그 남자는 머리카락 때문에 털이 많다.
+I look silly with my new hairstyle.,1.0,1,hairstyle,새로운 헤어스타일로 우스꽝스러워 보이네요.
+I have a new comb to use on this hair.,0.96,1,comb,이 머리카락에 쓸 새로운 빗이 생겼어요.
+I bought a red hairpin for her birthday.,0.99,1,hairpin,나는 그녀의 생일에 빨간색 머리핀을 샀다.
+Lisa has curly hair.,0.99,1,curly,리사는 곱슬머리예요.
+He got some mustard on his mustache.,0.99,1,mustache,그는 콧수염에 겨자를 묻혔다.
+The girl wrinkled her eyebrows at the sweater.,0.73,0,wrinkle,소녀는 스웨터를 보고 눈썹을 찌푸렸다.
+Come inside my house before it gets dark.,1.01,1,inside,어두워지기 전에 내 집으로 들어오세요.
+All doors in a bank open inward.,0.87,1,inward,은행의 모든 문은 안쪽으로 열립니다.
+I entered the room; I entered my house.,0.99,1,in,나는 방에 들어갔다. 나는 내 집에 들어갔다.
+The teacher has The list includes her name on page 8.,0.67,0,include,선생님은 8쪽에 그녀의 이름이 적힌 목록을 가지고 계십니다.
+My sister reads the newspaper every morning.,0.99,1,newspaper,내 여동생은 매일 아침 신문을 읽습니다.
+My sister reads the newspaper and I saw her picture in the magazine.,0.89,1,magazine,"제 여동생은 신문을 읽는데, 잡지에서 그녀의 사진을 봤어요."
+The taxi driver listens to music on radio.,1.0,1,radio,택시 운전사는 라디오로 음악을 듣는다.
+Here is a sentence that meets the requirements: They cut the paper while we look at page 8.,0.89,1,page,다음은 요구 사항을 충족하는 문장입니다: 우리가 8페이지를 보는 동안 그들은 종이를 잘랐습니다.
+The news surprised me when I learned it.,0.99,1,news,나는 그 소식을 듣고 놀랐다.
+I know an interesting website that shows my hometown.,0.95,1,website,제 고향을 보여주는 흥미로운 웹사이트를 알고 있어요.
+I sometimes play chess and also video games.,1.0,1,sometimes,저는 가끔 체스도 하고 비디오 게임도 하죠.
+I have a habit of waking up late.,1.01,1,habit,나는 늦게 일어나는 습관이 있다.
+"She's almost always late, and so am I.",0.85,1,always,"그녀는 거의 항상 늦고, 나도 그렇다."
+I’ve seen this movie once.,1.01,1,once,이 영화를 한 번 봤어요.
+I’ll call you again when I return home.,0.97,1,again,집에 돌아가면 다시 전화드릴게요.
+Sit down.,0.96,1,repeat,앉으세요.
+The boring movie ended finally at last.,1.0,1,finally,지루했던 영화가 드디어 끝났네요.
+I think the picture is funny.,1.0,1,funny,그 사진이 재밌는 것 같아요.
+You look so sad because it's a sad film.,0.94,1,sad,당신이 너무 슬퍼 보이는 건 이 영화가 슬픈 영화이기 때문이야.
+I like telling jokes that are really funny.,1.0,1,joke,저는 정말 재밌는 농담을 하는 걸 좋아해요.
+He sighed at the crowd.' is not a complete sentence; it's a quotation.' is not a complete sentence; it's a quotation.' is not a complete sentence; it',0.67,1,sigh,그는 군중을 향해 한숨을 쉬었다.&#39;는 완전한 문장이 아닙니다. 인용문입니다.&#39;는 완전한 문장이 아닙니다. 인용문입니다.&#39;는 완전한 문장이 아닙니다.
+You talk nonsense all the time.,1.0,1,nonsense,당신은 항상 말도 안되는 소리를 하죠.
+She’s from Canada.,0.99,1,Canada,그녀는 캐나다 출신이에요.
+He is from China.,0.86,1,China,그는 중국 사람입니다.
+"She is from Japan, and I am too.",0.88,1,Japan,그녀는 일본 사람이고 나도 일본 사람이에요.
+"I’m from Seoul, Korea, and I love Korean history.",0.95,1,Korea,저는 한국 서울 출신이고 한국 역사를 좋아해요.
+I’m a fan of Korean is my favorite subject.,0.95,1,Korean,저는 한국어를 좋아하고 한국어가 제가 가장 좋아하는 과목이에요.
+He’s from Brazil.,0.99,1,Brazil,그는 브라질 출신이에요.
+We are from India.,0.86,1,India,우리는 인도에서 왔어요.
+The world has become a global village.,1.0,1,world,세계는 지구촌이 되었습니다.
+I can do anything.,0.98,1,any,나는 무엇이든 할 수 있어요.
+The store is open every day except Sunday. The store is open every day except Sunday.,0.72,1,except,매장은 일요일을 제외하고 매일 영업합니다. 매장은 일요일을 제외하고 매일 영업합니다.
+I’m curious about who the painter is.,0.99,1,who,그 화가가 누구인지 궁금해요.
+Many people are waving their hands around friends.,1.0,1,people,많은 사람들이 친구 주위로 손을 흔든다.
+He can understand I don't have any rules.,0.98,0,understand,그는 내가 아무런 규칙도 없다는 걸 이해할 수 있어요.
+I’ll explain the rules of this game.,1.0,1,explain,이 게임의 규칙을 설명하겠습니다.
+It is my principle not to be late.,0.87,1,principle,저는 늦지 않으려고 노력합니다.
+They were trying to justify themselves publicly.,0.99,1,justify,그들은 공개적으로 자신들의 정당성을 입증하려고 노력했습니다.
+People don't believe his illogical argument.,0.99,1,illogical,사람들은 그의 비논리적인 주장을 믿지 않는다.
+Whose paintbrush is it? The paint is faint.,0.84,0,paintbrush,누구의 페인트브러쉬인가? 페인트가 희미하다.
+My uncle is using the paint is faint.,0.75,0,paint,삼촌이 사용하는 페인트가 희미해요.
+She took the eraser between her thumb and forefinger.,0.97,1,eraser,그녀는 엄지와 검지손가락 사이에 지우개를 끼웠다.
+Harry is the best actor.,0.88,1,actor,해리는 최고의 배우예요.
+Is the actress kind?,0.85,0,actress,그 여배우는 친절한가요?
+I stared at the star.,1.01,1,star,나는 별을 바라보았다.
+I play the role of Pinocchio.,1.0,1,role,저는 피노키오 역을 맡았어요.
+The famous artist is also a popular guitarist.,0.86,1,famous,이 유명한 예술가는 또한 인기 있는 기타리스트이기도 합니다.
+Football is my favorite sport.,0.86,1,favorite,제가 가장 좋아하는 스포츠는 축구입니다.
+It's a common mistake that friends share food preferences.,0.93,1,common,친구끼리 음식 선호도가 비슷하다는 것은 흔한 실수입니다.
+I love my job.,0.99,1,job,저는 제 직업을 좋아해요.
+Hard work brings its own rewards and success.,0.99,1,work,열심히 일하면 보상과 성공이 따른다.
+It’s time to do my homework every day.,0.98,1,homework,매일 숙제를 할 시간이 됐습니다.
+I worked for 5 years at the company.,1.0,1,company,저는 그 회사에서 5년간 일했습니다.
+Students should report their project's progress regularly.,0.98,1,progress,학생들은 프로젝트 진행 상황을 정기적으로 보고해야 합니다.
+Our factory has to hire more workers.,0.99,1,hire,우리 공장에서는 노동자를 더 고용해야 합니다.
+"He repairs computers, including my car is being repaired.",0.96,0,repair,"그는 컴퓨터를 수리하는데, 제 차도 수리 중입니다."
+"I can’t help you. She’s in trouble and needs help. You should take some medicine. Help me, please.",0.83,1,help,나는 당신을 도울 수 없습니다. 그녀는 곤경에 처해 있고 도움이 필요합니다. 당신은 약을 먹어야 합니다. 제발 도와주세요.
+What is the problem? The problem is simple but not easy.,0.75,1,problem,문제는 무엇인가? 문제는 간단하지만 쉽지 않다.
+I can solve this math problem easily.,1.0,1,solve,나는 이 수학 문제를 쉽게 풀 수 있다.
+"Bugs are bugging me, what is the problem?",1.0,1,bug,"벌레 때문에 짜증이 나는데, 뭐가 문제일까요?"
+What direction is the railway station in?,0.79,1,direction,기차역은 어느 방향에 있나요?
+The wind is coming from the north.,1.0,1,north,바람이 북쪽에서 불어온다.
+The railway station is west of that point.,0.86,1,west,기차역은 그 지점의 서쪽에 있습니다.
+"If that way is east, then this way is west.",0.82,1,east,"저 길이 동쪽이라면, 저 길은 서쪽이다."
+I’m not sure that’s correct.,1.0,1,correct,그게 맞는지 잘 모르겠어요.
+It's a common mistake to overlook such errors.,0.9,1,error,이런 오류를 간과하는 것은 흔한 실수입니다.
+You look like a detective anyway.,1.0,1,anyway,어쨌든 당신은 형사처럼 보이잖아요.
+Let's go outside and play some ball.,1.0,1,outside,밖으로 나가서 공놀이를 하자.
+We enjoy outdoor activities and go outside.,0.99,1,outdoor,"우리는 야외 활동을 좋아하고, 밖으로 나가는 것을 좋아합니다."
+I parked at the park.,1.01,1,park,나는 공원에 주차했다.
+We’re at the playground.,1.0,1,playground,우리는 놀이터에 있어요.
+We had fun at the beach.,1.01,1,beach,우리는 해변에서 즐거운 시간을 보냈습니다.
+She is swinging the swing at the playground.,0.99,1,swing,그녀는 놀이터에서 그네를 타고 있다.
+I have a stomachache after eating too much.,0.98,1,stomachache,너무 많이 먹은 뒤에 배가 아프다.
+"I have a toothache, so I'll go to the dentist.",0.92,1,toothache,치통이 있어서 치과에 가야겠어요.
+The stomach plays an important role in digestion.,0.99,1,stomach,위는 소화에 중요한 역할을 합니다.
+There is a lot of competition between clubs to attract students.,0.76,1,competition,학생을 유치하기 위해 각 동아리 간에 경쟁이 치열합니다.
+"I’m on the soccer team, and he won the match.",0.93,1,match,"저는 축구팀에 속해 있고, 그는 경기에서 이겼습니다."
+I tied the necktie and drew a winner.,1.0,1,tie,나는 넥타이를 매고 당첨자를 뽑았습니다.
+Don’t compare yourself with others; they’re not same.,0.95,1,compare,다른 사람과 자신을 비교하지 마세요. 그들은 똑같지 않습니다.
+We can recycle the cycle and reduce waste.,1.0,1,waste,우리는 순환을 재활용하고 폐기물을 줄일 수 있습니다.
+Smart phones are very useful if you can use one.,0.96,1,use,스마트폰은 가능하다면 매우 유용합니다.
+We have to preserve the environment.,0.97,1,preserve,우리는 환경을 보존해야 합니다.
+We are collecting money for charity.,0.99,1,collect,우리는 자선단체에 기부금을 모으고 있습니다.
+I’ll throw this into the trash can.,1.01,1,trash,이걸 쓰레기통에 버릴게요.
+I’d like to travel to lots of foreign countries.,0.94,1,travel,저는 많은 외국을 여행하고 싶습니다.
+I train my team as we watch the train.,0.97,1,train,나는 기차를 바라보면서 팀을 훈련시킨다.
+Don’t move until I tell you carry books upstairs.,0.95,1,move,내가 책을 위층으로 옮기라고 할 때까지 움직이지 마.
+Then what piece should I move? Let’s exchange bags. Carry the books upstairs.,0.85,1,transfer,그럼 어떤 조각을 옮겨야 할까? 가방을 바꾸자. 책은 위층으로 가지고 가자.
+The roller coaster suddenly rises and loops.,0.99,1,roll,롤러코스터가 갑자기 상승해서 휘청거립니다.
+Falling rocks are dangerous.,0.9,1,dangerous,떨어지는 돌은 위험해요.
+Ham is harmful to our health.,0.87,1,harmful,햄은 우리 건강에 해롭습니다.
+Look out! You look so dangerous.,0.97,1,danger,조심하세요! 너무 위험해 보여요.
+She met her misfortune with great courage.,0.99,1,misfortune,그녀는 큰 용기로 자신의 불행을 맞이했습니다.
+Be careful not to cut your fingers.,0.86,1,careful,손가락을 자르지 않도록 조심하세요.
+Let's go outside. Look out! I'm leaving now.,0.91,1,out,밖으로 나가자. 조심해! 지금 떠날게.
+She is going upstairs to carry books.,1.0,1,upstairs,그녀는 책을 가지고 위층으로 올라갑니다.
+The desk is made of white wood.,0.94,1,desk,책상은 흰색 나무로 만들어졌습니다.
+The lunch box is inside the fridge.,0.87,1,fridge,도시락은 냉장고 안에 있어요.
+She is wiping the window and filling glass.,1.0,1,window,그녀는 창문을 닦고 유리창을 채우고 있다.
+I'm at home.,0.86,1,home,나는 집에 있어요.
+There are many floors in the building downstairs.,0.86,1,floor,건물 아래층에는 여러 층이 있습니다.
+That ball is far from me.,0.88,1,far,그 공은 나에게서 멀리 떨어져 있어요.
+What’s the distance between Seoul and Busan? Helen’s house is far off.,0.88,0,distance,서울과 부산의 거리는 얼마예요? 헬렌의 집은 멀리 떨어져 있어요.
+Go along this way and take your time.,0.87,1,along,이 길로 가서 시간을 여유롭게 잡으세요.
+The distance between Seoul and Busan is 380 kilometers.,0.83,1,kilometer,서울에서 부산까지의 거리는 380km이다.
+I was rude to my mom.,0.88,1,rude,나는 엄마에게 무례했다.
+"I was rude to my mom, don’t scold me too coldly.",0.84,1,scold,제가 엄마에게 무례했어요. 너무 차갑게 꾸중하지 마세요.
+Ambitious people are always diligent and hard workers.,0.85,1,diligent,야심 있는 사람들은 항상 부지런하고 열심히 일합니다.
+"When I was an elementary school student, I was outgoing.",0.8,1,outgoing,저는 초등학교 때 사교적인 편이었습니다.
+It is unkind of her to say that.,0.94,1,unkind,그녀가 그런 말을 하는 건 친절하지 않아요.
+He is antisocial due to his bad temper.,0.87,1,antisocial,그는 성격이 나빠서 반사회적이다.
+The careless driver didn't slow down; he missed the ball.,0.92,1,careless,부주의한 운전자는 속도를 줄이지 않았다. 그는 공을 놓쳤다.
+Stretch your body before playing any sport.,0.86,1,body,스포츠를 하기 전에 몸을 스트레칭하세요.
+Hockey players use this stick on a spoon.,1.0,0,stick,하키 선수들은 이 스틱을 숟가락에 사용합니다.
+A ball has a round shape.,1.0,1,shape,공은 둥근 모양을 가지고 있습니다.
+You are strong and brave.,0.88,1,strong,당신은 강하고 용감합니다.
+"That's enough cake, I'm full.",0.63,1,enough,"케이크는 이제 그만, 배불러요."
+I have nothing to hide behind.,1.0,1,nothing,저는 숨을 곳이 없습니다.
+I can do anything for you.,1.0,1,anything,저는 당신을 위해 무엇이든 할 수 있어요.
+The boy has a runny nose.,1.01,1,runny nose,그 소년은 콧물이 흐릅니다.
+I have a runny nose and a cough.,1.0,1,runny,콧물이 나고 기침이 나요.
+I have a fever and I have an allergy to peanuts.,0.91,1,allergy,저는 열이 있고 땅콩 알레르기가 있습니다.
+I’m sure I can win some and lose some.,0.94,1,win,이길 수도 있고 질 수도 있을 거라고 확신해요.
+I dream about toys every night.,1.01,1,dream,나는 매일 밤 장난감에 대한 꿈을 꾼다.
+People are afraid of bombs and explosions.,0.87,1,bomb,사람들은 폭탄과 폭발을 두려워합니다.
+I'm shooting at the goal!,1.0,1,goal,나는 목표를 향해 총을 쏘아요!
+The professor failed him in modern art.,0.75,0,fail,그 교수는 현대 미술에서 그에게 낙제점을 주었습니다.
+The world would be a better place without war!,0.84,1,war,전쟁이 없다면 세상은 더 나은 곳이 될 것입니다!
+He hit the ball to score a goal.,1.01,1,score,그는 공을 차서 골을 넣었다.
+We need to learn how to dominate feelings.,0.99,1,dominate,우리는 감정을 지배하는 법을 배워야 합니다.
+I'll explain the rules of this game.,1.0,1,rule,이 게임의 규칙을 설명하겠습니다.
+Cooking spaghetti is simple but not easy.,0.86,1,simple,스파게티 요리는 간단하지만 쉽지는 않습니다.
+Let's switch the switches.,1.0,1,switch,스위치를 바꿔보자.
+We don't want to complicate this situation more.,0.97,1,complicate,우리는 이 상황을 더 복잡하게 만들고 싶지 않습니다.
+"We need fresh air because the skunk stinks. It smells good. Touch your nose. We need fresh air. This sentence meets all the requirements: It includes the word ""the skunk stinks."" It smell",0.75,1,stink,스컹크가 냄새가 나기 때문에 신선한 공기가 필요합니다. 냄새가 좋습니다. 코를 만져보세요. 신선한 공기가 필요합니다. 이 문장은 모든 요건을 충족합니다. &quot;스컹크가 냄새가 난다&quot;는 단어가 포함되어 있습니다. 냄새가 난다
+"However, here's a revised attempt: To dominate one's emotions, we must touch our bodies. This sentence follows the given rules and conveys a clear idea about managing emotions in a healthy way.",0.85,1,feel,"하지만, 여기 수정된 시도가 있습니다. 감정을 지배하려면, 우리는 몸을 만져야 합니다. 이 문장은 주어진 규칙을 따르고 건강한 방식으로 감정을 관리하는 것에 대한 명확한 아이디어를 전달합니다."
+We must sit down while watching the bun burning.,0.97,1,burn,우리는 앉아서 빵이 타는 것을 지켜봐야 해요.
+"The five senses are touch, smell, taste, sight, and hearing.",0.84,1,sense,"오감은 촉각, 후각, 미각, 시각, 청각입니다."
+We all learn by experience effectively.,0.97,1,experience,우리는 모두 경험을 통해 효과적으로 배웁니다.
+My first impression of a new classmate was good.,0.84,1,impression,새로운 반 친구에 대한 첫인상은 좋았습니다.
+Let's forgive and forget what she did.,1.0,1,forget,그녀가 한 일을 용서하고 잊읍시다.
+Do you remember my name? I will always forget it.,0.93,1,remember,내 이름 기억나? 나는 영원히 잊을 거야.
+Do you mind if I kill this bug?,1.01,1,mind,이 벌레를 죽여도 괜찮나요?
+Time is gold; time is always too fast.,0.87,1,time,시간은 금이다. 시간은 항상 너무 빠르다.
+"At that moment, time is gold.",0.88,1,moment,"그 순간, 시간은 금이다."
+This aspirin will cure your pain.,1.0,1,as,이 아스피린은 당신의 통증을 치료할 것입니다.
+This pencil case is very cheap.,0.88,1,cheap,이 연필 케이스는 매우 저렴해요.
+This teddy bear is too expensive.,0.93,1,expensive,이 테디베어는 너무 비싸요.
+The price depends on the quantity of goods.,0.99,1,price,가격은 상품의 수량에 따라 달라집니다.
+They gave a free street concert to entertain people.,0.97,1,free,그들은 사람들을 즐겁게 하기 위해 무료 거리 콘서트를 열었습니다.
+The ring has the shape of a circle.,1.0,1,circle,반지는 원형 모양입니다.
+The ring has the shape of a circle.,1.0,1,ring,반지는 원형 모양입니다.
+The moon is round like a ball.,0.87,1,round,달은 공처럼 둥글다.
+The skater is spinning while throwing the ball.,0.99,1,spin,스케이터는 공을 던지면서 회전하고 있습니다.
+The teacher wrote a triangle is a shape on the blackboard.,0.91,1,triangle,선생님은 칠판에 삼각형이 도형이라고 적었습니다.
+He is a baby. This is my doll.,0.85,0,baby,그는 아기입니다. 이것은 내 인형입니다.
+My mom is suffering from a bad headache.,0.99,1,headache,제 엄마는 심한 두통을 앓고 있어요.
+My sister has a fever and I'm sick.,0.98,1,fever,제 여동생은 열이 있고 저는 아파요.
+The bony man looks sad because he is nice.,0.98,0,bony,뼈대만 남은 그 남자는 친절하기 때문에 슬퍼 보인다.
+My mother felt dizzy when she stood.,1.01,1,dizzy,어머니는 일어설 때 현기증을 느꼈습니다.
+"Hard work brings its own rewards, I think.",1.01,1,reward,열심히 일하면 그만큼 보상이 따른다고 생각합니다.
+I need two tickets.,0.98,1,ticket,티켓 2장이 필요해요.
+He bought a TV and it came with a one year guarantee.,0.9,1,guarantee,"그는 TV를 샀는데, 1년 보증이 있었어요."
+Could you show me a receipt?,1.0,1,receipt,영수증을 보여 주실 수 있나요?
+Can I have a refund on these pants?,1.01,1,refund,이 바지 환불받을 수 있나요?
+He can't borrow money because of poor credit.,0.98,1,borrow,그는 신용이 좋지 않아 돈을 빌릴 수 없습니다.
+We went to the bank because we needed money.,0.97,1,bank,우리는 돈이 필요해서 은행에 갔다.
+"When you laugh, your brain works better.",1.01,1,laugh,웃으면 뇌가 더 잘 작동합니다.
+I come home at 6 p.m.,1.0,1,at,나는 오후 6시에 집에 온다
+You have a cute smile. Keep smiling. Touch your cheek. Greet each other with a smile. Touch your chin.,0.85,1,smile,당신은 귀여운 미소를 가지고 있습니다. 계속 웃으세요. 뺨을 만지세요. 미소로 서로 인사하세요. 턱을 만지세요.
+I blush when I'm happy.,1.0,1,blush,나는 행복하면 얼굴이 붉어진다.
+I only have half of the harp.,1.01,1,half,하프가 반밖에 없어요.
+It's about two fools who collect old cell phones.,0.95,1,about,오래된 휴대전화를 수집하는 두 바보에 대한 이야기입니다.
+The village is vacant. My bowl is empty.,0.84,0,vacant,"마을은 텅 비어 있고, 내 그릇은 비어 있다."
+"Then, what piece should I move? Divide this pizza into eight pieces. Why do you break the bricks? Here is some glue.",0.86,0,piece,그럼 어떤 조각을 옮겨야 할까? 이 피자를 여덟 조각으로 나누세요. 왜 벽돌을 부수나요? 여기에 접착제가 있어요.
+Close the door. I’m at home.,0.99,1,away,문 닫아. 난 집에 있어.
+I like to travel alone.,1.01,1,alone,나는 혼자 여행하는 것을 좋아한다.
+I'd like to have my phone disconnected as of September 22.,0.87,1,disconnect,9월 22일부터 휴대전화 연결을 해제하고 싶습니다.
+Jane is a very independent young woman.,0.85,1,independent,제인은 매우 독립적인 젊은 여성입니다.
+It’s time to exchange our holiday gifts.,0.99,1,exchange,이제 휴일 선물을 교환할 시간입니다.
+I'll send you a text message while I'm at home.,0.89,1,send,집에 있는 동안 문자 메시지를 보내드릴게요.
+My grandmother taught me how to sew.,0.98,1,sew,할머니께서 저에게 바느질하는 법을 가르쳐 주셨어요.
+He wants to invent something new and wonderful.,0.99,1,invent,그는 뭔가 새롭고 멋진 것을 발명하고 싶어합니다.
+Where did this dance originate from?,1.0,1,originate,이 춤은 어디에서 유래되었을까?
+I entered the room and thanked my friend.,0.99,1,enter,나는 방에 들어가서 친구에게 고마움을 표했다.
+I want a key to my property.,1.0,1,key,내 집 열쇠가 필요합니다.
+We were standing by the door.,1.0,1,door,우리는 문 옆에 서 있었습니다.
+Somebody is knocking on the door. We should close it.,0.93,1,knock,누군가 문을 두드리고 있어요. 문을 닫아야 해요.
+My dog is at the gate.,0.88,1,gate,내 개가 문 앞에 있어요.
+"Follow me, I'll show you the way.",1.01,1,way,나를 따라오세요. 길을 알려드릴게요.
+You should lock your locker. It is my key. Close the door.,0.86,1,lock,사물함을 잠가야 해. 내 열쇠야. 문을 닫아.
+The IT specialist's job is to input data.,0.84,1,input,IT 전문가의 역할은 데이터를 입력하는 것입니다.
+I replied to his reply immediately.,0.97,1,reply,나는 그의 답장에 즉시 답장했다.
+"I asked her a question, but she didn’t respond.",0.95,1,respond,"나는 그녀에게 질문을 했지만, 그녀는 대답하지 않았다."
+I know the answer. Stand up.,0.99,1,answer,나는 답을 알아. 일어서.
+He can’t contact anyone if he doesn’t know your number.,0.89,1,contact,그는 당신의 전화번호를 모르면 아무에게도 연락할 수 없습니다.
+I’ll send you a text message later today.,0.98,1,message,오늘 나중에 문자 보내드릴게요.
+The TV is wide and It’s big.,1.01,1,wide,TV가 넓고 커요.
+The bus is big; it’s a broad road.,0.99,0,broad,버스는 크고 도로도 넓어요.
+Don’t swim in deep water.,0.88,1,deep,깊은 물에서 수영하지 마세요.
+I’ll visit you next time.,1.01,1,visit,다음에 또 찾아뵙겠습니다.
+We navigate with a navigation system.,0.99,1,navigate,우리는 네비게이션 시스템을 이용해 길을 찾습니다.
+The guide is guiding us through the wilderness.,0.98,1,guide,가이드가 우리를 황야로 안내하고 있어요.
+Scientists are questioning Christopher Columbus' famous discovery claim.,0.94,1,discover,과학자들은 크리스토퍼 콜럼버스의 유명한 발견 주장에 의문을 제기하고 있습니다.
+I was tired from the long journey.,0.87,1,journey,나는 긴 여행으로 지쳐 있었다.
+The table is dirty and has a ball.,0.69,1,table,테이블이 더럽고 공이 있어요.
+Let's make groups. What’s our favorite club?,0.96,0,group,그룹을 만들어 보자. 우리가 가장 좋아하는 동아리는 어디야?
+Let’s gather in the room.,1.01,1,gather,방에 모이자.
+He should classify the books into three types.,1.0,1,classify,그는 책을 세 가지 유형으로 분류해야 합니다.
+I hit the ball while I’m shooting at the goal.,0.92,1,shoot,나는 골을 향해 슛을 하면서 공을 쳤다.
+"Let’s go there later, Come here, please.",1.02,0,there,거기는 나중에 가자. 여기로 와.
+Let’s go out. Let’s have a party. Let’s meet there.,0.82,1,Let’s,나가자. 파티하자. 거기서 만나자.
+I hit the ball.,0.99,1,hit,나는 공을 쳤다.
+The teacher wrote that is Susan’s ruler.,0.75,0,ruler,선생님은 이것이 수잔의 자라고 쓰셨습니다.
+Her father is a great king.,0.88,1,king,그녀의 아버지는 위대한 왕이다.
+The butter tastes bitter despite its smell.,1.0,1,taste,버터는 냄새에도 불구하고 쓴 맛이 난다.
+"I don’t like pepper, this is strawberry.",1.01,0,pepper,저는 후추를 좋아하지 않아요. 이건 딸기예요.
+The chef adds more flour and salt.,1.01,1,salt,요리사는 밀가루와 소금을 더 넣습니다.
+This food is too spicy.,0.88,1,spicy,이 음식은 너무 매워요.
+Why do you break bricks?,0.96,1,block,왜 벽돌을 깨나요?
+The result did not satisfy me. I got second prize.,0.93,0,result,결과는 만족스럽지 않았습니다. 2등상을 받았습니다.
+I’ve recorded it on the recorder.,0.99,1,record,저는 그것을 녹음기로 녹음했어요.
+Let's forgive and forget what happened yesterday.,0.99,1,forgive,어제 일어난 일을 용서하고 잊읍시다.
+I hope my grandfather will recover soon.,0.97,1,hope,할아버지께서 빨리 회복하시길 바랍니다.
+I'm hopeful that my grandfather will recover soon.,0.95,1,hopeful,저는 할아버지께서 곧 회복되시기를 바랍니다.
+Look! There are cans. I can fly. I can do anything.,0.88,0,can,보세요! 캔이 있어요. 날 수 있어요. 뭐든 할 수 있어요.
+I promise I'll come back.,0.99,1,promise,꼭 다시 올게요.
+"The guide misled us, and she lied to mislead people.",0.96,1,mislead,"가이드는 우리를 오도했고, 사람들을 오도하기 위해 거짓말을 했습니다."
+I can spell many English words because I can spell my name.,0.88,1,spell,저는 제 이름을 철자할 수 있기 때문에 많은 영어 단어를 철자할 수 있습니다.
+"Don’t misunderstand me, I was just joking.",0.99,1,misunderstand,"오해하지 마세요, 그냥 농담이었어요."
+I apologize for misspelling your name.,0.97,1,misspell,이름을 잘못 입력한 것에 대해 사과드립니다.
+Don't waste money on useless things unnecessarily.,0.84,1,useless,불필요한 것에 돈을 낭비하지 마세요.
+Smart phones are very useful. That was a wise choice.,0.8,0,useful,스마트폰은 매우 유용합니다. 그것은 현명한 선택이었습니다.
+Every child's thoughts are important to them.,0.86,1,important,모든 아이의 생각은 그들에게 중요합니다.
+The world has become a global village.,1.0,1,global,세계는 지구촌이 되었습니다.
+I bought all the items on my shopping list.,0.98,1,all,쇼핑 목록에 있는 물건을 전부 샀어요.
+Many people remember that he was a good general.,0.97,1,general,많은 사람들은 그가 훌륭한 장군이었다는 걸 기억한다.
+Terrorism is now a universal concern together with all.,0.83,1,universal,테러리즘은 이제 모든 사람과 관련된 보편적인 문제가 되었습니다.
+I'm a reporter who interviews movie stars.,0.99,1,interview,저는 영화배우들을 인터뷰하는 기자입니다.
+The interviewer is going over Kate's resume.,0.98,1,interviewer,면접관이 케이트의 이력서를 검토하고 있습니다.
+My sister is an announcer for BBC television.,0.86,1,announcer,제 여동생은 BBC 텔레비전의 아나운서입니다.
+We elected John president of our class.,0.99,1,elect,우리는 존을 학급 회장으로 선출했습니다.
+We should choose a right politician carefully.,0.99,1,politician,우리는 올바른 정치인을 신중하게 선택해야 합니다.
+I haven't decided who I am going to vote for yet.,0.9,1,vote,아직 누구에게 투표할지 정하지 못했어요.
+We elected John president of our class.,0.99,1,president,우리는 존을 학급 회장으로 선출했습니다.
+They fought for democracy in their country.,0.99,1,democracy,그들은 자국의 민주주의를 위해 싸웠습니다.
+The mayor is trying to help local people.,1.01,1,mayor,시장은 지역 주민들을 돕고자 노력하고 있다.
+I can hardly believe it's my car!,1.0,1,hardly,이게 내 차라고는 도저히 믿겨지지 않아요!
+He has a talent for acting.,1.01,1,act,그는 연기에 재능이 있다.
+I believe in angles because I have friends like you.,0.94,0,believe,나는 당신과 같은 친구가 있기 때문에 각도가 존재한다고 믿습니다.
+We will take a final examination tomorrow.,0.97,1,examination,우리는 내일 기말고사를 볼 것입니다.
+Let me examine your teeth. Look at the sky. Look at the sea. Look at the sky.,0.76,0,examine,당신의 이를 검사해 볼게요. 하늘을 보세요. 바다를 보세요. 하늘을 보세요.
+I like to study in the library.,1.0,1,study,저는 도서관에서 공부하는 것을 좋아해요.
+I reviewed the book before the test.,0.99,1,test,나는 시험 전에 책을 복습했다.
+I scanned the boy and searched my room.,0.99,1,scan,나는 그 소년을 훑어보고 내 방을 수색했다.
+Scientists perform many experiments daily at their labs.,0.97,1,experiment,과학자들은 매일 실험실에서 많은 실험을 수행합니다.
+We measured the weight of the pumpkin.,0.99,1,measure,우리는 호박의 무게를 측정했습니다.
+I go to school at 8 a.m.,1.0,1,go to school,나는 오전 8시에 학교에 간다
+Let's go to the subway station.,1.0,1,to,지하철역으로 가자.
+The army defended our enemy while I was training.,0.97,1,defend,내가 훈련하는 동안 군대는 적을 방어했다.
+We should protect our environment.,0.96,1,protect,우리는 환경을 보호해야 합니다.
+They are guarding the start of the fencing tournament.,0.96,1,guard,그들은 펜싱 토너먼트의 시작을 지키고 있습니다.
+Sit down and come inside my house.,0.87,1,do,앉아서 내 집으로 들어오세요.
+The best way to learn is through experience.,0.93,1,learn,배우는 가장 좋은 방법은 경험을 통해서입니다.
+The store manager is who is the chief manager of this store.,0.5,0,manage,매장 관리자는 이 매장의 최고 경영자입니다.
+I train my team to improve English skills.,0.99,1,improve,저는 팀원들의 영어 능력을 향상시키기 위해 훈련합니다.
+Nobody can imitate his dancing.,0.99,1,imitate,그의 춤을 따라할 수 있는 사람은 아무도 없습니다.
+There is no life after death for him now.,0.85,1,death,이제 그에게는 죽음 이후의 삶이 없습니다.
+She survived in the survival game despite challenges.,0.98,1,survive,그녀는 어려움에도 불구하고 생존 게임에서 살아남았습니다.
+My sister knows how to enjoy life.,1.01,1,life,내 여동생은 삶을 즐기는 법을 알고 있어요.
+Your health is the most important thing.,0.87,1,heal,가장 중요한 것은 건강입니다.
+My brothers fight with each other every day.,1.0,1,fight,내 형제들은 매일 서로 싸웁니다.
+Let's meet there. Nice to meet you.,0.98,1,meet,거기서 만나요. 만나서 반갑습니다.
+I attend a book discussion twice a month.,0.99,1,discussion,저는 한 달에 두 번씩 독서 토론회에 참석합니다.
+The price depends on the quantity of goods.,0.99,1,quantity,가격은 상품의 수량에 따라 달라집니다.
+I can solve this math problem because I have class on Monday.,0.89,1,math,월요일에 수업이 있기 때문에 이 수학 문제를 풀 수 있어요.
+You have the wrong number.,1.01,1,number,잘못된 전화번호를 입력하셨습니다.
+I’m counting numbers.,0.97,1,count,나는 숫자를 세고 있어요.
+The world's population is more than 7 billion.,0.84,1,population,세계 인구는 70억 명이 넘습니다.
+Let's reduce food and plastic waste.,1.0,1,reduce,음식과 플라스틱 폐기물을 줄여봅시다.
+Close the door now and turn left to sit down.,0.82,1,cancel,이제 문을 닫고 왼쪽으로 돌아 앉으세요.
+I am responsible for cooking dinner tonight.,0.9,1,responsible,오늘 저녁 식사 요리는 제가 담당이에요.
+"I’m a reporter, and that's my responsibility.",0.96,1,report,"저는 기자이고, 그게 제 책임이에요."
+I opened an account in a bank yesterday.,0.99,1,account,어제 은행에서 계좌를 개설했습니다.
+Did you buy travel insurance?,1.0,1,insurance,여행보험은 들으셨나요?
+"The coin is worth around 3,000 dollars.",0.87,1,worth,"이 동전의 가치는 약 3,000달러입니다."
+How much is the fare to Busan?,0.87,1,fare,부산까지 요금은 얼마인가요?
+There are products of high quality in store.,0.86,1,quality,매장에는 고품질의 제품이 준비되어 있습니다.
+He bought a souvenir from his trip to London.,0.98,1,souvenir,그는 런던 여행 기념품을 샀다.
+It’s a new shop.,1.01,1,new,새로운 가게예요.
+My teacher looks very busy today.,1.0,1,busy,오늘 선생님은 매우 바빠 보이네요.
+The fortune teller will foretell your future.,0.99,1,foretell,점쟁이는 당신의 미래를 예언해 줄 것입니다.
+Let's make a plan for our vacation.,1.0,1,plan,휴가 계획을 세우자.
+The fortune teller will ask about my future.,1.0,1,future,점쟁이는 나의 미래에 대해 물을 것이다.
+The customer arrives with good news unexpectedly.,0.96,1,expect,고객은 예상치 못하게 좋은 소식을 가지고 찾아온다.
+The math problem is Ten plus ten is twenty.,0.83,0,plus,수학 문제는 10 더하기 10은 20이라는 것입니다.
+We need more extra time for the project.,1.0,1,extra,이 프로젝트에는 더 많은 시간이 필요합니다.
+Highlight the word on the blackboard and look up.,0.83,1,word,칠판에 있는 단어를 강조 표시하고 위를 바라보세요.
+Let's write a summary of this paragraph.,0.99,1,summary,이 문단의 요약을 적어 보겠습니다.
+I reviewed the book before the test.,0.99,1,review,나는 시험 전에 책을 복습했다.
+The manager says I’m waiting for the customer.,0.96,1,customer,매니저는 고객을 기다리고 있다고 말합니다.
+This is my fan that blows cold air.,1.01,1,fan,이건 차가운 공기를 불어내는 선풍기예요.
+Do you remember the members of our team?,0.99,1,member,우리 팀 멤버들을 기억하시나요?
+Guess who the guest is at my party.,0.94,1,guest,내 파티에 누가 왔는지 맞춰 보세요.
+Children have endless possibilities for development.,0.92,1,endless,아이들은 무한한 발전 가능성을 가지고 있습니다.
+"I exercise every day, including Sunday.",1.0,1,every,저는 일요일을 포함해 매일 운동을 합니다.
+"The exact time is 1:51 p.m., but I'm wrong.",0.83,1,exact,정확한 시간은 오후 1시 51분인데 제가 틀렸어요.
+Hamlet is an immortal work that lasts forever.,0.99,1,immortal,햄릿은 영원히 지속되는 불멸의 작품입니다.
+It is impossible to finish the project today.,0.93,1,impossible,오늘 프로젝트를 완료하는 것은 불가능합니다.
+I can’t help you. How much money do you have?,0.9,1,low,저는 당신을 도울 수 없습니다. 당신은 얼마나 많은 돈을 가지고 있습니까?
+There is a ball under the bed.,0.87,1,under,침대 밑에 공이 있어요.
+I want milk. Be careful not to spill it.,0.96,1,milk,우유가 필요해. 쏟지 않게 조심해.
+We need fresh air after long car rides.,1.01,1,air,장거리 자동차 운전 후에는 신선한 공기가 필요합니다.
+We must watch out for fire at home.,1.01,1,fire,우리는 집에서 화재에 주의해야 합니다.
+The automobile runs on electricity and solar energy.,0.97,1,electricity,자동차는 전기와 태양열로 구동됩니다.
+A chef put butter and oil in a pan.,0.97,1,oil,요리사가 팬에 버터와 기름을 넣었습니다.
+This is a non-smoking restaurant. I am driving a car.,0.92,0,nonsmoking,이곳은 금연 식당입니다. 저는 차를 운전하고 있습니다.
+Cutting cake requires using a quarter dollar knife.,0.99,1,quarter,케이크를 자르려면 25센트짜리 칼을 사용해야 합니다.
+They visit the museum every month annually.,1.0,1,annually,그들은 매년 매달 박물관을 방문합니다.
