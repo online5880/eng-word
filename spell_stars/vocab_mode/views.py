@@ -1,11 +1,7 @@
-from datetime import datetime
 import os
 import random
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
 
 from utils.PronunciationChecker.manage import process_audio_files
 from .models import Word
@@ -15,14 +11,14 @@ from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 import os
 
-from rest_framework.generics import ListAPIView, RetrieveAPIView
-from rest_framework.response import Response
-from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
+from rest_framework.generics import ListAPIView
+from rest_framework.pagination import PageNumberPagination
 from .serializers import WordSerializer
-from rest_framework import filters
-from rest_framework.request import Request
-from rest_framework.test import APIRequestFactory
-from accounts.views import StudentLearningLogViewSet, start_learning_session
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.filters import SearchFilter
+from rest_framework.permissions import IsAuthenticated
+from accounts.views import start_learning_session
 
 def display_vocabulary_book_random_category(request):
     # 모든 카테고리 가져오기 (중복 제거)
@@ -167,15 +163,68 @@ def sentence_mode(request):
     start_learning_session(request, learning_mode=1)
     return render(request, "sent_mode", context)
 
-### API
-# 단어 목록 GET API
-class WordPagination(PageNumberPagination):
-    page_size = 100
+### API Views ###
 
+class WordPagination(PageNumberPagination):
+    """단어 목록 페이지네이션 설정"""
+    page_size = 100  # 페이지당 단어 수
 
 class WordListAPIView(ListAPIView):
+    """
+    단어 목록을 제공하는 API
+    
+    Endpoint: GET /api/words/
+    Features:
+    - 페이지네이션 (100개씩)
+    - 검색 기능 (단어, 의미)
+    - 카테고리 필터링 (?category=카테고리명)
+    """
+    permission_classes = [IsAuthenticated]
     queryset = Word.objects.all().order_by("category", "word")
     serializer_class = WordSerializer
     pagination_class = WordPagination
-    filter_backends = [filters.SearchFilter]
-    search_fields = ["word", "meanings"]  # 정확히 일치하는 단어로 검색
+    filter_backends = [SearchFilter]
+    search_fields = ["word", "meanings"]
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        category = self.request.query_params.get('category')
+        return queryset.filter(category=category) if category else queryset
+
+class CategoryListAPIView(APIView):
+    """
+    전체 카테고리 목록을 제공하는 API (알파벳 순 정렬)
+    
+    Endpoint: GET /api/categories/
+    Returns: 정렬된 카테고리 이름 목록
+    """
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request):
+        categories = Word.objects.values_list('category', flat=True)\
+                       .distinct()\
+                       .order_by('category')  # 카테고리명 기준 오름차순 정렬
+        return Response(list(categories))
+
+class WordsByCategoryAPIView(APIView):
+    """
+    특정 카테고리의 단어 목록을 제공하는 API
+    
+    Endpoint: GET /api/categories/<category_id>/words/
+    Returns: 해당 카테고리의 모든 단어 정보
+    """
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request, category_id):
+        words = Word.objects.filter(category=category_id).order_by("word")
+        if not words.exists():
+            return Response(
+                {"error": "해당 카테고리를 찾을 수 없습니다"}, 
+                status=404
+            )
+        serializer = WordSerializer(words, many=True)
+        return Response(serializer.data)
+    
+    
+    
+    

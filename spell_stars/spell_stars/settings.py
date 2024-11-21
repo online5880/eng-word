@@ -215,8 +215,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # 실제 파일이 저장될 경�
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.AllowAny",
+        "rest_framework.permissions.IsAuthenticated",
     ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+    ],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 100,
+    "DEFAULT_FILTER_BACKENDS": [],
 }
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # 브라우저 닫으면 세션 종료

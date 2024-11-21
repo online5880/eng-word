@@ -45,122 +45,96 @@ def profileView(request):
 
 
 
-# API
-# 학생 기본 정보 ViewSet (GET 전용)
+# API Views
 class StudentInfoViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    학생 기본 정보를 조회하는 API
+    - GET /api/students/ : 전체 학생 목록 조회
+    - GET /api/students/{id}/ : 특정 학생 정보 조회
+    """
     queryset = StudentInfo.objects.all()
     serializer_class = StudentInfoSerializer
-    permission_classes = [IsAuthenticated]  # 인증된 사용자만 접근 가능
+    permission_classes = [IsAuthenticated]
 
-# 학생 로그 ViewSet (GET, POST 전용)
-class StudentLogViewSet(mixins.CreateModelMixin,
-                        mixins.ListModelMixin,
-                        viewsets.GenericViewSet):
+class StudentLogViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    학생의 활동 로그를 조회하는 API
+    - GET /api/students/{student_pk}/logs/ : 특정 학생의 전체 로그 조회
+    """
     serializer_class = StudentLogSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        # student_pk로 학생 로그 필터링
-        student_id = self.kwargs['student_pk']
-        return StudentLog.objects.filter(student_id=student_id)
-
-    def perform_create(self, serializer):
-        # student_pk로 연결된 학생 가져오기
-        student_id = self.kwargs['student_pk']
-        student = StudentInfo.objects.get(id=student_id)
-        serializer.save(student=student)
+        return StudentLog.objects.filter(student_id=self.kwargs['student_pk'])
 
 class StudentLearningLogViewSet(mixins.CreateModelMixin,
-                                 mixins.ListModelMixin,
-                                 mixins.UpdateModelMixin,
-                                 viewsets.GenericViewSet):
+                               mixins.ListModelMixin,
+                               mixins.UpdateModelMixin,
+                               viewsets.GenericViewSet):
     """
-    학생 학습 로그 ViewSet
-    학습 시작(Create), 학습 종료(Update)을 처리
+    학생의 학습 로그를 관리하는 API
+    - GET /api/students/{student_pk}/learning-logs/ : 학습 로그 목록 조회
+    - POST /api/students/{student_pk}/learning-logs/ : 새로운 학습 로그 생성
+    - PATCH /api/students/{student_pk}/learning-logs/{id}/end_log/ : 학습 종료 시간 기록
     """
     serializer_class = StudentLearningLogSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        """
-        학생의 학습 로그만 필터링
-        """
-        student_id = self.kwargs['student_pk']
+        if getattr(self, 'swagger_fake_view', False):
+            return StudentLearningLog.objects.none()
+        student_id = self.kwargs.get('student_pk')
+        if not student_id:
+            raise ValueError("student_pk는 필수 파라미터입니다")
         return StudentLearningLog.objects.filter(student_id=student_id)
 
     def perform_create(self, serializer):
-        """
-        학습 로그 생성 시 student_id를 연결
-        """
-        student_id = self.kwargs['student_pk']
-        student = StudentInfo.objects.get(id=student_id)
+        student = StudentInfo.objects.get(id=self.kwargs.get('student_pk'))
         serializer.save(student=student)
 
     @action(detail=True, methods=['patch'])
     def end_log(self, request, student_pk=None, pk=None):
-        """학습 로그 종료 처리"""
+        """학습 종료 시간을 기록하는 메서드"""
         try:
             log = self.get_object()
-            log.end_time = request.data.get('end_time')
-            log.save()
-            serializer = self.get_serializer(log)
+            serializer = self.get_serializer(log, data=request.data, partial=True)
+            serializer.is_valid(raise_exception=True)
+            serializer.save(end_time=request.data.get('end_time', timezone.now()))
             return Response(serializer.data)
         except Exception as e:
-            return Response(
-                {"error": str(e)},
-                status=400
-            )
+            return Response({"error": str(e)}, status=400)
 
-
+# 학습 세션 관리를 위한 함수형 뷰
 def start_learning_session(request, learning_mode):
-    """학습 세션 시작"""
-    factory = APIRequestFactory()
+    """
+    학습 세션을 시작하고 세션 ID를 저장하는 뷰
+    """
     current_time = timezone.now()
-    api_request = factory.post(
-        f"/api/students/{request.user.id}/learning-logs/",
-        {
-            "student": request.user.id,
-            "learning_mode": learning_mode,
-            "start_time": current_time.isoformat(),
-            "end_time": current_time.isoformat(),
-        },
-    )
-    api_request.user = request.user
-    view = StudentLearningLogViewSet.as_view({"post": "create"})
-    
-    response = view(api_request, student_pk=request.user.id)
-    
-    if response.status_code == 201:
-        log_id = response.data.get("id")
-        request.session["learning_log_id"] = log_id
-        print(f"학습 로그 생성 성공 (ID: {log_id})")
-        return JsonResponse({"status": "success", "log_id": log_id})
-    print(f"학습 로그 생성 실패: {response.status_code}, {response.data}")
-    return JsonResponse({"status": "error"}, status=400)
+    data = {
+        "student": request.user.id,
+        "learning_mode": learning_mode,
+        "start_time": current_time,
+    }
+    serializer = StudentLearningLogSerializer(data=data)
+    if serializer.is_valid():
+        log = serializer.save()
+        request.session["learning_log_id"] = log.id
+        return JsonResponse({"status": "success", "log_id": log.id})
+    return JsonResponse({"status": "error", "errors": serializer.errors}, status=400)
 
 def end_learning_session(request):
-    """학습 세션 종료"""
+    """
+    진행 중인 학습 세션을 종료하는 뷰
+    """
     log_id = request.session.get("learning_log_id")
     if not log_id:
-        return JsonResponse({"status": "error", "message": "No active learning session"}, status=400)
-    
-    factory = APIRequestFactory()
-    api_request = factory.patch(
-        f"/students/{request.user.id}/learning-logs/{log_id}/end_log/",
-        {
-            "end_time": timezone.now().isoformat(),
-        },
-    )
-    api_request.user = request.user
-    view = StudentLearningLogViewSet.as_view({"patch": "end_log"})
-    
+        return JsonResponse({"status": "error", "message": "진행 중인 학습 세션이 없습니다"}, status=400)
+
     try:
-        response = view(api_request, student_pk=request.user.id, pk=log_id)
-        if response.status_code == 200:
-            del request.session["learning_log_id"]
-            print(f"학습 로그 종료 성공 (ID: {log_id})")
-            return JsonResponse({"status": "success"})
-    except Exception as e:
-        print(f"학습 로그 종료 실패: {str(e)}")
-    
-    return JsonResponse({"status": "error"}, status=400)
+        log = StudentLearningLog.objects.get(id=log_id, student=request.user)
+        log.end_time = timezone.now()
+        log.save()
+        del request.session["learning_log_id"]
+        return JsonResponse({"status": "success"})
+    except StudentLearningLog.DoesNotExist:
+        return JsonResponse({"status": "error", "message": "유효하지 않은 학습 로그입니다"}, status=400)
