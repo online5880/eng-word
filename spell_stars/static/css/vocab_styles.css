@@ -433,3 +433,30 @@
     width: 100%; /* 부모 컨테이너에 맞게 확장 */
     height: auto; /* 비율 유지 */
 }
+
+.evaluation-description {
+    margin: 20px auto; /* 자동으로 가로 가운데 정렬 */
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 더 부드러운 그림자 */
+    width: 70%; /* 너비를 적절히 조정 */
+    max-width: 800px; /* 최대 너비 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+  }
+  
+  .evaluation-description h2 {
+    font-size: 22px; /* 더 큰 글자 크기 */
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 15px;
+  }
+  
+  .evaluation-description p {
+    font-size: 16px; /* 조금 더 읽기 쉬운 크기 */
+    color: #495057;
+    line-height: 1.8; /* 줄 간격을 넓혀 가독성 향상 */
+  }
+
+  

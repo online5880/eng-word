@@ -3,6 +3,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from main import views as mainViews
+from django.views.generic.base import RedirectView
 
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
@@ -22,6 +23,8 @@ schema_view = get_schema_view(
 urlpatterns = [
     # 관리자 URL
     path("admin/", admin.site.urls),
+    
+    path('favicon.ico', RedirectView.as_view(url=settings.STATIC_URL + 'images/favicon.ico')),
 
     # 메인 페이지
     path("", mainViews.index, name="index"),
