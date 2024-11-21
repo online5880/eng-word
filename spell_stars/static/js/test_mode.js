@@ -167,6 +167,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
                 // 점수 초기화
                 document.getElementById("scoreDisplay").textContent = '';
+
+                // 상태 메시지 초기화
+                statusText.textContent = '마이크를 클릭하여 시작하세요'; // 메시지 제거
     
                 // 버튼 텍스트 및 이벤트 갱신
                 const nextButton = document.getElementById('nextQuestionBtn');

@@ -205,6 +205,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById("score-bar").style.width = '0%';
                 document.getElementById("feedback").textContent = '';
                 document.getElementById("feedback-section").style.display = 'none';
+
+                // 상태 메시지 초기화
+                statusText.textContent = '마이크를 클릭하여 시작하세요'; // 메시지 제거
             } else {
                 console.log('새 단어를 가져오지 못했습니다.');
             }
