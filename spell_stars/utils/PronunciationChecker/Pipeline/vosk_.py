@@ -1,14 +1,21 @@
+import os
 import wave
 import json
 from vosk import Model, KaldiRecognizer
 from difflib import SequenceMatcher
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # 모델
-model = Model("C:/Users/user/Desktop/eng-word/spell_stars/utils/PronunciationChecker/model/vosk-model-en-us-0.22")
-
+model = Model(os.getenv("VOSK_MODEL_PATH"))
 
 def transcribe_audio_vosk(audio_path):
     wf = wave.open(audio_path, "rb")
+    if not model:
+        print("vosk model이 없습니다.")
+        return
+    
     recognizer = KaldiRecognizer(model, wf.getframerate())
 
     result_text = ""

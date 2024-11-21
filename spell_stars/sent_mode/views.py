@@ -62,7 +62,6 @@ def example_sentence_learning(request):
     print(context)
     return render(request, "sent_mode/sent_practice.html", context)
 
-
 @csrf_exempt
 def upload_audio(request):
     if request.method == "POST" and request.FILES.get("audio"):
@@ -104,7 +103,7 @@ def upload_audio(request):
                 "status": "success",
                 "message": "녹음이 완료되었습니다.",
                 "file_path": full_path,
-                "result":result
+                "result":result,
             })
 
         except Exception as e:

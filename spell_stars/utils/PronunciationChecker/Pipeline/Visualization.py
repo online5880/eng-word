@@ -148,5 +148,5 @@ def plot_f1_f2_comparison(timestamps, f1_native, f1_student, f2_native, f2_stude
     fig.update_yaxes(title_text="Frequency (Hz)", row=2, col=1)
 
     # 그래프 출력
-    fig.show()
+    # fig.show()
 

@@ -163,5 +163,3 @@ cython_debug/
 
 model/
 settings.json
-
-*.wav

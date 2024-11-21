@@ -91,20 +91,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // 녹음 시작
     async function startRecording() {
         try {
+            console.log('Starting recording...');
+    
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            console.log('Stream received:', stream);
+    
             mediaRecorder = new MediaRecorder(stream);
             audioChunks = [];
-
+    
             mediaRecorder.ondataavailable = (event) => {
                 audioChunks.push(event.data);
             };
-
+    
             mediaRecorder.onstop = async () => {
-                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
-                const formData = new FormData();
-                formData.append('audio', audioBlob, 'recording.wav');
-                formData.append('word', getCurrentWord());
+                console.log('Recording stopped. Processing audio...');
 
+                // 데이터 확인
+                console.log('audioChunks:', audioChunks);
+                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                console.log('audioBlob:', audioBlob);
+
+                const currentWord = getCurrentWord();
+                console.log('currentWord:', currentWord);
+
+                const formData = new FormData();
+                formData.append('audio', audioBlob, `${currentWord}.wav`);
+                formData.append('word', currentWord);
+
+                // FormData 확인
+                for (let pair of formData.entries()) {
+                    console.log(`${pair[0]}: ${pair[1]}`);
+                }
+            
+
+    
                 try {
                     const response = await fetch(uploadAudioUrl, {
                         method: 'POST',
@@ -113,30 +133,29 @@ document.addEventListener('DOMContentLoaded', function() {
                         },
                         body: formData
                     });
-
+                    
+    
+                    console.log('Response status:', response.status);
                     if (response.ok) {
-                        statusText.textContent = '녹음이 성공적으로 저장되었습니다.';
-                        
-                        // 응답 데이터를 JSON으로 변환
                         const data = await response.json();
-
-                        // 결과 보여주기
-                        displayResult(data.result.result)
-                        
+                        console.log('Upload success:', data);
+                        displayResult(data.result);
                     } else {
-                        throw new Error('녹음 저장 실패');
+                        const errorText = await response.text();
+                        console.error('Upload failed:', errorText);
+                        statusText.textContent = '녹음 저장 중 오류가 발생했습니다.';
                     }
                 } catch (error) {
-                    console.error('Error:', error);
+                    console.error('Fetch error:', error);
                     statusText.textContent = '녹음 저장 중 오류가 발생했습니다.';
                 }
             };
-
+    
             mediaRecorder.start();
             isRecording = true;
             micButton.classList.add('recording');
             statusText.textContent = '녹음 중...';
-
+    
             // 음성 레벨 표시
             const audioContext = new AudioContext();
             const analyser = audioContext.createAnalyser();
@@ -145,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
             analyser.fftSize = 256;
             const bufferLength = analyser.frequencyBinCount;
             const dataArray = new Uint8Array(bufferLength);
-
+    
             function updateVoiceLevel() {
                 if (isRecording) {
                     analyser.getByteFrequencyData(dataArray);
@@ -156,9 +175,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             updateVoiceLevel();
-
+    
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error in startRecording:', error);
             statusText.textContent = '마이크 접근 오류';
         }
     }
@@ -228,6 +247,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const progressBar = document.getElementById("progressFill");
         progressBar.style.width = `${score}%`;
         progressBar.style.backgroundColor = score >= 80 ? '#4CAF50' : '#f44336';
+
+
         
         updateNavigationButtons();  // 버튼 상태 업데이트
     }

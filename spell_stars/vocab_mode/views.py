@@ -3,6 +3,10 @@ import os
 import random
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
+import mpld3
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
 from utils.PronunciationChecker.manage import process_audio_files
 from .models import Word
@@ -88,6 +92,7 @@ def display_vocabulary_book(request):
         all_words = list(Word.objects.all())
         random_words = random.sample(all_words, min(len(all_words), 15))
         context = {"words": random_words, "MEDIA_URL": settings.MEDIA_URL}
+        
     
     # 학습 시작 로그 생성
     start_learning_session(request, learning_mode=0)
@@ -126,9 +131,9 @@ def upload_audio(request):
                 settings.MEDIA_ROOT, save_path, f"{current_word}.wav"
             )
             
-            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
             print(student_audio_path)
             print(native_audio_path)
+            result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
             # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
             print("결과",result)
             return JsonResponse({

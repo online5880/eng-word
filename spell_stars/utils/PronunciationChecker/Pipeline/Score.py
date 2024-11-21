@@ -1,7 +1,7 @@
 from .Parselscore import get_formants
 from .vosk_ import evaluate_pronunciation
 import numpy as np
-
+import math
 def calculate_formant_score(native_f1, native_f2, student_f1, student_f2):
     """
     시간에 따른 F1, F2 데이터를 기반으로 포먼트 점수를 계산합니다.
@@ -45,4 +45,8 @@ def calculate_overall_score(formant_score, phoneme_score):
 
     # 최종 점수 계산
     overall_score = (normalized_formant_score * formant_weight) + (normalized_phoneme_score * phoneme_weight)
+    overall_score = clamp(overall_score,0.,100.)
     return overall_score
+
+def clamp(value, min_value, max_value):
+    return max(min_value, min(value, max_value))
