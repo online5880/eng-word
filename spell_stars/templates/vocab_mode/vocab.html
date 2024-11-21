@@ -10,8 +10,6 @@
       const uploadAudioUrl = "{% url 'vocab_upload_audio' %}";
       const csrfToken = "{{ csrf_token }}";
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-  <script src="https://mpld3.github.io/js/mpld3.v0.3.js"></script>
   </head>
 
   <body>
@@ -64,16 +62,18 @@
           <div class="voice-level-fill"></div>
         </div>
         <p class="status-text">마이크를 클릭하여 시작하세요</p>
-        <div class="progress-bar">
+        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
           <div id="progressFill"></div>
-        </div>
+      </div>
       </div>
 
       <button type="button" id="sentenceModeButton">버튼</button>
 
       <div id="fig_container">
-        
+        <div id="wave_fig_container"></div>
+        <div id="formant_fig_container"></div>
       </div>
+
     </div>
 
     <script src="{% static 'js/vocab_script.js' %}"></script>
