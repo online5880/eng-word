@@ -21,7 +21,7 @@ import librosa
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 model = apps.get_app_config('spell_stars').whisper_model
-processor = apps.get_app_config('spell-stars').whisper_processor
+processor = apps.get_app_config('spell_stars').whisper_processor
 
 TOTAL_QUESTIONS = 10
 MAX_SCORE = 100
