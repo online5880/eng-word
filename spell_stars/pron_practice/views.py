@@ -15,6 +15,7 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Whisper 모델 로드 (small 모델 사용)
 model = apps.get_app_config("spell_stars").whisper_model
+processor = apps.get_app_config('spell_stars').whisper_processor
 
 
 def pronunciation_practice_view(request):
