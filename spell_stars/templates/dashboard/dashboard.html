@@ -1,47 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학습 대시보드</title>
+    <title>Dashboard Graph</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        // '나가기' 버튼 클릭 시 홈으로 리다이렉트
+        function goToHome() {
+            window.location.href = "/";
+        }
+    </script>
 </head>
 <body>
-
-<header>
-    <h1>전체 학습 상황 대시보드</h1>
-</header>
-
-<div class="dashboard-container">
-    <!-- 학습 모드별 학습 시간 -->
-    <div class="card">
-        <h3>학습 모드별 학습 시간</h3>
-        <img src="{% url 'plot_learning_mode_hours' %}" alt="학습 모드별 학습 시간">
-        <p>각 학습 모드에서의 학습 시간 비율을 확인하세요.</p>
+    <header>
+        <h1>학습 현황</h1>
+    </header>
+    <div id="graph">
+    <main class="dashboard-container">
+        {{ graphs|safe }}
+    </main>
     </div>
-
-    <!-- 시험 점수 변화 -->
-    <div class="card">
-        <h3>시험 점수 변화</h3>
-        <img src="{% url 'plot_test_scores' %}" alt="시험 점수 변화">
-        <p>학생의 시험 점수가 시간에 따라 어떻게 변화했는지 확인하세요.</p>
-    </div>
-
-    <!-- 예문 학습 결과 -->
-    <div class="card">
-        <h3>예문 학습 결과</h3>
-        <img src="{% url 'plot_learning_results' %}" alt="예문 학습 결과">
-        <p>발음, 정확도, 빈도 점수를 포함한 예문 학습 성과를 확인하세요.</p>
-    </div>
-
-    <!-- 전체 학습 시간 -->
-    <div class="card">
-        <h3>전체 학습 시간</h3>
-        <img src="{% url 'plot_total_learning_time' %}" alt="전체 학습 시간">
-        <p>학생의 전체 학습 시간을 한눈에 볼 수 있습니다.</p>
-    </div>
-</div>
+    <button id="exitBtn" onclick="goToHome()">나가기</button>
 </body>
 </html>

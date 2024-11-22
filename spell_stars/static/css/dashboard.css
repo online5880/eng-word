@@ -1,61 +1,78 @@
-body {
+/* 전체 페이지 스타일 */
+html, body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
+    margin: 0;            
+    padding: 0;           
+    height: 100%;         
+    width: 100%;          
+    display: flex;        
+    justify-content: center;  
+    align-items: center;      
+    flex-direction: column;   
+    margin-top: 30px;
 }
 
+/* header 스타일 */
 header {
     background-color: #2c3e50;
     color: white;
     padding: 20px;
     text-align: center;
+    width: 100%;  
+    box-sizing: border-box;  
+    margin: 0;             
 }
 
-.dashboard-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    padding: 20px;
-    text-align: center;
-}
-
-.card img {
+/* 그래프를 감싸는 div */
+#graph {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    flex-direction: column;   
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    max-width: 1200px;        
+    padding-top: 20px;        
+    margin: 0;                
 }
 
-.card h3 {
-    margin: 10px 0;
+/* 대시보드 그래프를 감싸는 div */
+.dashboard-container {
+    width: 100%;
+    max-width: 1000px;        
+    margin: 10px 0;           
+    padding: 0;               
 }
 
-.card p {
-    color: #555;
+/* 제목 스타일 */
+header h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.card a {
-    display: block;
-    margin-top: 15px;
-    color: #3498db;
-    text-decoration: none;
+/* 나가기 버튼 컨테이너 스타일 */
+#button-container {
+    display: flex;
+    justify-content: center;  
+    width: 100%;              
+    margin-top: 20px;         
+    margin-bottom: 20px;
+    /* 여백을 충분히 주어 버튼 아래 여백이 생기도록 */
 }
 
-.card a:hover {
-    text-decoration: underline;
+/* 나가기 버튼 스타일 */
+#exitBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #016ccf; /* Exit Practice 버튼 색상 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;  /* 버튼 아래 여백 */
 }
 
-/* 미디어 쿼리로 모바일 화면 최적화 */
-@media (max-width: 768px) {
-    .dashboard-container {
-        grid-template-columns: 1fr;  /* 1개의 열로 표시 */
-    }
+#exitBtn:hover {
+    background-color: #005bb5; /* Exit Practice 버튼 hover 색상 */
 }
