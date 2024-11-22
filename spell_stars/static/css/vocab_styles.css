@@ -1,5 +1,5 @@
 .container {
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -26,7 +26,10 @@
 }
 
 .word-content {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
 .word-content h3 {
@@ -52,10 +55,6 @@
     color: #555;
 }
 
-.controls {
-    margin: 20px 0;
-}
-
 #recordButton {
     background-color: #4CAF50;
     color: white;
@@ -71,21 +70,31 @@
     background-color: #f44336;
 }
 
+.controls {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center;   /* 가로 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    margin-top: 20px;
+}
+
 .progress-bar {
-    width: 100%;
+    width: 80%; /* 화면 너비의 80% */
+    max-width: 800px; /* 최대 너비 */
     height: 20px;
     background-color: #f0f0f0;
     border-radius: 10px;
     margin: 10px 0;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 선택적 그림자 */
 }
 
 #progressFill {
     height: 100%;
-    width: 0%;
+    width: 0%; /* 초기 값 */
     background-color: #4CAF50;
     border-radius: 10px;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease; /* 부드러운 애니메이션 */
 }
 
 .mic-status {
@@ -333,3 +342,121 @@
     font-weight: bold;
     color: #666;
 }
+
+.sentence-mode-btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.sentence-mode-btn:hover {
+    background-color: #1976D2;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.sentence-mode-btn i {
+    font-size: 20px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sentence-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.hint-section, .word-section {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.hint-button, .word-button {
+    min-width: 100px;
+}
+
+.sentence {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.sentence-meaning {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+#fig_container {
+    width: 100%;
+    margin: 20px auto; /* 가로 중앙 정렬 */
+    overflow-x: auto; /* 넘칠 경우 가로 스크롤 허용 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    display: flex; /* 자식 요소 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.plotly-graph-div js-plotly-plot {
+    display: block;
+    width: 100%; /* 부모 컨테이너에 맞게 확장 */
+    height: auto; /* 비율 유지 */
+}
+
+.evaluation-description {
+    margin: 20px auto; /* 자동으로 가로 가운데 정렬 */
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 더 부드러운 그림자 */
+    width: 70%; /* 너비를 적절히 조정 */
+    max-width: 800px; /* 최대 너비 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+  }
+  
+  .evaluation-description h2 {
+    font-size: 22px; /* 더 큰 글자 크기 */
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 15px;
+  }
+  
+  .evaluation-description p {
+    font-size: 16px; /* 조금 더 읽기 쉬운 크기 */
+    color: #495057;
+    line-height: 1.8; /* 줄 간격을 넓혀 가독성 향상 */
+  }
+
+  

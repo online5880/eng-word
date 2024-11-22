@@ -1,0 +1,393 @@
+final_sentence,grammar_score,coherence_score,word
+It’s a knife and it’s not a fork.,0.94,1,knife
+Here are scissors that cut paper.,1.0,1,scissors
+Here are scissors that cut paper and knives.,1.0,1,cut
+I have dinner and it's a fork.,1.01,1,fork
+He can pull the car.,1.01,1,pull
+Look! He can push the car.,0.99,1,push
+"I can’t help you, my finger hurts.",1.01,1,help
+I want a pink lunch box like this.,1.01,1,lunch box
+I want a pink lunch box.,1.01,1,box
+"Here is my gift, it's a blue doll.",0.85,1,gift
+It is my key.,0.86,1,key
+I have two tickets and a key.,1.0,1,ticket
+Close the door and open the window.,0.87,1,door
+Close the door and open the window.,0.87,1,window
+"I have breakfast and lunch, but it's sunny.",0.98,1,breakfast
+I have lunch and I’m eating.,0.98,1,lunch
+I have dinner and I have breakfast.,0.99,1,dinner
+"It's sunny in the morning, I have breakfast.",0.98,1,morning
+It's cool in the evening at night.,0.87,1,evening
+It’s cold at night and I get up late.,0.96,1,night
+"I’m at home, open the window.",0.99,1,home
+It’s three o’clock and I get up.,1.0,1,o’clock
+We are dancers playing instruments together.,0.95,1,dance
+We are dancers and she can dance.,1.0,1,dancer
+I can walk and stand up slowly.,1.01,1,walk
+Let's go to the train station.,1.0,1,train
+They go on a trip every weekend.,1.0,1,trip
+It's a new shop on Friday.,0.62,1,shop
+I like skiing and I also like swimming.,0.96,1,ski
+I like skiing this weekend.,1.0,1,skiing
+He can’t skate because he fell.,0.99,1,skate
+I like riding my bike.,1.01,1,bike
+I like swimming at the pool.,1.0,1,swim
+I’m at the pool and I like swimming.,0.95,1,pool
+I like swimming at the pool.,1.0,1,swimming
+I can jump and run quickly.,1.0,1,jump
+Look! I can run. Sit down now.,0.97,0,run
+I can fly because I am a pilot.,0.99,1,fly
+Let's go to the subway station.,1.0,1,go
+Let's throw a ball.,1.01,1,throw
+Let's have a party at home.,1.01,1,party
+Let's have a party and play volleyball.,1.0,1,have a party
+It's time to say Happy birthday!,0.93,1,birthday
+We go on a picnic every weekend.,1.0,1,picnic
+Let's play the piano and other instruments.,0.98,1,piano
+Let's play the violin.,1.01,1,violin
+They listen to music while singing songs.,1.0,1,music
+We watch a musical and play piano.,0.75,1,musical
+That light is dark.,0.86,1,light
+Let's play the drum.,1.01,1,drum
+Let's play the guitar.,1.01,1,guitar
+Let's play the recorder while listening music.,0.99,1,recorder
+Let's sing a song.,1.01,1,song
+This is my yellow radio that listens.,0.75,1,radio
+He is a singer and sings songs.,0.94,1,singer
+It's fast.,0.84,1,fast
+Your arm is long.,0.86,1,long
+Your belt is short and your arm is long.,0.84,1,short
+"She is smart, he is foolish, it’s fast and you’re kind.",0.65,0,smart
+He is foolish and very poor today.,0.87,1,foolish
+He is bad because he is sick.,0.85,1,bad
+They're good snacks when I'm eating.,1.01,1,good
+We’re honest friends who close the door.,1.0,1,honest
+I get up early at five ten.,1.01,1,early
+It's five ten now I get up late.,0.73,1,late
+Close the door and open the window.,0.87,1,open
+They are quiet and touching your ear.,0.93,1,quiet
+"They are noisy, I can't hear you.",1.01,1,noisy
+I’m sorry I didn’t hear what you said.,0.93,1,sorry
+Touch your ear so I can hear.,1.01,1,hear
+He can understand it and speak English.,0.99,1,understand
+Let's listen to the song through my radio.,0.98,1,listen
+We’re in the bookstore on Friday.,1.0,1,bookstore
+The bookshelf is dirty.,0.85,1,bookshelf
+We go to the bank.,1.01,1,bank
+I’m in the library on Tuesday.,0.97,1,library
+"I have a book, it's her book.",1.01,1,book
+Let's go to the post office.,1.01,1,post office
+The closet is clean.,0.86,1,closet
+The fridge is small and has snacks.,0.94,1,fridge
+The house is big.,0.86,1,house
+Close the door because The wall is dirty.,0.93,1,wall
+It’s a big apartment.,1.0,1,apartment
+I go to the hospital as a nurse.,1.0,1,hospital
+I'm going to the hospital with the ambulance.,0.96,1,ambulance
+She is a nurse at the hospital.,0.87,1,nurse
+The telephone is white; it's his bell.,0.87,0,telephone
+Ann is a doctor at the hospital.,0.87,1,doctor
+I have a black ball.,1.01,1,ball
+Let's play badminton.,0.98,1,badminton
+We like sports and let's play baseball.,1.0,1,baseball
+We are playing basketball and throwing a ball.,0.99,1,basketball
+Let's play golf.,0.99,1,golf
+We are playing badminton and ping-pong together.,0.99,1,ping-pong
+We are playing soccer.,0.98,1,soccer
+We like sports and want to play badminton.,1.0,1,sport
+We are playing tennis and badminton.,0.99,1,tennis
+Let's play volleyball.,0.98,1,volleyball
+They watch a movie on television.,1.0,1,television
+We play computer games on the board.,1.0,1,computer game
+The board is big and very long.,0.87,1,board
+Let's play volleyball with our friends.,0.99,1,play
+"I have a bird, it's a zebra.",1.01,1,bird
+I want chicken.,0.96,1,chicken
+I want a bat.,0.99,1,bat
+The pilot flies the plane gray.,1.0,0,plane
+You like curry when your foot hurts.,1.01,1,curry
+We see the bees in the sky.,1.0,1,bee
+He is a pilot and I can fly.,1.01,0,pilot
+I have four cats.,0.99,1,cat
+I have a dog and it's a wolf.,0.97,1,dog
+They have a pet and I do not.,1.01,1,pet
+I have a doll. It's a blue doll.,0.95,1,doll
+I have a robot and a dog.,1.0,1,robot
+It's a new computer and has notebooks.,0.93,1,computer
+It’s a mouse holding your pencil.,1.0,1,mouse
+I don’t like spiders.,1.0,1,spider
+That is his camera.,0.86,1,camera
+This is my fan because it’s hot.,1.0,1,fan
+Look at the fish.,0.86,1,fish
+His hobby is fishing.,0.98,1,fishing
+The boy looks at the yellow boat.,1.0,1,boat
+Look at the river.,0.86,1,river
+Look at the sea and see dolphins.,0.87,1,sea
+I see the pink dolphins in the sea.,0.99,1,dolphin
+I'm washing my hands at the sink.,1.0,1,sink
+I like lions and look at the tiger.,1.01,1,tiger
+"I like lions, it's a zebra.",0.76,0,lion
+I’m at the zoo.,0.98,1,zoo
+Look at the bear.,0.86,1,bear
+I have one cow.,0.99,1,cow
+Look at the elephant.,0.85,1,elephant
+Look I have a monkey and a kiwi.,0.75,1,monkey
+I have three pigs.,0.99,1,pig
+I like frogs and I also like lemons.,0.99,1,frog
+I like giraffes and kangaroos.,0.99,1,giraffe
+I like kangaroos.,0.96,1,kangaroo
+I see rabbits and I don’t like them.,0.97,1,rabbit
+I see a wolf that looks like It’s a kiwi.,0.92,1,wolf
+It's a zebra and I like giraffes.,1.0,1,zebra
+They see the deer in the zoo.,1.0,1,deer
+Look at the lambs.,0.86,1,lamb
+Look at the snakes.,0.86,1,snake
+I like watermelons more than lemons and peaches.,0.97,1,melon
+I like watermelons and strawberries too.,0.94,1,watermelon
+I like grapes and strawberries.,0.97,1,grapes
+"I like juice, that is a lemon.",0.76,1,lemon
+I have this strawberry and I like grapes.,0.99,1,strawberry
+I like juice.,0.98,1,juice
+The fruit is carrots.,0.85,1,carrot
+I don’t like butter and do you want onions?,0.95,1,onion
+I don’t like pepper.,1.01,1,pepper
+I want jam and I like juice.,1.0,1,jam
+This is an orange that's green and red.,0.85,1,orange
+The bike is brown.,0.86,1,brown
+I like this red color.,1.01,1,color
+The plane is gray and brown.,0.88,1,gray
+My shorts are It’s green.,0.76,0,green
+The car and shirt are white.,0.88,1,white
+"It's a yellow pen, it’s red, it’s green, it’s white.",0.86,1,yellow
+That light is dark.,0.86,1,dark
+"Look at the rainbow, it's green and red.",0.91,1,rainbow
+This light is bright.,0.86,1,bright
+It is a peach.,0.86,1,peach
+That is a pear.,0.86,1,pear
+This is an apple I want.,1.01,1,apple
+"Look, it's a flower on the ground.",0.95,1,flower
+This tree is high.,0.86,1,tree
+We are planting flowers.,0.97,1,plant
+I have one cow.,0.99,1,one
+I have two tickets and two dogs.,0.99,1,two
+I have three pigs and five fish.,1.01,1,three
+I have five fish and it's five ten now.,0.95,0,five
+You have six apples.,0.99,1,six
+I have seven pears.,0.99,1,seven
+You have eight oranges and other fruits.,1.0,1,eight
+I’m eleven years old.,0.98,1,eleven
+You are twelve years old.,0.88,1,twelve
+She is fourteen years old.,0.87,1,fourteen
+My sister is sixteen years old.,0.87,1,sixteen
+My brother is seventeen years old.,0.86,1,seventeen
+My cousin is eighteen years old.,0.87,1,eighteen
+Kevin is nineteen years old.,0.87,1,nineteen
+Becky is twenty years old.,0.88,1,twenty
+It's an old car.,0.88,1,old
+The bus is green and small.,0.88,1,bus
+Bus stop is small.,0.61,1,bus stop
+Let's go to the subway station.,1.0,1,subway station
+I go to the park.,1.01,1,park
+We’re at the playground playing badminton today.,0.99,1,playground
+The taxi is pink and going downstairs.,0.68,0,taxi
+My town is big and has new shops.,0.94,1,town
+It's a small airport where he can fly.,0.98,1,airport
+My town is big like the city.,0.62,1,city
+"It’s an old road, let’s go to subway station.",0.68,0,road
+The fire engine is red.,0.88,1,fire engine
+The fire station is big and red.,0.87,1,fire station
+I'm a police officer and Tom is a fire fighter.,0.78,1,fire fighter
+I’m a police officer.,0.97,1,police officer
+It's an old car he can push.,1.01,1,car
+The truck is blue.,0.86,1,truck
+I like bread and I want butter.,1.0,1,bread
+I want sandwiches I want lunch.,0.98,1,sandwich
+It's a dish I have for dinner.,1.01,1,dish
+I want cheese and butter is yummy.,0.76,1,cheese
+I like hamburgers and I want steak.,0.99,1,hamburger
+I want pizza.,0.98,1,pizza
+I like salad when I eat dinner.,1.0,1,salad
+They like French fries and hamburgers.,1.0,1,French fries
+I want a hot dog.,1.01,1,hot dog
+I have spaghetti for dinner tonight.,0.99,1,spaghetti
+I want steak.,0.98,1,steak
+I’m a cook making dinner.,0.98,1,cook
+Touch your arm because it's very long.,0.93,1,arm
+"My foot hurts, touch your leg.",0.77,1,foot
+Touch your leg because your toe hurts.,0.99,1,leg
+Touch your leg because My knee hurts.,1.0,1,knee
+My toe hurts because I kicked a rock.,1.0,1,toe
+Touch your neck because it hurts.,1.0,1,neck
+"Touch your hand, then arm, and leg.",0.89,1,hand
+Touch your hand because My finger hurts.,1.0,1,finger
+"Touch your ear, then touch your eye.",0.87,1,ear
+"Look at the fish, touch your eye.",0.88,0,eye
+My head hurts because my neck hurts.,0.99,1,head
+Touch your mouth after eating red apples.,0.87,1,mouth
+You touch your red lips with butter.,1.01,1,lip
+It's a spoon and I have chalk.,1.01,1,spoon
+I touch my nose and wash face.,1.01,1,nose
+I wash my face after using soap.,1.01,1,face
+I brush my teeth before touching my mouth.,0.99,1,teeth
+He is my brother and has yellow boots.,0.93,1,brother
+This is my dad.,0.86,1,dad
+My mom is wearing a red dress.,1.0,1,mom
+My sister is my mom.,0.87,1,sister
+My cousin is my brother's sister.,0.86,1,cousin
+"This is my father, he is my dad.",0.87,1,father
+That is my grandmother.,0.81,1,grandmother
+I love my parents.,0.98,1,parents
+This is my uncle.,0.86,1,uncle
+We are friends.,0.83,1,friend
+She is my mother.,0.86,1,her
+We are friends when I'm eating.,1.0,1,I
+"That light is dark, and that is my grandmother.",0.82,0,that
+Sit down on the blue chair.,0.88,1,chair
+The sofa is black.,0.86,1,sofa
+The bed is brown.,0.86,1,bed
+The desk is white and they have notebooks.,1.0,1,desk
+The lamp is pink and very bright.,0.87,1,lamp
+The table is dirty.,0.86,1,table
+Those are my shoes.,0.86,1,my
+"It's your shirt, it’s your shoes.",1.0,1,your
+This is his pen.,0.86,1,his
+It’s a new shop on the old road.,0.98,1,new
+This is his pen; it's my pen.,0.87,1,pen
+It's your pencil from the case.,0.87,1,pencil
+It’s his crayon.,0.98,1,crayon
+Here is a pencil case.,0.88,1,pencil case
+It's her eraser.,0.86,1,eraser
+They are artists at the art gallery.,0.86,1,artist
+I brush my teeth and use this is her brush.,0.7,0,brush
+I have chalk and it's my pencil.,1.01,0,chalk
+They cut the paper.,0.99,1,paper
+Let's draw with my pen.,1.01,1,draw
+Let's write and read books together.,1.0,1,write
+They are my clothes.,0.85,1,clothes
+These are his jeans.,0.86,1,jeans
+They are her pants.,0.86,1,pants
+My dad wears green shorts and her pants.,0.76,0,shorts
+This is my skirt and those are my pants.,0.84,1,skirt
+"His pajamas are small, her clothes are hers.",0.86,0,pajamas
+The zipper is long on my bag.,0.62,1,zipper
+I wash my face when I'm clean.,1.0,1,wash
+"It's my jacket, not your coat.",0.88,1,coat
+It's my jacket.,0.86,1,jacket
+It's my sweater.,0.85,1,sweater
+Your scarf is long.,0.86,1,scarf
+My sister has my green vest.,1.0,1,vest
+Your belt is short.,0.86,1,belt
+It’s my cap.,0.99,1,cap
+The ribbon is short.,0.86,1,ribbon
+It’s your shirt.,0.99,1,shirt
+I have a white T-shirt.,1.02,1,T-shirt
+My gloves are big.,0.86,1,big
+His pajamas are small.,0.85,1,small
+"These are your shoes, and my socks.",0.88,0,shoes
+"These are my socks, those are my shoes.",0.87,1,socks
+"The sneakers are brown, those are my shoes.",0.87,1,sneakers
+Your gloves are big.,0.86,1,gloves
+The stairs are old and need closing.,0.93,1,stairs
+I’m thirsty and I want water.,0.97,1,thirsty
+"It's a hard ball, my head hurts.",1.01,1,hard
+That tree is low and it's light.,0.87,1,low
+"They are rich, my town is big.",0.88,0,rich
+She is poor because they have no money.,1.0,1,poor
+He's tired. I'm tired. She is sleepy at night.,0.75,1,tired
+"She's sleepy, he's tired, I'm sleeping too.",0.96,1,sleepy
+I get up late because I'm sleepy.,0.99,1,sleep
+"I’m angry, I want coffee.",0.98,1,angry
+She is sad because I'm sorry.,0.87,1,sad
+She is scared of big spiders.,0.87,1,scared
+He is surprised I like butter.,1.0,1,surprised
+It's my bag.,0.86,1,bag
+Here is a school bag.,0.88,1,school bag
+We like sports and his hobby is fishing.,1.0,1,hobby
+The pocket is small on my jacket.,0.62,1,pocket
+They have notebooks and new computers.,0.99,1,notebook
+We want tea.,0.98,1,tea
+I want coffee.,0.98,1,coffee
+We want coffee because it’s a cup.,1.0,1,cup
+I want rice.,0.98,1,rice
+They want water because it's very rainy.,1.0,1,water
+Do you like salt after eating pepper?,1.01,1,salt
+He is drinking coffee because he is thirsty.,0.97,1,drink
+We go to a concert.,1.0,1,concert
+I’m going to the concert hall.,0.98,1,concert hall
+We go to the museum every Thursday.,1.0,1,museum
+I have an album at home.,1.01,1,album
+Let's go to the art gallery.,1.0,1,art gallery
+We watch a musical at the theater.,0.99,1,theater
+They watch a movie on television.,1.0,1,movie
+I like camping at the park.,1.0,1,camping
+Her hobby is hiking and I love camping.,1.0,1,hiking
+Looks at the beach.,0.86,1,beach
+I see a lake near my house.,1.01,1,lake
+Look! It’s a mountain near my house.,0.98,1,mountain
+I love my teachers and I’m a police officer.,0.92,1,teacher
+They are at school and in the classroom.,0.87,1,classroom
+I go to school every day.,1.01,1,school
+Let's go to the restaurant.,1.0,1,restaurant
+She is a scientist.,0.85,1,scientist
+The church is very old.,0.88,1,church
+The office is small and has notebooks.,0.93,1,office
+I don’t like potatoes but I like bananas.,0.93,1,potato
+I don’t like tomatoes.,1.0,1,tomato
+I like bananas and I also like melons.,0.99,1,banana
+It is a kiwi I have nine.,0.76,0,kiwi
+I like eggs and I have chicken.,0.99,1,egg
+Look at the moon and stars tonight.,0.87,1,moon
+The turtle is slow and I don't like it.,0.96,1,turtle
+Look at the ants.,0.86,1,ant
+I don’t like sugar; I want candy.,1.01,1,sugar
+I want candy.,0.98,1,candy
+Do you want some chocolate?,1.0,1,chocolate
+I want gum and jam.,1.01,1,gum
+I have snacks.,0.98,1,snack
+I want cookies because they are our cookies.,0.98,1,cookie
+You like cake and want cookies.,1.0,1,cake
+I want milk because I’m thirsty.,0.96,1,milk
+I don’t like corn.,1.01,1,corn
+I want milk and cream.,1.01,1,cream
+Do you want doughnuts? This is a lemon.,0.98,0,doughnut
+"I’m eating breakfast, lunch, and dinner.",0.99,1,eat
+Here is some glue and pencils.,0.87,1,glue
+They're beautiful gifts from my grandmother.,0.84,1,beautiful
+She’s cute and pretty like her sister.,1.01,1,cute
+"He's handsome, she's cute, they're all beautiful.",0.82,1,handsome
+You’re pretty and I like this color.,1.01,1,pretty
+It’s hot in the afternoon and I want a hot dog.,0.9,1,hot
+I’m happy when I’m eating.,0.95,1,happy
+You are sick.,0.84,1,sick
+You're kind and pretty just like me.,0.87,1,kind
+I don’t like cloudy days.,0.88,1,cloudy
+It's rainy and windy outside today.,0.87,1,rainy
+I want an umbrella on rainy days.,1.0,1,umbrella
+"Look at the sky, we see clouds.",0.76,1,sky
+Look at the sun when it's very bright.,0.91,1,sun
+We see clouds in the gray sky.,1.01,1,cloud
+Look at the stars in the sky.,0.87,1,star
+It’s sunny in the morning and afternoon.,0.99,1,sunny
+"It's spring, summer, fall, and winter.",0.9,1,spring
+It's sunny because it’s summer.,0.99,1,summer
+"It’s winter, It’s cold, It’s fall, or spring.",0.89,1,winter
+It's cold at night because it’s winter.,0.97,1,cold
+I don’t like rainy weather days.,1.0,1,weather
+It’s windy.,0.98,1,windy
+It’s fall; It’s spring; It’s winter; it’s cold.,0.85,1,fall
+They are talking while touching their hand.,0.99,1,talk
+Let's sing a song.,1.01,1,sing
+I have a watch and look at the sea.,0.98,1,watch
+Sit down and be quiet now.,0.88,1,do
+"I’m a cook, I can make cookies.",0.98,1,make
+You can ask the questions while touching your body parts.,0.95,1,ask
+I can’t build the house.,1.01,1,build
+I can buy this doll.,1.01,1,buy
+I have a dog.,0.99,1,have
+I want milk and gum.,1.01,1,want
+They read books and find my book.,0.76,1,read
+"On Monday, I go to the pool.",1.01,1,Monday
+Tomorrow is Tuesday. Tomorrow is Tuesday.,0.8,1,Tuesday
+"Yesterday was Sunday, and today is Monday.",0.87,1,Sunday
+Today is a holiday.,0.85,1,holiday
+It's sunny outside this holiday morning.,0.85,1,day

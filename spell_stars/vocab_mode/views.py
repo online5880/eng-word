@@ -1,7 +1,6 @@
-from datetime import datetime
 import os
 import random
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
 from utils.PronunciationChecker.manage import process_audio_files
@@ -12,14 +11,14 @@ from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 import os
 
-from rest_framework.generics import ListAPIView, RetrieveAPIView
-from rest_framework.response import Response
-from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
+from rest_framework.generics import ListAPIView
+from rest_framework.pagination import PageNumberPagination
 from .serializers import WordSerializer
-from rest_framework import filters
-from rest_framework.request import Request
-from rest_framework.test import APIRequestFactory
-from accounts.views import StudentLearningLogViewSet, start_learning_session
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.filters import SearchFilter
+from rest_framework.permissions import IsAuthenticated
+from accounts.views import start_learning_session
 
 def display_vocabulary_book_random_category(request):
     # 모든 카테고리 가져오기 (중복 제거)
@@ -82,17 +81,16 @@ def display_vocabulary_book_random_category(request):
 def display_vocabulary_book(request):
     # 세션에서 선택된 단어들 가져오기
     selected_words = request.session.get('selected_words')
-    
     if selected_words:
         context = {"words": selected_words, "MEDIA_URL": settings.MEDIA_URL}
-        del request.session['selected_words']
     else:
         all_words = list(Word.objects.all())
         random_words = random.sample(all_words, min(len(all_words), 15))
         context = {"words": random_words, "MEDIA_URL": settings.MEDIA_URL}
+        
     
     # 학습 시작 로그 생성
-    start_learning_session(request, learning_mode=1)  # vocab_mode는 1번
+    start_learning_session(request, learning_mode=0)
     return render(request, "vocab_mode/vocab.html", context)
 
 
@@ -103,13 +101,14 @@ def upload_audio(request):
             audio_file = request.FILES["audio"]
             current_word = request.POST.get("word", "unknown")
             user_id = request.user.id if request.user.is_authenticated else "anonymous"
+            username = request.user.username if request.user.is_authenticated else "anonymous"
             
             # 저장 경로 설정
             save_path = f"audio_files/students/user_{user_id}/"
             os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
 
             # 파일 이름 설정
-            file_name = f"{current_word}.wav"
+            file_name = f"{current_word}_st.wav"
             file_path = os.path.join(save_path, file_name)
 
             # 기존 파일이 있으면 삭제
@@ -125,14 +124,14 @@ def upload_audio(request):
                 settings.MEDIA_ROOT, "audio_files/native/", f"{current_word}.wav"
             )
             student_audio_path = os.path.join(
-                settings.MEDIA_ROOT, save_path, f"{current_word}.wav"
+                settings.MEDIA_ROOT, save_path, f"{current_word}_st.wav"
             )
             
-            # result = process_audio_files(native_audio_path,native_audio_path,current_word,user_id)
             print(student_audio_path)
             print(native_audio_path)
-            result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
-            print("결과",result)
+            test_path = "C:/Users/user/Desktop/eng-word/media/audio_files/native/actually.wav"
+            result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id,username)
+            # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
             return JsonResponse({
                 "status": "success",
                 "message": "녹음이 완료되었습니다.",
@@ -151,16 +150,81 @@ def upload_audio(request):
         "message": "잘못된 요청입니다."
     }, status=400)
 
+def sentence_mode(request):
+    # 세션에서 선택된 단어들 가져오기
+    selected_words = request.session.get('selected_words', [])
+    
+    context = {
+        "words": selected_words,
+        "MEDIA_URL": settings.MEDIA_URL
+    }
+    
+    # 학습 시작 로그 생성 (예문 모드는 learning_mode=1로 설정)
+    start_learning_session(request, learning_mode=1)
+    return render(request, "sent_mode", context)
 
-### API
-# 단어 목록 GET API
+### API Views ###
+
 class WordPagination(PageNumberPagination):
-    page_size = 100
-
+    """단어 목록 페이지네이션 설정"""
+    page_size = 100  # 페이지당 단어 수
 
 class WordListAPIView(ListAPIView):
+    """
+    단어 목록을 제공하는 API
+    
+    Endpoint: GET /api/words/
+    Features:
+    - 페이지네이션 (100개씩)
+    - 검색 기능 (단어, 의미)
+    - 카테고리 필터링 (?category=카테고리명)
+    """
+    permission_classes = [IsAuthenticated]
     queryset = Word.objects.all().order_by("category", "word")
     serializer_class = WordSerializer
     pagination_class = WordPagination
-    filter_backends = [filters.SearchFilter]
-    search_fields = ["word", "meanings"]  # 정확히 일치하는 단어로 검색
+    filter_backends = [SearchFilter]
+    search_fields = ["word", "meanings"]
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        category = self.request.query_params.get('category')
+        return queryset.filter(category=category) if category else queryset
+
+class CategoryListAPIView(APIView):
+    """
+    전체 카테고리 목록을 제공하는 API (알파벳 순 정렬)
+    
+    Endpoint: GET /api/categories/
+    Returns: 정렬된 카테고리 이름 목록
+    """
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request):
+        categories = Word.objects.values_list('category', flat=True)\
+                       .distinct()\
+                       .order_by('category')  # 카테고리명 기준 오름차순 정렬
+        return Response(list(categories))
+
+class WordsByCategoryAPIView(APIView):
+    """
+    특정 카테고리의 단어 목록을 제공하는 API
+    
+    Endpoint: GET /api/categories/<category_id>/words/
+    Returns: 해당 카테고리의 모든 단어 정보
+    """
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request, category_id):
+        words = Word.objects.filter(category=category_id).order_by("word")
+        if not words.exists():
+            return Response(
+                {"error": "해당 카테고리를 찾을 수 없습니다"}, 
+                status=404
+            )
+        serializer = WordSerializer(words, many=True)
+        return Response(serializer.data)
+    
+    
+    
+    

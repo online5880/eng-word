@@ -1,20 +1,29 @@
 <!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
 <html lang="ko">
-<head>
+
+  <head>
     <meta charset="UTF-8">
-    <title>회원가입</title>
-</head>
-<body>
-    <h2>회원가입</h2>
-    <form method="post" action="{% url 'signup' %}", autocomplete="off">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>
+      spell stars | 회원가입</title>
+  </head>
+
+  <body>
+    <div class="container bg-white shadow-md p-5 form-layout">
+      <h2>회원가입</h2>
+      <form method="post" action="{% url 'signup' %}" ,="," autocomplete="off">
         {% csrf_token %}
         <table>
-            {{ form.as_table }}
+          {{ form|crispy }}
         </table>
-        <button type="submit">회원가입</button>
-    </form>
-    <form action="{% url 'index' %}" method="get">
-        <button type="submit">뒤로가기</button>
-    </form>
-</body>
+        <button class="btn btn-outline-dark btn-md w-100 btn-block p-3" type="submit">회원가입</button>
+      </form>
+      <br>
+      <a class="btn btn-outline-dark btn-md w-100 btn-block p-3" type="button" href="{% url 'index' %}">뒤로가기</a>
+    </div>
+  </body>
+
 </html>

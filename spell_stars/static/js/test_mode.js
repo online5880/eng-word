@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (isRecording) {
                 analyser.getByteFrequencyData(dataArray);
                 const average = dataArray.reduce((a, b) => a + b) / bufferLength;
-                const level = (average / 255) * 100;  // 음성 레벨 계산 수정
+                const level = (average / 128) * 100;  // 음성 레벨 계산 수정
                 voiceLevelFill.style.width = `${level}%`;  // 여기도 높이로 변경
                 requestAnimationFrame(updateVoiceLevel);
             }
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
             isRecording = false;
             statusText.textContent = '녹음이 완료되었습니다.';
             micButton.classList.remove('recording');
-            voiceLevelFill.style.height = '0%';
+            voiceLevelFill.style.width = '0%';
         }
     }
 
@@ -167,6 +167,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
                 // 점수 초기화
                 document.getElementById("scoreDisplay").textContent = '';
+
+                // 상태 메시지 초기화
+                statusText.textContent = '마이크를 클릭하여 시작하세요'; // 메시지 제거
     
                 // 버튼 텍스트 및 이벤트 갱신
                 const nextButton = document.getElementById('nextQuestionBtn');

@@ -4,12 +4,12 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/vocab_styles.css' %}">
 <div class="container">
-    <button class="random-category-btn" onclick="location.href='{% url 'vocab_random_category' %}'">
+    {% comment %} <button class="random-category-btn" onclick="location.href='{% url 'vocab_random_category' %}'">
         <i class="fas fa-random"></i> 새로운 카테고리 뽑기
-    </button>
+    </button> {% endcomment %}
     <div class="category-section">
         {% for category, count in category_counts.items %}
-            <h2>카테고리 {{ category }}: {{ count }}개</h2>
+            <h2>카테고리 {{ category }}</h2>
         {% endfor %}
     </div>
 

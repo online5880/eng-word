@@ -1,9 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>결과 페이지</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/testresult_styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <h1>테스트 결과</h1>
@@ -12,24 +15,39 @@
         <p>점수: {{ result.accuracy_score }} / 100</p>
         
         <h2>단어별 결과</h2>
-        <ul>
-            {% for detail in details %}
-                <li>
-                    <strong>단어:</strong> {{ detail.word.word }}<br>
-                    <strong>예문:</strong> {{ detail.sentence }}<br>
-                    <strong>예문 뜻:</strong> {{ detail.sentence_meaning }}<br>
-                    <strong>정오답 여부:</strong> 
-                    {% if detail.is_correct %}
-                        정답
-                    {% else %}
-                        오답
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>단어</th>
+                    <th>예문</th>
+                    <th>예문 뜻</th>
+                    <th>정오답 여부</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for detail in details %}
+                <tr>
+                    <td>{{ detail.word.word }}</td>
+                    <td>{{ detail.sentence }}</td>
+                    <td>{{ detail.sentence_meaning }}</td>
+                    <td>
+                        {% if detail.is_correct %}
+                            정답
+                        {% else %}
+                            오답
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     {% else %}
         <p>결과가 없습니다.</p>
     {% endif %}
-    <a href="/">나가기</a>
+    <div id="navButtons">
+        <button id="againBtn">시험 다시 보기</button>
+        <button id="exitBtn">나가기</button>
+    </div>
+    <script src="{% static 'js/testresults.js' %}"></script>
 </body>
 </html>

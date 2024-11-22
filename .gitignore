@@ -164,4 +164,4 @@ cython_debug/
 model/
 settings.json
 
-*.wav
+spell_stars/utils/generate/vosk-model-en-us-0.22/

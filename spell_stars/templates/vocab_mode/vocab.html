@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
+
   <head>
     <title>단어장</title>
     <link rel="stylesheet" href="{% static 'css/vocab_styles.css' %}">
@@ -16,7 +15,7 @@
   <body>
     <div class="container">
       <button class="back-button" onclick="location.href='{% url 'index' %}'">돌아가기</button>
-      <h1>단어장</h1>
+      <h1>단어 연습</h1>
       
       <div class="navigation-buttons">
         <button id="prevButton" class="nav-button styled-button">◀ 이전</button>
@@ -31,7 +30,7 @@
             <div class="word-content">
               <h3>{{ word.word }}</h3>
               <p>{{ word.meanings|join:", " }}</p>
-              <p>{{ word.category }}</p>
+              {% comment %} <p>{{ word.category }}</p> {% endcomment %}
             </div>
             <div class="example-section">
               <p><strong>예문:</strong> {{ word.examples.0.english }}</p>
@@ -40,7 +39,7 @@
       
             <div class="audio-controls">
               {% if word.file_path %}
-                <button class="playAudioButton styled-button" data-audio="{{ MEDIA_URL }}{{ word.file_path }}">🔊 원어민 발음 듣기</button>
+                <button class="playAudioButton styled-button" data-audio="{{ MEDIA_URL }}{{ word.file_path }}">🔊 발음 듣기</button>
               {% else %}
                 <p>원어민 음성 파일이 존재하지 않습니다.</p>
               {% endif %}
@@ -63,10 +62,32 @@
           <div class="voice-level-fill"></div>
         </div>
         <p class="status-text">마이크를 클릭하여 시작하세요</p>
-        <div class="progress-bar">
+        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
           <div id="progressFill"></div>
-        </div>
       </div>
+      </div>
+
+      <div class="evaluation-description">
+        <h2>발음 평가란?</h2>
+          <p>
+            발음 평가는 학생이 말한 소리가 원어민의 발음과 얼마나 비슷한지를 확인하는 과정이에요.
+            <br>
+            F1과 F2는 소리의 높낮이를 나타내는 값으로, 이 값을 비교해서 발음이 얼마나 비슷한지 알아낼 수 있어요.
+            <br>
+            이 평가를 통해 점수를 받고, 발음을 더 잘할 수 있도록 도와줍니다.
+          </p>
+      </div>
+
+      <button id="sentenceModeButton" class="sentence-mode-btn" style="display: none;">
+        <i class="fas fa-book"></i>
+        예문 학습하기
+      </button>
+
+      <div id="fig_container">
+        <div id="wave_fig_container"></div>
+        <div id="formant_fig_container"></div>
+      </div>
+
     </div>
 
     <script src="{% static 'js/vocab_script.js' %}"></script>
