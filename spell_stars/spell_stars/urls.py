@@ -38,6 +38,7 @@ urlpatterns = [
     path("practice/", include("pron_practice.urls")),
     path("sent/", include("sent_mode.urls")),
     path("api/v1/", include(api_v1_patterns)),
+    path('dashboard/', include('dashboard.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
