@@ -108,7 +108,7 @@ def upload_audio(request):
             os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
 
             # 파일 이름 설정
-            file_name = f"{current_word}.wav"
+            file_name = f"{current_word}_st.wav"
             file_path = os.path.join(save_path, file_name)
 
             # 기존 파일이 있으면 삭제
@@ -124,13 +124,13 @@ def upload_audio(request):
                 settings.MEDIA_ROOT, "audio_files/native/", f"{current_word}.wav"
             )
             student_audio_path = os.path.join(
-                settings.MEDIA_ROOT, save_path, f"{current_word}.wav"
+                settings.MEDIA_ROOT, save_path, f"{current_word}_st.wav"
             )
             
             print(student_audio_path)
             print(native_audio_path)
-            test_path = "C:/Users/user/Desktop/eng-word/media/audio_files/native/actually.wav"
-            result = process_audio_files(native_audio_path,test_path,current_word,user_id,username)
+            # test_path = "C:/Users/user/Desktop/eng-word/media/audio_files/native/actually.wav"
+            result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id,username)
             # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
             return JsonResponse({
                 "status": "success",

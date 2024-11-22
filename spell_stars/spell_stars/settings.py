@@ -35,9 +35,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+
 CSRF_TRUSTED_ORIGINS = [
-    # 'https://a0d0-121-140-172-195.ngrok-free.app',
+    'https://69e0-121-140-172-195.ngrok-free.app',
 ]
+
 
 # Application definition
 
@@ -228,4 +230,7 @@ REST_FRAMEWORK = {
 }
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # 브라우저 닫으면 세션 종료
-SESSION_COOKIE_AGE = 600  # 세션 만료 시간 (초 단위, 여기선 1시간)
+SESSION_ENGINE = "django.contrib.sessions.backends.db"
+SESSION_COOKIE_AGE = 3600  # 1시간
+SESSION_SAVE_EVERY_REQUEST = True
+

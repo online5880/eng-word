@@ -1,48 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학습 결과</title>
-    <link rel="stylesheet" href="{% static 'css/result_styles.css' %}">
-  </head>
-
-  <body>
-    <header>
-      <h1>학습 결과</h1>
-    </header>
-
-    <main>
-      <section>
-        <h2>최종 결과</h2>
-        <p>
-          <strong>최종 학생 정답률:</strong>
-          {{ game_state.student_accuracy|floatformat:2 }}%</p>
-      </section>
-
-      <section>
-        <h2>단어 사용 빈도</h2>
-        {% if word_frequencies %}
-          <ul>
-            {% for word, count in word_frequencies.items %}
-              <li>
-                <strong>{{ word }}</strong>:
-                {{ count }}회</li>
-            {% endfor %}
-          </ul>
-        {% else %}
-          <p>단어 사용 데이터가 없습니다.</p>
-        {% endif %}
-      </section>
-    </main>
-
-    <footer>
-      <button onclick="location.href='/sent/'" class="btn">다시 학습하기</button>
-    </footer>
-
-    <script src="{% static 'js/result_page.js' %}"></script>
-  </body>
-
-</html>
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+    <h1>학습 결과</h1>
+    <section>
+      <h2>최종 결과</h2>
+      <p>최종 학생 정답률:
+        {{ final_student_accuracy|floatformat:2 }}%</p>
+      <p>AI 정답률:
+        {{ final_ai_accuracy|floatformat:2 }}%</p>
+      <p>학생이 맞춘 문제:
+        {{ correct_answers }}
+        /
+        {{ total_questions }}</p>
+      <p>AI와의 점수 차이:
+        {{ score_difference|floatformat:2 }}%</p>
+    </section>
+    <section>
+      <h2>단어 사용 빈도</h2>
+      {% if word_frequencies %}
+        <ul>
+          {% for word, count in word_frequencies.items %}
+            <li>{{ word }}:
+              {{ count }}회</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>단어 사용 데이터가 없습니다.</p>
+      {% endif %}
+    </section>
+    <section>
+      <h2>학습 성과</h2>
+      <p>사용된 단어 수:
+        {{ unique_words_used }}
+        /
+        {{ total_words }}</p>
+      <p>{{ learning_performance_message }}</p>
+    </section>
+    <a href="/sent/" class="btn">다시 학습하기</a>
+  </div>
+{% endblock %}

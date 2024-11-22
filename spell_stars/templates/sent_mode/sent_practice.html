@@ -1,57 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
   <head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>단어 학습 퀴즈</title>
+    <title>발음 학습 퀴즈</title>
     <link rel="stylesheet" href="{% static 'css/sent_styles.css' %}">
+    <meta name="csrf-token" content="{{ csrf_token }}">
   </head>
 
   <body>
-    <header>
-      <h2>단어 학습 퀴즈</h2>
-    </header>
-
-    <main>
-      <section>
+    <div class="container">
+      <h1>발음 학습 퀴즈</h1>
+      <div class="question-container">
         <p>
           <strong>문제:</strong>
-          {{ current_question }}
-          /
-          {{ total_questions }}</p>
+          {{ current_question }}/{{ total_questions }}</p>
         <p>
           <strong>문장:</strong>
           {{ sentence }}</p>
         <p>
           <strong>뜻:</strong>
           {{ meaning }}</p>
-      </section>
+      </div>
 
-      <section>
-        <input type="hidden" id="hiddenWord" value="{{ word }}">
-        <button id="micButton">녹음 시작</button>
-        <p id="statusMessage">녹음을 시작해주세요.</p>
+      <!-- Hidden input for the current word -->
+      <input type="hidden" id="hiddenWord" value="{{ word }}">
 
-        <div class="correctnessBox" id="studentCorrectnessBox">
+      <!-- Mic button -->
+      <button id="micButton" class="mic-status">
+        <div class="mic-icon">
+          <i class="fas fa-microphone"></i>
+        </div>
+      </button>
+      <p id="statusMessage" class="status-text">녹음을 시작해주세요.</p>
+
+      <div class="results-wrapper">
+        <div class="result-section" id="studentCorrectnessBox">
           <h3>학생 정답 상태</h3>
           <p>기다리는 중...</p>
         </div>
-
-        <div class="correctnessBox" id="aiCorrectnessBox">
+        <div class="result-section" id="aiCorrectnessBox">
           <h3>AI 정답 상태</h3>
           <p>기다리는 중...</p>
         </div>
-      </section>
+      </div>
 
-    </main>
-
-    <footer>
-      <p>&copy; 2024 학습 퀴즈</p>
-    </footer>
+      <div class="accuracy-wrapper">
+        <div class="accuracy-box" id="studentAccuracyBox">
+          <h3>학생 정답률</h3>
+          <p>0%</p>
+        </div>
+        <div class="accuracy-box" id="aiAccuracyBox">
+          <h3>AI 정답률</h3>
+          <p>0%</p>
+        </div>
+      </div>
+    </div>
 
     <script src="{% static 'js/sent_practice.js' %}"></script>
   </body>
-
-</html>
+{% endblock %}
