@@ -3,12 +3,13 @@ import wave
 import json
 from vosk import Model, KaldiRecognizer
 from difflib import SequenceMatcher
-from dotenv import load_dotenv
-
-load_dotenv()
+from pathlib import Path
 
 # 모델
-model = Model(os.getenv("VOSK_MODEL_PATH"))
+current_dir = Path(__file__).parent
+model_path = current_dir.parent.parent / "model" / "vosk-model-en-us-0.22"
+model = Model(str(model_path))
+
 
 def transcribe_audio_vosk(audio_path):
     wf = wave.open(audio_path, "rb")

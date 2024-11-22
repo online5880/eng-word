@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch('/accounts/end-learning/', {
             method: 'POST',
             headers: {
-                'X-CSRFToken': csrfToken
+    'X-CSRFToken': csrfToken
             }
         });
     });
@@ -36,27 +36,42 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.display = i === index ? 'block' : 'none';
         });
         cardIndex.textContent = `${currentIndex + 1}/${cards.length}`;
-        
-        // 프로그레스 바 초기화
+    
         const progressBar = document.getElementById("progressFill");
         const currentWord = getCurrentWord();
-        
+        const wave_figContainer = document.getElementById("wave_fig_container");
+        const formant_figContainer = document.getElementById("formant_fig_container");
+    
         if (passedWords.has(currentWord)) {
             // 이미 통과한 단어인 경우
             progressBar.style.width = '100%';
             progressBar.style.backgroundColor = '#4CAF50';
             statusText.textContent = '이미 통과한 단어입니다!';
             statusText.style.color = '#4CAF50';
+    
+            // 그래프 표시
+            if (wordGraphs.has(currentWord)) {
+                wave_figContainer.innerHTML = wordGraphs.get(currentWord);
+                formant_figContainer.innerHTML = wordGraphs.get(currentWord);
+            } else {
+                wave_figContainer.innerHTML = ''; // 그래프가 없으면 초기화
+                formant_figContainer.innerHTML = ''; // 그래프가 없으면 초기화
+            }
         } else {
             // 아직 통과하지 못한 단어인 경우
             progressBar.style.width = '0%';
             progressBar.style.backgroundColor = '#f44336';
             statusText.textContent = '마이크를 클릭하여 시작하세요';
             statusText.style.color = '#666';
+    
+            // 그래프 숨기기
+            wave_figContainer.innerHTML = '';
+            formant_figContainer.innerHTML = '';
         }
-        
+    
         updateNavigationButtons();
     }
+    
 
     // 버튼 상태 업데이트 함수 추가
     function updateNavigationButtons() {
@@ -216,9 +231,8 @@ document.addEventListener('DOMContentLoaded', function() {
     showCard(currentIndex);
 
     
+    const wordGraphs = new Map(); // 단어별 그래프 저장소
     function displayResult(result) {
-        console.log("displayResult received result:", result);
-    
         if (!result || typeof result.overall_score !== "number") {
             console.error("Error: result or overall_score is invalid", result);
             statusText.textContent = "결과를 불러오는 중 오류가 발생했습니다.";
@@ -227,37 +241,82 @@ document.addEventListener('DOMContentLoaded', function() {
     
         const score = result.overall_score;
         const currentWord = getCurrentWord();
-        
+    
         // 점수가 80점 이상이면 통과 처리
         if (score >= 80) {
             passedWords.add(currentWord);
             statusText.textContent = `발음 점수: ${score.toFixed(2)}점 - 통과!`;
-            statusText.style.color = '#4CAF50';  // 초록색으로 표시
-            
+            statusText.style.color = '#4CAF50'; // 초록색으로 표시
+    
             // 모든 단어가 통과되었는지 확인
             if (checkAllWordsPassed()) {
                 sentenceModeButton.style.display = 'flex';
             }
         } else {
             statusText.textContent = `발음 점수: ${score.toFixed(2)}점 - 다시 시도하세요`;
-            statusText.style.color = '#f44336';  // 빨간색으로 표시
+            statusText.style.color = '#f44336'; // 빨간색으로 표시
         }
     
         // 진행률 바 업데이트
         const progressBar = document.getElementById("progressFill");
         progressBar.style.width = `${score}%`;
         progressBar.style.backgroundColor = score >= 80 ? '#4CAF50' : '#f44336';
+    
+        // HTML 그래프 삽입
+        const wave_figContainer = document.getElementById("wave_fig_container");
+        const formant_figContainer = document.getElementById("formant_fig_container");
 
+        if (result && result.wave_html_fig && result.formant_html_fig) {
+            const parser = new DOMParser();
 
-        
-        updateNavigationButtons();  // 버튼 상태 업데이트
+            // waveform
+            const wave_parsedDoc = parser.parseFromString(result.wave_html_fig, "text/html");
+
+            // 그래프 저장
+            wordGraphs.set(currentWord, wave_parsedDoc.body.innerHTML);
+
+            // DOM 요소 삽입
+            wave_figContainer.innerHTML = wave_parsedDoc.body.innerHTML;
+
+            // 스크립트 태그 동적으로 실행
+            const waveform_scripts = wave_parsedDoc.querySelectorAll("script");
+            waveform_scripts.forEach(script => {
+                const newScript = document.createElement("script");
+                newScript.textContent = script.textContent;
+                document.body.appendChild(newScript);
+            });
+
+            // formant
+            const formant_parsedDoc = parser.parseFromString(result.formant_html_fig, "text/html");
+
+            // 그래프 저장
+            wordGraphs.set(currentWord, formant_parsedDoc.body.innerHTML);
+
+            // DOM 요소 삽입
+            formant_figContainer.innerHTML = formant_parsedDoc.body.innerHTML;
+
+            // 스크립트 태그 동적으로 실행
+            const formant_scripts = formant_parsedDoc.querySelectorAll("script");
+            formant_scripts.forEach(script => {
+                const newScript = document.createElement("script");
+                newScript.textContent = script.textContent;
+                document.body.appendChild(newScript);
+            });
+        } else {
+            console.error("HTML figure not found in response.");
+        }
+    
+        updateNavigationButtons(); // 버튼 상태 업데이트
     }
 
-    // 모든 단어가 통과되었는지 확인하는 함수
     function checkAllWordsPassed() {
         const allWords = Array.from(cards).map(card => 
             card.querySelector('h3').textContent.trim()
         );
+    
+        console.log('All words:', allWords);
+        console.log('Passed words:', Array.from(passedWords));
+    
         return allWords.every(word => passedWords.has(word));
     }
     

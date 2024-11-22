@@ -8,7 +8,7 @@ import pdb
 from .Pipeline.Parselscore import get_formants
 from .Pipeline.Score import calculate_formant_score, calculate_phoneme_score, calculate_overall_score
 from .Pipeline.Preprocessing import trim_and_standardize, align_start_point
-from .Pipeline.Visualization import visualize_waveforms, plot_f1_f2_comparison
+from .Pipeline.Visualization import visualize_waveforms, plot_f1_f2_comparison_plotly
 sys.path.append("C:/Users/user/Desktop/eng-word/spell_stars/utils/PronunciationChecker/Pipeline")
 
 def cleanup_temp_dir(temp_dir):
@@ -20,7 +20,7 @@ def cleanup_temp_dir(temp_dir):
     else:
         print(f"Directory does not exist: {temp_dir}")
         
-def process_audio_files(native_audio_file_path, student_audio_file_path, expected_word, user_id):
+def process_audio_files(native_audio_file_path, student_audio_file_path, expected_word, user_id, username=""):
     """
     원어민과 학생의 오디오 파일을 처리하고 점수 및 시각화를 생성.
     """
@@ -35,7 +35,7 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
     try:
         # 무음 제거 및 RMS 표준화
         standardized_native_path = trim_and_standardize(native_audio_file_path)
-        standardized_student_path = trim_and_standardize(native_audio_file_path)
+        standardized_student_path = trim_and_standardize(student_audio_file_path)
 
         # Cross-Correlation 기반 동기화
         print("Aligning start points using Cross-Correlation...")
@@ -67,10 +67,10 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
             student_f2=student_f2_interp
         )
         # Formant 점수가 70점 미만인 경우 False 출력
-        if formant_score < 70:
-            print(f"Formant Score for {student_file}: {formant_score} (Below Threshold)")
-            print("Result: False")
-            return result
+        # if formant_score < 70:
+        #     print(f"Formant Score for {student_audio_file_path}: {formant_score} (Below Threshold)")
+        #     print("Result: False")
+        #     return result
 
         # 음소 점수 계산
         phoneme_score = calculate_phoneme_score(standardized_student_path, expected_word)
@@ -79,15 +79,16 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
         overall_score = calculate_overall_score(formant_score, phoneme_score)
 
         # 1. 파형 비교 시각화
-        waveform_fig = visualize_waveforms(standardized_native_path, standardized_student_path)
+        wave_html_fig = visualize_waveforms(standardized_native_path, standardized_student_path,username=username)
 
         # 2. Formant 비교 시각화
-        plot_f1_f2_comparison(
+        formant_html_fig = plot_f1_f2_comparison_plotly(
             timestamps=common_timestamps,
             f1_native=native_f1_interp,
             f1_student=student_f1_interp,
             f2_native=native_f2_interp,
-            f2_student=student_f2_interp
+            f2_student=student_f2_interp,
+            username=username,
         )
 
         # 결과 저장
@@ -97,15 +98,16 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
             "formant_score": float(round(formant_score, 2)),
             "phoneme_score": float(round(phoneme_score, 2)),
             "overall_score": float(round(overall_score, 2)),
-            # "waveform_fig" : waveform_fig
+            "formant_html_fig" : formant_html_fig.to_html(full_html=False),
+            "wave_html_fig" : wave_html_fig.to_html(full_html=False)
         }
-        return result
-
+        
         # 결과 출력
         print(f"Formant Score: {result['formant_score']}")
         print(f"Phoneme Score: {result['phoneme_score']}")
         print(f"Overall Pronunciation Score: {result['overall_score']}")
         print("-" * 40)
+        return result
 
     except Exception as e:
         print(f"Error processing {native_audio_file_path} and {student_audio_file_path}: {e}")

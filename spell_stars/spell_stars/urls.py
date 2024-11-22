@@ -3,7 +3,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from main import views as mainViews
-
+from django.views.generic.base import RedirectView
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.permissions import IsAuthenticated
@@ -15,33 +15,29 @@ schema_view = get_schema_view(
         default_version="v1",
         description="API 문서",
     ),
-    public=False,  # 인증된 사용자만 접근
+    public=False,
     permission_classes=(IsAuthenticated,),
 )
 
+# API URL 패턴
+api_v1_patterns = [
+    path("accounts/", include("accounts.api_urls")),
+    path("vocab/", include("vocab_mode.api_urls")),
+    path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
+    path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
+]
+
+# 웹 URL 패턴
 urlpatterns = [
-    # 관리자 URL
     path("admin/", admin.site.urls),
-
-    # 메인 페이지
+    path("favicon.ico", RedirectView.as_view(url=settings.STATIC_URL + "images/favicon.ico")),
     path("", mainViews.index, name="index"),
-
-    # 사용자 인증 및 계정 관련 URL
-    path("accounts/", include("accounts.urls")),  # 사용자 정의 계정 관련 URL
-    path("auth/", include("django.contrib.auth.urls")),  # Django 기본 인증 URL
-
-    # 학습 모드 및 기타 기능 URL
-    path("vocab/", include("vocab_mode.urls")),  # 단어 학습 모드
-    path("test/", include("test_mode.urls")),  # 테스트 모드
-    path("practice/", include("pron_practice.urls")),  # 발음 연습 모드
-    path("sent/",include("sent_mode.urls")),
-
-    # API 문서 URL
-    path("api/v1/swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
-    path("api/v1/redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
-
-    # API 엔드포인트
-    path("api/v1/accounts/", include("accounts.api_urls")),  # API를 위한 계정 URL
+    path("accounts/", include("accounts.urls")),
+    path("vocab/", include("vocab_mode.urls")),
+    path("test/", include("test_mode.urls")),
+    path("practice/", include("pron_practice.urls")),
+    path("sent/", include("sent_mode.urls")),
+    path("api/v1/", include(api_v1_patterns)),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

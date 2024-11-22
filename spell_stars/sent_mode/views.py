@@ -38,7 +38,7 @@ def example_sentence_learning(request):
     game_state = request.session.get('game_state', {
         "student_accuracy": 0.6,
         "current_question": 0,
-        "num_questions": len(selected_words),  # 선택된 단어 개수만큼 출제
+        "num_questions": len(selected_words),
         "student_scores": [],
         "ai_scores": [],
         "student_response_times": [],
@@ -53,7 +53,7 @@ def example_sentence_learning(request):
     # 현재 단어 및 문장 가져오기
     current_word_data = selected_words[game_state["current_question"]]
     current_word = current_word_data['word']  # 단어
-    sentence_data = Sentence.objects.filter(word__word=current_word).first()  # 문장
+    sentence_data = Sentence.objects.filter(word__word=current_word).first()
 
     if not sentence_data:
         return JsonResponse({"error": f"No sentences found for word: {current_word}"}, status=400)
@@ -68,9 +68,11 @@ def example_sentence_learning(request):
         "word": current_word,
         "current_question": game_state["current_question"] + 1,
         "total_questions": game_state["num_questions"],
+        "student_accuracy": game_state["student_accuracy"],
     }
 
     return render(request, "sent_mode/sent_practice.html", context)
+
 
 
 # 학습 결과 화면
@@ -79,14 +81,18 @@ def sent_result(request):
     if not game_state:
         return redirect("sent_practice")
 
-    # 단어 사용 빈도 계산
     word_frequencies = Counter(game_state["student_responses"])
+    final_student_accuracy = game_state["student_accuracy"]
+    final_ai_accuracy = calculate_ai_accuracy(final_student_accuracy)
 
     context = {
         "game_state": game_state,
         "word_frequencies": word_frequencies,
+        "final_student_accuracy": final_student_accuracy,
+        "final_ai_accuracy": final_ai_accuracy,
     }
     return render(request, "sent_mode/sent_result.html", context)
+
 
 
 # 음성 파일 처리
@@ -109,30 +115,56 @@ def upload_audio(request):
                 default_storage.delete(file_path)
             student_audio_path = default_storage.save(file_path, ContentFile(audio_file.read()))
 
-            # 정답 판단 로직 (STT 모듈 활용)
-            # 현재 테스트를 위해 STT 결과를 그대로 사용하는 것으로 설정
-            recognized_word = current_word  # 테스트용 (STT 결과를 여기에 넣음)
+            # 정답 판단 로직 (STT 결과 활용)
+            # 현재 테스트를 위해 단순히 STT 결과를 current_word로 설정
+            recognized_word = current_word  # STT 결과로 대체 필요
 
             # 정답 여부 판단
             is_correct = recognized_word == current_word
 
-            # 세션에서 게임 상태 업데이트
+            # 세션에서 게임 상태 가져오기 및 업데이트
             game_state = request.session.get('game_state', {})
             current_index = game_state.get("current_question", 0)
+            student_accuracy = game_state.get("student_accuracy", 0.6)
+
+            # 학생 정답률 업데이트
+            new_student_accuracy = (
+                (student_accuracy * current_index + (1 if is_correct else 0)) /
+                (current_index + 1)
+            )
+            game_state["student_accuracy"] = new_student_accuracy
+
+            # AI 정답률 및 응답 시간 계산
+            ai_accuracy = calculate_ai_accuracy(new_student_accuracy)
+            ai_correct = np.random.rand() < ai_accuracy
+            student_time = float(request.POST.get("response_time", 3.0))  # 응답 시간 전달
+            ai_response_time = calculate_ai_response_time(student_time)
+
+            # 게임 상태 업데이트
             game_state["student_scores"].append(10 if is_correct else 0)
+            game_state["ai_scores"].append(10 if ai_correct else 0)
             game_state["student_responses"].append(recognized_word)
+            game_state["ai_response_times"].append(ai_response_time)
             game_state["current_question"] += 1
             request.session['game_state'] = game_state
+
+            # 모든 문제를 풀었는지 확인
+            is_last_question = game_state["current_question"] >= game_state["num_questions"]
 
             return JsonResponse({
                 "status": "success",
                 "is_correct": is_correct,
                 "correct_word": current_word,
                 "recognized_word": recognized_word,
+                "student_accuracy": new_student_accuracy,
+                "ai_accuracy": ai_accuracy,
+                "ai_response_time": ai_response_time,
                 "message": "Answer checked successfully.",
+                "next_question_available": not is_last_question,
             })
 
         except Exception as e:
             return JsonResponse({"status": "error", "message": str(e)}, status=500)
 
     return JsonResponse({"status": "error", "message": "Invalid request."}, status=400)
+

@@ -13,11 +13,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import dotenv
+import socket
 
 path = dotenv.find_dotenv()
 
 dotenv.load_dotenv(override=True)
-
+socket.getaddrinfo('localhost', 8000)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -54,15 +55,25 @@ INSTALLED_APPS = [
     "pron_practice",
     "test_mode",
     "vocab_mode",
-    "rest_framework",
-    "drf_yasg",
     "accounts",
+    "spell_stars",
+    "errorLog",
+    
+    "drf_yasg",
+    "rest_framework",
     "channels",
-    "spell_stars"
-
+    "crispy_forms",
+    "crispy_bootstrap5",
+    
 ]
 
 ASGI_APPLICATION = "spell_stars.asgi.application"
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+ASGI_APPLICATION = 'spell_stars.asgi.application'
 
 # Channels Layer 설정 (기본적으로 In-Memory 사용, Redis를 권장)
 CHANNEL_LAYERS = {
@@ -87,7 +98,27 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "accounts.middleware.UpdateLastLoginMiddleware",
     "accounts.middleware.AutoLogoutMiddleware",
+    "errorLog.middleware.ErrorLoggingMiddleware"
 ]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'db': {
+            'level': 'ERROR',  # 저장할 로그 수준
+            'class': 'errorLog.logging.DatabaseLogHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['db'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
+
 
 ROOT_URLCONF = "spell_stars.urls"
 
@@ -175,8 +206,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "accounts.StudentInfo"
 
-LOGIN_URL = "/auth/login/"  # @login_required가 리디렉션할 로그인 URL
-LOGOUT_URL = "/auth/logout/"  # 로그아웃 버튼이나 링크가 사용할 로그아웃 URL
+LOGIN_URL = "/accounts/login/"  # @login_required가 리디렉션할 로그인 URL
+LOGOUT_URL = "/accounts/logout/"  # 로그아웃 버튼이나 링크가 사용할 로그아웃 URL
 LOGIN_REDIRECT_URL = "/"  # 로그인 후 리디렉션될 URL
 LOGOUT_REDIRECT_URL = "/"  # 로그아웃 후 메인 페이지로 리디렉션
 
@@ -185,8 +216,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # 실제 파일이 저장될 경�
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.AllowAny",
+        "rest_framework.permissions.IsAuthenticated",
     ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+    ],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 100,
+    "DEFAULT_FILTER_BACKENDS": [],
 }
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # 브라우저 닫으면 세션 종료

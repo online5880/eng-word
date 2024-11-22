@@ -1,0 +1,2198 @@
+﻿final_sentence,grammar_score,coherence_score,word
+My bat is big.,0.86,1,big
+What size do you wear?' It's small.,0.99,1,small
+"I ordered a medium, not large. It’s big.",0.96,1,large
+One inch is 2.54 centimeters long.,0.84,1,centimeter
+I'm short but Jason is also short.,0.87,1,short
+That train and your arm are long.,0.87,0,long
+I long to be as tall as my brother.,0.84,1,tall
+The pumpkin is too heavy to carry.,0.93,1,heavy
+We measured the weight of the pumpkin.,0.99,1,weigh
+There is a pile of files that train is long.,0.63,0,pile
+He loaded the handcart. It’s too heavy.,0.98,1,load
+This towel feels soft and very absorbent.,1.0,1,soft
+The math test was very difficult.,0.87,1,difficult
+The gentleman is gentle when giving advice.,0.93,1,gentle
+You are so sensitive about your weight.,0.87,1,sensitive
+"My homeroom teacher was very strict in class, but today she is trying to tie tight tights.",0.9,1,strict
+It’s an old car on this road.,1.01,1,old
+"I have one cow, and zero is my favorite number.",0.96,0,one
+I have two tickets and know three plus two is five.,0.92,1,two
+I have three pigs and I know math facts.,0.97,1,three
+"The math problems are correct, it's five ten now.",0.82,0,five
+Think of a number and add six.,0.87,1,six
+Seven is my lucky number and seven pears.,0.62,1,seven
+"It's five ten now, the math checks out.",0.99,1,ten
+I’m eleven years old.,1.01,1,eleven
+You are twelve years old today.,0.88,1,twelve
+"She is fourteen years old, just like her sister.",0.85,1,fourteen
+The teenager is fifteen years old.,0.86,1,fifteen
+My sister is sixteen years old.,0.87,1,sixteen
+My brother and cousin are both seventeen years old.,0.84,1,seventeen
+My cousin is eighteen years old.,0.87,1,eighteen
+The math textbook proves thirty plus forty is seventy.,0.97,1,seventy
+Forty plus forty is eighty.,0.62,1,eighty
+The math book says Forty plus fifty is ninety.,0.98,1,ninety
+I only have one hundred won.,1.0,1,hundred
+Math problems include Ten times one hundred is one thousand.,0.93,0,thousand
+She perceived that she placed first.,0.99,1,first
+Our aim is to rank third in the world.,0.91,1,third
+Today is my twelfth birthday and they have math on Thursdays.,0.92,1,twelfth
+The world's population is more than 7 billion.,0.84,1,billion
+"Here is a natural and meaningful English sentence that meets all the requirements: My age is twelve, I’m eleven years old.",0.89,1,age
+The youth of today have no manners!,1.0,1,youth
+His weight is double hers.,0.88,0,double
+I need a knife because it’s a knife.,0.96,1,knife
+Here are scissors. Be careful with them. They cut paper.,0.91,1,scissors
+Fencing is a sport that uses a sword.,0.99,1,sword
+Guns and swords are weapons of war.,0.87,1,weapon
+I poked it with a fork.,1.01,1,fork
+He sawed a tree down in half.,1.01,1,saw
+I want a box that's pink and in it.,0.71,1,box
+That is your black balloon.,0.87,0,balloon
+This is his bell.,0.86,0,bell
+Do you need a bottle?,1.01,1,bottle
+Jenny puts the cheese on the tray.,1.0,1,tray
+I have breakfast at 7:30 every morning.,0.99,1,breakfast
+I have lunch at 12 p.m.,1.0,1,lunch
+Let's have dinner here.,1.01,1,dinner
+I have snacks when I'm hungry.,1.0,1,snack
+"I’m hungry, What’s your favorite food?",1.01,1,food
+I get up at 7 in the morning.,1.0,1,morning
+I have breakfast at 7:30 a.m.,0.99,1,have breakfast
+I have lunch at 12 p.m.,1.0,1,have lunch
+I have dinner here.,0.99,1,have dinner
+We are dancers. B-boy dancing is from New York.,0.8,0,dancer
+I train my team at the gym regularly.,1.0,1,gym
+I’m on the soccer team; What’s your favorite club?,0.93,1,club
+I heard beats on the drum while playing.,1.0,1,beat
+Some runners like to run in the desert.,1.0,1,run
+I can walk up this street.,1.01,1,walk
+Regular exercise is good for your health.,0.86,1,exercise
+I’m going to run a marathon.,1.0,1,run a marathon
+I sneaked into the dark room and walked.,1.0,1,sneak
+I like skiing and my sister is not skilled.,0.98,1,ski
+I like skiing and going on adventures.,1.0,1,skiing
+He can't skate because he's playing hockey.,0.96,1,skate
+"I like swimming, but I can’t.",1.0,1,swim
+I'm surprised they drained the pool.,0.99,1,pool
+I like swimming in the ocean.,1.0,1,swimming
+Let's go swimming in the sea.,1.0,1,go swimming
+I can jump over the wall.,1.01,1,jump
+A flute is floating on the water.,1.0,1,float
+Let's play the drum after hearing beats.,0.75,1,drum
+Let's play the guitar during music class.,1.01,1,guitar
+I take piano lessons once a week.,1.0,1,piano
+Let's play the violin while she practices piano.,0.98,1,violin
+We watch a musical together every week.,0.99,1,musical
+I know the famous singer has dual nationality.,0.98,1,singer
+She is a great pianist who loves playing.,0.93,1,pianist
+Playing an instrument is a popular hobby among musicians.,0.83,1,musician
+"Muriel is an all-around entertainer, who's also famous.",0.81,1,entertainer
+Playing an instrument is a popular hobby.,0.85,1,instrument
+Let's play the recorder.,1.0,1,recorder
+He has a talent for music.,1.01,1,talent
+Welcome to my birthday party!,0.86,1,party
+Let’s have a party at my house.,1.01,1,have a party
+Let's go on a picnic every weekend.,1.0,1,picnic
+How about going to the festival this year?,0.87,1,festival
+It's especially cold this evening and I have a bad cold.,0.89,1,cold
+My head hurts because I fell down.,1.0,1,head
+I tied the necktie and touched my neck.,0.99,0,neck
+Look at the elephant's nose closely now.,0.86,1,nose
+I have a bad cold and a fever.,1.0,1,bad cold
+He has a sore throat.,1.01,1,sore throat
+My friend has a sore throat.,1.01,1,throat
+She cuts her bangs to hide her forehead.,0.99,1,forehead
+The boy has a cough like my grandfather.,0.98,1,cough
+My brother is as slow as a snail.,0.86,1,slow
+The service is quick and takes 10 minutes.,0.93,1,quick
+My room is clean now because I clean it.,0.97,1,clean
+The wall is dirty.,0.86,1,dirty
+I wash my face after washing hands.,1.0,1,wash
+There are stains on the brown bowl.,0.87,1,stain
+Please sweep up the sweets.,0.88,1,sweep
+I get up late and still make it.,1.01,1,late
+I'm going to be there when you arrive.,0.98,1,arrive
+Let’s go there later.,1.01,1,later
+They will postpone a journey because of their sick baby.,0.94,1,postpone
+They are quiet.,0.84,1,quiet
+Don't make noise in the library.,0.87,1,noise
+I’m shutting the shutters because it’s getting dark.,0.94,1,shut
+We’re in the bookstore looking at books.,0.99,1,bookstore
+Let's go to the restaurant on our right.,0.98,1,restaurant
+The manager is responsible for Store goods in the store.,0.79,0,store
+Let's go to the clothing store.,1.0,1,clothing store
+I go to the hospital.,1.0,1,hospital
+I have an appointment to see Mr. Smith is a doctor.,0.66,1,doctor
+Ann is a doctor and she is a nurse. Ann is a nurse. Ann is a nurse. Ann is a doctor. Ann is a nurse. Ann is a nurse. Ann is a nurse. Ann,0.5,1,nurse
+Scientists often choose She is a scientist.,0.99,0,scientist
+I like science very much and have class on Tuesday.,0.95,1,science
+Your health is better than your wealth always.,0.62,1,health
+Misuse of medicine can cause very dangerous problems.,0.99,1,medicine
+She is still weak after my illness.,0.87,1,illness
+She is a psychologist who studies children's behavior. She teaches math. Unable to create a valid sentence.,0.83,0,psychologist
+His father died of lung cancer.,1.01,1,cancer
+I’m going to the library.,1.0,1,library
+"If you have more questions, ask my secretary.",1.0,1,secretary
+My uncle started his career as a clerk.,1.0,1,clerk
+"The office is small, between green and pink buildings.",0.84,1,office
+The restaurant staff is kind and hard-working.,0.93,1,staff
+Where is the museum?,0.86,1,museum
+Let’s watch the magic show.,1.01,1,show
+Thank you for the present. I have a watch.,0.96,1,present
+Our group is going to do the presentation.,0.98,1,presentation
+I go to school every day.,1.01,1,school
+"I’m a student, and I go to university.",0.97,1,university
+I go to church on Sundays.,1.0,1,church
+What grade did you get on the midterm?,1.0,1,grade
+Students need to do extracurricular activities like sports.,0.97,1,extracurricular
+The ball is near me and it's black.,0.85,1,ball
+Our table tennis team wants to play badminton.,1.0,1,badminton
+Let's play baseball after school.,1.0,1,baseball
+We are playing basketball.,0.97,1,basketball
+Let's play golf. Joe is a professional golfer.,0.94,1,golf
+We are playing ping-pong.,1.01,1,ping-pong
+We like sports and I’m on the soccer team.,0.96,1,soccer
+We like sports and are on the soccer team.,0.98,1,sport
+We are playing tennis with my friend.,1.0,1,tennis
+I can’t play volleyball because I’m on a soccer team.,0.89,1,volleyball
+I’m on the soccer team and we like hockey.,0.96,1,hockey
+The athlete's confidence is boosted by strong legs.,0.9,1,athlete
+You have to play outside before the game.,1.0,1,play
+Do you need a bowl?,1.01,1,bowl
+I have a brown basket. He is walking with a basket full of food.,0.87,0,basket
+I have a book.,0.99,1,book
+My textbook is on the desk.,0.87,1,textbook
+I like this storybook because it's fun.,0.99,1,storybook
+I like your story.,0.99,1,story
+I have a doll.,0.99,1,doll
+Do you have toy cars at the store?,1.01,1,toy car
+Let’s go to the toy shop.,1.01,1,toy shop
+The boy is my brother.,0.87,1,boy
+I have a bird that's perched on my roof.,0.95,1,bird
+The chicken is so chicken that I want it.,0.96,1,chicken
+There's a big hen on the roof.,0.87,1,hen
+I have a big bat.,1.01,1,bat
+I like eggs. She needs two eggs.,0.98,0,egg
+Is Maria from India? This basketball is yours.,0.84,0,curry
+We see the bees in the sky.,1.0,1,bee
+"This is a baby duck, and I have a bird.",0.96,1,duck
+I have four cats.,0.99,1,cat
+I have a dog and I need help.,1.0,1,dog
+My puppy takes my things to play.,0.75,1,puppy
+They have a pet that I really want.,1.01,1,pet
+I want a robot. That is my toy.,0.99,1,robot
+Look at the bear.,0.86,1,wolf
+There is something fishy about the fish.,0.87,1,fish
+A fishing contest is interesting because his hobby is fishing.,0.91,1,fishing
+Let's go fishing on the island.,1.0,1,go fishing
+The park is near that lake.,0.88,1,lake
+We are playing ping-pong. Touch your cheek.,0.99,0,poke
+Look at the tiger while watching elephants.,0.86,1,tiger
+"I like lions, but it's not my pet.",0.99,1,lion
+I’m at the zoo.,1.01,1,zoo
+The bear has a big chest.,1.01,1,bear
+It contains an elephant in the picture.,0.99,1,elephant
+I'm feeding the monkeys and I like bananas.,0.96,1,monkey
+I like giraffes while watching elephants play.,0.99,1,giraffe
+I like kangaroos.,0.96,1,kangaroo
+It's a zebra that contains an elephant.,0.99,1,zebra
+They see the deer in the zoo.,1.0,1,deer
+The fisherman sees the pink dolphins in sea.,0.99,1,dolphin
+The wind was wild; I saw man.,1.01,0,wild
+I like bananas because they are cheap.,0.99,1,banana
+I like grapes.,0.98,1,grapes
+Mom cut the melon into four parts.,1.01,1,melon
+It is a peach. I would like some fruit. That is a pear. This is a strawberry.,0.79,1,peach
+That is a pear. I have seven pears.,0.99,0,pear
+Do you like watermelon? This is strawberry.,0.97,0,watermelon
+The fruits are fresh. I'd like apples.,0.99,1,fruit
+I am from New Zealand where kiwis grow.,1.0,1,kiwi
+I like juice that is a lemon.,0.76,1,lemon
+I want some juice.,0.99,1,juice
+I want jam while drinking juice.,1.0,1,jam
+"We have eight oranges, and this is green.",1.01,1,orange
+This goat is black. It's white.,0.86,0,black
+My boots are blue and I like purple.,1.01,1,blue
+The horse is brown.,0.86,1,brown
+"I like this color, it's red and white.",0.99,1,color
+The plane is gray and brown.,0.88,1,gray
+My shorts are green.,0.86,1,green
+I have a white T-shirt and brown shoes.,0.99,1,white
+"The pen’s colors are It’s red, It’s green, It’s white, and It’s yellow.",0.87,1,yellow
+That light is dark.,0.86,1,dark
+I like purple because it's red.,0.93,1,purple
+Look at the rainbow. It’s green. It’s red.,0.9,1,rainbow
+Look out! This road is too dark.,0.92,1,bright
+Participants are curious about the race.,0.83,1,race
+Let's ride bikes after we finish our homework.,0.98,1,bike
+My car is being repaired because it's old.,0.9,1,car
+This motorcycle is fast. That car is not as fast.,0.79,1,motorcycle
+"Cars, buses, and airplanes are vehicles.",0.88,1,vehicle
+Is this your rocket? I can fly.,0.99,1,rocket
+Let's ride bikes on our summer vacation.,1.0,1,ride
+Ryan's father is a bus driver.,0.87,1,driver
+The boat is yellow and I missed it.,1.01,1,boat
+"The ship is heavy, let's take the airplane.",0.97,1,ship
+We can travel by spaceship and airplanes.,0.99,1,spaceship
+Are you curious about space? Look at the sky.,0.89,1,space
+The astronomer looked at the moon.,0.99,1,moon
+Look at the sea because it's very calming.,0.9,1,sea
+The earth is beautiful; it's getting warmer.,1.0,1,earth
+Do you want to be an astronaut like Sue?,0.98,1,astronaut
+The bus will come soon at the stop.,1.0,1,bus
+Bus stop is small.,0.61,1,bus stop
+We are going to the subway station.,1.0,1,subway station
+Let's go to the train station.,1.0,1,train station
+The tourists asked Where is the subway station?,0.99,1,subway
+Let's take a taxi.,1.01,1,taxi
+You can use the elevator to find the subway.,0.97,1,elevator
+The fire station is big where Tom works.,1.0,1,fire station
+The police station is big where I work.,0.75,1,police station
+My father is a fire fighter.,0.87,1,fire fighter
+Ryan’s mother is a police officer.,0.87,1,police officer
+I’m a police officer at Ryan’s station.,0.97,1,police
+I have P.E. on Wednesdays written on the blackboard.,0.96,1,P.E.
+The soldiers fought bravely against our enemy.,0.99,1,soldier
+The manager is the chief of security.,0.85,1,chief
+He went to Africa as a missionary last year.,0.98,1,missionary
+I’m making a model airplane.,1.0,1,plane
+Let's take an airplane and make it fly.,0.98,1,airplane
+He is a pilot and so am I.,0.87,1,pilot
+It’s a small airport.,1.0,1,airport
+Let’s take a helicopter because he can fly.,0.97,1,helicopter
+Chickens have wings. Angels have wings. I have a bird that can fly.,0.81,1,wing
+Flying a kite is exciting when flying a helicopter.,0.83,0,kite
+Time flies like an arrow as I shoot.,1.01,1,arrow
+I like bread. The bread smells good.,0.98,1,bread
+I want sandwiches because I like bread.,0.99,1,sandwich
+I don’t like corn.,1.01,1,corn
+You can make various foods using wheat.,1.0,1,wheat
+I want pizza.,0.98,1,pizza
+I want rice and I really like pizza.,1.0,1,rice
+The chef put butter and oil together carefully.,0.99,1,butter
+I want cheese.,0.98,1,cheese
+You like cake. This cake is very sweet.,0.85,1,cake
+I eat lots of sweets and don’t like sugar.,0.96,1,sugar
+I love the taste of chocolate ice cream.,1.0,1,chocolate
+I want gum because I have a toothache.,0.99,1,gum
+I eat lots of sweets and I love chocolate.,0.97,1,sweets
+Mom gives me a piece of cheesecake.,1.0,1,cheesecake
+I'd love some dessert after this cake.,1.0,1,dessert
+I want cookies.,0.96,1,cookie
+Do you want cream?,0.99,1,cream
+Do you want doughnuts? It's not pumpkin.,0.97,1,doughnut
+I would like some pie.,1.01,1,pie
+His arms are strong. My shoulder hurts.,0.98,0,arm
+My foot hurts because I wore shoes.,1.0,1,foot
+"Touch your leg, my foot hurts very badly.",1.01,1,leg
+"Here's a sentence that meets all the requirements: ""These are your shoes. Those are my sneakers."" This sentence is 8 words long, includes the required phrases exactly as given, and forms a clear and logical statement about",0.79,1,shoes
+"Bring me a pair of clean socks, please. Bring me a pair of clean socks, please.",0.73,1,socks
+I’m looking for boots. My shoes are blue.,0.96,1,boots
+I’m looking for sneakers.,0.99,1,sneakers
+Where do I ache? My knee hurts.,0.99,1,knee
+My shoulder hurts. Touch your arm. Where do you ache? Your arm is long.,0.85,0,shoulder
+I’m good at kicking a ball.,1.0,1,kick
+Here is a sentence that meets the requirements: She has little hands; touch your hand.,0.89,0,hand
+My finger is bleeding. Touch your hand.,0.98,0,finger
+Touch your ear; His ears are small.,0.95,0,ear
+The doctor instructed patients to touch their eye.,0.99,1,touch
+Touch your palm. Touch your hand. Your gloves are big. Touch your chin.,0.7,0,palm
+"He's scratching his head, don't bite your nails.",0.96,0,scratch
+The question Which animals have lips? is often answered by touching your mouth.,0.89,0,lip
+I need another spoon because this one's sinking.,0.96,1,spoon
+I’m facing her face. I wash my face.,0.95,0,face
+Touch your chin and check the animals.,0.87,1,chin
+He is my brother.,0.85,1,brother
+My dad teaches English.,0.97,1,dad
+The girl is my sister.,0.88,1,sister
+This is my aunt.,0.86,1,aunt
+My cousins are kind.,0.85,1,cousin
+This is my father. He is my dad.,0.84,1,father
+That is my grandfather.,0.81,1,grandfather
+That is my grandmother. My grandma is ill.,0.81,1,grandmother
+This is my mother. She is my mom.,0.84,1,mother
+I love my parents because they are familiar.,0.99,1,parents
+This dentist is my uncle.,0.87,1,uncle
+The kid is cute when holding cookies.,0.93,1,kid
+The family is familiar to me.,0.87,1,family
+Do they have a daughter? She is my sister.,0.96,1,daughter
+A nephew is a son of your brother or sister.,0.81,1,nephew
+He said that he might be a descendant of a king.,0.92,1,descendant
+I asked him who is he?,1.01,1,he
+"She is smart, She is beautiful, You know her, and she is my sister.",0.83,1,she
+"Here is a natural, meaningful English sentence that meets all the requirements: ""This is my doll, and yes it’s mine."" This sentence includes all the given words exactly as they are, without any changes or additions. It is",0.77,1,my
+Here is a natural and meaningful English sentence that follows the given rules: It’s your shirt.,0.89,1,your
+This pencil case is his.,0.88,1,his
+The children are using these are their pencils.,0.74,1,their
+We like sports because this book is ours.,1.0,0,our
+"The bags are theirs, yes it's mine.",0.63,0,mine
+This basketball is yours.,0.85,1,yours
+That umbrella is hers. His weight is double hers. Those are her photos. She is my sister.,0.69,1,hers
+These bags are theirs.,0.86,1,theirs
+"We like sports, and this book is ours.",1.01,1,ours
+I replied to his reply as we are friends.,0.72,1,I
+Go along this way and share useful things.,0.87,1,this
+Look at the sun when it's sunny.,0.94,1,sun
+It’s sunny in the morning and afternoon.,0.99,1,sunny
+That light is dark. It’s light.,0.98,1,light
+Look at the sky. The plane is gray.,0.91,0,sky
+Here is a natural and meaningful English sentence that meets the given requirements: Our plane was flying above the clouds.,0.88,1,cloud
+Look at my shadow on the ground.,0.87,1,shadow
+Look at this tree that is high.,0.94,1,tree
+Many animals live in the forest and trees.,1.0,1,forest
+The child looks at the tree and says 'This leaf is pretty.',0.86,1,leaf
+This desk is made of natural wood.,0.93,1,wood
+We can see his love of nature in his work.,0.95,1,nature
+It is made from natural materials.,0.93,1,natural
+I’m in the bedroom because of the ball.,0.96,0,bed
+My sister is in her clean closet.,0.87,1,closet
+I’m in the bedroom.,1.0,1,bedroom
+My brother is in the living room.,0.87,1,living room
+Let's gather in the room.,1.01,1,room
+I like camping at Kevin’s cabin.,1.0,1,cabin
+I’m sitting on the couch right now.,1.0,1,sit
+I gave my seat to the elderly woman.,1.0,1,seat
+Don't sit on the wet bench.,0.87,1,bench
+I always lounge at the lounge.,1.0,1,lounge
+"At that moment, the telephone rang loudly.",1.01,1,telephone
+Can you get the phone for me?,1.01,1,phone
+I like apples more than bananas.,1.0,1,apple
+We can’t use it yet.,1.01,1,computer
+They have notebooks. Can I use them?,0.98,1,notebook
+You may give me this is his pen.,1.01,0,pen
+It's your pencil.,0.86,1,pencil
+Here is a single declarative sentence that meets the requirements: It’s his crayon. It’s your pencil. These are their pencils.,0.83,1,crayon
+"Here is a sentence that meets all the requirements: ""This pencil case is his."" It’s your pencil.",0.87,1,pencil case
+I have chalk on the blackboard.,1.0,1,chalk
+Here is some glue.,0.86,1,glue
+They cut the paper.,0.99,1,paper
+"The towel feels soft, it is made from natural materials.",0.95,1,material
+Each student should write a brief outline.,0.99,1,outline
+The turtle is slow going downstairs.,0.68,1,turtle
+One snail is slower than the other two.,0.87,1,snail
+I like frogs and octopuses have eight legs.,1.0,1,frog
+Look at that white rabbit.,0.88,1,rabbit
+I don’t like spiders because I’m afraid of them.,0.91,1,spider
+Look at the ants dragging a petal.,0.87,1,ant
+Look at the snakes on the stone.,0.87,1,snake
+I like giraffes and there's an iguana on the stone.,0.93,1,iguana
+I’m leading my class and writing on the blackboard.,0.69,1,lead
+Mark is patting his pets.,1.0,1,pat
+"The question is about octopuses, not fish.",0.87,1,octopus
+They are my clothes.,0.85,1,clothes
+These are his jeans.,0.86,1,jeans
+They are her pants.,0.86,1,pants
+"My dad has blue shorts, which are shorter.",1.01,1,shorts
+This towel feels soft. May I use it?,0.99,1,towel
+They are my clothes.,0.85,1,cloth
+She blew her nose into her handkerchief.,0.97,1,handkerchief
+"Here is a natural and meaningful English sentence that meets the requirements: After washing my hands, put lotion on gloves. This sentence includes the word 'Your gloves are big' (not exactly, but close enough), is between 6-8 words",0.82,1,gloves
+His pajamas are small. They are my clothes. It’s a soft sweater. They are her pants.,0.82,0,pajamas
+"The owner said, ""It’s your coat. It’s my jacket. It’s my sweater. It’s my vest.'It’s my coat. It’s my jacket. It’s my sweater",0.72,1,coat
+It’s my jacket. It’s my vest.,0.97,1,jacket
+It’s my sweater.,0.98,1,sweater
+Your scarf is long.,0.86,1,scarf
+My sister wears my green vest.,1.0,1,vest
+Bill's design is my favorite black suit.,0.87,1,suit
+Kate owns this is my skirt.,0.76,0,skirt
+Your belt is short.,0.86,1,belt
+I bought a hat and it's my cap.,0.98,1,hat
+Your new dress fits well on you.,1.01,1,dress
+You must wear your helmet when biking.,1.01,1,helmet
+"Could you wrap this, please?",1.02,1,wrap
+I like my school uniform.,1.0,1,uniform
+It's your shirt that she is hanging on.,0.98,0,shirt
+I have a white T-shirt.,1.02,1,T-shirt
+"As she climbs, her knit top looks neat.",1.01,1,top
+I’m happy because we won the game.,1.0,1,happy
+I’m angry because this butter tastes bitter.,1.0,1,bitter
+"Um, this apple tastes sweet and sour. Dam, dl.",0.97,0,sour
+Don’t tear the letter; her sadness is real.,0.91,1,tear
+Learning music helps manage difficult emotions effectively.,0.96,1,emotion
+I think he is very hungry.,1.01,1,hungry
+I’m thirsty. Give me some juice.,0.98,1,thirsty
+"As time goes by, Tomy felt more homesick.",1.01,1,homesick
+Timmy looks so scared.,0.99,1,scared
+"Don’t worry about the test, I’ll help.",0.99,1,worry
+Paul looks so nervous after the contest.,0.99,1,nervous
+Mom looks so worried about the midterm exam.,0.99,1,worried
+She is scared because I’m afraid of big spiders.,0.95,0,afraid
+She is scared because I’m very shy.,1.0,0,shy
+The news surprised me.,0.98,1,surprised
+You are very special to me.,0.87,1,special
+I feel tired because he's really sleepy.,1.0,1,tired
+She's sleepy because I'm feeling very tired.,0.97,0,sleepy
+I feel tired. It's time to sleep.,0.99,1,sleep
+I feel tired; why don't you get some rest?,0.96,1,rest
+It's my bag.,0.86,1,bag
+The pocket is small. Can you find my bag?,0.96,1,pocket
+It’s my jacket. It’s my bag.,0.97,1,zipper
+I’m carrying some cans. It’s in my bag.,0.93,1,carry
+I packed the stuff into my bag.,1.01,1,pack
+We like steak.,0.98,1,steak
+Do you want some beef?,1.01,1,beef
+Look! I have a pig.,0.99,1,pig
+I like hamburgers; this one is terrible.,1.0,1,hamburger
+I want a hot dog.,1.01,1,hot dog
+I want spaghetti because cooking it is simple.,0.99,1,spaghetti
+I want spaghetti. Do you want some noodles?,0.97,1,noodles
+Dad was heating some soup and setting the table.,0.97,1,soup
+I like roast beef and potatoes.,1.0,1,roast
+We want tea because it's really hot outside.,0.97,1,tea
+My uncle runs a specialty coffee shop.,1.0,1,coffee
+It’s a cup.,0.99,1,cup
+There is a spot on the pot.,0.87,1,pot
+"Bring me some water, please.",0.89,1,water
+We have rainy weather this week.,1.0,1,weather
+It’s cloudy today.,1.01,1,cloudy
+I’m completely wet because it’s rainy outside.,0.96,1,rainy
+I'm completely wet because of the rain.,0.86,1,rain
+I’m completely wet because of the rain.,0.99,1,wet
+My hair is damp because it's raining.,0.99,1,damp
+The slippers are slippery because it's raining.,0.98,1,slippery
+I’m eating in the desert.,1.01,1,desert
+I often stay up late.,1.01,1,stay up
+The cheerleader cheered the boy after the game.,0.91,1,cheer
+Check your work before hanging it up.,0.87,1,hang
+The crab is clapping and touching your hand.,0.99,1,clap
+I’m shaking a shake.,0.75,1,shake
+"Look at the lambs, it's cute.",0.95,1,lamb
+The sheep looks cute. Look at the lambs.,0.98,1,sheep
+Let’s go to the art gallery.,1.0,1,art gallery
+"I like art, but they are artists.",1.01,1,art
+My dream job is a cartoonist.,0.87,1,cartoonist
+Let's go to the art gallery.,1.0,1,gallery
+Let’s draw.,0.98,1,draw
+Where is the post office?,0.88,1,post office
+The editor is asking whose letter is that?,1.0,0,letter
+This is my home address.,0.87,1,address
+She collects stamps at the post office daily.,1.0,1,stamp
+"My town is big, not the city.",0.88,1,town
+My hometown is Seoul and very big.,0.62,1,hometown
+My hometown is a farming village.,0.85,1,village
+The city is big because of many buildings.,0.86,1,city
+Let's visit the place where we live.,1.01,1,place
+There is a map on the wall.,0.87,1,map
+Here is a possible sentence: How about going to the Buckingham Palace? That building is across from my office. Where is the subway station?,0.76,0,palace
+How about going to the temple?,0.88,1,temple
+Let's go fishing on the island.,1.0,1,island
+There is a spot on the pot.,0.87,1,spot
+We've just passed by the downtown area.,1.0,1,downtown
+I seem to have misjudged my new neighbor.,0.99,1,neighbor
+We play computer games during our free time.,1.0,1,computer game
+Let's play a board game at five.,1.01,1,game
+"Thank you for the present, here is my card.",0.91,1,card
+The bridge joins the two islands.,0.99,1,bridge
+I sometimes play chess on The board is big.,0.98,1,board
+I sometimes play chess on Fridays.,0.99,1,chess
+I’m going to the concert hall.,1.0,1,concert
+We are going to the concert hall.,1.0,1,concert hall
+I have an album.,0.99,1,album
+James is a handsome prince who is a singer.,0.83,1,prince
+The rock is very hard and unthrowable.,0.85,1,rock
+We're told to get off the stage!,0.94,1,stage
+They watch a fun movie about an attractive man.,0.98,1,movie
+There are many seats in this small theater.,0.87,1,theater
+I found a new method! The problem is simple but not easy.,0.88,1,method
+I’m building a building.,0.98,1,build
+I’m building a building.,0.98,1,building
+"Here is one: The house has a big red roof. This sentence includes the word ""There's a big hen on the roof"" (which you didn't ask for).",0.76,0,roof
+I can buy this doll at the market.,1.01,1,buy
+Do you sell meat? Let's go to market.,0.96,1,sell
+He works in sales and shows receipts.,0.75,1,sale
+Let's go to the market and buy some goods.,0.96,1,market
+I ordered them to line up while waiting.,0.99,1,order
+There's a great demand for the new machine.,0.84,1,demand
+I marked the item as a gift.,1.01,1,item
+"This isn't a single declarative statement. However, I can try rearranging it to fit the requirements. Here is a revised attempt: Look at the sea and look at the sky, search your room from top to",0.76,1,search
+You can ask the questions and I will answer them.,0.95,1,ask
+I beg your pardon? I want bread.,0.98,0,beg
+"I go to the church to pray. Touch your hand. Touch your leg. Sit down. This is not a single declarative statement, so I will recreate it as follows: I touch my hand and sit down.",0.81,1,pray
+"Look at the sky, look at the sea.",0.86,1,look
+Look at the sky. Touch your eye. Look at the sky. Touch your eye. Look at the sky.,0.6,1,watch
+I have very good sight and can see.,1.01,1,see
+I want milk.,0.98,1,want
+I need a spoon.,0.99,1,need
+I have breakfast and play with my dog.,1.0,1,have
+I must study English because it is my key.,0.97,1,must
+I like camping and want to go.,1.0,1,camping
+Let's go hiking on the mountain.,1.0,1,hiking
+Let’s go camping. I like camping.,0.97,1,go camping
+Her hobby is Let's go hiking.,1.01,1,go hiking
+They went on a tour of the city.,1.01,1,tour
+I went to Paris to go sightseeing.,0.97,1,sightseeing
+I’m on vacation and feeling very relaxed now.,0.96,1,vacation
+Happy birthday is next Thursday.,0.86,0,birthday
+What day is it today? Tomorrow is Tuesday.,0.84,0,day
+I can take a break anytime next week.,1.0,1,break
+The group meets at the library biweekly.,0.99,1,biweekly
+It’s the best plant for your health.,1.01,1,plant
+Look! These flowers are beautiful.,0.91,1,flower
+I did not drop the vase.,1.01,1,vase
+Don’t walk on the grass while gardening.,0.87,1,grass
+The farmer is sowing seeds on the melon.,1.0,1,seed
+I’m a cook who is teaching class.,1.0,1,cook
+I'm a cook who makes model airplanes.,1.0,1,make
+Jenny is a baker and I like bread.,1.01,1,baker
+The cheese will melt if it's heated slowly.,0.98,1,melt
+"Here is a natural, meaningful English sentence that meets the requirements: Mix the ingredients and stir according to recipe.",0.87,1,recipe
+Mix the ingredients and stir before serving.,0.59,1,stir
+The house by the sea is big.,0.87,1,house
+There is a stove in the kitchen.,0.87,1,kitchen
+The company produces big household goods.,0.98,1,household
+Can you get the oval dish for me?,1.01,1,dish
+The fire started in the big stove.,0.99,1,stove
+It’s on the plate.,1.01,1,plate
+Our housewarming party is on May 5.,0.85,1,housewarming
+The dishes are washing because the sink is new.,0.96,1,sink
+They drained the water from the pool.,0.99,1,drain
+The nurse applied pressure to stop my bleeding.,0.99,1,bleed
+Look at the river. Water goes through this pipe. I’m thirsty. Give me some juice. How can we stop the flow of blood?,0.85,0,flow
+The man is going up the old stairs.,1.0,1,stairs
+The man is going up old stairs carefully.,1.0,1,stair
+He is on top of the mountain.,0.87,1,mountain
+Look! There is a hill in the background.,0.85,1,hill
+Don’t throw the stone when there’s an iguana.,0.82,1,stone
+I can bend the rubber band while stretching my body.,0.95,1,bend
+They climbed the mountain every summer vacation.,0.99,1,climb
+We are close friends.,0.85,1,friend
+You’re kind is not present.,0.75,0,kind
+I love my parents and I love my friends.,0.95,1,love
+I respect you very much and I will be quiet.,0.95,1,respect
+He is a very friendly person and nice.,0.87,1,friendly
+I respect her and admire my mother.,1.0,1,admire
+I was present at my class today.,0.87,1,class
+I go to school and I’m a student.,0.97,1,student
+I will be a teacher in the future.,0.87,1,teach
+The new principal spoke to us this morning.,0.99,1,principal
+I think this book is very interesting.,0.98,1,interesting
+I tied the necktie while wearing the tights are too tight.,0.67,0,tight
+I’m bad; He is bad.,1.01,1,bad
+He is bad at making this terrible burger.,0.93,1,terrible
+The people who are poor look very sad.,1.01,1,poor
+I respect them very much because they're good.,0.97,1,very
+Unable to create a valid sentence.,0.87,0,rich
+Good health is better than wealth they had.,1.01,1,wealth
+Do you know what the value of the old coin is?,0.93,1,coin
+I should pay these bills this month.,1.01,1,pay
+The economy of this country is growing quickly.,0.98,1,economy
+His company will invest much money in business.,0.99,1,invest
+We collect taxes to support local charities.,0.99,1,tax
+The law helps to promote public welfare.,0.99,1,welfare
+What a greedy woman she is!,0.88,1,greedy
+She is smarter than my dog.,0.87,1,smart
+I’m sick. You are sick because I am too.,0.92,1,sick
+I think it’s a good idea.,1.01,1,idea
+The designer chose elegant designs for her skirt.,0.99,1,elegant
+He is foolish and so are his friends.,0.86,1,fool
+The soldier was very brave in battle.,0.87,1,brave
+We're honest. Be quiet. We frankly apologized.,0.95,1,frankly
+Many people are against immoral child labor.,0.86,1,immoral
+He should remember not to be irrational.,0.99,1,irrational
+Hitler was a cruel ruler in Second World War.,0.6,1,cruel
+Do you want carrots? It’s a pumpkin.,0.97,0,carrot
+I don’t like potatoes when it’s a pumpkin.,0.95,1,potato
+I don’t like tomatoes because they’re not vegetables.,0.94,1,tomato
+I’d like vegetable soup.,1.0,1,vegetable
+I like salad. I would like some fruit.,0.97,1,salad
+They like French fries when they go out.,1.0,1,French fries
+Do you want onions? This is not a melon.,0.96,1,onion
+My school will plant sunflowers and roses.,1.0,1,sunflower
+You look pretty and she is beautiful.,1.0,1,beautiful
+My sister is cute.,0.86,1,cute
+They’re good. I’m okay. That’s enough. I’m happy.,0.86,1,good
+Ryan thinks she's handsome.,1.0,1,handsome
+"You look pretty, and so do they.",1.01,1,pretty
+I’m great at solving puzzles and playing games.,0.96,1,great
+Isn’t she really lovely? She is beautiful.,0.83,1,lovely
+They look delicious.,0.96,1,delicious
+We're honest about telling the truth.,0.93,1,honest
+Lisa's hair is straight and very straight.,0.85,1,straight
+Bring the brush back.,0.86,1,brush
+I wash my hands after using soap.,1.01,1,soap
+Walk up this street; it’s an old road.,0.99,1,road
+She will walk up this street carefully.,1.0,1,street
+They're going to walk along the old route.,0.98,1,route
+The forecast said it would be snowy.,1.0,1,snowy
+We have flowers in it’s spring.,0.75,1,spring
+I like summer vacation when it's warm.,1.0,1,summer
+It’s cool in autumn when leaves are falling.,0.98,1,fall
+It’s winter.,0.98,1,winter
+We have a lot of snow in winter.,1.01,1,snow
+My father's birthday is in March.,0.87,1,March
+My brother’s birthday is in April.,0.86,1,April
+Children's Day is in May.,0.87,1,May
+"His birthday is in June, but no date.",0.87,1,June
+"It's summer, so her birthday is in July.",0.85,1,July
+"Halloween is in October, so it's on a Tuesday.",0.81,1,October
+Thanksgiving Day is in November.,0.83,1,November
+I read many books during autumn season.,1.01,1,autumn
+There are twelve months in a year.,0.87,1,month
+What's your favorite season of the year?,0.87,1,season
+The wind was strong. It's windy.,0.86,1,wind
+The green umbrella is bigger than this one.,0.87,1,umbrella
+I’m eating. Don’t eat between meals. I’m hungry.,0.88,1,eat
+He is drinking from a refillable water bottle.,0.99,1,drink
+The stomach plays an important role in digesting food.,0.96,1,digest
+Here is a natural and meaningful English sentence that follows the given rules: Here is my gift. You're kind.,0.86,0,give
+Here is my gift for you.,0.88,1,gift
+Let me introduce myself.,0.98,1,introduce
+The announcer announced the news about new team members.,0.96,1,announce
+The waiter served the starter while I cooked.,0.99,1,serve
+They are talking.,0.96,1,talk
+I didn't understand his public speech statement.,0.99,1,speech
+Can you hear me while I'm on phone?,0.98,1,hear
+"Here's a revised attempt: Stop moving, don’t move until I tell you it is not correct. Here's a revised attempt: Stop moving, don’t move until I say so.",0.86,1,tell
+Let's talk about this when we're calm.,0.98,1,talk about
+Let’s throw a ball while I’m good at catching.,0.93,1,throw
+He can pull the car while driving.,1.0,1,pull
+Look! He can push the car.,0.99,1,push
+I’ll call you again when I find her number.,0.95,1,call
+I will catch the ball.,1.01,1,catch
+Sit down. Close the door. Did you drop the vase?,0.91,1,drop
+He is about to twist his legs.,0.94,1,twist
+Let's scoop up the ice cream. It’s a spoon.,0.91,1,scoop
+Let me examine your teeth. Her teeth are very white. I have a toothache. I have a toothache.,0.84,1,teeth
+This dentist is my uncle.,0.87,1,dentist
+Dr. James is looking at the x-ray.,1.01,1,x-ray
+Let's listen to the song.,1.01,1,listen
+Touch your ear and listen to the song.,0.87,1,listen to
+Let's sing a song. She can sing.,0.98,1,sing
+Let's listen to the song.,1.01,1,song
+I can't hear your voice.,1.01,1,voice
+I can’t hear you because I am deaf.,0.97,1,deaf
+I can raise the letters and stand up now.,0.98,1,raise
+Here's your change.,0.86,1,change
+I bumped into a bumper car.,1.01,1,bump
+The lift is lifting us very high.,1.0,1,lift
+Let’s write. Do you want to be a writer?,0.94,1,write
+Newspaper reporters gather news from many sources.,0.99,1,reporter
+He is a teacher and novelist.,0.86,1,novelist
+What is the subject of this poem?,0.87,1,poem
+Computers **displaced** typewriters from many offices quickly.,0.6,1,type
+Do you write in your diary every day?,1.01,1,diary
+He is the narrator of documentaries about wild animals.,0.81,1,narrator
+There is a clock on the table.,0.87,1,clock
+There is a calendar on the wall.,0.87,1,calendar
+What's the date today? Let's meet at two tomorrow.,0.9,1,date
+The alarm clock alarmed me at three o'clock.,0.99,1,alarm
+What time is it now? It's five ten.,0.82,1,now
+What's the date today? Tomorrow is Tuesday.,0.84,0,today
+"The date today is tomorrow, tomorrow is Tuesday.",0.85,1,tomorrow
+Today is Monday.,0.84,1,Monday
+Tomorrow is Tuesday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow,0.47,1,Tuesday
+Yesterday was Sunday. Today is Monday. Tomorrow is Tuesday. What day is it?,0.68,1,Sunday
+"Yesterday was Sunday, a week has seven days.",1.01,1,week
+How about tonight? What time is it now?,0.85,1,tonight
+"The past is important, but the future is more important.",0.8,1,past
+We have a quiz tomorrow.,1.0,1,quiz
+They did a phone survey of TV programs.,1.0,1,survey
+I have some questions about the lesson plan.,1.0,1,question
+I must study English on Mondays.,0.99,1,English
+"English is becoming a global language, I must study.",0.97,1,language
+"This sentence includes the word ""I’ll show you an example of how we use gestures.** This sentence includes the word ""I'll show you an example"" exactly as specified, and it follows the other rules outlined in the",0.76,1,example
+I have social studies class today.,1.0,1,social studies
+My favorite subject is English literature.,0.84,1,subject
+We have a history class today.,1.0,1,history
+We should preserve the natural environment.,0.96,1,environment
+The illiteracy rate is 15% because they are poor.,0.84,1,illiteracy
+The farmer are there many cows on the farm?,0.59,0,many
+She is about to pick the plant.,0.94,1,pick
+I’ll decide after I look at it.,1.0,1,decide
+"Here is a natural, meaningful English sentence that follows the given rules: This is Jack's case. Here is a pencil case. A judge is in court.",0.8,0,case
+I like both of them.,1.01,1,both
+"Hold on, please sit down.",0.89,1,wait
+This gift is for you.,0.88,1,for
+It's behind the box.,0.88,1,behind
+He is from China.,0.86,1,from
+"Hold on, please. Come here, please.",0.87,1,please
+The woman is my mom. She is a nurse and scientist.,0.77,1,woman
+Isabella is a beautiful princess and her mother.,0.6,1,princess
+Spiderman can't fly because he's stuck on Earth.,0.95,1,man
+"Ann is a doctor, she is Ms. Yamada.",0.87,0,Ms.
+"Mr. Watson is a kind gentleman. Hello to him, Your father.",0.78,0,Mr.
+They are guarding the start. He starts to run.,0.96,0,start
+"The game ends at five, please wrap it up.",0.99,1,end
+"If you leave right now, you won’t be late.",0.95,1,leave
+"I’m tired, so let’s go outside.",1.01,1,go
+I come home at 6 p.m.,1.0,1,come home
+We're making groups and can you join us?,0.98,1,join
+She is fleeing from the prison.,1.0,1,flee
+I have a watch and will follow instructions.,0.98,1,follow
+Many teenagers experience fast growth.,0.99,1,growth
+Look at this graph before drawing triangles.,0.86,1,graph
+I think that's one of my pictures.,1.0,1,picture
+That is his camera.,0.86,1,camera
+There is a mirror on the wall. I have very good sight.,0.88,0,mirror
+We saw a preview of the movie on the Internet. We saw a preview of the movie on the Internet.,0.81,1,preview
+I think this book is boring.,1.01,1,boring
+I’m bored and need something exciting.,0.99,1,bored
+He is a nice but dull man.,0.87,1,dull
+"I'm lying on the floor, wearing flat shoes.",0.98,1,flat
+It's a really ugly dog. You're pretty.,0.83,0,ugly
+"I am slow and lazy, he's tired.",0.63,1,lazy
+I want a hot dog.,1.01,1,hot
+We're excited about it.,0.87,1,excited
+I have a pair of shoes that fit my sneakers.,0.95,1,pair
+We are finding new members for our soccer team.,0.97,1,team
+"You like cake, he likes sports too.",1.01,0,like
+I prefer chocolate ice cream.,1.0,1,prefer
+A teacher should treat students without prejudice.,0.98,1,prejudice
+That farmer is my grandpa.,0.87,1,farmer
+My hometown is a farming village.,0.85,1,farm
+Look! I have a cow.,0.99,1,cow
+I'm making a model airplane while I have my doll.,0.92,1,model
+Our factory has to hire more workers.,0.99,1,factory
+Let’s watch the magic show.,1.01,1,magic
+A bag is by the pink lamp.,0.62,1,lamp
+I need yellow ribbons that are exactly one foot long.,0.95,1,ribbon
+This candle is cheap. It’s your balloon.,0.98,0,candle
+The movie is fun.,0.86,1,fun
+What's your hobby is drawing cartoons.,0.99,1,hobby
+We enjoy leisure activities on weekends.,0.98,1,leisure
+The concert is exciting because Muriel is entertaining.,0.82,1,entertain
+Each of us has the freedom to choose.,1.0,1,freedom
+I won first prize because I’m lucky today.,0.97,1,lucky
+Don’t miss this chance. Seven is my lucky number.,0.87,1,chance
+I’m at home waiting for customer to sit down.,0.95,1,down
+Walk up this street. Stand up. Let's raise our hands. Lift lift lift lifts us.',0.81,0,up
+Can you use a computer? I can’t imagine the world without her.,0.87,0,without
+May I use your bathroom?,1.0,1,bathroom
+My cat is in the bathtub.,0.87,1,bathtub
+"Excuse me, where is the restroom?",0.94,1,restroom
+There is a toilet in the bathroom.,0.87,1,toilet
+My uncle is painting the wall is dirty.,0.74,0,wall
+She can’t see anything without her glasses.,0.99,1,glasses
+I’m looking for sunglasses that make me giggle.,0.97,1,sunglasses
+Do you need a glass?,1.01,1,glass
+He is blind because he can't see.,0.99,1,blind
+I have very good sight.,1.01,1,sight
+The main composition of hair is keratin.,0.84,1,hair
+The man is hairy because of his hair.,0.87,1,hairy
+I look silly with my new hairstyle.,1.0,1,hairstyle
+I have a new comb to use on this hair.,0.96,1,comb
+I bought a red hairpin for her birthday.,0.99,1,hairpin
+Lisa has curly hair.,0.99,1,curly
+He got some mustard on his mustache.,0.99,1,mustache
+The girl wrinkled her eyebrows at the sweater.,0.73,0,wrinkle
+Come inside my house before it gets dark.,1.01,1,inside
+All doors in a bank open inward.,0.87,1,inward
+I entered the room; I entered my house.,0.99,1,in
+The teacher has The list includes her name on page 8.,0.67,0,include
+My sister reads the newspaper every morning.,0.99,1,newspaper
+My sister reads the newspaper and I saw her picture in the magazine.,0.89,1,magazine
+The taxi driver listens to music on radio.,1.0,1,radio
+Here is a sentence that meets the requirements: They cut the paper while we look at page 8.,0.89,1,page
+The news surprised me when I learned it.,0.99,1,news
+I know an interesting website that shows my hometown.,0.95,1,website
+I sometimes play chess and also video games.,1.0,1,sometimes
+I have a habit of waking up late.,1.01,1,habit
+"She's almost always late, and so am I.",0.85,1,always
+I’ve seen this movie once.,1.01,1,once
+I’ll call you again when I return home.,0.97,1,again
+Sit down.,0.96,1,repeat
+The boring movie ended finally at last.,1.0,1,finally
+I think the picture is funny.,1.0,1,funny
+You look so sad because it's a sad film.,0.94,1,sad
+I like telling jokes that are really funny.,1.0,1,joke
+He sighed at the crowd.' is not a complete sentence; it's a quotation.' is not a complete sentence; it's a quotation.' is not a complete sentence; it',0.67,1,sigh
+You talk nonsense all the time.,1.0,1,nonsense
+She’s from Canada.,0.99,1,Canada
+He is from China.,0.86,1,China
+"She is from Japan, and I am too.",0.88,1,Japan
+"I’m from Seoul, Korea, and I love Korean history.",0.95,1,Korea
+I’m a fan of Korean is my favorite subject.,0.95,1,Korean
+He’s from Brazil.,0.99,1,Brazil
+We are from India.,0.86,1,India
+The world has become a global village.,1.0,1,world
+I can do anything.,0.98,1,any
+The store is open every day except Sunday. The store is open every day except Sunday.,0.72,1,except
+I’m curious about who the painter is.,0.99,1,who
+Many people are waving their hands around friends.,1.0,1,people
+He can understand I don't have any rules.,0.98,0,understand
+I’ll explain the rules of this game.,1.0,1,explain
+It is my principle not to be late.,0.87,1,principle
+They were trying to justify themselves publicly.,0.99,1,justify
+People don't believe his illogical argument.,0.99,1,illogical
+Whose paintbrush is it? The paint is faint.,0.84,0,paintbrush
+My uncle is using the paint is faint.,0.75,0,paint
+She took the eraser between her thumb and forefinger.,0.97,1,eraser
+Harry is the best actor.,0.88,1,actor
+Is the actress kind?,0.85,0,actress
+I stared at the star.,1.01,1,star
+I play the role of Pinocchio.,1.0,1,role
+The famous artist is also a popular guitarist.,0.86,1,famous
+Football is my favorite sport.,0.86,1,favorite
+It's a common mistake that friends share food preferences.,0.93,1,common
+I love my job.,0.99,1,job
+Hard work brings its own rewards and success.,0.99,1,work
+It’s time to do my homework every day.,0.98,1,homework
+I worked for 5 years at the company.,1.0,1,company
+Students should report their project's progress regularly.,0.98,1,progress
+Our factory has to hire more workers.,0.99,1,hire
+"He repairs computers, including my car is being repaired.",0.96,0,repair
+"I can’t help you. She’s in trouble and needs help. You should take some medicine. Help me, please.",0.83,1,help
+What is the problem? The problem is simple but not easy.,0.75,1,problem
+I can solve this math problem easily.,1.0,1,solve
+"Bugs are bugging me, what is the problem?",1.0,1,bug
+What direction is the railway station in?,0.79,1,direction
+The wind is coming from the north.,1.0,1,north
+The railway station is west of that point.,0.86,1,west
+"If that way is east, then this way is west.",0.82,1,east
+I’m not sure that’s correct.,1.0,1,correct
+It's a common mistake to overlook such errors.,0.9,1,error
+You look like a detective anyway.,1.0,1,anyway
+Let's go outside and play some ball.,1.0,1,outside
+We enjoy outdoor activities and go outside.,0.99,1,outdoor
+I parked at the park.,1.01,1,park
+We’re at the playground.,1.0,1,playground
+We had fun at the beach.,1.01,1,beach
+She is swinging the swing at the playground.,0.99,1,swing
+I have a stomachache after eating too much.,0.98,1,stomachache
+"I have a toothache, so I'll go to the dentist.",0.92,1,toothache
+The stomach plays an important role in digestion.,0.99,1,stomach
+There is a lot of competition between clubs to attract students.,0.76,1,competition
+"I’m on the soccer team, and he won the match.",0.93,1,match
+I tied the necktie and drew a winner.,1.0,1,tie
+Don’t compare yourself with others; they’re not same.,0.95,1,compare
+We can recycle the cycle and reduce waste.,1.0,1,waste
+Smart phones are very useful if you can use one.,0.96,1,use
+We have to preserve the environment.,0.97,1,preserve
+We are collecting money for charity.,0.99,1,collect
+I’ll throw this into the trash can.,1.01,1,trash
+I’d like to travel to lots of foreign countries.,0.94,1,travel
+I train my team as we watch the train.,0.97,1,train
+Don’t move until I tell you carry books upstairs.,0.95,1,move
+Then what piece should I move? Let’s exchange bags. Carry the books upstairs.,0.85,1,transfer
+The roller coaster suddenly rises and loops.,0.99,1,roll
+Falling rocks are dangerous.,0.9,1,dangerous
+Ham is harmful to our health.,0.87,1,harmful
+Look out! You look so dangerous.,0.97,1,danger
+She met her misfortune with great courage.,0.99,1,misfortune
+Be careful not to cut your fingers.,0.86,1,careful
+Let's go outside. Look out! I'm leaving now.,0.91,1,out
+She is going upstairs to carry books.,1.0,1,upstairs
+The desk is made of white wood.,0.94,1,desk
+The lunch box is inside the fridge.,0.87,1,fridge
+She is wiping the window and filling glass.,1.0,1,window
+I'm at home.,0.86,1,home
+There are many floors in the building downstairs.,0.86,1,floor
+That ball is far from me.,0.88,1,far
+What’s the distance between Seoul and Busan? Helen’s house is far off.,0.88,0,distance
+Go along this way and take your time.,0.87,1,along
+The distance between Seoul and Busan is 380 kilometers.,0.83,1,kilometer
+I was rude to my mom.,0.88,1,rude
+"I was rude to my mom, don’t scold me too coldly.",0.84,1,scold
+Ambitious people are always diligent and hard workers.,0.85,1,diligent
+"When I was an elementary school student, I was outgoing.",0.8,1,outgoing
+It is unkind of her to say that.,0.94,1,unkind
+He is antisocial due to his bad temper.,0.87,1,antisocial
+The careless driver didn't slow down; he missed the ball.,0.92,1,careless
+Stretch your body before playing any sport.,0.86,1,body
+Hockey players use this stick on a spoon.,1.0,0,stick
+A ball has a round shape.,1.0,1,shape
+You are strong and brave.,0.88,1,strong
+"That's enough cake, I'm full.",0.63,1,enough
+I have nothing to hide behind.,1.0,1,nothing
+I can do anything for you.,1.0,1,anything
+The boy has a runny nose.,1.01,1,runny nose
+I have a runny nose and a cough.,1.0,1,runny
+I have a fever and I have an allergy to peanuts.,0.91,1,allergy
+I’m sure I can win some and lose some.,0.94,1,win
+I dream about toys every night.,1.01,1,dream
+People are afraid of bombs and explosions.,0.87,1,bomb
+I'm shooting at the goal!,1.0,1,goal
+The professor failed him in modern art.,0.75,0,fail
+The world would be a better place without war!,0.84,1,war
+He hit the ball to score a goal.,1.01,1,score
+We need to learn how to dominate feelings.,0.99,1,dominate
+I'll explain the rules of this game.,1.0,1,rule
+Cooking spaghetti is simple but not easy.,0.86,1,simple
+Let's switch the switches.,1.0,1,switch
+We don't want to complicate this situation more.,0.97,1,complicate
+"We need fresh air because the skunk stinks. It smells good. Touch your nose. We need fresh air. This sentence meets all the requirements: It includes the word ""the skunk stinks."" It smell",0.75,1,stink
+"However, here's a revised attempt: To dominate one's emotions, we must touch our bodies. This sentence follows the given rules and conveys a clear idea about managing emotions in a healthy way.",0.85,1,feel
+We must sit down while watching the bun burning.,0.97,1,burn
+"The five senses are touch, smell, taste, sight, and hearing.",0.84,1,sense
+We all learn by experience effectively.,0.97,1,experience
+My first impression of a new classmate was good.,0.84,1,impression
+Let's forgive and forget what she did.,1.0,1,forget
+Do you remember my name? I will always forget it.,0.93,1,remember
+Do you mind if I kill this bug?,1.01,1,mind
+Time is gold; time is always too fast.,0.87,1,time
+"At that moment, time is gold.",0.88,1,moment
+This aspirin will cure your pain.,1.0,1,as
+This pencil case is very cheap.,0.88,1,cheap
+This teddy bear is too expensive.,0.93,1,expensive
+The price depends on the quantity of goods.,0.99,1,price
+They gave a free street concert to entertain people.,0.97,1,free
+The ring has the shape of a circle.,1.0,1,circle
+The ring has the shape of a circle.,1.0,1,ring
+The moon is round like a ball.,0.87,1,round
+The skater is spinning while throwing the ball.,0.99,1,spin
+The teacher wrote a triangle is a shape on the blackboard.,0.91,1,triangle
+He is a baby. This is my doll.,0.85,0,baby
+My mom is suffering from a bad headache.,0.99,1,headache
+My sister has a fever and I'm sick.,0.98,1,fever
+The bony man looks sad because he is nice.,0.98,0,bony
+My mother felt dizzy when she stood.,1.01,1,dizzy
+"Hard work brings its own rewards, I think.",1.01,1,reward
+I need two tickets.,0.98,1,ticket
+He bought a TV and it came with a one year guarantee.,0.9,1,guarantee
+Could you show me a receipt?,1.0,1,receipt
+Can I have a refund on these pants?,1.01,1,refund
+He can't borrow money because of poor credit.,0.98,1,borrow
+We went to the bank because we needed money.,0.97,1,bank
+"When you laugh, your brain works better.",1.01,1,laugh
+I come home at 6 p.m.,1.0,1,at
+You have a cute smile. Keep smiling. Touch your cheek. Greet each other with a smile. Touch your chin.,0.85,1,smile
+I blush when I'm happy.,1.0,1,blush
+I only have half of the harp.,1.01,1,half
+It's about two fools who collect old cell phones.,0.95,1,about
+The village is vacant. My bowl is empty.,0.84,0,vacant
+"Then, what piece should I move? Divide this pizza into eight pieces. Why do you break the bricks? Here is some glue.",0.86,0,piece
+Close the door. I’m at home.,0.99,1,away
+I like to travel alone.,1.01,1,alone
+I'd like to have my phone disconnected as of September 22.,0.87,1,disconnect
+Jane is a very independent young woman.,0.85,1,independent
+It’s time to exchange our holiday gifts.,0.99,1,exchange
+I'll send you a text message while I'm at home.,0.89,1,send
+My grandmother taught me how to sew.,0.98,1,sew
+He wants to invent something new and wonderful.,0.99,1,invent
+Where did this dance originate from?,1.0,1,originate
+I entered the room and thanked my friend.,0.99,1,enter
+I want a key to my property.,1.0,1,key
+We were standing by the door.,1.0,1,door
+Somebody is knocking on the door. We should close it.,0.93,1,knock
+My dog is at the gate.,0.88,1,gate
+"Follow me, I'll show you the way.",1.01,1,way
+You should lock your locker. It is my key. Close the door.,0.86,1,lock
+The IT specialist's job is to input data.,0.84,1,input
+I replied to his reply immediately.,0.97,1,reply
+"I asked her a question, but she didn’t respond.",0.95,1,respond
+I know the answer. Stand up.,0.99,1,answer
+He can’t contact anyone if he doesn’t know your number.,0.89,1,contact
+I’ll send you a text message later today.,0.98,1,message
+The TV is wide and It’s big.,1.01,1,wide
+The bus is big; it’s a broad road.,0.99,0,broad
+Don’t swim in deep water.,0.88,1,deep
+I’ll visit you next time.,1.01,1,visit
+We navigate with a navigation system.,0.99,1,navigate
+The guide is guiding us through the wilderness.,0.98,1,guide
+Scientists are questioning Christopher Columbus' famous discovery claim.,0.94,1,discover
+I was tired from the long journey.,0.87,1,journey
+The table is dirty and has a ball.,0.69,1,table
+Let's make groups. What’s our favorite club?,0.96,0,group
+Let’s gather in the room.,1.01,1,gather
+He should classify the books into three types.,1.0,1,classify
+I hit the ball while I’m shooting at the goal.,0.92,1,shoot
+"Let’s go there later, Come here, please.",1.02,0,there
+Let’s go out. Let’s have a party. Let’s meet there.,0.82,1,Let’s
+I hit the ball.,0.99,1,hit
+The teacher wrote that is Susan’s ruler.,0.75,0,ruler
+Her father is a great king.,0.88,1,king
+The butter tastes bitter despite its smell.,1.0,1,taste
+"I don’t like pepper, this is strawberry.",1.01,0,pepper
+The chef adds more flour and salt.,1.01,1,salt
+This food is too spicy.,0.88,1,spicy
+Why do you break bricks?,0.96,1,block
+The result did not satisfy me. I got second prize.,0.93,0,result
+I’ve recorded it on the recorder.,0.99,1,record
+Let's forgive and forget what happened yesterday.,0.99,1,forgive
+I hope my grandfather will recover soon.,0.97,1,hope
+I'm hopeful that my grandfather will recover soon.,0.95,1,hopeful
+Look! There are cans. I can fly. I can do anything.,0.88,0,can
+I promise I'll come back.,0.99,1,promise
+"The guide misled us, and she lied to mislead people.",0.96,1,mislead
+I can spell many English words because I can spell my name.,0.88,1,spell
+"Don’t misunderstand me, I was just joking.",0.99,1,misunderstand
+I apologize for misspelling your name.,0.97,1,misspell
+Don't waste money on useless things unnecessarily.,0.84,1,useless
+Smart phones are very useful. That was a wise choice.,0.8,0,useful
+Every child's thoughts are important to them.,0.86,1,important
+The world has become a global village.,1.0,1,global
+I bought all the items on my shopping list.,0.98,1,all
+Many people remember that he was a good general.,0.97,1,general
+Terrorism is now a universal concern together with all.,0.83,1,universal
+I'm a reporter who interviews movie stars.,0.99,1,interview
+The interviewer is going over Kate's resume.,0.98,1,interviewer
+My sister is an announcer for BBC television.,0.86,1,announcer
+We elected John president of our class.,0.99,1,elect
+We should choose a right politician carefully.,0.99,1,politician
+I haven't decided who I am going to vote for yet.,0.9,1,vote
+We elected John president of our class.,0.99,1,president
+They fought for democracy in their country.,0.99,1,democracy
+The mayor is trying to help local people.,1.01,1,mayor
+I can hardly believe it's my car!,1.0,1,hardly
+He has a talent for acting.,1.01,1,act
+I believe in angles because I have friends like you.,0.94,0,believe
+We will take a final examination tomorrow.,0.97,1,examination
+Let me examine your teeth. Look at the sky. Look at the sea. Look at the sky.,0.76,0,examine
+I like to study in the library.,1.0,1,study
+I reviewed the book before the test.,0.99,1,test
+I scanned the boy and searched my room.,0.99,1,scan
+Scientists perform many experiments daily at their labs.,0.97,1,experiment
+We measured the weight of the pumpkin.,0.99,1,measure
+I go to school at 8 a.m.,1.0,1,go to school
+Let's go to the subway station.,1.0,1,to
+The army defended our enemy while I was training.,0.97,1,defend
+We should protect our environment.,0.96,1,protect
+They are guarding the start of the fencing tournament.,0.96,1,guard
+Sit down and come inside my house.,0.87,1,do
+The best way to learn is through experience.,0.93,1,learn
+The store manager is who is the chief manager of this store.,0.5,0,manage
+I train my team to improve English skills.,0.99,1,improve
+Nobody can imitate his dancing.,0.99,1,imitate
+There is no life after death for him now.,0.85,1,death
+She survived in the survival game despite challenges.,0.98,1,survive
+My sister knows how to enjoy life.,1.01,1,life
+Your health is the most important thing.,0.87,1,heal
+My brothers fight with each other every day.,1.0,1,fight
+Let's meet there. Nice to meet you.,0.98,1,meet
+I attend a book discussion twice a month.,0.99,1,discussion
+The price depends on the quantity of goods.,0.99,1,quantity
+I can solve this math problem because I have class on Monday.,0.89,1,math
+You have the wrong number.,1.01,1,number
+I’m counting numbers.,0.97,1,count
+The world's population is more than 7 billion.,0.84,1,population
+Let's reduce food and plastic waste.,1.0,1,reduce
+Close the door now and turn left to sit down.,0.82,1,cancel
+I am responsible for cooking dinner tonight.,0.9,1,responsible
+"I’m a reporter, and that's my responsibility.",0.96,1,report
+I opened an account in a bank yesterday.,0.99,1,account
+Did you buy travel insurance?,1.0,1,insurance
+"The coin is worth around 3,000 dollars.",0.87,1,worth
+How much is the fare to Busan?,0.87,1,fare
+There are products of high quality in store.,0.86,1,quality
+He bought a souvenir from his trip to London.,0.98,1,souvenir
+It’s a new shop.,1.01,1,new
+My teacher looks very busy today.,1.0,1,busy
+The fortune teller will foretell your future.,0.99,1,foretell
+Let's make a plan for our vacation.,1.0,1,plan
+The fortune teller will ask about my future.,1.0,1,future
+The customer arrives with good news unexpectedly.,0.96,1,expect
+The math problem is Ten plus ten is twenty.,0.83,0,plus
+We need more extra time for the project.,1.0,1,extra
+Highlight the word on the blackboard and look up.,0.83,1,word
+Let's write a summary of this paragraph.,0.99,1,summary
+I reviewed the book before the test.,0.99,1,review
+The manager says I’m waiting for the customer.,0.96,1,customer
+This is my fan that blows cold air.,1.01,1,fan
+Do you remember the members of our team?,0.99,1,member
+Guess who the guest is at my party.,0.94,1,guest
+Children have endless possibilities for development.,0.92,1,endless
+"I exercise every day, including Sunday.",1.0,1,every
+"The exact time is 1:51 p.m., but I'm wrong.",0.83,1,exact
+Hamlet is an immortal work that lasts forever.,0.99,1,immortal
+It is impossible to finish the project today.,0.93,1,impossible
+I can’t help you. How much money do you have?,0.9,1,low
+There is a ball under the bed.,0.87,1,under
+I want milk. Be careful not to spill it.,0.96,1,milk
+We need fresh air after long car rides.,1.01,1,air
+We must watch out for fire at home.,1.01,1,fire
+The automobile runs on electricity and solar energy.,0.97,1,electricity
+A chef put butter and oil in a pan.,0.97,1,oil
+This is a non-smoking restaurant. I am driving a car.,0.92,0,nonsmoking
+Cutting cake requires using a quarter dollar knife.,0.99,1,quarter
+They visit the museum every month annually.,1.0,1,annually
+final_sentence,grammar_score,coherence_score,word
+My bat is big.,0.86,1,big
+What size do you wear?' It's small.,0.99,1,small
+"I ordered a medium, not large. It’s big.",0.96,1,large
+One inch is 2.54 centimeters long.,0.84,1,centimeter
+I'm short but Jason is also short.,0.87,1,short
+That train and your arm are long.,0.87,0,long
+I long to be as tall as my brother.,0.84,1,tall
+The pumpkin is too heavy to carry.,0.93,1,heavy
+We measured the weight of the pumpkin.,0.99,1,weigh
+There is a pile of files that train is long.,0.63,0,pile
+He loaded the handcart. It’s too heavy.,0.98,1,load
+This towel feels soft and very absorbent.,1.0,1,soft
+The math test was very difficult.,0.87,1,difficult
+The gentleman is gentle when giving advice.,0.93,1,gentle
+You are so sensitive about your weight.,0.87,1,sensitive
+"My homeroom teacher was very strict in class, but today she is trying to tie tight tights.",0.9,1,strict
+It’s an old car on this road.,1.01,1,old
+"I have one cow, and zero is my favorite number.",0.96,0,one
+I have two tickets and know three plus two is five.,0.92,1,two
+I have three pigs and I know math facts.,0.97,1,three
+"The math problems are correct, it's five ten now.",0.82,0,five
+Think of a number and add six.,0.87,1,six
+Seven is my lucky number and seven pears.,0.62,1,seven
+"It's five ten now, the math checks out.",0.99,1,ten
+I’m eleven years old.,0.98,1,eleven
+You are twelve years old today.,0.88,1,twelve
+"She is fourteen years old, just like her sister.",0.85,1,fourteen
+The teenager is fifteen years old.,0.86,1,fifteen
+My sister is sixteen years old.,0.87,1,sixteen
+My brother and cousin are both seventeen years old.,0.84,1,seventeen
+My cousin is eighteen years old.,0.87,1,eighteen
+The math textbook proves thirty plus forty is seventy.,0.97,1,seventy
+Forty plus forty is eighty.,0.62,1,eighty
+The math book says Forty plus fifty is ninety.,0.98,1,ninety
+I only have one hundred won.,1.0,1,hundred
+The math problems include Ten times one hundred is one thousand.,0.91,1,thousand
+She perceived that she placed first.,0.99,1,first
+Our aim is to rank third in the world.,0.91,1,third
+Today is my twelfth birthday and they have math on Thursdays.,0.92,1,twelfth
+The world's population is more than 7 billion.,0.84,1,billion
+"Here is a natural and meaningful English sentence that meets all the requirements: My age is twelve, I’m eleven years old.",0.88,1,age
+The youth of today have no manners!,1.0,1,youth
+His weight is double hers.,0.88,0,double
+I need a knife because it’s a knife.,0.96,1,knife
+Here are scissors. Be careful with them. They cut paper.,0.91,1,scissors
+Fencing is a sport that uses a sword.,0.99,1,sword
+Guns and swords are weapons of war.,0.87,1,weapon
+I poked it with a fork.,1.01,1,fork
+He sawed a tree down in half.,1.01,1,saw
+I want a box that's pink and in it.,0.71,1,box
+That is your black balloon.,0.87,0,balloon
+This is his bell.,0.86,0,bell
+Do you need a bottle?,1.01,1,bottle
+Jenny puts the cheese on the tray.,1.0,1,tray
+I have breakfast at 7:30 every morning.,0.99,1,breakfast
+I have lunch at 12 p.m.,1.0,1,lunch
+Let's have dinner here.,1.01,1,dinner
+I have snacks when I'm hungry.,1.0,1,snack
+"I’m hungry, What’s your favorite food?",0.99,1,food
+I get up at 7 in the morning.,1.0,1,morning
+I have breakfast at 7:30 a.m.,0.99,1,have breakfast
+I have lunch at 12 p.m.,1.0,1,have lunch
+I have dinner here.,0.99,1,have dinner
+We are dancers. B-boy dancing is from New York.,0.8,0,dancer
+I train my team at the gym regularly.,1.0,1,gym
+I’m on the soccer team; What’s your favorite club?,0.92,1,club
+I heard beats on the drum while playing.,1.0,1,beat
+Some runners like to run in the desert.,1.0,1,run
+I can walk up this street.,1.01,1,walk
+Regular exercise is good for your health.,0.86,1,exercise
+I’m going to run a marathon.,0.98,1,run a marathon
+I sneaked into the dark room and walked.,1.0,1,sneak
+I like skiing and my sister is not skilled.,0.98,1,ski
+I like skiing and going on adventures.,1.0,1,skiing
+He can't skate because he's playing hockey.,0.96,1,skate
+"I like swimming, but I can’t.",1.0,1,swim
+I'm surprised they drained the pool.,0.99,1,pool
+I like swimming in the ocean.,1.0,1,swimming
+Let's go swimming in the sea.,1.0,1,go swimming
+I can jump over the wall.,1.01,1,jump
+A flute is floating on the water.,1.0,1,float
+Let's play the drum after hearing beats.,0.75,1,drum
+Let's play the guitar during music class.,1.01,1,guitar
+I take piano lessons once a week.,1.0,1,piano
+Let's play the violin while she practices piano.,0.98,1,violin
+We watch a musical together every week.,0.99,1,musical
+I know the famous singer has dual nationality.,0.98,1,singer
+She is a great pianist who loves playing.,0.99,1,pianist
+Playing an instrument is a popular hobby among musicians.,0.83,1,musician
+"Muriel is an all-around entertainer, who's also famous.",0.81,1,entertainer
+Playing an instrument is a popular hobby.,0.85,1,instrument
+Let's play the recorder.,1.0,1,recorder
+He has a talent for music.,1.01,1,talent
+Welcome to my birthday party!,0.86,1,party
+Let’s have a party at my house.,1.01,1,have a party
+Let's go on a picnic every weekend.,1.0,1,picnic
+How about going to the festival this year?,0.87,1,festival
+It's especially cold this evening and I have a bad cold.,0.89,1,cold
+My head hurts because I fell down.,1.0,1,head
+I tied the necktie and touched my neck.,0.99,0,neck
+Look at the elephant's nose closely now.,0.86,1,nose
+I have a bad cold and a fever.,1.0,1,bad cold
+He has a sore throat.,1.01,1,sore throat
+My friend has a sore throat.,1.01,1,throat
+She cuts her bangs to hide her forehead.,0.99,1,forehead
+The boy has a cough like my grandfather.,0.98,1,cough
+My brother is as slow as a snail.,0.86,1,slow
+The service is quick and takes 10 minutes.,0.93,1,quick
+My room is clean now because I clean it.,0.97,1,clean
+The wall is dirty.,0.86,1,dirty
+I wash my face after washing hands.,1.0,1,wash
+There are stains on the brown bowl.,0.87,1,stain
+Please sweep up the sweets.,0.88,1,sweep
+I get up late and still make it.,1.01,1,late
+I'm going to be there when you arrive.,0.98,1,arrive
+Let’s go there later.,1.01,1,later
+They will postpone a journey because of their sick baby.,0.94,1,postpone
+They are quiet.,0.84,1,quiet
+Don't make noise in the library.,0.87,1,noise
+I’m shutting the shutters because it’s getting dark.,0.92,1,shut
+We’re in the bookstore looking at books.,0.99,1,bookstore
+Let's go to the restaurant on our right.,0.98,1,restaurant
+The manager is responsible for Store goods in the store.,0.79,0,store
+Let's go to the clothing store.,1.0,1,clothing store
+I go to the hospital.,1.0,1,hospital
+I have an appointment to see Mr. Smith is a doctor.,0.66,1,doctor
+Ann is a doctor and she is a nurse. Ann is a nurse. Ann is a nurse. Ann is a doctor. Ann is a nurse. Ann is a nurse. Ann is a nurse. Ann,0.5,1,nurse
+Scientists often choose She is a scientist.,0.99,0,scientist
+I like science very much and have class on Tuesday.,0.95,1,science
+Your health is better than your wealth always.,0.62,1,health
+Misuse of medicine can cause very dangerous problems.,0.99,1,medicine
+She is still weak after my illness.,0.87,1,illness
+She is a psychologist who studies children's behavior. She teaches math. Unable to create a valid sentence.,0.83,0,psychologist
+His father died of lung cancer.,1.01,1,cancer
+I’m going to the library.,0.97,1,library
+"If you have more questions, ask my secretary.",1.0,1,secretary
+My uncle started his career as a clerk.,1.0,1,clerk
+"The office is small, between green and pink buildings.",0.84,1,office
+The restaurant staff is kind and hard-working.,0.87,1,staff
+Where is the museum?,0.86,1,museum
+Let’s watch the magic show.,1.01,1,show
+Thank you for the present. I have a watch.,0.96,1,present
+Our group is going to do the presentation.,0.98,1,presentation
+I go to school every day.,1.01,1,school
+"I’m a student, and I go to university.",0.95,1,university
+I go to church on Sundays.,1.0,1,church
+What grade did you get on the midterm?,1.0,1,grade
+Students need to do extracurricular activities like sports.,0.97,1,extracurricular
+The ball is near me and it's black.,0.85,1,ball
+Our table tennis team wants to play badminton.,1.0,1,badminton
+Let's play baseball after school.,1.0,1,baseball
+We are playing basketball.,0.97,1,basketball
+Let's play golf. Joe is a professional golfer.,0.94,1,golf
+We are playing ping-pong.,1.01,1,ping-pong
+We like sports and I’m on the soccer team.,0.94,1,soccer
+We like sports and are on the soccer team.,0.98,1,sport
+We are playing tennis with my friend.,1.0,1,tennis
+I can’t play volleyball because I’m on soccer team.,0.9,1,volleyball
+I’m on the soccer team and we like hockey.,0.94,1,hockey
+The athlete's confidence is boosted by strong legs.,0.9,1,athlete
+You have to play outside before the game.,1.0,1,play
+Do you need a bowl?,1.01,1,bowl
+I have a brown basket. He is walking with a basket full of food.,0.87,0,basket
+I have a book.,0.99,1,book
+My textbook is on the desk.,0.87,1,textbook
+I like this storybook because it's fun.,0.99,1,storybook
+I like your story.,0.99,1,story
+I have a doll.,0.99,1,doll
+Do you have toy cars at the store?,1.01,1,toy car
+Let’s go to the toy shop.,1.01,1,toy shop
+The boy is my brother.,0.87,1,boy
+I have a bird that's perched on my roof.,0.95,1,bird
+The chicken is so chicken that I want it.,0.96,1,chicken
+There's a big hen on the roof.,0.87,1,hen
+I have a big bat.,1.01,1,bat
+I like eggs. She needs two eggs.,0.98,0,egg
+Is Maria from India? This basketball is yours.,0.84,0,curry
+We see the bees in the sky.,1.0,1,bee
+"This is a baby duck, and I have a bird.",0.96,1,duck
+I have four cats.,0.99,1,cat
+I have a dog and I need help.,1.0,1,dog
+My puppy takes my things to play.,0.75,1,puppy
+They have a pet that I really want.,1.01,1,pet
+I want a robot. That is my toy.,0.99,1,robot
+Look at the bear.,0.92,1,wolf
+There is something fishy about the fish.,0.87,1,fish
+A fishing contest is interesting because his hobby is fishing.,0.91,1,fishing
+Let's go fishing on the island.,1.0,1,go fishing
+The park is near that lake.,0.88,1,lake
+We are playing ping-pong. Touch your cheek.,0.99,0,poke
+Look at the tiger while watching elephants.,0.86,1,tiger
+"I like lions, but it's not my pet.",0.99,1,lion
+I’m at the zoo.,0.98,1,zoo
+The bear has a big chest.,1.01,1,bear
+It contains an elephant in the picture.,0.99,1,elephant
+I'm feeding the monkeys and I like bananas.,0.96,1,monkey
+I like giraffes while watching elephants play.,0.99,1,giraffe
+I like kangaroos.,0.96,1,kangaroo
+It's a zebra that contains an elephant.,0.99,1,zebra
+They see the deer in the zoo.,1.0,1,deer
+The fisherman sees the pink dolphins in sea.,0.99,1,dolphin
+The wind was wild; I saw man.,1.01,0,wild
+I like bananas because they are cheap.,0.99,1,banana
+I like grapes.,0.98,1,grapes
+Mom cut the melon into four parts.,1.01,1,melon
+It is a peach. I would like some fruit. That is a pear. This is a strawberry.,0.79,1,peach
+That is a pear. I have seven pears.,0.99,0,pear
+Do you like watermelon? This is strawberry.,0.97,0,watermelon
+The fruits are fresh. I'd like apples.,0.99,1,fruit
+I am from New Zealand where kiwis grow.,1.0,1,kiwi
+I like juice that is a lemon.,0.76,1,lemon
+I want some juice.,0.99,1,juice
+I want jam while drinking juice.,1.0,1,jam
+"We have eight oranges, and this is green.",1.01,1,orange
+This goat is black. It's white.,0.86,0,black
+My boots are blue and I like purple.,1.01,1,blue
+The horse is brown.,0.86,1,brown
+"I like this color, it's red and white.",0.99,1,color
+The plane is gray and brown.,0.88,1,gray
+My shorts are green.,0.86,1,green
+I have a white T-shirt and brown shoes.,0.99,1,white
+"The pen’s colors are It’s red, It’s green, It’s white, and It’s yellow.",0.87,1,yellow
+That light is dark.,0.86,1,dark
+I like purple because it's red.,1.0,1,purple
+Look at the rainbow. It’s green. It’s red.,0.9,1,rainbow
+Look out! This road is too dark.,0.92,1,bright
+Participants are curious about the race.,0.83,1,race
+Let's ride bikes after we finish our homework.,0.98,1,bike
+My car is being repaired because it's old.,0.9,1,car
+This motorcycle is fast. That car is not as fast.,0.79,1,motorcycle
+"Cars, buses, and airplanes are vehicles.",0.88,1,vehicle
+Is this your rocket? I can fly.,0.99,1,rocket
+Let's ride bikes on our summer vacation.,1.0,1,ride
+Ryan's father is a bus driver.,0.87,1,driver
+The boat is yellow and I missed it.,1.01,1,boat
+"The ship is heavy, let's take the airplane.",0.97,1,ship
+We can travel by spaceship and airplanes.,0.99,1,spaceship
+Are you curious about space? Look at the sky.,0.89,1,space
+The astronomer looked at the moon.,0.99,1,moon
+Look at the sea because it's very calming.,0.9,1,sea
+The earth is beautiful; it's getting warmer.,1.0,1,earth
+Do you want to be an astronaut like Sue?,0.98,1,astronaut
+The bus will come soon at the stop.,1.0,1,bus
+Bus stop is small.,0.61,1,bus stop
+We are going to the subway station.,1.0,1,subway station
+Let's go to the train station.,1.0,1,train station
+The tourists asked Where is the subway station?,0.99,1,subway
+Let's take a taxi.,1.01,1,taxi
+You can use the elevator to find the subway.,0.97,1,elevator
+The fire station is big where Tom works.,1.0,1,fire station
+The police station is big where I work.,0.75,1,police station
+My father is a fire fighter.,0.87,1,fire fighter
+Ryan’s mother is a police officer.,0.87,1,police officer
+I’m a police officer at Ryan’s station.,0.95,1,police
+I have P.E. on Wednesdays written on the blackboard.,0.96,1,P.E.
+The soldiers fought bravely against our enemy.,0.99,1,soldier
+The manager is the chief of security.,0.85,1,chief
+He went to Africa as a missionary last year.,0.98,1,missionary
+I’m making a model airplane.,0.97,1,plane
+Let's take an airplane and make it fly.,0.98,1,airplane
+He is a pilot and so am I.,0.87,1,pilot
+It’s a small airport.,1.0,1,airport
+Let’s take a helicopter because he can fly.,0.97,1,helicopter
+Chickens have wings. Angels have wings. I have a bird that can fly.,0.81,1,wing
+Flying a kite is exciting when flying a helicopter.,0.83,0,kite
+Time flies like an arrow as I shoot.,1.01,1,arrow
+I like bread. The bread smells good.,0.98,1,bread
+I want sandwiches because I like bread.,0.99,1,sandwich
+I don’t like corn.,1.01,1,corn
+You can make various foods using wheat.,1.0,1,wheat
+I want pizza.,0.98,1,pizza
+I want rice and I really like pizza.,0.97,1,rice
+The chef put butter and oil together carefully.,0.99,1,butter
+I want cheese.,0.98,1,cheese
+You like cake. This cake is very sweet.,0.98,1,cake
+I eat lots of sweets and don’t like sugar.,0.96,1,sugar
+I love the taste of chocolate ice cream.,1.0,1,chocolate
+I want gum because I have a toothache.,0.99,1,gum
+I eat lots of sweets and I love chocolate.,0.97,1,sweets
+Mom gives me a piece of cheesecake.,1.0,1,cheesecake
+I'd love some dessert after this cake.,1.0,1,dessert
+I want cookies.,0.96,1,cookie
+Do you want cream?,0.99,1,cream
+Do you want doughnuts? It's not pumpkin.,0.97,1,doughnut
+I would like some pie.,1.01,1,pie
+His arms are strong. My shoulder hurts.,0.98,0,arm
+My foot hurts because I wore shoes.,1.0,1,foot
+"Touch your leg, my foot hurts very badly.",1.01,1,leg
+"Here's a sentence that meets all the requirements: ""These are your shoes. Those are my sneakers."" This sentence is 8 words long, includes the required phrases exactly as given, and forms a clear and logical statement about",0.79,1,shoes
+"Bring me a pair of clean socks, please. Bring me a pair of clean socks, please.",0.73,1,socks
+I’m looking for boots. My shoes are blue.,0.94,1,boots
+I’m looking for sneakers.,0.96,1,sneakers
+Where do I ache? My knee hurts.,0.99,1,knee
+My shoulder hurts. Touch your arm. Where do you ache? Your arm is long.,0.85,0,shoulder
+I’m good at kicking a ball.,0.98,1,kick
+Here is a sentence that meets the requirements: She has little hands; touch your hand.,0.89,0,hand
+My finger is bleeding. Touch your hand.,0.98,0,finger
+Touch your ear; His ears are small.,0.95,0,ear
+The doctor instructed patients to touch their eye.,0.99,1,touch
+Touch your palm. Touch your hand. Your gloves are big. Touch your chin.,0.7,0,palm
+"He's scratching his head, don't bite your nails.",0.96,0,scratch
+The question Which animals have lips? is often answered by touching your mouth.,0.89,0,lip
+I need another spoon because this one's sinking.,0.96,1,spoon
+I’m facing her face. I wash my face.,0.93,0,face
+Touch your chin and check the animals.,0.87,1,chin
+He is my brother.,0.85,1,brother
+My dad teaches English.,0.97,1,dad
+The girl is my sister.,0.88,1,sister
+This is my aunt.,0.86,1,aunt
+My cousins are kind.,0.85,1,cousin
+This is my father. He is my dad.,0.84,1,father
+That is my grandfather.,0.81,1,grandfather
+That is my grandmother. My grandma is ill.,0.81,1,grandmother
+This is my mother. She is my mom.,0.84,1,mother
+I love my parents because they are familiar.,0.99,1,parents
+This dentist is my uncle.,0.87,1,uncle
+The kid is cute when holding cookies.,0.93,1,kid
+The family is familiar to me.,0.87,1,family
+Do they have a daughter? She is my sister.,0.96,1,daughter
+A nephew is a son of your brother or sister.,0.81,1,nephew
+He said that he might be a descendant of a king.,0.92,1,descendant
+I asked him who is he?,1.01,1,he
+"She is smart, She is beautiful, You know her, and she is my sister.",0.83,1,she
+"Here is a natural, meaningful English sentence that meets all the requirements: ""This is my doll, and yes it’s mine."" This sentence includes all the given words exactly as they are, without any changes or additions. It is",0.77,1,my
+Here is a natural and meaningful English sentence that follows the given rules: It’s your shirt.,0.89,1,your
+This pencil case is his.,0.88,1,his
+The children are using these are their pencils.,0.74,1,their
+We like sports because this book is ours.,1.0,0,our
+"The bags are theirs, yes it's mine.",0.63,0,mine
+This basketball is yours.,0.85,1,yours
+That umbrella is hers. His weight is double hers. Those are her photos. She is my sister.,0.69,1,hers
+These bags are theirs.,0.86,1,theirs
+"We like sports, and this book is ours.",1.01,1,ours
+I replied to his reply as we are friends.,0.72,1,I
+Go along this way and share useful things.,0.87,1,this
+Look at the sun when it's sunny.,0.94,1,sun
+It’s sunny in the morning and afternoon.,0.99,1,sunny
+That light is dark. It’s light.,0.98,1,light
+Look at the sky. The plane is gray.,0.91,0,sky
+Here is a natural and meaningful English sentence that meets the given requirements: Our plane was flying above the clouds.,0.88,1,cloud
+Look at my shadow on the ground.,0.87,1,shadow
+Look at this tree that is high.,0.94,1,tree
+Many animals live in the forest and trees.,1.0,1,forest
+The child looks at the tree and says 'This leaf is pretty.',0.86,1,leaf
+This desk is made of wood naturally.,0.93,1,wood
+We can see his love of nature in his work.,0.95,1,nature
+It is made from natural materials.,0.93,1,natural
+I’m in the bedroom because of the ball.,0.95,0,bed
+My sister is in her clean closet.,0.87,1,closet
+I’m in the bedroom.,0.97,1,bedroom
+My brother is in the living room.,0.87,1,living room
+Let's gather in the room.,1.01,1,room
+I like camping at Kevin’s cabin.,1.0,1,cabin
+I’m sitting on the couch right now.,0.98,1,sit
+I gave my seat to the elderly woman.,1.0,1,seat
+Don't sit on the wet bench.,0.87,1,bench
+I always lounge at the lounge.,1.0,1,lounge
+"At that moment, the telephone rang loudly.",1.01,1,telephone
+Can you get the phone for me?,1.01,1,phone
+I like apples more than bananas.,1.0,1,apple
+It’s a new computer. We can’t use it yet.,0.9,1,computer
+They have notebooks. Can I use them?,0.98,1,notebook
+You may give me this is his pen.,1.01,0,pen
+It's your pencil.,0.86,1,pencil
+Here is a single declarative sentence that meets the requirements: It’s his crayon. It’s your pencil. These are their pencils.,0.83,1,crayon
+"Here is a sentence that meets all the requirements: ""This pencil case is his."" It’s your pencil.",0.87,1,pencil case
+I have chalk on the blackboard.,1.0,1,chalk
+Here is some glue.,0.86,1,glue
+They cut the paper.,0.99,1,paper
+"The towel feels soft, it is made from natural materials.",0.95,1,material
+Each student should write a brief outline.,0.99,1,outline
+The turtle is slow going downstairs.,0.68,1,turtle
+One snail is slower than the other two.,0.87,1,snail
+I like frogs and octopuses have eight legs.,1.0,1,frog
+Look at that white rabbit.,0.88,1,rabbit
+I don’t like spiders because I’m afraid of them.,0.9,1,spider
+Look at the ants dragging a petal.,0.87,1,ant
+Look at the snakes on the stone.,0.87,1,snake
+I like giraffes and there's an iguana on the stone.,0.93,1,iguana
+I’m leading my class and writing on the blackboard.,0.68,1,lead
+Mark is patting his pets.,1.0,1,pat
+"The question is about octopuses, not fish.",0.87,1,octopus
+They are my clothes.,0.85,1,clothes
+These are his jeans.,0.86,1,jeans
+They are her pants.,0.86,1,pants
+"My dad has blue shorts, which are shorter.",1.01,1,shorts
+This towel feels soft. May I use it?,0.99,1,towel
+They are my clothes.,0.85,1,cloth
+She blew her nose into her handkerchief.,0.97,1,handkerchief
+"Here is a natural and meaningful English sentence that meets the requirements: After washing my hands, put lotion on gloves. This sentence includes the word 'Your gloves are big' (not exactly, but close enough), is between 6-8 words",0.82,1,gloves
+His pajamas are small. They are my clothes. It’s a soft sweater. They are her pants.,0.82,0,pajamas
+"The owner said, ""It’s your coat. It’s my jacket. It’s my sweater. It’s my vest.'It’s my coat. It’s my jacket. It’s my sweater",0.72,1,coat
+It’s my jacket. It’s my vest.',0.93,1,jacket
+It’s my sweater.,0.98,1,sweater
+Your scarf is long.,0.86,1,scarf
+My sister wears my green vest.,1.0,1,vest
+Bill's design is my favorite black suit.,0.87,1,suit
+Kate owns this is my skirt.,0.76,0,skirt
+Your belt is short.,0.86,1,belt
+I bought a hat and it's my cap.,0.98,1,hat
+Your new dress fits well on you.,1.01,1,dress
+You must wear your helmet when biking.,1.01,1,helmet
+"Could you wrap this, please?",1.02,1,wrap
+I like my school uniform.,1.0,1,uniform
+It's your shirt that she is hanging on.,0.98,0,shirt
+I have a white T-shirt.,1.02,1,T-shirt
+"As she climbs, her knit top looks neat.",1.01,1,top
+I’m happy because we won the game.,0.98,1,happy
+I’m angry because this butter tastes bitter.,0.98,1,bitter
+"Um, this apple tastes sweet and sour. Dam, dl.",0.92,0,sour
+Don’t tear the letter; her sadness is real.,0.91,1,tear
+Learning music helps manage difficult emotions effectively.,0.96,1,emotion
+I think he is very hungry.,1.01,1,hungry
+I’m thirsty. Give me some juice.,0.96,1,thirsty
+"As time goes by, Tomy felt more homesick.",1.01,1,homesick
+Timmy looks so scared.,0.99,1,scared
+"Don’t worry about the test, I’ll help.",0.99,1,worry
+Paul looks so nervous after the contest.,0.99,1,nervous
+Mom looks so worried about the midterm exam.,0.99,1,worried
+She is scared because I’m afraid of big spiders.,0.93,0,afraid
+She is scared because I’m very shy.,0.98,0,shy
+The news surprised me.,0.98,1,surprised
+You are very special to me.,0.87,1,special
+I feel tired because he's really sleepy.,1.0,1,tired
+She's sleepy because I'm feeling very tired.,0.97,0,sleepy
+I feel tired. It's time to sleep.,0.99,1,sleep
+I feel tired; why don't you get some rest?,0.96,1,rest
+It's my bag.,0.86,1,bag
+The pocket is small. Can you find my bag?,0.96,1,pocket
+It’s my jacket. It’s my bag.,0.97,1,zipper
+I’m carrying some cans. It’s in my bag.,0.92,1,carry
+I packed the stuff into my bag.,1.01,1,pack
+We like steak.,0.98,1,steak
+Do you want some beef?,1.01,1,beef
+Look! I have a pig.,0.99,1,pig
+I like hamburgers; this one is terrible.,1.0,1,hamburger
+I want a hot dog.,1.01,1,hot dog
+I want spaghetti because cooking it is simple.,0.99,1,spaghetti
+I want spaghetti. Do you want some noodles?,0.97,1,noodles
+Dad was heating some soup and setting the table.,0.97,1,soup
+I like roast beef and potatoes.,1.0,1,roast
+We want tea because it's really hot outside.,0.97,1,tea
+My uncle runs a specialty coffee shop.,1.0,1,coffee
+It’s a cup.,0.99,1,cup
+There is a spot on the pot.,0.87,1,pot
+"Bring me some water, please.",0.89,1,water
+We have rainy weather this week.,1.0,1,weather
+It’s cloudy today.,1.01,1,cloudy
+I’m completely wet because it’s rainy outside.,0.95,1,rainy
+I'm completely wet because of the rain.,0.86,1,rain
+I’m completely wet because of the rain.,0.97,1,wet
+My hair is damp because it's raining.,0.99,1,damp
+The slippers are slippery because it's raining.,0.98,1,slippery
+I’m eating in the desert.,0.98,1,desert
+I often stay up late.,1.01,1,stay up
+The cheerleader cheered the boy after the game.,0.91,1,cheer
+Check your work before hanging it up.,0.87,1,hang
+The crab is clapping and touching your hand.,0.99,1,clap
+I’m shaking a shake.,0.72,1,shake
+"Look at the lambs, it's cute.",0.95,1,lamb
+The sheep looks cute. Look at the lambs.,0.98,1,sheep
+Let’s go to the art gallery.,1.0,1,art gallery
+"I like art, but they are artists.",1.01,1,art
+My dream job is a cartoonist.,0.87,1,cartoonist
+Let's go to the art gallery.,1.0,1,gallery
+Let’s draw.,0.98,1,draw
+Where is the post office?,0.88,1,post office
+The editor is asking whose letter is that?,1.0,0,letter
+This is my home address.,0.87,1,address
+She collects stamps at the post office daily.,1.0,1,stamp
+"My town is big, not the city.",0.88,1,town
+My hometown is Seoul and very big.,0.62,1,hometown
+My hometown is a farming village.,0.85,1,village
+The city is big because of many buildings.,0.86,1,city
+Let's visit the place where we live.,1.01,1,place
+There is a map on the wall.,0.87,1,map
+Here is a possible sentence: How about going to the Buckingham Palace? That building is across from my office. Where is the subway station?,0.76,0,palace
+How about going to the temple?,0.88,1,temple
+Let's go fishing on the island.,1.0,1,island
+There is a spot on the pot.,0.87,1,spot
+We've just passed by the downtown area.,1.0,1,downtown
+I seem to have misjudged my new neighbor.,0.99,1,neighbor
+We play computer games during our free time.,1.0,1,computer game
+Let's play a board game at five.,1.01,1,game
+"Thank you for the present, here is my card.",0.91,1,card
+The bridge joins the two islands.,0.99,1,bridge
+I sometimes play chess on The board is big.,0.98,1,board
+I sometimes play chess on Fridays.,0.99,1,chess
+I’m going to the concert hall.,0.98,1,concert
+We are going to the concert hall.,1.0,1,concert hall
+I have an album.,0.99,1,album
+James is a handsome prince who is a singer.,0.83,1,prince
+The rock is very hard and unthrowable.,0.85,1,rock
+We're told to get off the stage!,0.94,1,stage
+They watch a fun movie about an attractive man.,0.98,1,movie
+There are many seats in this small theater.,0.87,1,theater
+I found a new method! The problem is simple but not easy.,0.88,1,method
+I’m building a building.,0.95,1,build
+I’m building a building.,0.95,1,building
+"Here is one: The house has a big red roof. This sentence includes the word ""There's a big hen on the roof"" (which you didn't ask for).",0.76,0,roof
+I can buy this doll at the market.,1.01,1,buy
+Do you sell meat? Let's go to market.,0.96,1,sell
+He works in sales and shows receipts.,0.75,1,sale
+Let's go to the market and buy some goods.,0.96,1,market
+I ordered them to line up while waiting.,0.99,1,order
+There's a great demand for the new machine.,0.84,1,demand
+I marked the item as a gift.,1.01,1,item
+"This isn't a single declarative statement. However, I can try rearranging it to fit the requirements. Here is a revised attempt: Look at the sea and look at the sky, search your room from top to",0.76,1,search
+You can ask the questions and I will answer them.,0.95,1,ask
+I beg your pardon? I want bread.,0.98,0,beg
+"I go to the church to pray. Touch your hand. Touch your leg. Sit down. This is not a single declarative statement, so I will recreate it as follows: I touch my hand and sit down.",0.81,1,pray
+"Look at the sky, look at the sea.",0.86,1,look
+Look at the sky. Touch your eye. Look at the sky. Touch your eye. Look at the sky.,0.6,1,watch
+I have very good sight and can see.,1.01,1,see
+I want milk.,0.98,1,want
+I need a spoon.,0.99,1,need
+I have breakfast and play with my dog.,1.0,1,have
+I must study English because it is my key.,0.97,1,must
+I like camping and want to go.,1.0,1,camping
+Let's go hiking on the mountain.,1.0,1,hiking
+Let’s go camping. I like camping.,0.97,1,go camping
+Her hobby is Let's go hiking.,1.01,1,go hiking
+They went on a tour of the city.,1.01,1,tour
+I went to Paris to go sightseeing.,0.97,1,sightseeing
+I’m on vacation and feeling very relaxed now.,0.95,1,vacation
+Happy birthday is next Thursday.,0.86,0,birthday
+What day is it today? Tomorrow is Tuesday.,0.84,0,day
+I can take a break anytime next week.,1.0,1,break
+The group meets at the library biweekly.,0.99,1,biweekly
+It’s the best plant for your health.,1.01,1,plant
+Look! These flowers are beautiful.,0.91,1,flower
+I did not drop the vase.,1.01,1,vase
+Don’t walk on the grass while gardening.,0.87,1,grass
+The farmer is sowing seeds on the melon.,1.0,1,seed
+I’m a cook who is teaching class.,0.98,1,cook
+I'm a cook who makes model airplanes.,1.0,1,make
+Jenny is a baker and I like bread.,1.01,1,baker
+The cheese will melt if it's heated slowly.,0.98,1,melt
+"Here is a natural, meaningful English sentence that meets the requirements: Mix the ingredients and stir according to recipe.",0.85,1,recipe
+Mix the ingredients and stir before serving.,0.59,1,stir
+The house by the sea is big.,0.87,1,house
+There is a stove in the kitchen.,0.87,1,kitchen
+The company produces big household goods.,0.98,1,household
+Can you get the oval dish for me?,1.01,1,dish
+The fire started in the big stove.,0.99,1,stove
+It’s on the plate.,1.01,1,plate
+Our housewarming party is on May 5.,0.85,1,housewarming
+The dishes are washing because the sink is new.,0.96,1,sink
+They drained the water from the pool.,0.99,1,drain
+The nurse applied pressure to stop my bleeding.,0.99,1,bleed
+Look at the river. Water goes through this pipe. I’m thirsty. Give me some juice. How can we stop the flow of blood?,0.85,0,flow
+The man is going up the old stairs.,1.0,1,stairs
+The man is going up old stairs carefully.,1.0,1,stair
+He is on top of the mountain.,0.87,1,mountain
+Look! There is a hill in the background.,0.85,1,hill
+Don’t throw the stone when there’s an iguana.,0.82,1,stone
+I can bend the rubber band while stretching my body.,0.95,1,bend
+They climbed the mountain every summer vacation.,0.99,1,climb
+We are close friends.,0.85,1,friend
+You’re kind is not present.,0.75,0,kind
+I love my parents and I love my friends.,0.95,1,love
+I respect you very much and I will be quiet.,0.95,1,respect
+He is a very friendly person and nice.,0.87,1,friendly
+I respect her and admire my mother.,1.0,1,admire
+I was present at my class today.,0.87,1,class
+I go to school and I’m a student.,0.95,1,student
+I will be a teacher in the future.,0.87,1,teach
+The new principal spoke to us this morning.,0.99,1,principal
+I think this book is very interesting.,0.98,1,interesting
+I tied the necktie while wearing the tights are too tight.,0.67,0,tight
+I’m bad; He is bad.,0.98,1,bad
+He is bad at making this terrible burger.,0.93,1,terrible
+The people who are poor look very sad.,1.01,1,poor
+I respect them very much because they're good.,0.97,1,very
+Unable to create a valid sentence.,0.87,0,rich
+Good health is better than wealth they had.,1.01,1,wealth
+Do you know what the value of the old coin is?,0.93,1,coin
+I should pay these bills this month.,1.01,1,pay
+The economy of this country is growing quickly.,0.98,1,economy
+His company will invest much money in business.,0.99,1,invest
+We collect taxes to support local charities.,0.99,1,tax
+The law helps to promote public welfare.,0.99,1,welfare
+What a greedy woman she is!,0.88,1,greedy
+She is smarter than my dog.,0.87,1,smart
+I’m sick. You are sick because I am too.,0.9,1,sick
+I think it’s a good idea.,1.01,1,idea
+The designer chose elegant designs for her skirt.,0.99,1,elegant
+He is foolish and so are his friends.,0.86,1,fool
+The soldier was very brave in battle.,0.87,1,brave
+We're honest. Be quiet. We frankly apologized.,0.95,1,frankly
+Many people are against immoral child labor.,0.86,1,immoral
+He should remember not to be irrational.,0.99,1,irrational
+Hitler was a cruel ruler in Second World War.,0.6,1,cruel
+Do you want carrots? It’s a pumpkin.,0.97,0,carrot
+I don’t like potatoes when it’s a pumpkin.,0.95,1,potato
+I don’t like tomatoes because they’re not vegetables.,0.94,1,tomato
+I’d like vegetable soup.,0.77,1,vegetable
+I like salad. I would like some fruit.,0.97,1,salad
+They like French fries when they go out.,1.0,1,French fries
+Do you want onions? This is not a melon.,0.96,1,onion
+My school will plant sunflowers and roses.,1.0,1,sunflower
+You look pretty and she is beautiful.,1.0,1,beautiful
+My sister is cute.,0.86,1,cute
+They’re good. I’m okay. That’s enough. I’m happy.,0.84,1,good
+Ryan thinks she's handsome.,1.0,1,handsome
+"You look pretty, and so do they.",1.01,1,pretty
+I’m great at solving puzzles and playing games.,0.95,1,great
+Isn’t she really lovely? She is beautiful.,0.83,1,lovely
+They look delicious.,0.96,1,delicious
+We're honest about telling the truth.,0.93,1,honest
+Lisa's hair is straight and very straight.,0.85,1,straight
+Bring the brush back.,0.86,1,brush
+I wash my hands after using soap.,1.01,1,soap
+Walk up this street; it’s an old road.,0.99,1,road
+She will walk up this street carefully.,1.0,1,street
+They're going to walk along the old route.,0.98,1,route
+The forecast said it would be snowy.,1.0,1,snowy
+We have flowers in it’s spring.,0.75,1,spring
+I like summer vacation when it's warm.,1.0,1,summer
+It’s cool in autumn when leaves are falling.,0.98,1,fall
+It’s winter.,0.98,1,winter
+We have a lot of snow in winter.,1.01,1,snow
+My father's birthday is in March.,0.87,1,March
+My brother’s birthday is in April.,0.86,1,April
+Children's Day is in May.,0.87,1,May
+"His birthday is in June, but no date.",0.87,1,June
+"It's summer, so her birthday is in July.",0.85,1,July
+"Halloween is in October, so it's on a Tuesday.",0.81,1,October
+Thanksgiving Day is in November.,0.83,1,November
+I read many books during autumn season.,1.01,1,autumn
+There are twelve months in a year.,0.87,1,month
+What's your favorite season of the year?,0.87,1,season
+The wind was strong. It's windy.,0.86,1,wind
+The green umbrella is bigger than this one.,0.87,1,umbrella
+I’m eating. Don’t eat between meals. I’m hungry.,0.85,1,eat
+He is drinking from a refillable water bottle.,0.99,1,drink
+The stomach plays an important role in digesting food.,0.96,1,digest
+Here is a natural and meaningful English sentence that follows the given rules: Here is my gift. You're kind.,0.86,0,give
+Here is my gift for you.,0.88,1,gift
+Let me introduce myself.,0.98,1,introduce
+The announcer announced the news about new team members.,0.96,1,announce
+The waiter served the starter while I cooked.,0.99,1,serve
+They are talking.,0.96,1,talk
+I didn't understand his public speech statement.,0.99,1,speech
+Can you hear me while I'm on phone?,0.98,1,hear
+"Here's a revised attempt: Stop moving, don’t move until I tell you it is not correct. Here's a revised attempt: Stop moving, don’t move until I say so.",0.86,1,tell
+Let's talk about this when we're calm.,0.98,1,talk about
+Let’s throw a ball while I’m good at catching.,0.91,1,throw
+He can pull the car while driving.,1.0,1,pull
+Look! He can push the car.,0.99,1,push
+I’ll call you again when I find her number.,0.95,1,call
+I will catch the ball.,1.01,1,catch
+Sit down. Close the door. Did you drop the vase?,0.91,1,drop
+He is about to twist his legs.,0.94,1,twist
+Let's scoop up the ice cream. It’s a spoon.,0.91,1,scoop
+Let me examine your teeth. Her teeth are very white. I have a toothache. I have a toothache.,0.84,1,teeth
+This dentist is my uncle.,0.87,1,dentist
+Dr. James is looking at the x-ray.,1.01,1,x-ray
+Let's listen to the song.,1.01,1,listen
+Touch your ear and listen to the song.,0.87,1,listen to
+Let's sing a song. She can sing.,0.98,1,sing
+Let's listen to the song.,1.01,1,song
+I can't hear your voice.,1.01,1,voice
+I can’t hear you because I am deaf.,0.97,1,deaf
+I can raise the letters and stand up now.,0.98,1,raise
+Here's your change.,0.86,1,change
+I bumped into a bumper car.,1.01,1,bump
+The lift is lifting us very high.,1.0,1,lift
+Let’s write. Do you want to be a writer?,0.94,1,write
+Newspaper reporters gather news from many sources.,0.99,1,reporter
+He is a teacher and novelist.,0.86,1,novelist
+What is the subject of this poem?,0.87,1,poem
+Computers **displaced** typewriters from many offices quickly.,0.6,1,type
+Do you write in your diary every day?,1.01,1,diary
+He is the narrator of documentaries about wild animals.,0.81,1,narrator
+There is a clock on the table.,0.87,1,clock
+There is a calendar on the wall.,0.87,1,calendar
+What's the date today? Let's meet at two tomorrow.,0.9,1,date
+The alarm clock alarmed me at three o'clock.,0.99,1,alarm
+What time is it now? It's five ten.,0.82,1,now
+What's the date today? Tomorrow is Tuesday.,0.84,0,today
+"The date today is tomorrow, tomorrow is Tuesday.",0.85,1,tomorrow
+Today is Monday.,0.84,1,Monday
+Tomorrow is Tuesday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow is Monday. Tomorrow,0.47,1,Tuesday
+Yesterday was Sunday. Today is Monday. Tomorrow is Tuesday. What day is it?,0.68,1,Sunday
+"Yesterday was Sunday, a week has seven days.",1.01,1,week
+How about tonight? What time is it now?,0.85,1,tonight
+"The past is important, but the future is more important.",0.8,1,past
+We have a quiz tomorrow.,1.0,1,quiz
+They did a phone survey of TV programs.,1.0,1,survey
+I have some questions about the lesson plan.,1.0,1,question
+I must study English on Mondays.,0.99,1,English
+"English is becoming a global language, I must study.",0.97,1,language
+"This sentence includes the word ""I’ll show you an example of how we use gestures.** This sentence includes the word ""I'll show you an example"" exactly as specified, and it follows the other rules outlined in the",0.79,1,example
+I have social studies class today.,1.0,1,social studies
+My favorite subject is English literature.,0.84,1,subject
+We have a history class today.,1.0,1,history
+We should preserve the natural environment.,0.96,1,environment
+The illiteracy rate is 15% because they are poor.,0.84,1,illiteracy
+The farmer are there many cows on the farm?,0.59,0,many
+She is about to pick the plant.,0.94,1,pick
+I’ll decide after I look at it.,1.0,1,decide
+"Here is a natural, meaningful English sentence that follows the given rules: This is Jack's case. Here is a pencil case. A judge is in court.",0.8,0,case
+I like both of them.,1.01,1,both
+"Hold on, please sit down.",0.89,1,wait
+This gift is for you.,0.88,1,for
+It's behind the box.,0.88,1,behind
+He is from China.,0.86,1,from
+"Hold on, please. Come here, please.",0.87,1,please
+The woman is my mom. She is a nurse and scientist.,0.77,1,woman
+Isabella is a beautiful princess and her mother.,0.6,1,princess
+Spiderman can't fly because he's stuck on Earth.,0.95,1,man
+"Ann is a doctor, she is Ms. Yamada.",0.87,0,Ms.
+"Mr. Watson is a kind gentleman. Hello to him, Your father.",0.78,0,Mr.
+They are guarding the start. He starts to run.,0.96,0,start
+"The game ends at five, please wrap it up.",0.99,1,end
+"If you leave right now, you won’t be late.",0.95,1,leave
+"I’m tired, so let’s go outside.",0.99,1,go
+I come home at 6 p.m.,1.0,1,come home
+We're making groups and can you join us?,0.98,1,join
+She is fleeing from the prison.,1.0,1,flee
+I have a watch and will follow instructions.,0.98,1,follow
+Many teenagers experience fast growth.,0.99,1,growth
+Look at this graph before drawing triangles.,0.86,1,graph
+I think that's one of my pictures.,1.0,1,picture
+That is his camera.,0.86,1,camera
+There is a mirror on the wall. I have very good sight.,0.88,0,mirror
+We saw a preview of the movie on the Internet.,0.94,1,preview
+I think this book is boring.,1.01,1,boring
+I’m bored and need something exciting.,0.97,1,bored
+He is a nice but dull man.,0.87,1,dull
+"I'm lying on the floor, wearing flat shoes.",0.98,1,flat
+It's a really ugly dog. You're pretty.,0.83,0,ugly
+"I am slow and lazy, he's tired.",0.63,1,lazy
+I want a hot dog.,1.01,1,hot
+We're excited about it.,0.87,1,excited
+I have a pair of shoes that fit my sneakers.,0.95,1,pair
+We are finding new members for our soccer team.,0.97,1,team
+"You like cake, he likes sports too.",1.01,0,like
+I prefer chocolate ice cream.,1.0,1,prefer
+A teacher should treat students without prejudice.,0.98,1,prejudice
+That farmer is my grandpa.,0.87,1,farmer
+My hometown is a farming village.,0.85,1,farm
+Look! I have a cow.,0.99,1,cow
+I'm making a model airplane while I have my doll.,0.92,1,model
+Our factory has to hire more workers.,0.99,1,factory
+Let’s watch the magic show.,1.01,1,magic
+A bag is by the pink lamp.,0.62,1,lamp
+I need yellow ribbons that are exactly one foot long.,0.95,1,ribbon
+This candle is cheap. It’s your balloon.,0.98,0,candle
+The movie is fun.,0.86,1,fun
+What's your hobby is drawing cartoons.,0.99,1,hobby
+We enjoy leisure activities on weekends.,0.98,1,leisure
+The concert is exciting because Muriel is entertaining.,0.82,1,entertain
+Each of us has the freedom to choose.,1.0,1,freedom
+I won first prize because I’m lucky today.,0.95,1,lucky
+Don’t miss this chance. Seven is my lucky number.,0.87,1,chance
+I’m at home waiting for customer to sit down.,0.93,1,down
+Walk up this street. Stand up. Let's raise our hands. Lift lift lift lifts us.',0.81,0,up
+Can you use a computer? I can’t imagine the world without her.,0.87,0,without
+May I use your bathroom?,1.0,1,bathroom
+My cat is in the bathtub.,0.87,1,bathtub
+"Excuse me, where is the restroom?",0.94,1,restroom
+There is a toilet in the bathroom.,0.87,1,toilet
+My uncle is painting the wall is dirty.,0.74,0,wall
+She can’t see anything without her glasses.,0.99,1,glasses
+I’m looking for sunglasses that make me giggle.,0.95,1,sunglasses
+Do you need a glass?,1.01,1,glass
+He is blind because he can't see.,0.99,1,blind
+I have very good sight.,1.01,1,sight
+The main composition of hair is keratin.,0.84,1,hair
+The man is hairy because of his hair.,0.87,1,hairy
+I look silly with my new hairstyle.,1.0,1,hairstyle
+I have a new comb to use on this hair.,0.96,1,comb
+I bought a red hairpin for her birthday.,0.99,1,hairpin
+Lisa has curly hair.,0.99,1,curly
+He got some mustard on his mustache.,0.99,1,mustache
+The girl wrinkled her eyebrows at the sweater.,0.73,0,wrinkle
+Come inside my house before it gets dark.,1.01,1,inside
+All doors in a bank open inward.,0.87,1,inward
+I entered the room; I entered my house.,0.99,1,in
+The teacher has The list includes her name on page 8.,0.67,0,include
+My sister reads the newspaper every morning.,0.99,1,newspaper
+My sister reads the newspaper and I saw her picture in the magazine.,0.89,1,magazine
+The taxi driver listens to music on radio.,1.0,1,radio
+Here is a sentence that meets the requirements: They cut the paper while we look at page 8.,0.89,1,page
+The news surprised me when I learned it.,0.99,1,news
+I know an interesting website that shows my hometown.,0.95,1,website
+I sometimes play chess and also video games.,1.0,1,sometimes
+I have a habit of waking up late.,1.01,1,habit
+"She's almost always late, and so am I.",0.85,1,always
+I’ve seen this movie once.,1.01,1,once
+I’ll call you again when I return home.,0.97,1,again
+Sit down.,0.96,1,repeat
+The boring movie ended finally at last.,1.0,1,finally
+I think the picture is funny.,1.0,1,funny
+You look so sad because it's a sad film.,0.94,1,sad
+I like telling jokes that are really funny.,1.0,1,joke
+He sighed at the crowd.' is not a complete sentence; it's a quotation.' is not a complete sentence; it's a quotation.' is not a complete sentence; it',0.72,1,sigh
+You talk nonsense all the time.,1.0,1,nonsense
+She’s from Canada.,0.99,1,Canada
+He is from China.,0.86,1,China
+"She is from Japan, and I am too.",0.88,1,Japan
+"I’m from Seoul, Korea, and I love Korean history.",0.94,1,Korea
+I’m a fan of Korean is my favorite subject.,0.93,1,Korean
+He’s from Brazil.,0.99,1,Brazil
+We are from India.,0.86,1,India
+The world has become a global village.,1.0,1,world
+I can do anything.',0.94,1,any
+The store is open every day except Sunday. The store is open every day except Sunday.,0.72,1,except
+I’m curious about who the painter is.,0.97,1,who
+Many people are waving their hands around friends.,1.0,1,people
+He can understand I don't have any rules.,0.98,0,understand
+I’ll explain the rules of this game.,1.0,1,explain
+It is my principle not to be late.,0.87,1,principle
+They were trying to justify themselves publicly.,0.99,1,justify
+People don't believe his illogical argument.,0.99,1,illogical
+Whose paintbrush is it? The paint is faint.,0.84,0,paintbrush
+My uncle is using the paint is faint.,0.75,0,paint
+She took the eraser between her thumb and forefinger.,0.97,1,eraser
+Harry is the best actor.,0.88,1,actor
+Is the actress kind?,0.85,0,actress
+I stared at the star.,1.01,1,star
+I play the role of Pinocchio.,1.0,1,role
+The famous artist is also a popular guitarist.,0.86,1,famous
+Football is my favorite sport.,0.86,1,favorite
+It's a common mistake that friends share food preferences.,0.93,1,common
+I love my job.,0.99,1,job
+Hard work brings its own rewards and success.,0.99,1,work
+It’s time to do my homework every day.,0.98,1,homework
+I worked for 5 years at the company.,1.0,1,company
+Students should report their project's progress regularly.,0.98,1,progress
+Our factory has to hire more workers.,0.99,1,hire
+"He repairs computers, including my car is being repaired.",0.96,0,repair
+"I can’t help you. She’s in trouble and needs help. You should take some medicine. Help me, please.",0.83,1,help
+What is the problem? The problem is simple but not easy.,0.75,1,problem
+I can solve this math problem easily.,1.0,1,solve
+"Bugs are bugging me, what is the problem?",1.0,1,bug
+What direction is the railway station in?,0.85,1,direction
+The wind is coming from the north.,1.0,1,north
+The railway station is west of that point.,0.86,1,west
+"If that way is east, then this way is west.",0.82,1,east
+I’m not sure that’s correct.,0.98,1,correct
+It's a common mistake to overlook such errors.,0.9,1,error
+You look like a detective anyway.,1.0,1,anyway
+Let's go outside and play some ball.,1.0,1,outside
+We enjoy outdoor activities and go outside.,0.99,1,outdoor
+I parked at the park.,1.01,1,park
+We’re at the playground.,1.0,1,playground
+We had fun at the beach.,1.01,1,beach
+She is swinging the swing at the playground.,0.99,1,swing
+I have a stomachache after eating too much.,0.98,1,stomachache
+"I have a toothache, so I'll go to the dentist.",0.92,1,toothache
+The stomach plays an important role in digestion.,0.99,1,stomach
+There is a lot of competition between clubs to attract students.,0.76,1,competition
+"I’m on the soccer team, and he won the match.",0.92,1,match
+I tied the necktie and drew a winner.,1.0,1,tie
+Don’t compare yourself with others; they’re not same.,0.95,1,compare
+We can recycle the cycle and reduce waste.,1.0,1,waste
+Smart phones are very useful if you can use one.,0.96,1,use
+We have to preserve the environment.,0.97,1,preserve
+We are collecting money for charity.,0.99,1,collect
+I’ll throw this into the trash can.,1.01,1,trash
+I’d like to travel to lots of foreign countries.,0.92,1,travel
+I train my team as we watch the train.,0.97,1,train
+Don’t move until I tell you carry books upstairs.,0.95,1,move
+Then what piece should I move? Let’s exchange bags. Carry the books upstairs.,0.85,1,transfer
+The roller coaster suddenly rises and loops.,0.99,1,roll
+Falling rocks are dangerous.,0.9,1,dangerous
+Ham is harmful to our health.,0.87,1,harmful
+Look out! You look so dangerous.,0.97,1,danger
+She met her misfortune with great courage.,0.99,1,misfortune
+Be careful not to cut your fingers.,0.86,1,careful
+Let's go outside. Look out! I'm leaving now.,0.91,1,out
+She is going upstairs to carry books.,1.0,1,upstairs
+The desk is made of white wood.,0.94,1,desk
+The lunch box is inside the fridge.,0.87,1,fridge
+She is wiping the window and filling glass.,1.0,1,window
+I'm at home.,0.86,1,home
+There are many floors in the building downstairs.,0.86,1,floor
+That ball is far from me.,0.88,1,far
+What’s the distance between Seoul and Busan? Helen’s house is far off.,0.88,0,distance
+Go along this way and take your time.,0.87,1,along
+The distance between Seoul and Busan is 380 kilometers.,0.83,1,kilometer
+I was rude to my mom.,0.88,1,rude
+"I was rude to my mom, don’t scold me too coldly.",0.84,1,scold
+Ambitious people are always diligent and hard workers.,0.85,1,diligent
+"When I was an elementary school student, I was outgoing.",0.8,1,outgoing
+It is unkind of her to say that.,1.01,1,unkind
+He is antisocial due to his bad temper.,0.87,1,antisocial
+The careless driver didn't slow down; he missed the ball.,0.92,1,careless
+Stretch your body before playing any sport.,0.86,1,body
+Hockey players use this stick on a spoon.,1.0,0,stick
+A ball has a round shape.,1.0,1,shape
+You are strong and brave.,0.88,1,strong
+"That's enough cake, I'm full.",0.63,1,enough
+I have nothing to hide behind.,1.0,1,nothing
+I can do anything for you.,1.0,1,anything
+The boy has a runny nose.,1.01,1,runny nose
+I have a runny nose and a cough.,1.0,1,runny
+I have a fever and I have an allergy to peanuts.,0.91,1,allergy
+I’m sure I can win some and lose some.,0.93,1,win
+I dream about toys every night.,1.01,1,dream
+People are afraid of bombs and explosions.,0.87,1,bomb
+I'm shooting at the goal!,1.0,1,goal
+The professor failed him in modern art.,0.75,0,fail
+The world would be a better place without war!,0.84,1,war
+He hit the ball to score a goal.,1.01,1,score
+We need to learn how to dominate feelings.,0.99,1,dominate
+I'll explain the rules of this game.,1.0,1,rule
+Cooking spaghetti is simple but not easy.,0.93,1,simple
+Let's switch the switches.,1.0,1,switch
+We don't want to complicate this situation more.,0.97,1,complicate
+"We need fresh air because the skunk stinks. It smells good. Touch your nose. We need fresh air. This sentence meets all the requirements: It includes the word ""the skunk stinks."" It smell",0.75,1,stink
+"However, here's a revised attempt: To dominate one's emotions, we must touch our bodies. This sentence follows the given rules and conveys a clear idea about managing emotions in a healthy way.",0.85,1,feel
+We must sit down while watching the bun burning.,0.97,1,burn
+"The five senses are touch, smell, taste, sight, and hearing.",0.9,1,sense
+We all learn by experience effectively.,0.97,1,experience
+My first impression of a new classmate was good.,0.84,1,impression
+Let's forgive and forget what she did.,1.0,1,forget
+Do you remember my name? I will always forget it.,0.93,1,remember
+Do you mind if I kill this bug?,1.01,1,mind
+Time is gold; time is always too fast.,0.87,1,time
+"At that moment, time is gold.",0.88,1,moment
+This aspirin will cure your pain.,0.91,1,as
+This pencil case is very cheap.,0.88,1,cheap
+This teddy bear is too expensive.,0.87,1,expensive
+The price depends on the quantity of goods.,0.99,1,price
+They gave a free street concert to entertain people.,0.97,1,free
+The ring has the shape of a circle.,1.0,1,circle
+The ring has the shape of a circle.,1.0,1,ring
+The moon is round like a ball.,0.87,1,round
+The skater is spinning while throwing the ball.,0.99,1,spin
+The teacher wrote a triangle is a shape on the blackboard.,0.91,1,triangle
+He is a baby. This is my doll.,0.85,0,baby
+My mom is suffering from a bad headache.,0.99,1,headache
+My sister has a fever and I'm sick.,0.98,1,fever
+The bony man looks sad because he is nice.,0.98,0,bony
+My mother felt dizzy when she stood.,1.01,1,dizzy
+"Hard work brings its own rewards, I think.",1.01,1,reward
+I need two tickets.,0.98,1,ticket
+He bought a TV and it came with a one year guarantee.,0.9,1,guarantee
+Could you show me a receipt?,1.0,1,receipt
+Can I have a refund on these pants?,1.01,1,refund
+He can't borrow money because of poor credit.,0.98,1,borrow
+We went to the bank because we needed money.,0.97,1,bank
+"When you laugh, your brain works better.",1.01,1,laugh
+I come home at 6 p.m.,1.0,1,at
+You have a cute smile. Keep smiling. Touch your cheek. Greet each other with a smile. Touch your chin.,0.85,1,smile
+I blush when I'm happy.,1.0,1,blush
+I only have half of the harp.,1.01,1,half
+It's about two fools who collect old cell phones.,0.95,1,about
+The village is vacant. My bowl is empty.,0.84,0,vacant
+"Then, what piece should I move? Divide this pizza into eight pieces. Why do you break the bricks? Here is some glue.",0.86,0,piece
+Close the door. I’m at home.,0.97,1,away
+I like to travel alone.,1.01,1,alone
+I'd like to have my phone disconnected as of September 22.,0.87,1,disconnect
+Jane is a very independent young woman.,0.85,1,independent
+It’s time to exchange our holiday gifts.,0.99,1,exchange
+I'll send you a text message while I'm at home.,0.89,1,send
+My grandmother taught me how to sew.,0.98,1,sew
+He wants to invent something new and wonderful.,0.99,1,invent
+Where did this dance originate from?,1.0,1,originate
+I entered the room and thanked my friend.,0.99,1,enter
+I want a key to my property.,1.0,1,key
+We were standing by the door.,1.0,1,door
+Somebody is knocking on the door. We should close it.,0.93,1,knock
+My dog is at the gate.,0.88,1,gate
+"Follow me, I'll show you the way.",1.01,1,way
+You should lock your locker. It is my key. Close the door.,0.86,1,lock
+The IT specialist's job is to input data.,0.84,1,input
+I replied to his reply immediately.,0.97,1,reply
+"I asked her a question, but she didn’t respond.",0.95,1,respond
+I know the answer. Stand up.,0.99,1,answer
+He can’t contact anyone if he doesn’t know your number.,0.89,1,contact
+I’ll send you a text message later today.,0.98,1,message
+The TV is wide and It’s big.,1.01,1,wide
+The bus is big; it’s a broad road.,0.99,0,broad
+Don’t swim in deep water.,0.88,1,deep
+I’ll visit you next time.,1.01,1,visit
+We navigate with a navigation system.,0.99,1,navigate
+The guide is guiding us through the wilderness.,0.98,1,guide
+Scientists are questioning Christopher Columbus' famous discovery claim.,0.94,1,discover
+I was tired from the long journey.,0.87,1,journey
+The table is dirty and has a ball.,0.69,1,table
+Let's make groups. What’s our favorite club?,0.96,0,group
+Let’s gather in the room.,1.01,1,gather
+He should classify the books into three types.,1.0,1,classify
+I hit the ball while I’m shooting at the goal.,0.9,1,shoot
+"Let’s go there later, Come here, please.",1.02,0,there
+Let’s go out. Let’s have a party. Let’s meet there.,0.82,1,Let’s
+I hit the ball.,0.99,1,hit
+The teacher wrote that is Susan’s ruler.,0.75,0,ruler
+Her father is a great king.,0.88,1,king
+The butter tastes bitter despite its smell.,1.0,1,taste
+"I don’t like pepper, this is strawberry.",1.01,0,pepper
+The chef adds more flour and salt.,1.01,1,salt
+This food is too spicy.,0.88,1,spicy
+Why do you break bricks?,0.96,1,block
+The result did not satisfy me. I got second prize.,0.93,0,result
+I’ve recorded it on the recorder.,0.99,1,record
+Let's forgive and forget what happened yesterday.,0.99,1,forgive
+I hope my grandfather will recover soon.,0.97,1,hope
+I'm hopeful that my grandfather will recover soon.,0.95,1,hopeful
+Look! There are cans. I can fly. I can do anything.,0.88,0,can
+I promise I'll come back.,0.99,1,promise
+"The guide misled us, and she lied to mislead people.",0.96,1,mislead
+I can spell many English words because I can spell my name.,0.88,1,spell
+"Don’t misunderstand me, I was just joking.",0.99,1,misunderstand
+I apologize for misspelling your name.,0.97,1,misspell
+Don't waste money on useless things unnecessarily.,0.84,1,useless
+Smart phones are very useful. That was a wise choice.,0.8,0,useful
+Every child's thoughts are important to them.,0.86,1,important
+The world has become a global village.,1.0,1,global
+I bought all the items on my shopping list.,0.98,1,all
+Many people remember that he was a good general.,0.97,1,general
+Terrorism is now a universal concern together with all.,0.83,1,universal
+I'm a reporter who interviews movie stars.,0.99,1,interview
+The interviewer is going over Kate's resume.,0.98,1,interviewer
+My sister is an announcer for BBC television.,0.86,1,announcer
+We elected John president of our class.,0.99,1,elect
+We should choose a right politician carefully.,0.99,1,politician
+I haven't decided who I am going to vote for yet.,0.9,1,vote
+We elected John president of our class.,0.99,1,president
+They fought for democracy in their country.,0.99,1,democracy
+The mayor is trying to help local people.,1.01,1,mayor
+I can hardly believe it's my car!,1.0,1,hardly
+He has a talent for acting.,1.01,1,act
+I believe in angles because I have friends like you.,0.94,0,believe
+We will take a final examination tomorrow.,0.97,1,examination
+Let me examine your teeth. Look at the sky. Look at the sea. Look at the sky.,0.76,0,examine
+I like to study in the library.,1.0,1,study
+I reviewed the book before the test.,0.99,1,test
+I scanned the boy and searched my room.,0.99,1,scan
+Scientists perform many experiments daily at their labs.,0.97,1,experiment
+We measured the weight of the pumpkin.,0.99,1,measure
+I go to school at 8 a.m.,1.0,1,go to school
+Let's go to the subway station.,1.0,1,to
+The army defended our enemy while I was training.,0.97,1,defend
+We should protect our environment.,0.96,1,protect
+They are guarding the start of the fencing tournament.,0.96,1,guard
+Sit down and come inside my house.,0.87,1,do
+The best way to learn is by experience.,0.93,1,learn
+The store manager is who is the chief manager of this store.,0.5,0,manage
+I train my team to improve English skills.,0.99,1,improve
+Nobody can imitate his dancing.,0.99,1,imitate
+There is no life after death for him now.,0.85,1,death
+She survived in the survival game despite challenges.,0.98,1,survive
+My sister knows how to enjoy life.,1.01,1,life
+Your health is the most important thing.,0.87,1,heal
+My brothers fight with each other every day.,1.0,1,fight
+Let's meet there. Nice to meet you.,0.98,1,meet
+I attend a book discussion twice a month.,0.99,1,discussion
+The price depends on the quantity of goods.,0.99,1,quantity
+I can solve this math problem because I have class on Monday.,0.89,1,math
+You have the wrong number.,1.01,1,number
+I’m counting numbers.,0.93,1,count
+The world's population is more than 7 billion.,0.84,1,population
+Let's reduce food and plastic waste.,1.0,1,reduce
+Close the door now and turn left to sit down.,0.82,1,cancel
+I am responsible for cooking dinner tonight.,0.9,1,responsible
+"I’m a reporter, and that's my responsibility.",0.94,1,report
+I opened an account in a bank yesterday.,0.99,1,account
+Did you buy travel insurance?,1.0,1,insurance
+"The coin is worth around 3,000 dollars.",0.87,1,worth
+How much is the fare to Busan?,0.87,1,fare
+There are products of high quality in store.,0.86,1,quality
+He bought a souvenir from his trip to London.,0.98,1,souvenir
+It’s a new shop.,1.01,1,new
+My teacher looks very busy today.,1.0,1,busy
+The fortune teller will foretell your future.,0.99,1,foretell
+Let's make a plan for our vacation.,1.0,1,plan
+The fortune teller will ask about my future.,1.0,1,future
+The customer arrives with good news unexpectedly.,0.96,1,expect
+The math problem is Ten plus ten is twenty.,0.83,0,plus
+We need more extra time for the project.,1.0,1,extra
+Highlight the word on the blackboard and look up.,0.83,1,word
+Let's write a summary of this paragraph.,0.99,1,summary
+I reviewed the book before the test.,0.99,1,review
+The manager says I’m waiting for the customer.,0.94,1,customer
+This is my fan that blows cold air.,1.01,1,fan
+Do you remember the members of our team?,0.99,1,member
+Guess who the guest is at my party.,0.94,1,guest
+Children have endless possibilities for development.,0.92,1,endless
+"I exercise every day, including Sunday.",1.0,1,every
+"The exact time is 1:51 p.m., but I'm wrong.",0.83,1,exact
+Hamlet is an immortal work that lasts forever.,0.99,1,immortal
+It is impossible to finish the project today.,0.93,1,impossible
+I can’t help you. How much money do you have?,0.9,1,low
+There is a ball under the bed.,0.87,1,under
+I want milk. Be careful not to spill it.,0.96,1,milk
+We need fresh air after long car rides.,1.01,1,air
+We must watch out for fire at home.,1.01,1,fire
+The automobile runs on electricity and solar energy.,0.97,1,electricity
+A chef put butter and oil in a pan.,0.84,1,oil
+This is a non-smoking restaurant. I am driving a car.,0.92,0,nonsmoking
+Cutting cake requires using a quarter dollar knife.,0.99,1,quarter
+They visit the museum every month annually.,1.0,1,annually

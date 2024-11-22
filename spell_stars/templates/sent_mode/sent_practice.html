@@ -33,8 +33,18 @@
         <input type="hidden" id="hiddenWord" value="{{ word }}">
         <button id="micButton">녹음 시작</button>
         <p id="statusMessage">녹음을 시작해주세요.</p>
-        <div id="studentCorrectnessBox"></div>
+
+        <div class="correctnessBox" id="studentCorrectnessBox">
+          <h3>학생 정답 상태</h3>
+          <p>기다리는 중...</p>
+        </div>
+
+        <div class="correctnessBox" id="aiCorrectnessBox">
+          <h3>AI 정답 상태</h3>
+          <p>기다리는 중...</p>
+        </div>
       </section>
+
     </main>
 
     <footer>

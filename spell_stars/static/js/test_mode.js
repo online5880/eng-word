@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const micButton = document.getElementById('micButton');
+    const audioPlayer = document.getElementById('audioPlayer');
     const statusText = document.querySelector('.status-text');
     const voiceLevelFill = document.querySelector('.voice-level-fill');
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
@@ -7,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let mediaRecorder;
     let audioChunks = [];
     let isRecording = false;
-    let targetedWord = "";  // 단어를 저장하는 변수
+    let targetedWord = '';  // 여기서 초기화
 
     // beforeunload 이벤트 리스너 추가
     window.addEventListener('beforeunload', function(e) {
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-    
+
     // 마이크 버튼 이벤트
     if (micButton) {
         micButton.addEventListener('click', async function () {
@@ -56,7 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
 
             const formData = new FormData();
-            formData.append('audio', audioBlob, `${targetedWord}.wav`);  // 단어 추가
+            const targetedWord = document.getElementById('targeted-word').textContent; 
+            formData.append('audio', audioBlob, `${targetedWord}.wav`);
             formData.append('word', targetedWord);
 
             const uploadAudioUrl = '/test/submit_audio/';
@@ -72,16 +74,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const data = await response.json();
                 console.log('서버 응답:', data);
-                if (data.status === 'success') {
+                if (data.file_path) {
                     statusText.textContent = '녹음이 성공적으로 저장되었습니다.';
                     if (audioPlayer) {
                         audioPlayer.src = '/' + data.file_path;
                     }
 
                     // 서버에서 점수 받기
-                    if (data.is_correct !== undefined) {
-                        console.log('서버에서 받은 점수:', data.is_correct ? '정답' : '오답');
-                        displayFeedback(data.is_correct);  // 피드백 표시
+                    if (data.score_message !== undefined) {
+                        console.log('서버에서 받은 점수:', data.score_message);  // 점수 출력
+                        const scoreDisplay = document.getElementById("scoreDisplay");
+                        if (scoreDisplay) {
+                            // 점수 메시지 업데이트
+                            scoreDisplay.textContent = data.score_message;
+                        }
                     }
                 } else {
                     statusText.textContent = '녹음 저장에 실패했습니다.';
@@ -109,8 +115,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (isRecording) {
                 analyser.getByteFrequencyData(dataArray);
                 const average = dataArray.reduce((a, b) => a + b) / bufferLength;
-                const level = (average / 255) * 100;
-                voiceLevelFill.style.height = `${level}%`;
+                const level = (average / 128) * 100;  // 음성 레벨 계산 수정
+                voiceLevelFill.style.width = `${level}%`;  // 여기도 높이로 변경
                 requestAnimationFrame(updateVoiceLevel);
             }
         }
@@ -126,30 +132,11 @@ document.addEventListener('DOMContentLoaded', function () {
             isRecording = false;
             statusText.textContent = '녹음이 완료되었습니다.';
             micButton.classList.remove('recording');
-            voiceLevelFill.style.height = '0%';
+            voiceLevelFill.style.width = '0%';
         }
     }
 
-    // 피드백 표시
-    function displayFeedback(isCorrect) {
-        const feedbackElement = document.getElementById("feedback");
-        const feedbackSection = document.getElementById("feedback-section");
-        const scoreBar = document.getElementById("score-bar");
-        
-        if (isCorrect) {
-            feedbackElement.textContent = '정답입니다!';
-            feedbackSection.style.display = 'block';
-            scoreBar.style.width = '100%';
-            scoreBar.className = 'green';
-        } else {
-            feedbackElement.textContent = '오답입니다.';
-            feedbackSection.style.display = 'block';
-            scoreBar.style.width = '0%';
-            scoreBar.className = 'red';
-        }
-    }
-
-    // 다음 문제로 이동
+    // 다음 문제 요청 시 단어 갱신
     function nextQuestion() {
         console.log('다음 단어 요청');
         fetch('/test/next_question/', {
@@ -162,30 +149,58 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             console.log('다음 단어 응답:', data);
             if (data.success) {
-                // 단어 갱신 (HTML에 표시하지 않음, 그냥 변수로 사용)
-                targetedWord = data.word;
-
+                const problemNumberElement = document.getElementById('problem-number');
+                if (problemNumberElement) {
+                    // 문제 번호 업데이트
+                    problemNumberElement.textContent = `문제 번호: ${data.problem_solved}`;
+                    console.log('문제 번호 갱신:', problemNumberElement.textContent);
+                } else {
+                    console.error('#problem-number 요소를 찾을 수 없습니다.');
+                }
+    
+                // 단어 갱신
+                document.getElementById('targeted-word').textContent = data.word;
+    
                 // 예문 갱신
                 document.getElementById('sentence').textContent = data.sentence;
-
+                document.getElementById('sentence-meaning').textContent = data.sentence_meaning;
+    
                 // 점수 초기화
-                document.getElementById("score").textContent = '0';
-                document.getElementById("score-bar").style.width = '0%';
-                document.getElementById("feedback").textContent = '';
-                document.getElementById("feedback-section").style.display = 'none';
+                document.getElementById("scoreDisplay").textContent = '';
+
+                // 상태 메시지 초기화
+                statusText.textContent = '마이크를 클릭하여 시작하세요'; // 메시지 제거
+    
+                // 버튼 텍스트 및 이벤트 갱신
+                const nextButton = document.getElementById('nextQuestionBtn');
+                if (data.is_last_question) {
+                    nextButton.textContent = '나가기';
+                    nextButton.removeEventListener('click', nextQuestion);
+                    nextButton.addEventListener('click', exitTest);
+                } else {
+                    nextButton.textContent = '다음 문제';
+                    nextButton.removeEventListener('click', exitTest);
+                    nextButton.addEventListener('click', nextQuestion);
+                }
             } else {
                 console.log('새 단어를 가져오지 못했습니다.');
+                alert('모든 문제를 완료했습니다. 새로 시작하려면 학습을 종료하고 다시 시작하세요.');
             }
         })
         .catch(error => {
             console.error('AJAX 요청 오류:', error);
         });
+    }    
+
+    // 나가기 버튼 클릭 시 학습 종료
+    function exitTest() {
+        window.location.href = 'results';  // 결과 페이지로 리디렉션
     }
 
     // 이벤트 리스너 추가
-    const nextQuestionButton = document.getElementById("nextQuestionButton");
+    const nextQuestionBtn = document.getElementById("nextQuestionBtn");
 
-    if (nextQuestionButton) {
-        nextQuestionButton.addEventListener('click', nextQuestion);  // 수정된 부분
+    if (nextQuestionBtn) {
+        nextQuestionBtn.addEventListener('click', nextQuestion);
     }
 });
