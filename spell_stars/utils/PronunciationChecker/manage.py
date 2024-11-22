@@ -80,6 +80,8 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
 
         # 1. 파형 비교 시각화
         wave_html_fig = visualize_waveforms(standardized_native_path, standardized_student_path,username=username)
+        print(standardized_native_path)
+        print(standardized_student_path)
 
         # 2. Formant 비교 시각화
         formant_html_fig = plot_f1_f2_comparison_plotly(
