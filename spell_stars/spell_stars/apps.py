@@ -4,6 +4,7 @@ from transformers import WhisperForConditionalGeneration, WhisperProcessor
 import warnings
 
 class SpellStarsConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
     name = 'spell_stars'
     whisper_model = None
     whisper_processor = None

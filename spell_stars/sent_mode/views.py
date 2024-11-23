@@ -109,11 +109,19 @@ def sent_result(request):
     word_frequencies = Counter(student_responses) if student_responses else Counter()
     print(f"Word frequencies: {word_frequencies}")
 
+    # 평균 응답 시간 계산
+    student_times = game_state.get("student_times", [])
+    ai_times = game_state.get("ai_times", [])
+    avg_student_time = sum(student_times) / len(student_times) if student_times else 0
+    avg_ai_time = sum(ai_times) / len(ai_times) if ai_times else 0
+
     total_questions = game_state.get("num_questions", 0)
     correct_answers = sum(1 for response in student_responses if response)
-    final_student_accuracy = (correct_answers / total_questions) * 100
-    final_ai_accuracy = calculate_ai_accuracy(correct_answers / total_questions) * 100
+    final_student_accuracy = (correct_answers / total_questions) * 100 if total_questions > 0 else 0
+    final_ai_accuracy = calculate_ai_accuracy(correct_answers / total_questions) * 100 if total_questions > 0 else 0
     score_difference = abs(final_student_accuracy - final_ai_accuracy)
+    student_times = game_state.get('student_times', [])
+    ai_times = game_state.get('ai_times', [])
 
     unique_words_used = len(word_frequencies)
     total_words = len(request.session.get('selected_words', []))
@@ -124,15 +132,19 @@ def sent_result(request):
     )
 
     context = {
+        "student_times": student_times,
+        "ai_times": ai_times,
         "final_student_accuracy": final_student_accuracy,
         "final_ai_accuracy": final_ai_accuracy,
         "correct_answers": correct_answers,
         "total_questions": total_questions,
         "score_difference": score_difference,
-        "word_frequencies": word_frequencies,
+        "word_frequencies": dict(word_frequencies),  # `.items()`를 템플릿에서 사용하도록 변환
         "unique_words_used": unique_words_used,
         "total_words": total_words,
         "learning_performance_message": learning_performance_message,
+        "avg_student_time": avg_student_time,  # 평균 학생 응답 시간
+        "avg_ai_time": avg_ai_time,           # 평균 AI 응답 시간
     }
 
     print("Resetting session data...")
@@ -173,8 +185,15 @@ def upload_audio(request):
             recognized_word = current_word  # 실제 STT 결과를 추가
             is_correct = (recognized_word == current_word)  # 정답 여부 확인
 
+            # 학생 응답 시간 가져오기
+            student_time = float(request.POST.get('student_time', 3.0))  # 기본값 3초
+
+
             # 게임 상태 업데이트
             game_state = request.session.get('game_state', {})
+            
+            game_state['ai_times'] = game_state.get('ai_times', [])
+            game_state['student_responses'] = game_state.get('student_responses', [])
             current_index = game_state.get('current_question', 0)
             student_accuracy = game_state.get('student_accuracy', 0.0)
 
@@ -182,9 +201,11 @@ def upload_audio(request):
             new_accuracy = ((student_accuracy * current_index) + int(is_correct)) / (current_index + 1)
             game_state['student_accuracy'] = new_accuracy
             game_state['student_responses'].append(recognized_word)
-            game_state['current_question'] += 1
-            request.session['game_state'] = game_state
-
+            
+            # 학생 응답 시간 저장
+            if 'student_times' not in game_state:
+                game_state['student_times'] = []
+            game_state['student_times'].append(student_time)
             # AI 정답 및 반응 시간 계산
             ai_accuracy = calculate_ai_accuracy(new_accuracy)
             ai_correct = bool(random.random() < ai_accuracy)  # numpy.bool_ -> Python bool 변환
@@ -192,6 +213,12 @@ def upload_audio(request):
             ai_response_time = calculate_ai_response_time(student_time)
 
             print("Game state updated:", game_state)
+
+            # AI 응답 시간 기록 추가
+            game_state['ai_times'].append(ai_response_time)
+
+            game_state['current_question'] += 1
+            request.session['game_state'] = game_state
 
             # 마지막 문제인지 확인
             if game_state['current_question'] >= game_state['num_questions']:
@@ -201,6 +228,7 @@ def upload_audio(request):
             # JSON 응답 반환
             return JsonResponse({
                 'is_correct': is_correct,
+                'student_time': student_time,
                 'ai_correct': ai_correct,
                 'student_accuracy': new_accuracy,
                 'ai_accuracy': ai_accuracy,
@@ -216,7 +244,7 @@ def upload_audio(request):
 
 
 def next_question(request):
-    # 게임 상태 및 단어 리스트 가져오기
+    # 세션 데이터 가져오기
     game_state = request.session.get('game_state')
     selected_words = request.session.get('selected_words')
 
@@ -226,33 +254,42 @@ def next_question(request):
 
     # 현재 문제 인덱스 가져오기
     current_question = game_state.get("current_question", 0)
-    if current_question >= game_state["num_questions"]:
+    total_questions = len(selected_words)
+
+    if current_question >= total_questions:
         return JsonResponse({"error": "퀴즈가 완료되었습니다."}, status=400)
 
-    # 다음 단어 데이터 가져오기
     try:
+        # 다음 단어 데이터 가져오기
         next_word_data = selected_words[current_question]
         next_sentence = Sentence.objects.filter(word__word=next_word_data['word']).first()
 
+        # 예문이 없을 경우 기본 데이터 생성
         if not next_sentence:
-            # 예문이 없을 경우 기본 문장 생성
+            print(f"No sentence found for word: {next_word_data['word']}, generating default.")
             next_sentence = Sentence(
                 sentence=f"This is a sentence for the word '{next_word_data['word']}'.",
                 sentence_meaning=f"Meaning for '{next_word_data['word']}'"
             )
 
-        # 문제 인덱스 증가
-        game_state['current_question'] += 1
-        request.session['game_state'] = game_state
+        # 문제 인덱스 증가 및 세션 업데이트
+        game_state["current_question"] += 1
+        request.session["game_state"] = game_state
 
         # JSON 응답 반환
         return JsonResponse({
             "sentence": next_sentence.sentence.replace(next_word_data['word'], "_" * len(next_word_data['word'])),
             "meaning": next_sentence.sentence_meaning,
             "word": next_word_data['word'],
+            "current_question": game_state["current_question"],
+            "total_questions": total_questions,
         })
 
     except IndexError:
+        print(f"IndexError: current_question ({current_question}) is out of range.")
         return JsonResponse({"error": "더 이상 문제가 없습니다."}, status=400)
+
     except Exception as e:
+        print(f"Unexpected error in next_question: {e}")
         return JsonResponse({"error": f"오류 발생: {str(e)}"}, status=500)
+

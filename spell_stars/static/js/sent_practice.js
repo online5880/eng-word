@@ -7,12 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const aiAccuracyBox = document.getElementById("aiAccuracyBox");
     const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
     const uploadAudioUrl = "/sent/upload_audio/";
-    const nextQuestionUrl = "/sent/next_question/";
+    const nextQuestionButton = document.getElementById("nextQuestionButton");
     const hiddenWord = document.getElementById("hiddenWord").value.trim();
     console.log("Hidden Word:", hiddenWord);
     let isRecording = false;
     let mediaRecorder = null;
     let audioChunks = [];
+    let startTime = null; // 녹음 시작 시간
+    let endTime = null; // 녹음 종료 시간   
+
 
     async function startRecording() {
         try {
@@ -25,11 +28,23 @@ document.addEventListener("DOMContentLoaded", function () {
             mediaRecorder.ondataavailable = (event) => {
                 audioChunks.push(event.data);
             };
+
+            mediaRecorder.onstart = () => {
+                startTime = new Date().getTime(); // 녹음 시작 시간 기록
+                console.log("Recording started at:", startTime);
+
+            };
             mediaRecorder.onstop = async () => {
+                endTime = new Date().getTime(); // 녹음 종료 시간 기록
+                console.log("Recording stopped at:", endTime);
+
+                const studentTime = (endTime - startTime) / 1000; // 응답 시간 (초 단위)
+                console.log("Student response time:", studentTime, "seconds");
                 const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
                 const formData = new FormData();
                 formData.append("audio", audioBlob);
                 formData.append("word", hiddenWord);
+                formData.append("student_time", studentTime);
 
                 try {
                     const response = await fetch(uploadAudioUrl, {
@@ -78,13 +93,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateResults(data) {
         if (data.redirect) {
+            console.log("Redirecting to:", data.redirect);
             window.location.href = data.redirect; // 결과 페이지로 이동
         } else {
             studentCorrectnessBox.textContent = data.is_correct ? "정답" : "오답";
             aiCorrectnessBox.textContent = data.ai_correct ? "정답" : "오답";
             studentAccuracyBox.textContent = `학생 정답률: ${(data.student_accuracy * 100).toFixed(2)}%`;
             aiAccuracyBox.textContent = `AI 정답률: ${(data.ai_accuracy * 100).toFixed(2)}%`;
-            statusText.textContent = data.is_correct ? "정답입니다!" : "오답입니다. 다시 시도하세요.";
+             // 응답 시간 업데이트
+            const studentResponseTime = document.getElementById("studentResponseTime");
+            const aiResponseTime = document.getElementById("aiResponseTime");
+            studentResponseTime.textContent = `${data.student_time.toFixed(2)}초`;
+            aiResponseTime.textContent = `${data.ai_response_time.toFixed(2)}초`;
+            statusText.textContent = data.is_correct ? "정답입니다!" : "오답입니다.";
     
             // 일정 시간 후 다음 문제 로드
             setTimeout(() => {
@@ -93,102 +114,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
+    
+    nextQuestionButton.addEventListener("click", function () {
+        const studentCorrectness = studentCorrectnessBox.textContent.trim();
+        const warningMessage = document.getElementById("warningMessage");
+        // 디버깅: DOM 요소와 값 확인
+        console.log("StudentCorrectnessBox element:", studentCorrectnessBox);
+        console.log("StudentCorrectnessBox text content:", studentCorrectness);
 
-    async function loadNextQuestion() {
-        console.log("Loading next question...");
-        try {
-            const response = await fetch("/sent/next_question/", {
-                method: "GET",
-                headers: {
-                    "X-CSRFToken": csrfToken,
-                },
-            });
     
-            if (response.ok) {
-                const questionData = await response.json();
-                console.log("Next question data:", questionData);
-                updateQuestionUI(questionData); // 화면 갱신
-            } else {
-                console.error("Failed to fetch next question:", response.status, response.statusText);
-                statusText.textContent = "오류: 다음 문제를 불러오지 못했습니다.";
-            }
-        } catch (error) {
-            console.error("Next question loading error:", error);
-            statusText.textContent = "오류: 다음 문제를 불러오는 중 문제가 발생했습니다.";
+        console.log("Student correctness:", studentCorrectness); // 현재 상태 확인용 로그
+    
+        // 조건: 문제를 풀지 않았을 경우 경고 메시지 표시
+        if (studentCorrectness === "" || studentCorrectness.includes("기다리는 중")) {
+            warningMessage.style.display = "block"; // 경고 메시지 표시
+            console.warn("Cannot proceed to the next question. The problem is not solved.");
+            return; // 다음 문제로 넘어가지 않음
         }
-    }
     
+        // 경고 메시지 숨기기
+        warningMessage.style.display = "none";
+        console.log("Next question button clicked.");
+        location.reload(); // 페이지 새로고침
+    });
 
-    function updateQuestionUI(questionData) {
-        // DOM 요소 선택
-        const questionText = document.querySelector(".question-container p:nth-child(2)");
-        const meaningText = document.querySelector(".question-container p:nth-child(3)");
-        const hiddenWordInput = document.getElementById("hiddenWord");
-        const statusText = document.getElementById("statusMessage");
-        const studentCorrectnessBox = document.getElementById("studentCorrectnessBox");
-        const aiCorrectnessBox = document.getElementById("aiCorrectnessBox");
-        const studentAccuracyBox = document.getElementById("studentAccuracyBox");
-        const aiAccuracyBox = document.getElementById("aiAccuracyBox");
-    
-        // 데이터 검증
-        if (!questionData || !questionData.sentence || !questionData.meaning || !questionData.word) {
-            statusText.textContent = "오류: 올바른 문제 데이터를 가져오지 못했습니다.";
-            console.error("Invalid question data:", questionData);
-            return;
-        }
-    
-        // 문제와 뜻 갱신
-        if (questionText) {
-            questionText.textContent = `문장: ${questionData.sentence}`;
-        } else {
-            console.error("Error: Question text DOM element not found.");
-        }
-    
-        if (meaningText) {
-            meaningText.textContent = `뜻: ${questionData.meaning}`;
-        } else {
-            console.error("Error: Meaning text DOM element not found.");
-        }
-    
-        // Hidden input 값 갱신
-        if (hiddenWordInput) {
-            hiddenWordInput.value = questionData.word;
-        } else {
-            console.error("Error: Hidden input DOM element not found.");
-        }
-    
-        // 상태 초기화
-        if (statusText) {
-            statusText.textContent = "새로운 문제입니다. 녹음을 시작하세요!";
-        } else {
-            console.error("Error: Status text DOM element not found.");
-        }
-    
-        if (studentCorrectnessBox) {
-            studentCorrectnessBox.textContent = "";
-        } else {
-            console.error("Error: Student correctness box DOM element not found.");
-        }
-    
-        if (aiCorrectnessBox) {
-            aiCorrectnessBox.textContent = "";
-        } else {
-            console.error("Error: AI correctness box DOM element not found.");
-        }
-    
-        if (studentAccuracyBox) {
-            studentAccuracyBox.textContent = "";
-        } else {
-            console.error("Error: Student accuracy box DOM element not found.");
-        }
-    
-        if (aiAccuracyBox) {
-            aiAccuracyBox.textContent = "";
-        } else {
-            console.error("Error: AI accuracy box DOM element not found.");
-        }
-    }
-    
 
     micButton.addEventListener("click", () => {
         if (isRecording) {
@@ -197,4 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
             startRecording();
         }
     });
+
+    
 });
