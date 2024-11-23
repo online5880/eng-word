@@ -9,7 +9,7 @@ from .Pipeline.Parselscore import get_formants
 from .Pipeline.Score import calculate_formant_score, calculate_phoneme_score, calculate_overall_score
 from .Pipeline.Preprocessing import trim_and_standardize, align_start_point
 from .Pipeline.Visualization import visualize_waveforms, plot_f1_f2_comparison_plotly
-sys.path.append("C:/Users/user/Desktop/eng-word/spell_stars/utils/PronunciationChecker/Pipeline")
+sys.path.append("C:/Users/dongi/OneDrive/바탕 화면/eng-word/spell_stars/utils/PronunciationChecker/Pipeline")
 
 def cleanup_temp_dir(temp_dir):
     """주어진 임시 폴더를 삭제"""

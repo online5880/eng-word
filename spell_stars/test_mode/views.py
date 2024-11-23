@@ -16,10 +16,12 @@ from django.core.files.base import ContentFile
 from accounts.views import start_learning_session
 import warnings
 import random
+import librosa
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 model = apps.get_app_config('spell_stars').whisper_model
+processor = apps.get_app_config('spell-stars').whisper_processor
 
 TOTAL_QUESTIONS = 10
 MAX_SCORE = 100
@@ -139,8 +141,20 @@ def submit_audio(request):
             print(file_path)
 
             # Whisper 모델로 음성 텍스트 변환
-            result = model.transcribe(file_path, language="en")
-            transcript = result["text"]
+            audio, rate = librosa.load(file_path, sr=16000)  # Whisper는 16kHz 필요
+            inputs = processor(audio, sampling_rate=rate, return_tensors="pt")
+
+            # 언어 설정: 특정 언어로 지정하려면 아래처럼 설정
+            forced_decoder_ids = processor.get_decoder_prompt_ids(language="en", task="transcribe")
+
+            # 모델 추론
+            generated_ids = model.generate(
+                inputs["input_features"], 
+                forced_decoder_ids=forced_decoder_ids  # 언어 및 작업 설정 반영
+            )
+
+            # 결과 변환
+            transcript = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
             print(f"Transcript from Whisper: {transcript}")
 
             # 정답 단어와 비교 (특수문자 제외)
