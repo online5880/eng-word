@@ -9,7 +9,7 @@ from .Pipeline.Parselscore import get_formants
 from .Pipeline.Score import calculate_formant_score, calculate_phoneme_score, calculate_overall_score
 from .Pipeline.Preprocessing import trim_and_standardize, align_start_point
 from .Pipeline.Visualization import visualize_waveforms, plot_f1_f2_comparison_plotly
-sys.path.append("C:/Users/dongi/OneDrive/바탕 화면/eng-word/spell_stars/utils/PronunciationChecker/Pipeline")
+sys.path.append("C:/Users/82107/Desktop/eng-word/spell_stars/utils/PronunciationChecker/Pipeline")
 
 def cleanup_temp_dir(temp_dir):
     """주어진 임시 폴더를 삭제"""
@@ -121,16 +121,16 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
     return result
 
 # if __name__ == "__main__":
-    # 경로 설정
-    # native_directory = "C:/Users/user/Desktop/eng-word/spell_stars/utils/PronunciationChecker/test_data/native_data"
-    # student_directory = "C:/Users/user/Desktop/eng-word/spell_stars/utils/PronunciationChecker/test_data/student_data"
-    # expected_word = "project"
+#     # 경로 설정
+#     native_directory = "C:/Users/user/Desktop/eng-word/spell_stars/utils/PronunciationChecker/test_data/native_data"
+#     student_directory = "C:/Users/user/Desktop/eng-word/spell_stars/utils/PronunciationChecker/test_data/student_data"
+#     expected_word = "project"
 
-    # start_time = datetime.now()
+#     start_time = datetime.now()
 
-    # # 메인 처리 함수 호출
-    # result = process_audio_files(native_directory, student_directory, expected_word)
+#     # 메인 처리 함수 호출
+#     result = process_audio_files(native_directory, student_directory, expected_word)
 
-    # end_time = datetime.now()
-    # print(f"Total Processing Time: {end_time - start_time}")
+#     end_time = datetime.now()
+#     print(f"Total Processing Time: {end_time - start_time}")
 
