@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from django.shortcuts import render
 from django.http import HttpResponse
-from accounts.models import StudentLearningLog
+from accounts.models import StudentLearningLog, Student
 from test_mode.models import TestResult
 from sent_mode.models import LearningResult
 from datetime import timedelta
@@ -72,7 +72,8 @@ def dashboard_view(request):
 
 # 학습 모드별 학습 시간 그래프
 def plot_learning_mode_hours(request):
-    student = request.user
+    user_id = request.user.id
+    student = Student.objects.get(user__id=user_id)
     logs = StudentLearningLog.objects.filter(student=student)
     
     # 학습 모드별 시간 계산
@@ -110,7 +111,8 @@ def plot_learning_mode_hours(request):
 
 # 시험 점수 변화 그래프
 def plot_test_scores(request):
-    student = request.user
+    user_id = request.user.id
+    student = Student.objects.get(user__id=user_id)
     test_results = TestResult.objects.filter(student=student).order_by('test_date')
 
     data = pd.DataFrame({
@@ -139,7 +141,8 @@ def plot_test_scores(request):
 
 # 학습 결과 그래프
 def plot_learning_results(request):
-    student = request.user
+    user_id = request.user.id
+    student = Student.objects.get(user__id=user_id)
     results = LearningResult.objects.filter(student=student).order_by('learning_date')
 
     data = pd.DataFrame({
@@ -169,7 +172,8 @@ def plot_learning_results(request):
 
 # 전체 학습 시간 그래프
 def plot_total_learning_time(request):
-    student = request.user
+    user_id = request.user.id
+    student = Student.objects.get(user__id=user_id)
     logs = StudentLearningLog.objects.filter(student=student)
 
     total_time = sum(
