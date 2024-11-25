@@ -129,7 +129,7 @@ def upload_audio(request):
             
             print(student_audio_path)
             print(native_audio_path)
-            test_path = "C:/Users/user/Desktop/eng-word/media/audio_files/native/actually.wav"
+            # test_path = "C:/Users/user/Desktop/eng-word/media/audio_files/native/actually.wav"
             result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id,username)
             # result = process_audio_files(native_audio_path,student_audio_path,current_word,user_id)
             return JsonResponse({
