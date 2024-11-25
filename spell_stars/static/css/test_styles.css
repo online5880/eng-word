@@ -167,3 +167,13 @@ p {
 #nextQuestionBtn:hover {
     background-color: #005bb5; /* Next question 버튼 hover 색상 */
 }
+
+#nextQuestionBtn.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#nextQuestionBtn.disabled:hover {
+    background-color: #cccccc;
+}
