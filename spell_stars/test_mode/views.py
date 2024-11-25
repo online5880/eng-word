@@ -5,7 +5,7 @@ from django.core.files.storage import default_storage
 from .models import TestResult, TestResultDetail
 from vocab_mode.models import Word
 from sent_mode.models import Sentence
-from accounts.models import StudentInfo
+from accounts.models import Student
 import os
 import re
 from django.db.models import Max
@@ -255,7 +255,7 @@ def next_question(request):
 def save_all_test_results(request):
     try:
         user_id = request.user.id
-        student = StudentInfo.objects.get(id=user_id)
+        student = Student.objects.get(id=user_id)
         answers = request.session.get("answers", [])
 
         correct_answers = sum([1 for answer in answers if answer["is_correct"]])

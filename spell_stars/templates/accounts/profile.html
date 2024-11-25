@@ -1,20 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내 정보</title>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>spell stars | 프로필</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-    <!-- index.html로 이동하는 버튼 추가 -->
-    <h1>프로필 정보</h1>
-    <p><strong>이름:</strong> {{ user.name }}</p>
-    <p><strong>아이디:</strong> {{ user.username }}</p>
-    <p><strong>나이:</strong> {{ user.age }}</p>
-    <p><strong>학년:</strong> {{ user.grade }} 학년</p>
-    <p><strong>가입 날짜:</strong> {{ user.date_joined }}</p>
-    <p><strong>마지막 접속 시간:</strong> {{ user.last_login }}</p>
-    <button onclick="location.href='{% url 'index' %}'">돌아가기</button>
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <!-- 기본 프로필 정보 -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="mb-0">내 정보</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>이름:</strong> {{ user.name }}</p>
+                        <p><strong>아이디:</strong> {{ user.username }}</p>
+                        <p><strong>생년월일:</strong> {{ user.birth_date|date:"Y년 m월 d일" }}</p>
+                        <p><strong>역할:</strong> {{ user.get_role_display }}</p>
+                        {% if user.role == 'student' %}
+                            <p><strong>학년:</strong> {{ user.get_grade_display }}</p>
+                            <p><strong>고유 코드:</strong> {{ user.student_profile.unique_code }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if user.role == 'parent' %}
+            <!-- 자녀 추가 버튼 -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <button type="button" class="btn btn-outline-dark btn-md w-100 btn-block p-3" data-bs-toggle="modal" data-bs-target="#addChildModal">
+                        자녀 추가하기
+                    </button>
+                </div>
+            </div>
+
+            <!-- 자녀 추가 모달 -->
+            <div class="modal fade" id="addChildModal" tabindex="-1" aria-labelledby="addChildModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addChildModalLabel">자녀 추가하기</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" id="addChildForm" autocomplete="off">
+                                {% csrf_token %}
+                                {{ add_child_form|crispy }}
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary btn-md w-100 btn-block p-3" data-bs-dismiss="modal">취소</button>
+                                    <button type="submit" class="btn btn-outline-dark btn-md w-100 btn-block p-3">자녀 등록</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 연결된 자녀 목록 -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="mb-4">연결된 자녀 정보</h3>
+                    <div class="row">
+                        {% for relation in user.parent_profile.parentstudentrelation_set.all %}
+                        <div class="col-md-6 mb-4">
+                            <div class="card student-card" style="cursor: pointer;" 
+                                 onclick="location.href='{% url 'student_learning_history' student_id=relation.student.id %}'">
+                                <div class="card-header">
+                                    <h5 class="mb-0">{{ relation.student.user.name }}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>학생 ID:</strong> {{ relation.student.user.username }}</p>
+                                    <p><strong>학년:</strong> {{ relation.student.user.get_grade_display }}</p>
+                                    <p><strong>관계:</strong> {{ relation.student_relation }}</p>
+                                    <p><strong>연결일:</strong> {{ relation.created_at|date:"Y년 m월 d일" }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <div class="col-12">
+                            <div class="alert alert-info">
+                                현재 등록된 자녀가 없습니다.
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if user.role == 'student' %}
+            <!-- 연결된 학부모 목록 -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="mb-4">연결된 학부모 정보</h3>
+                    <div class="row">
+                        {% for relation in user.student_profile.parentstudentrelation_set.all %}
+                        <div class="col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="mb-0">{{ relation.parent.user.name }}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>학부모 ID:</strong> {{ relation.parent.user.username }}</p>
+                                    <p><strong>관계:</strong> {{ relation.parent_relation }}</p>
+                                    <p><strong>연결일:</strong> {{ relation.created_at|date:"Y년 m월 d일" }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <div class="col-12">
+                            <div class="alert alert-info">
+                                현재 연결된 학부모가 없습니다.
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <!-- 뒤로가기 버튼 -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <a href="{% url 'index' %}" class="btn btn-outline-dark btn-md w-100 btn-block p-3">뒤로가기</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = new bootstrap.Modal(document.getElementById('addChildModal'));
+        const form = document.getElementById('addChildForm');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            fetch('', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRFToken': formData.get('csrfmiddlewaretoken')
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(data.message);
+                    modal.hide();
+                    location.reload();
+                } else {
+                    alert(data.message);
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
-

@@ -153,9 +153,19 @@ DATABASES = {
         "USER": os.getenv("USERNAME"),
         "PASSWORD": os.getenv("PASSWORD"),
         "HOST": os.getenv("HOST"),
-        "PORT": os.getenv("PORT"),
+        "PORT": "443",
+        'CONN_MAX_AGE': 600,
     }
 }
+
+print(DATABASES)
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -206,7 +216,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = "accounts.StudentInfo"
+AUTH_USER_MODEL = "accounts.CustomUser"
 
 LOGIN_URL = "/accounts/login/"  # @login_required가 리디렉션할 로그인 URL
 LOGOUT_URL = "/accounts/logout/"  # 로그아웃 버튼이나 링크가 사용할 로그아웃 URL
