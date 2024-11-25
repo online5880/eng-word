@@ -61,26 +61,22 @@ def upload_audio(request):
 
             # 저장 경로 설정
             save_path = f"pron_pc/user_{user_id}/"
-            os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
+            file_path = os.path.join(settings.MEDIA_ROOT, save_path, f"{word}_student.wav")
 
-            # 파일 이름 설정
-            file_name = f"{word}_student.wav"
-            file_path = os.path.join(save_path, file_name)
+            # 디렉터리 존재하지 않으면 생성
+            os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
 
             # 기존 파일이 있으면 삭제
             if default_storage.exists(file_path):
                 default_storage.delete(file_path)
 
             # 새 파일 저장
-            full_path = default_storage.save(
-                file_path, ContentFile(request.FILES["audio"].read())
-            )
+            full_student_audio_path = default_storage.save(file_path, ContentFile(request.FILES["audio"].read()))
 
             # 절대 경로로 변환
             native_audio_path = os.path.join(
                 settings.MEDIA_ROOT, "audio_files/native/", f"{word}.wav"
             )
-            full_student_audio_path = os.path.join(settings.MEDIA_ROOT, file_path)
 
             # 발음 비교 처리
             result = process_audio_files(
@@ -104,6 +100,7 @@ def upload_audio(request):
             )
 
         except Exception as e:
+            # 예외 발생 시 자세한 오류 메시지 반환
             return JsonResponse({"status": "error", "message": str(e)}, status=500)
 
     return JsonResponse({"status": "error", "message": "Invalid request"}, status=400)

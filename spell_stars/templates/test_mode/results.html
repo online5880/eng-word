@@ -1,53 +1,53 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>결과 페이지</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/testresult_styles.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
-    <h1>테스트 결과</h1>
-    {% if result %}
-        <p>테스트 날짜: {{ result.test_date }}</p>
-        <p>점수: {{ result.accuracy_score }} / 5</p>
-        
-        <h2>단어별 결과</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>단어</th>
-                    <th>예문</th>
-                    <th>예문 뜻</th>
-                    <th>정오답 여부</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for detail in details %}
-                <tr>
-                    <td>{{ detail.word.word }}</td>
-                    <td>{{ detail.sentence }}</td>
-                    <td>{{ detail.sentence_meaning }}</td>
-                    <td>
-                        {% if detail.is_correct %}
-                            정답
-                        {% else %}
-                            오답
-                        {% endif %}
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <p>결과가 없습니다.</p>
-    {% endif %}
-    <div id="navButtons">
-        <button id="againBtn">시험 다시 보기</button>
-        <button id="exitBtn">나가기</button>
-    </div>
-    <script src="{% static 'js/testresults.js' %}"></script>
-</body>
-</html>
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>결과 페이지</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/testresult_styles.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+        <h1>테스트 결과</h1>
+        {% if result %}
+            <p>테스트 날짜: {{ result.test_date }}</p>
+            <p>점수: {{ result.accuracy_score }} / 5</p>
+            
+            <h2>단어별 결과</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>단어</th>
+                        <th>예문</th>
+                        <th>예문 뜻</th>
+                        <th>정오답 여부</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for detail in details %}
+                    <tr>
+                        <td>{{ detail.word.word }}</td>
+                        <td>{{ detail.sentence }}</td>
+                        <td>{{ detail.sentence_meaning }}</td>
+                        <td>
+                            {% if detail.is_correct %}
+                                정답
+                            {% else %}
+                                오답
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>결과가 없습니다.</p>
+        {% endif %}
+        <div id="navButtons">
+            <button id="againBtn">시험 다시 보기</button>
+            <button id="exitBtn">나가기</button>
+        </div>
+        <script src="{% static 'js/testresults.js' %}"></script>
+    </body>
+{% endblock %}

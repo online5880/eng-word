@@ -5,7 +5,8 @@
   <head>
     <title>시험 모드</title>
     <script>
-      const uploadAudioUrl = "{% url 'vocab_upload_audio' %}";
+      const uploadAudioUrl = "{% url 'test_submit_audio' %}";
+      const csrfToken = "{{ csrf_token }}";
     </script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/test_styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

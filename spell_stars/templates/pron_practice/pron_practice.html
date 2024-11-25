@@ -1,12 +1,14 @@
+{% extends "base.html" %}
 {% load static %}
-{% csrf_token %}
-<html lang="ko">
-
+{% block content %}
   <head>
-    <meta charset="UTF-8">
     <title>발음 연습 모드</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/pron_styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+      const uploadAudioUrl = "{% url 'practice_upload_audio' %}";
+      const csrfToken = "{{ csrf_token }}";
+    </script>
   </head>
 
   <body>
@@ -76,5 +78,4 @@
 
     <script src="{% static 'js/pron_practice.js' %}"></script>
   </body>
-
-</html>
+{% endblock %}
