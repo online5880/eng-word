@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.decorators import login_required
+from rest_framework import status
 from .forms import LoginForm, SignupForm, AddChildForm
 from .models import ParentStudentRelation, Student, Parent,StudentLearningLog, StudentLog
 from rest_framework.decorators import action
-from rest_framework import viewsets
+from rest_framework import viewsets,mixins
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from .serializers import ParentStudentRelationSerializer, StudentSerializer, StudentLogSerializer, StudentLearningLogSerializer
@@ -144,6 +145,7 @@ class StudentLearningLogViewSet(viewsets.ModelViewSet):
     """
     serializer_class = StudentLearningLogSerializer
     permission_classes = [IsAuthenticated]
+    http_method_names = ['get', 'post', 'patch']  # DELETE 제외
 
     def get_queryset(self):
         # 학생 ID를 기반으로 학습 로그 필터링
