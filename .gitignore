@@ -165,3 +165,5 @@ model/
 settings.json
 
 spell_stars/utils/generate/vosk-model-en-us-0.22/
+
+*.wav

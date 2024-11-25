@@ -47,108 +47,98 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 마이크 버튼 이벤트
-    if (micButton) {
-        micButton.addEventListener('click', async function () {
-            if (!isRecording) {
-                try {
-                    console.log('마이크 접근 시도...');
-                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                    console.log('마이크 접근 성공');
-                    startRecording(stream);
-                } catch (err) {
-                    console.error('마이크 접근 오류:', err);
-                    statusText.textContent = '마이크 접근이 거부되었습니다.';
-                }
-            } else {
-                console.log('녹음 중... 녹음 종료');
-                stopRecording();
-            }
-        });
-    }
-
     // 녹음 시작
-    function startRecording(stream) {
-        console.log('녹음 시작');
-        mediaRecorder = new MediaRecorder(stream);
-        audioChunks = [];
-        isRecording = true;
+    async function startRecording() {
+        try {
+            console.log('Starting recording...');
+    
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            console.log('Stream received:', stream);
+    
+            mediaRecorder = new MediaRecorder(stream);
+            audioChunks = [];
+    
+            mediaRecorder.ondataavailable = (event) => {
+                audioChunks.push(event.data);
+            };
+    
+            mediaRecorder.onstop = async () => {
+                console.log('Recording stopped. Processing audio...');
 
-        mediaRecorder.addEventListener('dataavailable', event => {
-            console.log('오디오 데이터 수집:', event.data);
-            audioChunks.push(event.data);
-        });
+                // 데이터 확인
+                console.log('audioChunks:', audioChunks);
+                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                console.log('audioBlob:', audioBlob);
 
-        mediaRecorder.addEventListener('stop', async () => {
-            console.log('녹음 종료');
-            const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                const targetedWord = document.getElementById('current-word').textContent; 
+                const formData = new FormData();
+                formData.append('audio', audioBlob, `${targetedWord}.wav`);
+                formData.append('word', targetedWord);
 
-            const formData = new FormData();
-            const targetedWord = document.getElementById('current-word').textContent; 
-            formData.append('audio', audioBlob, `${targetedWord}.wav`);
-            formData.append('word', targetedWord);
-
-            const uploadAudioUrl = '/practice/upload_audio/';
-            try {
-                console.log('오디오 업로드 시도');
-                const response = await fetch(uploadAudioUrl, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'X-CSRFToken': csrfToken
-                    }
-                });
-
-                const data = await response.json();
-                console.log('서버 응답:', data);
-                if (data.status === 'success') {
-                    statusText.textContent = '녹음이 성공적으로 저장되었습니다.';
-                    if (audioPlayer) {
-                        audioPlayer.src = '/' + data.file_path;
-                    }
-
-                    // 서버에서 점수 받기
-                    if (data.score !== undefined) {
-                        console.log('서버에서 받은 점수:', data.score);  // 점수 출력
-                        displayFeedback(data.score);  // 점수 표시
-                    }
-                } else {
-                    statusText.textContent = '녹음 저장에 실패했습니다.';
+                // FormData 확인
+                for (let pair of formData.entries()) {
+                    console.log(`${pair[0]}: ${pair[1]}`);
                 }
-            } catch (error) {
-                console.error('녹음 저장 오류:', error);
-                statusText.textContent = '녹음 저장 중 오류가 발생했습니다.';
+    
+                try {
+                    const response = await fetch(uploadAudioUrl, {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRFToken': csrfToken
+                        },
+                        body: formData
+                    });
+                    
+    
+                    console.log('Response status:', response.status);
+                    if (response.ok) {
+                        const data = await response.json();
+                        console.log('Upload success:', data);
+                        displayResult(data.score);
+                    } else {
+                        const errorText = await response.text();
+                        console.error('Upload failed:', errorText);
+                        statusText.textContent = '녹음 저장 중 오류가 발생했습니다.';
+                    }
+                } catch (error) {
+                    console.error('Fetch error:', error);
+                    statusText.textContent = '녹음 저장 중 오류가 발생했습니다.';
+                }
+            };
+    
+            mediaRecorder.start();
+            isRecording = true;
+            micButton.classList.add('recording');
+            statusText.textContent = '녹음 중...';
+    
+            // 음성 레벨 표시
+            const audioContext = new AudioContext();
+            const analyser = audioContext.createAnalyser();
+            const source = audioContext.createMediaStreamSource(stream);
+            source.connect(analyser);
+            analyser.fftSize = 256;
+            const bufferLength = analyser.frequencyBinCount;
+            const dataArray = new Uint8Array(bufferLength);
+    
+            function updateVoiceLevel() {
+                if (isRecording) {
+                    analyser.getByteFrequencyData(dataArray);
+                    const average = dataArray.reduce((a, b) => a + b) / bufferLength;
+                    const level = (average / 128) * 100;
+                    voiceLevelFill.style.width = `${level}%`;
+                    requestAnimationFrame(updateVoiceLevel);
+                }
             }
-        });
-
-        mediaRecorder.start();
-        statusText.textContent = '녹음 중...';
-        micButton.classList.add('recording');
-
-        // 음성 레벨 표시
-        const audioContext = new AudioContext();
-        const analyser = audioContext.createAnalyser();
-        const microphone = audioContext.createMediaStreamSource(stream);
-        microphone.connect(analyser);
-        analyser.fftSize = 256;
-        const bufferLength = analyser.frequencyBinCount;
-        const dataArray = new Uint8Array(bufferLength);
-
-        function updateVoiceLevel() {
-            if (isRecording) {
-                analyser.getByteFrequencyData(dataArray);
-                const average = dataArray.reduce((a, b) => a + b) / bufferLength;
-                const level = (average / 128) * 100;  // 음성 레벨 계산 수정
-                voiceLevelFill.style.width = `${level}%`;  // 여기도 높이로 변경
-                requestAnimationFrame(updateVoiceLevel);
-            }
+            updateVoiceLevel();
+    
+        } catch (error) {
+            console.error('Error in startRecording:', error);
+            statusText.textContent = '마이크 접근 오류';
         }
-        updateVoiceLevel();
     }
 
-    // 녹음 종료
+    // 녹음 중지
     function stopRecording() {
-        console.log('녹음 종료 함수 실행');
         if (mediaRecorder && mediaRecorder.state !== 'inactive') {
             mediaRecorder.stop();
             mediaRecorder.stream.getTracks().forEach(track => track.stop());
@@ -159,8 +149,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // 마이크 버튼 이벤트
+    micButton.addEventListener('click', () => {
+        if (!isRecording) {
+            startRecording();
+        } else {
+            stopRecording();
+        }
+    });
+
     // 피드백 표시
-    function displayFeedback(score) {
+    function displayResult(score) {
         console.log(`점수: ${score}`);
         document.getElementById("score").textContent = score;  // 점수 업데이트
         document.getElementById("score-bar").style.width = score + "%";  // 점수에 맞는 프로그레스 바 업데이트

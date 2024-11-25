@@ -46,6 +46,7 @@ def trim_and_standardize(file_path):
     """
     trimmed_file_path = trim_silence(file_path)  # 무음 제거 수행
     standardized_file_path = standardize_audio(trimmed_file_path)  # RMS 표준화 적용
+    print("trim_and_standardize",standardized_file_path)
     return standardized_file_path
 
 

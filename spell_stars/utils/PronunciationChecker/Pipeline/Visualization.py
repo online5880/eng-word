@@ -4,7 +4,6 @@ from plotly.subplots import make_subplots
 import matplotlib.pyplot as plt
 import librosa
 import numpy as np
-import mpld3
 import matplotlib
 from scipy.ndimage import gaussian_filter1d
 matplotlib.use('Agg')  # GUI 창을 비활성화하는 백엔드

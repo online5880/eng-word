@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Graph</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
+    <script>
+        // '나가기' 버튼 클릭 시 홈으로 리다이렉트
+        function goToHome() {
+            window.location.href = "/";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>학습 현황</h1>
+    </header>
+    <div id="graph">
+    <main class="dashboard-container">
+        {{ graphs|safe }}
+    </main>
+    </div>
+    <button id="exitBtn" onclick="goToHome()">나가기</button>
+</body>
+</html>

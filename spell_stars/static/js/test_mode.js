@@ -4,21 +4,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const statusText = document.querySelector('.status-text');
     const voiceLevelFill = document.querySelector('.voice-level-fill');
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-
+    const nextQuestionBtn = document.getElementById("nextQuestionBtn");  // 다음 문제 버튼
     let mediaRecorder;
     let audioChunks = [];
     let isRecording = false;
-    let targetedWord = '';  // 여기서 초기화
+    let targetedWord = '';
 
-    // beforeunload 이벤트 리스너 추가
-    window.addEventListener('beforeunload', function(e) {
-        fetch('/accounts/end-learning/', {
-            method: 'POST',
-            headers: {
-                'X-CSRFToken': csrfToken
-            }
-        });
-    });
+    // 초기 상태로 버튼을 비활성화
+    if (nextQuestionBtn) {
+        nextQuestionBtn.disabled = true; // 처음에는 비활성화
+    }
 
     // 마이크 버튼 이벤트
     if (micButton) {
@@ -52,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
             audioChunks.push(event.data);
         });
 
+        // 녹음 종료 후 서버에서 점수 받기
         mediaRecorder.addEventListener('stop', async () => {
             console.log('녹음 종료');
             const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
@@ -82,11 +78,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     // 서버에서 점수 받기
                     if (data.score_message !== undefined) {
-                        console.log('서버에서 받은 점수:', data.score_message);  // 점수 출력
+                        console.log('서버에서 받은 점수:', data.score_message);
                         const scoreDisplay = document.getElementById("scoreDisplay");
                         if (scoreDisplay) {
-                            // 점수 메시지 업데이트
                             scoreDisplay.textContent = data.score_message;
+                        }
+
+                        // **버튼 활성화 로직 수정**
+                        // 데이터에서 `score_message`가 존재하는지 확인 후 활성화
+                        if (scoreDisplay) {
+                            nextQuestionBtn.disabled = false;  // 문제를 풀었으면 버튼 활성화
+                        } else {
+                            nextQuestionBtn.disabled = true;  // 점수가 없으면 버튼 비활성화
                         }
                     }
                 } else {
@@ -157,7 +160,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     console.error('#problem-number 요소를 찾을 수 없습니다.');
                 }
-    
+
+                if (nextQuestionBtn) {
+                    nextQuestionBtn.disabled = true; // 처음에는 비활성화
+                }
+                
                 // 단어 갱신
                 document.getElementById('targeted-word').textContent = data.word;
     
@@ -172,16 +179,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 statusText.textContent = '마이크를 클릭하여 시작하세요'; // 메시지 제거
     
                 // 버튼 텍스트 및 이벤트 갱신
-                const nextButton = document.getElementById('nextQuestionBtn');
                 if (data.is_last_question) {
-                    nextButton.textContent = '나가기';
-                    nextButton.removeEventListener('click', nextQuestion);
-                    nextButton.addEventListener('click', exitTest);
+                    nextQuestionBtn.textContent = '나가기';
+                    nextQuestionBtn.removeEventListener('click', nextQuestion);
+                    nextQuestionBtn.addEventListener('click', exitTest);
                 } else {
-                    nextButton.textContent = '다음 문제';
-                    nextButton.removeEventListener('click', exitTest);
-                    nextButton.addEventListener('click', nextQuestion);
+                    nextQuestionBtn.textContent = '다음 문제';
+                    nextQuestionBtn.removeEventListener('click', exitTest);
+                    nextQuestionBtn.addEventListener('click', nextQuestion);
                 }
+
             } else {
                 console.log('새 단어를 가져오지 못했습니다.');
                 alert('모든 문제를 완료했습니다. 새로 시작하려면 학습을 종료하고 다시 시작하세요.');
@@ -198,8 +205,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // 이벤트 리스너 추가
-    const nextQuestionBtn = document.getElementById("nextQuestionBtn");
-
     if (nextQuestionBtn) {
         nextQuestionBtn.addEventListener('click', nextQuestion);
     }

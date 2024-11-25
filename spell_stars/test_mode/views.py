@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.http import JsonResponse
 from django.conf import settings
 from django.core.files.storage import default_storage
@@ -13,6 +13,11 @@ from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from django.apps import apps
 from django.core.files.base import ContentFile
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.permissions import IsAuthenticated
+from .serializers import TestResultSerializer
 from accounts.views import start_learning_session
 import warnings
 import random
@@ -23,8 +28,8 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 model = apps.get_app_config('spell_stars').whisper_model
 processor = apps.get_app_config('spell_stars').whisper_processor
 
-TOTAL_QUESTIONS = 10
-MAX_SCORE = 100
+TOTAL_QUESTIONS = 5
+MAX_SCORE = 5
 POINTS_PER_QUESTION = MAX_SCORE / TOTAL_QUESTIONS
 
 
@@ -105,6 +110,12 @@ def test_mode_view(request):
         )
 
 
+def clean_text(text):
+    """특수문자를 제거하고 소문자로 변환, 공백 기준으로 단어를 리스트로 분리"""
+    text = re.sub(r"[^\w\s]", "", text).lower()  # 특수문자 제거
+    return text.split()  # 단어를 공백 기준으로 분리하여 리스트로 반환
+
+
 @csrf_exempt
 def submit_audio(request):
     print("submit_audio called")
@@ -137,8 +148,6 @@ def submit_audio(request):
             full_student_audio_path = default_storage.save(
                 file_path, ContentFile(request.FILES["audio"].read())
             )
-            
-            print(file_path)
 
             # Whisper 모델로 음성 텍스트 변환
             audio, rate = librosa.load(file_path, sr=16000)  # Whisper는 16kHz 필요
@@ -158,14 +167,11 @@ def submit_audio(request):
             print(f"Transcript from Whisper: {transcript}")
 
             # 정답 단어와 비교 (특수문자 제외)
-            def clean_text(text):
-                """특수문자를 제거하고 소문자로 변환"""
-                return re.sub(r"[^\w\s]", "", text).lower()
+            clean_transcript = clean_text(transcript)  # 단어 리스트로 변환
+            clean_target_word = clean_text(word)  # 정답 단어도 리스트로 변환
 
-            clean_transcript = clean_text(transcript)
-            clean_target_word = clean_text(word)
-
-            is_correct = clean_target_word in clean_transcript.split()
+            # 두 리스트에서 단어가 일치하는지 확인 (다중 단어를 처리)
+            is_correct = all(target_word in clean_transcript for target_word in clean_target_word)
 
             if is_correct:
                 score = "정답입니다!"
@@ -324,3 +330,41 @@ def results_view(request):
 
     except TestResult.DoesNotExist:
         return render(request, 'test_mode/results.html', {'error': 'Test result not found.'})
+
+
+class TestResultPagination(PageNumberPagination):
+    page_size = 10
+
+class TestResultListAPIView(APIView):
+    """
+    학생의 시험 결과 목록 제공 (페이지네이션 포함)
+    Endpoint: GET /api/test-results/
+    """
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        student = request.user  # 현재 사용자를 기준으로 학생 정보 가져오기
+        queryset = TestResult.objects.filter(student=student).order_by('-test_date')
+        
+        paginator = TestResultPagination()
+        results_page = paginator.paginate_queryset(queryset, request)
+        
+        serializer = TestResultSerializer(results_page, many=True)
+        return paginator.get_paginated_response(serializer.data)
+
+class TestResultDetailAPIView(APIView):
+    """
+    특정 시험 결과의 세부 정보 제공
+    Endpoint: GET /api/test-results/<int:test_id>/
+    """
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, test_id):
+        student = request.user
+        try:
+            test_result = TestResult.objects.get(id=test_id, student=student)
+        except TestResult.DoesNotExist:
+            return Response({"error": "Test result not found"}, status=404)
+
+        serializer = TestResultSerializer(test_result)
+        return Response(serializer.data)
