@@ -1,21 +1,26 @@
 import shutil
 import sys
 import os
-from datetime import datetime
 import numpy as np
-import pdb
-
 from .Pipeline.Parselscore import get_formants
 from .Pipeline.Score import calculate_formant_score, calculate_phoneme_score, calculate_overall_score
 from .Pipeline.Preprocessing import trim_and_standardize, align_start_point
 from .Pipeline.Visualization import visualize_waveforms, plot_f1_f2_comparison_plotly
 sys.path.append("C:/Users/82107/Desktop/eng-word/spell_stars/utils/PronunciationChecker/Pipeline")
 
-def cleanup_temp_dir(temp_dir):
-    """주어진 임시 폴더를 삭제"""
-    print(temp_dir)
+def cleanup_temp_dir(file_path):
+    """
+    주어진 파일이 존재하는 폴더를 삭제합니다.
+
+    Args:
+        file_path (str): 파일의 경로
+    """
+    # 파일 경로에서 디렉토리 경로 추출
+    temp_dir = os.path.dirname(file_path)
+    
+    # 디렉토리 존재 여부 확인 및 삭제
     if os.path.exists(temp_dir):
-        shutil.rmtree(temp_dir)
+        shutil.rmtree(temp_dir)  # 폴더 삭제
         print(f"Deleted temporary directory: {temp_dir}")
     else:
         print(f"Directory does not exist: {temp_dir}")
@@ -28,15 +33,14 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
     # 결과 저장 리스트 초기화
 
     result = {"결과 없음":0}
-
-
+    
     print(f"Processing Native: {native_audio_file_path} | Student: {student_audio_file_path}")
 
     try:
         print("Starting preprocessing...")
         # 무음 제거 및 RMS 표준화
-        standardized_native_path = trim_and_standardize(native_audio_file_path)
-        standardized_student_path = trim_and_standardize(student_audio_file_path)
+        trimmed_native_path, standardized_native_path = trim_and_standardize(native_audio_file_path)
+        trimmed_student_path, standardized_student_path = trim_and_standardize(student_audio_file_path,student_audio_file_path)
         print(f"Standardized native path: {standardized_native_path}")
         print(f"Standardized student path: {standardized_student_path}")
 
@@ -83,8 +87,6 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
 
         # 1. 파형 비교 시각화
         wave_html_fig = visualize_waveforms(standardized_native_path, standardized_student_path,username=username)
-        print(standardized_native_path)
-        print(standardized_student_path)
 
         # 2. Formant 비교 시각화
         formant_html_fig = plot_f1_f2_comparison_plotly(
@@ -112,6 +114,9 @@ def process_audio_files(native_audio_file_path, student_audio_file_path, expecte
         print(f"Phoneme Score: {result['phoneme_score']}")
         print(f"Overall Pronunciation Score: {result['overall_score']}")
         print("-" * 40)
+        
+        cleanup_temp_dir(trimmed_student_path)
+        cleanup_temp_dir(standardized_student_path)
         return result
 
     except Exception as e:

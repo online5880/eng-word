@@ -21,7 +21,7 @@ def trim_silence(file_path):
     return trimmed_file_path
 
 # RMS 기반 음성 크기 표준화
-def standardize_audio(file_path):
+def standardize_audio(file_path, output_audio_file_path:str):
     """
     RMS를 기반으로 음성 크기를 표준화합니다.
     """
@@ -36,17 +36,22 @@ def standardize_audio(file_path):
     temp_dir = "temp_standardized"
     os.makedirs(temp_dir, exist_ok=True)
     standardized_file_path = os.path.join(temp_dir, os.path.basename(file_path))
-    sf.write(standardized_file_path, y, sr)
+    sf.write(standardized_file_path, y, sr,format="wav")
+        # 지정된 경로에 저장
+    if not output_audio_file_path.endswith(".wav"):  # 확장자 확인 및 추가
+        output_audio_file_path += ".wav"
+    sf.write(output_audio_file_path, y, sr, format="WAV")  # 파일 포맷 명시
     return standardized_file_path
 
 # 무음 제거와 RMS 표준화를 결합한 함수
-def trim_and_standardize(file_path):
+def trim_and_standardize(file_path:str,output_audio_file_path="") ->tuple[str,str]:
     """
     무음 제거 후 RMS 기반 음성 크기 표준화를 수행합니다.
     """
     trimmed_file_path = trim_silence(file_path)  # 무음 제거 수행
-    standardized_file_path = standardize_audio(trimmed_file_path)  # RMS 표준화 적용
-    return standardized_file_path
+    standardized_file_path = standardize_audio(trimmed_file_path,output_audio_file_path)  # RMS 표준화 적용
+    print("trim_and_standardize 후 학생 음성 파일 저장 완료",output_audio_file_path)
+    return trimmed_file_path, standardized_file_path
 
 
 # Cross-Correlation 기반 발음 동기화 함수
