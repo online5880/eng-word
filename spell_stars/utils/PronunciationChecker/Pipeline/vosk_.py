@@ -1,4 +1,3 @@
-import os
 import wave
 import json
 from django.apps import apps
