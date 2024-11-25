@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import StudentInfo, StudentLog, StudentLearningLog
+from .models import Student, StudentLog, StudentLearningLog
 
 # 학생 기본 정보 Serializer
-class StudentInfoSerializer(serializers.ModelSerializer):
+class StudentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = StudentInfo
+        model = Student
         fields = ['id', 'username', 'name', 'birth_date', 'grade', 'age', 'derived_grade']
 
 # 학생 로그 Serializer

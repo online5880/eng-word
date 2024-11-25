@@ -5,7 +5,7 @@ from django.utils.timezone import now
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 
-from accounts.models import StudentLog
+from accounts.models import StudentLog, Student
 from datetime import datetime, timedelta
 import pytz
 
@@ -55,15 +55,19 @@ class AutoLogoutMiddleware:
         StudentLog에 로그아웃 시간을 기록합니다.
         """
         try:
-            log = StudentLog.objects.filter(student=request.user).latest('login_time')
-            log.logout_time = now()
-            log.save()
+            if request.user.role == 'student':
+                student = Student.objects.get(user=request.user)
+                log = StudentLog.objects.filter(student=student).latest('login_time')
+                log.logout_time = now()
+                log.save()
+        except Student.DoesNotExist:
+            print("학생 프로필을 찾을 수 없습니다.")
         except StudentLog.DoesNotExist:
-            print("No login log found for logout entry.")
+            print("로그인 기록을 찾을 수 없습니다.")
         except Exception as e:
-            print(f"Error in recording logout time: {e}")
+            print(f"로그아웃 시간 기록 저장 실패: {e}")
         finally:
-            print("Logout process completed.")
+            print("로그아웃 프로세스 완료")
 
     def redirect_to_login(self):
         return HttpResponseRedirect(reverse('login'))

@@ -24,6 +24,42 @@
       <br>
       <a class="btn btn-outline-dark btn-md w-100 btn-block p-3" type="button" href="{% url 'index' %}">뒤로가기</a>
     </div>
-  </body>
 
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const studentCodeInput = document.querySelector('input[name="student_code"]');
+        const gradeSelect = document.querySelector('select[name="grade"]');
+        const roleInputs = document.querySelectorAll('input[name="role"]');
+        
+        const studentCodeField = studentCodeInput.closest('.mb-3');
+        const gradeField = gradeSelect.closest('.mb-3');
+        
+        function toggleFields() {
+            const selectedRole = document.querySelector('input[name="role"]:checked');
+            if (selectedRole) {
+                if (selectedRole.value === 'parent') {
+                    studentCodeField.style.display = 'block';
+                    gradeField.style.display = 'none';
+                } else {
+                    studentCodeField.style.display = 'none';
+                    gradeField.style.display = 'block';
+                }
+            }
+        }
+        
+        roleInputs.forEach(input => {
+            input.addEventListener('change', toggleFields);
+        });
+        
+        // 페이지 로드 시 학생 라디오 버튼이 선택되어 있도록 설정
+        const studentRadio = document.querySelector('input[name="role"][value="student"]');
+        if (studentRadio) {
+            studentRadio.checked = true;
+        }
+        
+        // 초기 상태 설정
+        toggleFields();
+      });
+    </script>
+  </body>
 </html>

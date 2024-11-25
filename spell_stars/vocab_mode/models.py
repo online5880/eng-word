@@ -6,7 +6,7 @@ class Word(models.Model):
     word = models.CharField(max_length=100, unique=True)
     meanings = models.JSONField(default=dict)  # 여러 개의 뜻을 저장
     part_of_speech = models.CharField(max_length=50, blank=True, null=True) # 품사
-    category = models.IntegerField() # 카테고리
+    category = models.IntegerField(blank=True, null=True)  # 카테고리
     examples = models.JSONField(default=dict)  # 영어와 한국어 예문을 저장
     file_path = models.CharField(max_length=255, blank=True, null=True)  # 파일 경로를 저장
 
