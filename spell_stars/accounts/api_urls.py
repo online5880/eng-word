@@ -1,18 +1,21 @@
-from django.urls import path, include
-from rest_framework_nested.routers import DefaultRouter, NestedDefaultRouter
-from .views import StudentViewSet, StudentLogViewSet, StudentLearningLogViewSet
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
+from rest_framework_nested.routers import NestedSimpleRouter
+from .views import ParentStudentRelationViewSet, StudentViewSet, StudentLogViewSet, StudentLearningLogViewSet
 
-# Default Router (기본 학생 정보 URL)
+# 기본 라우터
 router = DefaultRouter()
-router.register(r'students', StudentViewSet, basename='students')
+router.register(r'students', StudentViewSet)
+router.register(r'parent-student-relations', ParentStudentRelationViewSet, basename='parent-student-relation')
 
-# Nested Router (학생 로그 및 학습 로그 URL)
-logs_router = NestedDefaultRouter(router, r'students', lookup='student')
-logs_router.register(r'logs', StudentLogViewSet, basename='student-logs')
-logs_router.register(r'learning-logs', StudentLearningLogViewSet, basename='student-learning-logs')
+# 학생별 하위 라우터
+students_router = NestedSimpleRouter(router, r'students', lookup='student')
+students_router.register(r'logs', StudentLogViewSet, basename='student-logs')
+students_router.register(r'learning-logs', StudentLearningLogViewSet, basename='student-learning-logs')
 
-# URL Patterns
+
+# URL 패턴
 urlpatterns = [
-    path('', include(router.urls)),  # 기본 학생 정보 URLs
-    path('', include(logs_router.urls)),  # Nested URLs
+    path('', include(router.urls)),  # 학생 관련 URL
+    path('', include(students_router.urls)),  # 학생 하위 리소스 URL
 ]
