@@ -261,7 +261,7 @@ def next_question(request):
 def save_all_test_results(request):
     try:
         user_id = request.user.id
-        student = Student.objects.get(id=user_id)
+        student = Student.objects.get(user__id=user_id)
         answers = request.session.get("answers", [])
 
         correct_answers = sum([1 for answer in answers if answer["is_correct"]])
@@ -338,33 +338,37 @@ class TestResultPagination(PageNumberPagination):
 class TestResultListAPIView(APIView):
     """
     학생의 시험 결과 목록 제공 (페이지네이션 포함)
-    Endpoint: GET /api/test-results/
     """
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        student = request.user  # 현재 사용자를 기준으로 학생 정보 가져오기
+        # 현재 사용자 기준으로 학생 정보 가져오기
+        student = request.user.student_profile  # user와 연결된 student profile 가져오기
         queryset = TestResult.objects.filter(student=student).order_by('-test_date')
         
         paginator = TestResultPagination()
         results_page = paginator.paginate_queryset(queryset, request)
         
+        # Serializer를 사용하여 쿼리셋 데이터를 직렬화
         serializer = TestResultSerializer(results_page, many=True)
         return paginator.get_paginated_response(serializer.data)
 
 class TestResultDetailAPIView(APIView):
     """
     특정 시험 결과의 세부 정보 제공
-    Endpoint: GET /api/test-results/<int:test_id>/
     """
     permission_classes = [IsAuthenticated]
 
     def get(self, request, test_id):
-        student = request.user
+        # 현재 사용자 기준으로 학생 정보 가져오기
+        student = request.user.student_profile  # user와 연결된 student profile 가져오기
+        
         try:
+            # 특정 시험 결과를 해당 학생의 시험 결과로 필터링
             test_result = TestResult.objects.get(id=test_id, student=student)
         except TestResult.DoesNotExist:
             return Response({"error": "Test result not found"}, status=404)
 
+        # 시험 결과 직렬화
         serializer = TestResultSerializer(test_result)
         return Response(serializer.data)
