@@ -18,7 +18,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.filters import SearchFilter
 from rest_framework.permissions import IsAuthenticated
-from accounts.views import start_learning_session
+from accounts.views import start_learning_session, end_learning_session
 
 def display_vocabulary_book_random_category(request):
     # 모든 카테고리 가져오기 (중복 제거)
@@ -88,9 +88,8 @@ def display_vocabulary_book(request):
         random_words = random.sample(all_words, min(len(all_words), 15))
         context = {"words": random_words, "MEDIA_URL": settings.MEDIA_URL}
         
-    
     # 학습 시작 로그 생성
-    start_learning_session(request, learning_mode=0)
+    start_learning_session(request, learning_mode=1)
     return render(request, "vocab_mode/vocab.html", context)
 
 
@@ -151,6 +150,7 @@ def upload_audio(request):
     }, status=400)
 
 def sentence_mode(request):
+    end_learning_session(request)
     # 세션에서 선택된 단어들 가져오기
     selected_words = request.session.get('selected_words', [])
     

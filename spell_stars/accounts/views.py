@@ -184,11 +184,15 @@ def start_learning_session(request, learning_mode):
             "learning_mode": learning_mode,
             "start_time": current_time,
         }
+        print("학생 정보 : ",data)
         serializer = StudentLearningLogSerializer(data=data)
         if serializer.is_valid():
             log = serializer.save()
             request.session["learning_log_id"] = log.id
+            print("학습 세션이 시작되었습니다. session id:",request.session["learning_log_id"])
             return JsonResponse({"status": "success", "log_id": log.id})
+        
+        print("학습 세션이 시작 실패",request.session["learning_log_id"])
         return JsonResponse({"status": "error", "errors": serializer.errors}, status=400)
     except Student.DoesNotExist:
         return JsonResponse({"status": "error", "message": "학생 프로필을 찾을 수 없습니다"}, status=400)
@@ -208,6 +212,7 @@ def end_learning_session(request):
         log.save()
         
         # 세션에서 learning_log_id 삭제
+        print("학습 세션이 종료되었습니다. session id:",request.session["learning_log_id"])
         del request.session["learning_log_id"]
         
         return JsonResponse({
