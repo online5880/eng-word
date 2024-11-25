@@ -12,10 +12,48 @@ body {
     background-color: #f4f4f4;
 }
 
-/* 설명 텍스트 스타일 */
-p {
-    font-size: 1.5rem;
-    margin: 10px 0;
+/* 문제 박스 스타일 */
+.question-box {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#problem-number {
+    font-size: 20px;
+    color: #333;
+}
+
+.question-box p {
+    font-size: 20px;
+    color: #000000;
+}
+
+/* 예문 박스 스타일 */
+.sentence-box {
+    background-color: #e2e2e2;
+    padding: 60px;
+    width: auto;
+    max-width: 95%; /* 너무 커지지 않게 제한 */
+    margin: 20px 0;
+    text-align: center; /* 글씨 중앙 정렬 */
+}
+
+/* 단어와 뜻의 스타일 */
+.sentence-box p {
+    margin: 10px 0; /* 단어와 뜻 사이의 간격 */
+    font-size: 18px; /* 기본 글씨 크기 */
+}
+
+/* 단어는 굵게 표시 */
+#sentence {
+    font-weight: bold;
+    font-size: 24px; /* 단어 글씨 크기 */
+}
+
+/* 뜻은 기본 굵기로 */
+#sentence-meaning {
+    font-weight: normal;
+    font-size: 20px; /* 뜻 글씨 크기 */
 }
 
 #recordButton {

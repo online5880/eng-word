@@ -47,26 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 마이크 버튼 이벤트
-    if (micButton) {
-        micButton.addEventListener('click', async function () {
-            if (!isRecording) {
-                try {
-                    console.log('마이크 접근 시도...');
-                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                    console.log('마이크 접근 성공');
-                    startRecording(stream);
-                } catch (err) {
-                    console.error('마이크 접근 오류:', err);
-                    statusText.textContent = '마이크 접근이 거부되었습니다.';
-                }
-            } else {
-                console.log('녹음 중... 녹음 종료');
-                stopRecording();
-            }
-        });
-    }
-
     // 녹음 시작
     async function startRecording() {
         try {
@@ -114,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (response.ok) {
                         const data = await response.json();
                         console.log('Upload success:', data);
-                        displayResult(data.result);
+                        displayResult(data.score);
                     } else {
                         const errorText = await response.text();
                         console.error('Upload failed:', errorText);
