@@ -1,56 +1,53 @@
+{% extends "base.html" %}
 {% load static %}
-{% csrf_token %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="ko">
+  <head>
+    <title>시험 모드</title>
+    <script>
+      const uploadAudioUrl = "{% url 'vocab_upload_audio' %}";
+    </script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/test_styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>시험 모드</title>
-  <meta name="csrf-token" content="{{ csrf_token }}">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/test_styles.css' %}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+  <body>
+    <div id="practice-container">
+      <p id="problem-number">문제 번호: {{ problem_solved }}</p>
+      <p>다음 문장의 빈칸에 들어갈 단어를 맞혀보세요:</p>
 
-<body>
-  <div id="practice-container">
-    <p id="problem-number">문제 번호: {{ problem_solved }}</p>
-    <p>다음 문장의 빈칸에 들어갈 단어를 맞혀보세요:</p>
+      <!-- 문제 문장 -->
+      <p id="sentence">{{ sentence }}</p>
+      <p id="sentence-meaning">{{ sentence_meaning }}</p>
+      <div id="targeted-word" style="display: none;">{{ word }}</div>
 
-    <!-- 문제 문장 -->
-    <p id="sentence">{{ sentence }}</p>
-    <p id="sentence-meaning">{{ sentence_meaning }}</p>
-    <div id="targeted-word" style="display: none;">{{ word }}</div>
-
-    <!-- 녹음 버튼 (마이크 아이콘) -->
-    <div class="controls">
-      <button class="mic-status" id="micButton">
-        <div class="mic-icon">
-          <i class="fas fa-microphone"></i>
+      <!-- 녹음 버튼 (마이크 아이콘) -->
+      <div class="controls">
+        <button class="mic-status" id="micButton">
+          <div class="mic-icon">
+            <i class="fas fa-microphone"></i>
+          </div>
+          <div class="mic-animation"></div>
+        </button>
+        <div class="voice-level">
+          <div class="voice-level-fill"></div>
         </div>
-        <div class="mic-animation"></div>
-      </button>
-      <div class="voice-level">
-        <div class="voice-level-fill"></div>
+        <p class="status-text">마이크를 클릭하여 시작하세요</p>
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
       </div>
-      <p class="status-text">마이크를 클릭하여 시작하세요</p>
-      <div class="progress-bar">
-        <div id="progressFill"></div>
+
+      <!-- 점수 및 피드백 -->
+      <div>
+        <p><span id="scoreDisplay"></span></p>
       </div>
+
+      <!-- 다음 문제 버튼 -->
+      <button id="nextQuestionBtn" disabled>다음 문제</button>
+
     </div>
 
-    <!-- 점수 및 피드백 -->
-    <div>
-      <p><span id="scoreDisplay"></span></p>
-    </div>
-
-    <!-- 다음 문제 버튼 -->
-    <button id="nextQuestionBtn" disabled>다음 문제</button>
-
-  </div>
-
-  <script src="{% static 'js/test_mode.js' %}"></script> <!-- 외부 JavaScript 파일 연결 -->
-</body>
-
-</html>
+    <script src="{% static 'js/test_mode.js' %}"></script> <!-- 외부 JavaScript 파일 연결 -->
+  </body>
+{% endblock %}
