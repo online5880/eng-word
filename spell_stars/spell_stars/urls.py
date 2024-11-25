@@ -6,7 +6,7 @@ from main import views as mainViews
 from django.views.generic.base import RedirectView
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 
 # API 문서 스키마 설정
 schema_view = get_schema_view(
@@ -15,7 +15,7 @@ schema_view = get_schema_view(
         default_version="v1",
         description="API 문서",
     ),
-    public=False,
+    public=True,
     permission_classes=(IsAuthenticated,),
 )
 

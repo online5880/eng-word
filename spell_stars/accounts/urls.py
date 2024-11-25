@@ -1,14 +1,8 @@
 from django.urls import path, include
 from .views import (
-    UserLoginView, SignupView, UserLogoutView, profileView,
-    StudentLearningLogViewSet, end_learning_session, StudentLogViewSet, student_learning_history
+    UserLoginView, SignupView, UserLogoutView, profileView, end_learning_session, student_learning_history
 )
-from rest_framework.routers import DefaultRouter
 
-# RESTful API 라우터 정의
-router = DefaultRouter()
-router.register(r'students/(?P<student_pk>\d+)/logs', StudentLogViewSet, basename='student-logs')
-router.register(r'students/(?P<student_pk>\d+)/learning-logs', StudentLearningLogViewSet, basename='student-learning-logs')
 
 urlpatterns = [
     # 일반 뷰
