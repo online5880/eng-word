@@ -1,10 +1,10 @@
 from django.urls import path, include
 from rest_framework_nested.routers import DefaultRouter, NestedDefaultRouter
-from .views import StudentInfoViewSet, StudentLogViewSet, StudentLearningLogViewSet
+from .views import StudentViewSet, StudentLogViewSet, StudentLearningLogViewSet
 
 # Default Router (기본 학생 정보 URL)
 router = DefaultRouter()
-router.register(r'students', StudentInfoViewSet, basename='students')
+router.register(r'students', StudentViewSet, basename='students')
 
 # Nested Router (학생 로그 및 학습 로그 URL)
 logs_router = NestedDefaultRouter(router, r'students', lookup='student')

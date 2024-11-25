@@ -5,6 +5,7 @@
 {% block content %}
 <div style="text-align: center; padding: 2rem;">
     <h1>환영합니다!</h1>
+    {% if user.role == "student" %}
     <p>효율적인 단어 학습을 시작하세요!</p>
 
     <div style="max-width: 800px; margin: 2rem auto; display: grid; gap: 2rem;">
@@ -26,5 +27,6 @@
             <a href="{% url 'pron_practice' %}" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background-color: #9c27b0; color: white; text-decoration: none; border-radius: 5px;">시작하기</a>
         </section>
     </div>
+    {% endif %}
 </div>
 {% endblock %}
