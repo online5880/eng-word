@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.http import JsonResponse
 from django.conf import settings
 from django.core.files.storage import default_storage
@@ -13,9 +13,14 @@ from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from django.apps import apps
 from django.core.files.base import ContentFile
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.permissions import IsAuthenticated
+from .serializers import TestResultSerializer
 from accounts.views import start_learning_session
 import warnings
-import random
+
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -310,3 +315,41 @@ def results_view(request):
 
     except TestResult.DoesNotExist:
         return render(request, 'test_mode/results.html', {'error': 'Test result not found.'})
+
+
+class TestResultPagination(PageNumberPagination):
+    page_size = 10
+
+class TestResultListAPIView(APIView):
+    """
+    학생의 시험 결과 목록 제공 (페이지네이션 포함)
+    Endpoint: GET /api/test-results/
+    """
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        student = request.user  # 현재 사용자를 기준으로 학생 정보 가져오기
+        queryset = TestResult.objects.filter(student=student).order_by('-test_date')
+        
+        paginator = TestResultPagination()
+        results_page = paginator.paginate_queryset(queryset, request)
+        
+        serializer = TestResultSerializer(results_page, many=True)
+        return paginator.get_paginated_response(serializer.data)
+
+class TestResultDetailAPIView(APIView):
+    """
+    특정 시험 결과의 세부 정보 제공
+    Endpoint: GET /api/test-results/<int:test_id>/
+    """
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, test_id):
+        student = request.user
+        try:
+            test_result = TestResult.objects.get(id=test_id, student=student)
+        except TestResult.DoesNotExist:
+            return Response({"error": "Test result not found"}, status=404)
+
+        serializer = TestResultSerializer(test_result)
+        return Response(serializer.data)
