@@ -26,8 +26,8 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 
 model = apps.get_app_config('spell_stars').whisper_model
 
-TOTAL_QUESTIONS = 10
-MAX_SCORE = 100
+TOTAL_QUESTIONS = 5
+MAX_SCORE = 5
 POINTS_PER_QUESTION = MAX_SCORE / TOTAL_QUESTIONS
 
 
