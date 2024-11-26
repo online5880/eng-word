@@ -32,7 +32,7 @@ def pronunciation_practice_view(request):
         request.session["target_word"] = word_with_underscores
         
         # 학습 시작 로그 생성
-        start_learning_session(request, learning_mode=2)  # pron_practice 2번
+        start_learning_session(request, learning_mode=3)  # pron_practice 2번
 
         return render(
             request,

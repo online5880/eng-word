@@ -47,7 +47,7 @@ def create_dashboard_graphs(student):
     # 서브플롯 설정
     fig = make_subplots(
         rows=1, cols=3,
-        subplot_titles=("학습 모드별 학습 시간", "시험 점수 변화", "학습 결과"),
+        subplot_titles=("학습 모드별 학습 시간", "시험 점수 변화", "예문 학습 결과"),
         specs=[[{'type': 'domain'}, {'type': 'xy'}, {'type': 'xy'}]]
     )
     for trace in fig1['data']:

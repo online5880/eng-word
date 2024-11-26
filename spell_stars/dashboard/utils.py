@@ -1,3 +1,4 @@
+from datetime import timezone
 from accounts.models import StudentLearningLog, Student
 from test_mode.models import TestResult
 from sent_mode.models import LearningResult
@@ -69,7 +70,7 @@ def plot_test_scores(request):
     test_results = TestResult.objects.filter(student=student).order_by('test_date')
 
     data = pd.DataFrame({
-        '시험 날짜': [result.test_date for result in test_results],  # datetime 그대로 사용
+        '시험 날짜': [result.test_date.astimezone(timezone.utc).date() for result in test_results],  # 타임존을 UTC로 변환 후 날짜만 추출
         '정확도 점수': [result.accuracy_score for result in test_results],
     })
 
@@ -103,16 +104,16 @@ def plot_learning_results(request):
     results = LearningResult.objects.filter(student=student).order_by('learning_date')
 
     data = pd.DataFrame({
-        '학습 날짜': [result.learning_date.strftime('%Y-%m-%d') for result in results],
+        '예문 학습 날짜': [result.learning_date.astimezone(timezone.utc).date() for result in results],
         '발음 점수': [result.pronunciation_score for result in results],
         '정확도 점수': [result.accuracy_score for result in results],
     })
 
     fig = px.line(
         data,
-        x='학습 날짜',
+        x='예문 학습 날짜',
         y=['발음 점수', '정확도 점수'],
-        title='학습 결과',
+        title='예문 학습 결과',
         markers=True,
         color_discrete_sequence=["#1f77b4", "#ff7f0e"]  # 색상 변경
     )
@@ -121,7 +122,10 @@ def plot_learning_results(request):
         title_x=0.5,
         plot_bgcolor="#f9f9f9",
         paper_bgcolor="#ffffff",
-        title_font=dict(size=20, color='black', family='Arial, sans-serif', weight='bold')  # 제목을 굵게 설정
+        title_font=dict(size=20, color='black', family='Arial, sans-serif', weight='bold'),  # 제목을 굵게 설정
+        xaxis=dict(
+            tickformat='%Y-%m-%d',  # x축 날짜 포맷 설정
+        )
     )
 
     return fig

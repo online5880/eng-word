@@ -91,7 +91,7 @@ def test_mode_view(request):
         request.session["target_word"] = [current_question["word_id"]]  # target_word 설정
 
         # 학습 시작 로그 생성
-        start_learning_session(request, learning_mode=1)
+        start_learning_session(request, learning_mode=2)
 
         return render(
             request,

@@ -242,8 +242,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const score = result.overall_score;
         const currentWord = getCurrentWord();
     
-        // 점수가 80점 이상이면 통과 처리
-        if (score >= 80) {
+        // 점수가 70점 이상이면 통과 처리
+        if (score >= 70) {
             passedWords.add(currentWord);
             statusText.textContent = `발음 점수: ${score.toFixed(2)}점 - 통과!`;
             statusText.style.color = '#4CAF50'; // 초록색으로 표시
@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 진행률 바 업데이트
         const progressBar = document.getElementById("progressFill");
         progressBar.style.width = `${score}%`;
-        progressBar.style.backgroundColor = score >= 80 ? '#4CAF50' : '#f44336';
+        progressBar.style.backgroundColor = score >= 70 ? '#4CAF50' : '#f44336';
     
         // HTML 그래프 삽입
         const wave_figContainer = document.getElementById("wave_fig_container");
