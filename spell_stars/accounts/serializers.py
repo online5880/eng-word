@@ -1,15 +1,29 @@
 from rest_framework import serializers
-from .models import ParentStudentRelation, Student, StudentLog, StudentLearningLog
+from .models import ParentStudentRelation, Student, StudentLog, StudentLearningLog, Parent
 
 # 학생 기본 정보 Serializer
 class StudentSerializer(serializers.ModelSerializer):
     age = serializers.ReadOnlyField(source="user.age")  # 사용자 나이 속성 가져오기
-    username = serializers.ReadOnlyField(source="user.username")  # 사용자 이름 가져오기
+    login_id = serializers.ReadOnlyField(source="user.username") 
     name = serializers.ReadOnlyField(source="user.name")  # 사용자 이름 가져오기
 
     class Meta:
         model = Student
-        fields = ['id', 'username', 'name', 'unique_code', 'age', 'created_at']
+        fields = ['id', 'login_id', 'name', 'unique_code', 'age', 'created_at']
+        
+class ParentSerializer(serializers.ModelSerializer):
+    
+    login_id = serializers.ReadOnlyField(source="user.username") 
+    name = serializers.ReadOnlyField(source="user.name")  # 사용자 이름 가져오기
+    
+    children = serializers.PrimaryKeyRelatedField(
+        many=True,
+        queryset=Student.objects.all()
+    )
+    
+    class Meta:
+        model = Parent
+        fields = ['login_id','name','id','created_at','children']
 
 # 학생 로그 Serializer
 class StudentLogSerializer(serializers.ModelSerializer):

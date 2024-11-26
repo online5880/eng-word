@@ -5,10 +5,10 @@ from rest_framework import status
 from .forms import LoginForm, SignupForm, AddChildForm
 from .models import ParentStudentRelation, Student, Parent,StudentLearningLog, StudentLog
 from rest_framework.decorators import action
-from rest_framework import viewsets,mixins
+from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from .serializers import ParentStudentRelationSerializer, StudentSerializer, StudentLogSerializer, StudentLearningLogSerializer
+from .serializers import ParentStudentRelationSerializer, StudentSerializer, StudentLogSerializer, StudentLearningLogSerializer, ParentSerializer
 from django.http import JsonResponse
 from django.utils import timezone
 from django.contrib import messages
@@ -134,6 +134,12 @@ class StudentLogViewSet(viewsets.ReadOnlyModelViewSet):
         # 학생 ID를 기반으로 로그 필터링
         student_pk = self.kwargs.get('student_pk')
         return StudentLog.objects.filter(student_id=student_pk)
+    
+class ParentViewSet(viewsets.ReadOnlyModelViewSet):
+    serializer_class = ParentSerializer
+    permission_classes = [IsAuthenticated]
+    queryset = Parent.objects.all()
+        
 
 
 class StudentLearningLogViewSet(viewsets.ModelViewSet):
