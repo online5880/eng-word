@@ -6,16 +6,15 @@ from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
-from django.utils import timezone
-from django.db import transaction
+
 from .models import Word, Sentence
 import numpy as np
-import time
 from collections import Counter
 from .stt_model import fine_tuned_whisper
 from sent_mode.models import LearningResult
 from accounts.models import Student
 from vocab_mode.models import Word
+from django.utils.timezone import now
 
 
 # Sigmoid 함수 정의
@@ -123,7 +122,9 @@ def sent_result(request):
 
         # 세션 데이터에서 결과 계산
         student_responses = game_state.get("student_responses", [])
-        word_frequencies = Counter(student_responses) if student_responses else Counter()
+        selected_words = [word_data["word"] for word_data in request.session.get("selected_words", [])]
+        word_frequencies = Counter([word for word in student_responses if word in selected_words])
+
 
         # 평균 응답 시간 계산
         student_times = game_state.get("student_times", [])
@@ -132,7 +133,7 @@ def sent_result(request):
         avg_ai_time = sum(ai_times) / len(ai_times) if ai_times else 0
 
         total_questions = game_state.get("num_questions", 0)
-        correct_answers = sum(1 for response in student_responses if response)
+        correct_answers = sum(1 for response in student_responses if response in selected_words)
         pronunciation_score = round((correct_answers / total_questions) * 100, 2) if total_questions > 0 else 0
         accuracy_score = round(calculate_ai_accuracy(correct_answers / total_questions) * 100, 2) if total_questions > 0 else 0
         frequency_score = len(word_frequencies)  # 학습된 고유 단어 수
@@ -153,17 +154,17 @@ def sent_result(request):
         for word_id in word_ids:
             LearningResult.objects.create(
                 word_id=word_id,
-                student=student,  # Student 인스턴스 사용
+                student_id=student.id,  # Student 인스턴스의 ID 사용
                 learning_category=learning_category,
-                learning_date=timezone.now(),
-                pronunciation_score=pronunciation_score,
-                accuracy_score=accuracy_score,
-                frequency_score=frequency_score
+                learning_date=now(),
+                pronunciation_score=int(pronunciation_score),
+                accuracy_score=int(accuracy_score),
+                frequency_score=int(frequency_score)
             )
 
         # 학습 결과 메시지 생성
         unique_words_used = len(word_frequencies)
-        total_words = len(request.session.get('selected_words', []))
+        total_words = len(selected_words)
         learning_performance_message = (
             "모든 단어를 고르게 학습했습니다! 잘했습니다!"
             if unique_words_used == total_words

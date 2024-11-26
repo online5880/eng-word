@@ -40,8 +40,8 @@ def calculate_overall_score(formant_score, phoneme_score):
     normalized_phoneme_score = normalize_score(phoneme_score, min_phoneme_score, max_phoneme_score)
 
     # 가중치 설정
-    formant_weight = 0.3
-    phoneme_weight = 0.7
+    formant_weight = 0.4
+    phoneme_weight = 0.6
 
     # 최종 점수 계산
     overall_score = (normalized_formant_score * formant_weight) + (normalized_phoneme_score * phoneme_weight)

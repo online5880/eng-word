@@ -15,7 +15,41 @@ document.addEventListener("DOMContentLoaded", function () {
     let audioChunks = [];
     let startTime = null; // 녹음 시작 시간
     let endTime = null; // 녹음 종료 시간   
-
+    
+    function showAiThinking() {
+        const aiThinkingContainer = document.getElementById("aiThinkingContainer");
+        const aiProgressFill = document.getElementById("aiProgressFill");
+    
+        console.log("AI 게이지바 표시");
+        aiThinkingContainer.style.display = "block";
+        aiProgressFill.style.width = "0%"; // 초기화
+    
+        let progress = 0;
+        const interval = setInterval(() => {
+            progress += 10; // 게이지 증가 속도
+            aiProgressFill.style.width = `${progress}%`;
+    
+            if (progress >= 100) {
+                clearInterval(interval);
+            }
+        }, 300); // 0.3초마다 업데이트
+    }
+    
+    function updateAiProgress(duration) {
+        const aiProgressFill = document.getElementById("aiProgressFill");
+    
+        // 응답 시간이 duration인 경우 애니메이션으로 게이지 채움
+        aiProgressFill.style.transition = `width ${duration}s ease-in-out`;
+        aiProgressFill.style.width = "100%"; // 게이지를 끝까지 채움
+    }
+    
+    function resetAiProgress() {
+        const aiProgressFill = document.getElementById("aiProgressFill");
+    
+        // 게이지 바 초기화
+        aiProgressFill.style.transition = "none";
+        aiProgressFill.style.width = "0%";
+    }
 
     async function startRecording() {
         try {
@@ -35,18 +69,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
             };
             mediaRecorder.onstop = async () => {
-                endTime = new Date().getTime(); // 녹음 종료 시간 기록
-                console.log("Recording stopped at:", endTime);
-
-                const studentTime = (endTime - startTime) / 1000; // 응답 시간 (초 단위)
-                console.log("Student response time:", studentTime, "seconds");
-                const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
-                const formData = new FormData();
-                formData.append("audio", audioBlob);
-                formData.append("word", hiddenWord);
-                formData.append("student_time", studentTime);
-
+                // 게이지 바 항상 표시
+                showAiThinking();
+            
+                // 요청 시작 시간 기록
+                const fetchStartTime = new Date().getTime();
+                
                 try {
+                    endTime = new Date().getTime();
+                    console.log("Recording stopped at:", endTime);
+            
+                    const studentTime = (endTime - startTime) / 1000;
+                    console.log("Student response time:", studentTime, "seconds");
+            
+                    const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
+                    const formData = new FormData();
+                    formData.append("audio", audioBlob);
+                    formData.append("word", hiddenWord);
+                    formData.append("student_time", studentTime);
+            
                     const response = await fetch(uploadAudioUrl, {
                         method: "POST",
                         headers: {
@@ -54,18 +95,34 @@ document.addEventListener("DOMContentLoaded", function () {
                         },
                         body: formData,
                     });
-
+            
+                    const fetchEndTime = new Date().getTime(); // 요청 완료 시간 기록
+                    const fetchDuration = (fetchEndTime - fetchStartTime) / 1000; // 응답 시간 계산
+                    console.log("Fetch duration:", fetchDuration, "seconds");
+            
+                    // 응답 시간에 맞춰 게이지 바 애니메이션
+                    updateAiProgress(fetchDuration);
+            
                     if (response.ok) {
                         const data = await response.json();
                         console.log("Upload success:", data);
-                        updateResults(data);
+                        // AI 상태 텍스트 변경
+                        const aiThinkingText = document.getElementById("aiThinkingText");
+                        aiThinkingText.textContent = "AI가 정답을 제출했습니다";
+            
+                        setTimeout(() => {
+                            resetAiProgress(); // 게이지 바 초기화
+                            updateResults(data); // 결과 업데이트
+                        }, fetchDuration * 1000); // 애니메이션 완료 후 초기화
                     } else {
                         console.error("Server error:", response.status);
                         statusText.textContent = "오류: 서버와의 통신에 실패했습니다.";
+                        setTimeout(resetAiProgress, fetchDuration * 1000);
                     }
                 } catch (error) {
                     console.error("Upload failed:", error);
                     statusText.textContent = "오류: 파일 업로드 중 문제가 발생했습니다.";
+                    resetAiProgress(); // 게이지 바 초기화
                 }
             };
 
