@@ -3,12 +3,14 @@ import sys
 import os
 from datetime import datetime
 import numpy as np
-import pdb
-
+# import pdb/
+import re
 from .Pipeline.Parselscore import get_formants
 from .Pipeline.Score import calculate_formant_score, calculate_phoneme_score, calculate_overall_score
 from .Pipeline.Preprocessing import trim_and_standardize, align_start_point
 from .Pipeline.Visualization import visualize_waveforms, plot_f1_f2_comparison_plotly
+import pdb
+
 sys.path.append("C:/Users/82107/Desktop/eng-word/spell_stars/utils/PronunciationChecker/Pipeline")
 
 def cleanup_temp_dir(temp_dir):
@@ -20,13 +22,17 @@ def cleanup_temp_dir(temp_dir):
     else:
         print(f"Directory does not exist: {temp_dir}")
         
-def process_audio_files(native_audio_file_path, student_audio_file_path, expected_word, user_id, username=""):
+def process_audio_files(native_audio_file_path : str, student_audio_file_path:str, expected_word:str, user_id, username=""):
     """
     원어민과 학생의 오디오 파일을 처리하고 점수 및 시각화를 생성.
     """
     print("원어민과 학생의 오디오 파일을 처리하고 점수 및 시각화를 생성.")
     # 결과 저장 리스트 초기화
-
+    # 정규식으로 '/'를 '\'로 변경
+    native_audio_file_path = re.sub(r"/", r"\\", native_audio_file_path)
+    student_audio_file_path = re.sub(r"/", r"\\", student_audio_file_path)
+    print(native_audio_file_path)
+    print(student_audio_file_path)
     result = {"결과 없음":0}
 
 

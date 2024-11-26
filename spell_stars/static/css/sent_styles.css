@@ -351,3 +351,30 @@ footer {
 .btn:hover {
     background-color: #0056b3;
 }
+
+
+.ai-thinking-container {
+    margin-top: 100px;
+    text-align: center;
+    display: block; /* 항상 보이도록 설정 */
+}
+
+.progress-bar {
+    width: 400px; /* 게이지 바의 고정 너비 */
+    height: 20px; /* 높이 유지 */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#aiProgressFill {
+    height: 100%;
+    width: 0%; /* 초기값 */
+    background-color: #4CAF50;
+    border-radius: 10px;
+    transition: width 0.2s ease; /* 애니메이션 */
+}
+

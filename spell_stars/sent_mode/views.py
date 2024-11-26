@@ -6,10 +6,15 @@ from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
+
 from .models import Word, Sentence
 import numpy as np
-import time
 from collections import Counter
+from .stt_model import fine_tuned_whisper
+from sent_mode.models import LearningResult
+from accounts.models import Student
+from vocab_mode.models import Word
+from django.utils.timezone import now
 
 
 # Sigmoid 함수 정의
@@ -101,58 +106,95 @@ def sent_practice(request):
 
 # 학습 결과 화면
 def sent_result(request):
+    """
+    학습 세션 결과를 저장하고 결과 화면을 렌더링하는 함수.
+    """
     game_state = request.session.get('game_state')
     if not game_state:
         return redirect("sent_practice")
 
-    student_responses = game_state.get("student_responses", [])
-    word_frequencies = Counter(student_responses) if student_responses else Counter()
-    print(f"Word frequencies: {word_frequencies}")
+    try:
+        # 현재 사용자가 Student 모델에 매핑되지 않을 경우 예외 처리
+        try:
+            student = Student.objects.get(user=request.user)  # CustomUser와 Student 연결
+        except Student.DoesNotExist:
+            return JsonResponse({"error": "Student instance not found for the current user."}, status=400)
 
-    # 평균 응답 시간 계산
-    student_times = game_state.get("student_times", [])
-    ai_times = game_state.get("ai_times", [])
-    avg_student_time = sum(student_times) / len(student_times) if student_times else 0
-    avg_ai_time = sum(ai_times) / len(ai_times) if ai_times else 0
+        # 세션 데이터에서 결과 계산
+        student_responses = game_state.get("student_responses", [])
+        selected_words = [word_data["word"] for word_data in request.session.get("selected_words", [])]
+        word_frequencies = Counter([word for word in student_responses if word in selected_words])
 
-    total_questions = game_state.get("num_questions", 0)
-    correct_answers = sum(1 for response in student_responses if response)
-    final_student_accuracy = (correct_answers / total_questions) * 100 if total_questions > 0 else 0
-    final_ai_accuracy = calculate_ai_accuracy(correct_answers / total_questions) * 100 if total_questions > 0 else 0
-    score_difference = abs(final_student_accuracy - final_ai_accuracy)
-    student_times = game_state.get('student_times', [])
-    ai_times = game_state.get('ai_times', [])
 
-    unique_words_used = len(word_frequencies)
-    total_words = len(request.session.get('selected_words', []))
-    learning_performance_message = (
-        "모든 단어를 고르게 학습했습니다! 잘했습니다!"
-        if unique_words_used == total_words
-        else "특정 단어에 편중되었습니다. 더 다양한 단어를 학습해보세요!"
-    )
+        # 평균 응답 시간 계산
+        student_times = game_state.get("student_times", [])
+        ai_times = game_state.get("ai_times", [])
+        avg_student_time = sum(student_times) / len(student_times) if student_times else 0
+        avg_ai_time = sum(ai_times) / len(ai_times) if ai_times else 0
 
-    context = {
-        "student_times": student_times,
-        "ai_times": ai_times,
-        "final_student_accuracy": final_student_accuracy,
-        "final_ai_accuracy": final_ai_accuracy,
-        "correct_answers": correct_answers,
-        "total_questions": total_questions,
-        "score_difference": score_difference,
-        "word_frequencies": dict(word_frequencies),  # `.items()`를 템플릿에서 사용하도록 변환
-        "unique_words_used": unique_words_used,
-        "total_words": total_words,
-        "learning_performance_message": learning_performance_message,
-        "avg_student_time": avg_student_time,  # 평균 학생 응답 시간
-        "avg_ai_time": avg_ai_time,           # 평균 AI 응답 시간
-    }
+        total_questions = game_state.get("num_questions", 0)
+        correct_answers = sum(1 for response in student_responses if response in selected_words)
+        pronunciation_score = round((correct_answers / total_questions) * 100, 2) if total_questions > 0 else 0
+        accuracy_score = round(calculate_ai_accuracy(correct_answers / total_questions) * 100, 2) if total_questions > 0 else 0
+        frequency_score = len(word_frequencies)  # 학습된 고유 단어 수
 
-    print("Resetting session data...")
-    
-    response = render(request, "sent_mode/sent_result.html", context)
-    request.session.flush()
-    return response
+        # 학습 카테고리 설정 및 단어 ID 추출
+        word_ids = []
+        learning_categories = set()  # 중복 없는 카테고리 수집
+        for response in student_responses:
+            word = Word.objects.filter(word=response).first()
+            if word:
+                word_ids.append(word.id)
+                learning_categories.add(word.category)  # category 값 수집
 
+        # 다중 카테고리 처리: 현재 학습에서 첫 번째 카테고리 선택 (필요시 로직 수정 가능)
+        learning_category = list(learning_categories)[0] if learning_categories else None
+
+        # 데이터 저장
+        for word_id in word_ids:
+            LearningResult.objects.create(
+                word_id=word_id,
+                student_id=student.id,  # Student 인스턴스의 ID 사용
+                learning_category=learning_category,
+                learning_date=now(),
+                pronunciation_score=int(pronunciation_score),
+                accuracy_score=int(accuracy_score),
+                frequency_score=int(frequency_score)
+            )
+
+        # 학습 결과 메시지 생성
+        unique_words_used = len(word_frequencies)
+        total_words = len(selected_words)
+        learning_performance_message = (
+            "모든 단어를 고르게 학습했습니다! 잘했습니다!"
+            if unique_words_used == total_words
+            else "특정 단어에 편중되었습니다. 더 다양한 단어를 학습해보세요!"
+        )
+
+        # 결과 페이지에 전달할 컨텍스트
+        context = {
+            "student_times": student_times,
+            "ai_times": ai_times,
+            "final_student_accuracy": pronunciation_score,
+            "final_ai_accuracy": accuracy_score,
+            "correct_answers": correct_answers,
+            "total_questions": total_questions,
+            "score_difference": abs(pronunciation_score - accuracy_score),
+            "word_frequencies": dict(word_frequencies),  # `.items()`를 템플릿에서 사용하도록 변환
+            "unique_words_used": unique_words_used,
+            "total_words": total_words,
+            "learning_performance_message": learning_performance_message,
+            "avg_student_time": avg_student_time,  # 평균 학생 응답 시간
+            "avg_ai_time": avg_ai_time,           # 평균 AI 응답 시간
+        }
+
+        # 세션 데이터 초기화
+        request.session.flush()
+        return render(request, "sent_mode/sent_result.html", context)
+
+    except Exception as e:
+        print(f"Error in sent_result: {e}")
+        return JsonResponse({"error": str(e)}, status=500)
 
 
 # 음성 파일 처리
@@ -164,13 +206,14 @@ def upload_audio(request):
             audio_file = request.FILES['audio']
             print(f"Audio file received: {audio_file.name}")  # 파일 이름 확인
             current_word = request.POST.get('word', 'unknown').strip().lower()
-            print(f"Current word: {current_word}")  # 단어 정보 확인
+            sanitized_word = current_word.replace(" ", "_")  # 띄어쓰기를 언더스코어로 변환
+            print(f"Sanitized word: {sanitized_word}")
 
             # 파일 저장
             user_id = request.user.id if request.user.is_authenticated else 'anonymous'
             save_path = f'audio_files/students/user_{user_id}/'
             os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
-            file_name = f'{current_word}_st.wav'
+            file_name = f'{sanitized_word}_st.wav'
             file_path = os.path.join(save_path, file_name)
             print(f"File will be saved to: {file_path}")  # 저장 경로 확인
 
@@ -179,10 +222,17 @@ def upload_audio(request):
                 default_storage.delete(file_path)
 
             saved_path = default_storage.save(file_path, ContentFile(audio_file.read()))
-            print(f"File saved at: {saved_path}")  # 저장 확인
+            full_path = os.path.join(settings.MEDIA_ROOT, saved_path)
+            print(f"File saved at: {full_path}")  # 저장 확인
+
 
             # STT 결과 처리 (임시로 현재 단어 사용)
-            recognized_word = current_word  # 실제 STT 결과를 추가
+
+            transcription = fine_tuned_whisper(full_path)
+
+            print(f"Transcription result: {transcription}")  # Whisper 결과 출력
+
+            recognized_word = transcription.strip().lower()  # 실제 STT 결과를 추가
             is_correct = (recognized_word == current_word)  # 정답 여부 확인
 
             # 학생 응답 시간 가져오기

@@ -39,13 +39,16 @@
           <div class="mic-animation"></div>
         </button>
         <p id="statusMessage" class="status-text">마이크를 클릭하여 시작하세요</p>
-        <div class="voice-level">
-          <div class="voice-level-fill"></div>
-        </div>
-        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-          <div id="progressFill"></div>
+        <!-- AI 답 게이지바 -->
+        <div id="aiThinkingContainer" class="ai-thinking-container" style="display: none;">
+          <div id="aiProgressBar" class="progress-bar">
+              <div id="aiProgressFill"></div>
+          </div>
+          <p id="aiThinkingText" class="status-text">AI 답 생각 중...</p>
         </div>
       </div>
+          
+      
       <!-- Next Question Button -->
       <div class="next-button-container">
         <button id="nextQuestionButton" class="styled-button">다음 문제</button>
