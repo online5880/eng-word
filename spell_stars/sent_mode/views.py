@@ -194,7 +194,6 @@ def sent_result(request):
         }
 
         # 세션 데이터 초기화
-        request.session.flush()
         return render(request, "sent_mode/sent_result.html", context)
 
     except Exception as e:
@@ -359,12 +358,13 @@ class LearningResultListAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        student = request.user.student  # 현재 사용자의 Student 객체
+        # 현재 사용자(CustomUser)에 연결된 Student 객체 가져오기
+        student = request.user.student_profile  # related_name 사용
         queryset = LearningResult.objects.filter(student=student).order_by('-learning_date')
-        
+
         paginator = LearningResultPagination()
         results_page = paginator.paginate_queryset(queryset, request)
-        
+
         serializer = LearningResultSerializer(results_page, many=True)
         return paginator.get_paginated_response(serializer.data)
     
@@ -374,11 +374,13 @@ class LearningResultDetailAPIView(APIView):
     특정 학습 결과의 세부 정보 제공
     Endpoint: GET /api/learning-results/<int:result_id>/
     """
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request, result_id):
+        # 현재 사용자(CustomUser)에 연결된 Student 객체 가져오기
+        student = request.user.student_profile  # related_name 사용
+
         try:
-            student = request.user.student  # 현재 사용자의 Student 객체
             learning_result = LearningResult.objects.get(id=result_id, student=student)
         except LearningResult.DoesNotExist:
             return Response({"error": "Learning result not found"}, status=404)
