@@ -186,8 +186,6 @@ def sent_result(request):
             "avg_ai_time": avg_ai_time,           # 평균 AI 응답 시간
         }
 
-        # 세션 데이터 초기화
-        request.session.flush()
         return render(request, "sent_mode/sent_result.html", context)
 
     except Exception as e:
