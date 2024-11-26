@@ -82,7 +82,7 @@ def plot_test_scores(request):
 def plot_learning_results(request):
     user_id = request.user.id
     student = Student.objects.get(user__id=user_id)
-    results = LearningResult.objects.filter(student=student).order_by('learning_date')
+    results = LearningResult.objects.filter(student=student).order_by('learning_date').defer('word_id') 
 
     data = pd.DataFrame({
         '예문 학습 날짜': [result.learning_date for result in results],
