@@ -15,10 +15,10 @@
 <body>
     <h2>내 학습 현황</h2>
     <div id="graph">
-    <main class="dashboard-container">
         {{ graphs|safe }}
-    </main>
     </div>
+    <div class="button-container">
     <button id="exitBtn" onclick="goToHome()">나가기</button>
+    </div>
 </body>
 {% endblock %}
