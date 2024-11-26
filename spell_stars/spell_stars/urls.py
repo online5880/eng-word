@@ -7,6 +7,7 @@ from django.views.generic.base import RedirectView
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from main.views import export_students, export_learning_results, export_test_results
 
 # API 문서 스키마 설정
 schema_view = get_schema_view(
@@ -41,6 +42,11 @@ urlpatterns = [
     path("sent/", include("sent_mode.urls")),
     path("api/v1/", include(api_v1_patterns)),
     path('dashboard/', include('dashboard.urls')),
+    
+    # 데이터 추출 URL패턴
+    path('export/students/', export_students, name='export_students'),                          # 학생 목록
+    path('export/learning-results/', export_learning_results, name='export_learning_results'),  # 학습 결과 목록
+    path('export/test-results/', export_test_results, name='export_test_results'),              # 시험 결과 목록
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,65 +1,87 @@
 {% extends "base.html" %}
 {% block title %}홈 - 영어 단어 암기 프로그램{% endblock %}
 {% block content %}
-<div style="text-align: center; padding: 2rem;">
-    <h1>환영합니다! {{user.name}}님</h1>
-    {% if user.role == "student" %}
-    <p>효율적인 단어 학습을 시작하세요!</p>
+  <div style="text-align: center; padding: 2rem;">
+    <h1>환영합니다!
+      {{user.name}}님</h1>
 
-    <div style="max-width: 800px; margin: 2rem auto; display: grid; gap: 2rem;">
-        <section style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
+    {% if user.is_superuser %}
+      <div style="max-width: 800px; margin: 2rem auto; padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
+        <h2>📊 데이터 내보내기</h2>
+        <div style="display: grid; gap: 1rem; margin-top: 1rem;">
+          <a href="{% url 'export_students' %}" class="btn btn-primary">학생 데이터 내보내기</a>
+          <a href="{% url 'export_learning_results' %}" class="btn btn-primary">학습 결과 내보내기</a>
+          <a href="{% url 'export_test_results' %}" class="btn btn-primary">시험 결과 내보내기</a>
+        </div>
+      </div>
+    {% else %}
+      {% if user.role == "student" %}
+        <p>효율적인 단어 학습을 시작하세요!</p>
+
+        <div style="max-width: 800px; margin: 2rem auto; display: grid; gap: 2rem;">
+          <section style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
             <h2>📚 사전 학습 모드</h2>
             <p>기초 단어를 사전에 학습할 수 있는 모드입니다.</p>
             <a href="{% url 'vocab_random_category' %}" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background-color: #2196F3; color: white; text-decoration: none; border-radius: 5px;">시작하기</a>
-        </section>
+          </section>
 
-        <section style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
+          <section style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
             <h2>📝 시험 모드</h2>
             <p>지금까지 학습한 단어들을 시험해보세요!</p>
             <a href="{% url 'test_mode' %}" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background-color: #ff9800; color: white; text-decoration: none; border-radius: 5px;">시작하기</a>
-        </section>
+          </section>
 
-        <section style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
+          <section style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
             <h2>🗣️ 발음 연습 모드</h2>
             <p>단어 발음을 연습해보는 모드입니다.</p>
             <a href="{% url 'pron_practice' %}" style="display: inline-block; margin-top: 1rem; padding: 10px 20px; background-color: #9c27b0; color: white; text-decoration: none; border-radius: 5px;">시작하기</a>
-        </section>
-    </div>
-    {% endif %}
-    <div class="container bg-white shadow-md p-5 form-layout">
-    {% if user.role == 'parent' %}
-            <!-- 연결된 자녀 목록 -->
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="mb-4">연결된 자녀 정보</h3>
-                    <div class="row">
-                        {% for relation in user.parent_profile.parentstudentrelation_set.all %}
-                        <div class="col-md-6 mb-4">
-                            <div class="card student-card" style="cursor: pointer; " 
-                                 onclick="location.href='{% url 'student_dashboard' student_id=relation.student.id %}'">
-                                <div class="card-body" style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
-                                    <hr>
-                                    <p><strong>이름 :</strong> {{ relation.student.user.name }}</p>
-                                    <p><strong>학생 ID:</strong> {{ relation.student.user.username }}</p>
-                                    <p><strong>학년:</strong> {{ relation.student.user.get_grade_display }}</p>
-                                    <p><strong>관계:</strong> {{ relation.student_relation }}</p>
-                                    <p><strong>연결일:</strong> {{ relation.created_at|date:"Y년 m월 d일" }}</p>
-                                    <hr>
-                                </div>
-                                <br>
-                            </div>
-                        </div>
-                        {% empty %}
-                        <div class="col-12">
-                            <div class="alert alert-info">
-                                현재 등록된 자녀가 없습니다.
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        {% endif %}
+          </section>
         </div>
-</div>
+      {% endif %}
+      <div class="container bg-white shadow-md p-5 form-layout">
+        {% if user.role == 'parent' %}
+          <!-- 연결된 자녀 목록 -->
+          <div class="row">
+            <div class="col-12">
+              <h3 class="mb-4">연결된 자녀 정보</h3>
+              <div class="row">
+                {% for relation in user.parent_profile.parentstudentrelation_set.all %}
+                  <div class="col-md-6 mb-4">
+                    <div class="card student-card" style="cursor: pointer; " onclick="location.href='{% url 'student_dashboard' student_id=relation.student.id %}'">
+                      <div class="card-body" style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
+                        <hr>
+                        <p>
+                          <strong>이름 :</strong>
+                          {{ relation.student.user.name }}</p>
+                        <p>
+                          <strong>학생 ID:</strong>
+                          {{ relation.student.user.username }}</p>
+                        <p>
+                          <strong>학년:</strong>
+                          {{ relation.student.user.get_grade_display }}</p>
+                        <p>
+                          <strong>관계:</strong>
+                          {{ relation.student_relation }}</p>
+                        <p>
+                          <strong>연결일:</strong>
+                          {{ relation.created_at|date:"Y년 m월 d일" }}</p>
+                        <hr>
+                      </div>
+                      <br>
+                    </div>
+                  </div>
+                  {% empty %}
+                  <div class="col-12">
+                    <div class="alert alert-info">
+                      현재 등록된 자녀가 없습니다.
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
 {% endblock %}

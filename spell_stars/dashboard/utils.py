@@ -1,4 +1,4 @@
-from datetime import timezone
+from django.utils import timezone
 from accounts.models import StudentLearningLog, Student
 from test_mode.models import TestResult
 from sent_mode.models import LearningResult
