@@ -6,9 +6,6 @@ from .Pipeline.Parselscore import get_formants
 from .Pipeline.Score import calculate_formant_score, calculate_phoneme_score, calculate_overall_score
 from .Pipeline.Preprocessing import trim_and_standardize, align_start_point
 from .Pipeline.Visualization import visualize_waveforms, plot_f1_f2_comparison_plotly
-import pdb
-
-sys.path.append("C:/Users/82107/Desktop/eng-word/spell_stars/utils/PronunciationChecker/Pipeline")
 
 def cleanup_temp_dir(file_path):
     """

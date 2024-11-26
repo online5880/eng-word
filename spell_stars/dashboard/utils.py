@@ -78,7 +78,7 @@ def plot_test_scores(request):
     return fig
 
 
-# 학습 결과 그래프
+#   
 def plot_learning_results(request):
     user_id = request.user.id
     student = Student.objects.get(user__id=user_id)
