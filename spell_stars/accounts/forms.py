@@ -31,12 +31,14 @@ class SignupForm(UserCreationForm):
         choices=ROLE_CHOICES, 
         widget=forms.RadioSelect, 
         required=True,
-        initial='student'
+        initial='student',
+        label="계정 유형"
     )
     student_code = forms.CharField(
         max_length=12,
         required=False,
-        widget=forms.TextInput(attrs={'placeholder': '학부모만 입력'}),
+        widget=forms.TextInput(attrs={'placeholder': '자녀의 고유 코드를 입력해주세요.'}),
+        label="자녀 고유 코드"
     )
     username = forms.CharField(
         label="아이디",
