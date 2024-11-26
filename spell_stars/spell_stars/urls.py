@@ -7,6 +7,7 @@ from django.views.generic.base import RedirectView
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from django.conf.urls import handler404, handler500, handler403
 
 # API 문서 스키마 설정
 schema_view = get_schema_view(
@@ -44,3 +45,7 @@ urlpatterns = [
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+handler404 = 'spell_stars.views.error_404'
+handler500 = 'spell_stars.views.error_500'
+handler403 = 'spell_stars.views.error_403'

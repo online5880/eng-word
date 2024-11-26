@@ -12,13 +12,14 @@ from django.core.files.base import ContentFile
 
 from rest_framework.generics import ListAPIView
 from rest_framework.pagination import PageNumberPagination
-from .serializers import WordSerializer
+from .serializers import AudioUploadSerializer, WordSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.filters import SearchFilter
 from rest_framework.permissions import IsAuthenticated
+from rest_framework import status
 from accounts.views import start_learning_session, end_learning_session
-
+from rest_framework.permissions import AllowAny
 
 import random
 from django.conf import settings
@@ -221,3 +222,64 @@ class WordsByCategoryAPIView(APIView):
             )
         serializer = WordSerializer(words, many=True)
         return Response(serializer.data)
+
+
+class UploadAudioAPIView(APIView):
+    permission_classes = [AllowAny]
+    def post(self, request):
+        # 데이터 검증
+        serializer = AudioUploadSerializer(data=request.data)
+        if not serializer.is_valid():
+            return Response({"error": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            # 요청 데이터 추출
+            audio_file = serializer.validated_data['audio']
+            current_word = serializer.validated_data['word']
+            user_id = request.user.id if request.user.is_authenticated else "anonymous"
+            username = request.user.username if request.user.is_authenticated else "anonymous"
+            
+            print("유저 이름:", username)
+            print("유저 ID:", user_id)
+
+            # 저장 경로 설정
+            save_path = f"audio_files/students/user_{user_id}/"
+            os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
+
+            # 파일 이름 설정
+            file_name = f"{current_word}_st.wav"
+            file_path = os.path.join(save_path, file_name)
+
+            # 기존 파일 삭제
+            if default_storage.exists(file_path):
+                default_storage.delete(file_path)
+
+            # 새 파일 저장
+            full_path = default_storage.save(file_path, ContentFile(audio_file.read()))
+
+            # Native 및 학생 오디오 경로 생성
+            native_audio_path = os.path.join(
+                settings.MEDIA_ROOT, "audio_files/native/", f"{current_word}.wav"
+            )
+            student_audio_path = os.path.join(
+                settings.MEDIA_ROOT, save_path, f"{current_word}_st.wav"
+            )
+
+            print("학생 오디오 경로:", student_audio_path)
+            print("원어민 오디오 경로:", native_audio_path)
+
+            # 오디오 파일 처리 (process_audio_files 함수 호출)
+            result = process_audio_files(native_audio_path, student_audio_path, current_word, user_id, username)
+
+            return Response({
+                "status": "success",
+                "message": "녹음이 완료되었습니다.",
+                "file_path": full_path,
+                "result": result
+            }, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({
+                "status": "error",
+                "message": str(e)
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

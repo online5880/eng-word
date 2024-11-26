@@ -1,0 +1,68 @@
+/* 전체 페이지 스타일 */
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;            
+    padding: 0;           
+    display: flex;        
+    justify-content: center;  
+    flex-direction: column;   
+}
+
+/* 페이지 제목 스타일 (h2) */
+h2 {
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px;
+    box-sizing: border-box; /* padding이 포함되도록 */
+    font-size: 24px;        /* 제목 크기 */
+}
+
+/* 그래프를 감싸는 div */
+#graph {
+    display: flex;
+    justify-content: center;  /* 수평 중앙 정렬 */
+    align-items: center;      /* 수직 중앙 정렬 */
+    flex-direction: column;   
+    width: 100%;              /* 그래프 컨테이너가 화면 전체 너비를 차지하도록 */
+    padding-top: 20px;        
+    margin: 0;                
+    flex-grow: 1;             /* 남은 공간을 차지하도록 */
+}
+
+/* 대시보드 그래프를 감싸는 div */
+.dashboard-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;           
+    padding: 0;
+    align-items: center;
+    text-align: center;               
+}
+
+/* 나가기 버튼 컨테이너 스타일 */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;         
+    margin-bottom: 20px;
+}
+
+/* 나가기 버튼 스타일 */
+#exitBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #016ccf; /* Exit Practice 버튼 색상 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;  /* 버튼 아래 여백 */
+
+}
+
+#exitBtn:hover {
+    background-color: #005bb5; /* Exit Practice 버튼 hover 색상 */
+}
