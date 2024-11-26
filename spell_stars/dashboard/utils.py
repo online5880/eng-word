@@ -50,6 +50,7 @@ def plot_learning_mode_hours(request):
         },
         hole=0.3  # 도넛 모양 (optional)
     )
+    fig.update_traces(textinfo='percent+label')
     
     return fig
 
@@ -62,18 +63,18 @@ def plot_test_scores(request):
 
     data = pd.DataFrame({
         '시험 날짜': [result.test_date for result in test_results],
-        '정확도 점수': [result.accuracy_score for result in test_results],
+        '시험 점수': [result.accuracy_score for result in test_results],
     })
 
     fig = px.line(
         data,
         x='시험 날짜',
-        y='정확도 점수',
+        y='시험 점수',
         title='시험 점수 변화',
         markers=True,
         color_discrete_sequence=["#9b59b6"]  # 색상 변경
     )
-    
+    fig.update_traces(name='시험 점수')
     return fig
 
 
