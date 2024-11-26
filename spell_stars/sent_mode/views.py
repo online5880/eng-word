@@ -123,7 +123,13 @@ def sent_result(request):
         # 세션 데이터에서 결과 계산
         student_responses = game_state.get("student_responses", [])
         selected_words = [word_data["word"] for word_data in request.session.get("selected_words", [])]
-        word_frequencies = Counter([word for word in student_responses if word in selected_words])
+        word_frequencies = {word: 0 for word in selected_words}
+
+        # 학생 응답에서 맞춘 단어를 빈도에 추가
+        for word in student_responses:
+            if word in word_frequencies:
+                word_frequencies[word] += 1
+
 
 
         # 평균 응답 시간 계산
@@ -163,13 +169,7 @@ def sent_result(request):
             )
 
         # 학습 결과 메시지 생성
-        unique_words_used = len(word_frequencies)
-        total_words = len(selected_words)
-        learning_performance_message = (
-            "모든 단어를 고르게 학습했습니다! 잘했습니다!"
-            if unique_words_used == total_words
-            else "특정 단어에 편중되었습니다. 더 다양한 단어를 학습해보세요!"
-        )
+        learning_performance_message = f"결과: {correct_answers}/{total_questions} (정답 수/전체 문제 수)"
 
         # 결과 페이지에 전달할 컨텍스트
         context = {
@@ -180,9 +180,7 @@ def sent_result(request):
             "correct_answers": correct_answers,
             "total_questions": total_questions,
             "score_difference": abs(pronunciation_score - accuracy_score),
-            "word_frequencies": dict(word_frequencies),  # `.items()`를 템플릿에서 사용하도록 변환
-            "unique_words_used": unique_words_used,
-            "total_words": total_words,
+            "word_frequencies": word_frequencies,  # `.items()`를 템플릿에서 사용하도록 변환
             "learning_performance_message": learning_performance_message,
             "avg_student_time": avg_student_time,  # 평균 학생 응답 시간
             "avg_ai_time": avg_ai_time,           # 평균 AI 응답 시간
