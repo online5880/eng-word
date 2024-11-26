@@ -11,6 +11,7 @@
     </title>
     <link rel="stylesheet" href="{% static 'css/base_styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
   <body data-authenticated="{{ user.is_authenticated|yesno:'true,false' }}">
@@ -19,10 +20,16 @@
         <a href="{% url 'index' %}" class="nav-brand">영어 단어 암기 프로그램</a>
         {% if user.is_authenticated %}
           <div class="nav-menu">
-            {% comment %} <a href="{% url 'vocab_mode' %}" class="nav-button vocab-btn {% if request.resolver_match.url_name == 'vocab_mode' %}active{% endif %}">📚 사전 학습</a>
-            <a href="{% url 'test_mode' %}" class="nav-button test-btn {% if request.resolver_match.url_name == 'test_mode' %}active{% endif %}">📝 시험 모드</a>
-            <a href="{% url 'pron_practice' %}" class="nav-button pron-btn {% if request.resolver_match.url_name == 'pron_practice' %}active{% endif %}">🗣️ 발음 연습</a> {% endcomment %}
-            <a href="{% url 'profile' %}" class="nav-button profile-btn {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">내 정보</a>
+            {% if user.role == "student" %}
+            <a href="{% url 'dashboard' %}" class="nav-button dashboard-btn {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">대시보드</a>
+            {% endif %}
+            <a href="{% url 'profile' %}" class="nav-button profile-btn {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
+              {% if user.role == "parent" %}
+                  자녀 정보
+              {% else %}
+                  내 정보
+              {% endif %}
+            </a>
             <form action="{% url 'logout' %}" method="post" style="display: inline;">
               {% csrf_token %}
               <button type="submit" class="nav-button logout-btn">로그아웃</button>

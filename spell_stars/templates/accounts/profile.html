@@ -74,7 +74,7 @@
                         {% for relation in user.parent_profile.parentstudentrelation_set.all %}
                         <div class="col-md-6 mb-4">
                             <div class="card student-card" style="cursor: pointer;" 
-                                 onclick="location.href='{% url 'student_learning_history' student_id=relation.student.id %}'">
+                                 onclick="location.href='{% url 'student_dashboard' student_id=relation.student.id %}'">
                                 <div class="card-header">
                                     <h5 class="mb-0">{{ relation.student.user.name }}</h5>
                                 </div>

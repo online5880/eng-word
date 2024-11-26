@@ -9,7 +9,6 @@ from django.conf import settings
 from django.http import JsonResponse
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
-import os
 
 from rest_framework.generics import ListAPIView
 from rest_framework.pagination import PageNumberPagination
@@ -19,6 +18,12 @@ from rest_framework.response import Response
 from rest_framework.filters import SearchFilter
 from rest_framework.permissions import IsAuthenticated
 from accounts.views import start_learning_session, end_learning_session
+
+
+import random
+from django.conf import settings
+from django.shortcuts import render
+from .models import Word
 
 def display_vocabulary_book_random_category(request):
     # 모든 카테고리 가져오기 (중복 제거)
@@ -32,24 +37,14 @@ def display_vocabulary_book_random_category(request):
         random_category = random.choice(categories)
         category_words = list(Word.objects.filter(category=random_category))
         
-        selected_words.extend(category_words)
-        selected_categories.append(random_category)
-        
-        # 만약 첫 카테고리의 단어가 15개 미만이면 추가 카테고리 선택
-        if len(selected_words) < 15:
-            categories.remove(random_category)  # 선택된 카테고리는 제거
-            
-            # 추가 카테고리 선택 로직
-            while categories and len(selected_words) < 15:
-                random_category = random.choice(categories)
-                categories.remove(random_category)
-                
-                category_words = list(Word.objects.filter(category=random_category))
-                if len(selected_words) + len(category_words) > 15:
-                    break
-                    
-                selected_words.extend(category_words)
-                selected_categories.append(random_category)
+        # 카테고리 내 단어가 5개 이하일 경우 그대로 선택
+        if len(category_words) <= 5:
+            selected_words.extend(category_words)
+            selected_categories.append(random_category)
+        else:
+            # 카테고리 내에서 랜덤으로 5개만 선택
+            selected_words.extend(random.sample(category_words, 5))
+            selected_categories.append(random_category)
     
     # 카테고리별 단어 수 계산
     category_counts = {
@@ -100,7 +95,9 @@ def upload_audio(request):
             audio_file = request.FILES["audio"]
             current_word = request.POST.get("word", "unknown")
             user_id = request.user.id if request.user.is_authenticated else "anonymous"
-            username = request.user.username if request.user.is_authenticated else "anonymous"
+            username = request.user.name if request.user.is_authenticated else "anonymous"
+            print("유저이름 :  ",username)
+            print("유저 id :  ",user_id)
             
             # 저장 경로 설정
             save_path = f"audio_files/students/user_{user_id}/"
@@ -135,7 +132,7 @@ def upload_audio(request):
                 "status": "success",
                 "message": "녹음이 완료되었습니다.",
                 "file_path": full_path,
-                "result":result
+                "result": result
             })
 
         except Exception as e:
@@ -224,7 +221,3 @@ class WordsByCategoryAPIView(APIView):
             )
         serializer = WordSerializer(words, many=True)
         return Response(serializer.data)
-    
-    
-    
-    

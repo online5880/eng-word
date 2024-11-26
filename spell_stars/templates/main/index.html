@@ -1,7 +1,5 @@
 {% extends "base.html" %}
-
 {% block title %}홈 - 영어 단어 암기 프로그램{% endblock %}
-
 {% block content %}
 <div style="text-align: center; padding: 2rem;">
     <h1>환영합니다!</h1>
@@ -28,5 +26,39 @@
         </section>
     </div>
     {% endif %}
+    <div class="container bg-white shadow-md p-5 form-layout">
+    {% if user.role == 'parent' %}
+            <!-- 연결된 자녀 목록 -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="mb-4">연결된 자녀 정보</h3>
+                    <div class="row">
+                        {% for relation in user.parent_profile.parentstudentrelation_set.all %}
+                        <div class="col-md-6 mb-4">
+                            <div class="card student-card" style="cursor: pointer; " 
+                                 onclick="location.href='{% url 'student_dashboard' student_id=relation.student.id %}'">
+                                <div class="card-header">
+                                    <h5 class="mb-0">{{ relation.student.user.name }}</h5>
+                                </div>
+                                <div class="card-body" style="padding: 2rem; border-radius: 10px; background-color: #f5f5f5;">
+                                    <p><strong>학생 ID:</strong> {{ relation.student.user.username }}</p>
+                                    <p><strong>학년:</strong> {{ relation.student.user.get_grade_display }}</p>
+                                    <p><strong>관계:</strong> {{ relation.student_relation }}</p>
+                                    <p><strong>연결일:</strong> {{ relation.created_at|date:"Y년 m월 d일" }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <div class="col-12">
+                            <div class="alert alert-info">
+                                현재 등록된 자녀가 없습니다.
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        </div>
 </div>
 {% endblock %}

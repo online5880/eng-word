@@ -36,7 +36,6 @@
       <!-- 학습 성과 -->
       <div class="result-box">
           <h2 class="section-title">학습 성과</h2>
-          <p>사용된 단어 수: <span class="highlight">{{ unique_words_used }}/{{ total_words }}</span></p>
           <p class="performance-message">{{ learning_performance_message }}</p>
       </div>
 
@@ -47,10 +46,6 @@
           <p>AI 평균 응답 시간: <span class="highlight">{{ avg_ai_time|floatformat:2 }}초</span></p>
       </div>
 
-      <!-- 다시 학습하기 버튼 -->
-      <div class="button-container">
-          <a href="/sent/" class="btn">다시 학습하기</a>
-      </div>
     </div>
   </body>
 {% endblock %}

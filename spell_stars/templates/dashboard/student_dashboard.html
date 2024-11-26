@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 <head>
-    <title>학습 현황</title>
+    <title>자녀 대시보드</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
     <script>
@@ -13,12 +14,12 @@
     </script>
 </head>
 <body>
-    <h2>내 학습 현황</h2>
+    <h2>{{ student_name }}의 학습 현황</h2>
     <div id="graph">
         {{ graphs|safe }}
     </div>
     <div class="button-container">
-    <button id="exitBtn" onclick="goToHome()">나가기</button>
+        <button id="exitBtn" onclick="goToHome()">나가기</button>
     </div>
 </body>
 {% endblock %}

@@ -72,6 +72,13 @@
     background-color: white;
     color: #9c27b0;
 }
+.dashboard-btn {
+    background-color: #ffae00;
+}
+.dashboard-btn:hover, .dashboard-btn.active {
+    background-color: white;
+    color: #da9500;
+}
 .profile-btn {
     background-color: #4CAF50;
 }
