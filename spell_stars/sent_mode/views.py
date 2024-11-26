@@ -15,6 +15,13 @@ from sent_mode.models import LearningResult
 from accounts.models import Student
 from vocab_mode.models import Word
 from django.utils.timezone import now
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.permissions import IsAuthenticated
+from .models import LearningResult
+from .serializers import LearningResultSerializer
+from rest_framework.permissions import AllowAny
 
 
 # Sigmoid 함수 정의
@@ -341,3 +348,40 @@ def next_question(request):
         print(f"Unexpected error in next_question: {e}")
         return JsonResponse({"error": f"오류 발생: {str(e)}"}, status=500)
 
+class LearningResultPagination(PageNumberPagination):
+    page_size = 10  # 한 페이지에 표시할 결과 수
+
+class LearningResultListAPIView(APIView):
+    """
+    학생의 학습 결과 목록을 제공
+    Endpoint: GET /api/learning-results/
+    """
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        student = request.user.student  # 현재 사용자의 Student 객체
+        queryset = LearningResult.objects.filter(student=student).order_by('-learning_date')
+        
+        paginator = LearningResultPagination()
+        results_page = paginator.paginate_queryset(queryset, request)
+        
+        serializer = LearningResultSerializer(results_page, many=True)
+        return paginator.get_paginated_response(serializer.data)
+    
+
+class LearningResultDetailAPIView(APIView):
+    """
+    특정 학습 결과의 세부 정보 제공
+    Endpoint: GET /api/learning-results/<int:result_id>/
+    """
+    permission_classes = [AllowAny]
+
+    def get(self, request, result_id):
+        try:
+            student = request.user.student  # 현재 사용자의 Student 객체
+            learning_result = LearningResult.objects.get(id=result_id, student=student)
+        except LearningResult.DoesNotExist:
+            return Response({"error": "Learning result not found"}, status=404)
+
+        serializer = LearningResultSerializer(learning_result)
+        return Response(serializer.data)
