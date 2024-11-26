@@ -39,8 +39,13 @@ def calculate_score(correct_answers, total_questions=TOTAL_QUESTIONS, max_score=
 
 
 def replace_word_with_blank(sentence, target_word):
-    # 동사 변화형을 처리할 정규식 패턴
-    pattern = r'\b' + re.escape(target_word) + r'(ing|ed|d|s|es)?\b'
+    # 'The U.S.A.'는 하드코딩 처리
+    if "The U.S.A." in sentence:
+        sentence = sentence.replace("The U.S.A.", "_____")
+    
+    # 나머지 동사 변화형 처리
+    escaped_word = re.escape(target_word)
+    pattern = r'(?<!\w)' + escaped_word + r'(ing|ed|d|s|es)?(?!\w)'
     
     return re.sub(pattern, lambda match: '_____{}'.format(match.group(1) or ''), sentence)
 
