@@ -22,6 +22,7 @@
             {% comment %} <a href="{% url 'vocab_mode' %}" class="nav-button vocab-btn {% if request.resolver_match.url_name == 'vocab_mode' %}active{% endif %}">📚 사전 학습</a>
             <a href="{% url 'test_mode' %}" class="nav-button test-btn {% if request.resolver_match.url_name == 'test_mode' %}active{% endif %}">📝 시험 모드</a>
             <a href="{% url 'pron_practice' %}" class="nav-button pron-btn {% if request.resolver_match.url_name == 'pron_practice' %}active{% endif %}">🗣️ 발음 연습</a> {% endcomment %}
+            <a href="{% url 'dashboard' %}" class="nav-button dashboard-btn {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">대시보드</a>
             <a href="{% url 'profile' %}" class="nav-button profile-btn {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">내 정보</a>
             <form action="{% url 'logout' %}" method="post" style="display: inline;">
               {% csrf_token %}
