@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 녹음 중지
     function stopRecording() {
         if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+            document.querySelector('.spinner-container').style.display = 'block'; // 스피너 표시
             mediaRecorder.stop();
             mediaRecorder.stream.getTracks().forEach(track => track.stop());
             isRecording = false;
@@ -233,6 +234,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const wordGraphs = new Map(); // 단어별 그래프 저장소
     function displayResult(result) {
+        document.querySelector('.spinner-container').style.display = 'none'; // 스피너 숨기기
+        
         if (!result || typeof result.overall_score !== "number") {
             console.error("Error: result or overall_score is invalid", result);
             statusText.textContent = "결과를 불러오는 중 오류가 발생했습니다.";

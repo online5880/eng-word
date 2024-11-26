@@ -67,15 +67,20 @@
       </div>
       </div>
 
-      <div class="evaluation-description">
-        <h2>발음 평가란?</h2>
-          <p>
-            발음 평가는 학생이 말한 소리가 원어민의 발음과 얼마나 비슷한지를 확인하는 과정이에요.
+      <div class="help-icon">
+        <i class="fas fa-question-circle"> 발음평가</i>
+        <div class="help-popup">
+          <h2>발음 평가란?</h2>
+            <p>
+            발음 평가는 우리가 말한 소리가 원어민처럼 들리는지 알아보는 거예요.  
             <br>
-            F1과 F2는 소리의 높낮이를 나타내는 값으로, 이 값을 비교해서 발음이 얼마나 비슷한지 알아낼 수 있어요.
+            소리를 분석해서 "이 소리가 높거나 낮은 정도"를 숫자로 나타내는데, 
             <br>
-            이 평가를 통해 점수를 받고, 발음을 더 잘할 수 있도록 도와줍니다.
-          </p>
+            이를 비교해서 얼마나 비슷한지 확인하는 거죠.  
+            <br>
+            이 평가를 통해 점수를 받고, 더 좋은 발음을 연습할 수 있게 도와준답니다!
+            </p>
+        </div>
       </div>
 
       <button id="sentenceModeButton" class="sentence-mode-btn" style="display: none;">
@@ -84,6 +89,11 @@
       </button>
 
       <div id="fig_container">
+        <div class="spinner-container" style="display: none;">
+          <div class="spinner"></div>
+          <br>
+          <p>분석 중입니다...</p>
+        </div>
         <div id="wave_fig_container"></div>
         <div id="formant_fig_container"></div>
       </div>
