@@ -85,6 +85,8 @@ def process_audio_files(native_audio_file_path : str, student_audio_file_path:st
 
         # 총 점수 계산
         overall_score = calculate_overall_score(formant_score, phoneme_score) + 15
+        # minmax 적용
+        overall_score = max(0., min(100., overall_score))
 
         # 1. 파형 비교 시각화
         wave_html_fig = visualize_waveforms(standardized_native_path, standardized_student_path,username=username)
