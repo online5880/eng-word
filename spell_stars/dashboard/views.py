@@ -40,28 +40,82 @@ def dashboard_view(request, student_id=None):
 
 def create_dashboard_graphs(student):
     """그래프를 생성하는 함수"""
+    # 각 그래프를 먼저 생성
     fig1 = plot_learning_mode_hours(student)
     fig2 = plot_test_scores(student)
     fig3 = plot_learning_results(student)
-
-    # 서브플롯 설정
-    fig = make_subplots(
-        rows=1, cols=3,
-        subplot_titles=("학습 모드별 학습 시간", "시험 점수 변화", "예문 학습 결과"),
-        specs=[[{'type': 'domain'}, {'type': 'xy'}, {'type': 'xy'}]]
+    
+    # 각 그래프에 대한 레이아웃 업데이트 (각 그래프의 개별 설정)
+    layout1 = dict(
+        font=dict(family="Arial, sans-serif", size=18, color="black"),
+        title_x=0.5,
+        plot_bgcolor="#f9f9f9",
+        paper_bgcolor="#ffffff",
+        title_font=dict(size=20, color='black', family='Arial, sans-serif', weight='bold'),
+        legend=dict(
+            yanchor="top",
+            y=0.99,
+            xanchor="left",
+            x=0.01,
+            bgcolor='rgba(255, 255, 255, 0.7)',
+            bordercolor='black',
+            borderwidth=1,
+            font=dict(size=14)
+        ),
     )
-    for trace in fig1['data']:
-        fig.add_trace(trace, row=1, col=1)
-    for trace in fig2['data']:
-        fig.add_trace(trace, row=1, col=2)
-    for trace in fig3['data']:
-        fig.add_trace(trace, row=1, col=3)
 
-    fig.update_layout(
-        height=800,
+    layout2 = dict(
+        font=dict(family="Arial, sans-serif", size=18, color="black"),
+        title_x=0.5,
+        plot_bgcolor="#f9f9f9",
+        paper_bgcolor="#ffffff",
+        title_font=dict(size=20, color='black', family='Arial, sans-serif', weight='bold'),
+        xaxis=dict(tickformat='%Y-%m-%d')
+    )
+
+    layout3 = dict(
+        font=dict(family="Arial, sans-serif", size=18, color="black"),
+        title_x=0.5,
+        plot_bgcolor="#f9f9f9",
+        paper_bgcolor="#ffffff",
+        title_font=dict(size=20, color='black', family='Arial, sans-serif', weight='bold'),
+        xaxis=dict(tickformat='%Y-%m-%d')
+    )
+    
+    fig1.update_layout(layout1)
+    fig2.update_layout(layout2)
+    fig3.update_layout(layout3)
+
+    # 서브플롯을 결합 (서브플롯의 레이아웃을 설정)
+    final_fig = make_subplots(
+        rows=3, cols=1,
+        subplot_titles=("학습 모드별 학습 시간", "시험 점수 변화", "예문 학습 결과"),
+        specs=[[{'type': 'domain'}], [{'type': 'xy'}], [{'type': 'xy'}]]  # 도넛 차트와 XY 그래프의 혼합 설정
+    )
+
+    # 각각의 trace를 서브플롯에 추가
+    for trace in fig1['data']:
+        final_fig.add_trace(trace, row=1, col=1)
+    for trace in fig2['data']:
+        final_fig.add_trace(trace, row=2, col=1)
+    for trace in fig3['data']:
+        final_fig.add_trace(trace, row=3, col=1)
+
+    # 서브플롯 전체에 대한 레이아웃 설정
+    final_fig.update_layout(
+        height=2000,
         width=1000,
         title_text="대시보드",
-        title_x=0.5
+        title_x=0.5,
+        plot_bgcolor="#f9f9f9",  # 서브플롯 전체의 배경색 설정
+        paper_bgcolor="#ffffff",  # 종이 배경색 설정
+        showlegend=True  # 범례를 표시
     )
 
-    return fig.to_html(full_html=False)
+    # 각 서브플롯의 레이아웃 설정
+    final_fig.layout.update(layout1)
+    final_fig.layout.update(layout2)
+    final_fig.layout.update(layout3)
+
+    # 최종적으로 HTML로 변환하여 반환
+    return final_fig.to_html(full_html=False)
