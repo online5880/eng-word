@@ -391,6 +391,7 @@ class LearningResultDetailAPIView(APIView):
     
 
 class AnswerCheckerAPIView(APIView):
+    # permission_classes = [AllowAny]
     """
     학생 발음과 정답 단어의 일치 여부를 확인하는 API 뷰입니다.
 

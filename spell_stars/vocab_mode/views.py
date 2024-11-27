@@ -225,6 +225,7 @@ class WordsByCategoryAPIView(APIView):
 
 
 class PronunciationCheckerAPIView(APIView):
+    # permission_classes = [AllowAny]
     """
     PronunciationCheckerAPIView는 학생의 녹음 파일을 서버에 저장하고,
     원어민 발음과 비교하여 발음 채점 결과를 반환하는 API 뷰입니다.
