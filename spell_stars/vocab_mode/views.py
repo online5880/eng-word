@@ -224,8 +224,35 @@ class WordsByCategoryAPIView(APIView):
         return Response(serializer.data)
 
 
-class UploadAudioAPIView(APIView):
-    permission_classes = [AllowAny]
+class PronunciationCheckerAPIView(APIView):
+    """
+    PronunciationCheckerAPIView는 학생의 녹음 파일을 서버에 저장하고,
+    원어민 발음과 비교하여 발음 채점 결과를 반환하는 API 뷰입니다.
+
+    주요 동작:
+    - 사용자가 업로드한 오디오 파일과 발음 단어를 검증합니다.
+    - 파일을 지정된 경로에 저장합니다.
+    - 원어민 발음 파일과 학생의 발음 파일을 비교하여 발음 점수를 계산합니다.
+
+    요청:
+        POST 요청으로 오디오 파일(`audio`)과 발음 단어(`word`)를 포함해야 합니다.
+        사용자가 인증된 경우, 사용자 ID와 이름을 저장합니다.
+
+    응답:
+        - 성공 시:
+            - status: "success"
+            - message: "녹음이 완료되었습니다."
+            - file_path: 저장된 파일 경로
+            - result: 발음 비교 결과
+        - 실패 시:
+            - status: "error"
+            - message: 오류 메시지
+
+    예외 처리:
+    - 데이터 검증 실패 시 400 상태 코드를 반환합니다.
+    - 기타 예외 발생 시 500 상태 코드를 반환합니다.
+
+    """
     def post(self, request):
         # 데이터 검증
         serializer = AudioUploadSerializer(data=request.data)

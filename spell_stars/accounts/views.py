@@ -33,14 +33,23 @@ class SignupView(View):
     def post(self, request):
         form = SignupForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            role = form.cleaned_data.get('role')  # 안전한 접근 방식
-            student_code = form.cleaned_data.get('student_code')  # 안전한 접근 방식
+            user = form.save()  # CustomUser 저장
+            role = form.cleaned_data.get('role')
+            grade = form.cleaned_data.get('grade')  # 학년 정보 가져오기
+            student_code = form.cleaned_data.get('student_code')
 
-            # 역할 설정 처리
+            # 역할에 따른 처리
             if role == 'student':
-                Student.objects.get_or_create(user=user)
-                messages.success(request, "학생 프로필이 생성되었습니다.")
+                try:
+                    Student.objects.create(
+                        user=user, 
+                        grade=grade  # grade 추가
+                    )
+                    messages.success(request, "학생 프로필이 생성되었습니다.")
+                    print("프로필 생성 성공")
+                except Exception as e:
+                    messages.error(request, f"학생 프로필 생성 실패: {str(e)}")
+                    print(f"프로필 생성 실패: {str(e)}")
             elif role == 'parent':
                 if not student_code:
                     messages.error(request, "학부모 코드를 입력해주세요.")
@@ -55,7 +64,7 @@ class SignupView(View):
                     messages.error(request, "입력한 학부모 코드에 해당하는 학생을 찾을 수 없습니다.")
                     return render(request, 'accounts/signup.html', {'form': form})
 
-            # 로그인 및 리다이렉트
+            # 성공 시 리다이렉트
             return redirect('/')
 
         # 폼 유효성 검사 실패 시

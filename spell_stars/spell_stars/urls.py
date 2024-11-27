@@ -8,6 +8,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.conf.urls import handler404, handler500, handler403
+from vocab_mode import views as vocab_views
 
 # API 문서 스키마 설정
 schema_view = get_schema_view(
@@ -27,6 +28,7 @@ api_v1_patterns = [
     path("test/", include("test_mode.api_urls")),
     path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
     path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
+    path('pronunciation-checker-api/',vocab_views.PronunciationCheckerAPIView.as_view(),name='pronunciation-checker-api') # 발음 검사기 API
 ]
 
 # 웹 URL 패턴
