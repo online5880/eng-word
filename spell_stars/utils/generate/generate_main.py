@@ -2,6 +2,12 @@ import os
 import sys
 import django
 
+from spell_stars.utils.generate.Pipeline.extract_word import extract_words
+from spell_stars.utils.generate.Pipeline.generate_sentence import create_faiss_index, generate_sentences
+from spell_stars.utils.generate.Pipeline.json_to_clusteredjson import assign_noise_to_nearest_cluster, cluster_words, load_words_from_json, refine_clusters_auto, save_refined_clusters_to_single_json, vectorize_words
+from spell_stars.utils.generate.Pipeline.translate import translate_csv
+from utils.Grammar_Score.Pipeline.sentence_pipeline import SentenceEvaluationPipeline
+
 # Ensure we're working in the correct directory
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
@@ -33,33 +39,33 @@ def main():
     os.makedirs(vector_store_path, exist_ok=True)
 
     # Step 1: Process PDFs and convert them to JSON
-    # process_pdfs(pdf_directory, json_output_directory)
+    process_pdfs(pdf_directory, json_output_directory)
 
     # Step 2: Load JSON data, vectorize and cluster the words (this step is commented out, enable as needed)
-    # word_dict = load_words_from_json(json_output_directory)
-    # word_list = list(word_dict.keys())
-    # vectors = vectorize_words(word_list)
-    # clustered_words, noise = cluster_words(word_list, vectors, eps=0.35, min_samples=2)
-    # clustered_words_with_noise = assign_noise_to_nearest_cluster(clustered_words, noise)
-    # refined_clusters = refine_clusters_auto(clustered_words_with_noise, word_dict)
-    # save_refined_clusters_to_single_json(refined_clusters, clustered_json_path)
+    word_dict = load_words_from_json(json_output_directory)
+    word_list = list(word_dict.keys())
+    vectors = vectorize_words(word_list)
+    clustered_words, noise = cluster_words(word_list, vectors, eps=0.35, min_samples=2)
+    clustered_words_with_noise = assign_noise_to_nearest_cluster(clustered_words, noise)
+    refined_clusters = refine_clusters_auto(clustered_words_with_noise, word_dict)
+    save_refined_clusters_to_single_json(refined_clusters, clustered_json_path)
 
     # Step 3: Extract words from clustered JSON
-    # extract_words(clustered_json_path, extracted_words_path)
+    extract_words(clustered_json_path, extracted_words_path)
 
     # Step 4: Create FAISS index
-    # create_faiss_index(clustered_json_path, vector_store_path)
+    create_faiss_index(clustered_json_path, vector_store_path)
 
     # Step 5: Generate sentences based on the extracted words
-    # generate_sentences(extracted_words_path, vector_store_path, csv_output_path)
+    generate_sentences(extracted_words_path, vector_store_path, csv_output_path)
 
     # Step 6: Perform grammar check on generated sentences
-    # pipeline = SentenceEvaluationPipeline()
-    # results_df = pipeline.process_all_sentences(csv_output_path, grammar_results_path)
-    # results_df.to_csv(grammar_results_path, index=False, encoding="utf-8-sig")
+    pipeline = SentenceEvaluationPipeline()
+    results_df = pipeline.process_all_sentences(csv_output_path, grammar_results_path)
+    results_df.to_csv(grammar_results_path, index=False, encoding="utf-8-sig")
 
     # Step 7: Translate the generated sentences
-    # translate_csv(grammar_results_path, final_sentence_path)
+    translate_csv(grammar_results_path, final_sentence_path)
 
     # Step 8: Upload data to the database
     print("Uploading to database...")
