@@ -70,15 +70,15 @@ def plot_test_scores(request):
         data,
         x='시험 날짜',
         y='시험 점수',
-        title='시험 점수 변화',
+        title='시험 점수 변화(5점 만점)',
         markers=True,
         color_discrete_sequence=["#9b59b6"]  # 색상 변경
     )
     fig.update_traces(name='시험 점수')
+    
     return fig
 
 
-#   
 def plot_learning_results(request):
     user_id = request.user.id
     student = Student.objects.get(user__id=user_id)
@@ -87,13 +87,13 @@ def plot_learning_results(request):
     data = pd.DataFrame({
         '예문 학습 날짜': [result.learning_date for result in results],
         '발음 점수': [result.pronunciation_score for result in results],
-        '정확도 점수': [result.accuracy_score for result in results],
+        '총점(정오답)': [result.accuracy_score for result in results],
     })
 
     fig = px.line(
         data,
         x='예문 학습 날짜',
-        y=['발음 점수', '정확도 점수'],
+        y=['발음 점수', '총점(정오답)'],
         title='예문 학습 결과',
         markers=True,
         color_discrete_sequence=["#1f77b4", "#ff7f0e"]  # 색상 변경

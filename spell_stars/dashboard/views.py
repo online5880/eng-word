@@ -48,7 +48,7 @@ def create_dashboard_graphs(student):
     # 서브플롯을 결합 (서브플롯의 레이아웃을 설정)
     final_fig = make_subplots(
         rows=3, cols=1,
-        subplot_titles=("학습 모드별 학습 시간", "시험 점수 변화", "예문 학습 결과"),
+        subplot_titles=("학습 모드별 학습 시간", "시험 점수 변화(5점 만점)", "예문 학습 결과"),
         specs=[[{'type': 'domain'}], [{'type': 'xy'}], [{'type': 'xy'}]],
         vertical_spacing=0.1  # 서브플롯 사이의 간격 조정
     )
@@ -87,9 +87,14 @@ def create_dashboard_graphs(student):
         )
     )
 
-    # 각 서브플롯의 레이아웃 세부 설정
-    final_fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='lightgray')
-    final_fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='lightgray')
+    # x축 포맷 설정 (연-월-일 형식)
+    final_fig.update_xaxes(
+        tickformat='%Y-%m-%d',  # 연-월-일 형식
+        showgrid=True, gridwidth=1, gridcolor='lightgray'  # x축 그리드 설정
+    )
+
+    # y축 범위 설정 (필요한 서브플롯에만 적용)
+    final_fig.update_yaxes(range=[0, 6], row=2, col=1)
 
     # 최종적으로 HTML로 변환하여 반환
     return final_fig.to_html(full_html=False)
