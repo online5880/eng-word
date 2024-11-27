@@ -39,8 +39,13 @@ def calculate_score(correct_answers, total_questions=TOTAL_QUESTIONS, max_score=
 
 
 def replace_word_with_blank(sentence, target_word):
-    # 동사 변화형을 처리할 정규식 패턴
-    pattern = r'\b' + re.escape(target_word) + r'(ing|ed|d|s|es)?\b'
+    # 'The U.S.A.'는 하드코딩 처리
+    if "The U.S.A." in sentence:
+        sentence = sentence.replace("The U.S.A.", "_____")
+    
+    # 나머지 동사 변화형 처리
+    escaped_word = re.escape(target_word)
+    pattern = r'(?<!\w)' + escaped_word + r'(ing|ed|d|s|es)?(?!\w)'
     
     return re.sub(pattern, lambda match: '_____{}'.format(match.group(1) or ''), sentence)
 
@@ -116,11 +121,16 @@ def clean_text(text):
     return text.split()  # 단어를 공백 기준으로 분리하여 리스트로 반환
 
 
+# @csrf_exempt: 개발 중에만 사용, 실제 배포 시에는 CSRF 보호 필요
 @csrf_exempt
 def submit_audio(request):
     print("submit_audio called")
 
     if request.method == "POST" and request.FILES.get("audio"):
+        audio_file = request.FILES["audio"]
+        print("오디오 파일", audio_file)
+
+        # 사용자 인증 확인
         if not request.user.is_authenticated:
             return JsonResponse({"error": "User is not authenticated"}, status=401)
 
@@ -132,25 +142,31 @@ def submit_audio(request):
                     {"status": "error", "message": "Word is required"}, status=400
                 )
 
+            # 안전한 파일 이름 생성
+            file_name = re.sub(r"[^a-zA-Z0-9._-]", "_", f"{word}_student.wav")
+
             # 저장 경로 설정
-            save_path = f"test_mode/user_{user_id}/"
-            os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
+            save_dir = os.path.join(settings.MEDIA_ROOT, f"test_mode/user_{user_id}")
+            os.makedirs(save_dir, exist_ok=True)
 
-            # 파일 이름 설정
-            file_name = f"{word}_student.wav"
-            file_path = os.path.join(settings.MEDIA_ROOT, save_path, file_name)
+            # 파일 전체 경로
+            file_path = os.path.join(save_dir, file_name)
 
-            # 기존 파일이 있으면 삭제
+            # 기존 파일 삭제
             if default_storage.exists(file_path):
                 default_storage.delete(file_path)
 
-            # 새 파일 저장
-            full_student_audio_path = default_storage.save(
-                file_path, ContentFile(request.FILES["audio"].read())
-            )
+            # 파일 저장
+            relative_save_path = os.path.relpath(file_path, settings.MEDIA_ROOT)
+            saved_path = default_storage.save(relative_save_path, ContentFile(audio_file.read()))
+            print(f"File successfully saved at: {saved_path}")
 
             # Whisper 모델로 음성 텍스트 변환
-            audio, rate = librosa.load(file_path, sr=16000)  # Whisper는 16kHz 필요
+            absolute_file_path = os.path.join(settings.MEDIA_ROOT, saved_path)
+            if not os.path.exists(absolute_file_path):
+                return JsonResponse({"error": "File not found after saving"}, status=500)
+
+            audio, rate = librosa.load(absolute_file_path, sr=16000)  # Whisper는 16kHz 필요
             inputs = processor(audio, sampling_rate=rate, return_tensors="pt")
 
             # 언어 설정: 특정 언어로 지정하려면 아래처럼 설정
@@ -166,49 +182,37 @@ def submit_audio(request):
             transcript = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
             print(f"Transcript from Whisper: {transcript}")
 
-            # 정답 단어와 비교 (특수문자 제외)
+            # 정답 단어와 비교
             clean_transcript = clean_text(transcript)  # 단어 리스트로 변환
             clean_target_word = clean_text(word)  # 정답 단어도 리스트로 변환
-
-            # 두 리스트에서 단어가 일치하는지 확인 (다중 단어를 처리)
             is_correct = all(target_word in clean_transcript for target_word in clean_target_word)
 
-            if is_correct:
-                score = "정답입니다!"
-            else:
-                score = f"틀렸습니다. 정답은 '{word}'입니다."
+            score_message = "정답입니다!" if is_correct else f"틀렸습니다. 정답은 '{word}'입니다."
 
-            # 답을 세션에 저장
+            # 세션에 답 저장
             if "answers" not in request.session:
                 request.session["answers"] = []
-
-            request.session["answers"].append(
-                {
-                    "word_id": Word.objects.get(word=word).id,  # ID 저장
-                    "word": word,
-                    "transcript": transcript,
-                    "is_correct": is_correct,
-                }
-            )
+            request.session["answers"].append({
+                "word_id": Word.objects.get(word=word).id,  # ID 저장
+                "word": word,
+                "transcript": transcript,
+                "is_correct": is_correct,
+            })
 
             # 성공 응답 반환
-            return JsonResponse(
-                {
-                    "status": "success",
-                    "file_path": full_student_audio_path,
-                    "is_correct": is_correct,  # True/False 그대로 유지
-                    "score_message": score,   # 친화적 메시지 추가
-                    "message": "음성 파일이 성공적으로 저장되고 발음 평가가 완료되었습니다.",
-                }
-            )
+            return JsonResponse({
+                "status": "success",
+                "file_path": absolute_file_path,
+                "is_correct": is_correct,
+                "score_message": score_message,
+                "message": "음성 파일이 성공적으로 저장되고 발음 평가가 완료되었습니다.",
+            })
 
         except Exception as e:
             print(f"Failed to transcribe audio: {str(e)}")
-            return JsonResponse(
-                {"error": f"Failed to transcribe audio: {str(e)}"}, status=500
-            )
+            return JsonResponse({"error": f"Failed to transcribe audio: {str(e)}"}, status=500)
 
-    return JsonResponse({"error": "No audio file received"}, status=400)
+    return JsonResponse({"error": "No audio file received"}, status=400)    
 
 
 def next_question(request):

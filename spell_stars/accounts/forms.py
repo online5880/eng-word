@@ -1,8 +1,10 @@
 import re
+from uuid import UUID
 from django import forms
-from .models import CustomUser, Student, ParentStudentRelation
+from django.core.exceptions import ValidationError
+from .models import CustomUser, Parent, Student, ParentStudentRelation
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-
+from django.contrib.auth import get_user_model
 class LoginForm(AuthenticationForm):
     username = forms.CharField(
         label="아이디",
@@ -34,11 +36,13 @@ class SignupForm(UserCreationForm):
         initial='student',
         label="계정 유형"
     )
-    student_code = forms.CharField(
-        max_length=12,
+    student_code = forms.UUIDField(
         required=False,
         widget=forms.TextInput(attrs={'placeholder': '자녀의 고유 코드를 입력해주세요.'}),
-        label="자녀 고유 코드"
+        label="자녀 고유 코드",
+        error_messages={
+            'invalid': "올바른 UUID 형식이 아닙니다. 예: 123e4567-e89b-12d3-a456-426614174000"
+        }
     )
     username = forms.CharField(
         label="아이디",
@@ -74,40 +78,52 @@ class SignupForm(UserCreationForm):
     )
 
     class Meta:
-        model = CustomUser
+        model = get_user_model()
         fields = ["username", "name", "birth_date", "password1", "password2", "role", "student_code", "grade"]
+
+    def clean_student_code(self):
+        student_code = self.cleaned_data.get('student_code')
+
+        if student_code:
+            try:
+                UUID(str(student_code), version=4)
+            except ValueError:
+                raise ValidationError("올바른 UUID 형식이 아닙니다.")
+            
+            if not Student.objects.filter(unique_code=student_code).exists():
+                raise ValidationError("유효하지 않은 학생 코드입니다.")
+
+        return student_code
+
+    def clean_username(self):
+        username = self.cleaned_data.get("username")
+        User = get_user_model()
+
+        if not username:
+            raise ValidationError("아이디를 입력하세요.")
+        if not re.match(r'^[a-zA-Z][a-zA-Z0-9]*$', username):
+            raise ValidationError("아이디는 영어로 시작하며 영어와 숫자만 입력 가능합니다.")
+        if User.objects.filter(username=username).exists():
+            raise ValidationError("이미 사용 중인 아이디입니다.")
+        
+        return username
 
     def clean(self):
         cleaned_data = super().clean()
         role = cleaned_data.get('role')
         grade = cleaned_data.get('grade')
-        student_code = cleaned_data.get('student_code', "").strip()
-        username = cleaned_data.get('username', "")
 
-        # 아이디 유효성 검사
-        if not username:
-            raise forms.ValidationError("아이디를 입력하세요.")
-        if not re.match(r'^[a-zA-Z][a-zA-Z0-9]*$', username):
-            raise forms.ValidationError("아이디는 영어로 시작하며 영어와 숫자만 입력 가능합니다.")
-
-        # 학부모 역할일 경우
-        if role == 'parent':
-            if not student_code:
-                raise forms.ValidationError("학부모 역할을 선택하면 학생 코드를 입력해야 합니다.")
-            from .models import Student
-            if not Student.objects.filter(unique_code=student_code).exists():
-                raise forms.ValidationError("유효하지 않은 학생 코드입니다.")
-
+        # 학생 역할 검증
         if role == 'student' and not grade:
-            raise forms.ValidationError("학생의 경우 학년을 선택해야 합니다.")
+            raise ValidationError("학생의 경우 학년을 선택해야 합니다.")
 
         return cleaned_data
 
     def save(self, commit=True):
         user = super().save(commit=False)
         role = self.cleaned_data.get('role')
-        student_code = self.cleaned_data.get('student_code', "").strip()
-        grade = self.cleaned_data.get('grade')
+        grade = self.cleaned_data.get('grade')  # 학년 정보
+        student_code = self.cleaned_data.get('student_code')
 
         # 사용자 역할 설정
         if role:
@@ -115,12 +131,11 @@ class SignupForm(UserCreationForm):
 
         if commit:
             user.save()
-            # 역할에 따른 추가 작업
             if role == 'student':
-                from .models import Student
-                Student.objects.create(user=user)
+                # 학생 프로필 생성
+                Student.objects.create(user=user, grade=grade)
             elif role == 'parent' and student_code:
-                from .models import Parent, Student, ParentStudentRelation
+                # 학부모 프로필 생성 및 관계 설정
                 parent = Parent.objects.create(user=user)
                 student = Student.objects.get(unique_code=student_code)
                 ParentStudentRelation.objects.create(parent=parent, student=student)

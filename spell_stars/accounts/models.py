@@ -1,3 +1,4 @@
+import uuid
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from datetime import date
@@ -13,15 +14,6 @@ class CustomUser(AbstractUser):
         ('parent', '학부모'),
     ]
 
-    GRADE_CHOICES = [
-        (1, '1학년'),
-        (2, '2학년'),
-        (3, '3학년'),
-        (4, '4학년'),
-        (5, '5학년'),
-        (6, '6학년'),
-    ]
-
     name = models.CharField(max_length=50, verbose_name='이름', blank=False, default='이름 없음')
     birth_date = models.DateField(verbose_name='생년월일', blank=True, null=True)
     role = models.CharField(
@@ -29,12 +21,6 @@ class CustomUser(AbstractUser):
         choices=ROLE_CHOICES,
         default='student',  # 기본값을 '학생'으로 설정
         verbose_name='역할'
-    )
-    grade = models.IntegerField(
-        choices=GRADE_CHOICES,
-        null=True,
-        blank=True,
-        verbose_name='학년'
     )
 
     def __str__(self):
@@ -58,32 +44,37 @@ class Student(models.Model):
     """
     학생 프로필 모델: 사용자(CustomUser)에 연결된 1:1 관계.
     """
+    GRADE_CHOICES = [
+        (1, '1학년'),
+        (2, '2학년'),
+        (3, '3학년'),
+        (4, '4학년'),
+        (5, '5학년'),
+        (6, '6학년'),
+    ]
+
     user = models.OneToOneField(
         CustomUser,
         on_delete=models.CASCADE,
         related_name='student_profile',
         verbose_name='사용자'
     )
-    unique_code = models.CharField(max_length=12, unique=True, blank=True, verbose_name='학생 코드')
+    grade = models.IntegerField(
+        choices=GRADE_CHOICES,
+        null=True,
+        blank=True,
+        verbose_name='학년'
+    )
+    unique_code = models.UUIDField(
+        default=uuid.uuid4,
+        unique=True,
+        editable=False,
+        verbose_name='학생 코드'
+    )
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='생성일')
 
-    def save(self, *args, **kwargs):
-        if not self.unique_code:
-            import random
-            import string
-
-            for _ in range(5):  # 최대 5회 시도
-                code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=12))
-                if not Student.objects.filter(unique_code=code).exists():
-                    self.unique_code = code
-                    break
-            else:
-                raise ValueError("고유 코드를 생성할 수 없습니다. 데이터베이스를 확인하세요.")
-
-        super().save(*args, **kwargs)
-
     def __str__(self):
-        return f"{self.user.name} ({self.user.username})"
+        return f"{self.user.name} ({self.grade}학년)"
 
 
 # 학부모 모델

@@ -7,14 +7,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-    <title>
-      spell stars | 회원가입</title>
+    <title>spell stars | 회원가입</title>
   </head>
 
   <body>
     <div class="container bg-white shadow-md p-5 form-layout">
       <h2>회원가입</h2>
-      <form method="post" action="{% url 'signup' %}" ,="," autocomplete="off">
+      <form method="post" action="{% url 'signup' %}" autocomplete="off">
         {% csrf_token %}
         <table>
           {{ form|crispy }}
@@ -22,7 +21,7 @@
         <button class="btn btn-outline-dark btn-md w-100 btn-block p-3" type="submit">회원가입</button>
       </form>
       <br>
-      <a class="btn btn-outline-dark btn-md w-100 btn-block p-3" type="button" href="{% url 'index' %}">뒤로가기</a>
+      <a class="btn btn-outline-dark btn-md w-100 btn-block p-3" href="{% url 'index' %}">뒤로가기</a>
     </div>
 
     <script>
@@ -30,34 +29,23 @@
         const studentCodeInput = document.querySelector('input[name="student_code"]');
         const gradeSelect = document.querySelector('select[name="grade"]');
         const roleInputs = document.querySelectorAll('input[name="role"]');
-        
-        const studentCodeField = studentCodeInput.closest('.mb-3');
-        const gradeField = gradeSelect.closest('.mb-3');
-        
+
+        // 숨김 처리를 위한 Bootstrap 클래스 추가/제거
         function toggleFields() {
-            const selectedRole = document.querySelector('input[name="role"]:checked');
-            if (selectedRole) {
-                if (selectedRole.value === 'parent') {
-                    studentCodeField.style.display = 'block';
-                    gradeField.style.display = 'none';
-                } else {
-                    studentCodeField.style.display = 'none';
-                    gradeField.style.display = 'block';
-                }
+            const selectedRole = document.querySelector('input[name="role"]:checked').value;
+            if (selectedRole === 'parent') {
+                studentCodeInput.closest('.mb-3').classList.remove('d-none');
+                gradeSelect.closest('.mb-3').classList.add('d-none');
+            } else {
+                studentCodeInput.closest('.mb-3').classList.add('d-none');
+                gradeSelect.closest('.mb-3').classList.remove('d-none');
             }
         }
-        
-        roleInputs.forEach(input => {
-            input.addEventListener('change', toggleFields);
-        });
-        
-        // 페이지 로드 시 학생 라디오 버튼이 선택되어 있도록 설정
-        const studentRadio = document.querySelector('input[name="role"][value="student"]');
-        if (studentRadio) {
-            studentRadio.checked = true;
-        }
-        
-        // 초기 상태 설정
+
+        // 라디오 버튼 변경 이벤트 연결
+        roleInputs.forEach(input => input.addEventListener('change', toggleFields));
+
+        // 페이지 로드 시 초기 설정
         toggleFields();
       });
     </script>

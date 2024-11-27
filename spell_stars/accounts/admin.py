@@ -3,19 +3,19 @@ from django.contrib.auth.admin import UserAdmin
 from .models import CustomUser, Student, Parent, ParentStudentRelation, StudentLog
 
 class CustomUserAdmin(UserAdmin):
-    list_display = ('username', 'name', 'email', 'role', 'grade', 'birth_date')
-    list_filter = ('role', 'grade')
+    list_display = ('username', 'name', 'email', 'role', 'birth_date')  # 'grade' 제거
+    list_filter = ('role',)
     fieldsets = UserAdmin.fieldsets + (
-        ('추가 정보', {'fields': ('name', 'role', 'grade', 'birth_date')}),
+        ('추가 정보', {'fields': ('name', 'role', 'birth_date')}),  # 'grade' 제거
     )
     add_fieldsets = UserAdmin.add_fieldsets + (
-        ('추가 정보', {'fields': ('name', 'role', 'grade', 'birth_date')}),
+        ('추가 정보', {'fields': ('name', 'role', 'birth_date')}),  # 'grade' 제거
     )
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('user', 'unique_code', 'created_at')
+    list_display = ('user', 'grade', 'unique_code', 'created_at')  # 'grade' 추가
     search_fields = ('user__username', 'user__name', 'unique_code')
-    list_filter = ('created_at',)
+    list_filter = ('grade', 'created_at')  # 'grade' 필터 추가
 
 class ParentAdmin(admin.ModelAdmin):
     list_display = ('user', 'created_at')
