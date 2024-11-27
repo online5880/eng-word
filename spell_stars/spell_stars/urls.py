@@ -10,6 +10,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from main.views import export_students, export_learning_results, export_test_results
 from django.conf.urls import handler404, handler500, handler403
 from vocab_mode import views as vocab_views
+from sent_mode import views as sent_views
 
 # API 문서 스키마 설정
 schema_view = get_schema_view(
@@ -30,7 +31,8 @@ api_v1_patterns = [
     path("sent/",include("sent_mode.api_urls")),
     path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
     path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
-    path('pronunciation-checker-api/',vocab_views.PronunciationCheckerAPIView.as_view(),name='pronunciation-checker-api') # 발음 검사기 API
+    path('pronunciation-checker-api/',vocab_views.PronunciationCheckerAPIView.as_view(),name='pronunciation-checker-api'), # 발음 검사기 API
+    path('answer-checker-api/', sent_views.AnswerCheckerAPIView.as_view(), name='answer-checker-api'),
 ]
 
 # 웹 URL 패턴

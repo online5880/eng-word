@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import LearningResultListAPIView, LearningResultDetailAPIView
+from .views import LearningResultListAPIView, LearningResultDetailAPIView, AnswerCheckerAPIView
 
 urlpatterns = [
     path('learning-results/', LearningResultListAPIView.as_view(), name='learning_results_list'),

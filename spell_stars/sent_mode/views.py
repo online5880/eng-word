@@ -19,6 +19,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
+from rest_framework import status
 from .models import LearningResult
 from .serializers import LearningResultSerializer
 from rest_framework.permissions import AllowAny
@@ -387,3 +388,57 @@ class LearningResultDetailAPIView(APIView):
 
         serializer = LearningResultSerializer(learning_result)
         return Response(serializer.data)
+    
+
+class AnswerCheckerAPIView(APIView):
+    """
+    학생 발음과 정답 단어의 일치 여부를 확인하는 API 뷰입니다.
+
+    요청:
+        - POST 요청으로 오디오 파일(`audio`)과 정답 단어(`word`)를 포함해야 합니다.
+
+    응답:
+        - is_correct: STT 결과와 정답 단어의 일치 여부 (True/False)
+    """
+
+    def post(self, request):
+        try:
+            # 요청 데이터 검증
+            audio_file = request.FILES.get('audio')
+            answer_word = request.data.get('word', '').strip().lower()
+
+            if not audio_file or not answer_word:
+                return Response({
+                    "status": "error",
+                    "message": "Audio file and answer word are required."
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+            # 오디오 파일 저장 경로 설정
+            user_id = request.user.id if request.user.is_authenticated else "anonymous"
+            save_path = f"audio_files/students/user_{user_id}/"
+            os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
+
+            # 파일 이름 설정 및 저장
+            sanitized_word = answer_word.replace(" ", "_")  # 단어에서 공백 제거
+            file_name = f"{sanitized_word}_st.wav"
+            file_path = os.path.join(settings.MEDIA_ROOT, save_path, file_name)
+            if default_storage.exists(file_path):
+                default_storage.delete(file_path)
+            default_storage.save(file_path, ContentFile(audio_file.read()))
+
+            # STT 처리
+            recognized_word = fine_tuned_whisper(file_path).strip().lower()
+
+            # 정오답 비교
+            is_correct = recognized_word == answer_word
+
+            # 결과 반환 (is_correct만 반환)
+            return Response({
+                "is_correct": is_correct
+            }, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            return Response({
+                "status": "error",
+                "message": str(e)
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
