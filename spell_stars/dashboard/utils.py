@@ -24,10 +24,10 @@ def plot_learning_mode_hours(request):
     data = []
     for log in logs:
         if log.start_time and log.end_time:
-            total_time = (log.end_time - log.start_time).total_seconds() / 3600
-            total_time = math.ceil(total_time)  # 시간 단위로 반올림
+            total_time = (log.end_time - log.start_time).total_seconds() / 60
+            total_time = math.ceil(total_time)  # 분 단위로 반올림
         else:
-            total_time = 0  # start_time이나 end_time이 None이면 0시간으로 처리
+            total_time = 0  # start_time이나 end_time이 None이면 0분으로 처리
         learning_mode_name = LEARNING_MODE_MAPPING.get(log.learning_mode, '기타')
         data.append({'학습 모드': learning_mode_name, '학습 시간': total_time})
     
