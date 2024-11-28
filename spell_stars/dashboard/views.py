@@ -26,12 +26,20 @@ def dashboard_view(request, student_id=None):
         relation = get_object_or_404(ParentStudentRelation, student_id=student_id, parent=parent)
         student = relation.student  # 해당 학생 정보를 가져옴
         template_name = 'dashboard/student_dashboard.html'
-        
-        # 자녀의 이름을 context에 포함
-        context = {
-            "student_name": student.user.name,
-            "graphs": create_dashboard_graphs(student),
+        graphs = create_dashboard_graphs(student)
+        if graphs:
+            # 자녀의 이름을 context에 포함
+            context = {
+                "student_name": student.user.name,
+                "graphs":graphs,
         }
+        else:
+            context = {
+                "student_name": student.user.name,
+                "graphs":"자녀의 학습 데이터가 없습니다.",
+            }
+        
+        
     else:
         raise PermissionDenied("접근 권한이 없습니다.")
 
@@ -44,6 +52,9 @@ def create_dashboard_graphs(student):
     fig1 = plot_learning_mode_hours(student)
     fig2 = plot_test_scores(student)
     fig3 = plot_learning_results(student)
+    if not fig1 or not fig2 or not fig3:
+        return "데이터가 없습니다."
+        
     
     # 서브플롯을 결합 (서브플롯의 레이아웃을 설정)
     final_fig = make_subplots(

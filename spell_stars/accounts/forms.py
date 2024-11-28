@@ -5,6 +5,8 @@ from django.core.exceptions import ValidationError
 from .models import CustomUser, Parent, Student, ParentStudentRelation
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import get_user_model
+from django.db import transaction
+
 class LoginForm(AuthenticationForm):
     username = forms.CharField(
         label="아이디",
@@ -70,10 +72,12 @@ class SignupForm(UserCreationForm):
         help_text="생년월일을 선택하세요.",
         required=True,
     )
-    grade = forms.ChoiceField(
+    grade = forms.TypedChoiceField(
         choices=GRADE_CHOICES,
         required=False,
         label='학년',
+        coerce=int,
+        empty_value=None,
         widget=forms.Select(attrs={'class': 'form-control'})
     )
 
@@ -120,27 +124,41 @@ class SignupForm(UserCreationForm):
         return cleaned_data
 
     def save(self, commit=True):
-        user = super().save(commit=False)
-        role = self.cleaned_data.get('role')
-        grade = self.cleaned_data.get('grade')  # 학년 정보
-        student_code = self.cleaned_data.get('student_code')
-
-        # 사용자 역할 설정
-        if role:
-            user.role = role
-
-        if commit:
-            user.save()
-            if role == 'student':
-                # 학생 프로필 생성
-                Student.objects.create(user=user, grade=grade)
-            elif role == 'parent' and student_code:
-                # 학부모 프로필 생성 및 관계 설정
-                parent = Parent.objects.create(user=user)
-                student = Student.objects.get(unique_code=student_code)
-                ParentStudentRelation.objects.create(parent=parent, student=student)
-
-        return user
+        try:
+            with transaction.atomic():
+                user = super().save(commit=False)
+                user.role = self.cleaned_data.get('role')
+                
+                if commit:
+                    user.save()
+                    role = self.cleaned_data.get('role')
+                    grade = self.cleaned_data.get('grade')
+                    student_code = self.cleaned_data.get('student_code')
+                    
+                    if role == 'student':
+                        grade_int = int(grade) if grade else None
+                        student = Student.objects.create(
+                            user=user,
+                            grade=grade_int
+                        )
+                        print(f"학생 프로필 생성 완료: {student.user.username}, 학년: {student.grade}")
+                    elif role == 'parent' and student_code:
+                        parent = Parent.objects.create(user=user)
+                        try:
+                            student = Student.objects.get(unique_code=student_code)
+                            ParentStudentRelation.objects.create(
+                                parent=parent,
+                                student=student
+                            )
+                        except Student.DoesNotExist:
+                            user.delete()
+                            raise ValidationError("유효하지 않은 학생 코드입니다.")
+                
+                return user
+                
+        except Exception as e:
+            print(f"사용자 생성 중 오류 발생: {str(e)}")
+            raise
 
 
 class AddChildForm(forms.Form):

@@ -14,6 +14,8 @@ from django.utils import timezone
 from django.contrib import messages
 from django.views import View
 from test_mode.models import TestResult
+from django.core.exceptions import ValidationError
+from django.db import transaction
 
 # 로그인뷰
 class UserLoginView(LoginView):
@@ -32,42 +34,20 @@ class SignupView(View):
 
     def post(self, request):
         form = SignupForm(request.POST)
-        if form.is_valid():
-            user = form.save()  # CustomUser 저장
-            role = form.cleaned_data.get('role')
-            grade = form.cleaned_data.get('grade')  # 학년 정보 가져오기
-            student_code = form.cleaned_data.get('student_code')
-
-            # 역할에 따른 처리
-            if role == 'student':
-                try:
-                    Student.objects.create(
-                        user=user, 
-                        grade=grade  # grade 추가
-                    )
-                    messages.success(request, "학생 프로필이 생성되었습니다.")
-                    print("프로필 생성 성공")
-                except Exception as e:
-                    messages.error(request, f"학생 프로필 생성 실패: {str(e)}")
-                    print(f"프로필 생성 실패: {str(e)}")
-            elif role == 'parent':
-                if not student_code:
-                    messages.error(request, "학부모 코드를 입력해주세요.")
-                    return render(request, 'accounts/signup.html', {'form': form})
-
-                try:
-                    student = Student.objects.get(unique_code=student_code)
-                    parent, created = Parent.objects.get_or_create(user=user)
-                    ParentStudentRelation.objects.get_or_create(parent=parent, student=student)
-                    messages.success(request, "학부모 프로필이 생성되고 학생과 연결되었습니다.")
-                except Student.DoesNotExist:
-                    messages.error(request, "입력한 학부모 코드에 해당하는 학생을 찾을 수 없습니다.")
-                    return render(request, 'accounts/signup.html', {'form': form})
-
-            # 성공 시 리다이렉트
-            return redirect('/')
-
-        # 폼 유효성 검사 실패 시
+        try:
+            if form.is_valid():
+                user = form.save()
+                messages.success(request, "계정이 성공적으로 생성되었습니다.")
+                return redirect('login')
+            else:
+                for field, errors in form.errors.items():
+                    for error in errors:
+                        messages.error(request, f"{field}: {error}")
+        except ValidationError as e:
+            messages.error(request, str(e))
+        except Exception as e:
+            messages.error(request, f"계정 생성 중 오류가 발생했습니다: {str(e)}")
+        
         return render(request, 'accounts/signup.html', {'form': form})
 
 @login_required

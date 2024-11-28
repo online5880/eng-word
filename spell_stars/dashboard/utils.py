@@ -19,7 +19,8 @@ def plot_learning_mode_hours(request):
     user_id = request.user.id
     student = Student.objects.get(user__id=user_id)
     logs = StudentLearningLog.objects.filter(student=student)
-    
+    if not logs:
+        return ""
     # 학습 모드별 시간 계산
     data = []
     for log in logs:
@@ -60,7 +61,8 @@ def plot_test_scores(request):
     user_id = request.user.id
     student = Student.objects.get(user__id=user_id)
     test_results = TestResult.objects.filter(student=student).order_by('test_date')
-
+    if not test_results:
+        return ""
     data = pd.DataFrame({
         '시험 날짜': [result.test_date for result in test_results],
         '시험 점수': [result.accuracy_score for result in test_results],
@@ -83,7 +85,8 @@ def plot_learning_results(request):
     user_id = request.user.id
     student = Student.objects.get(user__id=user_id)
     results = LearningResult.objects.filter(student=student).order_by('learning_date').defer('word_id') 
-
+    if not results:
+        return ""
     data = pd.DataFrame({
         '예문 학습 날짜': [result.learning_date for result in results],
         '발음 점수': [result.pronunciation_score for result in results],

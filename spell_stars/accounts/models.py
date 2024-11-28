@@ -76,6 +76,13 @@ class Student(models.Model):
     def __str__(self):
         return f"{self.user.name} ({self.grade}학년)"
 
+    def get_grade_display(self):
+        """학년을 문자열로 반환"""
+        for value, display in self.GRADE_CHOICES:
+            if value == self.grade:
+                return display
+        return '미정'
+
 
 # 학부모 모델
 class Parent(models.Model):
