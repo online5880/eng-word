@@ -145,6 +145,11 @@ class StudentLogViewSet(viewsets.ReadOnlyModelViewSet):
         return StudentLog.objects.filter(student_id=student_pk)
     
 class ParentViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    학부모 기본 정보를 조회하는 API
+    - GET /api/parents/ : 전체 학부모 목록 조회
+    - GET /api/parents/{id}/ : 특정 학부모 정보 조회
+    """
     serializer_class = ParentSerializer
     permission_classes = [IsAuthenticated]
     queryset = Parent.objects.all()
