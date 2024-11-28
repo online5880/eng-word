@@ -96,7 +96,7 @@ def test_mode_view(request):
         request.session["target_word"] = [current_question["word_id"]]  # target_word 설정
 
         # 학습 시작 로그 생성
-        start_learning_session(request, learning_mode=2)
+        start_learning_session(request, learning_mode=3)
 
         return render(
             request,
@@ -268,7 +268,18 @@ def save_all_test_results(request):
         student = Student.objects.get(user__id=user_id)
         answers = request.session.get("answers", [])
 
-        correct_answers = sum([1 for answer in answers if answer["is_correct"]])
+        # 동일한 단어에 대해 정답이 한 번이라도 나왔는지 확인
+        word_correct_status = {}  # {word_id: is_correct}
+        for answer in answers:
+            word_id = answer["word_id"]
+            if word_id not in word_correct_status:
+                word_correct_status[word_id] = answer["is_correct"]
+            else:
+                # 이전 값이 False라도 새로운 값이 True면 True로 갱신
+                word_correct_status[word_id] = word_correct_status[word_id] or answer["is_correct"]
+
+        # 정답으로 처리된 단어 개수 계산
+        correct_answers = sum(1 for is_correct in word_correct_status.values() if is_correct)
         score = calculate_score(correct_answers)
 
         test_number = request.session.get("test_number", 1)
@@ -295,7 +306,7 @@ def save_all_test_results(request):
                 word=word,
                 sentence=sentence_obj.sentence if sentence_obj else "No sentence provided",
                 sentence_meaning=sentence_obj.sentence_meaning if sentence_obj else "No meaning provided",
-                is_correct=answer.get("is_correct"),
+                is_correct=word_correct_status[word_id],  # 단어별 최종 정답 여부 저장
             )
 
         print(f"Test result and details saved: {test_result}")
@@ -305,7 +316,7 @@ def save_all_test_results(request):
     except Exception as e:
         print(f"Error saving test results: {e}")
         raise
-    
+
     finally:
         # 저장 후 세션 초기화
         request.session.pop("answers", None)
