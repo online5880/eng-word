@@ -157,19 +157,30 @@ WSGI_APPLICATION = "spell_stars.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# .env 적용시
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": os.getenv("NAME"),
+#         "USER": os.getenv("USERNAME"),
+#         "PASSWORD": os.getenv("PASSWORD"),
+#         "HOST": os.getenv("HOST"),
+#         "PORT": os.getenv("PORT"),
+#         'CONN_MAX_AGE': 600,
+#     }
+# }
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv("NAME"),
-        "USER": os.getenv("USERNAME"),
-        "PASSWORD": os.getenv("PASSWORD"),
-        "HOST": os.getenv("HOST"),
-        "PORT": "443",
+        "NAME": "engdb",
+        "USER": "user",
+        "PASSWORD": "1234",
+        "HOST": "localhost",
+        "PORT": "5433",
         'CONN_MAX_AGE': 600,
     }
 }
-
-print(DATABASES)
 
 # DATABASES = {
 #     'default': {
