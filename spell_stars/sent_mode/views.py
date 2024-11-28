@@ -1,11 +1,16 @@
 import os
 import random
+import re
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
+from django.utils.text import get_valid_filename
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
+from vocab_mode.serializers import AudioUploadSerializer
 
 from .models import Word, Sentence
 import numpy as np
@@ -391,7 +396,6 @@ class LearningResultDetailAPIView(APIView):
     
 
 class AnswerCheckerAPIView(APIView):
-    # permission_classes = [AllowAny]
     """
     학생 발음과 정답 단어의 일치 여부를 확인하는 API 뷰입니다.
 
@@ -401,8 +405,44 @@ class AnswerCheckerAPIView(APIView):
     응답:
         - is_correct: STT 결과와 정답 단어의 일치 여부 (True/False)
     """
-
+    
+    # permission_classes = [AllowAny]
+    @swagger_auto_schema(
+        operation_description="학생 발음 파일 업로드 및 정답 단어와의 일치 여부 확인",
+        manual_parameters=[
+            openapi.Parameter(
+                name="audio",
+                in_=openapi.IN_FORM,
+                description="학생의 발음 오디오 파일",
+                type=openapi.TYPE_FILE,
+                required=True
+            ),
+            openapi.Parameter(
+                name="word",
+                in_=openapi.IN_FORM,
+                description="정답 단어",
+                type=openapi.TYPE_STRING,
+                required=True
+            ),
+        ],
+        responses={
+            200: openapi.Response(
+                "STT 결과 반환",
+                examples={
+                    "application/json": {
+                        "is_correct": True
+                    }
+                }
+            ),
+            400: "잘못된 요청 데이터",
+            500: "서버 오류"
+        }
+    )
     def post(self, request):
+        serializer = AudioUploadSerializer(data=request.data)
+        if not serializer.is_valid():
+            return Response({"error": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
         try:
             # 요청 데이터 검증
             audio_file = request.FILES.get('audio')
@@ -414,32 +454,41 @@ class AnswerCheckerAPIView(APIView):
                     "message": "Audio file and answer word are required."
                 }, status=status.HTTP_400_BAD_REQUEST)
 
-            # 오디오 파일 저장 경로 설정
+            # 단어 값 검증
+            sanitized_word = get_valid_filename(answer_word.replace(" ", "_"))
+
+            # 저장 경로 설정
             user_id = request.user.id if request.user.is_authenticated else "anonymous"
-            save_path = f"audio_files/students/user_{user_id}/"
-            os.makedirs(os.path.join(settings.MEDIA_ROOT, save_path), exist_ok=True)
+            base_path = os.path.join(settings.MEDIA_ROOT, "audio_files", "students", f"user_{user_id}")
+            os.makedirs(base_path, exist_ok=True)
 
-            # 파일 이름 설정 및 저장
-            sanitized_word = answer_word.replace(" ", "_")  # 단어에서 공백 제거
+            # 파일 경로 생성 및 유효성 검증
             file_name = f"{sanitized_word}_st.wav"
-            file_path = os.path.join(settings.MEDIA_ROOT, save_path, file_name)
-            if default_storage.exists(file_path):
-                default_storage.delete(file_path)
-            default_storage.save(file_path, ContentFile(audio_file.read()))
+            file_path = os.path.normpath(os.path.join(base_path, file_name))
+            if not file_path.startswith(base_path):
+                raise ValueError("Detected path traversal attempt.")
 
-            # STT 처리
+            # 파일 저장
+            with open(file_path, 'wb') as destination:
+                for chunk in audio_file.chunks():
+                    destination.write(chunk)
+
+            # STT 처리 및 정오답 비교
             recognized_word = fine_tuned_whisper(file_path).strip().lower()
-
-            # 정오답 비교
             is_correct = recognized_word == answer_word
 
-            # 결과 반환 (is_correct만 반환)
+            # 결과 반환
             return Response({
                 "is_correct": is_correct
             }, status=status.HTTP_200_OK)
 
+        except ValueError as ve:
+            return Response({
+                "status": "error",
+                "message": f"Path validation error: {str(ve)}"
+            }, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return Response({
                 "status": "error",
-                "message": str(e)
+                "message": f"Unexpected error: {str(e)}"
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

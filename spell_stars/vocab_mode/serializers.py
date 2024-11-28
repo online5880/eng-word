@@ -9,5 +9,5 @@ class WordSerializer(serializers.ModelSerializer):
         
         
 class AudioUploadSerializer(serializers.Serializer):
-    audio = serializers.FileField(required=True)
-    word = serializers.CharField(required=True)
+    audio = serializers.FileField(required=True)  # 파일 업로드 필드
+    word = serializers.CharField(max_length=100, required=True)  # 단어 필드

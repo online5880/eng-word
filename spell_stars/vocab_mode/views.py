@@ -2,7 +2,8 @@ import os
 import random
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 from utils.PronunciationChecker.manage import process_audio_files
 from .models import Word
 from django.conf import settings
@@ -225,7 +226,7 @@ class WordsByCategoryAPIView(APIView):
 
 
 class PronunciationCheckerAPIView(APIView):
-    # permission_classes = [AllowAny]
+    # permission_classes = [AllowAny] # 
     """
     PronunciationCheckerAPIView는 학생의 녹음 파일을 서버에 저장하고,
     원어민 발음과 비교하여 발음 채점 결과를 반환하는 API 뷰입니다.
@@ -254,6 +255,37 @@ class PronunciationCheckerAPIView(APIView):
     - 기타 예외 발생 시 500 상태 코드를 반환합니다.
 
     """
+    @swagger_auto_schema(
+        operation_description="학생 발음 파일 업로드 및 정답 단어와의 일치 여부 확인",
+        manual_parameters=[
+            openapi.Parameter(
+                name="audio",
+                in_=openapi.IN_FORM,
+                description="학생의 발음 오디오 파일",
+                type=openapi.TYPE_FILE,
+                required=True
+            ),
+            openapi.Parameter(
+                name="word",
+                in_=openapi.IN_FORM,
+                description="정답 단어",
+                type=openapi.TYPE_STRING,
+                required=True
+            ),
+        ],
+        responses={
+            200: openapi.Response(
+                "STT 결과 반환",
+                examples={
+                    "application/json": {
+                        "is_correct": True
+                    }
+                }
+            ),
+            400: "잘못된 요청 데이터",
+            500: "서버 오류"
+        }
+    )
     def post(self, request):
         # 데이터 검증
         serializer = AudioUploadSerializer(data=request.data)
