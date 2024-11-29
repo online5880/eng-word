@@ -135,6 +135,9 @@ SpellStars는 초등학생을 위한 몰입감 있는 영어 단어 학습 서�
 ### 라이선스
 이 프로젝트는 BSD 라이선스를 따릅니다.
 
+## 결과 영상
+[![관련 동영상 바로 보기](https://img.youtube.com/vi/uPNhYz-kT-c/0.jpg)](https://www.youtube.com/watch?v=uPNhYz-kT-c)
+
 ### 참고 자료
 - [Whisper fine-tuning : Hugging Face 모델 링크](https://huggingface.co/oxorudo/whisper_ssokssokword)
 
