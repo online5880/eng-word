@@ -108,11 +108,15 @@ SpellStars는 초등학생을 위한 몰입감 있는 영어 단어 학습 서�
    python -m venv venv
    source venv/bin/activate  # Windows의 경우 'venv\Scripts\activate'
    ```
-5. 필요 라이브러리를 설치합니다.
+5. pip 을 업그레드 합니다.
+    ```
+    pip install --upgrade pip
+    ```
+6. 필요 라이브러리를 설치합니다.
    ```bash
    pip install -r requirements.txt
    ```
-6. Django 서버를 실행합니다.
+7. Django 서버를 실행합니다.
    ```bash
    python manage.py runserver
    ```
